@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 abstract class MiraiWidget<T> extends Widget {
   MiraiWidget({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ abstract class MiraiWidget<T> extends Widget {
 
   Widget build(BuildContext context);
 
-  ScreenType get type;
+  String get type;
 }
 
 class MiraiElement extends ComponentElement {
