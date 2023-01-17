@@ -1,3 +1,3 @@
 library mirai;
 
-export 'package:mirai/src/framework/framework.dart';
+export 'package:mirai/src/widgets/widgets.dart';
