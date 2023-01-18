@@ -21,7 +21,16 @@ MiraiText _$MiraiTextFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiText {
   String get data => throw _privateConstructorUsedError;
-  MiraiTextStyle? get textStyle => throw _privateConstructorUsedError;
+  MiraiTextStyle? get style => throw _privateConstructorUsedError;
+  TextAlign? get textAlign => throw _privateConstructorUsedError;
+  TextDirection? get textDirection => throw _privateConstructorUsedError;
+  bool? get softWrap => throw _privateConstructorUsedError;
+  TextOverflow? get overflow => throw _privateConstructorUsedError;
+  double? get textScaleFactor => throw _privateConstructorUsedError;
+  int? get maxLines => throw _privateConstructorUsedError;
+  String? get semanticsLabel => throw _privateConstructorUsedError;
+  TextWidthBasis? get textWidthBasis => throw _privateConstructorUsedError;
+  String? get selectionColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,9 +43,20 @@ abstract class $MiraiTextCopyWith<$Res> {
   factory $MiraiTextCopyWith(MiraiText value, $Res Function(MiraiText) then) =
       _$MiraiTextCopyWithImpl<$Res, MiraiText>;
   @useResult
-  $Res call({String data, MiraiTextStyle? textStyle});
+  $Res call(
+      {String data,
+      MiraiTextStyle? style,
+      TextAlign? textAlign,
+      TextDirection? textDirection,
+      bool? softWrap,
+      TextOverflow? overflow,
+      double? textScaleFactor,
+      int? maxLines,
+      String? semanticsLabel,
+      TextWidthBasis? textWidthBasis,
+      String? selectionColor});
 
-  $MiraiTextStyleCopyWith<$Res>? get textStyle;
+  $MiraiTextStyleCopyWith<$Res>? get style;
 }
 
 /// @nodoc
@@ -53,29 +73,74 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
   @override
   $Res call({
     Object? data = null,
-    Object? textStyle = freezed,
+    Object? style = freezed,
+    Object? textAlign = freezed,
+    Object? textDirection = freezed,
+    Object? softWrap = freezed,
+    Object? overflow = freezed,
+    Object? textScaleFactor = freezed,
+    Object? maxLines = freezed,
+    Object? semanticsLabel = freezed,
+    Object? textWidthBasis = freezed,
+    Object? selectionColor = freezed,
   }) {
     return _then(_value.copyWith(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String,
-      textStyle: freezed == textStyle
-          ? _value.textStyle
-          : textStyle // ignore: cast_nullable_to_non_nullable
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      textAlign: freezed == textAlign
+          ? _value.textAlign
+          : textAlign // ignore: cast_nullable_to_non_nullable
+              as TextAlign?,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      softWrap: freezed == softWrap
+          ? _value.softWrap
+          : softWrap // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overflow: freezed == overflow
+          ? _value.overflow
+          : overflow // ignore: cast_nullable_to_non_nullable
+              as TextOverflow?,
+      textScaleFactor: freezed == textScaleFactor
+          ? _value.textScaleFactor
+          : textScaleFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      maxLines: freezed == maxLines
+          ? _value.maxLines
+          : maxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      semanticsLabel: freezed == semanticsLabel
+          ? _value.semanticsLabel
+          : semanticsLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textWidthBasis: freezed == textWidthBasis
+          ? _value.textWidthBasis
+          : textWidthBasis // ignore: cast_nullable_to_non_nullable
+              as TextWidthBasis?,
+      selectionColor: freezed == selectionColor
+          ? _value.selectionColor
+          : selectionColor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiTextStyleCopyWith<$Res>? get textStyle {
-    if (_value.textStyle == null) {
+  $MiraiTextStyleCopyWith<$Res>? get style {
+    if (_value.style == null) {
       return null;
     }
 
-    return $MiraiTextStyleCopyWith<$Res>(_value.textStyle!, (value) {
-      return _then(_value.copyWith(textStyle: value) as $Val);
+    return $MiraiTextStyleCopyWith<$Res>(_value.style!, (value) {
+      return _then(_value.copyWith(style: value) as $Val);
     });
   }
 }
@@ -87,10 +152,21 @@ abstract class _$$_MiraiTextCopyWith<$Res> implements $MiraiTextCopyWith<$Res> {
       __$$_MiraiTextCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String data, MiraiTextStyle? textStyle});
+  $Res call(
+      {String data,
+      MiraiTextStyle? style,
+      TextAlign? textAlign,
+      TextDirection? textDirection,
+      bool? softWrap,
+      TextOverflow? overflow,
+      double? textScaleFactor,
+      int? maxLines,
+      String? semanticsLabel,
+      TextWidthBasis? textWidthBasis,
+      String? selectionColor});
 
   @override
-  $MiraiTextStyleCopyWith<$Res>? get textStyle;
+  $MiraiTextStyleCopyWith<$Res>? get style;
 }
 
 /// @nodoc
@@ -105,17 +181,62 @@ class __$$_MiraiTextCopyWithImpl<$Res>
   @override
   $Res call({
     Object? data = null,
-    Object? textStyle = freezed,
+    Object? style = freezed,
+    Object? textAlign = freezed,
+    Object? textDirection = freezed,
+    Object? softWrap = freezed,
+    Object? overflow = freezed,
+    Object? textScaleFactor = freezed,
+    Object? maxLines = freezed,
+    Object? semanticsLabel = freezed,
+    Object? textWidthBasis = freezed,
+    Object? selectionColor = freezed,
   }) {
     return _then(_$_MiraiText(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String,
-      textStyle: freezed == textStyle
-          ? _value.textStyle
-          : textStyle // ignore: cast_nullable_to_non_nullable
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      textAlign: freezed == textAlign
+          ? _value.textAlign
+          : textAlign // ignore: cast_nullable_to_non_nullable
+              as TextAlign?,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      softWrap: freezed == softWrap
+          ? _value.softWrap
+          : softWrap // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      overflow: freezed == overflow
+          ? _value.overflow
+          : overflow // ignore: cast_nullable_to_non_nullable
+              as TextOverflow?,
+      textScaleFactor: freezed == textScaleFactor
+          ? _value.textScaleFactor
+          : textScaleFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      maxLines: freezed == maxLines
+          ? _value.maxLines
+          : maxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      semanticsLabel: freezed == semanticsLabel
+          ? _value.semanticsLabel
+          : semanticsLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textWidthBasis: freezed == textWidthBasis
+          ? _value.textWidthBasis
+          : textWidthBasis // ignore: cast_nullable_to_non_nullable
+              as TextWidthBasis?,
+      selectionColor: freezed == selectionColor
+          ? _value.selectionColor
+          : selectionColor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -123,7 +244,18 @@ class __$$_MiraiTextCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiText implements _MiraiText {
-  const _$_MiraiText({required this.data, this.textStyle});
+  const _$_MiraiText(
+      {required this.data,
+      this.style,
+      this.textAlign,
+      this.textDirection,
+      this.softWrap,
+      this.overflow,
+      this.textScaleFactor,
+      this.maxLines,
+      this.semanticsLabel,
+      this.textWidthBasis,
+      this.selectionColor});
 
   factory _$_MiraiText.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFromJson(json);
@@ -131,11 +263,29 @@ class _$_MiraiText implements _MiraiText {
   @override
   final String data;
   @override
-  final MiraiTextStyle? textStyle;
+  final MiraiTextStyle? style;
+  @override
+  final TextAlign? textAlign;
+  @override
+  final TextDirection? textDirection;
+  @override
+  final bool? softWrap;
+  @override
+  final TextOverflow? overflow;
+  @override
+  final double? textScaleFactor;
+  @override
+  final int? maxLines;
+  @override
+  final String? semanticsLabel;
+  @override
+  final TextWidthBasis? textWidthBasis;
+  @override
+  final String? selectionColor;
 
   @override
   String toString() {
-    return 'MiraiText(data: $data, textStyle: $textStyle)';
+    return 'MiraiText(data: $data, style: $style, textAlign: $textAlign, textDirection: $textDirection, softWrap: $softWrap, overflow: $overflow, textScaleFactor: $textScaleFactor, maxLines: $maxLines, semanticsLabel: $semanticsLabel, textWidthBasis: $textWidthBasis, selectionColor: $selectionColor)';
   }
 
   @override
@@ -144,13 +294,42 @@ class _$_MiraiText implements _MiraiText {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiText &&
             (identical(other.data, data) || other.data == data) &&
-            (identical(other.textStyle, textStyle) ||
-                other.textStyle == textStyle));
+            (identical(other.style, style) || other.style == style) &&
+            (identical(other.textAlign, textAlign) ||
+                other.textAlign == textAlign) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection) &&
+            (identical(other.softWrap, softWrap) ||
+                other.softWrap == softWrap) &&
+            (identical(other.overflow, overflow) ||
+                other.overflow == overflow) &&
+            (identical(other.textScaleFactor, textScaleFactor) ||
+                other.textScaleFactor == textScaleFactor) &&
+            (identical(other.maxLines, maxLines) ||
+                other.maxLines == maxLines) &&
+            (identical(other.semanticsLabel, semanticsLabel) ||
+                other.semanticsLabel == semanticsLabel) &&
+            (identical(other.textWidthBasis, textWidthBasis) ||
+                other.textWidthBasis == textWidthBasis) &&
+            (identical(other.selectionColor, selectionColor) ||
+                other.selectionColor == selectionColor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, data, textStyle);
+  int get hashCode => Object.hash(
+      runtimeType,
+      data,
+      style,
+      textAlign,
+      textDirection,
+      softWrap,
+      overflow,
+      textScaleFactor,
+      maxLines,
+      semanticsLabel,
+      textWidthBasis,
+      selectionColor);
 
   @JsonKey(ignore: true)
   @override
@@ -169,7 +348,16 @@ class _$_MiraiText implements _MiraiText {
 abstract class _MiraiText implements MiraiText {
   const factory _MiraiText(
       {required final String data,
-      final MiraiTextStyle? textStyle}) = _$_MiraiText;
+      final MiraiTextStyle? style,
+      final TextAlign? textAlign,
+      final TextDirection? textDirection,
+      final bool? softWrap,
+      final TextOverflow? overflow,
+      final double? textScaleFactor,
+      final int? maxLines,
+      final String? semanticsLabel,
+      final TextWidthBasis? textWidthBasis,
+      final String? selectionColor}) = _$_MiraiText;
 
   factory _MiraiText.fromJson(Map<String, dynamic> json) =
       _$_MiraiText.fromJson;
@@ -177,7 +365,25 @@ abstract class _MiraiText implements MiraiText {
   @override
   String get data;
   @override
-  MiraiTextStyle? get textStyle;
+  MiraiTextStyle? get style;
+  @override
+  TextAlign? get textAlign;
+  @override
+  TextDirection? get textDirection;
+  @override
+  bool? get softWrap;
+  @override
+  TextOverflow? get overflow;
+  @override
+  double? get textScaleFactor;
+  @override
+  int? get maxLines;
+  @override
+  String? get semanticsLabel;
+  @override
+  TextWidthBasis? get textWidthBasis;
+  @override
+  String? get selectionColor;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextCopyWith<_$_MiraiText> get copyWith =>

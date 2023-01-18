@@ -11,7 +11,7 @@ class MiraiTextStyleParser {
       color: textStyle.color.toColor,
       backgroundColor: textStyle.backgroundColor.toColor,
       fontSize: textStyle.fontSize,
-      // fontWeight: textStyle.fontWeight,
+      fontWeight: textStyle.fontWeight?.value,
       fontStyle: textStyle.fontStyle,
       letterSpacing: textStyle.letterSpacing,
       wordSpacing: textStyle.wordSpacing,

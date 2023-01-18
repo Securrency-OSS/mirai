@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/painting/text_style/mirai_text_style.dart';
 
@@ -10,7 +11,16 @@ part 'mirai_text.g.dart';
 class MiraiText with _$MiraiText {
   const factory MiraiText({
     required String data,
-    MiraiTextStyle? textStyle,
+    MiraiTextStyle? style,
+    TextAlign? textAlign,
+    TextDirection? textDirection,
+    bool? softWrap,
+    TextOverflow? overflow,
+    double? textScaleFactor,
+    int? maxLines,
+    String? semanticsLabel,
+    TextWidthBasis? textWidthBasis,
+    String? selectionColor,
   }) = _MiraiText;
 
   factory MiraiText.fromJson(Map<String, dynamic> json) =>
