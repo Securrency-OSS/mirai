@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/material/mirai_elevated_button/mirai_elevated_button_parser.dart';
+import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
 
 class Mirai {
