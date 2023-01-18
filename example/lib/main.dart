@@ -16,13 +16,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+
+  final TextEditingController controller =
+      TextEditingController(text: 'Enter your name');
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +34,18 @@ class HomePage extends StatelessWidget {
         title: const Text('Home'),
       ),
       body: Center(
-        child: Mirai.fromJson(json, context),
+        child: Column(
+          children: [
+            MiraiTextFieldParser(controller: controller)
+                .parse(context, MiraiTextField.fromJson(json)),
+          ],
+        ),
       ),
     );
   }
 }
 
 final json = {
-  'type': 'text',
-  "data": "Hey Asim",
+  'type': 'textfield',
+  "initial": "Hey Asim",
 };

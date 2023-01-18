@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
 
 class Mirai {
   static final _miraiWidgetMap = <String, MiraiParser>{};
@@ -28,7 +27,6 @@ class Mirai {
 
   static Widget fromJson(Map<String, dynamic> map, BuildContext context) {
     String widgetType = map['type'];
-    print(widgetType);
     MiraiParser? miraiWidget = _miraiWidgetMap[widgetType];
     if (miraiWidget != null) {
       final model = miraiWidget.getModel(map);

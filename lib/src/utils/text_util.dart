@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 enum MiraiFontWeight {
   w100,
@@ -41,6 +41,107 @@ enum MiraiFontWeight {
         return FontWeight.w900;
       default:
         return FontWeight.normal;
+    }
+  }
+}
+
+enum MiraiTextAlignVertical {
+  top,
+  center,
+  bottom;
+
+  TextAlignVertical get value {
+    switch (this) {
+      case MiraiTextAlignVertical.top:
+        return TextAlignVertical.top;
+      case MiraiTextAlignVertical.center:
+        return TextAlignVertical.center;
+      case MiraiTextAlignVertical.bottom:
+        return TextAlignVertical.bottom;
+      default:
+        return TextAlignVertical.center;
+    }
+  }
+}
+
+enum MiraiTextDirection {
+  ltr,
+  rtl;
+
+  TextDirection get value {
+    switch (this) {
+      case MiraiTextDirection.ltr:
+        return TextDirection.ltr;
+      case MiraiTextDirection.rtl:
+        return TextDirection.rtl;
+      default:
+        return TextDirection.rtl;
+    }
+  }
+}
+
+enum MiraiTextCapitalization {
+  words,
+  sentences,
+  characters,
+  none;
+
+  TextCapitalization get value {
+    switch (this) {
+      case MiraiTextCapitalization.characters:
+        return TextCapitalization.characters;
+      case MiraiTextCapitalization.sentences:
+        return TextCapitalization.sentences;
+      case MiraiTextCapitalization.words:
+        return TextCapitalization.words;
+      default:
+        return TextCapitalization.none;
+    }
+  }
+}
+
+enum MiraiTextInputAction {
+  unspecified,
+  done,
+  go,
+  search,
+  send,
+  next,
+  previous,
+  continueAction,
+  join,
+  route,
+  emergencyCall,
+  newline,
+  none;
+
+  TextInputAction get value {
+    switch (this) {
+      default:
+        return TextInputAction.none;
+    }
+  }
+}
+
+enum MiraiTextInputType {
+  text,
+  multiline,
+  number,
+  phone,
+  datetime,
+  emailAddress,
+  url,
+  visiblePassword,
+  name,
+  streetAddress,
+  none;
+
+  TextInputType get value {
+    switch (this) {
+      case MiraiTextInputType.text:
+        return TextInputType.text;
+      default:
+        return TextInputType.none;
     }
   }
 }
