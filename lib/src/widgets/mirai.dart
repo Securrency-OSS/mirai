@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
+import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 
 class Mirai {
   static final _miraiWidgetMap = <String, MiraiParser>{};
@@ -7,6 +8,7 @@ class Mirai {
   static final _parsers = <MiraiParser>[
     MiraiTextParser(),
     MiraiTextFieldParser(),
+    MiraiElevatedButtonParser(),
   ];
 
   static Future<void> initialize({

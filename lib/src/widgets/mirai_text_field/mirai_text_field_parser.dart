@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/painting/text_style/mirai_text_style_parser.dart';
+import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
 
 class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
   MiraiTextFieldParser({
@@ -38,6 +38,4 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       enabled: model.enabled,
     );
   }
-
-  void done() {}
 }

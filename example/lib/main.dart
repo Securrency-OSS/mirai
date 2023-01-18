@@ -34,18 +34,29 @@ class HomePage extends StatelessWidget {
         title: const Text('Home'),
       ),
       body: Center(
-        child: Column(
-          children: [
-            MiraiTextFieldParser(controller: controller)
-                .parse(context, MiraiTextField.fromJson(json)),
-          ],
-        ),
+        child: Column(children: [
+          MiraiTextFieldParser(controller: controller)
+              .parse(context, MiraiTextField.fromJson(textFieldJson)),
+          Mirai.fromJson(elevatedButtonJson, context),
+        ]),
       ),
     );
   }
 }
 
-final json = {
+final textFieldJson = {
   'type': 'textfield',
   "initial": "Hey Asim",
+};
+
+final elevatedButtonJson = {
+  'type': 'elevatedButton',
+  'style': {
+    'foregroundColor': '#ffffff',
+    'backgroundColor': '#212121',
+  },
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
 };

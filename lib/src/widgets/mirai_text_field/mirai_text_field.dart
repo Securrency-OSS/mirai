@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/painting/text_style/mirai_text_style.dart';
+import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/text_util.dart';
 
 part 'mirai_text_field.freezed.dart';
