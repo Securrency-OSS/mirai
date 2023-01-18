@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/painting/text_style/mirai_text_style.dart';
+import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 class MiraiTextStyleParser {
