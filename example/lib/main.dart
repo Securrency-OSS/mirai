@@ -30,14 +30,28 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Center(
-        child: Mirai.fromJson(json, context),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Mirai.fromJson(elevatedButtonJson, context),
+          ],
+        ),
       ),
     );
   }
 }
 
-final json = {
-  'type': 'text',
-  "data": "Hey Asim",
+final elevatedButtonJson = {
+  'type': 'elevatedButton',
+  'style': {
+    'foregroundColor': '#ffffff',
+    'backgroundColor': '#212121',
+  },
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
 };
