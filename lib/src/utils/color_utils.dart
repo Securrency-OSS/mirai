@@ -8,7 +8,7 @@ class ColorUtils {
 
 extension ColorExt on String? {
   Color? get toColor {
-    if (this == null) return Colors.transparent;
+    if (this?.isEmpty ?? true) return null;
 
     final buffer = StringBuffer();
     if (this!.length == 6 || this!.length == 7) buffer.write('ff');
