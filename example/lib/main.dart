@@ -31,18 +31,42 @@ class HomePage extends StatelessWidget {
         title: const Text('Home'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        child: Center(
+          child: Column(children: [
+            Mirai.fromJson(textFieldJson, context),
+            const SizedBox(
+              height: 20,
+            ),
             Mirai.fromJson(elevatedButtonJson, context),
-          ],
+          ]),
         ),
       ),
     );
   }
 }
+
+final textFieldJson = {
+  'type': 'textfield',
+  'initialValue': '',
+  'hintText': 'Enter your name',
+  'maxLines': 1,
+  'keyboardType': 'text',
+  'textInputAction': 'done',
+  'textAlign': 'start',
+  'textCapitalization': 'none',
+  'textDirection': 'ltr',
+  'textAlignVertical': 'top',
+  'obscureText': false,
+  'style': {
+    'foregroundColor': '#ffffff',
+  },
+  'decoration': {
+    'hintText': 'Please enter details',
+  },
+  'readOnly': false,
+  'enabled': true,
+};
 
 final elevatedButtonJson = {
   'type': 'elevatedButton',
