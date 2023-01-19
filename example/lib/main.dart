@@ -16,15 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  final TextEditingController controller = TextEditingController();
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +34,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
           child: Column(children: [
-            MiraiTextFieldParser(controller: controller)
-                .parse(context, MiraiTextField.fromJson(textFieldJson)),
+            Mirai.fromJson(textFieldJson, context),
             const SizedBox(
               height: 20,
             ),
