@@ -35,10 +35,10 @@ class HomePage extends StatelessWidget {
         child: Center(
           child: Column(children: [
             Mirai.fromJson(textFieldJson, context),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Mirai.fromJson(elevatedButtonJson, context),
+            const SizedBox(height: 20),
+            Mirai.fromJson(containerJson, context),
           ]),
         ),
       ),
@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
 }
 
 final textFieldJson = {
-  'type': 'textfield',
+  'type': 'textField',
   'initialValue': '',
   'hintText': 'Enter your name',
   'maxLines': 1,
@@ -77,5 +77,16 @@ final elevatedButtonJson = {
   'child': {
     'type': 'text',
     'data': 'Sign in',
+  },
+};
+
+final containerJson = {
+  'type': 'container',
+  'width': 100,
+  'height': 100,
+  'color': '#dedede',
+  'child': {
+    'type': 'text',
+    'data': 'Hello',
   },
 };
