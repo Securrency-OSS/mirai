@@ -3,6 +3,7 @@ import 'package:mirai/mirai.dart';
 import 'package:mirai/src/ui/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
 import 'package:mirai/src/utils/color_utils.dart';
+import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
   MiraiTextFieldParser({
@@ -18,13 +19,12 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       MiraiTextField.fromJson(json);
 
   @override
-  String get type => 'textfield';
+  String get type => WidgetType.textField.name;
 
   @override
   Widget parse(BuildContext context, MiraiTextField model) {
-    if (controller != null) {
-      controller?.text = model.initialValue;
-    }
+    controller?.text = model.initialValue;
+
     return TextField(
       controller: controller ?? TextEditingController(text: model.initialValue),
       focusNode: focusNode,
