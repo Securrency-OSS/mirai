@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
-import 'package:mirai/src/utils/text_util.dart';
+import 'package:mirai/src/utils/text_input_utils.dart';
 
 part 'mirai_text_field.freezed.dart';
 part 'mirai_text_field.g.dart';
