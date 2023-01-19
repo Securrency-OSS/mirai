@@ -16,7 +16,6 @@ class Mirai {
   static Future<void> initialize({
     List<MiraiParser> parsers = const [],
   }) async {
-    // _parsers.addAll(_parsers);
     await _initParser(_parsers);
   }
 
