@@ -27,15 +27,17 @@ class Mirai {
     );
   }
 
-  static Widget fromJson(Map<String, dynamic> map, BuildContext context) {
-    String widgetType = map['type'];
-    MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
-    if (miraiParser != null) {
-      final model = miraiParser.getModel(map);
-      return miraiParser.parse(context, model);
-    } else {
-      Log.w('Widget type [$widgetType] not supported');
-      return const SizedBox();
+  static Widget fromJson(Map<String, dynamic>? json, BuildContext context) {
+    if (json != null) {
+      String widgetType = json['type'];
+      MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
+      if (miraiParser != null) {
+        final model = miraiParser.getModel(json);
+        return miraiParser.parse(context, model);
+      } else {
+        Log.w('Widget type [$widgetType] not supported');
+      }
     }
+    return const SizedBox();
   }
 }
