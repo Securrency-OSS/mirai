@@ -20,21 +20,31 @@ MiraiTextField _$MiraiTextFieldFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiTextField {
+  MiraiInputDecoration? get decoration => throw _privateConstructorUsedError;
   String get initialValue => throw _privateConstructorUsedError;
-  MiraiTextStyle? get style => throw _privateConstructorUsedError;
-  int? get maxLines => throw _privateConstructorUsedError;
   MiraiTextInputType? get keyboardType => throw _privateConstructorUsedError;
-  MiraiTextInputAction? get textInputAction =>
+  TextInputAction? get textInputAction => throw _privateConstructorUsedError;
+  TextCapitalization get textCapitalization =>
       throw _privateConstructorUsedError;
+  MiraiTextStyle? get style => throw _privateConstructorUsedError;
   TextAlign get textAlign => throw _privateConstructorUsedError;
-  MiraiTextCapitalization get textCapitalization =>
-      throw _privateConstructorUsedError;
-  MiraiTextDirection? get textDirection => throw _privateConstructorUsedError;
   MiraiTextAlignVertical get textAlignVertical =>
       throw _privateConstructorUsedError;
-  bool get obscureText => throw _privateConstructorUsedError;
+  TextDirection? get textDirection => throw _privateConstructorUsedError;
   bool get readOnly => throw _privateConstructorUsedError;
+  bool get showCursor => throw _privateConstructorUsedError;
+  bool get autofocus => throw _privateConstructorUsedError;
+  String get obscuringCharacter => throw _privateConstructorUsedError;
+  int? get maxLines => throw _privateConstructorUsedError;
+  int? get minLines => throw _privateConstructorUsedError;
+  int? get maxLength => throw _privateConstructorUsedError;
+  bool get obscureText => throw _privateConstructorUsedError;
+  bool get enableSuggestions => throw _privateConstructorUsedError;
   bool get enabled => throw _privateConstructorUsedError;
+  double get cursorWidth => throw _privateConstructorUsedError;
+  double? get cursorHeight => throw _privateConstructorUsedError;
+  String? get cursorColor => throw _privateConstructorUsedError;
+  String get hintText => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,19 +59,31 @@ abstract class $MiraiTextFieldCopyWith<$Res> {
       _$MiraiTextFieldCopyWithImpl<$Res, MiraiTextField>;
   @useResult
   $Res call(
-      {String initialValue,
-      MiraiTextStyle? style,
-      int? maxLines,
+      {MiraiInputDecoration? decoration,
+      String initialValue,
       MiraiTextInputType? keyboardType,
-      MiraiTextInputAction? textInputAction,
+      TextInputAction? textInputAction,
+      TextCapitalization textCapitalization,
+      MiraiTextStyle? style,
       TextAlign textAlign,
-      MiraiTextCapitalization textCapitalization,
-      MiraiTextDirection? textDirection,
       MiraiTextAlignVertical textAlignVertical,
-      bool obscureText,
+      TextDirection? textDirection,
       bool readOnly,
-      bool enabled});
+      bool showCursor,
+      bool autofocus,
+      String obscuringCharacter,
+      int? maxLines,
+      int? minLines,
+      int? maxLength,
+      bool obscureText,
+      bool enableSuggestions,
+      bool enabled,
+      double cursorWidth,
+      double? cursorHeight,
+      String? cursorColor,
+      String hintText});
 
+  $MiraiInputDecorationCopyWith<$Res>? get decoration;
   $MiraiTextStyleCopyWith<$Res>? get style;
 }
 
@@ -78,32 +100,39 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? decoration = freezed,
     Object? initialValue = null,
-    Object? style = freezed,
-    Object? maxLines = freezed,
     Object? keyboardType = freezed,
     Object? textInputAction = freezed,
-    Object? textAlign = null,
     Object? textCapitalization = null,
-    Object? textDirection = freezed,
+    Object? style = freezed,
+    Object? textAlign = null,
     Object? textAlignVertical = null,
-    Object? obscureText = null,
+    Object? textDirection = freezed,
     Object? readOnly = null,
+    Object? showCursor = null,
+    Object? autofocus = null,
+    Object? obscuringCharacter = null,
+    Object? maxLines = freezed,
+    Object? minLines = freezed,
+    Object? maxLength = freezed,
+    Object? obscureText = null,
+    Object? enableSuggestions = null,
     Object? enabled = null,
+    Object? cursorWidth = null,
+    Object? cursorHeight = freezed,
+    Object? cursorColor = freezed,
+    Object? hintText = null,
   }) {
     return _then(_value.copyWith(
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiInputDecoration?,
       initialValue: null == initialValue
           ? _value.initialValue
           : initialValue // ignore: cast_nullable_to_non_nullable
               as String,
-      style: freezed == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
-      maxLines: freezed == maxLines
-          ? _value.maxLines
-          : maxLines // ignore: cast_nullable_to_non_nullable
-              as int?,
       keyboardType: freezed == keyboardType
           ? _value.keyboardType
           : keyboardType // ignore: cast_nullable_to_non_nullable
@@ -111,36 +140,96 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
       textInputAction: freezed == textInputAction
           ? _value.textInputAction
           : textInputAction // ignore: cast_nullable_to_non_nullable
-              as MiraiTextInputAction?,
+              as TextInputAction?,
+      textCapitalization: null == textCapitalization
+          ? _value.textCapitalization
+          : textCapitalization // ignore: cast_nullable_to_non_nullable
+              as TextCapitalization,
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
       textAlign: null == textAlign
           ? _value.textAlign
           : textAlign // ignore: cast_nullable_to_non_nullable
               as TextAlign,
-      textCapitalization: null == textCapitalization
-          ? _value.textCapitalization
-          : textCapitalization // ignore: cast_nullable_to_non_nullable
-              as MiraiTextCapitalization,
-      textDirection: freezed == textDirection
-          ? _value.textDirection
-          : textDirection // ignore: cast_nullable_to_non_nullable
-              as MiraiTextDirection?,
       textAlignVertical: null == textAlignVertical
           ? _value.textAlignVertical
           : textAlignVertical // ignore: cast_nullable_to_non_nullable
               as MiraiTextAlignVertical,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      readOnly: null == readOnly
+          ? _value.readOnly
+          : readOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showCursor: null == showCursor
+          ? _value.showCursor
+          : showCursor // ignore: cast_nullable_to_non_nullable
+              as bool,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      obscuringCharacter: null == obscuringCharacter
+          ? _value.obscuringCharacter
+          : obscuringCharacter // ignore: cast_nullable_to_non_nullable
+              as String,
+      maxLines: freezed == maxLines
+          ? _value.maxLines
+          : maxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minLines: freezed == minLines
+          ? _value.minLines
+          : minLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxLength: freezed == maxLength
+          ? _value.maxLength
+          : maxLength // ignore: cast_nullable_to_non_nullable
+              as int?,
       obscureText: null == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
               as bool,
-      readOnly: null == readOnly
-          ? _value.readOnly
-          : readOnly // ignore: cast_nullable_to_non_nullable
+      enableSuggestions: null == enableSuggestions
+          ? _value.enableSuggestions
+          : enableSuggestions // ignore: cast_nullable_to_non_nullable
               as bool,
       enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      cursorWidth: null == cursorWidth
+          ? _value.cursorWidth
+          : cursorWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      cursorHeight: freezed == cursorHeight
+          ? _value.cursorHeight
+          : cursorHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cursorColor: freezed == cursorColor
+          ? _value.cursorColor
+          : cursorColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hintText: null == hintText
+          ? _value.hintText
+          : hintText // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputDecorationCopyWith<$Res>? get decoration {
+    if (_value.decoration == null) {
+      return null;
+    }
+
+    return $MiraiInputDecorationCopyWith<$Res>(_value.decoration!, (value) {
+      return _then(_value.copyWith(decoration: value) as $Val);
+    });
   }
 
   @override
@@ -165,19 +254,32 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String initialValue,
-      MiraiTextStyle? style,
-      int? maxLines,
+      {MiraiInputDecoration? decoration,
+      String initialValue,
       MiraiTextInputType? keyboardType,
-      MiraiTextInputAction? textInputAction,
+      TextInputAction? textInputAction,
+      TextCapitalization textCapitalization,
+      MiraiTextStyle? style,
       TextAlign textAlign,
-      MiraiTextCapitalization textCapitalization,
-      MiraiTextDirection? textDirection,
       MiraiTextAlignVertical textAlignVertical,
-      bool obscureText,
+      TextDirection? textDirection,
       bool readOnly,
-      bool enabled});
+      bool showCursor,
+      bool autofocus,
+      String obscuringCharacter,
+      int? maxLines,
+      int? minLines,
+      int? maxLength,
+      bool obscureText,
+      bool enableSuggestions,
+      bool enabled,
+      double cursorWidth,
+      double? cursorHeight,
+      String? cursorColor,
+      String hintText});
 
+  @override
+  $MiraiInputDecorationCopyWith<$Res>? get decoration;
   @override
   $MiraiTextStyleCopyWith<$Res>? get style;
 }
@@ -193,32 +295,39 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? decoration = freezed,
     Object? initialValue = null,
-    Object? style = freezed,
-    Object? maxLines = freezed,
     Object? keyboardType = freezed,
     Object? textInputAction = freezed,
-    Object? textAlign = null,
     Object? textCapitalization = null,
-    Object? textDirection = freezed,
+    Object? style = freezed,
+    Object? textAlign = null,
     Object? textAlignVertical = null,
-    Object? obscureText = null,
+    Object? textDirection = freezed,
     Object? readOnly = null,
+    Object? showCursor = null,
+    Object? autofocus = null,
+    Object? obscuringCharacter = null,
+    Object? maxLines = freezed,
+    Object? minLines = freezed,
+    Object? maxLength = freezed,
+    Object? obscureText = null,
+    Object? enableSuggestions = null,
     Object? enabled = null,
+    Object? cursorWidth = null,
+    Object? cursorHeight = freezed,
+    Object? cursorColor = freezed,
+    Object? hintText = null,
   }) {
     return _then(_$_MiraiTextField(
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiInputDecoration?,
       initialValue: null == initialValue
           ? _value.initialValue
           : initialValue // ignore: cast_nullable_to_non_nullable
               as String,
-      style: freezed == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
-      maxLines: freezed == maxLines
-          ? _value.maxLines
-          : maxLines // ignore: cast_nullable_to_non_nullable
-              as int?,
       keyboardType: freezed == keyboardType
           ? _value.keyboardType
           : keyboardType // ignore: cast_nullable_to_non_nullable
@@ -226,35 +335,83 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
       textInputAction: freezed == textInputAction
           ? _value.textInputAction
           : textInputAction // ignore: cast_nullable_to_non_nullable
-              as MiraiTextInputAction?,
+              as TextInputAction?,
+      textCapitalization: null == textCapitalization
+          ? _value.textCapitalization
+          : textCapitalization // ignore: cast_nullable_to_non_nullable
+              as TextCapitalization,
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
       textAlign: null == textAlign
           ? _value.textAlign
           : textAlign // ignore: cast_nullable_to_non_nullable
               as TextAlign,
-      textCapitalization: null == textCapitalization
-          ? _value.textCapitalization
-          : textCapitalization // ignore: cast_nullable_to_non_nullable
-              as MiraiTextCapitalization,
-      textDirection: freezed == textDirection
-          ? _value.textDirection
-          : textDirection // ignore: cast_nullable_to_non_nullable
-              as MiraiTextDirection?,
       textAlignVertical: null == textAlignVertical
           ? _value.textAlignVertical
           : textAlignVertical // ignore: cast_nullable_to_non_nullable
               as MiraiTextAlignVertical,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      readOnly: null == readOnly
+          ? _value.readOnly
+          : readOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showCursor: null == showCursor
+          ? _value.showCursor
+          : showCursor // ignore: cast_nullable_to_non_nullable
+              as bool,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      obscuringCharacter: null == obscuringCharacter
+          ? _value.obscuringCharacter
+          : obscuringCharacter // ignore: cast_nullable_to_non_nullable
+              as String,
+      maxLines: freezed == maxLines
+          ? _value.maxLines
+          : maxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minLines: freezed == minLines
+          ? _value.minLines
+          : minLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxLength: freezed == maxLength
+          ? _value.maxLength
+          : maxLength // ignore: cast_nullable_to_non_nullable
+              as int?,
       obscureText: null == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
               as bool,
-      readOnly: null == readOnly
-          ? _value.readOnly
-          : readOnly // ignore: cast_nullable_to_non_nullable
+      enableSuggestions: null == enableSuggestions
+          ? _value.enableSuggestions
+          : enableSuggestions // ignore: cast_nullable_to_non_nullable
               as bool,
       enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      cursorWidth: null == cursorWidth
+          ? _value.cursorWidth
+          : cursorWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      cursorHeight: freezed == cursorHeight
+          ? _value.cursorHeight
+          : cursorHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cursorColor: freezed == cursorColor
+          ? _value.cursorColor
+          : cursorColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hintText: null == hintText
+          ? _value.hintText
+          : hintText // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -263,57 +420,96 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiTextField implements _MiraiTextField {
   const _$_MiraiTextField(
-      {this.initialValue = '',
-      this.style,
-      this.maxLines,
+      {this.decoration,
+      this.initialValue = '',
       this.keyboardType,
       this.textInputAction,
+      this.textCapitalization = TextCapitalization.none,
+      this.style,
       this.textAlign = TextAlign.start,
-      this.textCapitalization = MiraiTextCapitalization.none,
-      this.textDirection,
       this.textAlignVertical = MiraiTextAlignVertical.center,
-      this.obscureText = false,
+      this.textDirection,
       this.readOnly = false,
-      this.enabled = true});
+      this.showCursor = false,
+      this.autofocus = false,
+      this.obscuringCharacter = '•',
+      this.maxLines,
+      this.minLines,
+      this.maxLength,
+      this.obscureText = false,
+      this.enableSuggestions = true,
+      this.enabled = true,
+      this.cursorWidth = 2,
+      this.cursorHeight,
+      this.cursorColor,
+      this.hintText = ''});
 
   factory _$_MiraiTextField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFieldFromJson(json);
 
   @override
+  final MiraiInputDecoration? decoration;
+  @override
   @JsonKey()
   final String initialValue;
   @override
-  final MiraiTextStyle? style;
-  @override
-  final int? maxLines;
-  @override
   final MiraiTextInputType? keyboardType;
   @override
-  final MiraiTextInputAction? textInputAction;
+  final TextInputAction? textInputAction;
+  @override
+  @JsonKey()
+  final TextCapitalization textCapitalization;
+  @override
+  final MiraiTextStyle? style;
   @override
   @JsonKey()
   final TextAlign textAlign;
   @override
   @JsonKey()
-  final MiraiTextCapitalization textCapitalization;
-  @override
-  final MiraiTextDirection? textDirection;
-  @override
-  @JsonKey()
   final MiraiTextAlignVertical textAlignVertical;
   @override
-  @JsonKey()
-  final bool obscureText;
+  final TextDirection? textDirection;
   @override
   @JsonKey()
   final bool readOnly;
   @override
   @JsonKey()
+  final bool showCursor;
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  @JsonKey()
+  final String obscuringCharacter;
+  @override
+  final int? maxLines;
+  @override
+  final int? minLines;
+  @override
+  final int? maxLength;
+  @override
+  @JsonKey()
+  final bool obscureText;
+  @override
+  @JsonKey()
+  final bool enableSuggestions;
+  @override
+  @JsonKey()
   final bool enabled;
+  @override
+  @JsonKey()
+  final double cursorWidth;
+  @override
+  final double? cursorHeight;
+  @override
+  final String? cursorColor;
+  @override
+  @JsonKey()
+  final String hintText;
 
   @override
   String toString() {
-    return 'MiraiTextField(initialValue: $initialValue, style: $style, maxLines: $maxLines, keyboardType: $keyboardType, textInputAction: $textInputAction, textAlign: $textAlign, textCapitalization: $textCapitalization, textDirection: $textDirection, textAlignVertical: $textAlignVertical, obscureText: $obscureText, readOnly: $readOnly, enabled: $enabled)';
+    return 'MiraiTextField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
   }
 
   @override
@@ -321,46 +517,80 @@ class _$_MiraiTextField implements _MiraiTextField {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiTextField &&
+            (identical(other.decoration, decoration) ||
+                other.decoration == decoration) &&
             (identical(other.initialValue, initialValue) ||
                 other.initialValue == initialValue) &&
-            (identical(other.style, style) || other.style == style) &&
-            (identical(other.maxLines, maxLines) ||
-                other.maxLines == maxLines) &&
             (identical(other.keyboardType, keyboardType) ||
                 other.keyboardType == keyboardType) &&
             (identical(other.textInputAction, textInputAction) ||
                 other.textInputAction == textInputAction) &&
-            (identical(other.textAlign, textAlign) ||
-                other.textAlign == textAlign) &&
             (identical(other.textCapitalization, textCapitalization) ||
                 other.textCapitalization == textCapitalization) &&
-            (identical(other.textDirection, textDirection) ||
-                other.textDirection == textDirection) &&
+            (identical(other.style, style) || other.style == style) &&
+            (identical(other.textAlign, textAlign) ||
+                other.textAlign == textAlign) &&
             (identical(other.textAlignVertical, textAlignVertical) ||
                 other.textAlignVertical == textAlignVertical) &&
-            (identical(other.obscureText, obscureText) ||
-                other.obscureText == obscureText) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection) &&
             (identical(other.readOnly, readOnly) ||
                 other.readOnly == readOnly) &&
-            (identical(other.enabled, enabled) || other.enabled == enabled));
+            (identical(other.showCursor, showCursor) ||
+                other.showCursor == showCursor) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.obscuringCharacter, obscuringCharacter) ||
+                other.obscuringCharacter == obscuringCharacter) &&
+            (identical(other.maxLines, maxLines) ||
+                other.maxLines == maxLines) &&
+            (identical(other.minLines, minLines) ||
+                other.minLines == minLines) &&
+            (identical(other.maxLength, maxLength) ||
+                other.maxLength == maxLength) &&
+            (identical(other.obscureText, obscureText) ||
+                other.obscureText == obscureText) &&
+            (identical(other.enableSuggestions, enableSuggestions) ||
+                other.enableSuggestions == enableSuggestions) &&
+            (identical(other.enabled, enabled) || other.enabled == enabled) &&
+            (identical(other.cursorWidth, cursorWidth) ||
+                other.cursorWidth == cursorWidth) &&
+            (identical(other.cursorHeight, cursorHeight) ||
+                other.cursorHeight == cursorHeight) &&
+            (identical(other.cursorColor, cursorColor) ||
+                other.cursorColor == cursorColor) &&
+            (identical(other.hintText, hintText) ||
+                other.hintText == hintText));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      initialValue,
-      style,
-      maxLines,
-      keyboardType,
-      textInputAction,
-      textAlign,
-      textCapitalization,
-      textDirection,
-      textAlignVertical,
-      obscureText,
-      readOnly,
-      enabled);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        decoration,
+        initialValue,
+        keyboardType,
+        textInputAction,
+        textCapitalization,
+        style,
+        textAlign,
+        textAlignVertical,
+        textDirection,
+        readOnly,
+        showCursor,
+        autofocus,
+        obscuringCharacter,
+        maxLines,
+        minLines,
+        maxLength,
+        obscureText,
+        enableSuggestions,
+        enabled,
+        cursorWidth,
+        cursorHeight,
+        cursorColor,
+        hintText
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -378,46 +608,79 @@ class _$_MiraiTextField implements _MiraiTextField {
 
 abstract class _MiraiTextField implements MiraiTextField {
   const factory _MiraiTextField(
-      {final String initialValue,
-      final MiraiTextStyle? style,
-      final int? maxLines,
+      {final MiraiInputDecoration? decoration,
+      final String initialValue,
       final MiraiTextInputType? keyboardType,
-      final MiraiTextInputAction? textInputAction,
+      final TextInputAction? textInputAction,
+      final TextCapitalization textCapitalization,
+      final MiraiTextStyle? style,
       final TextAlign textAlign,
-      final MiraiTextCapitalization textCapitalization,
-      final MiraiTextDirection? textDirection,
       final MiraiTextAlignVertical textAlignVertical,
-      final bool obscureText,
+      final TextDirection? textDirection,
       final bool readOnly,
-      final bool enabled}) = _$_MiraiTextField;
+      final bool showCursor,
+      final bool autofocus,
+      final String obscuringCharacter,
+      final int? maxLines,
+      final int? minLines,
+      final int? maxLength,
+      final bool obscureText,
+      final bool enableSuggestions,
+      final bool enabled,
+      final double cursorWidth,
+      final double? cursorHeight,
+      final String? cursorColor,
+      final String hintText}) = _$_MiraiTextField;
 
   factory _MiraiTextField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextField.fromJson;
 
   @override
+  MiraiInputDecoration? get decoration;
+  @override
   String get initialValue;
-  @override
-  MiraiTextStyle? get style;
-  @override
-  int? get maxLines;
   @override
   MiraiTextInputType? get keyboardType;
   @override
-  MiraiTextInputAction? get textInputAction;
+  TextInputAction? get textInputAction;
+  @override
+  TextCapitalization get textCapitalization;
+  @override
+  MiraiTextStyle? get style;
   @override
   TextAlign get textAlign;
   @override
-  MiraiTextCapitalization get textCapitalization;
-  @override
-  MiraiTextDirection? get textDirection;
-  @override
   MiraiTextAlignVertical get textAlignVertical;
   @override
-  bool get obscureText;
+  TextDirection? get textDirection;
   @override
   bool get readOnly;
   @override
+  bool get showCursor;
+  @override
+  bool get autofocus;
+  @override
+  String get obscuringCharacter;
+  @override
+  int? get maxLines;
+  @override
+  int? get minLines;
+  @override
+  int? get maxLength;
+  @override
+  bool get obscureText;
+  @override
+  bool get enableSuggestions;
+  @override
   bool get enabled;
+  @override
+  double get cursorWidth;
+  @override
+  double? get cursorHeight;
+  @override
+  String? get cursorColor;
+  @override
+  String get hintText;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextFieldCopyWith<_$_MiraiTextField> get copyWith =>

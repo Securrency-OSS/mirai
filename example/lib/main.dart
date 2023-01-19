@@ -24,8 +24,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
-  final TextEditingController controller =
-      TextEditingController(text: 'Enter your name');
+  final TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +32,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Center(
-        child: Column(children: [
-          MiraiTextFieldParser(controller: controller)
-              .parse(context, MiraiTextField.fromJson(textFieldJson)),
-          Mirai.fromJson(elevatedButtonJson, context),
-        ]),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        child: Center(
+          child: Column(children: [
+            MiraiTextFieldParser(controller: controller)
+                .parse(context, MiraiTextField.fromJson(textFieldJson)),
+            const SizedBox(
+              height: 20,
+            ),
+            Mirai.fromJson(elevatedButtonJson, context),
+          ]),
+        ),
       ),
     );
   }
@@ -46,7 +51,24 @@ class HomePage extends StatelessWidget {
 
 final textFieldJson = {
   'type': 'textfield',
-  "initial": "Hey Asim",
+  'initialValue': '',
+  'hintText': 'Enter your name',
+  'maxLines': 1,
+  'keyboardType': 'text',
+  'textInputAction': 'done',
+  'textAlign': 'start',
+  'textCapitalization': 'none',
+  'textDirection': 'ltr',
+  'textAlignVertical': 'top',
+  'obscureText': false,
+  'style': {
+    'foregroundColor': '#ffffff',
+  },
+  'decoration': {
+    'hintText': 'Please enter details',
+  },
+  'readOnly': false,
+  'enabled': true,
 };
 
 final elevatedButtonJson = {

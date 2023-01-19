@@ -8,47 +8,71 @@ part of 'mirai_text_field.dart';
 
 _$_MiraiTextField _$$_MiraiTextFieldFromJson(Map<String, dynamic> json) =>
     _$_MiraiTextField(
-      initialValue: json['initialValue'] as String? ?? '',
-      style: json['style'] == null
+      decoration: json['decoration'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
-      maxLines: json['maxLines'] as int?,
+          : MiraiInputDecoration.fromJson(
+              json['decoration'] as Map<String, dynamic>),
+      initialValue: json['initialValue'] as String? ?? '',
       keyboardType: $enumDecodeNullable(
           _$MiraiTextInputTypeEnumMap, json['keyboardType']),
       textInputAction: $enumDecodeNullable(
-          _$MiraiTextInputActionEnumMap, json['textInputAction']),
+          _$TextInputActionEnumMap, json['textInputAction']),
+      textCapitalization: $enumDecodeNullable(
+              _$TextCapitalizationEnumMap, json['textCapitalization']) ??
+          TextCapitalization.none,
+      style: json['style'] == null
+          ? null
+          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
       textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']) ??
           TextAlign.start,
-      textCapitalization: $enumDecodeNullable(
-              _$MiraiTextCapitalizationEnumMap, json['textCapitalization']) ??
-          MiraiTextCapitalization.none,
-      textDirection: $enumDecodeNullable(
-          _$MiraiTextDirectionEnumMap, json['textDirection']),
       textAlignVertical: $enumDecodeNullable(
               _$MiraiTextAlignVerticalEnumMap, json['textAlignVertical']) ??
           MiraiTextAlignVertical.center,
-      obscureText: json['obscureText'] as bool? ?? false,
+      textDirection:
+          $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
       readOnly: json['readOnly'] as bool? ?? false,
+      showCursor: json['showCursor'] as bool? ?? false,
+      autofocus: json['autofocus'] as bool? ?? false,
+      obscuringCharacter: json['obscuringCharacter'] as String? ?? '•',
+      maxLines: json['maxLines'] as int?,
+      minLines: json['minLines'] as int?,
+      maxLength: json['maxLength'] as int?,
+      obscureText: json['obscureText'] as bool? ?? false,
+      enableSuggestions: json['enableSuggestions'] as bool? ?? true,
       enabled: json['enabled'] as bool? ?? true,
+      cursorWidth: (json['cursorWidth'] as num?)?.toDouble() ?? 2,
+      cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
+      cursorColor: json['cursorColor'] as String?,
+      hintText: json['hintText'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_MiraiTextFieldToJson(_$_MiraiTextField instance) =>
     <String, dynamic>{
+      'decoration': instance.decoration,
       'initialValue': instance.initialValue,
-      'style': instance.style,
-      'maxLines': instance.maxLines,
       'keyboardType': _$MiraiTextInputTypeEnumMap[instance.keyboardType],
-      'textInputAction':
-          _$MiraiTextInputActionEnumMap[instance.textInputAction],
-      'textAlign': _$TextAlignEnumMap[instance.textAlign]!,
+      'textInputAction': _$TextInputActionEnumMap[instance.textInputAction],
       'textCapitalization':
-          _$MiraiTextCapitalizationEnumMap[instance.textCapitalization]!,
-      'textDirection': _$MiraiTextDirectionEnumMap[instance.textDirection],
+          _$TextCapitalizationEnumMap[instance.textCapitalization]!,
+      'style': instance.style,
+      'textAlign': _$TextAlignEnumMap[instance.textAlign]!,
       'textAlignVertical':
           _$MiraiTextAlignVerticalEnumMap[instance.textAlignVertical]!,
-      'obscureText': instance.obscureText,
+      'textDirection': _$TextDirectionEnumMap[instance.textDirection],
       'readOnly': instance.readOnly,
+      'showCursor': instance.showCursor,
+      'autofocus': instance.autofocus,
+      'obscuringCharacter': instance.obscuringCharacter,
+      'maxLines': instance.maxLines,
+      'minLines': instance.minLines,
+      'maxLength': instance.maxLength,
+      'obscureText': instance.obscureText,
+      'enableSuggestions': instance.enableSuggestions,
       'enabled': instance.enabled,
+      'cursorWidth': instance.cursorWidth,
+      'cursorHeight': instance.cursorHeight,
+      'cursorColor': instance.cursorColor,
+      'hintText': instance.hintText,
     };
 
 const _$MiraiTextInputTypeEnumMap = {
@@ -65,20 +89,27 @@ const _$MiraiTextInputTypeEnumMap = {
   MiraiTextInputType.none: 'none',
 };
 
-const _$MiraiTextInputActionEnumMap = {
-  MiraiTextInputAction.unspecified: 'unspecified',
-  MiraiTextInputAction.done: 'done',
-  MiraiTextInputAction.go: 'go',
-  MiraiTextInputAction.search: 'search',
-  MiraiTextInputAction.send: 'send',
-  MiraiTextInputAction.next: 'next',
-  MiraiTextInputAction.previous: 'previous',
-  MiraiTextInputAction.continueAction: 'continueAction',
-  MiraiTextInputAction.join: 'join',
-  MiraiTextInputAction.route: 'route',
-  MiraiTextInputAction.emergencyCall: 'emergencyCall',
-  MiraiTextInputAction.newline: 'newline',
-  MiraiTextInputAction.none: 'none',
+const _$TextInputActionEnumMap = {
+  TextInputAction.none: 'none',
+  TextInputAction.unspecified: 'unspecified',
+  TextInputAction.done: 'done',
+  TextInputAction.go: 'go',
+  TextInputAction.search: 'search',
+  TextInputAction.send: 'send',
+  TextInputAction.next: 'next',
+  TextInputAction.previous: 'previous',
+  TextInputAction.continueAction: 'continueAction',
+  TextInputAction.join: 'join',
+  TextInputAction.route: 'route',
+  TextInputAction.emergencyCall: 'emergencyCall',
+  TextInputAction.newline: 'newline',
+};
+
+const _$TextCapitalizationEnumMap = {
+  TextCapitalization.words: 'words',
+  TextCapitalization.sentences: 'sentences',
+  TextCapitalization.characters: 'characters',
+  TextCapitalization.none: 'none',
 };
 
 const _$TextAlignEnumMap = {
@@ -90,20 +121,13 @@ const _$TextAlignEnumMap = {
   TextAlign.end: 'end',
 };
 
-const _$MiraiTextCapitalizationEnumMap = {
-  MiraiTextCapitalization.words: 'words',
-  MiraiTextCapitalization.sentences: 'sentences',
-  MiraiTextCapitalization.characters: 'characters',
-  MiraiTextCapitalization.none: 'none',
-};
-
-const _$MiraiTextDirectionEnumMap = {
-  MiraiTextDirection.ltr: 'ltr',
-  MiraiTextDirection.rtl: 'rtl',
-};
-
 const _$MiraiTextAlignVerticalEnumMap = {
   MiraiTextAlignVertical.top: 'top',
   MiraiTextAlignVertical.center: 'center',
   MiraiTextAlignVertical.bottom: 'bottom',
+};
+
+const _$TextDirectionEnumMap = {
+  TextDirection.rtl: 'rtl',
+  TextDirection.ltr: 'ltr',
 };

@@ -64,65 +64,6 @@ enum MiraiTextAlignVertical {
   }
 }
 
-enum MiraiTextDirection {
-  ltr,
-  rtl;
-
-  TextDirection get value {
-    switch (this) {
-      case MiraiTextDirection.ltr:
-        return TextDirection.ltr;
-      case MiraiTextDirection.rtl:
-        return TextDirection.rtl;
-      default:
-        return TextDirection.rtl;
-    }
-  }
-}
-
-enum MiraiTextCapitalization {
-  words,
-  sentences,
-  characters,
-  none;
-
-  TextCapitalization get value {
-    switch (this) {
-      case MiraiTextCapitalization.characters:
-        return TextCapitalization.characters;
-      case MiraiTextCapitalization.sentences:
-        return TextCapitalization.sentences;
-      case MiraiTextCapitalization.words:
-        return TextCapitalization.words;
-      default:
-        return TextCapitalization.none;
-    }
-  }
-}
-
-enum MiraiTextInputAction {
-  unspecified,
-  done,
-  go,
-  search,
-  send,
-  next,
-  previous,
-  continueAction,
-  join,
-  route,
-  emergencyCall,
-  newline,
-  none;
-
-  TextInputAction get value {
-    switch (this) {
-      default:
-        return TextInputAction.none;
-    }
-  }
-}
-
 enum MiraiTextInputType {
   text,
   multiline,

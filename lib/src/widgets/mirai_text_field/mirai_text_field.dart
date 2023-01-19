@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/ui/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/text_util.dart';
 
@@ -9,20 +10,30 @@ part 'mirai_text_field.g.dart';
 @freezed
 class MiraiTextField with _$MiraiTextField {
   const factory MiraiTextField({
+    MiraiInputDecoration? decoration,
     @Default('') String initialValue,
-    MiraiTextStyle? style,
-    int? maxLines,
     MiraiTextInputType? keyboardType,
-    MiraiTextInputAction? textInputAction,
+    TextInputAction? textInputAction,
+    @Default(TextCapitalization.none) TextCapitalization textCapitalization,
+    MiraiTextStyle? style,
     @Default(TextAlign.start) TextAlign textAlign,
-    @Default(MiraiTextCapitalization.none)
-        MiraiTextCapitalization textCapitalization,
-    MiraiTextDirection? textDirection,
     @Default(MiraiTextAlignVertical.center)
         MiraiTextAlignVertical textAlignVertical,
-    @Default(false) bool obscureText,
+    TextDirection? textDirection,
     @Default(false) bool readOnly,
+    @Default(false) bool showCursor,
+    @Default(false) bool autofocus,
+    @Default('•') String obscuringCharacter,
+    int? maxLines,
+    int? minLines,
+    int? maxLength,
+    @Default(false) bool obscureText,
+    @Default(true) bool enableSuggestions,
     @Default(true) bool enabled,
+    @Default(2) double cursorWidth,
+    double? cursorHeight,
+    String? cursorColor,
+    @Default('') String hintText,
   }) = _MiraiTextField;
 
   factory MiraiTextField.fromJson(Map<String, dynamic> json) =>
