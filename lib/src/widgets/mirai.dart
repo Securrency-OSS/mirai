@@ -30,10 +30,10 @@ class Mirai {
 
   static Widget fromJson(Map<String, dynamic> map, BuildContext context) {
     String widgetType = map['type'];
-    MiraiParser? miraiWidget = _miraiWidgetMap[widgetType];
-    if (miraiWidget != null) {
-      final model = miraiWidget.getModel(map);
-      return miraiWidget.parse(context, model);
+    MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
+    if (miraiParser != null) {
+      final model = miraiParser.getModel(map);
+      return miraiParser.parse(context, model);
     } else {
       // Log.w('Widget type [$widgetType] not supported');
       return const SizedBox();
