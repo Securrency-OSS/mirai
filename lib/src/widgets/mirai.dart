@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
+import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
 
@@ -35,7 +36,7 @@ class Mirai {
       final model = miraiParser.getModel(map);
       return miraiParser.parse(context, model);
     } else {
-      // Log.w('Widget type [$widgetType] not supported');
+      Log.w('Widget type [$widgetType] not supported');
       return const SizedBox();
     }
   }
