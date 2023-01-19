@@ -22,9 +22,11 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
 
   @override
   Widget parse(BuildContext context, MiraiTextField model) {
-    controller?.text = model.initialValue;
+    if (controller != null) {
+      controller?.text = model.initialValue;
+    }
     return TextField(
-      controller: controller,
+      controller: controller ?? TextEditingController(text: model.initialValue),
       focusNode: focusNode,
       keyboardType: model.keyboardType?.value,
       textInputAction: model.textInputAction,
@@ -64,6 +66,9 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       prefixStyle: MiraiTextStyleParser.parse(input?.prefixStyle),
       suffixText: input?.suffixText,
       suffixStyle: MiraiTextStyleParser.parse(input?.suffixStyle),
+      fillColor: input?.fillColor.toColor,
+      focusColor: input?.focusColor.toColor,
+      hoverColor: input?.hoverColor.toColor,
     );
   }
 }

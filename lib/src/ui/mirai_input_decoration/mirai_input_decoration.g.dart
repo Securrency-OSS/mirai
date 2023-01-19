@@ -36,6 +36,9 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
           ? null
           : MiraiTextStyle.fromJson(
               json['suffixStyle'] as Map<String, dynamic>),
+      fillColor: json['fillColor'] as String?,
+      focusColor: json['focusColor'] as String?,
+      hoverColor: json['hoverColor'] as String?,
     );
 
 Map<String, dynamic> _$$_MiraiInputDecorationToJson(
@@ -53,4 +56,7 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'prefixStyle': instance.prefixStyle,
       'suffixText': instance.suffixText,
       'suffixStyle': instance.suffixStyle,
+      'fillColor': instance.fillColor,
+      'focusColor': instance.focusColor,
+      'hoverColor': instance.hoverColor,
     };

@@ -19,6 +19,9 @@ class MiraiInputDecoration with _$MiraiInputDecoration {
     MiraiTextStyle? prefixStyle,
     String? suffixText,
     MiraiTextStyle? suffixStyle,
+    String? fillColor,
+    String? focusColor,
+    String? hoverColor,
   }) = _MiraiInputDecoration;
 
   factory MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
