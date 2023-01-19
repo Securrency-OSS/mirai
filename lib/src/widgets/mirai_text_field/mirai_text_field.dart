@@ -17,11 +17,10 @@ class MiraiTextField with _$MiraiTextField {
     @Default(TextCapitalization.none) TextCapitalization textCapitalization,
     MiraiTextStyle? style,
     @Default(TextAlign.start) TextAlign textAlign,
-    @Default(MiraiTextAlignVertical.center)
-        MiraiTextAlignVertical textAlignVertical,
+    MiraiTextAlignVertical? textAlignVertical,
     TextDirection? textDirection,
     @Default(false) bool readOnly,
-    @Default(false) bool showCursor,
+    bool? showCursor,
     @Default(false) bool autofocus,
     @Default('•') String obscuringCharacter,
     int? maxLines,
@@ -29,11 +28,11 @@ class MiraiTextField with _$MiraiTextField {
     int? maxLength,
     @Default(false) bool obscureText,
     @Default(true) bool enableSuggestions,
-    @Default(true) bool enabled,
+    bool? enabled,
     @Default(2) double cursorWidth,
     double? cursorHeight,
     String? cursorColor,
-    @Default('') String hintText,
+    String? hintText,
   }) = _MiraiTextField;
 
   factory MiraiTextField.fromJson(Map<String, dynamic> json) =>

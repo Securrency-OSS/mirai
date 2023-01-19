@@ -28,11 +28,11 @@ mixin _$MiraiTextField {
       throw _privateConstructorUsedError;
   MiraiTextStyle? get style => throw _privateConstructorUsedError;
   TextAlign get textAlign => throw _privateConstructorUsedError;
-  MiraiTextAlignVertical get textAlignVertical =>
+  MiraiTextAlignVertical? get textAlignVertical =>
       throw _privateConstructorUsedError;
   TextDirection? get textDirection => throw _privateConstructorUsedError;
   bool get readOnly => throw _privateConstructorUsedError;
-  bool get showCursor => throw _privateConstructorUsedError;
+  bool? get showCursor => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
   String get obscuringCharacter => throw _privateConstructorUsedError;
   int? get maxLines => throw _privateConstructorUsedError;
@@ -40,11 +40,11 @@ mixin _$MiraiTextField {
   int? get maxLength => throw _privateConstructorUsedError;
   bool get obscureText => throw _privateConstructorUsedError;
   bool get enableSuggestions => throw _privateConstructorUsedError;
-  bool get enabled => throw _privateConstructorUsedError;
+  bool? get enabled => throw _privateConstructorUsedError;
   double get cursorWidth => throw _privateConstructorUsedError;
   double? get cursorHeight => throw _privateConstructorUsedError;
   String? get cursorColor => throw _privateConstructorUsedError;
-  String get hintText => throw _privateConstructorUsedError;
+  String? get hintText => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -66,10 +66,10 @@ abstract class $MiraiTextFieldCopyWith<$Res> {
       TextCapitalization textCapitalization,
       MiraiTextStyle? style,
       TextAlign textAlign,
-      MiraiTextAlignVertical textAlignVertical,
+      MiraiTextAlignVertical? textAlignVertical,
       TextDirection? textDirection,
       bool readOnly,
-      bool showCursor,
+      bool? showCursor,
       bool autofocus,
       String obscuringCharacter,
       int? maxLines,
@@ -77,11 +77,11 @@ abstract class $MiraiTextFieldCopyWith<$Res> {
       int? maxLength,
       bool obscureText,
       bool enableSuggestions,
-      bool enabled,
+      bool? enabled,
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String hintText});
+      String? hintText});
 
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
   $MiraiTextStyleCopyWith<$Res>? get style;
@@ -107,10 +107,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
     Object? textCapitalization = null,
     Object? style = freezed,
     Object? textAlign = null,
-    Object? textAlignVertical = null,
+    Object? textAlignVertical = freezed,
     Object? textDirection = freezed,
     Object? readOnly = null,
-    Object? showCursor = null,
+    Object? showCursor = freezed,
     Object? autofocus = null,
     Object? obscuringCharacter = null,
     Object? maxLines = freezed,
@@ -118,11 +118,11 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
     Object? maxLength = freezed,
     Object? obscureText = null,
     Object? enableSuggestions = null,
-    Object? enabled = null,
+    Object? enabled = freezed,
     Object? cursorWidth = null,
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
-    Object? hintText = null,
+    Object? hintText = freezed,
   }) {
     return _then(_value.copyWith(
       decoration: freezed == decoration
@@ -153,10 +153,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.textAlign
           : textAlign // ignore: cast_nullable_to_non_nullable
               as TextAlign,
-      textAlignVertical: null == textAlignVertical
+      textAlignVertical: freezed == textAlignVertical
           ? _value.textAlignVertical
           : textAlignVertical // ignore: cast_nullable_to_non_nullable
-              as MiraiTextAlignVertical,
+              as MiraiTextAlignVertical?,
       textDirection: freezed == textDirection
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
@@ -165,10 +165,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.readOnly
           : readOnly // ignore: cast_nullable_to_non_nullable
               as bool,
-      showCursor: null == showCursor
+      showCursor: freezed == showCursor
           ? _value.showCursor
           : showCursor // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
@@ -197,10 +197,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.enableSuggestions
           : enableSuggestions // ignore: cast_nullable_to_non_nullable
               as bool,
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       cursorWidth: null == cursorWidth
           ? _value.cursorWidth
           : cursorWidth // ignore: cast_nullable_to_non_nullable
@@ -213,10 +213,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.cursorColor
           : cursorColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      hintText: null == hintText
+      hintText: freezed == hintText
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 
@@ -261,10 +261,10 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
       TextCapitalization textCapitalization,
       MiraiTextStyle? style,
       TextAlign textAlign,
-      MiraiTextAlignVertical textAlignVertical,
+      MiraiTextAlignVertical? textAlignVertical,
       TextDirection? textDirection,
       bool readOnly,
-      bool showCursor,
+      bool? showCursor,
       bool autofocus,
       String obscuringCharacter,
       int? maxLines,
@@ -272,11 +272,11 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
       int? maxLength,
       bool obscureText,
       bool enableSuggestions,
-      bool enabled,
+      bool? enabled,
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String hintText});
+      String? hintText});
 
   @override
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
@@ -302,10 +302,10 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
     Object? textCapitalization = null,
     Object? style = freezed,
     Object? textAlign = null,
-    Object? textAlignVertical = null,
+    Object? textAlignVertical = freezed,
     Object? textDirection = freezed,
     Object? readOnly = null,
-    Object? showCursor = null,
+    Object? showCursor = freezed,
     Object? autofocus = null,
     Object? obscuringCharacter = null,
     Object? maxLines = freezed,
@@ -313,11 +313,11 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
     Object? maxLength = freezed,
     Object? obscureText = null,
     Object? enableSuggestions = null,
-    Object? enabled = null,
+    Object? enabled = freezed,
     Object? cursorWidth = null,
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
-    Object? hintText = null,
+    Object? hintText = freezed,
   }) {
     return _then(_$_MiraiTextField(
       decoration: freezed == decoration
@@ -348,10 +348,10 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.textAlign
           : textAlign // ignore: cast_nullable_to_non_nullable
               as TextAlign,
-      textAlignVertical: null == textAlignVertical
+      textAlignVertical: freezed == textAlignVertical
           ? _value.textAlignVertical
           : textAlignVertical // ignore: cast_nullable_to_non_nullable
-              as MiraiTextAlignVertical,
+              as MiraiTextAlignVertical?,
       textDirection: freezed == textDirection
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
@@ -360,10 +360,10 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.readOnly
           : readOnly // ignore: cast_nullable_to_non_nullable
               as bool,
-      showCursor: null == showCursor
+      showCursor: freezed == showCursor
           ? _value.showCursor
           : showCursor // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
@@ -392,10 +392,10 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.enableSuggestions
           : enableSuggestions // ignore: cast_nullable_to_non_nullable
               as bool,
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       cursorWidth: null == cursorWidth
           ? _value.cursorWidth
           : cursorWidth // ignore: cast_nullable_to_non_nullable
@@ -408,10 +408,10 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.cursorColor
           : cursorColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      hintText: null == hintText
+      hintText: freezed == hintText
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -427,10 +427,10 @@ class _$_MiraiTextField implements _MiraiTextField {
       this.textCapitalization = TextCapitalization.none,
       this.style,
       this.textAlign = TextAlign.start,
-      this.textAlignVertical = MiraiTextAlignVertical.center,
+      this.textAlignVertical,
       this.textDirection,
       this.readOnly = false,
-      this.showCursor = false,
+      this.showCursor,
       this.autofocus = false,
       this.obscuringCharacter = '•',
       this.maxLines,
@@ -438,11 +438,11 @@ class _$_MiraiTextField implements _MiraiTextField {
       this.maxLength,
       this.obscureText = false,
       this.enableSuggestions = true,
-      this.enabled = true,
+      this.enabled,
       this.cursorWidth = 2,
       this.cursorHeight,
       this.cursorColor,
-      this.hintText = ''});
+      this.hintText});
 
   factory _$_MiraiTextField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFieldFromJson(json);
@@ -465,16 +465,14 @@ class _$_MiraiTextField implements _MiraiTextField {
   @JsonKey()
   final TextAlign textAlign;
   @override
-  @JsonKey()
-  final MiraiTextAlignVertical textAlignVertical;
+  final MiraiTextAlignVertical? textAlignVertical;
   @override
   final TextDirection? textDirection;
   @override
   @JsonKey()
   final bool readOnly;
   @override
-  @JsonKey()
-  final bool showCursor;
+  final bool? showCursor;
   @override
   @JsonKey()
   final bool autofocus;
@@ -494,8 +492,7 @@ class _$_MiraiTextField implements _MiraiTextField {
   @JsonKey()
   final bool enableSuggestions;
   @override
-  @JsonKey()
-  final bool enabled;
+  final bool? enabled;
   @override
   @JsonKey()
   final double cursorWidth;
@@ -504,8 +501,7 @@ class _$_MiraiTextField implements _MiraiTextField {
   @override
   final String? cursorColor;
   @override
-  @JsonKey()
-  final String hintText;
+  final String? hintText;
 
   @override
   String toString() {
@@ -615,10 +611,10 @@ abstract class _MiraiTextField implements MiraiTextField {
       final TextCapitalization textCapitalization,
       final MiraiTextStyle? style,
       final TextAlign textAlign,
-      final MiraiTextAlignVertical textAlignVertical,
+      final MiraiTextAlignVertical? textAlignVertical,
       final TextDirection? textDirection,
       final bool readOnly,
-      final bool showCursor,
+      final bool? showCursor,
       final bool autofocus,
       final String obscuringCharacter,
       final int? maxLines,
@@ -626,11 +622,11 @@ abstract class _MiraiTextField implements MiraiTextField {
       final int? maxLength,
       final bool obscureText,
       final bool enableSuggestions,
-      final bool enabled,
+      final bool? enabled,
       final double cursorWidth,
       final double? cursorHeight,
       final String? cursorColor,
-      final String hintText}) = _$_MiraiTextField;
+      final String? hintText}) = _$_MiraiTextField;
 
   factory _MiraiTextField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextField.fromJson;
@@ -650,13 +646,13 @@ abstract class _MiraiTextField implements MiraiTextField {
   @override
   TextAlign get textAlign;
   @override
-  MiraiTextAlignVertical get textAlignVertical;
+  MiraiTextAlignVertical? get textAlignVertical;
   @override
   TextDirection? get textDirection;
   @override
   bool get readOnly;
   @override
-  bool get showCursor;
+  bool? get showCursor;
   @override
   bool get autofocus;
   @override
@@ -672,7 +668,7 @@ abstract class _MiraiTextField implements MiraiTextField {
   @override
   bool get enableSuggestions;
   @override
-  bool get enabled;
+  bool? get enabled;
   @override
   double get cursorWidth;
   @override
@@ -680,7 +676,7 @@ abstract class _MiraiTextField implements MiraiTextField {
   @override
   String? get cursorColor;
   @override
-  String get hintText;
+  String? get hintText;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextFieldCopyWith<_$_MiraiTextField> get copyWith =>

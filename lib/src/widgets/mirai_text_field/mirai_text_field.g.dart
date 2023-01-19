@@ -26,12 +26,11 @@ _$_MiraiTextField _$$_MiraiTextFieldFromJson(Map<String, dynamic> json) =>
       textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']) ??
           TextAlign.start,
       textAlignVertical: $enumDecodeNullable(
-              _$MiraiTextAlignVerticalEnumMap, json['textAlignVertical']) ??
-          MiraiTextAlignVertical.center,
+          _$MiraiTextAlignVerticalEnumMap, json['textAlignVertical']),
       textDirection:
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
       readOnly: json['readOnly'] as bool? ?? false,
-      showCursor: json['showCursor'] as bool? ?? false,
+      showCursor: json['showCursor'] as bool?,
       autofocus: json['autofocus'] as bool? ?? false,
       obscuringCharacter: json['obscuringCharacter'] as String? ?? '•',
       maxLines: json['maxLines'] as int?,
@@ -39,11 +38,11 @@ _$_MiraiTextField _$$_MiraiTextFieldFromJson(Map<String, dynamic> json) =>
       maxLength: json['maxLength'] as int?,
       obscureText: json['obscureText'] as bool? ?? false,
       enableSuggestions: json['enableSuggestions'] as bool? ?? true,
-      enabled: json['enabled'] as bool? ?? true,
+      enabled: json['enabled'] as bool?,
       cursorWidth: (json['cursorWidth'] as num?)?.toDouble() ?? 2,
       cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
       cursorColor: json['cursorColor'] as String?,
-      hintText: json['hintText'] as String? ?? '',
+      hintText: json['hintText'] as String?,
     );
 
 Map<String, dynamic> _$$_MiraiTextFieldToJson(_$_MiraiTextField instance) =>
@@ -57,7 +56,7 @@ Map<String, dynamic> _$$_MiraiTextFieldToJson(_$_MiraiTextField instance) =>
       'style': instance.style,
       'textAlign': _$TextAlignEnumMap[instance.textAlign]!,
       'textAlignVertical':
-          _$MiraiTextAlignVerticalEnumMap[instance.textAlignVertical]!,
+          _$MiraiTextAlignVerticalEnumMap[instance.textAlignVertical],
       'textDirection': _$TextDirectionEnumMap[instance.textDirection],
       'readOnly': instance.readOnly,
       'showCursor': instance.showCursor,

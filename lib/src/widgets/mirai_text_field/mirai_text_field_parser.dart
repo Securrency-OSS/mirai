@@ -32,7 +32,7 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       textInputAction: model.textInputAction,
       textCapitalization: model.textCapitalization,
       textAlign: model.textAlign,
-      textAlignVertical: model.textAlignVertical.value,
+      textAlignVertical: model.textAlignVertical?.value,
       textDirection: model.textDirection,
       readOnly: model.readOnly,
       showCursor: model.showCursor,
