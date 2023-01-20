@@ -48,6 +48,7 @@ class HomePage extends StatelessWidget {
             Mirai.fromJson(fileImageJson, context),
             const SizedBox(height: 20),
             Mirai.fromJson(assetImageJson, context),
+            Mirai.fromJson(iconJson, context),
           ]),
         ),
       ),
@@ -147,4 +148,12 @@ final assetImageJson = {
   'width': 200,
   'height': 100,
   'src': 'assets/app_logo.svg',
+};
+
+final iconJson = {
+  'type': 'icon',
+  'iconType': 'material',
+  'icon': 'add',
+  'size': 40,
+  'color': '#ff0000'
 };
