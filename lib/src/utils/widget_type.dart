@@ -3,5 +3,6 @@ enum WidgetType {
   textField,
   elevatedButton,
   row,
+  column,
   container,
 }
