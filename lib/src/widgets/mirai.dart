@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/log.dart';
+import 'package:mirai/src/widgets/mirai-row/mirai_row_parser.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 
 class Mirai {
@@ -10,6 +11,7 @@ class Mirai {
     MiraiTextParser(),
     MiraiTextFieldParser(),
     MiraiElevatedButtonParser(),
+    MiraiRowParser(),
   ];
 
   static Future<void> initialize({
