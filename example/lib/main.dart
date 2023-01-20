@@ -147,7 +147,7 @@ final assetImageJson = {
   'color': '#dedede',
   'width': 200,
   'height': 100,
-  'src': 'assets/app_logo.svg',
+  'src': 'assets/securrency_logo.png',
 };
 
 final iconJson = {
