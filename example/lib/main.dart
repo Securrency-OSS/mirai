@@ -39,6 +39,12 @@ class HomePage extends StatelessWidget {
             Mirai.fromJson(elevatedButtonJson, context),
             const SizedBox(height: 20),
             Mirai.fromJson(containerJson, context),
+            const SizedBox(height: 20),
+            Mirai.fromJson(imageJson, context),
+            const SizedBox(height: 20),
+            Mirai.fromJson(fileImageJson, context),
+            const SizedBox(height: 20),
+            Mirai.fromJson(assetImageJson, context),
           ]),
         ),
       ),
@@ -89,4 +95,30 @@ final containerJson = {
     'type': 'text',
     'data': 'Hello',
   },
+};
+
+final imageJson = {
+  'type': 'image',
+  'color': '#dedede',
+  'width': 200,
+  'height': 100,
+  'src': 'https://www.upay.ae/wp-content/uploads/2022/09/logo.png',
+};
+
+final fileImageJson = {
+  'type': 'image',
+  'imageType': 'file',
+  'color': '#dedede',
+  'width': 200,
+  'height': 100,
+  'src': '/storage/emulated/0/Download/test.jpg',
+};
+
+final assetImageJson = {
+  'type': 'image',
+  'imageType': 'asset',
+  'color': '#dedede',
+  'width': 200,
+  'height': 100,
+  'src': 'assets/app_logo.svg',
 };
