@@ -3,4 +3,5 @@ enum WidgetType {
   textField,
   elevatedButton,
   container,
+  icon,
 }

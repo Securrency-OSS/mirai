@@ -22,11 +22,9 @@ MiraiContainer _$MiraiContainerFromJson(Map<String, dynamic> json) {
 mixin _$MiraiContainer {
   MiraiAlignment? get alignment => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
-  String? get color => throw _privateConstructorUsedError; // decoration,
-// foregroundDecoration,
+  String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
-  double? get height =>
-      throw _privateConstructorUsedError; // BoxConstraints? constraints,
+  double? get height => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get margin => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
@@ -244,13 +242,10 @@ class _$_MiraiContainer implements _MiraiContainer {
   final MiraiEdgeInsets? padding;
   @override
   final String? color;
-// decoration,
-// foregroundDecoration,
   @override
   final double? width;
   @override
   final double? height;
-// BoxConstraints? constraints,
   @override
   final MiraiEdgeInsets? margin;
   final Map<String, dynamic>? _child;
@@ -336,12 +331,11 @@ abstract class _MiraiContainer implements MiraiContainer {
   MiraiEdgeInsets? get padding;
   @override
   String? get color;
-  @override // decoration,
-// foregroundDecoration,
+  @override
   double? get width;
   @override
   double? get height;
-  @override // BoxConstraints? constraints,
+  @override
   MiraiEdgeInsets? get margin;
   @override
   Map<String, dynamic>? get child;
