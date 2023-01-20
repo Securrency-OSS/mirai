@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
               height: 20,
             ),
             Mirai.fromJson(elevatedButtonJson, context),
+            Mirai.fromJson(columnJson, context),
           ]),
         ),
       ),
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
 }
 
 final textFieldJson = {
-  'type': 'textfield',
+  'type': 'textField',
   'initialValue': '',
   'hintText': 'Enter your name',
   'maxLines': 1,
