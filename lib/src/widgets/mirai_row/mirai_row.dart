@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'mirai_row.freezed.dart';
-part 'mirai_row.g.dart';
+part '../mirai_row/mirai_row.freezed.dart';
+part '../mirai_row/mirai_row.g.dart';
 
 @freezed
 class MiraiRow with _$MiraiRow {
