@@ -5,4 +5,5 @@ enum WidgetType {
   row,
   column,
   container,
+  icon,
 }
