@@ -1,23 +1,34 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/utils/icon_utils.dart';
+import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
+
+export 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
 
 part 'mirai_app_bar.freezed.dart';
 part 'mirai_app_bar.g.dart';
 
 @freezed
-class MiraiIcon with _$MiraiIcon {
-  const factory MiraiIcon({
-    required String icon,
-    required IconType iconType,
-    double? size,
-    String? color,
-    String? semanticLabel,
-    TextDirection? textDirection,
-  }) = _MiraiIcon;
+class MiraiAppBar with _$MiraiAppBar {
+  const factory MiraiAppBar({
+    Map<String, dynamic>? leading,
+    Map<String, dynamic>? title,
+    MiraiTextStyle? titleTextStyle,
+    MiraiTextStyle? toolbarTextStyle,
+    String? shadowColor,
+    String? backgroundColor,
+    String? foregroundColor,
+    String? surfaceTintColor,
+    @Default([]) List<Map<String, dynamic>> actions,
+    double? titleSpacing,
+    @Default(1.0) double toolbarOpacity,
+    @Default(1.0) double bottomOpacity,
+    double? toolbarHeight,
+    double? leadingWidth,
+    @Default(true) bool primary,
+    bool? centerTitle,
+    double? elevation,
+    double? scrolledUnderElevation,
+  }) = _MiraiAppBar;
 
-  factory MiraiIcon.fromJson(Map<String, dynamic> json) =>
-      _$MiraiIconFromJson(json);
+  factory MiraiAppBar.fromJson(Map<String, dynamic> json) =>
+      _$MiraiAppBarFromJson(json);
 }

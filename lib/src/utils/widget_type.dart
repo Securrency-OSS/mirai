@@ -8,4 +8,5 @@ enum WidgetType {
   image,
   icon,
   outlinedButton,
+  appBar,
 }

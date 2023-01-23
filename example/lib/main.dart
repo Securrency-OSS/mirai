@@ -27,31 +27,34 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(52),
+        child: Mirai.fromJson(miraiAppBarJson, context),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
-          child: Column(children: [
-            Mirai.fromJson(textFieldJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(elevatedButtonJson, context),
-            Mirai.fromJson(rowJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(columnJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(containerJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(imageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(fileImageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(assetImageJson, context),
-            Mirai.fromJson(iconJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(outlinedButtonJson, context),
-          ]),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              Mirai.fromJson(textFieldJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(elevatedButtonJson, context),
+              Mirai.fromJson(rowJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(columnJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(containerJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(imageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(fileImageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(assetImageJson, context),
+              Mirai.fromJson(iconJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(outlinedButtonJson, context),
+            ]),
+          ),
         ),
       ),
     );
@@ -165,5 +168,51 @@ final outlinedButtonJson = {
   'child': {
     'type': 'text',
     'data': 'Sign in',
+  },
+};
+
+final miraiAppBarJson = {
+  'type': 'appBar',
+  'title': titleTextJson,
+  'leading': iconJson,
+  'backgroundColor': '#7D1038',
+  'actions': [
+    {
+      'type': 'outlinedButton',
+      'child': {
+        'type': 'text',
+        'data': 'Sign in',
+      },
+      'width': 100,
+      'height': 50,
+      'style': {
+        'foregroundColor': '#E8E8E8',
+      }
+    },
+    {
+      'type': 'image',
+      'color': '#dedede',
+      'width': 50,
+      'height': 50,
+      'src': 'https://www.upay.ae/wp-content/uploads/2022/09/logo.png',
+    },
+    {
+      'type': 'icon',
+      'iconType': 'material',
+      'icon': 'add',
+      'size': 50,
+      'color': '#ff0000'
+    }
+  ]
+};
+
+final titleTextJson = {
+  'type': 'text',
+  'data': 'Home',
+  'align': 'center',
+  'style': {
+    'foregroundColor': '#ffffff',
+    'backgroundColor': '#212121',
+    'fontSize': 21,
   },
 };
