@@ -54,6 +54,10 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 20),
               Mirai.fromJson(outlinedButtonJson, context),
               const SizedBox(height: 20),
+              Mirai.fromJson(iconButtonJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(paddingJson, context),
+              const SizedBox(height: 20),
               Mirai.fromJson(textButtonJson, context),
             ]),
           ),
@@ -258,4 +262,13 @@ final textButtonJson = {
     'type': 'text',
     'data': 'Sign in',
   },
+};
+
+final paddingJson = {
+  'type': 'padding',
+  'padding': {
+    'top': 10,
+    'bottom': 40,
+  },
+  'child': iconJson,
 };

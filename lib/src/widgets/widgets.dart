@@ -11,6 +11,7 @@ export 'package:mirai/src/widgets/mirai_icon/mirai_icon.dart';
 export 'package:mirai/src/widgets/mirai_icon_button/mirai_icon_button.dart';
 export 'package:mirai/src/widgets/mirai_image/mirai_image.dart';
 export 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.dart';
+export 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 export 'package:mirai/src/widgets/mirai_row/mirai_row.dart';
 export 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 export 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
