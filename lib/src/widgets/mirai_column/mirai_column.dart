@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+export 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
+
 part 'mirai_column.freezed.dart';
 part 'mirai_column.g.dart';
 

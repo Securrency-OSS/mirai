@@ -4,6 +4,8 @@ import 'package:mirai/src/ui/mirai_input_decoration/mirai_input_decoration.dart'
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/text_input_utils.dart';
 
+export 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
+
 part 'mirai_text_field.freezed.dart';
 part 'mirai_text_field.g.dart';
 

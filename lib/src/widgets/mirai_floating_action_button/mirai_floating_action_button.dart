@@ -2,6 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/button_utils.dart';
 
+export 'package:mirai/src/widgets/mirai_floating_action_button/mirai_floating_action_button_parser.dart';
+
 part 'mirai_floating_action_button.freezed.dart';
 part 'mirai_floating_action_button.g.dart';
 

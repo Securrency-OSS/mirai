@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
 
-export 'mirai_text_parser.dart';
+export 'package:mirai/src/widgets/mirai_text/mirai_text_parser.dart';
 
 part 'mirai_text.freezed.dart';
 part 'mirai_text.g.dart';
