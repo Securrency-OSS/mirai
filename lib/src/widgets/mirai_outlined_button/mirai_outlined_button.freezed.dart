@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'mirai_elevated_button.dart';
+part of 'mirai_outlined_button.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,33 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-MiraiElevatedButton _$MiraiElevatedButtonFromJson(Map<String, dynamic> json) {
-  return _MiraiElevatedButton.fromJson(json);
+MiraiOutlinedButton _$MiraiOutlinedButtonFromJson(Map<String, dynamic> json) {
+  return _MiraiOutlinedButton.fromJson(json);
 }
 
 /// @nodoc
-mixin _$MiraiElevatedButton {
+mixin _$MiraiOutlinedButton {
 //Todo: onPressed,
   MiraiButtonStyle? get style => throw _privateConstructorUsedError;
-  bool get autofocus => throw _privateConstructorUsedError;
+  dynamic get autofocus => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
   Map<String, dynamic> get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MiraiElevatedButtonCopyWith<MiraiElevatedButton> get copyWith =>
+  $MiraiOutlinedButtonCopyWith<MiraiOutlinedButton> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MiraiElevatedButtonCopyWith<$Res> {
-  factory $MiraiElevatedButtonCopyWith(
-          MiraiElevatedButton value, $Res Function(MiraiElevatedButton) then) =
-      _$MiraiElevatedButtonCopyWithImpl<$Res, MiraiElevatedButton>;
+abstract class $MiraiOutlinedButtonCopyWith<$Res> {
+  factory $MiraiOutlinedButtonCopyWith(
+          MiraiOutlinedButton value, $Res Function(MiraiOutlinedButton) then) =
+      _$MiraiOutlinedButtonCopyWithImpl<$Res, MiraiOutlinedButton>;
   @useResult
   $Res call(
       {MiraiButtonStyle? style,
-      bool autofocus,
+      dynamic autofocus,
       Clip clipBehavior,
       Map<String, dynamic> child});
 
@@ -48,9 +48,9 @@ abstract class $MiraiElevatedButtonCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
-    implements $MiraiElevatedButtonCopyWith<$Res> {
-  _$MiraiElevatedButtonCopyWithImpl(this._value, this._then);
+class _$MiraiOutlinedButtonCopyWithImpl<$Res, $Val extends MiraiOutlinedButton>
+    implements $MiraiOutlinedButtonCopyWith<$Res> {
+  _$MiraiOutlinedButtonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -61,7 +61,7 @@ class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
   @override
   $Res call({
     Object? style = freezed,
-    Object? autofocus = null,
+    Object? autofocus = freezed,
     Object? clipBehavior = null,
     Object? child = null,
   }) {
@@ -70,10 +70,10 @@ class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiButtonStyle?,
-      autofocus: null == autofocus
+      autofocus: freezed == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as dynamic,
       clipBehavior: null == clipBehavior
           ? _value.clipBehavior
           : clipBehavior // ignore: cast_nullable_to_non_nullable
@@ -99,16 +99,16 @@ class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
 }
 
 /// @nodoc
-abstract class _$$_MiraiElevatedButtonCopyWith<$Res>
-    implements $MiraiElevatedButtonCopyWith<$Res> {
-  factory _$$_MiraiElevatedButtonCopyWith(_$_MiraiElevatedButton value,
-          $Res Function(_$_MiraiElevatedButton) then) =
-      __$$_MiraiElevatedButtonCopyWithImpl<$Res>;
+abstract class _$$_MiraiOutlinedButtonCopyWith<$Res>
+    implements $MiraiOutlinedButtonCopyWith<$Res> {
+  factory _$$_MiraiOutlinedButtonCopyWith(_$_MiraiOutlinedButton value,
+          $Res Function(_$_MiraiOutlinedButton) then) =
+      __$$_MiraiOutlinedButtonCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {MiraiButtonStyle? style,
-      bool autofocus,
+      dynamic autofocus,
       Clip clipBehavior,
       Map<String, dynamic> child});
 
@@ -117,30 +117,27 @@ abstract class _$$_MiraiElevatedButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiElevatedButtonCopyWithImpl<$Res>
-    extends _$MiraiElevatedButtonCopyWithImpl<$Res, _$_MiraiElevatedButton>
-    implements _$$_MiraiElevatedButtonCopyWith<$Res> {
-  __$$_MiraiElevatedButtonCopyWithImpl(_$_MiraiElevatedButton _value,
-      $Res Function(_$_MiraiElevatedButton) _then)
+class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
+    extends _$MiraiOutlinedButtonCopyWithImpl<$Res, _$_MiraiOutlinedButton>
+    implements _$$_MiraiOutlinedButtonCopyWith<$Res> {
+  __$$_MiraiOutlinedButtonCopyWithImpl(_$_MiraiOutlinedButton _value,
+      $Res Function(_$_MiraiOutlinedButton) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? style = freezed,
-    Object? autofocus = null,
+    Object? autofocus = freezed,
     Object? clipBehavior = null,
     Object? child = null,
   }) {
-    return _then(_$_MiraiElevatedButton(
+    return _then(_$_MiraiOutlinedButton(
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiButtonStyle?,
-      autofocus: null == autofocus
-          ? _value.autofocus
-          : autofocus // ignore: cast_nullable_to_non_nullable
-              as bool,
+      autofocus: freezed == autofocus ? _value.autofocus! : autofocus,
       clipBehavior: null == clipBehavior
           ? _value.clipBehavior
           : clipBehavior // ignore: cast_nullable_to_non_nullable
@@ -155,23 +152,23 @@ class __$$_MiraiElevatedButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiElevatedButton implements _MiraiElevatedButton {
-  const _$_MiraiElevatedButton(
+class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
+  const _$_MiraiOutlinedButton(
       {this.style,
       this.autofocus = false,
       this.clipBehavior = Clip.none,
       required final Map<String, dynamic> child})
       : _child = child;
 
-  factory _$_MiraiElevatedButton.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiElevatedButtonFromJson(json);
+  factory _$_MiraiOutlinedButton.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiOutlinedButtonFromJson(json);
 
 //Todo: onPressed,
   @override
   final MiraiButtonStyle? style;
   @override
   @JsonKey()
-  final bool autofocus;
+  final dynamic autofocus;
   @override
   @JsonKey()
   final Clip clipBehavior;
@@ -185,17 +182,16 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
 
   @override
   String toString() {
-    return 'MiraiElevatedButton(style: $style, autofocus: $autofocus, clipBehavior: $clipBehavior, child: $child)';
+    return 'MiraiOutlinedButton(style: $style, autofocus: $autofocus, clipBehavior: $clipBehavior, child: $child)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiElevatedButton &&
+            other is _$_MiraiOutlinedButton &&
             (identical(other.style, style) || other.style == style) &&
-            (identical(other.autofocus, autofocus) ||
-                other.autofocus == autofocus) &&
+            const DeepCollectionEquality().equals(other.autofocus, autofocus) &&
             (identical(other.clipBehavior, clipBehavior) ||
                 other.clipBehavior == clipBehavior) &&
             const DeepCollectionEquality().equals(other._child, _child));
@@ -203,44 +199,48 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, style, autofocus, clipBehavior,
+  int get hashCode => Object.hash(
+      runtimeType,
+      style,
+      const DeepCollectionEquality().hash(autofocus),
+      clipBehavior,
       const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiElevatedButtonCopyWith<_$_MiraiElevatedButton> get copyWith =>
-      __$$_MiraiElevatedButtonCopyWithImpl<_$_MiraiElevatedButton>(
+  _$$_MiraiOutlinedButtonCopyWith<_$_MiraiOutlinedButton> get copyWith =>
+      __$$_MiraiOutlinedButtonCopyWithImpl<_$_MiraiOutlinedButton>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiElevatedButtonToJson(
+    return _$$_MiraiOutlinedButtonToJson(
       this,
     );
   }
 }
 
-abstract class _MiraiElevatedButton implements MiraiElevatedButton {
-  const factory _MiraiElevatedButton(
+abstract class _MiraiOutlinedButton implements MiraiOutlinedButton {
+  const factory _MiraiOutlinedButton(
       {final MiraiButtonStyle? style,
-      final bool autofocus,
+      final dynamic autofocus,
       final Clip clipBehavior,
-      required final Map<String, dynamic> child}) = _$_MiraiElevatedButton;
+      required final Map<String, dynamic> child}) = _$_MiraiOutlinedButton;
 
-  factory _MiraiElevatedButton.fromJson(Map<String, dynamic> json) =
-      _$_MiraiElevatedButton.fromJson;
+  factory _MiraiOutlinedButton.fromJson(Map<String, dynamic> json) =
+      _$_MiraiOutlinedButton.fromJson;
 
   @override //Todo: onPressed,
   MiraiButtonStyle? get style;
   @override
-  bool get autofocus;
+  dynamic get autofocus;
   @override
   Clip get clipBehavior;
   @override
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiElevatedButtonCopyWith<_$_MiraiElevatedButton> get copyWith =>
+  _$$_MiraiOutlinedButtonCopyWith<_$_MiraiOutlinedButton> get copyWith =>
       throw _privateConstructorUsedError;
 }

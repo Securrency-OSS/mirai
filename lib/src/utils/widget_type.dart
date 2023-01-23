@@ -8,4 +8,6 @@ enum WidgetType {
   image,
   icon,
   iconButton,
+  floatingActionButton,
+  outlinedButton,
 }
