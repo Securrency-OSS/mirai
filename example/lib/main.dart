@@ -30,26 +30,31 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-        child: Center(
-          child: Column(children: [
-            Mirai.fromJson(textFieldJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(elevatedButtonJson, context),
-            Mirai.fromJson(rowJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(columnJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(containerJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(imageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(fileImageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(assetImageJson, context),
-            Mirai.fromJson(iconJson, context),
-          ]),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+          child: Center(
+            child: Column(children: [
+              Mirai.fromJson(textFieldJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(elevatedButtonJson, context),
+              Mirai.fromJson(rowJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(columnJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(containerJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(imageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(fileImageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(assetImageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(iconJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(iconButtonJson, context),
+            ]),
+          ),
         ),
       ),
     );
@@ -156,4 +161,9 @@ final iconJson = {
   'icon': 'add',
   'size': 40,
   'color': '#ff0000'
+};
+
+final iconButtonJson = {
+  'type': 'iconButton',
+  'child': iconJson,
 };
