@@ -44,6 +44,8 @@ class HomePage extends StatelessWidget {
             Mirai.fromJson(containerJson, context),
             const SizedBox(height: 20),
             Mirai.fromJson(iconJson, context),
+            const SizedBox(height: 20),
+            Mirai.fromJson(outlinedButtonJson, context),
           ]),
         ),
       ),
@@ -125,4 +127,12 @@ final iconJson = {
   'icon': 'add',
   'size': 40,
   'color': '#ff0000'
+};
+
+final outlinedButtonJson = {
+  'type': 'outlinedButton',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
 };
