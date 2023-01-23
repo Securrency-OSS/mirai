@@ -20,6 +20,7 @@ class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
       onPressed: () {},
       autofocus: model.autofocus,
       style: _style(model.style),
+      clipBehavior: model.clipBehavior,
       child: Mirai.fromJson(model.child, context),
     );
   }

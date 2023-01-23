@@ -23,6 +23,7 @@ mixin _$MiraiElevatedButton {
 //Todo: onPressed,
   MiraiButtonStyle? get style => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
+  Clip get clipBehavior => throw _privateConstructorUsedError;
   Map<String, dynamic> get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +39,10 @@ abstract class $MiraiElevatedButtonCopyWith<$Res> {
       _$MiraiElevatedButtonCopyWithImpl<$Res, MiraiElevatedButton>;
   @useResult
   $Res call(
-      {MiraiButtonStyle? style, bool autofocus, Map<String, dynamic> child});
+      {MiraiButtonStyle? style,
+      bool autofocus,
+      Clip clipBehavior,
+      Map<String, dynamic> child});
 
   $MiraiButtonStyleCopyWith<$Res>? get style;
 }
@@ -58,6 +62,7 @@ class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
   $Res call({
     Object? style = freezed,
     Object? autofocus = null,
+    Object? clipBehavior = null,
     Object? child = null,
   }) {
     return _then(_value.copyWith(
@@ -69,6 +74,10 @@ class _$MiraiElevatedButtonCopyWithImpl<$Res, $Val extends MiraiElevatedButton>
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
               as bool,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -98,7 +107,10 @@ abstract class _$$_MiraiElevatedButtonCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiButtonStyle? style, bool autofocus, Map<String, dynamic> child});
+      {MiraiButtonStyle? style,
+      bool autofocus,
+      Clip clipBehavior,
+      Map<String, dynamic> child});
 
   @override
   $MiraiButtonStyleCopyWith<$Res>? get style;
@@ -117,6 +129,7 @@ class __$$_MiraiElevatedButtonCopyWithImpl<$Res>
   $Res call({
     Object? style = freezed,
     Object? autofocus = null,
+    Object? clipBehavior = null,
     Object? child = null,
   }) {
     return _then(_$_MiraiElevatedButton(
@@ -128,6 +141,10 @@ class __$$_MiraiElevatedButtonCopyWithImpl<$Res>
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
               as bool,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
       child: null == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -142,6 +159,7 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
   const _$_MiraiElevatedButton(
       {this.style,
       this.autofocus = false,
+      this.clipBehavior = Clip.none,
       required final Map<String, dynamic> child})
       : _child = child;
 
@@ -154,6 +172,9 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
   @override
   @JsonKey()
   final bool autofocus;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
   final Map<String, dynamic> _child;
   @override
   Map<String, dynamic> get child {
@@ -164,7 +185,7 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
 
   @override
   String toString() {
-    return 'MiraiElevatedButton(style: $style, autofocus: $autofocus, child: $child)';
+    return 'MiraiElevatedButton(style: $style, autofocus: $autofocus, clipBehavior: $clipBehavior, child: $child)';
   }
 
   @override
@@ -175,12 +196,14 @@ class _$_MiraiElevatedButton implements _MiraiElevatedButton {
             (identical(other.style, style) || other.style == style) &&
             (identical(other.autofocus, autofocus) ||
                 other.autofocus == autofocus) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, style, autofocus,
+  int get hashCode => Object.hash(runtimeType, style, autofocus, clipBehavior,
       const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
@@ -202,6 +225,7 @@ abstract class _MiraiElevatedButton implements MiraiElevatedButton {
   const factory _MiraiElevatedButton(
       {final MiraiButtonStyle? style,
       final bool autofocus,
+      final Clip clipBehavior,
       required final Map<String, dynamic> child}) = _$_MiraiElevatedButton;
 
   factory _MiraiElevatedButton.fromJson(Map<String, dynamic> json) =
@@ -211,6 +235,8 @@ abstract class _MiraiElevatedButton implements MiraiElevatedButton {
   MiraiButtonStyle? get style;
   @override
   bool get autofocus;
+  @override
+  Clip get clipBehavior;
   @override
   Map<String, dynamic> get child;
   @override
