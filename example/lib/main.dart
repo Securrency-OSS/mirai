@@ -33,23 +33,39 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
-          child: Column(children: [
-            Mirai.fromJson(textFieldJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(elevatedButtonJson, context),
-            Mirai.fromJson(rowJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(columnJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(containerJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(imageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(fileImageJson, context),
-            const SizedBox(height: 20),
-            Mirai.fromJson(assetImageJson, context),
-            Mirai.fromJson(iconJson, context),
-          ]),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              Mirai.fromJson(textFieldJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(elevatedButtonJson, context),
+              Mirai.fromJson(rowJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(columnJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(containerJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(imageJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(fileImageJson, context),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  Mirai.fromJson(assetImageJson, context),
+                  Mirai.fromJson(iconJson, context),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Mirai.fromJson(smallFloatingActionButtonJson, context),
+                  Mirai.fromJson(largeFloatingActionButtonJson, context),
+                  Mirai.fromJson(extendedFloatingActionButtonJson, context),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ]),
+          ),
         ),
       ),
     );
@@ -156,4 +172,36 @@ final iconJson = {
   'icon': 'add',
   'size': 40,
   'color': '#ff0000'
+};
+
+final extendedFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'extended',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+  'extendedTextStyle': {
+    'color': '#ff0000',
+    'backgroundColor': '#dedede',
+    'fontSize': 21,
+  }
+};
+
+final smallFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'small',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+};
+
+final largeFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'large',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
 };
