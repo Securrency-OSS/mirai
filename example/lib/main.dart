@@ -37,7 +37,14 @@ class HomePage extends StatelessWidget {
             child: Column(children: [
               Mirai.fromJson(textFieldJson, context),
               const SizedBox(height: 20),
-              Mirai.fromJson(elevatedButtonJson, context),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Mirai.fromJson(elevatedButtonJson, context),
+                  Mirai.fromJson(outlinedButtonJson, context),
+                ],
+              ),
+              const SizedBox(height: 20),
               Mirai.fromJson(rowJson, context),
               const SizedBox(height: 20),
               Mirai.fromJson(columnJson, context),
@@ -200,6 +207,14 @@ final smallFloatingActionButtonJson = {
 final largeFloatingActionButtonJson = {
   'type': 'floatingActionButton',
   'buttonType': 'large',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+};
+
+final outlinedButtonJson = {
+  'type': 'outlinedButton',
   'child': {
     'type': 'text',
     'data': 'Sign in',

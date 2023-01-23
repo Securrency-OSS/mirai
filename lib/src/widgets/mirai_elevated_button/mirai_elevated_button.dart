@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 
@@ -10,6 +11,7 @@ class MiraiElevatedButton with _$MiraiElevatedButton {
     //Todo: onPressed,
     MiraiButtonStyle? style,
     @Default(false) bool autofocus,
+    @Default(Clip.none) Clip clipBehavior,
     required Map<String, dynamic> child,
   }) = _MiraiElevatedButton;
 
