@@ -2,6 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_alignment/mirai_alignment.dart';
 import 'package:mirai/src/utils/mirai_image_type.dart';
 
+export 'package:mirai/src/widgets/mirai_image/mirai_image_parser.dart';
+
 part 'mirai_image.freezed.dart';
 part 'mirai_image.g.dart';
 

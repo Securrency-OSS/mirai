@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_alignment/mirai_alignment.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 
-export 'mirai_container_parser.dart';
+export 'package:mirai/src/widgets/mirai_container/mirai_container_parser.dart';
 
 part 'mirai_container.freezed.dart';
 part 'mirai_container.g.dart';
