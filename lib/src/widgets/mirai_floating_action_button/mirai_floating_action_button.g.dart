@@ -34,6 +34,7 @@ _$_MiraiFloatingActionButton _$$_MiraiFloatingActionButtonFromJson(
       extendedIconLabelSpacing:
           (json['extendedIconLabelSpacing'] as num?)?.toDouble(),
       enableFeedback: json['enableFeedback'] as bool?,
+      tooltip: json['tooltip'] as String?,
       child: json['child'] as Map<String, dynamic>,
     );
 
@@ -57,6 +58,7 @@ Map<String, dynamic> _$$_MiraiFloatingActionButtonToJson(
       'highlightElevation': instance.highlightElevation,
       'extendedIconLabelSpacing': instance.extendedIconLabelSpacing,
       'enableFeedback': instance.enableFeedback,
+      'tooltip': instance.tooltip,
       'child': instance.child,
     };
 

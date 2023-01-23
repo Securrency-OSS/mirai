@@ -27,6 +27,7 @@ class MiraiFloatingActionButton with _$MiraiFloatingActionButton {
     double? highlightElevation,
     double? extendedIconLabelSpacing,
     bool? enableFeedback,
+    String? tooltip,
     required Map<String, dynamic> child,
   }) = _MiraiFloatingActionButton;
 

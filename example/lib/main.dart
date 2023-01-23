@@ -202,6 +202,7 @@ final smallFloatingActionButtonJson = {
     'type': 'text',
     'data': 'Sign in',
   },
+  'tooltip': 'Sign In',
 };
 
 final largeFloatingActionButtonJson = {

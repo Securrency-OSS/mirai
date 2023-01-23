@@ -35,6 +35,7 @@ class MiraiFloatingActionButtonParser
           extendedIconLabelSpacing: model.extendedIconLabelSpacing,
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
+          tooltip: model.tooltip,
           label: Mirai.fromJson(model.child, context),
         );
 
@@ -53,6 +54,7 @@ class MiraiFloatingActionButtonParser
           highlightElevation: model.highlightElevation,
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
+          tooltip: model.tooltip,
           child: Mirai.fromJson(model.child, context),
         );
       case FloatingActionButtonType.small:
@@ -70,6 +72,7 @@ class MiraiFloatingActionButtonParser
           highlightElevation: model.highlightElevation,
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
+          tooltip: model.tooltip,
           child: Mirai.fromJson(model.child, context),
         );
     }

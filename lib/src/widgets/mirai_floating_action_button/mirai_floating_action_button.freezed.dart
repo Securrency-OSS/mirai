@@ -39,6 +39,7 @@ mixin _$MiraiFloatingActionButton {
   double? get highlightElevation => throw _privateConstructorUsedError;
   double? get extendedIconLabelSpacing => throw _privateConstructorUsedError;
   bool? get enableFeedback => throw _privateConstructorUsedError;
+  String? get tooltip => throw _privateConstructorUsedError;
   Map<String, dynamic> get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -71,6 +72,7 @@ abstract class $MiraiFloatingActionButtonCopyWith<$Res> {
       double? highlightElevation,
       double? extendedIconLabelSpacing,
       bool? enableFeedback,
+      String? tooltip,
       Map<String, dynamic> child});
 
   $MiraiTextStyleCopyWith<$Res>? get textStyle;
@@ -108,6 +110,7 @@ class _$MiraiFloatingActionButtonCopyWithImpl<$Res,
     Object? highlightElevation = freezed,
     Object? extendedIconLabelSpacing = freezed,
     Object? enableFeedback = freezed,
+    Object? tooltip = freezed,
     Object? child = null,
   }) {
     return _then(_value.copyWith(
@@ -179,6 +182,10 @@ class _$MiraiFloatingActionButtonCopyWithImpl<$Res,
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
               as bool?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -238,6 +245,7 @@ abstract class _$$_MiraiFloatingActionButtonCopyWith<$Res>
       double? highlightElevation,
       double? extendedIconLabelSpacing,
       bool? enableFeedback,
+      String? tooltip,
       Map<String, dynamic> child});
 
   @override
@@ -276,6 +284,7 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
     Object? highlightElevation = freezed,
     Object? extendedIconLabelSpacing = freezed,
     Object? enableFeedback = freezed,
+    Object? tooltip = freezed,
     Object? child = null,
   }) {
     return _then(_$_MiraiFloatingActionButton(
@@ -347,6 +356,10 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
               as bool?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
       child: null == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -376,6 +389,7 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
       this.highlightElevation,
       this.extendedIconLabelSpacing,
       this.enableFeedback,
+      this.tooltip,
       required final Map<String, dynamic> child})
       : _icon = icon,
         _child = child;
@@ -428,6 +442,8 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   final double? extendedIconLabelSpacing;
   @override
   final bool? enableFeedback;
+  @override
+  final String? tooltip;
   final Map<String, dynamic> _child;
   @override
   Map<String, dynamic> get child {
@@ -438,7 +454,7 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
 
   @override
   String toString() {
-    return 'MiraiFloatingActionButton(textStyle: $textStyle, buttonType: $buttonType, autofocus: $autofocus, icon: $icon, backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, focusColor: $focusColor, hoverColor: $hoverColor, splashColor: $splashColor, extendedTextStyle: $extendedTextStyle, elevation: $elevation, focusElevation: $focusElevation, hoverElevation: $hoverElevation, disabledElevation: $disabledElevation, highlightElevation: $highlightElevation, extendedIconLabelSpacing: $extendedIconLabelSpacing, enableFeedback: $enableFeedback, child: $child)';
+    return 'MiraiFloatingActionButton(textStyle: $textStyle, buttonType: $buttonType, autofocus: $autofocus, icon: $icon, backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, focusColor: $focusColor, hoverColor: $hoverColor, splashColor: $splashColor, extendedTextStyle: $extendedTextStyle, elevation: $elevation, focusElevation: $focusElevation, hoverElevation: $hoverElevation, disabledElevation: $disabledElevation, highlightElevation: $highlightElevation, extendedIconLabelSpacing: $extendedIconLabelSpacing, enableFeedback: $enableFeedback, tooltip: $tooltip, child: $child)';
   }
 
   @override
@@ -480,31 +496,34 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
                 other.extendedIconLabelSpacing == extendedIconLabelSpacing) &&
             (identical(other.enableFeedback, enableFeedback) ||
                 other.enableFeedback == enableFeedback) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      textStyle,
-      buttonType,
-      autofocus,
-      const DeepCollectionEquality().hash(_icon),
-      backgroundColor,
-      foregroundColor,
-      focusColor,
-      hoverColor,
-      splashColor,
-      extendedTextStyle,
-      elevation,
-      focusElevation,
-      hoverElevation,
-      disabledElevation,
-      highlightElevation,
-      extendedIconLabelSpacing,
-      enableFeedback,
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        textStyle,
+        buttonType,
+        autofocus,
+        const DeepCollectionEquality().hash(_icon),
+        backgroundColor,
+        foregroundColor,
+        focusColor,
+        hoverColor,
+        splashColor,
+        extendedTextStyle,
+        elevation,
+        focusElevation,
+        hoverElevation,
+        disabledElevation,
+        highlightElevation,
+        extendedIconLabelSpacing,
+        enableFeedback,
+        tooltip,
+        const DeepCollectionEquality().hash(_child)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -540,6 +559,7 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
           final double? highlightElevation,
           final double? extendedIconLabelSpacing,
           final bool? enableFeedback,
+          final String? tooltip,
           required final Map<String, dynamic> child}) =
       _$_MiraiFloatingActionButton;
 
@@ -580,6 +600,8 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
   double? get extendedIconLabelSpacing;
   @override
   bool? get enableFeedback;
+  @override
+  String? get tooltip;
   @override
   Map<String, dynamic> get child;
   @override
