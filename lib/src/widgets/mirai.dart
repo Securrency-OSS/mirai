@@ -28,6 +28,7 @@ class Mirai {
     MiraiIconButtonParser(),
     MiraiFloatingActionButtonParser(),
     MiraiOutlinedButtonParser(),
+    MiraiTextButtonParser(),
   ];
 
   static Future<void> initialize({
