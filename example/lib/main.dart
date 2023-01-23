@@ -221,6 +221,7 @@ final outlinedButtonJson = {
     'type': 'text',
     'data': 'Sign in',
   },
+};
 
 final iconButtonJson = {
   'type': 'iconButton',
