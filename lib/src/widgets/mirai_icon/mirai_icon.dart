@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/utils/icon_utils.dart';
 
+export 'package:mirai/src/widgets/mirai_icon/mirai_icon_parser.dart';
+
 part 'mirai_icon.freezed.dart';
 part 'mirai_icon.g.dart';
 

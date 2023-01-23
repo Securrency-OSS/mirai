@@ -11,4 +11,6 @@ enum WidgetType {
   floatingActionButton,
   outlinedButton,
   padding,
+  appBar,
+  textButton,
 }
