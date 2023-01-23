@@ -5,7 +5,7 @@ import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/mirai_image_type.dart';
 import 'package:mirai/src/utils/widget_type.dart';
-import 'package:mirai/src/widgets/mirai-image/mirai_image.dart';
+import 'package:mirai/src/widgets/mirai_image/mirai_image.dart';
 
 class MiraiImageParser extends MiraiParser<MiraiImage> {
   @override

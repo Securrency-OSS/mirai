@@ -89,4 +89,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/securrency_logo.png
+    - assets/google_logo.png

@@ -8,9 +8,9 @@ part 'mirai_image.g.dart';
 @freezed
 class MiraiImage with _$MiraiImage {
   const factory MiraiImage({
+    required String src,
     @Default(MiraiAlignment.center) MiraiAlignment alignment,
     @Default(MiraiImageType.network) MiraiImageType imageType,
-    @Default('') String src,
     String? color,
     double? width,
     double? height,

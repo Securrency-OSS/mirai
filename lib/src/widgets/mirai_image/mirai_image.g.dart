@@ -8,13 +8,13 @@ part of 'mirai_image.dart';
 
 _$_MiraiImage _$$_MiraiImageFromJson(Map<String, dynamic> json) =>
     _$_MiraiImage(
+      src: json['src'] as String,
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']) ??
               MiraiAlignment.center,
       imageType:
           $enumDecodeNullable(_$MiraiImageTypeEnumMap, json['imageType']) ??
               MiraiImageType.network,
-      src: json['src'] as String? ?? '',
       color: json['color'] as String?,
       width: (json['width'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
@@ -22,9 +22,9 @@ _$_MiraiImage _$$_MiraiImageFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MiraiImageToJson(_$_MiraiImage instance) =>
     <String, dynamic>{
+      'src': instance.src,
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment]!,
       'imageType': _$MiraiImageTypeEnumMap[instance.imageType]!,
-      'src': instance.src,
       'color': instance.color,
       'width': instance.width,
       'height': instance.height,
@@ -46,5 +46,4 @@ const _$MiraiImageTypeEnumMap = {
   MiraiImageType.file: 'file',
   MiraiImageType.network: 'network',
   MiraiImageType.asset: 'asset',
-  MiraiImageType.bytes: 'bytes',
 };

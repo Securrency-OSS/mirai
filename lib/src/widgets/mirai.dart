@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
-import 'package:mirai/src/widgets/mirai-image/mirai_image_parser.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
 import 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_icon/mirai_icon_parser.dart';
+import 'package:mirai/src/widgets/mirai_image/mirai_image_parser.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';

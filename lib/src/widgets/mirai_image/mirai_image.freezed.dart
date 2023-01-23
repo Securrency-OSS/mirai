@@ -20,9 +20,9 @@ MiraiImage _$MiraiImageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiImage {
+  String get src => throw _privateConstructorUsedError;
   MiraiAlignment get alignment => throw _privateConstructorUsedError;
   MiraiImageType get imageType => throw _privateConstructorUsedError;
-  String get src => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
@@ -40,9 +40,9 @@ abstract class $MiraiImageCopyWith<$Res> {
       _$MiraiImageCopyWithImpl<$Res, MiraiImage>;
   @useResult
   $Res call(
-      {MiraiAlignment alignment,
+      {String src,
+      MiraiAlignment alignment,
       MiraiImageType imageType,
-      String src,
       String? color,
       double? width,
       double? height});
@@ -61,14 +61,18 @@ class _$MiraiImageCopyWithImpl<$Res, $Val extends MiraiImage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? src = null,
     Object? alignment = null,
     Object? imageType = null,
-    Object? src = null,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
   }) {
     return _then(_value.copyWith(
+      src: null == src
+          ? _value.src
+          : src // ignore: cast_nullable_to_non_nullable
+              as String,
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -77,10 +81,6 @@ class _$MiraiImageCopyWithImpl<$Res, $Val extends MiraiImage>
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as MiraiImageType,
-      src: null == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as String,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -106,9 +106,9 @@ abstract class _$$_MiraiImageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiAlignment alignment,
+      {String src,
+      MiraiAlignment alignment,
       MiraiImageType imageType,
-      String src,
       String? color,
       double? width,
       double? height});
@@ -125,14 +125,18 @@ class __$$_MiraiImageCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? src = null,
     Object? alignment = null,
     Object? imageType = null,
-    Object? src = null,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
   }) {
     return _then(_$_MiraiImage(
+      src: null == src
+          ? _value.src
+          : src // ignore: cast_nullable_to_non_nullable
+              as String,
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -141,10 +145,6 @@ class __$$_MiraiImageCopyWithImpl<$Res>
           ? _value.imageType
           : imageType // ignore: cast_nullable_to_non_nullable
               as MiraiImageType,
-      src: null == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as String,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -165,9 +165,9 @@ class __$$_MiraiImageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiImage implements _MiraiImage {
   const _$_MiraiImage(
-      {this.alignment = MiraiAlignment.center,
+      {required this.src,
+      this.alignment = MiraiAlignment.center,
       this.imageType = MiraiImageType.network,
-      this.src = '',
       this.color,
       this.width,
       this.height});
@@ -176,14 +176,13 @@ class _$_MiraiImage implements _MiraiImage {
       _$$_MiraiImageFromJson(json);
 
   @override
+  final String src;
+  @override
   @JsonKey()
   final MiraiAlignment alignment;
   @override
   @JsonKey()
   final MiraiImageType imageType;
-  @override
-  @JsonKey()
-  final String src;
   @override
   final String? color;
   @override
@@ -193,7 +192,7 @@ class _$_MiraiImage implements _MiraiImage {
 
   @override
   String toString() {
-    return 'MiraiImage(alignment: $alignment, imageType: $imageType, src: $src, color: $color, width: $width, height: $height)';
+    return 'MiraiImage(src: $src, alignment: $alignment, imageType: $imageType, color: $color, width: $width, height: $height)';
   }
 
   @override
@@ -201,11 +200,11 @@ class _$_MiraiImage implements _MiraiImage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiImage &&
+            (identical(other.src, src) || other.src == src) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.imageType, imageType) ||
                 other.imageType == imageType) &&
-            (identical(other.src, src) || other.src == src) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height));
@@ -214,7 +213,7 @@ class _$_MiraiImage implements _MiraiImage {
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, alignment, imageType, src, color, width, height);
+      Object.hash(runtimeType, src, alignment, imageType, color, width, height);
 
   @JsonKey(ignore: true)
   @override
@@ -232,9 +231,9 @@ class _$_MiraiImage implements _MiraiImage {
 
 abstract class _MiraiImage implements MiraiImage {
   const factory _MiraiImage(
-      {final MiraiAlignment alignment,
+      {required final String src,
+      final MiraiAlignment alignment,
       final MiraiImageType imageType,
-      final String src,
       final String? color,
       final double? width,
       final double? height}) = _$_MiraiImage;
@@ -243,11 +242,11 @@ abstract class _MiraiImage implements MiraiImage {
       _$_MiraiImage.fromJson;
 
   @override
+  String get src;
+  @override
   MiraiAlignment get alignment;
   @override
   MiraiImageType get imageType;
-  @override
-  String get src;
   @override
   String? get color;
   @override
