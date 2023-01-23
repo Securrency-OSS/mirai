@@ -1,25 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'mirai_elevated_button.dart';
+part of 'mirai_outlined_button.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiElevatedButton _$$_MiraiElevatedButtonFromJson(
+_$_MiraiOutlinedButton _$$_MiraiOutlinedButtonFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiElevatedButton(
+    _$_MiraiOutlinedButton(
       style: json['style'] == null
           ? null
           : MiraiButtonStyle.fromJson(json['style'] as Map<String, dynamic>),
-      autofocus: json['autofocus'] as bool? ?? false,
+      autofocus: json['autofocus'] ?? false,
       clipBehavior:
           $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiElevatedButtonToJson(
-        _$_MiraiElevatedButton instance) =>
+Map<String, dynamic> _$$_MiraiOutlinedButtonToJson(
+        _$_MiraiOutlinedButton instance) =>
     <String, dynamic>{
       'style': instance.style,
       'autofocus': instance.autofocus,

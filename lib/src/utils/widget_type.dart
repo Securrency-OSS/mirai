@@ -7,4 +7,5 @@ enum WidgetType {
   container,
   image,
   icon,
+  outlinedButton,
 }
