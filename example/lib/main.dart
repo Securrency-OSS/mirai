@@ -37,27 +37,28 @@ class HomePage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(children: [
               Mirai.fromJson(textFieldJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(elevatedButtonJson, context),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(rowJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(columnJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(containerJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(imageJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(fileImageJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(assetImageJson, context),
               Mirai.fromJson(iconJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(outlinedButtonJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(iconButtonJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(paddingJson, context),
-              const SizedBox(height: 20),
+              Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(textButtonJson, context),
             ]),
           ),
@@ -228,6 +229,7 @@ final miraiAppBarJson = {
         'foregroundColor': '#E8E8E8',
       }
     },
+    {'type': 'sizedBox', 'width': 20, 'height': 20},
     {
       'type': 'image',
       'color': '#dedede',
@@ -271,4 +273,14 @@ final paddingJson = {
     'bottom': 40,
   },
   'child': iconJson,
+};
+
+final iconButtonJson = {
+  'type': 'iconButton',
+  'child': iconJson,
+};
+
+final sizedBoxJson = {
+  'type': 'sizedBox',
+  'height': 20,
 };
