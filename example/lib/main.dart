@@ -53,6 +53,8 @@ class HomePage extends StatelessWidget {
               Mirai.fromJson(iconJson, context),
               const SizedBox(height: 20),
               Mirai.fromJson(outlinedButtonJson, context),
+              const SizedBox(height: 20),
+              Mirai.fromJson(textButtonJson, context),
             ]),
           ),
         ),
@@ -163,6 +165,39 @@ final iconJson = {
   'color': '#ff0000'
 };
 
+final extendedFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'extended',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+  'extendedTextStyle': {
+    'color': '#ff0000',
+    'backgroundColor': '#dedede',
+    'fontSize': 21,
+  }
+};
+
+final smallFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'small',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+  'tooltip': 'Sign In',
+};
+
+final largeFloatingActionButtonJson = {
+  'type': 'floatingActionButton',
+  'buttonType': 'large',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
+  },
+};
+
 final outlinedButtonJson = {
   'type': 'outlinedButton',
   'child': {
@@ -214,5 +249,13 @@ final titleTextJson = {
     'foregroundColor': '#ffffff',
     'backgroundColor': '#212121',
     'fontSize': 21,
+  },
+};
+
+final textButtonJson = {
+  'type': 'textButton',
+  'child': {
+    'type': 'text',
+    'data': 'Sign in',
   },
 };

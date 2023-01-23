@@ -7,6 +7,9 @@ enum WidgetType {
   container,
   image,
   icon,
+  iconButton,
+  floatingActionButton,
   outlinedButton,
   appBar,
+  textButton,
 }
