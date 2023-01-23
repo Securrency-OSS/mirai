@@ -10,4 +10,6 @@ enum WidgetType {
   iconButton,
   floatingActionButton,
   outlinedButton,
+  appBar,
+  textButton,
 }
