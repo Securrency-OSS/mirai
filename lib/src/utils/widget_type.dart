@@ -13,5 +13,6 @@ enum WidgetType {
   padding,
   appBar,
   textButton,
-  sizedBox
+  sizedBox,
+  card,
 }
