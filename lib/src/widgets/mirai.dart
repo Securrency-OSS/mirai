@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
+import 'package:mirai/src/widgets/mirai_bottom_navigation_bar/mirai_bottom_navigation_bar_parser.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
 import 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
@@ -36,6 +37,7 @@ class Mirai {
     MiraiAppBarParser(),
     MiraiTextButtonParser(),
     MiraiSizedBoxParser(),
+    MiraiBottomNavigationBarParser(),
   ];
 
   static Future<void> initialize({
