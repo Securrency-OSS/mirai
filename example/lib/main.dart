@@ -35,32 +35,36 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
           child: SingleChildScrollView(
-            child: Column(children: [
-              Mirai.fromJson(textFieldJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(elevatedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(rowJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(columnJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(containerJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(imageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(fileImageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(assetImageJson, context),
-              Mirai.fromJson(iconJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(outlinedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(iconButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(paddingJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(textButtonJson, context),
-            ]),
+            child: Column(
+              children: [
+                    Mirai.fromJson(textFieldJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(elevatedButtonJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(rowJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(columnJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(containerJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(imageJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(fileImageJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(assetImageJson, context),
+                    Mirai.fromJson(iconJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(outlinedButtonJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(iconButtonJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(paddingJson, context),
+                    Mirai.fromJson(sizedBoxJson, context),
+                    Mirai.fromJson(textButtonJson, context),
+                  ] +
+                  List.generate(
+                      5, (index) => Mirai.fromJson(listTileJson, context)),
+            ),
           ),
         ),
       ),
@@ -252,7 +256,7 @@ final titleTextJson = {
   'data': 'Home',
   'align': 'center',
   'style': {
-    'foregroundColor': '#ffffff',
+    'color': '#ffffff',
     'backgroundColor': '#212121',
     'fontSize': 21,
   },
@@ -283,4 +287,29 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final listTileJson = {
+  'type': 'listTile',
+  'leading': titleTextJson,
+  'trailing': iconJson,
+  'title': {
+    'type': 'text',
+    'data': 'Home',
+    'align': 'center',
+    'style': {
+      'fontSize': 13,
+    },
+  },
+  'subtitle': {
+    'type': 'text',
+    'data': 'Home',
+    'align': 'center',
+    'style': {
+      'fontSize': 9,
+    },
+  },
+  'isThreeLine': true,
+  'tileColor': '#ff0000',
+  'style': 'list',
 };
