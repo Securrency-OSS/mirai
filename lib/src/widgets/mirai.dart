@@ -13,6 +13,7 @@ import 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.da
 import 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
 import 'package:mirai/src/widgets/mirai_sized_box/mirai_sized_box.dart';
+import 'package:mirai/src/widgets/mirai_tab_bar/mirai_tab_bar.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
@@ -36,6 +37,7 @@ class Mirai {
     MiraiAppBarParser(),
     MiraiTextButtonParser(),
     MiraiSizedBoxParser(),
+    MiraiTabBarParser(),
   ];
 
   static Future<void> initialize({
