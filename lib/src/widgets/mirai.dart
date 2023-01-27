@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
@@ -36,6 +37,7 @@ class Mirai {
     MiraiAppBarParser(),
     MiraiTextButtonParser(),
     MiraiSizedBoxParser(),
+    MiraiTabBarViewParser(),
   ];
 
   static Future<void> initialize({

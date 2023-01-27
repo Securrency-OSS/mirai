@@ -60,6 +60,17 @@ class HomePage extends StatelessWidget {
               Mirai.fromJson(paddingJson, context),
               Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(textButtonJson, context),
+              Mirai.fromJson(sizedBoxJson, context),
+              SizedBox(
+                height: 500,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Mirai.fromJson(tabBarViewJson, context),
+                    ),
+                  ],
+                ),
+              ),
             ]),
           ),
         ),
@@ -283,4 +294,13 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final tabBarViewJson = {
+  'type': 'tabBarView',
+  'children': [
+    rowJson,
+    containerJson,
+    columnJson,
+  ],
 };
