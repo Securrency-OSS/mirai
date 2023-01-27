@@ -15,6 +15,15 @@ class MiraiEdgeInsets with _$MiraiEdgeInsets {
 
   factory MiraiEdgeInsets.fromJson(Map<String, dynamic> json) =>
       _$MiraiEdgeInsetsFromJson(json);
+
+  factory MiraiEdgeInsets.all(double value) {
+    return MiraiEdgeInsets(
+      left: value,
+      right: value,
+      top: value,
+      bottom: value,
+    );
+  }
 }
 
 extension MiraiEdgeInsetsParser on MiraiEdgeInsets? {
@@ -24,6 +33,17 @@ extension MiraiEdgeInsetsParser on MiraiEdgeInsets? {
       right: this?.right ?? 0,
       top: this?.top ?? 0,
       bottom: this?.bottom ?? 0,
+    );
+  }
+}
+
+extension MiraiEdgeInsetsExt on MiraiEdgeInsets {
+  static MiraiEdgeInsets all(double value) {
+    return MiraiEdgeInsets(
+      left: value,
+      right: value,
+      top: value,
+      bottom: value,
     );
   }
 }

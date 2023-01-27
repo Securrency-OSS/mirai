@@ -16,6 +16,7 @@ import 'package:mirai/src/widgets/mirai_sized_box/mirai_sized_box.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
+import 'package:mirai/src/widgets/mirai_text_form_field/mirai_text_form_field.dart';
 
 class Mirai {
   static final _miraiWidgetMap = <String, MiraiParser>{};
@@ -36,6 +37,7 @@ class Mirai {
     MiraiAppBarParser(),
     MiraiTextButtonParser(),
     MiraiSizedBoxParser(),
+    MiraiTextFormFieldParser(),
   ];
 
   static Future<void> initialize({
