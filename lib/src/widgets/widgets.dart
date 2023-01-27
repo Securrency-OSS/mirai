@@ -3,6 +3,7 @@ library widgets;
 export 'package:mirai/src/widgets/framework.dart';
 export 'package:mirai/src/widgets/mirai.dart';
 export 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar.dart';
+export 'package:mirai/src/widgets/mirai_bottom_sheet/mirai_bottom_sheet.dart';
 export 'package:mirai/src/widgets/mirai_column/mirai_column.dart';
 export 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
 export 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button.dart';

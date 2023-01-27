@@ -35,35 +35,40 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
           child: SingleChildScrollView(
-            child: Column(children: [
-              Mirai.fromJson(textFieldJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(elevatedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(rowJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(columnJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(containerJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(imageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(fileImageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(assetImageJson, context),
-              Mirai.fromJson(iconJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(outlinedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(iconButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(paddingJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(textButtonJson, context),
-            ]),
+            child: Column(
+              children: [
+                Mirai.fromJson(textFieldJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(elevatedButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(rowJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(columnJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(containerJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(imageJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(fileImageJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(assetImageJson, context),
+                Mirai.fromJson(iconJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(outlinedButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(iconButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(paddingJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(textButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+              ],
+            ),
           ),
         ),
       ),
+      bottomSheet:
+          const _BottomSheetExample(), //Mirai.fromJson(bottomSheetJson, context),
     );
   }
 }
@@ -284,3 +289,38 @@ final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
 };
+
+final bottomSheetJson = {
+  'type': 'bottomSheet',
+  'child': {
+    'type': 'container',
+    'width': double.infinity,
+    'height': 500,
+    'color': '#dedede',
+    'child': {
+      'type': 'text',
+      'data': 'Hello',
+    },
+  },
+  'backgroundColor': '#7D1038',
+  'elevation': 5,
+};
+
+class _BottomSheetExample extends StatefulWidget {
+  const _BottomSheetExample({Key? key}) : super(key: key);
+
+  @override
+  State<_BottomSheetExample> createState() => __BottomSheetExampleState();
+}
+
+class __BottomSheetExampleState extends State<_BottomSheetExample>
+    with TickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    final controller = BottomSheet.createAnimationController(this);
+    return MiraiBottomSheetParser(controller: controller).parse(
+      context,
+      MiraiBottomSheet.fromJson(bottomSheetJson),
+    );
+  }
+}
