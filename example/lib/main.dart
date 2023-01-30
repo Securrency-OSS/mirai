@@ -21,8 +21,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late bool showBottomSheet;
+
+  @override
+  void initState() {
+    showBottomSheet = true;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +50,16 @@ class HomePage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      showBottomSheet = !showBottomSheet;
+                    });
+                  },
+                  child: Text(showBottomSheet
+                      ? 'Hide Bottomsheet'
+                      : 'Show Bottomsheet'),
+                ),
                 Mirai.fromJson(textFieldJson, context),
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(elevatedButtonJson, context),
@@ -67,8 +90,9 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet:
-          const _BottomSheetExample(), //Mirai.fromJson(bottomSheetJson, context),
+      bottomSheet: showBottomSheet
+          ? const _BottomSheetSample()
+          : null, //Mirai.fromJson(bottomSheetJson, context),
     );
   }
 }
@@ -306,18 +330,25 @@ final bottomSheetJson = {
   'elevation': 5,
 };
 
-class _BottomSheetExample extends StatefulWidget {
-  const _BottomSheetExample({Key? key}) : super(key: key);
+class _BottomSheetSample extends StatefulWidget {
+  const _BottomSheetSample({Key? key}) : super(key: key);
 
   @override
-  State<_BottomSheetExample> createState() => __BottomSheetExampleState();
+  State<_BottomSheetSample> createState() => __BottomSheetSampleState();
 }
 
-class __BottomSheetExampleState extends State<_BottomSheetExample>
+class __BottomSheetSampleState extends State<_BottomSheetSample>
     with TickerProviderStateMixin {
+  late AnimationController controller;
+
+  @override
+  void initState() {
+    controller = BottomSheet.createAnimationController(this);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final controller = BottomSheet.createAnimationController(this);
     return MiraiBottomSheetParser(controller: controller).parse(
       context,
       MiraiBottomSheet.fromJson(bottomSheetJson),
