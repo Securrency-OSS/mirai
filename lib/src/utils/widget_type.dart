@@ -12,4 +12,5 @@ enum WidgetType {
   outlinedButton,
   appBar,
   textButton,
+  scaffold,
 }

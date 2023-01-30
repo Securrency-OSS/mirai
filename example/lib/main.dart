@@ -26,10 +26,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Mirai.fromJson(scaffoldJson, context);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(52),
-        child: Mirai.fromJson(miraiAppBarJson, context),
+        child: Mirai.fromJson(appBarJson, context),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
@@ -62,6 +63,13 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+final scaffoldJson = {
+  'type': 'scaffold',
+  'appBar': appBarJson,
+  'body': columnJson,
+  'floatingActionButton': largeFloatingActionButtonJson,
+};
 
 final textFieldJson = {
   'type': 'textField',
@@ -206,7 +214,7 @@ final outlinedButtonJson = {
   },
 };
 
-final miraiAppBarJson = {
+final appBarJson = {
   'type': 'appBar',
   'title': titleTextJson,
   'leading': iconJson,
