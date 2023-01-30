@@ -26,10 +26,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Mirai.fromJson(scaffoldJson, context);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(52),
-        child: Mirai.fromJson(miraiAppBarJson, context),
+        child: Mirai.fromJson(appBarJson, context),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
@@ -62,15 +63,26 @@ class HomePage extends StatelessWidget {
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(textButtonJson, context),
                 Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(miraiCardJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(listTileJson, context),
                 Mirai.fromJson(listViewJson, context),
               ],
             ),
           ),
         ),
       ),
+      bottomNavigationBar: Mirai.fromJson(bottomNavBarJson, context),
     );
   }
 }
+
+final scaffoldJson = {
+  'type': 'scaffold',
+  'appBar': appBarJson,
+  'body': columnJson,
+  'floatingActionButton': largeFloatingActionButtonJson,
+};
 
 final textFieldJson = {
   'type': 'textField',
@@ -215,7 +227,7 @@ final outlinedButtonJson = {
   },
 };
 
-final miraiAppBarJson = {
+final appBarJson = {
   'type': 'appBar',
   'title': titleTextJson,
   'leading': iconJson,
@@ -256,7 +268,7 @@ final titleTextJson = {
   'data': 'Home',
   'align': 'center',
   'style': {
-    'foregroundColor': '#ffffff',
+    'color': '#ffffff',
     'backgroundColor': '#212121',
     'fontSize': 21,
   },
@@ -287,6 +299,98 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final miraiCardJson = {
+  'type': 'card',
+  'color': '#7D1038',
+  'shadowColor': '#ff0000',
+  'surfaceTintColor': '#ff0000',
+  'elevation': 2,
+  'child': {
+    'type': 'container',
+    'width': 100,
+    'height': 100,
+    'child': {
+      'type': 'text',
+      'data': 'Hello',
+      'style': {
+        'color': '#ff0000',
+        'fontSize': 21,
+      },
+    },
+  },
+  'margin': {
+    'top': 10,
+    'bottom': 10,
+    'left': 10,
+    'right': 10,
+  }
+};
+
+final bottomNavBarJson = {
+  'type': 'bottomNavigationBar',
+  'backgroundColor': '#7D1038',
+  'items': [
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add sharp',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_sharp',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add rounded',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_rounded',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    }
+  ],
+};
+
+final listTileJson = {
+  'type': 'listTile',
+  'leading': titleTextJson,
+  'trailing': iconJson,
+  'title': {
+    'type': 'text',
+    'data': 'Home',
+    'align': 'center',
+    'style': {
+      'fontSize': 13,
+    },
+  },
+  'subtitle': {
+    'type': 'text',
+    'data': 'Home',
+    'align': 'center',
+    'style': {
+      'fontSize': 9,
+    },
+  },
+  'isThreeLine': true,
+  'tileColor': '#ff0000',
+  'style': 'list',
 };
 
 final listViewJson = {

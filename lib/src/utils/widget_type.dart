@@ -14,5 +14,9 @@ enum WidgetType {
   appBar,
   textButton,
   sizedBox,
+  listTile,
+  scaffold,
+  card,
+  bottomNavigationBar,
   listView,
 }
