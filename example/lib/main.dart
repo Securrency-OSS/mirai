@@ -66,6 +66,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Mirai.fromJson(bottomNavBarJson, context),
     );
   }
 }
@@ -312,4 +313,44 @@ final miraiCardJson = {
     'left': 10,
     'right': 10,
   }
+};
+
+final bottomNavBarJson = {
+  'type': 'bottomNavigationBar',
+  'backgroundColor': '#7D1038',
+  'items': [
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add sharp',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_sharp',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add rounded',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_rounded',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    }
+  ],
 };
