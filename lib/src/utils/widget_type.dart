@@ -16,5 +16,6 @@ enum WidgetType {
   sizedBox,
   listTile,
   scaffold,
+  card,
   bottomNavigationBar,
 }
