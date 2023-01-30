@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/utils/button_utils.dart';
 
 export 'package:mirai/src/widgets/mirai_scaffold/mirai_scaffold_parser.dart';
 
@@ -11,7 +12,7 @@ class MiraiScaffold with _$MiraiScaffold {
     Map<String, dynamic>? appBar,
     Map<String, dynamic>? body,
     Map<String, dynamic>? floatingActionButton,
-    floatingActionButtonLocation,
+    MiraiFloatingActionButtonLocation? floatingActionButtonLocation,
     Map<String, dynamic>? bottomNavigationBar,
     Map<String, dynamic>? bottomSheet,
     String? backgroundColor,

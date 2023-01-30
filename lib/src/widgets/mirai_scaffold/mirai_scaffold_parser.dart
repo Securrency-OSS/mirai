@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 import 'package:mirai/src/widgets/framework.dart';
@@ -22,7 +23,7 @@ class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
       ),
       body: Mirai.fromJson(model.body, context),
       floatingActionButton: Mirai.fromJson(model.floatingActionButton, context),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: model.floatingActionButtonLocation?.value,
       bottomNavigationBar: Mirai.fromJson(model.bottomNavigationBar, context),
       bottomSheet: Mirai.fromJson(model.bottomSheet, context),
       backgroundColor: model.backgroundColor.toColor,
