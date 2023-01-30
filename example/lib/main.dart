@@ -26,10 +26,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Mirai.fromJson(scaffoldJson, context);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(52),
-        child: Mirai.fromJson(miraiAppBarJson, context),
+        child: Mirai.fromJson(appBarJson, context),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
@@ -67,9 +68,17 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Mirai.fromJson(bottomNavBarJson, context),
     );
   }
 }
+
+final scaffoldJson = {
+  'type': 'scaffold',
+  'appBar': appBarJson,
+  'body': columnJson,
+  'floatingActionButton': largeFloatingActionButtonJson,
+};
 
 final textFieldJson = {
   'type': 'textField',
@@ -214,7 +223,7 @@ final outlinedButtonJson = {
   },
 };
 
-final miraiAppBarJson = {
+final appBarJson = {
   'type': 'appBar',
   'title': titleTextJson,
   'leading': iconJson,
@@ -286,6 +295,46 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final bottomNavBarJson = {
+  'type': 'bottomNavigationBar',
+  'backgroundColor': '#7D1038',
+  'items': [
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add sharp',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_sharp',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    },
+    {
+      'type': 'navigationBarItem',
+      'label': 'Add rounded',
+      'icon': {
+        'type': 'icon',
+        'iconType': 'material',
+        'icon': 'add_rounded',
+        'size': 40,
+        'color': '#ff0000'
+      },
+    }
+  ],
 };
 
 final listTileJson = {

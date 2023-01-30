@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
+import 'package:mirai/src/widgets/mirai_bottom_navigation_bar/mirai_bottom_navigation_bar_parser.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
 import 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
@@ -10,9 +10,11 @@ import 'package:mirai/src/widgets/mirai_floating_action_button/mirai_floating_ac
 import 'package:mirai/src/widgets/mirai_icon/mirai_icon_parser.dart';
 import 'package:mirai/src/widgets/mirai_icon_button/mirai_icon_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_image/mirai_image_parser.dart';
+import 'package:mirai/src/widgets/mirai_list_tile/mirai_list_tile_parser.dart';
 import 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.dart';
 import 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
+import 'package:mirai/src/widgets/mirai_scaffold/mirai_scaffold.dart';
 import 'package:mirai/src/widgets/mirai_sized_box/mirai_sized_box.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
@@ -36,8 +38,10 @@ class Mirai {
     MiraiPaddingParser(),
     MiraiAppBarParser(),
     MiraiTextButtonParser(),
+    MiraiScaffoldParser(),
     MiraiSizedBoxParser(),
     MiraiListTileParser(),
+    MiraiBottomNavigationBarParser(),
   ];
 
   static Future<void> initialize({

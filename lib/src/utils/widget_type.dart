@@ -15,4 +15,6 @@ enum WidgetType {
   textButton,
   sizedBox,
   listTile,
+  scaffold,
+  bottomNavigationBar,
 }
