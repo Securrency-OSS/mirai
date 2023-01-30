@@ -1,0 +1,196 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'mirai_sized_box.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+MiraiSizedBox _$MiraiSizedBoxFromJson(Map<String, dynamic> json) {
+  return _MiraiSizedBox.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MiraiSizedBox {
+  double? get width => throw _privateConstructorUsedError;
+  double? get height => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiSizedBoxCopyWith<MiraiSizedBox> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MiraiSizedBoxCopyWith<$Res> {
+  factory $MiraiSizedBoxCopyWith(
+          MiraiSizedBox value, $Res Function(MiraiSizedBox) then) =
+      _$MiraiSizedBoxCopyWithImpl<$Res, MiraiSizedBox>;
+  @useResult
+  $Res call({double? width, double? height, Map<String, dynamic>? child});
+}
+
+/// @nodoc
+class _$MiraiSizedBoxCopyWithImpl<$Res, $Val extends MiraiSizedBox>
+    implements $MiraiSizedBoxCopyWith<$Res> {
+  _$MiraiSizedBoxCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_value.copyWith(
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MiraiSizedBoxCopyWith<$Res>
+    implements $MiraiSizedBoxCopyWith<$Res> {
+  factory _$$_MiraiSizedBoxCopyWith(
+          _$_MiraiSizedBox value, $Res Function(_$_MiraiSizedBox) then) =
+      __$$_MiraiSizedBoxCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? width, double? height, Map<String, dynamic>? child});
+}
+
+/// @nodoc
+class __$$_MiraiSizedBoxCopyWithImpl<$Res>
+    extends _$MiraiSizedBoxCopyWithImpl<$Res, _$_MiraiSizedBox>
+    implements _$$_MiraiSizedBoxCopyWith<$Res> {
+  __$$_MiraiSizedBoxCopyWithImpl(
+      _$_MiraiSizedBox _value, $Res Function(_$_MiraiSizedBox) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$_MiraiSizedBox(
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: freezed == child
+          ? _value._child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MiraiSizedBox implements _MiraiSizedBox {
+  const _$_MiraiSizedBox(
+      {this.width, this.height, final Map<String, dynamic>? child})
+      : _child = child;
+
+  factory _$_MiraiSizedBox.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiSizedBoxFromJson(json);
+
+  @override
+  final double? width;
+  @override
+  final double? height;
+  final Map<String, dynamic>? _child;
+  @override
+  Map<String, dynamic>? get child {
+    final value = _child;
+    if (value == null) return null;
+    if (_child is EqualUnmodifiableMapView) return _child;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MiraiSizedBox(width: $width, height: $height, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MiraiSizedBox &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
+            const DeepCollectionEquality().equals(other._child, _child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, width, height, const DeepCollectionEquality().hash(_child));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MiraiSizedBoxCopyWith<_$_MiraiSizedBox> get copyWith =>
+      __$$_MiraiSizedBoxCopyWithImpl<_$_MiraiSizedBox>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MiraiSizedBoxToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MiraiSizedBox implements MiraiSizedBox {
+  const factory _MiraiSizedBox(
+      {final double? width,
+      final double? height,
+      final Map<String, dynamic>? child}) = _$_MiraiSizedBox;
+
+  factory _MiraiSizedBox.fromJson(Map<String, dynamic> json) =
+      _$_MiraiSizedBox.fromJson;
+
+  @override
+  double? get width;
+  @override
+  double? get height;
+  @override
+  Map<String, dynamic>? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MiraiSizedBoxCopyWith<_$_MiraiSizedBox> get copyWith =>
+      throw _privateConstructorUsedError;
+}

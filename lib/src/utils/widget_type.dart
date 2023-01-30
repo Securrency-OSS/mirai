@@ -10,7 +10,9 @@ enum WidgetType {
   iconButton,
   floatingActionButton,
   outlinedButton,
+  padding,
   appBar,
   textButton,
   scaffold,
+  sizedBox,
 }
