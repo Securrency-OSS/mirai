@@ -65,31 +65,6 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Mirai.fromJson(bottomNavBarJson, context),
-      // BottomNavigationBar(
-      //   items: const [
-      //     // BottomNavigationBarItem(
-      //     //   icon: Icon(Icons.home),
-      //     //   label: 'const Text',
-      //     //   backgroundColor: Colors.blue,
-      //     // ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'const Text',
-      //       backgroundColor: Colors.red,
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'const Text',
-      //       backgroundColor: Colors.green,
-      //     ),
-      //   ],
-      //   type: BottomNavigationBarType.shifting,
-      //   currentIndex: 0,
-      //   selectedItemColor: Colors.black,
-      //   iconSize: 40,
-      //   onTap: (_) {},
-      //   elevation: 5,
-      // ),
     );
   }
 }
