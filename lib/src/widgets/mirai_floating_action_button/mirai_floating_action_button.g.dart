@@ -65,5 +65,6 @@ Map<String, dynamic> _$$_MiraiFloatingActionButtonToJson(
 const _$FloatingActionButtonTypeEnumMap = {
   FloatingActionButtonType.extended: 'extended',
   FloatingActionButtonType.large: 'large',
+  FloatingActionButtonType.medium: 'medium',
   FloatingActionButtonType.small: 'small',
 };

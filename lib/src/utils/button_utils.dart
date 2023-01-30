@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 enum FloatingActionButtonType {
   extended,
   large,
+  medium,
   small,
 }
 
