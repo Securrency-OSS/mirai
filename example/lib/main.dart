@@ -61,6 +61,8 @@ class HomePage extends StatelessWidget {
               Mirai.fromJson(paddingJson, context),
               Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(textButtonJson, context),
+              Mirai.fromJson(sizedBoxJson, context),
+              Mirai.fromJson(miraiCardJson, context),
             ]),
           ),
         ),
@@ -292,6 +294,33 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final miraiCardJson = {
+  'type': 'card',
+  'color': '#7D1038',
+  'shadowColor': '#ff0000',
+  'surfaceTintColor': '#ff0000',
+  'elevation': 2,
+  'child': {
+    'type': 'container',
+    'width': 100,
+    'height': 100,
+    'child': {
+      'type': 'text',
+      'data': 'Hello',
+      'style': {
+        'color': '#ff0000',
+        'fontSize': 21,
+      },
+    },
+  },
+  'margin': {
+    'top': 10,
+    'bottom': 10,
+    'left': 10,
+    'right': 10,
+  }
 };
 
 final bottomNavBarJson = {
