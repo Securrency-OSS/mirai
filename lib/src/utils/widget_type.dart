@@ -13,6 +13,7 @@ enum WidgetType {
   padding,
   appBar,
   textButton,
+  scaffold,
   sizedBox,
   bottomNavigationBar,
 }
