@@ -36,6 +36,17 @@ class HomePage extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Column(children: [
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Mirai.fromJson(alertDialogJson, context);
+                    },
+                  );
+                },
+                child: const Text('Show Alert'),
+              ),
               Mirai.fromJson(textFieldJson, context),
               Mirai.fromJson(sizedBoxJson, context),
               Mirai.fromJson(elevatedButtonJson, context),
@@ -283,4 +294,17 @@ final iconButtonJson = {
 final sizedBoxJson = {
   'type': 'sizedBox',
   'height': 20,
+};
+
+final alertDialogJson = {
+  'type': 'alertDialog',
+  'icon': iconJson,
+  'iconColor': '#ff0000',
+  'backgroundColor': '#7D1038',
+  'title': titleTextJson,
+  'content': containerJson,
+  'actions': [
+    elevatedButtonJson,
+    textButtonJson,
+  ]
 };

@@ -2,6 +2,7 @@ library widgets;
 
 export 'package:mirai/src/widgets/framework.dart';
 export 'package:mirai/src/widgets/mirai.dart';
+export 'package:mirai/src/widgets/mirai_alert_dialog/mirai_alert_dialog.dart';
 export 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar.dart';
 export 'package:mirai/src/widgets/mirai_column/mirai_column.dart';
 export 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
