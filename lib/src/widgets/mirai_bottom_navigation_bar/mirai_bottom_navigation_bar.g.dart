@@ -9,11 +9,10 @@ part of 'mirai_bottom_navigation_bar.dart';
 _$_MiraiBottomNavigationBar _$$_MiraiBottomNavigationBarFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiBottomNavigationBar(
-      items: (json['items'] as List<dynamic>?)
-              ?.map((e) => MiraiBottomNavigationBarItem.fromJson(
-                  e as Map<String, dynamic>))
-              .toList() ??
-          const [],
+      items: (json['items'] as List<dynamic>)
+          .map((e) =>
+              MiraiBottomNavigationBarItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
       currentIndex: json['currentIndex'] as int? ?? 0,
       elevation: (json['elevation'] as num?)?.toDouble(),
       navBarType: $enumDecodeNullable(

@@ -12,7 +12,7 @@ part 'mirai_bottom_navigation_bar.g.dart';
 class MiraiBottomNavigationBar with _$MiraiBottomNavigationBar {
   const factory MiraiBottomNavigationBar({
     //Todo: onTap,
-    @Default([]) List<MiraiBottomNavigationBarItem> items,
+    required List<MiraiBottomNavigationBarItem> items,
     @Default(0) int currentIndex,
     double? elevation,
     BottomNavigationBarType? navBarType,

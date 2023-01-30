@@ -348,7 +348,7 @@ class __$$_MiraiBottomNavigationBarCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
   const _$_MiraiBottomNavigationBar(
-      {final List<MiraiBottomNavigationBarItem> items = const [],
+      {required final List<MiraiBottomNavigationBarItem> items,
       this.currentIndex = 0,
       this.elevation,
       this.navBarType,
@@ -374,7 +374,6 @@ class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
   final List<MiraiBottomNavigationBarItem> _items;
 //Todo: onTap,
   @override
-  @JsonKey()
   List<MiraiBottomNavigationBarItem> get items {
     if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
@@ -502,7 +501,7 @@ class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
 
 abstract class _MiraiBottomNavigationBar implements MiraiBottomNavigationBar {
   const factory _MiraiBottomNavigationBar(
-          {final List<MiraiBottomNavigationBarItem> items,
+          {required final List<MiraiBottomNavigationBarItem> items,
           final int currentIndex,
           final double? elevation,
           final BottomNavigationBarType? navBarType,
