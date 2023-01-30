@@ -23,8 +23,7 @@ mixin _$MiraiCard {
   String? get color => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get surfaceTintColor => throw _privateConstructorUsedError;
-  double? get elevation =>
-      throw _privateConstructorUsedError; // ShapeBorder? shape,
+  double? get elevation => throw _privateConstructorUsedError;
   bool get borderOnForeground => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get margin => throw _privateConstructorUsedError;
   Clip? get clipBehavior => throw _privateConstructorUsedError;
@@ -242,7 +241,6 @@ class _$_MiraiCard implements _MiraiCard {
   final String? surfaceTintColor;
   @override
   final double? elevation;
-// ShapeBorder? shape,
   @override
   @JsonKey()
   final bool borderOnForeground;
@@ -342,7 +340,7 @@ abstract class _MiraiCard implements MiraiCard {
   String? get surfaceTintColor;
   @override
   double? get elevation;
-  @override // ShapeBorder? shape,
+  @override
   bool get borderOnForeground;
   @override
   MiraiEdgeInsets? get margin;

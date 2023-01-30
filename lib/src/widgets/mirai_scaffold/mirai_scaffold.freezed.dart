@@ -24,7 +24,7 @@ mixin _$MiraiScaffold {
   Map<String, dynamic>? get body => throw _privateConstructorUsedError;
   Map<String, dynamic>? get floatingActionButton =>
       throw _privateConstructorUsedError;
-  dynamic get floatingActionButtonLocation =>
+  MiraiFloatingActionButtonLocation? get floatingActionButtonLocation =>
       throw _privateConstructorUsedError;
   Map<String, dynamic>? get bottomNavigationBar =>
       throw _privateConstructorUsedError;
@@ -51,7 +51,7 @@ abstract class $MiraiScaffoldCopyWith<$Res> {
       {Map<String, dynamic>? appBar,
       Map<String, dynamic>? body,
       Map<String, dynamic>? floatingActionButton,
-      dynamic floatingActionButtonLocation,
+      MiraiFloatingActionButtonLocation? floatingActionButtonLocation,
       Map<String, dynamic>? bottomNavigationBar,
       Map<String, dynamic>? bottomSheet,
       String? backgroundColor,
@@ -102,7 +102,7 @@ class _$MiraiScaffoldCopyWithImpl<$Res, $Val extends MiraiScaffold>
       floatingActionButtonLocation: freezed == floatingActionButtonLocation
           ? _value.floatingActionButtonLocation
           : floatingActionButtonLocation // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as MiraiFloatingActionButtonLocation?,
       bottomNavigationBar: freezed == bottomNavigationBar
           ? _value.bottomNavigationBar
           : bottomNavigationBar // ignore: cast_nullable_to_non_nullable
@@ -147,7 +147,7 @@ abstract class _$$_MiraiScaffoldCopyWith<$Res>
       {Map<String, dynamic>? appBar,
       Map<String, dynamic>? body,
       Map<String, dynamic>? floatingActionButton,
-      dynamic floatingActionButtonLocation,
+      MiraiFloatingActionButtonLocation? floatingActionButtonLocation,
       Map<String, dynamic>? bottomNavigationBar,
       Map<String, dynamic>? bottomSheet,
       String? backgroundColor,
@@ -194,8 +194,9 @@ class __$$_MiraiScaffoldCopyWithImpl<$Res>
           : floatingActionButton // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
       floatingActionButtonLocation: freezed == floatingActionButtonLocation
-          ? _value.floatingActionButtonLocation!
-          : floatingActionButtonLocation,
+          ? _value.floatingActionButtonLocation
+          : floatingActionButtonLocation // ignore: cast_nullable_to_non_nullable
+              as MiraiFloatingActionButtonLocation?,
       bottomNavigationBar: freezed == bottomNavigationBar
           ? _value._bottomNavigationBar
           : bottomNavigationBar // ignore: cast_nullable_to_non_nullable
@@ -284,7 +285,7 @@ class _$_MiraiScaffold implements _MiraiScaffold {
   }
 
   @override
-  final dynamic floatingActionButtonLocation;
+  final MiraiFloatingActionButtonLocation? floatingActionButtonLocation;
   final Map<String, dynamic>? _bottomNavigationBar;
   @override
   Map<String, dynamic>? get bottomNavigationBar {
@@ -334,9 +335,10 @@ class _$_MiraiScaffold implements _MiraiScaffold {
             const DeepCollectionEquality().equals(other._body, _body) &&
             const DeepCollectionEquality()
                 .equals(other._floatingActionButton, _floatingActionButton) &&
-            const DeepCollectionEquality().equals(
-                other.floatingActionButtonLocation,
-                floatingActionButtonLocation) &&
+            (identical(other.floatingActionButtonLocation,
+                    floatingActionButtonLocation) ||
+                other.floatingActionButtonLocation ==
+                    floatingActionButtonLocation) &&
             const DeepCollectionEquality()
                 .equals(other._bottomNavigationBar, _bottomNavigationBar) &&
             const DeepCollectionEquality()
@@ -360,7 +362,7 @@ class _$_MiraiScaffold implements _MiraiScaffold {
       const DeepCollectionEquality().hash(_appBar),
       const DeepCollectionEquality().hash(_body),
       const DeepCollectionEquality().hash(_floatingActionButton),
-      const DeepCollectionEquality().hash(floatingActionButtonLocation),
+      floatingActionButtonLocation,
       const DeepCollectionEquality().hash(_bottomNavigationBar),
       const DeepCollectionEquality().hash(_bottomSheet),
       backgroundColor,
@@ -388,7 +390,7 @@ abstract class _MiraiScaffold implements MiraiScaffold {
       {final Map<String, dynamic>? appBar,
       final Map<String, dynamic>? body,
       final Map<String, dynamic>? floatingActionButton,
-      final dynamic floatingActionButtonLocation,
+      final MiraiFloatingActionButtonLocation? floatingActionButtonLocation,
       final Map<String, dynamic>? bottomNavigationBar,
       final Map<String, dynamic>? bottomSheet,
       final String? backgroundColor,
@@ -407,7 +409,7 @@ abstract class _MiraiScaffold implements MiraiScaffold {
   @override
   Map<String, dynamic>? get floatingActionButton;
   @override
-  dynamic get floatingActionButtonLocation;
+  MiraiFloatingActionButtonLocation? get floatingActionButtonLocation;
   @override
   Map<String, dynamic>? get bottomNavigationBar;
   @override
