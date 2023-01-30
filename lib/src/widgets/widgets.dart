@@ -13,6 +13,7 @@ export 'package:mirai/src/widgets/mirai_floating_action_button/mirai_floating_ac
 export 'package:mirai/src/widgets/mirai_icon/mirai_icon.dart';
 export 'package:mirai/src/widgets/mirai_icon_button/mirai_icon_button.dart';
 export 'package:mirai/src/widgets/mirai_image/mirai_image.dart';
+export 'package:mirai/src/widgets/mirai_list_tile/mirai_list_tile.dart';
 export 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.dart';
 export 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 export 'package:mirai/src/widgets/mirai_row/mirai_row.dart';
