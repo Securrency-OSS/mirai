@@ -58,27 +58,7 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       cursorHeight: model.cursorHeight,
       cursorColor: model.cursorColor?.toColor,
       style: MiraiTextStyleParser.parse(model.style),
-      decoration: _inputDecoration(model.decoration),
-    );
-  }
-
-  InputDecoration _inputDecoration(MiraiInputDecoration? input) {
-    return InputDecoration(
-      labelText: input?.labelText,
-      labelStyle: MiraiTextStyleParser.parse(input?.labelStyle),
-      helperText: input?.helperText,
-      helperStyle: MiraiTextStyleParser.parse(input?.helperStyle),
-      hintText: input?.hintText,
-      hintStyle: MiraiTextStyleParser.parse(input?.hintStyle),
-      errorText: input?.errorText,
-      errorStyle: MiraiTextStyleParser.parse(input?.errorStyle),
-      prefixText: input?.prefixText,
-      prefixStyle: MiraiTextStyleParser.parse(input?.prefixStyle),
-      suffixText: input?.suffixText,
-      suffixStyle: MiraiTextStyleParser.parse(input?.suffixStyle),
-      fillColor: input?.fillColor.toColor,
-      focusColor: input?.focusColor.toColor,
-      hoverColor: input?.hoverColor.toColor,
+      decoration: model.decoration?.parse,
     );
   }
 }
