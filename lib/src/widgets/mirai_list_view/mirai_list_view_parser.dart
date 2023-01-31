@@ -5,9 +5,7 @@ import 'package:mirai/src/utils/list_view_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiListViewParser extends MiraiParser<MiraiListView> {
-  MiraiListViewParser({
-    this.controller,
-  });
+  MiraiListViewParser({this.controller});
 
   final ScrollController? controller;
 
@@ -43,7 +41,7 @@ class MiraiListViewParser extends MiraiParser<MiraiListView> {
           keyboardDismissBehavior: model.keyboardDismissBehavior,
           restorationId: model.restorationId,
           clipBehavior: model.clipBehavior,
-          itemCount: 3, // model.children.length,
+          itemCount: model.children.length,
           itemBuilder: (context, index) =>
               Mirai.fromJson(model.children[index], context),
         );

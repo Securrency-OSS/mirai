@@ -16,7 +16,7 @@ class MiraiListView with _$MiraiListView {
     @Default(Axis.vertical) Axis scrollDirection,
     @Default(false) bool reverse,
     bool? primary,
-    ScrollPhysicsType? physics,
+    MiraiScrollPhysics? physics,
     @Default(false) bool shrinkWrap,
     MiraiEdgeInsets? padding,
     double? itemExtent,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum ScrollPhysicsType {
+enum MiraiScrollPhysics {
   never,
   bouncing,
   clamping,
@@ -8,19 +8,19 @@ enum ScrollPhysicsType {
   page,
 }
 
-extension MiraiEdgeInsetsParser on ScrollPhysicsType? {
+extension MiraiScrollPhysicsParser on MiraiScrollPhysics? {
   ScrollPhysics get parse {
     switch (this) {
-      case ScrollPhysicsType.bouncing:
+      case MiraiScrollPhysics.bouncing:
         return const BouncingScrollPhysics();
 
-      case ScrollPhysicsType.clamping:
+      case MiraiScrollPhysics.clamping:
         return const ClampingScrollPhysics();
 
-      case ScrollPhysicsType.fixed:
+      case MiraiScrollPhysics.fixed:
         return const FixedExtentScrollPhysics();
 
-      case ScrollPhysicsType.page:
+      case MiraiScrollPhysics.page:
         return const PageScrollPhysics();
 
       default:
