@@ -12,7 +12,9 @@ _$_MiraiScaffold _$$_MiraiScaffoldFromJson(Map<String, dynamic> json) =>
       body: json['body'] as Map<String, dynamic>?,
       floatingActionButton:
           json['floatingActionButton'] as Map<String, dynamic>?,
-      floatingActionButtonLocation: json['floatingActionButtonLocation'],
+      floatingActionButtonLocation: $enumDecodeNullable(
+          _$MiraiFloatingActionButtonLocationEnumMap,
+          json['floatingActionButtonLocation']),
       bottomNavigationBar: json['bottomNavigationBar'] as Map<String, dynamic>?,
       bottomSheet: json['bottomSheet'] as Map<String, dynamic>?,
       backgroundColor: json['backgroundColor'] as String?,
@@ -27,7 +29,9 @@ Map<String, dynamic> _$$_MiraiScaffoldToJson(_$_MiraiScaffold instance) =>
       'appBar': instance.appBar,
       'body': instance.body,
       'floatingActionButton': instance.floatingActionButton,
-      'floatingActionButtonLocation': instance.floatingActionButtonLocation,
+      'floatingActionButtonLocation':
+          _$MiraiFloatingActionButtonLocationEnumMap[
+              instance.floatingActionButtonLocation],
       'bottomNavigationBar': instance.bottomNavigationBar,
       'bottomSheet': instance.bottomSheet,
       'backgroundColor': instance.backgroundColor,
@@ -36,3 +40,24 @@ Map<String, dynamic> _$$_MiraiScaffoldToJson(_$_MiraiScaffold instance) =>
       'extendBody': instance.extendBody,
       'extendBodyBehindAppBar': instance.extendBodyBehindAppBar,
     };
+
+const _$MiraiFloatingActionButtonLocationEnumMap = {
+  MiraiFloatingActionButtonLocation.startTop: 'startTop',
+  MiraiFloatingActionButtonLocation.miniStartTop: 'miniStartTop',
+  MiraiFloatingActionButtonLocation.centerTop: 'centerTop',
+  MiraiFloatingActionButtonLocation.miniCenterTop: 'miniCenterTop',
+  MiraiFloatingActionButtonLocation.endTop: 'endTop',
+  MiraiFloatingActionButtonLocation.miniEndTop: 'miniEndTop',
+  MiraiFloatingActionButtonLocation.startFloat: 'startFloat',
+  MiraiFloatingActionButtonLocation.miniStartFloat: 'miniStartFloat',
+  MiraiFloatingActionButtonLocation.centerFloat: 'centerFloat',
+  MiraiFloatingActionButtonLocation.miniCenterFloat: 'miniCenterFloat',
+  MiraiFloatingActionButtonLocation.endFloat: 'endFloat',
+  MiraiFloatingActionButtonLocation.miniEndFloat: 'miniEndFloat',
+  MiraiFloatingActionButtonLocation.startDocked: 'startDocked',
+  MiraiFloatingActionButtonLocation.miniStartDocked: 'miniStartDocked',
+  MiraiFloatingActionButtonLocation.centerDocked: 'centerDocked',
+  MiraiFloatingActionButtonLocation.miniCenterDocked: 'miniCenterDocked',
+  MiraiFloatingActionButtonLocation.endDocked: 'endDocked',
+  MiraiFloatingActionButtonLocation.miniEndDocked: 'miniEndDocked',
+};
