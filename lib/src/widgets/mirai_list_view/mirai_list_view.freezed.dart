@@ -20,21 +20,18 @@ MiraiListView _$MiraiListViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiListView {
-  ListViewType get listType => throw _privateConstructorUsedError;
   Axis get scrollDirection => throw _privateConstructorUsedError;
   bool get reverse => throw _privateConstructorUsedError;
   bool? get primary => throw _privateConstructorUsedError;
-  ScrollPhysicsType? get physics => throw _privateConstructorUsedError;
+  MiraiScrollPhysics? get physics => throw _privateConstructorUsedError;
   bool get shrinkWrap => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
-  double? get itemExtent => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get prototypeItem => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get seperator => throw _privateConstructorUsedError;
   bool get addAutomaticKeepAlives => throw _privateConstructorUsedError;
   bool get addRepaintBoundaries => throw _privateConstructorUsedError;
   bool get addSemanticIndexes => throw _privateConstructorUsedError;
   double? get cacheExtent => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get children => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get separator => throw _privateConstructorUsedError;
   int? get semanticChildCount => throw _privateConstructorUsedError;
   DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
   ScrollViewKeyboardDismissBehavior get keyboardDismissBehavior =>
@@ -55,21 +52,18 @@ abstract class $MiraiListViewCopyWith<$Res> {
       _$MiraiListViewCopyWithImpl<$Res, MiraiListView>;
   @useResult
   $Res call(
-      {ListViewType listType,
-      Axis scrollDirection,
+      {Axis scrollDirection,
       bool reverse,
       bool? primary,
-      ScrollPhysicsType? physics,
+      MiraiScrollPhysics? physics,
       bool shrinkWrap,
       MiraiEdgeInsets? padding,
-      double? itemExtent,
-      Map<String, dynamic>? prototypeItem,
-      Map<String, dynamic>? seperator,
       bool addAutomaticKeepAlives,
       bool addRepaintBoundaries,
       bool addSemanticIndexes,
       double? cacheExtent,
       List<Map<String, dynamic>> children,
+      Map<String, dynamic>? separator,
       int? semanticChildCount,
       DragStartBehavior dragStartBehavior,
       ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
@@ -92,21 +86,18 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listType = null,
     Object? scrollDirection = null,
     Object? reverse = null,
     Object? primary = freezed,
     Object? physics = freezed,
     Object? shrinkWrap = null,
     Object? padding = freezed,
-    Object? itemExtent = freezed,
-    Object? prototypeItem = freezed,
-    Object? seperator = freezed,
     Object? addAutomaticKeepAlives = null,
     Object? addRepaintBoundaries = null,
     Object? addSemanticIndexes = null,
     Object? cacheExtent = freezed,
     Object? children = null,
+    Object? separator = freezed,
     Object? semanticChildCount = freezed,
     Object? dragStartBehavior = null,
     Object? keyboardDismissBehavior = null,
@@ -114,10 +105,6 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
     Object? clipBehavior = null,
   }) {
     return _then(_value.copyWith(
-      listType: null == listType
-          ? _value.listType
-          : listType // ignore: cast_nullable_to_non_nullable
-              as ListViewType,
       scrollDirection: null == scrollDirection
           ? _value.scrollDirection
           : scrollDirection // ignore: cast_nullable_to_non_nullable
@@ -133,7 +120,7 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
-              as ScrollPhysicsType?,
+              as MiraiScrollPhysics?,
       shrinkWrap: null == shrinkWrap
           ? _value.shrinkWrap
           : shrinkWrap // ignore: cast_nullable_to_non_nullable
@@ -142,18 +129,6 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
-      itemExtent: freezed == itemExtent
-          ? _value.itemExtent
-          : itemExtent // ignore: cast_nullable_to_non_nullable
-              as double?,
-      prototypeItem: freezed == prototypeItem
-          ? _value.prototypeItem
-          : prototypeItem // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      seperator: freezed == seperator
-          ? _value.seperator
-          : seperator // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       addAutomaticKeepAlives: null == addAutomaticKeepAlives
           ? _value.addAutomaticKeepAlives
           : addAutomaticKeepAlives // ignore: cast_nullable_to_non_nullable
@@ -174,6 +149,10 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
           ? _value.children
           : children // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      separator: freezed == separator
+          ? _value.separator
+          : separator // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       semanticChildCount: freezed == semanticChildCount
           ? _value.semanticChildCount
           : semanticChildCount // ignore: cast_nullable_to_non_nullable
@@ -219,21 +198,18 @@ abstract class _$$_MiraiListViewCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {ListViewType listType,
-      Axis scrollDirection,
+      {Axis scrollDirection,
       bool reverse,
       bool? primary,
-      ScrollPhysicsType? physics,
+      MiraiScrollPhysics? physics,
       bool shrinkWrap,
       MiraiEdgeInsets? padding,
-      double? itemExtent,
-      Map<String, dynamic>? prototypeItem,
-      Map<String, dynamic>? seperator,
       bool addAutomaticKeepAlives,
       bool addRepaintBoundaries,
       bool addSemanticIndexes,
       double? cacheExtent,
       List<Map<String, dynamic>> children,
+      Map<String, dynamic>? separator,
       int? semanticChildCount,
       DragStartBehavior dragStartBehavior,
       ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
@@ -255,21 +231,18 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listType = null,
     Object? scrollDirection = null,
     Object? reverse = null,
     Object? primary = freezed,
     Object? physics = freezed,
     Object? shrinkWrap = null,
     Object? padding = freezed,
-    Object? itemExtent = freezed,
-    Object? prototypeItem = freezed,
-    Object? seperator = freezed,
     Object? addAutomaticKeepAlives = null,
     Object? addRepaintBoundaries = null,
     Object? addSemanticIndexes = null,
     Object? cacheExtent = freezed,
     Object? children = null,
+    Object? separator = freezed,
     Object? semanticChildCount = freezed,
     Object? dragStartBehavior = null,
     Object? keyboardDismissBehavior = null,
@@ -277,10 +250,6 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
     Object? clipBehavior = null,
   }) {
     return _then(_$_MiraiListView(
-      listType: null == listType
-          ? _value.listType
-          : listType // ignore: cast_nullable_to_non_nullable
-              as ListViewType,
       scrollDirection: null == scrollDirection
           ? _value.scrollDirection
           : scrollDirection // ignore: cast_nullable_to_non_nullable
@@ -296,7 +265,7 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
-              as ScrollPhysicsType?,
+              as MiraiScrollPhysics?,
       shrinkWrap: null == shrinkWrap
           ? _value.shrinkWrap
           : shrinkWrap // ignore: cast_nullable_to_non_nullable
@@ -305,18 +274,6 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
-      itemExtent: freezed == itemExtent
-          ? _value.itemExtent
-          : itemExtent // ignore: cast_nullable_to_non_nullable
-              as double?,
-      prototypeItem: freezed == prototypeItem
-          ? _value._prototypeItem
-          : prototypeItem // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      seperator: freezed == seperator
-          ? _value._seperator
-          : seperator // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       addAutomaticKeepAlives: null == addAutomaticKeepAlives
           ? _value.addAutomaticKeepAlives
           : addAutomaticKeepAlives // ignore: cast_nullable_to_non_nullable
@@ -337,6 +294,10 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      separator: freezed == separator
+          ? _value._separator
+          : separator // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       semanticChildCount: freezed == semanticChildCount
           ? _value.semanticChildCount
           : semanticChildCount // ignore: cast_nullable_to_non_nullable
@@ -365,36 +326,29 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiListView implements _MiraiListView {
   const _$_MiraiListView(
-      {this.listType = ListViewType.custom,
-      this.scrollDirection = Axis.vertical,
+      {this.scrollDirection = Axis.vertical,
       this.reverse = false,
       this.primary,
       this.physics,
       this.shrinkWrap = false,
       this.padding,
-      this.itemExtent,
-      final Map<String, dynamic>? prototypeItem,
-      final Map<String, dynamic>? seperator,
       this.addAutomaticKeepAlives = true,
       this.addRepaintBoundaries = true,
       this.addSemanticIndexes = true,
       this.cacheExtent,
       final List<Map<String, dynamic>> children = const [],
+      final Map<String, dynamic>? separator,
       this.semanticChildCount,
       this.dragStartBehavior = DragStartBehavior.start,
       this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
       this.restorationId,
       this.clipBehavior = Clip.hardEdge})
-      : _prototypeItem = prototypeItem,
-        _seperator = seperator,
-        _children = children;
+      : _children = children,
+        _separator = separator;
 
   factory _$_MiraiListView.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiListViewFromJson(json);
 
-  @override
-  @JsonKey()
-  final ListViewType listType;
   @override
   @JsonKey()
   final Axis scrollDirection;
@@ -404,34 +358,12 @@ class _$_MiraiListView implements _MiraiListView {
   @override
   final bool? primary;
   @override
-  final ScrollPhysicsType? physics;
+  final MiraiScrollPhysics? physics;
   @override
   @JsonKey()
   final bool shrinkWrap;
   @override
   final MiraiEdgeInsets? padding;
-  @override
-  final double? itemExtent;
-  final Map<String, dynamic>? _prototypeItem;
-  @override
-  Map<String, dynamic>? get prototypeItem {
-    final value = _prototypeItem;
-    if (value == null) return null;
-    if (_prototypeItem is EqualUnmodifiableMapView) return _prototypeItem;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, dynamic>? _seperator;
-  @override
-  Map<String, dynamic>? get seperator {
-    final value = _seperator;
-    if (value == null) return null;
-    if (_seperator is EqualUnmodifiableMapView) return _seperator;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
   @override
   @JsonKey()
   final bool addAutomaticKeepAlives;
@@ -452,6 +384,16 @@ class _$_MiraiListView implements _MiraiListView {
     return EqualUnmodifiableListView(_children);
   }
 
+  final Map<String, dynamic>? _separator;
+  @override
+  Map<String, dynamic>? get separator {
+    final value = _separator;
+    if (value == null) return null;
+    if (_separator is EqualUnmodifiableMapView) return _separator;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final int? semanticChildCount;
   @override
@@ -468,7 +410,7 @@ class _$_MiraiListView implements _MiraiListView {
 
   @override
   String toString() {
-    return 'MiraiListView(listType: $listType, scrollDirection: $scrollDirection, reverse: $reverse, primary: $primary, physics: $physics, shrinkWrap: $shrinkWrap, padding: $padding, itemExtent: $itemExtent, prototypeItem: $prototypeItem, seperator: $seperator, addAutomaticKeepAlives: $addAutomaticKeepAlives, addRepaintBoundaries: $addRepaintBoundaries, addSemanticIndexes: $addSemanticIndexes, cacheExtent: $cacheExtent, children: $children, semanticChildCount: $semanticChildCount, dragStartBehavior: $dragStartBehavior, keyboardDismissBehavior: $keyboardDismissBehavior, restorationId: $restorationId, clipBehavior: $clipBehavior)';
+    return 'MiraiListView(scrollDirection: $scrollDirection, reverse: $reverse, primary: $primary, physics: $physics, shrinkWrap: $shrinkWrap, padding: $padding, addAutomaticKeepAlives: $addAutomaticKeepAlives, addRepaintBoundaries: $addRepaintBoundaries, addSemanticIndexes: $addSemanticIndexes, cacheExtent: $cacheExtent, children: $children, separator: $separator, semanticChildCount: $semanticChildCount, dragStartBehavior: $dragStartBehavior, keyboardDismissBehavior: $keyboardDismissBehavior, restorationId: $restorationId, clipBehavior: $clipBehavior)';
   }
 
   @override
@@ -476,8 +418,6 @@ class _$_MiraiListView implements _MiraiListView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiListView &&
-            (identical(other.listType, listType) ||
-                other.listType == listType) &&
             (identical(other.scrollDirection, scrollDirection) ||
                 other.scrollDirection == scrollDirection) &&
             (identical(other.reverse, reverse) || other.reverse == reverse) &&
@@ -486,12 +426,6 @@ class _$_MiraiListView implements _MiraiListView {
             (identical(other.shrinkWrap, shrinkWrap) ||
                 other.shrinkWrap == shrinkWrap) &&
             (identical(other.padding, padding) || other.padding == padding) &&
-            (identical(other.itemExtent, itemExtent) ||
-                other.itemExtent == itemExtent) &&
-            const DeepCollectionEquality()
-                .equals(other._prototypeItem, _prototypeItem) &&
-            const DeepCollectionEquality()
-                .equals(other._seperator, _seperator) &&
             (identical(other.addAutomaticKeepAlives, addAutomaticKeepAlives) ||
                 other.addAutomaticKeepAlives == addAutomaticKeepAlives) &&
             (identical(other.addRepaintBoundaries, addRepaintBoundaries) ||
@@ -501,6 +435,8 @@ class _$_MiraiListView implements _MiraiListView {
             (identical(other.cacheExtent, cacheExtent) ||
                 other.cacheExtent == cacheExtent) &&
             const DeepCollectionEquality().equals(other._children, _children) &&
+            const DeepCollectionEquality()
+                .equals(other._separator, _separator) &&
             (identical(other.semanticChildCount, semanticChildCount) ||
                 other.semanticChildCount == semanticChildCount) &&
             (identical(other.dragStartBehavior, dragStartBehavior) ||
@@ -516,29 +452,25 @@ class _$_MiraiListView implements _MiraiListView {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        listType,
-        scrollDirection,
-        reverse,
-        primary,
-        physics,
-        shrinkWrap,
-        padding,
-        itemExtent,
-        const DeepCollectionEquality().hash(_prototypeItem),
-        const DeepCollectionEquality().hash(_seperator),
-        addAutomaticKeepAlives,
-        addRepaintBoundaries,
-        addSemanticIndexes,
-        cacheExtent,
-        const DeepCollectionEquality().hash(_children),
-        semanticChildCount,
-        dragStartBehavior,
-        keyboardDismissBehavior,
-        restorationId,
-        clipBehavior
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      scrollDirection,
+      reverse,
+      primary,
+      physics,
+      shrinkWrap,
+      padding,
+      addAutomaticKeepAlives,
+      addRepaintBoundaries,
+      addSemanticIndexes,
+      cacheExtent,
+      const DeepCollectionEquality().hash(_children),
+      const DeepCollectionEquality().hash(_separator),
+      semanticChildCount,
+      dragStartBehavior,
+      keyboardDismissBehavior,
+      restorationId,
+      clipBehavior);
 
   @JsonKey(ignore: true)
   @override
@@ -556,21 +488,18 @@ class _$_MiraiListView implements _MiraiListView {
 
 abstract class _MiraiListView implements MiraiListView {
   const factory _MiraiListView(
-      {final ListViewType listType,
-      final Axis scrollDirection,
+      {final Axis scrollDirection,
       final bool reverse,
       final bool? primary,
-      final ScrollPhysicsType? physics,
+      final MiraiScrollPhysics? physics,
       final bool shrinkWrap,
       final MiraiEdgeInsets? padding,
-      final double? itemExtent,
-      final Map<String, dynamic>? prototypeItem,
-      final Map<String, dynamic>? seperator,
       final bool addAutomaticKeepAlives,
       final bool addRepaintBoundaries,
       final bool addSemanticIndexes,
       final double? cacheExtent,
       final List<Map<String, dynamic>> children,
+      final Map<String, dynamic>? separator,
       final int? semanticChildCount,
       final DragStartBehavior dragStartBehavior,
       final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
@@ -581,25 +510,17 @@ abstract class _MiraiListView implements MiraiListView {
       _$_MiraiListView.fromJson;
 
   @override
-  ListViewType get listType;
-  @override
   Axis get scrollDirection;
   @override
   bool get reverse;
   @override
   bool? get primary;
   @override
-  ScrollPhysicsType? get physics;
+  MiraiScrollPhysics? get physics;
   @override
   bool get shrinkWrap;
   @override
   MiraiEdgeInsets? get padding;
-  @override
-  double? get itemExtent;
-  @override
-  Map<String, dynamic>? get prototypeItem;
-  @override
-  Map<String, dynamic>? get seperator;
   @override
   bool get addAutomaticKeepAlives;
   @override
@@ -610,6 +531,8 @@ abstract class _MiraiListView implements MiraiListView {
   double? get cacheExtent;
   @override
   List<Map<String, dynamic>> get children;
+  @override
+  Map<String, dynamic>? get separator;
   @override
   int? get semanticChildCount;
   @override

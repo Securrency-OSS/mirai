@@ -66,6 +66,7 @@ class HomePage extends StatelessWidget {
                 Mirai.fromJson(miraiCardJson, context),
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(listTileJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(listViewJson, context),
               ],
             ),
@@ -398,9 +399,12 @@ final listViewJson = {
   'listType': 'builder',
   'physics': 'never',
   'shrinkWrap': true,
+  'separator': containerJson,
   'children': [
+    titleTextJson,
     iconJson,
     iconJson,
     iconJson,
+    titleTextJson,
   ],
 };

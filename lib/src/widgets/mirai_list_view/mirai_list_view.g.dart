@@ -8,21 +8,17 @@ part of 'mirai_list_view.dart';
 
 _$_MiraiListView _$$_MiraiListViewFromJson(Map<String, dynamic> json) =>
     _$_MiraiListView(
-      listType: $enumDecodeNullable(_$ListViewTypeEnumMap, json['listType']) ??
-          ListViewType.custom,
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
               Axis.vertical,
       reverse: json['reverse'] as bool? ?? false,
       primary: json['primary'] as bool?,
-      physics: $enumDecodeNullable(_$ScrollPhysicsTypeEnumMap, json['physics']),
+      physics:
+          $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
       shrinkWrap: json['shrinkWrap'] as bool? ?? false,
       padding: json['padding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
-      itemExtent: (json['itemExtent'] as num?)?.toDouble(),
-      prototypeItem: json['prototypeItem'] as Map<String, dynamic>?,
-      seperator: json['seperator'] as Map<String, dynamic>?,
       addAutomaticKeepAlives: json['addAutomaticKeepAlives'] as bool? ?? true,
       addRepaintBoundaries: json['addRepaintBoundaries'] as bool? ?? true,
       addSemanticIndexes: json['addSemanticIndexes'] as bool? ?? true,
@@ -31,6 +27,7 @@ _$_MiraiListView _$$_MiraiListViewFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
           const [],
+      separator: json['separator'] as Map<String, dynamic>?,
       semanticChildCount: json['semanticChildCount'] as int?,
       dragStartBehavior: $enumDecodeNullable(
               _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
@@ -46,21 +43,18 @@ _$_MiraiListView _$$_MiraiListViewFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MiraiListViewToJson(_$_MiraiListView instance) =>
     <String, dynamic>{
-      'listType': _$ListViewTypeEnumMap[instance.listType]!,
       'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
       'reverse': instance.reverse,
       'primary': instance.primary,
-      'physics': _$ScrollPhysicsTypeEnumMap[instance.physics],
+      'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
       'shrinkWrap': instance.shrinkWrap,
       'padding': instance.padding,
-      'itemExtent': instance.itemExtent,
-      'prototypeItem': instance.prototypeItem,
-      'seperator': instance.seperator,
       'addAutomaticKeepAlives': instance.addAutomaticKeepAlives,
       'addRepaintBoundaries': instance.addRepaintBoundaries,
       'addSemanticIndexes': instance.addSemanticIndexes,
       'cacheExtent': instance.cacheExtent,
       'children': instance.children,
+      'separator': instance.separator,
       'semanticChildCount': instance.semanticChildCount,
       'dragStartBehavior':
           _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
@@ -70,23 +64,17 @@ Map<String, dynamic> _$$_MiraiListViewToJson(_$_MiraiListView instance) =>
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
     };
 
-const _$ListViewTypeEnumMap = {
-  ListViewType.builder: 'builder',
-  ListViewType.separated: 'separated',
-  ListViewType.custom: 'custom',
-};
-
 const _$AxisEnumMap = {
   Axis.horizontal: 'horizontal',
   Axis.vertical: 'vertical',
 };
 
-const _$ScrollPhysicsTypeEnumMap = {
-  ScrollPhysicsType.never: 'never',
-  ScrollPhysicsType.bouncing: 'bouncing',
-  ScrollPhysicsType.clamping: 'clamping',
-  ScrollPhysicsType.fixed: 'fixed',
-  ScrollPhysicsType.page: 'page',
+const _$MiraiScrollPhysicsEnumMap = {
+  MiraiScrollPhysics.never: 'never',
+  MiraiScrollPhysics.bouncing: 'bouncing',
+  MiraiScrollPhysics.clamping: 'clamping',
+  MiraiScrollPhysics.fixed: 'fixed',
+  MiraiScrollPhysics.page: 'page',
 };
 
 const _$DragStartBehaviorEnumMap = {

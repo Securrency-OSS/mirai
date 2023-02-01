@@ -5,10 +5,8 @@ enum MiraiScrollPhysics {
   bouncing,
   clamping,
   fixed,
-  page,
-}
+  page;
 
-extension MiraiScrollPhysicsParser on MiraiScrollPhysics? {
   ScrollPhysics get parse {
     switch (this) {
       case MiraiScrollPhysics.bouncing:
@@ -27,10 +25,4 @@ extension MiraiScrollPhysicsParser on MiraiScrollPhysics? {
         return const NeverScrollableScrollPhysics();
     }
   }
-}
-
-enum ListViewType {
-  builder,
-  separated,
-  custom,
 }
