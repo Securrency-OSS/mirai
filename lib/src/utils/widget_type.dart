@@ -18,4 +18,5 @@ enum WidgetType {
   scaffold,
   card,
   bottomNavigationBar,
+  listView,
 }
