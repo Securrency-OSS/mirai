@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
-import 'package:mirai/src/utils/list_view_utils.dart';
+import 'package:mirai/src/utils/mirai_scroll_physics.dart';
 
 export 'package:mirai/src/widgets/mirai_tab_bar/mirai_tab_bar_parser.dart';
 
@@ -29,7 +29,7 @@ class MiraiTabBar with _$MiraiTabBar {
     MiraiTextStyle? unselectedLabelStyle,
     @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
     bool? enableFeedback,
-    ScrollPhysicsType? physics,
+    MiraiScrollPhysics? physics,
   }) = _MiraiTabBar;
 
   factory MiraiTabBar.fromJson(Map<String, dynamic> json) =>

@@ -43,7 +43,8 @@ _$_MiraiTabBar _$$_MiraiTabBarFromJson(Map<String, dynamic> json) =>
               _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
           DragStartBehavior.start,
       enableFeedback: json['enableFeedback'] as bool?,
-      physics: $enumDecodeNullable(_$ScrollPhysicsTypeEnumMap, json['physics']),
+      physics:
+          $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
     );
 
 Map<String, dynamic> _$$_MiraiTabBarToJson(_$_MiraiTabBar instance) =>
@@ -66,7 +67,7 @@ Map<String, dynamic> _$$_MiraiTabBarToJson(_$_MiraiTabBar instance) =>
       'dragStartBehavior':
           _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
       'enableFeedback': instance.enableFeedback,
-      'physics': _$ScrollPhysicsTypeEnumMap[instance.physics],
+      'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
     };
 
 const _$TabBarIndicatorSizeEnumMap = {
@@ -79,10 +80,10 @@ const _$DragStartBehaviorEnumMap = {
   DragStartBehavior.start: 'start',
 };
 
-const _$ScrollPhysicsTypeEnumMap = {
-  ScrollPhysicsType.never: 'never',
-  ScrollPhysicsType.bouncing: 'bouncing',
-  ScrollPhysicsType.clamping: 'clamping',
-  ScrollPhysicsType.fixed: 'fixed',
-  ScrollPhysicsType.page: 'page',
+const _$MiraiScrollPhysicsEnumMap = {
+  MiraiScrollPhysics.never: 'never',
+  MiraiScrollPhysics.bouncing: 'bouncing',
+  MiraiScrollPhysics.clamping: 'clamping',
+  MiraiScrollPhysics.fixed: 'fixed',
+  MiraiScrollPhysics.page: 'page',
 };
