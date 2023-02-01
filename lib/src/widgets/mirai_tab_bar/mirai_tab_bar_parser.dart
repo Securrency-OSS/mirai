@@ -21,38 +21,7 @@ class MiraiTabBarParser extends MiraiParser<MiraiTabBar> {
   @override
   Widget parse(BuildContext context, MiraiTabBar model) {
     if (controller == null) {
-      return DefaultTabController(
-        initialIndex: model.initialIndex,
-        length: model.tabs.length,
-        child: Builder(
-          builder: (context) {
-            return TabBar(
-              controller: DefaultTabController.of(context),
-              tabs: model.tabs
-                  .map((tab) => Mirai.fromJson(tab, context))
-                  .toList(),
-              isScrollable: model.isScrollable,
-              padding: model.padding?.parse,
-              indicatorColor: model.indicatorColor?.toColor,
-              automaticIndicatorColorAdjustment:
-                  model.automaticIndicatorColorAdjustment,
-              indicatorWeight: model.indicatorWeight,
-              indicatorPadding: model.indicatorPadding.parse,
-              indicatorSize: model.indicatorSize,
-              labelColor: model.labelColor.toColor,
-              labelStyle: MiraiTextStyleParser.parse(model.labelStyle),
-              labelPadding: model.labelPadding.parse,
-              unselectedLabelColor: model.unselectedLabelColor.toColor,
-              unselectedLabelStyle:
-                  MiraiTextStyleParser.parse(model.unselectedLabelStyle),
-              dragStartBehavior: model.dragStartBehavior,
-              enableFeedback: model.enableFeedback,
-              onTap: (_) {},
-              physics: model.physics?.parse,
-            );
-          },
-        ),
-      );
+      return const SizedBox();
     }
 
     return TabBar(

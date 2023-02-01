@@ -6,13 +6,14 @@ import 'package:mirai/src/widgets/mirai_bottom_navigation_bar/mirai_bottom_navig
 import 'package:mirai/src/widgets/mirai_card/mirai_card_parser.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
 import 'package:mirai/src/widgets/mirai_container/mirai_container.dart';
+import 'package:mirai/src/widgets/mirai_default_tab_controller/mirai_default_tab_controller_parser.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_floating_action_button/mirai_floating_action_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_icon/mirai_icon_parser.dart';
 import 'package:mirai/src/widgets/mirai_icon_button/mirai_icon_button_parser.dart';
 import 'package:mirai/src/widgets/mirai_image/mirai_image_parser.dart';
-import 'package:mirai/src/widgets/mirai_list_view/mirai_list_view_parser.dart';
 import 'package:mirai/src/widgets/mirai_list_tile/mirai_list_tile_parser.dart';
+import 'package:mirai/src/widgets/mirai_list_view/mirai_list_view_parser.dart';
 import 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.dart';
 import 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
@@ -48,6 +49,7 @@ class Mirai {
     MiraiCardParser(),
     MiraiBottomNavigationBarParser(),
     MiraiListViewParser(),
+    MiraiDefaultTabControllerParser(),
   ];
 
   static Future<void> initialize({

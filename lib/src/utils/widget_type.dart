@@ -20,4 +20,5 @@ enum WidgetType {
   card,
   bottomNavigationBar,
   listView,
+  defaultTabController,
 }
