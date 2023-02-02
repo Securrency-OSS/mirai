@@ -2,8 +2,7 @@ name: Pull Request Checks
 on:
   pull_request:
     paths-ignore:
-      - '**/*.freezed.dart'
-      - '**/*.g.dart'
+      - 'bricks/**'
 
 jobs:
   checks:
