@@ -15,4 +15,11 @@ enum WidgetType {
   textButton,
   sizedBox,
   tabBarView,
+  tabBar,
+  listTile,
+  scaffold,
+  card,
+  bottomNavigationBar,
+  listView,
+  defaultTabController,
 }
