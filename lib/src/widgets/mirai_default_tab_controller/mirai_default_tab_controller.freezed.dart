@@ -21,7 +21,7 @@ MiraiDefaultTabController _$MiraiDefaultTabControllerFromJson(
 
 /// @nodoc
 mixin _$MiraiDefaultTabController {
-  Map<String, dynamic> get tabBar => throw _privateConstructorUsedError;
+  Map<String, dynamic> get child => throw _privateConstructorUsedError;
   int get length => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ abstract class $MiraiDefaultTabControllerCopyWith<$Res> {
           $Res Function(MiraiDefaultTabController) then) =
       _$MiraiDefaultTabControllerCopyWithImpl<$Res, MiraiDefaultTabController>;
   @useResult
-  $Res call({Map<String, dynamic> tabBar, int length});
+  $Res call({Map<String, dynamic> child, int length});
 }
 
 /// @nodoc
@@ -53,13 +53,13 @@ class _$MiraiDefaultTabControllerCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tabBar = null,
+    Object? child = null,
     Object? length = null,
   }) {
     return _then(_value.copyWith(
-      tabBar: null == tabBar
-          ? _value.tabBar
-          : tabBar // ignore: cast_nullable_to_non_nullable
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       length: null == length
           ? _value.length
@@ -78,7 +78,7 @@ abstract class _$$_MiraiDefaultTabControllerCopyWith<$Res>
       __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic> tabBar, int length});
+  $Res call({Map<String, dynamic> child, int length});
 }
 
 /// @nodoc
@@ -94,13 +94,13 @@ class __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tabBar = null,
+    Object? child = null,
     Object? length = null,
   }) {
     return _then(_$_MiraiDefaultTabController(
-      tabBar: null == tabBar
-          ? _value._tabBar
-          : tabBar // ignore: cast_nullable_to_non_nullable
+      child: null == child
+          ? _value._child
+          : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       length: null == length
           ? _value.length
@@ -114,18 +114,18 @@ class __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
   const _$_MiraiDefaultTabController(
-      {required final Map<String, dynamic> tabBar, required this.length})
-      : _tabBar = tabBar;
+      {required final Map<String, dynamic> child, required this.length})
+      : _child = child;
 
   factory _$_MiraiDefaultTabController.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiDefaultTabControllerFromJson(json);
 
-  final Map<String, dynamic> _tabBar;
+  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get tabBar {
-    if (_tabBar is EqualUnmodifiableMapView) return _tabBar;
+  Map<String, dynamic> get child {
+    if (_child is EqualUnmodifiableMapView) return _child;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_tabBar);
+    return EqualUnmodifiableMapView(_child);
   }
 
   @override
@@ -133,7 +133,7 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
 
   @override
   String toString() {
-    return 'MiraiDefaultTabController(tabBar: $tabBar, length: $length)';
+    return 'MiraiDefaultTabController(child: $child, length: $length)';
   }
 
   @override
@@ -141,14 +141,14 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiDefaultTabController &&
-            const DeepCollectionEquality().equals(other._tabBar, _tabBar) &&
+            const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.length, length) || other.length == length));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_tabBar), length);
+      runtimeType, const DeepCollectionEquality().hash(_child), length);
 
   @JsonKey(ignore: true)
   @override
@@ -167,14 +167,14 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
 
 abstract class _MiraiDefaultTabController implements MiraiDefaultTabController {
   const factory _MiraiDefaultTabController(
-      {required final Map<String, dynamic> tabBar,
+      {required final Map<String, dynamic> child,
       required final int length}) = _$_MiraiDefaultTabController;
 
   factory _MiraiDefaultTabController.fromJson(Map<String, dynamic> json) =
       _$_MiraiDefaultTabController.fromJson;
 
   @override
-  Map<String, dynamic> get tabBar;
+  Map<String, dynamic> get child;
   @override
   int get length;
   @override

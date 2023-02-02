@@ -20,6 +20,7 @@ import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
 import 'package:mirai/src/widgets/mirai_scaffold/mirai_scaffold.dart';
 import 'package:mirai/src/widgets/mirai_sized_box/mirai_sized_box.dart';
 import 'package:mirai/src/widgets/mirai_tab_bar/mirai_tab_bar.dart';
+import 'package:mirai/src/widgets/mirai_tab_bar_view/mirai_tab_bar_view.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
@@ -44,6 +45,7 @@ class Mirai {
     MiraiTextButtonParser(),
     MiraiScaffoldParser(),
     MiraiSizedBoxParser(),
+    MiraiTabBarViewParser(),
     MiraiTabBarParser(),
     MiraiListTileParser(),
     MiraiCardParser(),
