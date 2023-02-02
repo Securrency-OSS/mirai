@@ -1,16 +1,15 @@
-name: Pull Request Checks
+name: build
+
 on:
+  push:
+    branches:
+      - master
   pull_request:
 
 jobs:
-  analyze-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2.8.0
-        with:
-          channel: 'stable'
-      - run: flutter pub get
-      - run: flutter build aot
-      - run: flutter analyze
-      - run: flutter test
+  semantic-pull-request:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+  pana:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
