@@ -23,7 +23,7 @@ mixin _$MiraiTabBarView {
   List<Map<String, dynamic>> get children => throw _privateConstructorUsedError;
   int get initialIndex => throw _privateConstructorUsedError;
   DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
-  ScrollPhysicsType? get physics => throw _privateConstructorUsedError;
+  MiraiScrollPhysics? get physics => throw _privateConstructorUsedError;
   double get viewportFraction => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
 
@@ -43,7 +43,7 @@ abstract class $MiraiTabBarViewCopyWith<$Res> {
       {List<Map<String, dynamic>> children,
       int initialIndex,
       DragStartBehavior dragStartBehavior,
-      ScrollPhysicsType? physics,
+      MiraiScrollPhysics? physics,
       double viewportFraction,
       Clip clipBehavior});
 }
@@ -84,7 +84,7 @@ class _$MiraiTabBarViewCopyWithImpl<$Res, $Val extends MiraiTabBarView>
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
-              as ScrollPhysicsType?,
+              as MiraiScrollPhysics?,
       viewportFraction: null == viewportFraction
           ? _value.viewportFraction
           : viewportFraction // ignore: cast_nullable_to_non_nullable
@@ -109,7 +109,7 @@ abstract class _$$_MiraiTabBarViewCopyWith<$Res>
       {List<Map<String, dynamic>> children,
       int initialIndex,
       DragStartBehavior dragStartBehavior,
-      ScrollPhysicsType? physics,
+      MiraiScrollPhysics? physics,
       double viewportFraction,
       Clip clipBehavior});
 }
@@ -148,7 +148,7 @@ class __$$_MiraiTabBarViewCopyWithImpl<$Res>
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
-              as ScrollPhysicsType?,
+              as MiraiScrollPhysics?,
       viewportFraction: null == viewportFraction
           ? _value.viewportFraction
           : viewportFraction // ignore: cast_nullable_to_non_nullable
@@ -191,7 +191,7 @@ class _$_MiraiTabBarView implements _MiraiTabBarView {
   @JsonKey()
   final DragStartBehavior dragStartBehavior;
   @override
-  final ScrollPhysicsType? physics;
+  final MiraiScrollPhysics? physics;
   @override
   @JsonKey()
   final double viewportFraction;
@@ -251,7 +251,7 @@ abstract class _MiraiTabBarView implements MiraiTabBarView {
       {required final List<Map<String, dynamic>> children,
       final int initialIndex,
       final DragStartBehavior dragStartBehavior,
-      final ScrollPhysicsType? physics,
+      final MiraiScrollPhysics? physics,
       final double viewportFraction,
       final Clip clipBehavior}) = _$_MiraiTabBarView;
 
@@ -265,7 +265,7 @@ abstract class _MiraiTabBarView implements MiraiTabBarView {
   @override
   DragStartBehavior get dragStartBehavior;
   @override
-  ScrollPhysicsType? get physics;
+  MiraiScrollPhysics? get physics;
   @override
   double get viewportFraction;
   @override

@@ -15,7 +15,8 @@ _$_MiraiTabBarView _$$_MiraiTabBarViewFromJson(Map<String, dynamic> json) =>
       dragStartBehavior: $enumDecodeNullable(
               _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
           DragStartBehavior.start,
-      physics: $enumDecodeNullable(_$ScrollPhysicsTypeEnumMap, json['physics']),
+      physics:
+          $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
       viewportFraction: (json['viewportFraction'] as num?)?.toDouble() ?? 1.0,
       clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
           Clip.hardEdge,
@@ -27,7 +28,7 @@ Map<String, dynamic> _$$_MiraiTabBarViewToJson(_$_MiraiTabBarView instance) =>
       'initialIndex': instance.initialIndex,
       'dragStartBehavior':
           _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
-      'physics': _$ScrollPhysicsTypeEnumMap[instance.physics],
+      'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
       'viewportFraction': instance.viewportFraction,
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
     };
@@ -37,12 +38,12 @@ const _$DragStartBehaviorEnumMap = {
   DragStartBehavior.start: 'start',
 };
 
-const _$ScrollPhysicsTypeEnumMap = {
-  ScrollPhysicsType.never: 'never',
-  ScrollPhysicsType.bouncing: 'bouncing',
-  ScrollPhysicsType.clamping: 'clamping',
-  ScrollPhysicsType.fixed: 'fixed',
-  ScrollPhysicsType.page: 'page',
+const _$MiraiScrollPhysicsEnumMap = {
+  MiraiScrollPhysics.never: 'never',
+  MiraiScrollPhysics.bouncing: 'bouncing',
+  MiraiScrollPhysics.clamping: 'clamping',
+  MiraiScrollPhysics.fixed: 'fixed',
+  MiraiScrollPhysics.page: 'page',
 };
 
 const _$ClipEnumMap = {

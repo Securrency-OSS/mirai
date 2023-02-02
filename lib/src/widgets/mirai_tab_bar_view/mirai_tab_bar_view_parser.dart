@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
-import 'package:mirai/src/utils/list_view_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai/src/widgets/framework.dart';
+import 'package:mirai/src/widgets/mirai.dart';
+import 'package:mirai/src/widgets/mirai_tab_bar_view/mirai_tab_bar_view.dart';
 
 class MiraiTabBarViewParser extends MiraiParser<MiraiTabBarView> {
-  MiraiTabBarViewParser({
-    this.controller,
-  });
+  MiraiTabBarViewParser({this.controller});
 
   final TabController? controller;
 
