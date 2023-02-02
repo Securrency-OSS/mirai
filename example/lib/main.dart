@@ -423,7 +423,7 @@ final listViewJson = {
 final tabBarJson = {
   'type': 'defaultTabController',
   'length': 3,
-  'tabBar': {
+  'child': {
     'type': 'tabBar',
     'tabs': [
       iconJson,
@@ -434,10 +434,14 @@ final tabBarJson = {
 };
 
 final tabBarViewJson = {
-  'type': 'tabBarView',
-  'children': [
-    rowJson,
-    containerJson,
-    columnJson,
-  ],
+  'type': 'defaultTabController',
+  'length': 3,
+  'child': {
+    'type': 'tabBarView',
+    'children': [
+      rowJson,
+      containerJson,
+      columnJson,
+    ],
+  }
 };
