@@ -17,7 +17,7 @@ class MiraiDefaultTabControllerParser
   Widget parse(BuildContext context, MiraiDefaultTabController model) {
     return DefaultTabController(
       length: model.length,
-      child: Mirai.fromJson(model.tabBar, context),
+      child: Mirai.fromJson(model.child, context),
     );
   }
 }

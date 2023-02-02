@@ -8,7 +8,7 @@ part 'mirai_default_tab_controller.g.dart';
 @freezed
 class MiraiDefaultTabController with _$MiraiDefaultTabController {
   const factory MiraiDefaultTabController({
-    required Map<String, dynamic> tabBar,
+    required Map<String, dynamic> child,
     required int length,
   }) = _MiraiDefaultTabController;
 
