@@ -1,5 +1,8 @@
 name: Pull Request Checks
 on:
+  push:
+    paths-ignore:
+      - 'bricks/**'
   pull_request:
     paths-ignore:
       - 'bricks/**'
