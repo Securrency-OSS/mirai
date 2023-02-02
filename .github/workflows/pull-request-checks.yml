@@ -1,1 +1,16 @@
+name: Pull Request Checks
+on:
+  pull_request:
 
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2.8.0
+        with:
+          channel: 'stable'
+      - run: flutter pub get
+      - run: flutter build aot
+      - run: flutter analyze
+      - run: flutter test
