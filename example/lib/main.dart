@@ -68,6 +68,8 @@ class HomePage extends StatelessWidget {
                 Mirai.fromJson(listTileJson, context),
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(listViewJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(tabBarJson, context),
               ],
             ),
           ),
@@ -407,4 +409,17 @@ final listViewJson = {
     iconJson,
     titleTextJson,
   ],
+};
+
+final tabBarJson = {
+  'type': 'defaultTabController',
+  'length': 3,
+  'tabBar': {
+    'type': 'tabBar',
+    'tabs': [
+      iconJson,
+      iconJson,
+      iconJson,
+    ],
+  }
 };
