@@ -162,7 +162,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'archivebox_fill': CupertinoIcons.archivebox_fill,
   'arrow_2_circlepath': CupertinoIcons.arrow_2_circlepath,
   'arrow_2_circlepath_circle': CupertinoIcons.arrow_2_circlepath_circle,
-  'arrow_2_circlepath_circle_fill': CupertinoIcons.arrow_2_circlepath_circle_fill,
+  'arrow_2_circlepath_circle_fill':
+      CupertinoIcons.arrow_2_circlepath_circle_fill,
   'arrow_2_squarepath': CupertinoIcons.arrow_2_squarepath,
   'arrow_3_trianglepath': CupertinoIcons.arrow_3_trianglepath,
   'arrow_branch': CupertinoIcons.arrow_branch,
@@ -171,7 +172,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_clockwise_circle_fill': CupertinoIcons.arrow_clockwise_circle_fill,
   'arrow_counterclockwise': CupertinoIcons.arrow_counterclockwise,
   'arrow_counterclockwise_circle': CupertinoIcons.arrow_counterclockwise_circle,
-  'arrow_counterclockwise_circle_fill': CupertinoIcons.arrow_counterclockwise_circle_fill,
+  'arrow_counterclockwise_circle_fill':
+      CupertinoIcons.arrow_counterclockwise_circle_fill,
   'arrow_down': CupertinoIcons.arrow_down,
   'arrow_down_circle': CupertinoIcons.arrow_down_circle,
   'arrow_down_circle_fill': CupertinoIcons.arrow_down_circle_fill,
@@ -183,7 +185,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_down_left_square': CupertinoIcons.arrow_down_left_square,
   'arrow_down_left_square_fill': CupertinoIcons.arrow_down_left_square_fill,
   'arrow_down_right': CupertinoIcons.arrow_down_right,
-  'arrow_down_right_arrow_up_left': CupertinoIcons.arrow_down_right_arrow_up_left,
+  'arrow_down_right_arrow_up_left':
+      CupertinoIcons.arrow_down_right_arrow_up_left,
   'arrow_down_right_circle': CupertinoIcons.arrow_down_right_circle,
   'arrow_down_right_circle_fill': CupertinoIcons.arrow_down_right_circle_fill,
   'arrow_down_right_square': CupertinoIcons.arrow_down_right_square,
@@ -208,9 +211,11 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_right': CupertinoIcons.arrow_right,
   'arrow_right_arrow_left': CupertinoIcons.arrow_right_arrow_left,
   'arrow_right_arrow_left_circle': CupertinoIcons.arrow_right_arrow_left_circle,
-  'arrow_right_arrow_left_circle_fill': CupertinoIcons.arrow_right_arrow_left_circle_fill,
+  'arrow_right_arrow_left_circle_fill':
+      CupertinoIcons.arrow_right_arrow_left_circle_fill,
   'arrow_right_arrow_left_square': CupertinoIcons.arrow_right_arrow_left_square,
-  'arrow_right_arrow_left_square_fill': CupertinoIcons.arrow_right_arrow_left_square_fill,
+  'arrow_right_arrow_left_square_fill':
+      CupertinoIcons.arrow_right_arrow_left_square_fill,
   'arrow_right_circle': CupertinoIcons.arrow_right_circle,
   'arrow_right_circle_fill': CupertinoIcons.arrow_right_circle_fill,
   'arrow_right_square': CupertinoIcons.arrow_right_square,
@@ -229,9 +234,11 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_up': CupertinoIcons.arrow_up,
   'arrow_up_arrow_down': CupertinoIcons.arrow_up_arrow_down,
   'arrow_up_arrow_down_circle': CupertinoIcons.arrow_up_arrow_down_circle,
-  'arrow_up_arrow_down_circle_fill': CupertinoIcons.arrow_up_arrow_down_circle_fill,
+  'arrow_up_arrow_down_circle_fill':
+      CupertinoIcons.arrow_up_arrow_down_circle_fill,
   'arrow_up_arrow_down_square': CupertinoIcons.arrow_up_arrow_down_square,
-  'arrow_up_arrow_down_square_fill': CupertinoIcons.arrow_up_arrow_down_square_fill,
+  'arrow_up_arrow_down_square_fill':
+      CupertinoIcons.arrow_up_arrow_down_square_fill,
   'arrow_up_bin': CupertinoIcons.arrow_up_bin,
   'arrow_up_bin_fill': CupertinoIcons.arrow_up_bin_fill,
   'arrow_up_circle': CupertinoIcons.arrow_up_circle,
@@ -244,7 +251,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_up_down_square': CupertinoIcons.arrow_up_down_square,
   'arrow_up_down_square_fill': CupertinoIcons.arrow_up_down_square_fill,
   'arrow_up_left': CupertinoIcons.arrow_up_left,
-  'arrow_up_left_arrow_down_right': CupertinoIcons.arrow_up_left_arrow_down_right,
+  'arrow_up_left_arrow_down_right':
+      CupertinoIcons.arrow_up_left_arrow_down_right,
   'arrow_up_left_circle': CupertinoIcons.arrow_up_left_circle,
   'arrow_up_left_circle_fill': CupertinoIcons.arrow_up_left_circle_fill,
   'arrow_up_left_square': CupertinoIcons.arrow_up_left_square,
@@ -282,32 +290,43 @@ final Map<String, IconData> cupertinoIconsMap = {
   'arrow_uturn_up_square_fill': CupertinoIcons.arrow_uturn_up_square_fill,
   'arrowshape_turn_up_left': CupertinoIcons.arrowshape_turn_up_left,
   'arrowshape_turn_up_left_2': CupertinoIcons.arrowshape_turn_up_left_2,
-  'arrowshape_turn_up_left_2_fill': CupertinoIcons.arrowshape_turn_up_left_2_fill,
-  'arrowshape_turn_up_left_circle': CupertinoIcons.arrowshape_turn_up_left_circle,
-  'arrowshape_turn_up_left_circle_fill': CupertinoIcons.arrowshape_turn_up_left_circle_fill,
+  'arrowshape_turn_up_left_2_fill':
+      CupertinoIcons.arrowshape_turn_up_left_2_fill,
+  'arrowshape_turn_up_left_circle':
+      CupertinoIcons.arrowshape_turn_up_left_circle,
+  'arrowshape_turn_up_left_circle_fill':
+      CupertinoIcons.arrowshape_turn_up_left_circle_fill,
   'arrowshape_turn_up_left_fill': CupertinoIcons.arrowshape_turn_up_left_fill,
   'arrowshape_turn_up_right': CupertinoIcons.arrowshape_turn_up_right,
-  'arrowshape_turn_up_right_circle': CupertinoIcons.arrowshape_turn_up_right_circle,
-  'arrowshape_turn_up_right_circle_fill': CupertinoIcons.arrowshape_turn_up_right_circle_fill,
+  'arrowshape_turn_up_right_circle':
+      CupertinoIcons.arrowshape_turn_up_right_circle,
+  'arrowshape_turn_up_right_circle_fill':
+      CupertinoIcons.arrowshape_turn_up_right_circle_fill,
   'arrowshape_turn_up_right_fill': CupertinoIcons.arrowshape_turn_up_right_fill,
   'arrowtriangle_down': CupertinoIcons.arrowtriangle_down,
   'arrowtriangle_down_circle': CupertinoIcons.arrowtriangle_down_circle,
-  'arrowtriangle_down_circle_fill': CupertinoIcons.arrowtriangle_down_circle_fill,
+  'arrowtriangle_down_circle_fill':
+      CupertinoIcons.arrowtriangle_down_circle_fill,
   'arrowtriangle_down_fill': CupertinoIcons.arrowtriangle_down_fill,
   'arrowtriangle_down_square': CupertinoIcons.arrowtriangle_down_square,
-  'arrowtriangle_down_square_fill': CupertinoIcons.arrowtriangle_down_square_fill,
+  'arrowtriangle_down_square_fill':
+      CupertinoIcons.arrowtriangle_down_square_fill,
   'arrowtriangle_left': CupertinoIcons.arrowtriangle_left,
   'arrowtriangle_left_circle': CupertinoIcons.arrowtriangle_left_circle,
-  'arrowtriangle_left_circle_fill': CupertinoIcons.arrowtriangle_left_circle_fill,
+  'arrowtriangle_left_circle_fill':
+      CupertinoIcons.arrowtriangle_left_circle_fill,
   'arrowtriangle_left_fill': CupertinoIcons.arrowtriangle_left_fill,
   'arrowtriangle_left_square': CupertinoIcons.arrowtriangle_left_square,
-  'arrowtriangle_left_square_fill': CupertinoIcons.arrowtriangle_left_square_fill,
+  'arrowtriangle_left_square_fill':
+      CupertinoIcons.arrowtriangle_left_square_fill,
   'arrowtriangle_right': CupertinoIcons.arrowtriangle_right,
   'arrowtriangle_right_circle': CupertinoIcons.arrowtriangle_right_circle,
-  'arrowtriangle_right_circle_fill': CupertinoIcons.arrowtriangle_right_circle_fill,
+  'arrowtriangle_right_circle_fill':
+      CupertinoIcons.arrowtriangle_right_circle_fill,
   'arrowtriangle_right_fill': CupertinoIcons.arrowtriangle_right_fill,
   'arrowtriangle_right_square': CupertinoIcons.arrowtriangle_right_square,
-  'arrowtriangle_right_square_fill': CupertinoIcons.arrowtriangle_right_square_fill,
+  'arrowtriangle_right_square_fill':
+      CupertinoIcons.arrowtriangle_right_square_fill,
   'arrowtriangle_up': CupertinoIcons.arrowtriangle_up,
   'arrowtriangle_up_circle': CupertinoIcons.arrowtriangle_up_circle,
   'arrowtriangle_up_circle_fill': CupertinoIcons.arrowtriangle_up_circle_fill,
@@ -461,7 +480,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'chevron_left_2': CupertinoIcons.chevron_left_2,
   'chevron_left_circle': CupertinoIcons.chevron_left_circle,
   'chevron_left_circle_fill': CupertinoIcons.chevron_left_circle_fill,
-  'chevron_left_slash_chevron_right': CupertinoIcons.chevron_left_slash_chevron_right,
+  'chevron_left_slash_chevron_right':
+      CupertinoIcons.chevron_left_slash_chevron_right,
   'chevron_left_square': CupertinoIcons.chevron_left_square,
   'chevron_left_square_fill': CupertinoIcons.chevron_left_square_fill,
   'chevron_right': CupertinoIcons.chevron_right,
@@ -772,8 +792,10 @@ final Map<String, IconData> cupertinoIconsMap = {
   'lightbulb_slash_fill': CupertinoIcons.lightbulb_slash_fill,
   'line_horizontal_3': CupertinoIcons.line_horizontal_3,
   'line_horizontal_3_decrease': CupertinoIcons.line_horizontal_3_decrease,
-  'line_horizontal_3_decrease_circle': CupertinoIcons.line_horizontal_3_decrease_circle,
-  'line_horizontal_3_decrease_circle_fill': CupertinoIcons.line_horizontal_3_decrease_circle_fill,
+  'line_horizontal_3_decrease_circle':
+      CupertinoIcons.line_horizontal_3_decrease_circle,
+  'line_horizontal_3_decrease_circle_fill':
+      CupertinoIcons.line_horizontal_3_decrease_circle_fill,
   'link': CupertinoIcons.link,
   'link_circle': CupertinoIcons.link_circle,
   'link_circle_fill': CupertinoIcons.link_circle_fill,
@@ -906,17 +928,26 @@ final Map<String, IconData> cupertinoIconsMap = {
   'person_circle': CupertinoIcons.person_circle,
   'person_circle_fill': CupertinoIcons.person_circle_fill,
   'person_crop_circle': CupertinoIcons.person_crop_circle,
-  'person_crop_circle_badge_checkmark': CupertinoIcons.person_crop_circle_badge_checkmark,
-  'person_crop_circle_badge_exclam': CupertinoIcons.person_crop_circle_badge_exclam,
-  'person_crop_circle_badge_minus': CupertinoIcons.person_crop_circle_badge_minus,
+  'person_crop_circle_badge_checkmark':
+      CupertinoIcons.person_crop_circle_badge_checkmark,
+  'person_crop_circle_badge_exclam':
+      CupertinoIcons.person_crop_circle_badge_exclam,
+  'person_crop_circle_badge_minus':
+      CupertinoIcons.person_crop_circle_badge_minus,
   'person_crop_circle_badge_plus': CupertinoIcons.person_crop_circle_badge_plus,
-  'person_crop_circle_badge_xmark': CupertinoIcons.person_crop_circle_badge_xmark,
+  'person_crop_circle_badge_xmark':
+      CupertinoIcons.person_crop_circle_badge_xmark,
   'person_crop_circle_fill': CupertinoIcons.person_crop_circle_fill,
-  'person_crop_circle_fill_badge_checkmark': CupertinoIcons.person_crop_circle_fill_badge_checkmark,
-  'person_crop_circle_fill_badge_exclam': CupertinoIcons.person_crop_circle_fill_badge_exclam,
-  'person_crop_circle_fill_badge_minus': CupertinoIcons.person_crop_circle_fill_badge_minus,
-  'person_crop_circle_fill_badge_plus': CupertinoIcons.person_crop_circle_fill_badge_plus,
-  'person_crop_circle_fill_badge_xmark': CupertinoIcons.person_crop_circle_fill_badge_xmark,
+  'person_crop_circle_fill_badge_checkmark':
+      CupertinoIcons.person_crop_circle_fill_badge_checkmark,
+  'person_crop_circle_fill_badge_exclam':
+      CupertinoIcons.person_crop_circle_fill_badge_exclam,
+  'person_crop_circle_fill_badge_minus':
+      CupertinoIcons.person_crop_circle_fill_badge_minus,
+  'person_crop_circle_fill_badge_plus':
+      CupertinoIcons.person_crop_circle_fill_badge_plus,
+  'person_crop_circle_fill_badge_xmark':
+      CupertinoIcons.person_crop_circle_fill_badge_xmark,
   'person_crop_rectangle': CupertinoIcons.person_crop_rectangle,
   'person_crop_rectangle_fill': CupertinoIcons.person_crop_rectangle_fill,
   'person_crop_square': CupertinoIcons.person_crop_square,
@@ -967,12 +998,14 @@ final Map<String, IconData> cupertinoIconsMap = {
   'plus_circle_fill': CupertinoIcons.plus_circle_fill,
   'plus_rectangle': CupertinoIcons.plus_rectangle,
   'plus_rectangle_fill': CupertinoIcons.plus_rectangle_fill,
-  'plus_rectangle_fill_on_rectangle_fill': CupertinoIcons.plus_rectangle_fill_on_rectangle_fill,
+  'plus_rectangle_fill_on_rectangle_fill':
+      CupertinoIcons.plus_rectangle_fill_on_rectangle_fill,
   'plus_rectangle_on_rectangle': CupertinoIcons.plus_rectangle_on_rectangle,
   'plus_slash_minus': CupertinoIcons.plus_slash_minus,
   'plus_square': CupertinoIcons.plus_square,
   'plus_square_fill': CupertinoIcons.plus_square_fill,
-  'plus_square_fill_on_square_fill': CupertinoIcons.plus_square_fill_on_square_fill,
+  'plus_square_fill_on_square_fill':
+      CupertinoIcons.plus_square_fill_on_square_fill,
   'plus_square_on_square': CupertinoIcons.plus_square_on_square,
   'plusminus': CupertinoIcons.plusminus,
   'plusminus_circle': CupertinoIcons.plusminus_circle,
@@ -1002,18 +1035,23 @@ final Map<String, IconData> cupertinoIconsMap = {
   'rectangle': CupertinoIcons.rectangle,
   'rectangle_3_offgrid': CupertinoIcons.rectangle_3_offgrid,
   'rectangle_3_offgrid_fill': CupertinoIcons.rectangle_3_offgrid_fill,
-  'rectangle_arrow_up_right_arrow_down_left': CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
-  'rectangle_arrow_up_right_arrow_down_left_slash': CupertinoIcons.rectangle_arrow_up_right_arrow_down_left_slash,
+  'rectangle_arrow_up_right_arrow_down_left':
+      CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
+  'rectangle_arrow_up_right_arrow_down_left_slash':
+      CupertinoIcons.rectangle_arrow_up_right_arrow_down_left_slash,
   'rectangle_badge_checkmark': CupertinoIcons.rectangle_badge_checkmark,
   'rectangle_badge_xmark': CupertinoIcons.rectangle_badge_xmark,
   'rectangle_compress_vertical': CupertinoIcons.rectangle_compress_vertical,
   'rectangle_dock': CupertinoIcons.rectangle_dock,
   'rectangle_expand_vertical': CupertinoIcons.rectangle_expand_vertical,
   'rectangle_fill': CupertinoIcons.rectangle_fill,
-  'rectangle_fill_badge_checkmark': CupertinoIcons.rectangle_fill_badge_checkmark,
+  'rectangle_fill_badge_checkmark':
+      CupertinoIcons.rectangle_fill_badge_checkmark,
   'rectangle_fill_badge_xmark': CupertinoIcons.rectangle_fill_badge_xmark,
-  'rectangle_fill_on_rectangle_angled_fill': CupertinoIcons.rectangle_fill_on_rectangle_angled_fill,
-  'rectangle_fill_on_rectangle_fill': CupertinoIcons.rectangle_fill_on_rectangle_fill,
+  'rectangle_fill_on_rectangle_angled_fill':
+      CupertinoIcons.rectangle_fill_on_rectangle_angled_fill,
+  'rectangle_fill_on_rectangle_fill':
+      CupertinoIcons.rectangle_fill_on_rectangle_fill,
   'rectangle_grid_1x2': CupertinoIcons.rectangle_grid_1x2,
   'rectangle_grid_1x2_fill': CupertinoIcons.rectangle_grid_1x2_fill,
   'rectangle_grid_2x2': CupertinoIcons.rectangle_grid_2x2,
@@ -1029,14 +1067,19 @@ final Map<String, IconData> cupertinoIconsMap = {
   'rectangle_split_3x3_fill': CupertinoIcons.rectangle_split_3x3_fill,
   'rectangle_stack': CupertinoIcons.rectangle_stack,
   'rectangle_stack_badge_minus': CupertinoIcons.rectangle_stack_badge_minus,
-  'rectangle_stack_badge_person_crop': CupertinoIcons.rectangle_stack_badge_person_crop,
+  'rectangle_stack_badge_person_crop':
+      CupertinoIcons.rectangle_stack_badge_person_crop,
   'rectangle_stack_badge_plus': CupertinoIcons.rectangle_stack_badge_plus,
   'rectangle_stack_fill': CupertinoIcons.rectangle_stack_fill,
-  'rectangle_stack_fill_badge_minus': CupertinoIcons.rectangle_stack_fill_badge_minus,
-  'rectangle_stack_fill_badge_person_crop': CupertinoIcons.rectangle_stack_fill_badge_person_crop,
-  'rectangle_stack_fill_badge_plus': CupertinoIcons.rectangle_stack_fill_badge_plus,
+  'rectangle_stack_fill_badge_minus':
+      CupertinoIcons.rectangle_stack_fill_badge_minus,
+  'rectangle_stack_fill_badge_person_crop':
+      CupertinoIcons.rectangle_stack_fill_badge_person_crop,
+  'rectangle_stack_fill_badge_plus':
+      CupertinoIcons.rectangle_stack_fill_badge_plus,
   'rectangle_stack_person_crop': CupertinoIcons.rectangle_stack_person_crop,
-  'rectangle_stack_person_crop_fill': CupertinoIcons.rectangle_stack_person_crop_fill,
+  'rectangle_stack_person_crop_fill':
+      CupertinoIcons.rectangle_stack_person_crop_fill,
   'repeat': CupertinoIcons.repeat,
   'repeat_1': CupertinoIcons.repeat_1,
   'resize': CupertinoIcons.resize,
@@ -1073,7 +1116,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'slash_circle': CupertinoIcons.slash_circle,
   'slash_circle_fill': CupertinoIcons.slash_circle_fill,
   'slider_horizontal_3': CupertinoIcons.slider_horizontal_3,
-  'slider_horizontal_below_rectangle': CupertinoIcons.slider_horizontal_below_rectangle,
+  'slider_horizontal_below_rectangle':
+      CupertinoIcons.slider_horizontal_below_rectangle,
   'slowmo': CupertinoIcons.slowmo,
   'smallcircle_circle': CupertinoIcons.smallcircle_circle,
   'smallcircle_circle_fill': CupertinoIcons.smallcircle_circle_fill,
@@ -1114,7 +1158,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'square_arrow_down': CupertinoIcons.square_arrow_down,
   'square_arrow_down_fill': CupertinoIcons.square_arrow_down_fill,
   'square_arrow_down_on_square': CupertinoIcons.square_arrow_down_on_square,
-  'square_arrow_down_on_square_fill': CupertinoIcons.square_arrow_down_on_square_fill,
+  'square_arrow_down_on_square_fill':
+      CupertinoIcons.square_arrow_down_on_square_fill,
   'square_arrow_left': CupertinoIcons.square_arrow_left,
   'square_arrow_left_fill': CupertinoIcons.square_arrow_left_fill,
   'square_arrow_right': CupertinoIcons.square_arrow_right,
@@ -1122,14 +1167,17 @@ final Map<String, IconData> cupertinoIconsMap = {
   'square_arrow_up': CupertinoIcons.square_arrow_up,
   'square_arrow_up_fill': CupertinoIcons.square_arrow_up_fill,
   'square_arrow_up_on_square': CupertinoIcons.square_arrow_up_on_square,
-  'square_arrow_up_on_square_fill': CupertinoIcons.square_arrow_up_on_square_fill,
+  'square_arrow_up_on_square_fill':
+      CupertinoIcons.square_arrow_up_on_square_fill,
   'square_favorites': CupertinoIcons.square_favorites,
   'square_favorites_alt': CupertinoIcons.square_favorites_alt,
   'square_favorites_alt_fill': CupertinoIcons.square_favorites_alt_fill,
   'square_favorites_fill': CupertinoIcons.square_favorites_fill,
   'square_fill': CupertinoIcons.square_fill,
-  'square_fill_line_vertical_square': CupertinoIcons.square_fill_line_vertical_square,
-  'square_fill_line_vertical_square_fill': CupertinoIcons.square_fill_line_vertical_square_fill,
+  'square_fill_line_vertical_square':
+      CupertinoIcons.square_fill_line_vertical_square,
+  'square_fill_line_vertical_square_fill':
+      CupertinoIcons.square_fill_line_vertical_square_fill,
   'square_fill_on_circle_fill': CupertinoIcons.square_fill_on_circle_fill,
   'square_fill_on_square_fill': CupertinoIcons.square_fill_on_square_fill,
   'square_grid_2x2': CupertinoIcons.square_grid_2x2,
@@ -1139,7 +1187,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'square_grid_4x3_fill': CupertinoIcons.square_grid_4x3_fill,
   'square_lefthalf_fill': CupertinoIcons.square_lefthalf_fill,
   'square_line_vertical_square': CupertinoIcons.square_line_vertical_square,
-  'square_line_vertical_square_fill': CupertinoIcons.square_line_vertical_square_fill,
+  'square_line_vertical_square_fill':
+      CupertinoIcons.square_line_vertical_square_fill,
   'square_list': CupertinoIcons.square_list,
   'square_list_fill': CupertinoIcons.square_list_fill,
   'square_on_circle': CupertinoIcons.square_on_circle,
@@ -1154,9 +1203,11 @@ final Map<String, IconData> cupertinoIconsMap = {
   'square_split_2x2': CupertinoIcons.square_split_2x2,
   'square_split_2x2_fill': CupertinoIcons.square_split_2x2_fill,
   'square_stack': CupertinoIcons.square_stack,
-  'square_stack_3d_down_dottedline': CupertinoIcons.square_stack_3d_down_dottedline,
+  'square_stack_3d_down_dottedline':
+      CupertinoIcons.square_stack_3d_down_dottedline,
   'square_stack_3d_down_right': CupertinoIcons.square_stack_3d_down_right,
-  'square_stack_3d_down_right_fill': CupertinoIcons.square_stack_3d_down_right_fill,
+  'square_stack_3d_down_right_fill':
+      CupertinoIcons.square_stack_3d_down_right_fill,
   'square_stack_3d_up': CupertinoIcons.square_stack_3d_up,
   'square_stack_3d_up_fill': CupertinoIcons.square_stack_3d_up_fill,
   'square_stack_3d_up_slash': CupertinoIcons.square_stack_3d_up_slash,
@@ -1230,7 +1281,8 @@ final Map<String, IconData> cupertinoIconsMap = {
   'textformat': CupertinoIcons.textformat,
   'textformat_123': CupertinoIcons.textformat_123,
   'textformat_abc': CupertinoIcons.textformat_abc,
-  'textformat_abc_dottedunderline': CupertinoIcons.textformat_abc_dottedunderline,
+  'textformat_abc_dottedunderline':
+      CupertinoIcons.textformat_abc_dottedunderline,
   'textformat_alt': CupertinoIcons.textformat_alt,
   'textformat_size': CupertinoIcons.textformat_size,
   'textformat_subscript': CupertinoIcons.textformat_subscript,
@@ -1778,29 +1830,43 @@ final Map<String, IconData> materialIconMap = {
   'airline_seat_flat_angled_rounded': Icons.airline_seat_flat_angled_rounded,
   'airline_seat_flat_angled_outlined': Icons.airline_seat_flat_angled_outlined,
   'airline_seat_individual_suite': Icons.airline_seat_individual_suite,
-  'airline_seat_individual_suite_sharp': Icons.airline_seat_individual_suite_sharp,
-  'airline_seat_individual_suite_rounded': Icons.airline_seat_individual_suite_rounded,
-  'airline_seat_individual_suite_outlined': Icons.airline_seat_individual_suite_outlined,
+  'airline_seat_individual_suite_sharp':
+      Icons.airline_seat_individual_suite_sharp,
+  'airline_seat_individual_suite_rounded':
+      Icons.airline_seat_individual_suite_rounded,
+  'airline_seat_individual_suite_outlined':
+      Icons.airline_seat_individual_suite_outlined,
   'airline_seat_legroom_extra': Icons.airline_seat_legroom_extra,
   'airline_seat_legroom_extra_sharp': Icons.airline_seat_legroom_extra_sharp,
-  'airline_seat_legroom_extra_rounded': Icons.airline_seat_legroom_extra_rounded,
-  'airline_seat_legroom_extra_outlined': Icons.airline_seat_legroom_extra_outlined,
+  'airline_seat_legroom_extra_rounded':
+      Icons.airline_seat_legroom_extra_rounded,
+  'airline_seat_legroom_extra_outlined':
+      Icons.airline_seat_legroom_extra_outlined,
   'airline_seat_legroom_normal': Icons.airline_seat_legroom_normal,
   'airline_seat_legroom_normal_sharp': Icons.airline_seat_legroom_normal_sharp,
-  'airline_seat_legroom_normal_rounded': Icons.airline_seat_legroom_normal_rounded,
-  'airline_seat_legroom_normal_outlined': Icons.airline_seat_legroom_normal_outlined,
+  'airline_seat_legroom_normal_rounded':
+      Icons.airline_seat_legroom_normal_rounded,
+  'airline_seat_legroom_normal_outlined':
+      Icons.airline_seat_legroom_normal_outlined,
   'airline_seat_legroom_reduced': Icons.airline_seat_legroom_reduced,
-  'airline_seat_legroom_reduced_sharp': Icons.airline_seat_legroom_reduced_sharp,
-  'airline_seat_legroom_reduced_rounded': Icons.airline_seat_legroom_reduced_rounded,
-  'airline_seat_legroom_reduced_outlined': Icons.airline_seat_legroom_reduced_outlined,
+  'airline_seat_legroom_reduced_sharp':
+      Icons.airline_seat_legroom_reduced_sharp,
+  'airline_seat_legroom_reduced_rounded':
+      Icons.airline_seat_legroom_reduced_rounded,
+  'airline_seat_legroom_reduced_outlined':
+      Icons.airline_seat_legroom_reduced_outlined,
   'airline_seat_recline_extra': Icons.airline_seat_recline_extra,
   'airline_seat_recline_extra_sharp': Icons.airline_seat_recline_extra_sharp,
-  'airline_seat_recline_extra_rounded': Icons.airline_seat_recline_extra_rounded,
-  'airline_seat_recline_extra_outlined': Icons.airline_seat_recline_extra_outlined,
+  'airline_seat_recline_extra_rounded':
+      Icons.airline_seat_recline_extra_rounded,
+  'airline_seat_recline_extra_outlined':
+      Icons.airline_seat_recline_extra_outlined,
   'airline_seat_recline_normal': Icons.airline_seat_recline_normal,
   'airline_seat_recline_normal_sharp': Icons.airline_seat_recline_normal_sharp,
-  'airline_seat_recline_normal_rounded': Icons.airline_seat_recline_normal_rounded,
-  'airline_seat_recline_normal_outlined': Icons.airline_seat_recline_normal_outlined,
+  'airline_seat_recline_normal_rounded':
+      Icons.airline_seat_recline_normal_rounded,
+  'airline_seat_recline_normal_outlined':
+      Icons.airline_seat_recline_normal_outlined,
   'airline_stops': Icons.airline_stops,
   'airline_stops_sharp': Icons.airline_stops_sharp,
   'airline_stops_rounded': Icons.airline_stops_rounded,
@@ -3591,7 +3657,8 @@ final Map<String, IconData> materialIconMap = {
   'directions_railway_filled': Icons.directions_railway_filled,
   'directions_railway_filled_sharp': Icons.directions_railway_filled_sharp,
   'directions_railway_filled_rounded': Icons.directions_railway_filled_rounded,
-  'directions_railway_filled_outlined': Icons.directions_railway_filled_outlined,
+  'directions_railway_filled_outlined':
+      Icons.directions_railway_filled_outlined,
   'directions_run': Icons.directions_run,
   'directions_run_sharp': Icons.directions_run_sharp,
   'directions_run_rounded': Icons.directions_run_rounded,
@@ -3615,7 +3682,8 @@ final Map<String, IconData> materialIconMap = {
   'directions_transit_filled': Icons.directions_transit_filled,
   'directions_transit_filled_sharp': Icons.directions_transit_filled_sharp,
   'directions_transit_filled_rounded': Icons.directions_transit_filled_rounded,
-  'directions_transit_filled_outlined': Icons.directions_transit_filled_outlined,
+  'directions_transit_filled_outlined':
+      Icons.directions_transit_filled_outlined,
   'directions_walk': Icons.directions_walk,
   'directions_walk_sharp': Icons.directions_walk_sharp,
   'directions_walk_rounded': Icons.directions_walk_rounded,
@@ -3689,9 +3757,12 @@ final Map<String, IconData> materialIconMap = {
   'do_not_disturb_on_rounded': Icons.do_not_disturb_on_rounded,
   'do_not_disturb_on_outlined': Icons.do_not_disturb_on_outlined,
   'do_not_disturb_on_total_silence': Icons.do_not_disturb_on_total_silence,
-  'do_not_disturb_on_total_silence_sharp': Icons.do_not_disturb_on_total_silence_sharp,
-  'do_not_disturb_on_total_silence_rounded': Icons.do_not_disturb_on_total_silence_rounded,
-  'do_not_disturb_on_total_silence_outlined': Icons.do_not_disturb_on_total_silence_outlined,
+  'do_not_disturb_on_total_silence_sharp':
+      Icons.do_not_disturb_on_total_silence_sharp,
+  'do_not_disturb_on_total_silence_rounded':
+      Icons.do_not_disturb_on_total_silence_rounded,
+  'do_not_disturb_on_total_silence_outlined':
+      Icons.do_not_disturb_on_total_silence_outlined,
   'do_not_step': Icons.do_not_step,
   'do_not_step_sharp': Icons.do_not_step_sharp,
   'do_not_step_rounded': Icons.do_not_step_rounded,
@@ -3816,7 +3887,8 @@ final Map<String, IconData> materialIconMap = {
   'drive_file_rename_outline': Icons.drive_file_rename_outline,
   'drive_file_rename_outline_sharp': Icons.drive_file_rename_outline_sharp,
   'drive_file_rename_outline_rounded': Icons.drive_file_rename_outline_rounded,
-  'drive_file_rename_outline_outlined': Icons.drive_file_rename_outline_outlined,
+  'drive_file_rename_outline_outlined':
+      Icons.drive_file_rename_outline_outlined,
   'drive_folder_upload': Icons.drive_folder_upload,
   'drive_folder_upload_sharp': Icons.drive_folder_upload_sharp,
   'drive_folder_upload_rounded': Icons.drive_folder_upload_rounded,
@@ -4681,12 +4753,16 @@ final Map<String, IconData> materialIconMap = {
   'format_strikethrough_outlined': Icons.format_strikethrough_outlined,
   'format_textdirection_l_to_r': Icons.format_textdirection_l_to_r,
   'format_textdirection_l_to_r_sharp': Icons.format_textdirection_l_to_r_sharp,
-  'format_textdirection_l_to_r_rounded': Icons.format_textdirection_l_to_r_rounded,
-  'format_textdirection_l_to_r_outlined': Icons.format_textdirection_l_to_r_outlined,
+  'format_textdirection_l_to_r_rounded':
+      Icons.format_textdirection_l_to_r_rounded,
+  'format_textdirection_l_to_r_outlined':
+      Icons.format_textdirection_l_to_r_outlined,
   'format_textdirection_r_to_l': Icons.format_textdirection_r_to_l,
   'format_textdirection_r_to_l_sharp': Icons.format_textdirection_r_to_l_sharp,
-  'format_textdirection_r_to_l_rounded': Icons.format_textdirection_r_to_l_rounded,
-  'format_textdirection_r_to_l_outlined': Icons.format_textdirection_r_to_l_outlined,
+  'format_textdirection_r_to_l_rounded':
+      Icons.format_textdirection_r_to_l_rounded,
+  'format_textdirection_r_to_l_outlined':
+      Icons.format_textdirection_r_to_l_outlined,
   'format_underline': Icons.format_underline,
   'format_underline_sharp': Icons.format_underline_sharp,
   'format_underline_rounded': Icons.format_underline_rounded,
@@ -5444,16 +5520,22 @@ final Map<String, IconData> materialIconMap = {
   'keyboard_control_key_outlined': Icons.keyboard_control_key_outlined,
   'keyboard_double_arrow_down': Icons.keyboard_double_arrow_down,
   'keyboard_double_arrow_down_sharp': Icons.keyboard_double_arrow_down_sharp,
-  'keyboard_double_arrow_down_rounded': Icons.keyboard_double_arrow_down_rounded,
-  'keyboard_double_arrow_down_outlined': Icons.keyboard_double_arrow_down_outlined,
+  'keyboard_double_arrow_down_rounded':
+      Icons.keyboard_double_arrow_down_rounded,
+  'keyboard_double_arrow_down_outlined':
+      Icons.keyboard_double_arrow_down_outlined,
   'keyboard_double_arrow_left': Icons.keyboard_double_arrow_left,
   'keyboard_double_arrow_left_sharp': Icons.keyboard_double_arrow_left_sharp,
-  'keyboard_double_arrow_left_rounded': Icons.keyboard_double_arrow_left_rounded,
-  'keyboard_double_arrow_left_outlined': Icons.keyboard_double_arrow_left_outlined,
+  'keyboard_double_arrow_left_rounded':
+      Icons.keyboard_double_arrow_left_rounded,
+  'keyboard_double_arrow_left_outlined':
+      Icons.keyboard_double_arrow_left_outlined,
   'keyboard_double_arrow_right': Icons.keyboard_double_arrow_right,
   'keyboard_double_arrow_right_sharp': Icons.keyboard_double_arrow_right_sharp,
-  'keyboard_double_arrow_right_rounded': Icons.keyboard_double_arrow_right_rounded,
-  'keyboard_double_arrow_right_outlined': Icons.keyboard_double_arrow_right_outlined,
+  'keyboard_double_arrow_right_rounded':
+      Icons.keyboard_double_arrow_right_rounded,
+  'keyboard_double_arrow_right_outlined':
+      Icons.keyboard_double_arrow_right_outlined,
   'keyboard_double_arrow_up': Icons.keyboard_double_arrow_up,
   'keyboard_double_arrow_up_sharp': Icons.keyboard_double_arrow_up_sharp,
   'keyboard_double_arrow_up_rounded': Icons.keyboard_double_arrow_up_rounded,
@@ -6505,8 +6587,10 @@ final Map<String, IconData> materialIconMap = {
   'no_encryption_outlined': Icons.no_encryption_outlined,
   'no_encryption_gmailerrorred': Icons.no_encryption_gmailerrorred,
   'no_encryption_gmailerrorred_sharp': Icons.no_encryption_gmailerrorred_sharp,
-  'no_encryption_gmailerrorred_rounded': Icons.no_encryption_gmailerrorred_rounded,
-  'no_encryption_gmailerrorred_outlined': Icons.no_encryption_gmailerrorred_outlined,
+  'no_encryption_gmailerrorred_rounded':
+      Icons.no_encryption_gmailerrorred_rounded,
+  'no_encryption_gmailerrorred_outlined':
+      Icons.no_encryption_gmailerrorred_outlined,
   'no_flash': Icons.no_flash,
   'no_flash_sharp': Icons.no_flash_sharp,
   'no_flash_rounded': Icons.no_flash_rounded,
@@ -6775,16 +6859,20 @@ final Map<String, IconData> materialIconMap = {
   'panorama_horizontal_outlined': Icons.panorama_horizontal_outlined,
   'panorama_horizontal_select': Icons.panorama_horizontal_select,
   'panorama_horizontal_select_sharp': Icons.panorama_horizontal_select_sharp,
-  'panorama_horizontal_select_rounded': Icons.panorama_horizontal_select_rounded,
-  'panorama_horizontal_select_outlined': Icons.panorama_horizontal_select_outlined,
+  'panorama_horizontal_select_rounded':
+      Icons.panorama_horizontal_select_rounded,
+  'panorama_horizontal_select_outlined':
+      Icons.panorama_horizontal_select_outlined,
   'panorama_photosphere': Icons.panorama_photosphere,
   'panorama_photosphere_sharp': Icons.panorama_photosphere_sharp,
   'panorama_photosphere_rounded': Icons.panorama_photosphere_rounded,
   'panorama_photosphere_outlined': Icons.panorama_photosphere_outlined,
   'panorama_photosphere_select': Icons.panorama_photosphere_select,
   'panorama_photosphere_select_sharp': Icons.panorama_photosphere_select_sharp,
-  'panorama_photosphere_select_rounded': Icons.panorama_photosphere_select_rounded,
-  'panorama_photosphere_select_outlined': Icons.panorama_photosphere_select_outlined,
+  'panorama_photosphere_select_rounded':
+      Icons.panorama_photosphere_select_rounded,
+  'panorama_photosphere_select_outlined':
+      Icons.panorama_photosphere_select_outlined,
   'panorama_vertical': Icons.panorama_vertical,
   'panorama_vertical_sharp': Icons.panorama_vertical_sharp,
   'panorama_vertical_rounded': Icons.panorama_vertical_rounded,
@@ -6799,8 +6887,10 @@ final Map<String, IconData> materialIconMap = {
   'panorama_wide_angle_outlined': Icons.panorama_wide_angle_outlined,
   'panorama_wide_angle_select': Icons.panorama_wide_angle_select,
   'panorama_wide_angle_select_sharp': Icons.panorama_wide_angle_select_sharp,
-  'panorama_wide_angle_select_rounded': Icons.panorama_wide_angle_select_rounded,
-  'panorama_wide_angle_select_outlined': Icons.panorama_wide_angle_select_outlined,
+  'panorama_wide_angle_select_rounded':
+      Icons.panorama_wide_angle_select_rounded,
+  'panorama_wide_angle_select_outlined':
+      Icons.panorama_wide_angle_select_outlined,
   'paragliding': Icons.paragliding,
   'paragliding_sharp': Icons.paragliding_sharp,
   'paragliding_rounded': Icons.paragliding_rounded,
@@ -7223,7 +7313,8 @@ final Map<String, IconData> materialIconMap = {
   'playlist_add_check_circle': Icons.playlist_add_check_circle,
   'playlist_add_check_circle_sharp': Icons.playlist_add_check_circle_sharp,
   'playlist_add_check_circle_rounded': Icons.playlist_add_check_circle_rounded,
-  'playlist_add_check_circle_outlined': Icons.playlist_add_check_circle_outlined,
+  'playlist_add_check_circle_outlined':
+      Icons.playlist_add_check_circle_outlined,
   'playlist_add_circle': Icons.playlist_add_circle,
   'playlist_add_circle_sharp': Icons.playlist_add_circle_sharp,
   'playlist_add_circle_rounded': Icons.playlist_add_circle_rounded,
@@ -7346,8 +7437,10 @@ final Map<String, IconData> materialIconMap = {
   'private_connectivity_outlined': Icons.private_connectivity_outlined,
   'production_quantity_limits': Icons.production_quantity_limits,
   'production_quantity_limits_sharp': Icons.production_quantity_limits_sharp,
-  'production_quantity_limits_rounded': Icons.production_quantity_limits_rounded,
-  'production_quantity_limits_outlined': Icons.production_quantity_limits_outlined,
+  'production_quantity_limits_rounded':
+      Icons.production_quantity_limits_rounded,
+  'production_quantity_limits_outlined':
+      Icons.production_quantity_limits_outlined,
   'propane': Icons.propane,
   'propane_sharp': Icons.propane_sharp,
   'propane_rounded': Icons.propane_rounded,
@@ -8050,8 +8143,10 @@ final Map<String, IconData> materialIconMap = {
   'sentiment_satisfied_alt_outlined': Icons.sentiment_satisfied_alt_outlined,
   'sentiment_very_dissatisfied': Icons.sentiment_very_dissatisfied,
   'sentiment_very_dissatisfied_sharp': Icons.sentiment_very_dissatisfied_sharp,
-  'sentiment_very_dissatisfied_rounded': Icons.sentiment_very_dissatisfied_rounded,
-  'sentiment_very_dissatisfied_outlined': Icons.sentiment_very_dissatisfied_outlined,
+  'sentiment_very_dissatisfied_rounded':
+      Icons.sentiment_very_dissatisfied_rounded,
+  'sentiment_very_dissatisfied_outlined':
+      Icons.sentiment_very_dissatisfied_outlined,
   'sentiment_very_satisfied': Icons.sentiment_very_satisfied,
   'sentiment_very_satisfied_sharp': Icons.sentiment_very_satisfied_sharp,
   'sentiment_very_satisfied_rounded': Icons.sentiment_very_satisfied_rounded,
@@ -8251,19 +8346,29 @@ final Map<String, IconData> materialIconMap = {
   'signal_cellular_alt_1_bar': Icons.signal_cellular_alt_1_bar,
   'signal_cellular_alt_1_bar_sharp': Icons.signal_cellular_alt_1_bar_sharp,
   'signal_cellular_alt_1_bar_rounded': Icons.signal_cellular_alt_1_bar_rounded,
-  'signal_cellular_alt_1_bar_outlined': Icons.signal_cellular_alt_1_bar_outlined,
+  'signal_cellular_alt_1_bar_outlined':
+      Icons.signal_cellular_alt_1_bar_outlined,
   'signal_cellular_alt_2_bar': Icons.signal_cellular_alt_2_bar,
   'signal_cellular_alt_2_bar_sharp': Icons.signal_cellular_alt_2_bar_sharp,
   'signal_cellular_alt_2_bar_rounded': Icons.signal_cellular_alt_2_bar_rounded,
-  'signal_cellular_alt_2_bar_outlined': Icons.signal_cellular_alt_2_bar_outlined,
-  'signal_cellular_connected_no_internet_0_bar': Icons.signal_cellular_connected_no_internet_0_bar,
-  'signal_cellular_connected_no_internet_0_bar_sharp': Icons.signal_cellular_connected_no_internet_0_bar_sharp,
-  'signal_cellular_connected_no_internet_0_bar_rounded': Icons.signal_cellular_connected_no_internet_0_bar_rounded,
-  'signal_cellular_connected_no_internet_0_bar_outlined': Icons.signal_cellular_connected_no_internet_0_bar_outlined,
-  'signal_cellular_connected_no_internet_4_bar': Icons.signal_cellular_connected_no_internet_4_bar,
-  'signal_cellular_connected_no_internet_4_bar_sharp': Icons.signal_cellular_connected_no_internet_4_bar_sharp,
-  'signal_cellular_connected_no_internet_4_bar_rounded': Icons.signal_cellular_connected_no_internet_4_bar_rounded,
-  'signal_cellular_connected_no_internet_4_bar_outlined': Icons.signal_cellular_connected_no_internet_4_bar_outlined,
+  'signal_cellular_alt_2_bar_outlined':
+      Icons.signal_cellular_alt_2_bar_outlined,
+  'signal_cellular_connected_no_internet_0_bar':
+      Icons.signal_cellular_connected_no_internet_0_bar,
+  'signal_cellular_connected_no_internet_0_bar_sharp':
+      Icons.signal_cellular_connected_no_internet_0_bar_sharp,
+  'signal_cellular_connected_no_internet_0_bar_rounded':
+      Icons.signal_cellular_connected_no_internet_0_bar_rounded,
+  'signal_cellular_connected_no_internet_0_bar_outlined':
+      Icons.signal_cellular_connected_no_internet_0_bar_outlined,
+  'signal_cellular_connected_no_internet_4_bar':
+      Icons.signal_cellular_connected_no_internet_4_bar,
+  'signal_cellular_connected_no_internet_4_bar_sharp':
+      Icons.signal_cellular_connected_no_internet_4_bar_sharp,
+  'signal_cellular_connected_no_internet_4_bar_rounded':
+      Icons.signal_cellular_connected_no_internet_4_bar_rounded,
+  'signal_cellular_connected_no_internet_4_bar_outlined':
+      Icons.signal_cellular_connected_no_internet_4_bar_outlined,
   'signal_cellular_no_sim': Icons.signal_cellular_no_sim,
   'signal_cellular_no_sim_sharp': Icons.signal_cellular_no_sim_sharp,
   'signal_cellular_no_sim_rounded': Icons.signal_cellular_no_sim_rounded,
@@ -8296,27 +8401,38 @@ final Map<String, IconData> materialIconMap = {
   'signal_wifi_bad_sharp': Icons.signal_wifi_bad_sharp,
   'signal_wifi_bad_rounded': Icons.signal_wifi_bad_rounded,
   'signal_wifi_bad_outlined': Icons.signal_wifi_bad_outlined,
-  'signal_wifi_connected_no_internet_4': Icons.signal_wifi_connected_no_internet_4,
-  'signal_wifi_connected_no_internet_4_sharp': Icons.signal_wifi_connected_no_internet_4_sharp,
-  'signal_wifi_connected_no_internet_4_rounded': Icons.signal_wifi_connected_no_internet_4_rounded,
-  'signal_wifi_connected_no_internet_4_outlined': Icons.signal_wifi_connected_no_internet_4_outlined,
+  'signal_wifi_connected_no_internet_4':
+      Icons.signal_wifi_connected_no_internet_4,
+  'signal_wifi_connected_no_internet_4_sharp':
+      Icons.signal_wifi_connected_no_internet_4_sharp,
+  'signal_wifi_connected_no_internet_4_rounded':
+      Icons.signal_wifi_connected_no_internet_4_rounded,
+  'signal_wifi_connected_no_internet_4_outlined':
+      Icons.signal_wifi_connected_no_internet_4_outlined,
   'signal_wifi_off': Icons.signal_wifi_off,
   'signal_wifi_off_sharp': Icons.signal_wifi_off_sharp,
   'signal_wifi_off_rounded': Icons.signal_wifi_off_rounded,
   'signal_wifi_off_outlined': Icons.signal_wifi_off_outlined,
   'signal_wifi_statusbar_4_bar': Icons.signal_wifi_statusbar_4_bar,
   'signal_wifi_statusbar_4_bar_sharp': Icons.signal_wifi_statusbar_4_bar_sharp,
-  'signal_wifi_statusbar_4_bar_rounded': Icons.signal_wifi_statusbar_4_bar_rounded,
-  'signal_wifi_statusbar_4_bar_outlined': Icons.signal_wifi_statusbar_4_bar_outlined,
-  'signal_wifi_statusbar_connected_no_internet_4': Icons.signal_wifi_statusbar_connected_no_internet_4,
-  'signal_wifi_statusbar_connected_no_internet_4_sharp': Icons.signal_wifi_statusbar_connected_no_internet_4_sharp,
-  'signal_wifi_statusbar_connected_no_internet_4_rounded': Icons.signal_wifi_statusbar_connected_no_internet_4_rounded,
+  'signal_wifi_statusbar_4_bar_rounded':
+      Icons.signal_wifi_statusbar_4_bar_rounded,
+  'signal_wifi_statusbar_4_bar_outlined':
+      Icons.signal_wifi_statusbar_4_bar_outlined,
+  'signal_wifi_statusbar_connected_no_internet_4':
+      Icons.signal_wifi_statusbar_connected_no_internet_4,
+  'signal_wifi_statusbar_connected_no_internet_4_sharp':
+      Icons.signal_wifi_statusbar_connected_no_internet_4_sharp,
+  'signal_wifi_statusbar_connected_no_internet_4_rounded':
+      Icons.signal_wifi_statusbar_connected_no_internet_4_rounded,
   'signal_wifi_statusbar_connected_no_internet_4_outlined':
       Icons.signal_wifi_statusbar_connected_no_internet_4_outlined,
   'signal_wifi_statusbar_null': Icons.signal_wifi_statusbar_null,
   'signal_wifi_statusbar_null_sharp': Icons.signal_wifi_statusbar_null_sharp,
-  'signal_wifi_statusbar_null_rounded': Icons.signal_wifi_statusbar_null_rounded,
-  'signal_wifi_statusbar_null_outlined': Icons.signal_wifi_statusbar_null_outlined,
+  'signal_wifi_statusbar_null_rounded':
+      Icons.signal_wifi_statusbar_null_rounded,
+  'signal_wifi_statusbar_null_outlined':
+      Icons.signal_wifi_statusbar_null_outlined,
   'signpost': Icons.signpost,
   'signpost_sharp': Icons.signpost_sharp,
   'signpost_rounded': Icons.signpost_rounded,
@@ -8894,8 +9010,10 @@ final Map<String, IconData> materialIconMap = {
   'switch_access_shortcut_outlined': Icons.switch_access_shortcut_outlined,
   'switch_access_shortcut_add': Icons.switch_access_shortcut_add,
   'switch_access_shortcut_add_sharp': Icons.switch_access_shortcut_add_sharp,
-  'switch_access_shortcut_add_rounded': Icons.switch_access_shortcut_add_rounded,
-  'switch_access_shortcut_add_outlined': Icons.switch_access_shortcut_add_outlined,
+  'switch_access_shortcut_add_rounded':
+      Icons.switch_access_shortcut_add_rounded,
+  'switch_access_shortcut_add_outlined':
+      Icons.switch_access_shortcut_add_outlined,
   'switch_account': Icons.switch_account,
   'switch_account_sharp': Icons.switch_account_sharp,
   'switch_account_rounded': Icons.switch_account_rounded,
@@ -8946,12 +9064,17 @@ final Map<String, IconData> materialIconMap = {
   'system_security_update_outlined': Icons.system_security_update_outlined,
   'system_security_update_good': Icons.system_security_update_good,
   'system_security_update_good_sharp': Icons.system_security_update_good_sharp,
-  'system_security_update_good_rounded': Icons.system_security_update_good_rounded,
-  'system_security_update_good_outlined': Icons.system_security_update_good_outlined,
+  'system_security_update_good_rounded':
+      Icons.system_security_update_good_rounded,
+  'system_security_update_good_outlined':
+      Icons.system_security_update_good_outlined,
   'system_security_update_warning': Icons.system_security_update_warning,
-  'system_security_update_warning_sharp': Icons.system_security_update_warning_sharp,
-  'system_security_update_warning_rounded': Icons.system_security_update_warning_rounded,
-  'system_security_update_warning_outlined': Icons.system_security_update_warning_outlined,
+  'system_security_update_warning_sharp':
+      Icons.system_security_update_warning_sharp,
+  'system_security_update_warning_rounded':
+      Icons.system_security_update_warning_rounded,
+  'system_security_update_warning_outlined':
+      Icons.system_security_update_warning_outlined,
   'system_update': Icons.system_update,
   'system_update_sharp': Icons.system_update_sharp,
   'system_update_rounded': Icons.system_update_rounded,
@@ -9279,7 +9402,8 @@ final Map<String, IconData> materialIconMap = {
   'transfer_within_a_station': Icons.transfer_within_a_station,
   'transfer_within_a_station_sharp': Icons.transfer_within_a_station_sharp,
   'transfer_within_a_station_rounded': Icons.transfer_within_a_station_rounded,
-  'transfer_within_a_station_outlined': Icons.transfer_within_a_station_outlined,
+  'transfer_within_a_station_outlined':
+      Icons.transfer_within_a_station_outlined,
   'transform': Icons.transform,
   'transform_sharp': Icons.transform_sharp,
   'transform_rounded': Icons.transform_rounded,
@@ -9851,10 +9975,6 @@ final Map<String, IconData> materialIconMap = {
   'west_sharp': Icons.west_sharp,
   'west_rounded': Icons.west_rounded,
   'west_outlined': Icons.west_outlined,
-  'whatsapp': Icons.whatsapp,
-  'whatsapp_sharp': Icons.whatsapp_sharp,
-  'whatsapp_rounded': Icons.whatsapp_rounded,
-  'whatsapp_outlined': Icons.whatsapp_outlined,
   'whatshot': Icons.whatshot,
   'whatshot_sharp': Icons.whatshot_sharp,
   'whatshot_rounded': Icons.whatshot_rounded,
@@ -9935,9 +10055,12 @@ final Map<String, IconData> materialIconMap = {
   'wifi_tethering_error_sharp': Icons.wifi_tethering_error_sharp,
   'wifi_tethering_error_rounded': Icons.wifi_tethering_error_rounded,
   'wifi_tethering_error_outlined': Icons.wifi_tethering_error_outlined,
-  'wifi_tethering_error_rounded_sharp': Icons.wifi_tethering_error_rounded_sharp,
-  'wifi_tethering_error_rounded_rounded': Icons.wifi_tethering_error_rounded_rounded,
-  'wifi_tethering_error_rounded_outlined': Icons.wifi_tethering_error_rounded_outlined,
+  'wifi_tethering_error_rounded_sharp':
+      Icons.wifi_tethering_error_rounded_sharp,
+  'wifi_tethering_error_rounded_rounded':
+      Icons.wifi_tethering_error_rounded_rounded,
+  'wifi_tethering_error_rounded_outlined':
+      Icons.wifi_tethering_error_rounded_outlined,
   'wifi_tethering_off': Icons.wifi_tethering_off,
   'wifi_tethering_off_sharp': Icons.wifi_tethering_off_sharp,
   'wifi_tethering_off_rounded': Icons.wifi_tethering_off_rounded,
