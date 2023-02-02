@@ -1,10 +1,7 @@
 name: Pull Request Checks
 on:
   pull_request:
-    paths:
-      - "lib/**"
-      - ".github/workflows/checks.yaml"
-
+  
 jobs:
   checks:
     name: Checks
