@@ -13,7 +13,7 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
           ? null
           : MiraiInputDecoration.fromJson(
               json['decoration'] as Map<String, dynamic>),
-      initialValue: json['initialValue'] as String? ?? '',
+      initialValue: json['initialValue'] as String?,
       keyboardType: $enumDecodeNullable(
           _$MiraiTextInputTypeEnumMap, json['keyboardType']),
       textInputAction: $enumDecodeNullable(

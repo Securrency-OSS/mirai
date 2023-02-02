@@ -21,7 +21,7 @@ MiraiTextFormField _$MiraiTextFormFieldFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiTextFormField {
   MiraiInputDecoration? get decoration => throw _privateConstructorUsedError;
-  String get initialValue => throw _privateConstructorUsedError;
+  String? get initialValue => throw _privateConstructorUsedError;
   MiraiTextInputType? get keyboardType => throw _privateConstructorUsedError;
   TextInputAction? get textInputAction => throw _privateConstructorUsedError;
   TextCapitalization get textCapitalization =>
@@ -70,7 +70,7 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
   @useResult
   $Res call(
       {MiraiInputDecoration? decoration,
-      String initialValue,
+      String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
       TextCapitalization textCapitalization,
@@ -121,7 +121,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
   @override
   $Res call({
     Object? decoration = freezed,
-    Object? initialValue = null,
+    Object? initialValue = freezed,
     Object? keyboardType = freezed,
     Object? textInputAction = freezed,
     Object? textCapitalization = null,
@@ -158,10 +158,10 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
               as MiraiInputDecoration?,
-      initialValue: null == initialValue
+      initialValue: freezed == initialValue
           ? _value.initialValue
           : initialValue // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       keyboardType: freezed == keyboardType
           ? _value.keyboardType
           : keyboardType // ignore: cast_nullable_to_non_nullable
@@ -328,7 +328,7 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
   @useResult
   $Res call(
       {MiraiInputDecoration? decoration,
-      String initialValue,
+      String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
       TextCapitalization textCapitalization,
@@ -380,7 +380,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? decoration = freezed,
-    Object? initialValue = null,
+    Object? initialValue = freezed,
     Object? keyboardType = freezed,
     Object? textInputAction = freezed,
     Object? textCapitalization = null,
@@ -417,10 +417,10 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
               as MiraiInputDecoration?,
-      initialValue: null == initialValue
+      initialValue: freezed == initialValue
           ? _value.initialValue
           : initialValue // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       keyboardType: freezed == keyboardType
           ? _value.keyboardType
           : keyboardType // ignore: cast_nullable_to_non_nullable
@@ -550,7 +550,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
 class _$_MiraiTextFormField implements _MiraiTextFormField {
   const _$_MiraiTextFormField(
       {this.decoration,
-      this.initialValue = '',
+      this.initialValue,
       this.keyboardType,
       this.textInputAction,
       this.textCapitalization = TextCapitalization.none,
@@ -589,8 +589,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @override
   final MiraiInputDecoration? decoration;
   @override
-  @JsonKey()
-  final String initialValue;
+  final String? initialValue;
   @override
   final MiraiTextInputType? keyboardType;
   @override
@@ -795,7 +794,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
       {final MiraiInputDecoration? decoration,
-      final String initialValue,
+      final String? initialValue,
       final MiraiTextInputType? keyboardType,
       final TextInputAction? textInputAction,
       final TextCapitalization textCapitalization,
@@ -833,7 +832,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   @override
   MiraiInputDecoration? get decoration;
   @override
-  String get initialValue;
+  String? get initialValue;
   @override
   MiraiTextInputType? get keyboardType;
   @override

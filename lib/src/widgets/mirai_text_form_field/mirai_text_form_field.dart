@@ -14,7 +14,7 @@ part 'mirai_text_form_field.g.dart';
 class MiraiTextFormField with _$MiraiTextFormField {
   const factory MiraiTextFormField({
     MiraiInputDecoration? decoration,
-    @Default('') String initialValue,
+    String? initialValue,
     MiraiTextInputType? keyboardType,
     TextInputAction? textInputAction,
     @Default(TextCapitalization.none) TextCapitalization textCapitalization,
