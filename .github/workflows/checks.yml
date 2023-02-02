@@ -1,8 +1,9 @@
 name: Pull Request Checks
 on:
   pull_request:
-    paths-ignore:
-      - 'bricks/mirai_widget/**'
+    paths:
+      - "lib/**"
+      - ".github/workflows/checks.yaml"
 
 jobs:
   checks:
