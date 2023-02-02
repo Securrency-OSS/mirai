@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 import 'package:mirai/src/widgets/framework.dart';
+import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_default_tab_controller/mirai_default_tab_controller.dart';
 
 class MiraiDefaultTabControllerParser
@@ -17,12 +17,7 @@ class MiraiDefaultTabControllerParser
   Widget parse(BuildContext context, MiraiDefaultTabController model) {
     return DefaultTabController(
       length: model.length,
-      child: Builder(
-        builder: (context) {
-          return MiraiTabBarParser(controller: DefaultTabController.of(context))
-              .parse(context, MiraiTabBar.fromJson(model.tabBar));
-        },
-      ),
+      child: Mirai.fromJson(model.tabBar, context),
     );
   }
 }

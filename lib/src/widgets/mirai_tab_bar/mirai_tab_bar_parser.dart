@@ -20,10 +20,6 @@ class MiraiTabBarParser extends MiraiParser<MiraiTabBar> {
 
   @override
   Widget parse(BuildContext context, MiraiTabBar model) {
-    if (controller == null) {
-      return const SizedBox();
-    }
-
     return TabBar(
       controller: controller,
       tabs: model.tabs.map((tab) => Mirai.fromJson(tab, context)).toList(),
