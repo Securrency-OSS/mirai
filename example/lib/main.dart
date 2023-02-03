@@ -71,6 +71,8 @@ class HomePage extends StatelessWidget {
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(tabBarJson, context),
                 Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(textFormFieldJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
                 SizedBox(
                   height: 500,
                   child: Column(
@@ -446,4 +448,26 @@ final tabBarViewJson = {
       columnJson,
     ],
   }
+};
+
+final textFormFieldJson = {
+  'type': 'textFormField',
+  'initialValue': '',
+  'hintText': 'Enter your name',
+  'maxLines': 1,
+  'keyboardType': 'text',
+  'textInputAction': 'done',
+  'textAlign': 'start',
+  'textCapitalization': 'none',
+  'textDirection': 'ltr',
+  'textAlignVertical': 'top',
+  'obscureText': false,
+  'style': {
+    'foregroundColor': '#ffffff',
+  },
+  'decoration': {
+    'hintText': 'Please enter details',
+  },
+  'readOnly': false,
+  'enabled': true,
 };

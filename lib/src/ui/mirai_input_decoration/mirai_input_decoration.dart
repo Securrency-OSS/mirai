@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style.dart';
+import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
+import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_input_decoration.freezed.dart';
 part 'mirai_input_decoration.g.dart';
@@ -26,4 +29,26 @@ class MiraiInputDecoration with _$MiraiInputDecoration {
 
   factory MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
       _$MiraiInputDecorationFromJson(json);
+}
+
+extension MiraiInputDecorationParser on MiraiInputDecoration? {
+  InputDecoration get parse {
+    return InputDecoration(
+      labelText: this?.labelText,
+      labelStyle: MiraiTextStyleParser.parse(this?.labelStyle),
+      helperText: this?.helperText,
+      helperStyle: MiraiTextStyleParser.parse(this?.helperStyle),
+      hintText: this?.hintText,
+      hintStyle: MiraiTextStyleParser.parse(this?.hintStyle),
+      errorText: this?.errorText,
+      errorStyle: MiraiTextStyleParser.parse(this?.errorStyle),
+      prefixText: this?.prefixText,
+      prefixStyle: MiraiTextStyleParser.parse(this?.prefixStyle),
+      suffixText: this?.suffixText,
+      suffixStyle: MiraiTextStyleParser.parse(this?.suffixStyle),
+      fillColor: this?.fillColor.toColor,
+      focusColor: this?.focusColor.toColor,
+      hoverColor: this?.hoverColor.toColor,
+    );
+  }
 }

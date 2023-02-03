@@ -24,6 +24,7 @@ import 'package:mirai/src/widgets/mirai_tab_bar_view/mirai_tab_bar_view.dart';
 import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
+import 'package:mirai/src/widgets/mirai_text_form_field/mirai_text_form_field.dart';
 
 class Mirai {
   static final _miraiWidgetMap = <String, MiraiParser>{};
@@ -45,6 +46,7 @@ class Mirai {
     MiraiTextButtonParser(),
     MiraiScaffoldParser(),
     MiraiSizedBoxParser(),
+    MiraiTextFormFieldParser(),
     MiraiTabBarViewParser(),
     MiraiTabBarParser(),
     MiraiListTileParser(),
