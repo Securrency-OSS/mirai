@@ -8,7 +8,7 @@ import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_text_form_field/mirai_text_form_field.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
-  MiraiTextFormFieldParser({
+  const MiraiTextFormFieldParser({
     this.controller,
     this.focusNode,
   });

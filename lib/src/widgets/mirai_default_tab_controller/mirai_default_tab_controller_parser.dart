@@ -6,6 +6,8 @@ import 'package:mirai/src/widgets/mirai_default_tab_controller/mirai_default_tab
 
 class MiraiDefaultTabControllerParser
     extends MiraiParser<MiraiDefaultTabController> {
+  const MiraiDefaultTabControllerParser();
+
   @override
   MiraiDefaultTabController getModel(Map<String, dynamic> json) =>
       MiraiDefaultTabController.fromJson(json);

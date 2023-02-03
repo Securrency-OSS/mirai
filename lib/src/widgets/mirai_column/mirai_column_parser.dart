@@ -5,6 +5,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column.dart';
 
 class MiraiColumnParser extends MiraiParser<MiraiColumn> {
+  const MiraiColumnParser();
+
   @override
   MiraiColumn getModel(Map<String, dynamic> json) => MiraiColumn.fromJson(json);
 

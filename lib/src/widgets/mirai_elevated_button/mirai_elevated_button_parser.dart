@@ -10,6 +10,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button.dart';
 
 class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
+  const MiraiElevatedButtonParser();
+
   @override
   MiraiElevatedButton getModel(Map<String, dynamic> json) =>
       MiraiElevatedButton.fromJson(json);

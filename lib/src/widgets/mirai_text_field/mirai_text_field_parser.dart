@@ -6,7 +6,7 @@ import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
-  MiraiTextFieldParser({
+  const MiraiTextFieldParser({
     this.controller,
     this.focusNode,
   });

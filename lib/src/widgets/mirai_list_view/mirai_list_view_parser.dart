@@ -4,7 +4,7 @@ import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiListViewParser extends MiraiParser<MiraiListView> {
-  MiraiListViewParser({this.controller});
+  const MiraiListViewParser({this.controller});
 
   final ScrollController? controller;
 

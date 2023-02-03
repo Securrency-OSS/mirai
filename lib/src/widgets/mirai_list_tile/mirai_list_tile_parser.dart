@@ -7,6 +7,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_list_tile/mirai_list_tile.dart';
 
 class MiraiListTileParser extends MiraiParser<MiraiListTile> {
+  const MiraiListTileParser();
+
   @override
   MiraiListTile getModel(Map<String, dynamic> json) =>
       MiraiListTile.fromJson(json);
