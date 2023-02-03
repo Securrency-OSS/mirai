@@ -5,6 +5,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row.dart';
 
 class MiraiRowParser extends MiraiParser<MiraiRow> {
+  const MiraiRowParser();
+
   @override
   MiraiRow getModel(Map<String, dynamic> json) => MiraiRow.fromJson(json);
 

@@ -8,6 +8,8 @@ import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_image/mirai_image.dart';
 
 class MiraiImageParser extends MiraiParser<MiraiImage> {
+  const MiraiImageParser();
+
   @override
   MiraiImage getModel(Map<String, dynamic> json) => MiraiImage.fromJson(json);
 

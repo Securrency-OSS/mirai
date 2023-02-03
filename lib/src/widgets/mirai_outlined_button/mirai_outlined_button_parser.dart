@@ -10,6 +10,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.dart';
 
 class MiraiOutlinedButtonParser extends MiraiParser<MiraiOutlinedButton> {
+  const MiraiOutlinedButtonParser();
+
   @override
   MiraiOutlinedButton getModel(Map<String, dynamic> json) =>
       MiraiOutlinedButton.fromJson(json);

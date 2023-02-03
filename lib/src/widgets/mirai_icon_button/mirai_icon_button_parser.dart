@@ -9,6 +9,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_icon_button/mirai_icon_button.dart';
 
 class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
+  const MiraiIconButtonParser();
+
   @override
   MiraiIconButton getModel(Map<String, dynamic> json) =>
       MiraiIconButton.fromJson(json);

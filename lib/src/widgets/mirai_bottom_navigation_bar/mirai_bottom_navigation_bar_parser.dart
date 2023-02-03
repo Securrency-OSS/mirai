@@ -7,6 +7,8 @@ import 'package:mirai/src/widgets/widgets.dart';
 
 class MiraiBottomNavigationBarParser
     extends MiraiParser<MiraiBottomNavigationBar> {
+  const MiraiBottomNavigationBarParser();
+
   @override
   MiraiBottomNavigationBar getModel(Map<String, dynamic> json) =>
       MiraiBottomNavigationBar.fromJson(json);

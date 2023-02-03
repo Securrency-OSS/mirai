@@ -10,6 +10,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 
 class MiraiTextButtonParser extends MiraiParser<MiraiTextButton> {
+  const MiraiTextButtonParser();
+
   @override
   MiraiTextButton getModel(Map<String, dynamic> json) =>
       MiraiTextButton.fromJson(json);

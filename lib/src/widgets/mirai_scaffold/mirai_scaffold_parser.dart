@@ -6,6 +6,8 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_scaffold/mirai_scaffold.dart';
 
 class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
+  const MiraiScaffoldParser();
+
   @override
   MiraiScaffold getModel(Map<String, dynamic> json) =>
       MiraiScaffold.fromJson(json);
