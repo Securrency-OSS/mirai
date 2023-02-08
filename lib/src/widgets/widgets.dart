@@ -1,6 +1,7 @@
 library widgets;
 
 export 'package:mirai/src/ui/mirai_navigation_bar_item/mirai_bottom_navigation_bar_item.dart';
+export 'package:mirai/src/utils/mirai_navigator.dart';
 export 'package:mirai/src/widgets/framework.dart';
 export 'package:mirai/src/widgets/mirai.dart';
 export 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar.dart';

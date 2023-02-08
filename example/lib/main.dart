@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const HomePage(),
+      navigatorKey: MiraiNavigator.navigatorKey,
     );
   }
 }
@@ -83,6 +84,8 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(nextButtonJson, context),
               ],
             ),
           ),
@@ -132,6 +135,7 @@ final elevatedButtonJson = {
     'type': 'text',
     'data': 'Sign in',
   },
+  'onPressed': {'url': ''}
 };
 
 final columnJson = {
@@ -470,4 +474,21 @@ final textFormFieldJson = {
   },
   'readOnly': false,
   'enabled': true,
+};
+
+final nextButtonJson = {
+  'type': 'elevatedButton',
+  'style': {
+    'foregroundColor': '#ffffff',
+    'backgroundColor': '#212121',
+  },
+  'child': {
+    'type': 'text',
+    'data': 'Next',
+  },
+  'onPressed': {
+    'url': 'abc',
+    'type': 'navigateToBottomSheet',
+    'widget': scaffoldJson,
+  }
 };

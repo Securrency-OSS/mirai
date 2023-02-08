@@ -4,6 +4,7 @@ import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/ui/mirai_size/mirai_size.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
 import 'package:mirai/src/utils/color_utils.dart';
+import 'package:mirai/src/utils/mirai_action_manager.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai.dart';
@@ -19,7 +20,7 @@ class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
   @override
   Widget parse(BuildContext context, MiraiElevatedButton model) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () => MiraiActionManager.onCall(model.onPressed, context),
       autofocus: model.autofocus,
       style: _style(model.style),
       clipBehavior: model.clipBehavior,
