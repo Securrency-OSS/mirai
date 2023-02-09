@@ -61,19 +61,4 @@ class Mirai {
     }
     return const SizedBox();
   }
-
-  static Widget initializeApp(
-    Map<String, dynamic>? json,
-    BuildContext context, {
-    String title = '',
-  }) {
-    return MaterialApp(
-      title: title,
-      navigatorKey: MiraiNavigator.navigatorKey,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Mirai.fromJson(json, context),
-    );
-  }
 }

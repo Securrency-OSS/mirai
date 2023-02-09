@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/utils/mirai_navigation_utils.dart';
 
 class MiraiNavigator {
-  static final navigatorKey = GlobalKey<NavigatorState>();
-
-  static Future<dynamic> navigateToBottomSheet({
+  static Future<dynamic> navigateToBottomSheet(
+    BuildContext context, {
     required NavigationStyle? navigationStyle,
     Widget? widget,
   }) async =>
       await showModalBottomSheet(
         constraints: BoxConstraints(
-            maxHeight:
-                MediaQuery.of(navigatorKey.currentContext!).size.height * 0.75),
-        context: navigatorKey.currentContext!,
+            maxHeight: MediaQuery.of(context).size.height * 0.75),
+        context: context,
         isScrollControlled: true,
         builder: (_) => Padding(
           padding: const EdgeInsets.only(top: 24.0),
@@ -20,46 +18,47 @@ class MiraiNavigator {
         ),
       );
 
-  static void showMiraiDialog({Widget? widget}) => showDialog(
-        context: navigatorKey.currentContext!,
+  static void showMiraiDialog(BuildContext context, {Widget? widget}) =>
+      showDialog(
+        context: context,
         builder: (_) => widget ?? const SizedBox(),
       );
 
-  static void navigate({
+  static void navigate(
+    BuildContext context, {
     NavigationStyle navigationStyle = NavigationStyle.push,
     Widget? widget,
     dynamic value,
   }) =>
       _navigate(
+        context,
         navigationStyle,
         widget ??= const SizedBox(),
         value,
       );
 
   static void _navigate(
+    BuildContext context,
     NavigationStyle? navigationStyle,
     Widget widget,
     dynamic value,
   ) {
     switch (navigationStyle) {
       case NavigationStyle.push:
-        navigatorKey.currentState
-            ?.push(MaterialPageRoute(builder: (_) => widget));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
         break;
       case NavigationStyle.pop:
-        navigatorKey.currentState?.pop(value);
+        Navigator.pop(context, value);
         break;
       case NavigationStyle.pushReplacement:
-        navigatorKey.currentState
-            ?.push(MaterialPageRoute(builder: (_) => widget));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (_) => widget));
         break;
       case NavigationStyle.pushAndRemoveAll:
-        navigatorKey.currentState
-            ?.push(MaterialPageRoute(builder: (_) => widget));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
         break;
       case NavigationStyle.popAll:
-        navigatorKey.currentState
-            ?.push(MaterialPageRoute(builder: (_) => widget));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
         break;
       default:
         break;

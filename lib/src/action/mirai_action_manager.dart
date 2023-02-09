@@ -32,6 +32,7 @@ class MiraiActionManager {
   static void _showDialog(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
       MiraiNavigator.showMiraiDialog(
+        context,
         widget: Mirai.fromJson(action.widget, context),
       );
     }
@@ -40,6 +41,7 @@ class MiraiActionManager {
   static void _navigateToScreen(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
       MiraiNavigator.navigate(
+        context,
         navigationStyle: action.navigationStyle ?? NavigationStyle.push,
         widget: Mirai.fromJson(action.widget, context),
       );
@@ -49,6 +51,7 @@ class MiraiActionManager {
   static void _navigateToBottomSheet(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
       MiraiNavigator.navigateToBottomSheet(
+        context,
         navigationStyle: action.navigationStyle ?? NavigationStyle.push,
         widget: Mirai.fromJson(action.widget, context),
       );
