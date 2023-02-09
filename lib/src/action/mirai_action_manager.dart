@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/cta/mirai_action.dart';
+import 'package:mirai/src/action/model/mirai_action.dart';
+import 'package:mirai/src/utils/mirai_action_utils.dart';
+import 'package:mirai/src/utils/mirai_navigation_utils.dart';
 import 'package:mirai/src/utils/mirai_navigator.dart';
 import 'package:mirai/src/widgets/mirai.dart';
 
@@ -29,32 +31,26 @@ class MiraiActionManager {
 
   static void _showDialog(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
-      final widget = Mirai.fromJson(action.widget, context);
-
       MiraiNavigator.showMiraiDialog(
-        widget: widget,
+        widget: Mirai.fromJson(action.widget, context),
       );
     }
   }
 
   static void _navigateToScreen(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
-      final widget = Mirai.fromJson(action.widget, context);
-
       MiraiNavigator.navigate(
         navigationStyle: action.navigationStyle ?? NavigationStyle.push,
-        widget: widget,
+        widget: Mirai.fromJson(action.widget, context),
       );
     }
   }
 
   static void _navigateToBottomSheet(MiraiAction action, BuildContext context) {
     if (action.widget != null) {
-      final widget = Mirai.fromJson(action.widget, context);
-
       MiraiNavigator.navigateToBottomSheet(
         navigationStyle: action.navigationStyle ?? NavigationStyle.push,
-        widget: widget,
+        widget: Mirai.fromJson(action.widget, context),
       );
     }
   }

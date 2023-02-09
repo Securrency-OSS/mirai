@@ -11,14 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
-      navigatorKey: MiraiNavigator.navigatorKey,
-    );
+    return Mirai.initializeApp(routeJson, context);
+
+    // return MaterialApp(
+    //   title: 'Flutter Demo',
+    //   theme: ThemeData(
+    //     primarySwatch: Colors.blue,
+    //   ),
+    //   home: const HomePage(),
+    //   navigatorKey: MiraiNavigator.navigatorKey,
+    // );
   }
 }
 
@@ -488,7 +490,35 @@ final nextButtonJson = {
   },
   'onPressed': {
     'url': 'abc',
-    'type': 'navigateToBottomSheet',
+    'type': 'navigateToScreen',
     'widget': scaffoldJson,
   }
+};
+
+final routeJson = {
+  'type': 'scaffold',
+  'appBar': appBarJson,
+  'body': {
+    'type': 'padding',
+    'padding': {
+      'top': 10,
+      'bottom': 10,
+      'left': 25,
+      'right': 25,
+    },
+    'child': {
+      'type': 'column',
+      'mainAxisAlignment': 'start',
+      'crossAxisAlignment': 'center',
+      'mainAxisSize': 'max',
+      'textDirection': 'ltr',
+      'verticalDirection': 'down',
+      'children': [
+        textFieldJson,
+        sizedBoxJson,
+        nextButtonJson,
+      ],
+    },
+  },
+  'floatingActionButton': largeFloatingActionButtonJson,
 };

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/action/cta/mirai_action.dart';
+import 'package:mirai/src/action/model/mirai_action.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 
 export 'package:mirai/src/widgets/mirai_elevated_button/mirai_elevated_button_parser.dart';
