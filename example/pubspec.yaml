@@ -33,6 +33,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
+  json_editor: ^0.0.8
   mirai:
     path: ../
 
@@ -89,4 +90,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/google_logo.png
+    - assets/

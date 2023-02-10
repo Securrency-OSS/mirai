@@ -1,0 +1,4 @@
+enum MiraiWidgetType {
+  text,
+  textField,
+}

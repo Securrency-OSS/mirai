@@ -72,7 +72,7 @@ class Mirai {
   }
 
   static Widget fromJson(Map<String, dynamic>? json, BuildContext context) {
-    if (json != null) {
+    if (json != null && json.isNotEmpty) {
       String widgetType = json['type'];
       MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
       if (miraiParser != null) {

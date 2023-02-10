@@ -99,6 +99,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.0"
+  json_editor:
+    dependency: "direct main"
+    description:
+      name: json_editor
+      sha256: "5faae0968269dcbef8691e7458d9e8045e499f6b38f1c70ba7e2b624fbfe8a41"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.8"
   lints:
     dependency: transitive
     description:
@@ -216,5 +224,5 @@ packages:
     source: hosted
     version: "2.1.4"
 sdks:
-  dart: ">=2.18.0 <4.0.0"
+  dart: ">=2.18.0 <3.0.0"
   flutter: ">=1.17.0"
