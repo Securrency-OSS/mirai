@@ -23,4 +23,5 @@ enum WidgetType {
   bottomNavigationBar,
   listView,
   defaultTabController,
+  scrollView,
 }
