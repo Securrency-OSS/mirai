@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/widget_type.dart';
-import 'package:mirai/src/widgets/mirai_scroll_view/mirai_scroll_view.dart';
 
 class MiraiScrollViewParser extends MiraiParser<MiraiScrollView> {
   const MiraiScrollViewParser({this.controller});
