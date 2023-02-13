@@ -1,5 +1,6 @@
 import 'package:example/values/mirai_widget_type.dart';
 import 'package:flutter/material.dart';
+import 'package:json_editor/json_editor.dart';
 import 'package:mirai/mirai.dart';
 
 class ExampleScreen extends StatefulWidget {
@@ -30,17 +31,17 @@ class _ExampleScreenState extends State<ExampleScreen> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          // SizedBox(
-          //   height: 300,
-          //   child: JsonEditor.object(
-          //     object: widget.selectedWidgetJson,
-          //     onValueChanged: (value) {
-          //       setState(() {
-          //         jsonValue = value.toJson();
-          //       });
-          //     },
-          //   ),
-          // ),
+          SizedBox(
+            height: 300,
+            child: JsonEditor.object(
+              object: widget.selectedWidgetJson,
+              onValueChanged: (value) {
+                setState(() {
+                  jsonValue = value.toJson();
+                });
+              },
+            ),
+          ),
           const SizedBox(
             height: 25,
           ),
