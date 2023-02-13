@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/ui/mirai_navigation_bar_item/mirai_bottom_navigation_bar_item.dart';
 import 'package:mirai/src/utils/color_utils.dart';
+import 'package:mirai/src/widgets/mirai.dart';
 
 class MiraiNavigationBarItemParser {
   static BottomNavigationBarItem parse(
