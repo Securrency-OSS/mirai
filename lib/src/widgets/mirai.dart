@@ -18,6 +18,7 @@ import 'package:mirai/src/widgets/mirai_outlined_button/mirai_outlined_button.da
 import 'package:mirai/src/widgets/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row_parser.dart';
 import 'package:mirai/src/widgets/mirai_scaffold/mirai_scaffold.dart';
+import 'package:mirai/src/widgets/mirai_scroll_view/mirai_scroll_view_parser.dart';
 import 'package:mirai/src/widgets/mirai_sized_box/mirai_sized_box.dart';
 import 'package:mirai/src/widgets/mirai_tab_bar/mirai_tab_bar.dart';
 import 'package:mirai/src/widgets/mirai_tab_bar_view/mirai_tab_bar_view.dart';
@@ -54,6 +55,7 @@ class Mirai {
     const MiraiBottomNavigationBarParser(),
     const MiraiListViewParser(),
     const MiraiDefaultTabControllerParser(),
+    const MiraiScrollViewParser(),
   ];
 
   static Future<void> initialize({
