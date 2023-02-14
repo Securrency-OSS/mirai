@@ -1,4 +1,9 @@
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:mirai/src/network/mirai_network.dart';
+import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
@@ -26,6 +31,13 @@ import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
 import 'package:mirai/src/widgets/mirai_text_form_field/mirai_text_form_field.dart';
+
+typedef ErrorWidgetBuilder = Widget Function(
+  BuildContext context,
+  dynamic error,
+);
+
+typedef LoadingWidgetBuilder = Widget Function(BuildContext context);
 
 class Mirai {
   static final _miraiWidgetMap = <String, MiraiParser>{};
@@ -85,5 +97,41 @@ class Mirai {
       }
     }
     return const SizedBox();
+  }
+
+  static Widget fromNetwork(
+    MiraiRequest request, {
+    LoadingWidgetBuilder? loadingWidget,
+    ErrorWidgetBuilder? errorWidget,
+  }) {
+    return FutureBuilder<Response?>(
+      future: MiraiNetwork.request(request),
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.waiting:
+            Widget? widget;
+            if (loadingWidget != null) {
+              widget = loadingWidget(context);
+              return widget;
+            }
+            break;
+          case ConnectionState.done:
+            if (snapshot.hasData) {
+              final json = jsonDecode(snapshot.data.toString());
+              return Mirai.fromJson(json, context);
+            } else if (snapshot.hasError) {
+              Log.e(snapshot.error);
+              if (errorWidget != null) {
+                final widget = errorWidget(context, snapshot.error);
+                return widget;
+              }
+            }
+            break;
+          default:
+            break;
+        }
+        return Container(color: Colors.white);
+      },
+    );
   }
 }
