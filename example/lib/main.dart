@@ -85,6 +85,8 @@ class HomePage extends StatelessWidget {
                 ),
                 Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(nextButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(scrollViewJson, context),
               ],
             ),
           ),
@@ -518,4 +520,18 @@ final routeJson = {
     },
   },
   'floatingActionButton': largeFloatingActionButtonJson,
+};
+
+final scrollViewJson = {
+  'type': 'scrollView',
+  'child': {
+    'type': 'container',
+    'width': 100,
+    'height': 500,
+    'color': '#7D1038',
+    'child': {
+      'type': 'text',
+      'data': 'Hello',
+    },
+  },
 };

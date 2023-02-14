@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
 import 'package:mirai/src/ui/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai/src/widgets/framework.dart';
+import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field.dart';
 
 class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
   const MiraiTextFieldParser({
