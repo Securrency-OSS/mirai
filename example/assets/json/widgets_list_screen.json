@@ -1,0 +1,723 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Demo",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#7D1038",
+        "actions": []
+    },
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "separator": {
+            "type": "container",
+            "height": 10
+        },
+        "children": [
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "1.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Appbar",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai appbar widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "2.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Bottom Navigation Bar",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai bottom navigation bar  widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "3.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Card",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a simple mirai card widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "4.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Column ",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai column widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "5.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Default Tab Controller",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a simple mirai default tab controller widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "6.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Elevated Buttton",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai elevated button widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "7.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Floating Action Button ",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a floating action button widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "8.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Icon ",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai icon widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "9.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Icon Button ",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai icon button widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "10.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Image",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai image widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "11.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai List Tile ",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai list tile widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "12.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai List View",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai list view widget. \nClick here for  more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "13.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Outlined Button",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai outlined button widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "14.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Padding",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai padding widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "15.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Row",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai row widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "16.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Scaffold",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai scaffold widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "17.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Scroll View",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai scroll view widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "18.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Sizedbox",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai sizedbox widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "19.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Tabbar",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai tabbar widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "20.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Tabbar View",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai tabbar view widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "21.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Text",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai text widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "22.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Text Button",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai text button widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "23.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Text Field",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai text field widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "24.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Text Form Field",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai form field widget. \nClick here for more details.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list"
+            }
+        ]
+    }
+}

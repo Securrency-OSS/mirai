@@ -7,7 +7,9 @@ import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_list_tile/mirai_list_tile.dart';
 
 class MiraiListTileParser extends MiraiParser<MiraiListTile> {
-  const MiraiListTileParser();
+  const MiraiListTileParser({this.onTap});
+
+  final Function()? onTap;
 
   @override
   MiraiListTile getModel(Map<String, dynamic> json) =>
@@ -19,7 +21,7 @@ class MiraiListTileParser extends MiraiParser<MiraiListTile> {
   @override
   Widget parse(BuildContext context, MiraiListTile model) {
     return ListTile(
-      onTap: () {},
+      onTap: onTap,
       onLongPress: () {},
       leading: Mirai.fromJson(model.leading, context),
       title: Mirai.fromJson(model.title, context),

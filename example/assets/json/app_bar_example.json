@@ -1,0 +1,75 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Home",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "backgroundColor": "#212121",
+                "fontSize": 21
+            }
+        },
+        "leading": {
+            "type": "icon",
+            "iconType": "material",
+            "icon": "add",
+            "size": 50,
+            "color": "#ff0000"
+        },
+        "backgroundColor": "#7D1038",
+        "actions": [
+            {
+                "type": "outlinedButton",
+                "child": {
+                    "type": "text",
+                    "data": "Sign in"
+                },
+                "width": 100,
+                "height": 50,
+                "style": {
+                    "foregroundColor": "#E8E8E8"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "width": 20,
+                "height": 20
+            },
+            {
+                "type": "image",
+                "color": "#dedede",
+                "width": 50,
+                "height": 50,
+                "src": "https: //www.upay.ae/wp-content/uploads/2022/09/logo.png"
+            },
+            {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "remove",
+                "size": 50,
+                "color": "#ff0000"
+            }
+        ]
+    },
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is an Appbar example.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            }
+        ]
+    }
+}

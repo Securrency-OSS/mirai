@@ -1,0 +1,74 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Bottom Navigation Bar",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#7D1038",
+        "actions": []
+    },
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is an bottom navigation bar example.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            }
+        ]
+    },
+    "bottomNavigationBar": {
+        "type": "bottomNavigationBar",
+        "backgroundColor": "#7D1038",
+        "items": [
+            {
+                "type": "navigationBarItem",
+                "label": "Add",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "male",
+                    "size": 40,
+                    "color": "#ff0000"
+                }
+            },
+            {
+                "type": "navigationBarItem",
+                "label": "Add sharp",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "female",
+                    "size": 40,
+                    "color": "#ff0000"
+                }
+            },
+            {
+                "type": "navigationBarItem",
+                "label": "Add rounded",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "child_care",
+                    "size": 40,
+                    "color": "#ff0000"
+                }
+            }
+        ]
+    }
+}
