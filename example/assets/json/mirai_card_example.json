@@ -1,0 +1,65 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Card",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#99ccff",
+        "actions": []
+    },
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is an mirai card example.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "card",
+                "color": "#99ccff",
+                "shadowColor": "#ff0000",
+                "surfaceTintColor": "#ff0000",
+                "elevation": 2,
+                "child": {
+                    "type": "container",
+                    "width": 100,
+                    "height": 100,
+                    "child": {
+                        "type": "text",
+                        "data": "Hello",
+                        "style": {
+                            "color": "#ff0000",
+                            "fontSize": 21
+                        }
+                    }
+                },
+                "margin": {
+                    "top": 10,
+                    "bottom": 10,
+                    "left": 10,
+                    "right": 10
+                }
+            }
+        ]
+    }
+}

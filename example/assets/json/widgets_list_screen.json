@@ -11,7 +11,7 @@
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#7D1038",
+        "backgroundColor": "#99ccff",
         "actions": []
     },
     "body": {
@@ -121,7 +121,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Column ",
+                    "data": "Mirai Column",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -179,7 +179,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Elevated Buttton",
+                    "data": "Mirai Elevated Button",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -208,7 +208,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Floating Action Button ",
+                    "data": "Mirai Floating Action Button",
                     "align": "center",
                     "style": {
                         "fontSize": 21

@@ -89,6 +89,91 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   break;
 
+                case 'Mirai Card':
+                  final String navBar =
+                      await rootBundle.loadString(MIRAI_CARD_EXAMPLE);
+
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => Mirai.fromJson(
+                          json.decode(navBar),
+                          context,
+                        ),
+                      ),
+                    );
+                  }
+
+                  break;
+
+                case 'Mirai Column':
+                  final String navBar =
+                      await rootBundle.loadString(MIRAI_COLUMN_EXAMPLE);
+
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => Mirai.fromJson(
+                          json.decode(navBar),
+                          context,
+                        ),
+                      ),
+                    );
+                  }
+
+                  break;
+
+                case 'Mirai Default Tab Controller':
+                  final String navBar = await rootBundle
+                      .loadString(MIRAI_DEFAULT_TAB_CONTROLLER_EXAMPLE);
+
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => Mirai.fromJson(
+                          json.decode(navBar),
+                          context,
+                        ),
+                      ),
+                    );
+                  }
+
+                  break;
+
+                case 'Mirai Elevated Button':
+                  final String navBar = await rootBundle
+                      .loadString(MIRAI_ELEVATED_BUTTON_EXAMPLE);
+
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => Mirai.fromJson(
+                          json.decode(navBar),
+                          context,
+                        ),
+                      ),
+                    );
+                  }
+
+                  break;
+
+                case 'Mirai Floating Action Button':
+                  final String navBar = await rootBundle
+                      .loadString(MIRAI_FLOATING_ACTION_BUTTON_EXAMPLE);
+
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => Mirai.fromJson(
+                          json.decode(navBar),
+                          context,
+                        ),
+                      ),
+                    );
+                  }
+
+                  break;
+
                 default:
               }
             },

@@ -1,0 +1,87 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Elevated Button",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#99ccff",
+        "actions": []
+    },
+    "body": {
+        "type": "column",
+        "mainAxisAlignment": "start",
+        "crossAxisAlignment": "center",
+        "mainAxisSize": "max",
+        "textDirection": "ltr",
+        "verticalDirection": "down",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is item 1",
+                "style": {
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is item 2",
+                "style": {
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is item 3",
+                "style": {
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is item 4",
+                "style": {
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is item 5",
+                "style": {
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            }
+        ]
+    }
+}

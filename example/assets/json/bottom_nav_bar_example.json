@@ -11,7 +11,7 @@
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#7D1038",
+        "backgroundColor": "#99ccff",
         "actions": []
     },
     "body": {
@@ -34,7 +34,7 @@
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "backgroundColor": "#7D1038",
+        "backgroundColor": "#99ccff",
         "items": [
             {
                 "type": "navigationBarItem",
@@ -44,7 +44,7 @@
                     "iconType": "material",
                     "icon": "male",
                     "size": 40,
-                    "color": "#ff0000"
+                    "color": "#000000"
                 }
             },
             {
@@ -55,7 +55,7 @@
                     "iconType": "material",
                     "icon": "female",
                     "size": 40,
-                    "color": "#ff0000"
+                    "color": "#000000"
                 }
             },
             {
@@ -66,7 +66,7 @@
                     "iconType": "material",
                     "icon": "child_care",
                     "size": 40,
-                    "color": "#ff0000"
+                    "color": "#000000"
                 }
             }
         ]
