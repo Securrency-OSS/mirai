@@ -8,28 +8,38 @@ part of 'mirai_action.dart';
 
 _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
     _$_MiraiAction(
-      type: $enumDecodeNullable(_$ActionTypeEnumMap, json['type']) ??
-          ActionType.none,
-      url: json['url'] as String?,
-      widget: json['widget'] as Map<String, dynamic>?,
+      actionType:
+          $enumDecodeNullable(_$ActionTypeEnumMap, json['actionType']) ??
+              ActionType.none,
+      request: json['request'] == null
+          ? null
+          : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
+      widgetJson: json['widgetJson'] as Map<String, dynamic>?,
+      navigationType:
+          $enumDecodeNullable(_$NavigationTypeEnumMap, json['navigationType']),
       navigationStyle: $enumDecodeNullable(
           _$NavigationStyleEnumMap, json['navigationStyle']),
     );
 
 Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
     <String, dynamic>{
-      'type': _$ActionTypeEnumMap[instance.type]!,
-      'url': instance.url,
-      'widget': instance.widget,
+      'actionType': _$ActionTypeEnumMap[instance.actionType]!,
+      'request': instance.request,
+      'widgetJson': instance.widgetJson,
+      'navigationType': _$NavigationTypeEnumMap[instance.navigationType],
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
     };
 
 const _$ActionTypeEnumMap = {
-  ActionType.navigateToScreen: 'navigateToScreen',
-  ActionType.navigateToBottomSheet: 'navigateToBottomSheet',
-  ActionType.showDialog: 'showDialog',
+  ActionType.navigate: 'navigate',
   ActionType.request: 'request',
   ActionType.none: 'none',
+};
+
+const _$NavigationTypeEnumMap = {
+  NavigationType.screen: 'screen',
+  NavigationType.dialog: 'dialog',
+  NavigationType.bottomSheet: 'bottomSheet',
 };
 
 const _$NavigationStyleEnumMap = {

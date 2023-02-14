@@ -136,7 +136,24 @@ final elevatedButtonJson = {
     'type': 'text',
     'data': 'Sign in',
   },
-  'onPressed': {'url': ''}
+  'onPressed': {
+    'actionType': 'navigate',
+    'navigationStyle': 'push',
+    'navigationType': 'screen',
+    'widgetJson': {
+      'type': 'scaffold',
+      'body': {
+        'type': 'container',
+        'width': 100,
+        'height': 100,
+        'color': '#dedede',
+        'child': {
+          'type': 'text',
+          'data': 'Hello',
+        },
+      },
+    },
+  },
 };
 
 final columnJson = {

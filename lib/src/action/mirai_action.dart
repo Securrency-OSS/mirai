@@ -1,16 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/utils/mirai_action_utils.dart';
-import 'package:mirai/src/utils/mirai_navigation_utils.dart';
+import 'package:mirai/mirai.dart';
+import 'package:mirai/src/navigation/mirai_navigator.dart';
 
 part 'mirai_action.freezed.dart';
 part 'mirai_action.g.dart';
 
+enum ActionType { navigate, request, none }
+
 @freezed
 class MiraiAction with _$MiraiAction {
   factory MiraiAction({
-    @Default(ActionType.none) ActionType type,
-    String? url,
-    Map<String, dynamic>? widget,
+    @Default(ActionType.none) ActionType actionType,
+    MiraiRequest? request,
+    Map<String, dynamic>? widgetJson,
+    NavigationType? navigationType,
     NavigationStyle? navigationStyle,
   }) = _MiraiAction;
 

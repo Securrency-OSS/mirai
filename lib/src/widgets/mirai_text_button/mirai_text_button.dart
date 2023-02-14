@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/action/mirai_action.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 
 export 'package:mirai/src/widgets/mirai_text_button/mirai_text_button_parser.dart';
@@ -10,7 +11,7 @@ part 'mirai_text_button.g.dart';
 @freezed
 class MiraiTextButton with _$MiraiTextButton {
   const factory MiraiTextButton({
-    //Todo: onPressed,
+    MiraiAction? onPressed,
     MiraiButtonStyle? style,
     @Default(false) autofocus,
     @Default(Clip.none) Clip clipBehavior,

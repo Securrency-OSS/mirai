@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/ui/mirai_size/mirai_size.dart';
@@ -22,7 +23,7 @@ class MiraiTextButtonParser extends MiraiParser<MiraiTextButton> {
   @override
   Widget parse(BuildContext context, MiraiTextButton model) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () => model.onPressed.onCall(context),
       style: _style(model.style),
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,

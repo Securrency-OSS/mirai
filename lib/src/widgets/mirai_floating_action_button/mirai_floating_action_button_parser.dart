@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/ui/mirai_text_style/mirai_text_style_parser.dart';
 import 'package:mirai/src/utils/button_utils.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -20,7 +21,7 @@ class MiraiFloatingActionButtonParser
     switch (model.buttonType) {
       case FloatingActionButtonType.extended:
         return FloatingActionButton.extended(
-          onPressed: () {},
+          onPressed: () => model.onPressed.onCall(context),
           icon: Mirai.fromJson(model.icon, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,

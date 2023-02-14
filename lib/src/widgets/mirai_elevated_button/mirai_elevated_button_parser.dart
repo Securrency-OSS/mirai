@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_manager.dart';
+import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/ui/mirai_size/mirai_size.dart';
@@ -20,7 +20,7 @@ class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
   @override
   Widget parse(BuildContext context, MiraiElevatedButton model) {
     return ElevatedButton(
-      onPressed: () => MiraiActionManager.onCall(model.onPressed, context),
+      onPressed: () => model.onPressed.onCall(context),
       autofocus: model.autofocus,
       style: _style(model.style),
       clipBehavior: model.clipBehavior,

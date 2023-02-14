@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 
 class MiraiNetwork {
+  const MiraiNetwork._();
+
   static final _dio = Dio();
 
   static Future<Response?> request(MiraiRequest request) {
