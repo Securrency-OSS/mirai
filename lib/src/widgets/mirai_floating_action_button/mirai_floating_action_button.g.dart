@@ -9,6 +9,9 @@ part of 'mirai_floating_action_button.dart';
 _$_MiraiFloatingActionButton _$$_MiraiFloatingActionButtonFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiFloatingActionButton(
+      onPressed: json['onPressed'] == null
+          ? null
+          : MiraiAction.fromJson(json['onPressed'] as Map<String, dynamic>),
       textStyle: json['textStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
@@ -41,6 +44,7 @@ _$_MiraiFloatingActionButton _$$_MiraiFloatingActionButtonFromJson(
 Map<String, dynamic> _$$_MiraiFloatingActionButtonToJson(
         _$_MiraiFloatingActionButton instance) =>
     <String, dynamic>{
+      'onPressed': instance.onPressed,
       'textStyle': instance.textStyle,
       'buttonType': _$FloatingActionButtonTypeEnumMap[instance.buttonType]!,
       'autofocus': instance.autofocus,
@@ -65,5 +69,6 @@ Map<String, dynamic> _$$_MiraiFloatingActionButtonToJson(
 const _$FloatingActionButtonTypeEnumMap = {
   FloatingActionButtonType.extended: 'extended',
   FloatingActionButtonType.large: 'large',
+  FloatingActionButtonType.medium: 'medium',
   FloatingActionButtonType.small: 'small',
 };

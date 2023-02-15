@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai/src/widgets/framework.dart';
+import 'package:mirai/src/widgets/mirai.dart';
 import 'package:mirai/src/widgets/mirai_row/mirai_row.dart';
 
 class MiraiRowParser extends MiraiParser<MiraiRow> {
+  const MiraiRowParser();
+
   @override
   MiraiRow getModel(Map<String, dynamic> json) => MiraiRow.fromJson(json);
 

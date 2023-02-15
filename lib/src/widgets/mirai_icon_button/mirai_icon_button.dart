@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/action/mirai_action.dart';
 import 'package:mirai/src/ui/mirai_alignment/mirai_alignment.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
@@ -11,7 +12,7 @@ part 'mirai_icon_button.g.dart';
 @freezed
 class MiraiIconButton with _$MiraiIconButton {
   const factory MiraiIconButton({
-    //Todo: onPressed,
+    MiraiAction? onPressed,
     double? iconSize,
     MiraiEdgeInsets? padding,
     @Default(MiraiAlignment.center) MiraiAlignment alignment,

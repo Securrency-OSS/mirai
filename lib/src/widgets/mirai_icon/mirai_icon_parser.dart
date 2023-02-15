@@ -6,6 +6,8 @@ import 'package:mirai/src/widgets/framework.dart';
 import 'package:mirai/src/widgets/mirai_icon/mirai_icon.dart';
 
 class MiraiIconParser extends MiraiParser<MiraiIcon> {
+  const MiraiIconParser();
+
   @override
   MiraiIcon getModel(Map<String, dynamic> json) => MiraiIcon.fromJson(json);
 

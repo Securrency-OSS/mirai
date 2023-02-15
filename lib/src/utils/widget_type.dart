@@ -1,6 +1,7 @@
 enum WidgetType {
   text,
   textField,
+  textFormField,
   elevatedButton,
   row,
   column,
@@ -15,4 +16,13 @@ enum WidgetType {
   textButton,
   sizedBox,
   alertDialog,
+  tabBarView,
+  tabBar,
+  listTile,
+  scaffold,
+  card,
+  bottomNavigationBar,
+  listView,
+  defaultTabController,
+  scrollView,
 }
