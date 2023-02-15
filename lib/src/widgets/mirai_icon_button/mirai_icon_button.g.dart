@@ -8,6 +8,9 @@ part of 'mirai_icon_button.dart';
 
 _$_MiraiIconButton _$$_MiraiIconButtonFromJson(Map<String, dynamic> json) =>
     _$_MiraiIconButton(
+      onPressed: json['onPressed'] == null
+          ? null
+          : MiraiAction.fromJson(json['onPressed'] as Map<String, dynamic>),
       iconSize: (json['iconSize'] as num?)?.toDouble(),
       padding: json['padding'] == null
           ? null
@@ -33,6 +36,7 @@ _$_MiraiIconButton _$$_MiraiIconButtonFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MiraiIconButtonToJson(_$_MiraiIconButton instance) =>
     <String, dynamic>{
+      'onPressed': instance.onPressed,
       'iconSize': instance.iconSize,
       'padding': instance.padding,
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment]!,

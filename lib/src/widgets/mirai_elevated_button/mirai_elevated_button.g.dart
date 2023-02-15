@@ -9,6 +9,9 @@ part of 'mirai_elevated_button.dart';
 _$_MiraiElevatedButton _$$_MiraiElevatedButtonFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiElevatedButton(
+      onPressed: json['onPressed'] == null
+          ? null
+          : MiraiAction.fromJson(json['onPressed'] as Map<String, dynamic>),
       style: json['style'] == null
           ? null
           : MiraiButtonStyle.fromJson(json['style'] as Map<String, dynamic>),
@@ -21,6 +24,7 @@ _$_MiraiElevatedButton _$$_MiraiElevatedButtonFromJson(
 Map<String, dynamic> _$$_MiraiElevatedButtonToJson(
         _$_MiraiElevatedButton instance) =>
     <String, dynamic>{
+      'onPressed': instance.onPressed,
       'style': instance.style,
       'autofocus': instance.autofocus,
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
