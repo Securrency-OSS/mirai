@@ -84,6 +84,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(nextButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
                 Mirai.fromJson(scrollViewJson, context),
               ],
             ),
@@ -133,6 +135,24 @@ final elevatedButtonJson = {
   'child': {
     'type': 'text',
     'data': 'Sign in',
+  },
+  'onPressed': {
+    'actionType': 'navigate',
+    'navigationStyle': 'push',
+    'navigationType': 'screen',
+    'widgetJson': {
+      'type': 'scaffold',
+      'body': {
+        'type': 'container',
+        'width': 100,
+        'height': 100,
+        'color': '#dedede',
+        'child': {
+          'type': 'text',
+          'data': 'Hello',
+        },
+      },
+    },
   },
 };
 
@@ -472,6 +492,51 @@ final textFormFieldJson = {
   },
   'readOnly': false,
   'enabled': true,
+};
+
+final nextButtonJson = {
+  'type': 'elevatedButton',
+  'style': {
+    'foregroundColor': '#ffffff',
+    'backgroundColor': '#212121',
+  },
+  'child': {
+    'type': 'text',
+    'data': 'Next',
+  },
+  'onPressed': {
+    'url': 'abc',
+    'type': 'navigateToScreen',
+    'widget': scaffoldJson,
+  }
+};
+
+final routeJson = {
+  'type': 'scaffold',
+  'appBar': appBarJson,
+  'body': {
+    'type': 'padding',
+    'padding': {
+      'top': 10,
+      'bottom': 10,
+      'left': 25,
+      'right': 25,
+    },
+    'child': {
+      'type': 'column',
+      'mainAxisAlignment': 'start',
+      'crossAxisAlignment': 'center',
+      'mainAxisSize': 'max',
+      'textDirection': 'ltr',
+      'verticalDirection': 'down',
+      'children': [
+        textFieldJson,
+        sizedBoxJson,
+        nextButtonJson,
+      ],
+    },
+  },
+  'floatingActionButton': largeFloatingActionButtonJson,
 };
 
 final scrollViewJson = {

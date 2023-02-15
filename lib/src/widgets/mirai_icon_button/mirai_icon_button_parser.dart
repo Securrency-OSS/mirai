@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/ui/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/ui/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/ui/mirai_size/mirai_size.dart';
@@ -21,7 +22,7 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
   @override
   Widget parse(BuildContext context, MiraiIconButton model) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () => model.onPressed.onCall(context),
       iconSize: model.iconSize,
       padding: model.padding.parse,
       alignment: model.alignment.value,
