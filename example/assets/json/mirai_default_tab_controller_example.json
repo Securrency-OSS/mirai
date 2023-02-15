@@ -27,59 +27,33 @@
                 "height": 25
             },
             {
-                "type": "text",
-                "data": "This is item 1",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 2",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 3",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 4",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 5",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
+                "type": "defaultTabController",
+                "length": 3,
+                "child": {
+                    "type": "tabBar",
+                    "tabs": [
+                        {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "phone",
+                            "size": 50,
+                            "color": "#ff0000"
+                        },
+                        {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "tablet",
+                            "size": 50,
+                            "color": "#ff0000"
+                        },
+                        {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "computer",
+                            "size": 50,
+                            "color": "#ff0000"
+                        }
+                    ]
                 }
             }
         ]
