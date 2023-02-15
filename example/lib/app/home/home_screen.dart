@@ -52,129 +52,25 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (c, index) {
           return MiraiListTileParser(
             onTap: () async {
-              final widget = MiraiListTile.fromJson(listViewItems[index]);
+              final String widgetTitle =
+                  (MiraiListTile.fromJson(listViewItems[index])
+                          .title?['data'] ??
+                      '');
 
-              switch (widget.title?['data']) {
-                case 'Mirai Appbar':
-                  final String appBar =
-                      await rootBundle.loadString(APP_BAR_EXAMPLE);
+              if (widgetTitle.exampleJson.isNotEmpty) {
+                final String exampleJson =
+                    await rootBundle.loadString(widgetTitle.exampleJson);
 
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(appBar),
-                          context,
-                        ),
+                if (context.mounted) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => Mirai.fromJson(
+                        json.decode(exampleJson),
+                        context,
                       ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Bottom Navigation Bar':
-                  final String navBar =
-                      await rootBundle.loadString(BOTTOM_NAV_BAR);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Card':
-                  final String navBar =
-                      await rootBundle.loadString(MIRAI_CARD_EXAMPLE);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Column':
-                  final String navBar =
-                      await rootBundle.loadString(MIRAI_COLUMN_EXAMPLE);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Default Tab Controller':
-                  final String navBar = await rootBundle
-                      .loadString(MIRAI_DEFAULT_TAB_CONTROLLER_EXAMPLE);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Elevated Button':
-                  final String navBar = await rootBundle
-                      .loadString(MIRAI_ELEVATED_BUTTON_EXAMPLE);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                case 'Mirai Floating Action Button':
-                  final String navBar = await rootBundle
-                      .loadString(MIRAI_FLOATING_ACTION_BUTTON_EXAMPLE);
-
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Mirai.fromJson(
-                          json.decode(navBar),
-                          context,
-                        ),
-                      ),
-                    );
-                  }
-
-                  break;
-
-                default:
+                    ),
+                  );
+                }
               }
             },
           ).parse(
@@ -192,5 +88,49 @@ class _HomeScreenState extends State<HomeScreen> {
       return _widgetsJsonValues['body']['children'];
     }
     return [];
+  }
+}
+
+extension ConstExt on String {
+  String get exampleJson {
+    switch (this) {
+      case 'Mirai Appbar':
+        return APP_BAR_EXAMPLE;
+
+      case 'Mirai Bottom Navigation Bar':
+        return BOTTOM_NAV_BAR;
+
+      case 'Mirai Card':
+        return MIRAI_CARD_EXAMPLE;
+
+      case 'Mirai Column':
+        return MIRAI_COLUMN_EXAMPLE;
+
+      case 'Mirai Default Tab Controller':
+        return MIRAI_DEFAULT_TAB_CONTROLLER_EXAMPLE;
+
+      case 'Mirai Elevated Button':
+        return MIRAI_ELEVATED_BUTTON_EXAMPLE;
+
+      case 'Mirai Floating Action Button':
+        return MIRAI_FLOATING_ACTION_BUTTON_EXAMPLE;
+
+      case 'Mirai Icon':
+        return MIRAI_ICON_EXAMPLE;
+
+      case 'Mirai Icon Button':
+        return MIRAI_ICON_BUTTON_EXAMPLE;
+
+      case 'Mirai Image':
+        return MIRAI_IMAGE_EXAMPLE;
+
+      case 'Mirai List Tile':
+        return MIRAI_LIST_TILE_EXAMPLE;
+
+      case 'Mirai List View':
+        return MIRAI_LIST_VIEW_EXAMPLE;
+    }
+
+    return '';
   }
 }

@@ -1,0 +1,18 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai List View",
+            "align": "center",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#99ccff",
+        "actions": []
+    },
+    "body": {}
+}
