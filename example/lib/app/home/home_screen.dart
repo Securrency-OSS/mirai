@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:example/values/constants.dart';
-import 'package:example/values/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/mirai.dart';
@@ -32,54 +31,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // return Mirai.fromJson(
-    //   _widgetsJsonValues,
-    //   context,
-    // );
+    return Mirai.fromJson(
+      _widgetsJsonValues,
+      context,
+    );
 
     // TODO: Will get replaced soon.
-
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          Strings.appTitle,
-        ),
-        backgroundColor: Theme.of(context).colorScheme.background,
-      ),
-      body: ListView.builder(
-        itemCount: listViewItems.length,
-        itemBuilder: (c, index) {
-          return MiraiListTileParser(
-            onTap: () async {
-              final String widgetTitle =
-                  (MiraiListTile.fromJson(listViewItems[index])
-                          .title?['data'] ??
-                      '');
-
-              if (widgetTitle.exampleJson.isNotEmpty) {
-                final String exampleJson =
-                    await rootBundle.loadString(widgetTitle.exampleJson);
-
-                if (context.mounted) {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => Mirai.fromJson(
-                        json.decode(exampleJson),
-                        context,
-                      ),
-                    ),
-                  );
-                }
-              }
-            },
-          ).parse(
-            context,
-            MiraiListTile.fromJson(listViewItems[index]),
-          );
-        },
-      ),
-    );
   }
 
   List<dynamic> get listViewItems {
