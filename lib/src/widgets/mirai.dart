@@ -140,22 +140,16 @@ class Mirai {
   }
 
   static Future<Widget> fromAssets(
-      String assetPath, BuildContext context) async {
+    String assetPath,
+    BuildContext context,
+  ) async {
     final String data = await rootBundle.loadString(assetPath);
+    final Map<String, dynamic> jsonData = jsonDecode(data);
 
-    if (json.decode(data) != null) {
-      String widgetType = json.decode(data)['type'];
-      MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
-      if (miraiParser != null) {
-        final model = miraiParser.getModel(json.decode(data));
-
-        if (context.mounted) {
-          return miraiParser.parse(context, model);
-        }
-      } else {
-        Log.w('Widget type [$widgetType] not supported');
-      }
+    if (context.mounted) {
+      return fromJson(jsonData, context);
     }
+
     return const SizedBox();
   }
 }
