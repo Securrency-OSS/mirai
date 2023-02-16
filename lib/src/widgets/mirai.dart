@@ -6,6 +6,7 @@ import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/widgets/framework.dart';
+import 'package:mirai/src/widgets/mirai_alert_dialog/mirai_alert_dialog_parser.dart';
 import 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar_parser.dart';
 import 'package:mirai/src/widgets/mirai_card/mirai_card_parser.dart';
 import 'package:mirai/src/widgets/mirai_column/mirai_column_parser.dart';
@@ -27,6 +28,7 @@ import 'package:mirai/src/widgets/mirai_text/mirai_text.dart';
 import 'package:mirai/src/widgets/mirai_text_button/mirai_text_button.dart';
 import 'package:mirai/src/widgets/mirai_text_field/mirai_text_field_parser.dart';
 import 'package:mirai/src/widgets/mirai_text_form_field/mirai_text_form_field.dart';
+
 import 'mirai_bottom_navigation_bar/mirai_bottom_navigation_bar_parser.dart';
 import 'mirai_default_tab_controller/mirai_default_tab_controller_parser.dart';
 import 'mirai_elevated_button/mirai_elevated_button_parser.dart';
@@ -68,6 +70,7 @@ class Mirai {
     const MiraiListViewParser(),
     const MiraiDefaultTabControllerParser(),
     const MiraiScrollViewParser(),
+    const MiraiAlertDialogParser(),
   ];
 
   static Future<void> initialize({

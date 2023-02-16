@@ -15,6 +15,7 @@ enum WidgetType {
   appBar,
   textButton,
   sizedBox,
+  alertDialog,
   tabBarView,
   tabBar,
   listTile,
