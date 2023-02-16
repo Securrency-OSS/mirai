@@ -12,7 +12,59 @@
             }
         },
         "backgroundColor": "#99ccff",
-        "actions": []
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "size": 50,
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        }
     },
-    "body": {}
+    "body": {
+        "type": "column",
+        "mainAxisAlignment": "start",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "row",
+                "mainAxisAlignment": "spaceEvenly",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "add",
+                        "size": 50,
+                        "color": "#ff0000"
+                    },
+                    {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "remove",
+                        "size": 50,
+                        "color": "#ff0000"
+                    },
+                    {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "person",
+                        "size": 50,
+                        "color": "#ff0000"
+                    }
+                ]
+            }
+        ]
+    }
 }

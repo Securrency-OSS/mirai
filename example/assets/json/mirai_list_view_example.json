@@ -12,7 +12,74 @@
             }
         },
         "backgroundColor": "#99ccff",
-        "actions": []
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "size": 50,
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        }
     },
-    "body": {}
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is list view item 1.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is list view item 2.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is list view item 3.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "text",
+                "data": "This is list view item 4.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            }
+        ]
+    }
 }

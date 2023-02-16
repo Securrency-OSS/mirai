@@ -8,6 +8,12 @@ part of 'mirai_list_tile.dart';
 
 _$_MiraiListTile _$$_MiraiListTileFromJson(Map<String, dynamic> json) =>
     _$_MiraiListTile(
+      onTap: json['onTap'] == null
+          ? null
+          : MiraiAction.fromJson(json['onTap'] as Map<String, dynamic>),
+      onLongPress: json['onLongPress'] == null
+          ? null
+          : MiraiAction.fromJson(json['onLongPress'] as Map<String, dynamic>),
       leading: json['leading'] as Map<String, dynamic>?,
       title: json['title'] as Map<String, dynamic>?,
       subtitle: json['subtitle'] as Map<String, dynamic>?,
@@ -37,6 +43,8 @@ _$_MiraiListTile _$$_MiraiListTileFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MiraiListTileToJson(_$_MiraiListTile instance) =>
     <String, dynamic>{
+      'onTap': instance.onTap,
+      'onLongPress': instance.onLongPress,
       'leading': instance.leading,
       'title': instance.title,
       'subtitle': instance.subtitle,

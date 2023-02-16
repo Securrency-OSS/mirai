@@ -11,10 +11,19 @@
             }
         },
         "leading": {
-            "type": "icon",
-            "iconType": "material",
-            "icon": "add",
-            "size": 50
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "size": 50,
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
         },
         "backgroundColor": "#99ccff",
         "actions": [

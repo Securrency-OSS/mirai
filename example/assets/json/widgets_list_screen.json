@@ -237,7 +237,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Icon ",
+                    "data": "Mirai Icon",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -266,7 +266,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Icon Button ",
+                    "data": "Mirai Icon Button",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -324,7 +324,7 @@
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai List Tile ",
+                    "data": "Mirai List Tile",
                     "align": "center",
                     "style": {
                         "fontSize": 21

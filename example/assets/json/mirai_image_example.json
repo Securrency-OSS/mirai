@@ -12,7 +12,51 @@
             }
         },
         "backgroundColor": "#99ccff",
-        "actions": []
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "size": 50,
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        }
     },
-    "body": {}
+    "body": {
+        "type": "column",
+        "mainAxisAlignment": "start",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "column",
+                "mainAxisAlignment": "spaceEvenly",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "image",
+                        "width": 200,
+                        "height": 100,
+                        "src": "https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png"
+                    },
+                    {
+                        "type": "image",
+                        "imageType": "asset",
+                        "width": 200,
+                        "height": 100,
+                        "src": "assets/images/google_logo.png"
+                    }
+                ]
+            }
+        ]
+    }
 }

@@ -12,7 +12,21 @@
             }
         },
         "backgroundColor": "#99ccff",
-        "actions": []
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "size": 50,
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        }
     },
     "body": {
         "type": "column",
