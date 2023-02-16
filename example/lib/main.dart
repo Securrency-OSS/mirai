@@ -102,7 +102,6 @@ class HomePage extends StatelessWidget {
                 FutureBuilder<Widget>(
                   future: Mirai.fromAssets(
                       "assets/json/mirai_app_bar_example.json", context),
-                  initialData: null,
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     return snapshot.data ?? const SizedBox();
                   },
