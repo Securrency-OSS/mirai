@@ -1,4 +1,4 @@
-import 'package:example/app/home/home_screen.dart';
+import 'package:example/app/main/main_screen.dart';
 import 'package:example/values/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const MainScreen(),
     );
   }
 }

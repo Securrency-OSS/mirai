@@ -28,7 +28,7 @@
         "backgroundColor": "#99ccff",
         "actions": [
             {
-                "type": "outlinedButton",
+                "type": "textButton",
                 "child": {
                     "type": "text",
                     "data": "Sign in"
@@ -36,7 +36,7 @@
                 "width": 100,
                 "height": 50,
                 "style": {
-                    "foregroundColor": "#000000"
+                    "foregroundColor": "#ffffff"
                 }
             },
             {
@@ -45,18 +45,11 @@
                 "height": 20
             },
             {
-                "type": "image",
-                "color": "#000000",
-                "width": 50,
-                "height": 50,
-                "src": "https: //www.upay.ae/wp-content/uploads/2022/09/logo.png"
-            },
-            {
                 "type": "icon",
                 "iconType": "material",
-                "icon": "remove",
+                "icon": "person",
                 "size": 50,
-                "color": "#000000"
+                "color": "#ffffff"
             }
         ]
     },
