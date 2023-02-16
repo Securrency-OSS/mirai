@@ -36,68 +36,70 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Center(
           child: SingleChildScrollView(
-            child: Column(children: [
-              ElevatedButton(
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Mirai.fromJson(alertDialogJson, context);
-                    },
-                  );
-                },
-                child: const Text('Show Alert'),
-              ),
-              Mirai.fromJson(textFieldJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(elevatedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(rowJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(columnJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(containerJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(imageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(fileImageJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(assetImageJson, context),
-              Mirai.fromJson(iconJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(outlinedButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(iconButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(paddingJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(textButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(miraiCardJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(listTileJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(listViewJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(tabBarJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(textFormFieldJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              SizedBox(
-                height: 500,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Mirai.fromJson(tabBarViewJson, context),
-                    ),
-                  ],
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Mirai.fromJson(alertDialogJson, context);
+                      },
+                    );
+                  },
+                  child: const Text('Show Alert'),
                 ),
-              ),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(nextButtonJson, context),
-              Mirai.fromJson(sizedBoxJson, context),
-              Mirai.fromJson(scrollViewJson, context),
-            ]),
+                Mirai.fromJson(textFieldJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(elevatedButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(rowJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(columnJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(containerJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(imageJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(fileImageJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(assetImageJson, context),
+                Mirai.fromJson(iconJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(outlinedButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(iconButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(paddingJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(textButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(miraiCardJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(listTileJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(listViewJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(tabBarJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(textFormFieldJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                SizedBox(
+                  height: 500,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: Mirai.fromJson(tabBarViewJson, context),
+                      ),
+                    ],
+                  ),
+                ),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(nextButtonJson, context),
+                Mirai.fromJson(sizedBoxJson, context),
+                Mirai.fromJson(scrollViewJson, context),
+              ],
+            ),
           ),
         ),
       ),
