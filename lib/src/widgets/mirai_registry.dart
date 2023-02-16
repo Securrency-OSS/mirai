@@ -15,7 +15,7 @@ class MiraiRegistry {
   bool register(MiraiParser parser) {
     final String type = parser.type;
     if (_miraiParsers.containsKey(type)) {
-      Log.w('Widget $type is already register');
+      Log.w('Widget $type is already registered');
       return false;
     } else {
       _miraiParsers[type] = parser;
