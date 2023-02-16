@@ -42,8 +42,6 @@ typedef ErrorWidgetBuilder = Widget Function(
 typedef LoadingWidgetBuilder = Widget Function(BuildContext context);
 
 class Mirai {
-  // static final _miraiWidgetMap = <String, MiraiParser>{};
-
   static final _parsers = <MiraiParser>[
     const MiraiContainerParser(),
     const MiraiTextParser(),
