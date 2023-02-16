@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/utils/log.dart';
@@ -136,5 +137,25 @@ class Mirai {
         return Container(color: Colors.white);
       },
     );
+  }
+
+  static Future<Widget> fromAssets(
+      String assetPath, BuildContext context) async {
+    final String data = await rootBundle.loadString(assetPath);
+
+    if (json.decode(data) != null) {
+      String widgetType = json.decode(data)['type'];
+      MiraiParser? miraiParser = _miraiWidgetMap[widgetType];
+      if (miraiParser != null) {
+        final model = miraiParser.getModel(json.decode(data));
+
+        if (context.mounted) {
+          return miraiParser.parse(context, model);
+        }
+      } else {
+        Log.w('Widget type [$widgetType] not supported');
+      }
+    }
+    return const SizedBox();
   }
 }

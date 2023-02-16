@@ -1,0 +1,18 @@
+{
+    "type": "listView",
+    "shrinkWrap": true,
+    "children": [
+        {
+            "type": "sizedBox",
+            "height": 25
+        },
+        {
+            "type": "text",
+            "data": "This is an Appbar example.",
+            "style": {
+                "fontSize": 21,
+                "align": "center"
+            }
+        }
+    ]
+}
