@@ -93,7 +93,6 @@ class Mirai {
         }
       }
     } catch (e) {
-      Log.e(json);
       Log.e(e);
     }
 
