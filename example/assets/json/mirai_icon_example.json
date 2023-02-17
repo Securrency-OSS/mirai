@@ -18,7 +18,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "size": 50,
                 "color": "#ffffff"
             },
             "onPressed": {
@@ -46,21 +45,18 @@
                         "type": "icon",
                         "iconType": "material",
                         "icon": "add",
-                        "size": 50,
                         "color": "#ff0000"
                     },
                     {
                         "type": "icon",
                         "iconType": "material",
                         "icon": "remove",
-                        "size": 50,
                         "color": "#ff0000"
                     },
                     {
                         "type": "icon",
                         "iconType": "material",
                         "icon": "person",
-                        "size": 50,
                         "color": "#ff0000"
                     }
                 ]

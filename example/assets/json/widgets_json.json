@@ -48,7 +48,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "add",
-                "size": 50,
                 "color": "#ff0000"
             },
             "backgroundColor": "#7D1038",
@@ -81,7 +80,6 @@
                     "type": "icon",
                     "iconType": "material",
                     "icon": "add",
-                    "size": 50,
                     "color": "#ff0000"
                 }
             ]
@@ -334,7 +332,6 @@
             "type": "icon",
             "iconType": "material",
             "icon": "add",
-            "size": 50,
             "color": "#ff0000"
         },
         "backgroundColor": "#7D1038",
@@ -367,7 +364,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "add",
-                "size": 50,
                 "color": "#ff0000"
             }
         ]
@@ -399,7 +395,6 @@
             "type": "icon",
             "iconType": "material",
             "icon": "add",
-            "size": 50,
             "color": "#ff0000"
         }
     },
@@ -409,7 +404,6 @@
             "type": "icon",
             "iconType": "material",
             "icon": "add",
-            "size": 50,
             "color": "#ff0000"
         }
     },
@@ -498,7 +492,6 @@
             "type": "icon",
             "iconType": "material",
             "icon": "add",
-            "size": 50,
             "color": "#ff0000"
         },
         "title": {
@@ -551,21 +544,18 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "add",
-                "size": 50,
                 "color": "#ff0000"
             },
             {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "add",
-                "size": 50,
                 "color": "#ff0000"
             },
             {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "add",
-                "size": 50,
                 "color": "#ff0000"
             },
             {
@@ -590,21 +580,18 @@
                     "type": "icon",
                     "iconType": "material",
                     "icon": "add",
-                    "size": 50,
                     "color": "#ff0000"
                 },
                 {
                     "type": "icon",
                     "iconType": "material",
                     "icon": "add",
-                    "size": 50,
                     "color": "#ff0000"
                 },
                 {
                     "type": "icon",
                     "iconType": "material",
                     "icon": "add",
-                    "size": 50,
                     "color": "#ff0000"
                 }
             ]

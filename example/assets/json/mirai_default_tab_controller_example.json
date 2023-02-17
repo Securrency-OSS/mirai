@@ -18,7 +18,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "size": 50,
                 "color": "#ffffff"
             },
             "onPressed": {
@@ -50,21 +49,18 @@
                             "type": "icon",
                             "iconType": "material",
                             "icon": "phone",
-                            "size": 50,
                             "color": "#ff0000"
                         },
                         {
                             "type": "icon",
                             "iconType": "material",
                             "icon": "tablet",
-                            "size": 50,
                             "color": "#ff0000"
                         },
                         {
                             "type": "icon",
                             "iconType": "material",
                             "icon": "computer",
-                            "size": 50,
                             "color": "#ff0000"
                         }
                     ]

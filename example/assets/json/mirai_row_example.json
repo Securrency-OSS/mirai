@@ -16,7 +16,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "size": 50,
                 "color": "#ffffff"
             },
             "onPressed": {

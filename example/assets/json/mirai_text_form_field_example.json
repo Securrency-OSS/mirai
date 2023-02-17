@@ -7,7 +7,7 @@
             "data": "Text Form Field",
             "align": "center",
             "style": {
-                "fontSize": 21
+                "fontSize": 17
             }
         },
         "leading": {
@@ -16,7 +16,6 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "size": 50,
                 "color": "#ffffff"
             },
             "onPressed": {
@@ -28,21 +27,32 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
+        "type": "padding",
+        "padding": {
+            "top": 12,
+            "left": 12,
+            "right": 12
+        },
+        "child": {
+            "type": "textFormField",
+            "initialValue": "",
+            "hintText": "Enter your name",
+            "maxLines": 1,
+            "keyboardType": "text",
+            "textInputAction": "done",
+            "textAlign": "start",
+            "textCapitalization": "none",
+            "textDirection": "ltr",
+            "textAlignVertical": "top",
+            "obscureText": false,
+            "style": {
+                "foregroundColor": "#ffffff"
             },
-            {
-                "type": "text",
-                "data": "This is text form field example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
-            }
-        ]
+            "decoration": {
+                "hintText": "Please enter details"
+            },
+            "readOnly": false,
+            "enabled": true
+        }
     }
 }
