@@ -42,7 +42,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai appbar widget. \nClick here for more details.",
+                    "data": "This is a mirai appbar widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -54,7 +54,7 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/app_bar_example.json"
+                    "assetPath": "assets/json/mirai_app_bar_example.json"
                 }
             },
             {
@@ -77,14 +77,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai bottom navigation bar  widget. \nClick here for more details.",
+                    "data": "This is a mirai bottom navigation bar widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_bottom_nav_bar_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -106,14 +112,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a simple mirai card widget. \nClick here for more details.",
+                    "data": "This is a simple mirai card widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_card_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -135,14 +147,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai column widget. \nClick here for more details.",
+                    "data": "This is a mirai column widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_column_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -164,14 +182,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a simple mirai default tab controller widget. \nClick here for more details.",
+                    "data": "This is a simple mirai default tab controller widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_default_tab_controller_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -193,14 +217,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai elevated button widget. \nClick here for more details.",
+                    "data": "This is a mirai elevated button widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_elevated_button_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -222,14 +252,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a floating action button widget. \nClick here for more details.",
+                    "data": "This is a floating action button widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_floating_action_button_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -251,14 +287,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai icon widget. \nClick here for more details.",
+                    "data": "This is a mirai icon widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_icon_button_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -280,14 +322,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai icon button widget. \nClick here for more details.",
+                    "data": "This is a mirai icon button widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_icon_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -309,14 +357,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai image widget. \nClick here for more details.",
+                    "data": "This is a mirai image widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_image_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -338,14 +392,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai list tile widget. \nClick here for more details.",
+                    "data": "This is a mirai list tile widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_list_tile_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -367,14 +427,20 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai list view widget. \nClick here for  more details.",
+                    "data": "This is a mirai list view widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_list_view_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -396,7 +462,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai outlined button widget. \nClick here for more details.",
+                    "data": "This is a mirai outlined button widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -425,7 +491,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai padding widget. \nClick here for more details.",
+                    "data": "This is a mirai padding widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -454,7 +520,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai row widget. \nClick here for more details.",
+                    "data": "This is a mirai row widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -483,7 +549,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai scaffold widget. \nClick here for more details.",
+                    "data": "This is a mirai scaffold widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -512,7 +578,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai scroll view widget. \nClick here for more details.",
+                    "data": "This is a mirai scroll view widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -541,7 +607,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai sizedbox widget. \nClick here for more details.",
+                    "data": "This is a mirai sizedbox widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -570,7 +636,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai tabbar widget. \nClick here for more details.",
+                    "data": "This is a mirai tabbar widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -599,7 +665,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai tabbar view widget. \nClick here for more details.",
+                    "data": "This is a mirai tabbar view widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -628,7 +694,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text widget. \nClick here for more details.",
+                    "data": "This is a mirai text widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -657,7 +723,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text button widget. \nClick here for more details.",
+                    "data": "This is a mirai text button widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -686,7 +752,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text field widget. \nClick here for more details.",
+                    "data": "This is a mirai text field widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -715,7 +781,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai form field widget. \nClick here for more details.",
+                    "data": "This is a mirai form field widget.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
