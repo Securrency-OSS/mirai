@@ -469,7 +469,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_outlined_button_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -498,7 +504,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_padding_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -527,7 +539,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_row_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -556,7 +574,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_scaffold_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -585,7 +609,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_scroll_view_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -614,7 +644,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_sized_box_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -643,7 +679,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_tab_bar_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -672,7 +714,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_tab_bar_view_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -701,7 +749,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_text_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -730,7 +784,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_text_button_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -759,7 +819,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_text_field_example.json"
+                }
             },
             {
                 "type": "listTile",
@@ -788,7 +854,13 @@
                     }
                 },
                 "isThreeLine": true,
-                "style": "list"
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_text_form_field_example.json"
+                }
             }
         ]
     }

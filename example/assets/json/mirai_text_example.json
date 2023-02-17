@@ -4,14 +4,12 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Mirai App Bar",
+            "data": "Text Widget",
             "align": "center",
             "style": {
-                "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
         "leading": {
             "type": "iconButton",
             "child": {
@@ -27,20 +25,7 @@
                 "navigationStyle": "pop"
             }
         },
-        "actions": [
-            {
-                "type": "textButton",
-                "child": {
-                    "type": "text",
-                    "data": "Sign in"
-                },
-                "width": 100,
-                "height": 50,
-                "style": {
-                    "foregroundColor": "#ffffff"
-                }
-            }
-        ]
+        "backgroundColor": "#99ccff"
     },
     "body": {
         "type": "listView",
@@ -52,7 +37,7 @@
             },
             {
                 "type": "text",
-                "data": "This is an Appbar example.",
+                "data": "This is text widget example.",
                 "style": {
                     "fontSize": 21,
                     "align": "center"
