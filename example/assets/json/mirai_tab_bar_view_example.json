@@ -4,7 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Tabbar View",
+            "data": "Tab Bar View",
             "align": "center",
             "style": {
                 "fontSize": 21
@@ -27,21 +27,72 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is tabbar view example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+        "type": "defaultTabController",
+        "length": 3,
+        "child": {
+            "type": "tabBarView",
+            "children": [
+                {
+                    "type": "container",
+                    "color": "#82ac64",
+                    "child": {
+                        "type": "column",
+                        "mainAxisAlignment": "start",
+                        "crossAxisAlignment": "start",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Swipe left and right to see tab bar views.",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 17,
+                                    "color": "#ffffff"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "container",
+                    "color": "#36374b",
+                    "child": {
+                        "type": "column",
+                        "mainAxisAlignment": "start",
+                        "crossAxisAlignment": "start",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Swipe left and right to see tab bar views.",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 17,
+                                    "color": "#ffffff"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "container",
+                    "color": "#ffff6a",
+                    "child": {
+                        "type": "column",
+                        "mainAxisAlignment": "start",
+                        "crossAxisAlignment": "start",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Swipe left and right to see tab bar views.",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 17,
+                                    "color": "#ffffff"
+                                }
+                            }
+                        ]
+                    }
                 }
-            }
-        ]
+            ]
+        }
     }
 }

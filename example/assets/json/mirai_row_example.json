@@ -27,19 +27,220 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
+        "type": "column",
         "children": [
             {
-                "type": "sizedBox",
-                "height": 25
+                "type": "scrollView",
+                "scrollDirection": "horizontal",
+                "child": {
+                    "type": "row",
+                    "mainAxisAlignment": "start",
+                    "crossAxisAlignment": "center",
+                    "mainAxisSize": "max",
+                    "textDirection": "ltr",
+                    "verticalDirection": "down",
+                    "children": [
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 1 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 2 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 3 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 4 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 5 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        }
+                    ]
+                }
             },
             {
-                "type": "text",
-                "data": "This is row widget example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+                "type": "sizedBox",
+                "height": 120
+            },
+            {
+                "type": "scrollView",
+                "scrollDirection": "horizontal",
+                "child": {
+                    "type": "row",
+                    "mainAxisAlignment": "start",
+                    "crossAxisAlignment": "center",
+                    "mainAxisSize": "max",
+                    "textDirection": "ltr",
+                    "verticalDirection": "down",
+                    "children": [
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 1 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 2 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 3 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 4 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 52
+                        },
+                        {
+                            "type": "container",
+                            "color": "#36374b",
+                            "clipBehavior": "hardEdge",
+                            "height": 100,
+                            "width": 100
+                        },
+                        {
+                            "type": "text",
+                            "data": " This is item 5 ",
+                            "style": {
+                                "fontSize": 16,
+                                "align": "center"
+                            }
+                        }
+                    ]
                 }
             }
         ]

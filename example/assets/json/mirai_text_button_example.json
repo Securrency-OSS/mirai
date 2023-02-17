@@ -53,13 +53,13 @@
                         "color": "#ff0000"
                     },
                     "iconColor": "#ff0000",
-                    "backgroundColor": "#7D1038",
+                    "backgroundColor": "#ffffff",
                     "title": {
                         "type": "text",
                         "data": "This is a dialog.",
                         "align": "center",
                         "style": {
-                            "color": "#ffffff",
+                            "color": "#ff0000",
                             "fontSize": 17
                         }
                     },

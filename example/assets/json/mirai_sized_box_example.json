@@ -36,7 +36,19 @@
             },
             {
                 "type": "text",
-                "data": "This is sizedbox widget example.",
+                "data": "This is the start point of sizedbox.",
+                "style": {
+                    "fontSize": 21,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 100
+            },
+            {
+                "type": "text",
+                "data": "This is the end point of sizedbox with height 100px.",
                 "style": {
                     "fontSize": 21,
                     "align": "center"

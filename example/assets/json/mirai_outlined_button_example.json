@@ -27,21 +27,67 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
+        "type": "padding",
+        "padding": {
+            "top": 12,
+            "left": 12,
+            "right": 12
+        },
+        "child": {
+            "type": "outlinedButton",
+            "child": {
                 "type": "text",
-                "data": "This is an outlined button example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+                "data": "Click me to show a dialog!"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationStyle": "push",
+                "navigationType": "dialog",
+                "widgetJson": {
+                    "type": "alertDialog",
+                    "icon": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "person",
+                        "size": 40,
+                        "color": "#ff0000"
+                    },
+                    "iconColor": "#ff0000",
+                    "backgroundColor": "#ffffff",
+                    "title": {
+                        "type": "text",
+                        "data": "This is a dialog.",
+                        "align": "center",
+                        "style": {
+                            "color": "#ff0000",
+                            "fontSize": 17
+                        }
+                    },
+                    "content": {
+                        "type": "sizedBox",
+                        "width": 100,
+                        "height": 100
+                    },
+                    "actions": [
+                        {
+                            "type": "elevatedButton",
+                            "style": {
+                                "foregroundColor": "#ffffff",
+                                "backgroundColor": "#212121"
+                            },
+                            "child": {
+                                "type": "text",
+                                "data": "Dismiss"
+                            },
+                            "onPressed": {
+                                "actionType": "navigate",
+                                "navigationType": "screen",
+                                "navigationStyle": "pop"
+                            }
+                        }
+                    ]
                 }
             }
-        ]
+        }
     }
 }

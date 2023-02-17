@@ -26,20 +26,38 @@
         },
         "backgroundColor": "#99ccff"
     },
-    "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
+    "body": {},
+    "floatingActionButton": {
+        "type": "floatingActionButton",
+        "backgroundColor": "#99ccff",
+        "buttonType": "large",
+        "child": {
+            "type": "text",
+            "data": "Next"
+        }
+    },
+    "bottomNavigationBar": {
+        "type": "bottomNavigationBar",
+        "backgroundColor": "#99ccff",
+        "items": [
             {
-                "type": "sizedBox",
-                "height": 25
+                "type": "navigationBarItem",
+                "label": "Items",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "category",
+                    "size": 40
+                }
             },
             {
-                "type": "text",
-                "data": "This is scaffold widget example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+                "type": "navigationBarItem",
+                "label": "People",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "people",
+                    "size": 40
                 }
             }
         ]

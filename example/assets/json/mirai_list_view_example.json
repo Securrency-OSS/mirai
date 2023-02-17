@@ -32,50 +32,93 @@
         "shrinkWrap": true,
         "children": [
             {
-                "type": "sizedBox",
-                "height": 25
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
             },
             {
                 "type": "text",
-                "data": "This is list view item 1.",
+                "data": " This is item 1 ",
                 "style": {
-                    "fontSize": 21,
+                    "fontSize": 16,
                     "align": "center"
                 }
             },
             {
                 "type": "sizedBox",
-                "height": 25
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
             },
             {
                 "type": "text",
-                "data": "This is list view item 2.",
+                "data": " This is item 2 ",
                 "style": {
-                    "fontSize": 21,
+                    "fontSize": 16,
                     "align": "center"
                 }
             },
             {
                 "type": "sizedBox",
-                "height": 25
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
             },
             {
                 "type": "text",
-                "data": "This is list view item 3.",
+                "data": " This is item 3 ",
                 "style": {
-                    "fontSize": 21,
+                    "fontSize": 16,
                     "align": "center"
                 }
             },
             {
                 "type": "sizedBox",
-                "height": 25
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
             },
             {
                 "type": "text",
-                "data": "This is list view item 4.",
+                "data": " This is item 4 ",
                 "style": {
-                    "fontSize": 21,
+                    "fontSize": 16,
+                    "align": "center"
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
+            },
+            {
+                "type": "text",
+                "data": " This is item 5 ",
+                "style": {
+                    "fontSize": 16,
                     "align": "center"
                 }
             }

@@ -27,21 +27,33 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is tabbar example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+        "type": "defaultTabController",
+        "length": 3,
+        "child": {
+            "type": "tabBar",
+            "tabs": [
+                {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "male",
+                    "size": 40,
+                    "color": "#000000"
+                },
+                {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "female",
+                    "size": 40,
+                    "color": "#000000"
+                },
+                {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "child_care",
+                    "size": 40,
+                    "color": "#000000"
                 }
-            }
-        ]
+            ]
+        }
     }
 }

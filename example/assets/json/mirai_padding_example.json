@@ -4,7 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Padding",
+            "data": "Padding Example",
             "align": "center",
             "style": {
                 "fontSize": 21
@@ -27,19 +27,85 @@
         "backgroundColor": "#99ccff"
     },
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
+        "type": "column",
         "children": [
             {
                 "type": "sizedBox",
                 "height": 25
             },
             {
-                "type": "text",
-                "data": "This is padding example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 50
+                },
+                "child": {
+                    "type": "container",
+                    "color": "#36374b",
+                    "clipBehavior": "hardEdge",
+                    "height": 100,
+                    "width": 100
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 100
+                },
+                "child": {
+                    "type": "container",
+                    "color": "#36374b",
+                    "clipBehavior": "hardEdge",
+                    "height": 100,
+                    "width": 100
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 150
+                },
+                "child": {
+                    "type": "container",
+                    "color": "#36374b",
+                    "clipBehavior": "hardEdge",
+                    "height": 100,
+                    "width": 100
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 200
+                },
+                "child": {
+                    "type": "container",
+                    "color": "#36374b",
+                    "clipBehavior": "hardEdge",
+                    "height": 100,
+                    "width": 100
                 }
             }
         ]
