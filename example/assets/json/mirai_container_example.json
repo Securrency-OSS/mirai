@@ -1,0 +1,166 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Container",
+            "align": "center",
+            "style": {
+                "fontSize": 21
+            }
+        },
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        },
+        "backgroundColor": "#99ccff"
+    },
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100,
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 20,
+                        "left": 20
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": " This is item 1 ",
+                        "style": {
+                            "fontSize": 16,
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100,
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 20,
+                        "left": 20
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": " This is item 2 ",
+                        "style": {
+                            "fontSize": 16,
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100,
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 20,
+                        "left": 20
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": " This is item 3 ",
+                        "style": {
+                            "fontSize": 16,
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100,
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 20,
+                        "left": 20
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": " This is item 4 ",
+                        "style": {
+                            "fontSize": 16,
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#36374b",
+                "clipBehavior": "hardEdge",
+                "height": 100,
+                "width": 100,
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 20,
+                        "left": 20
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": " This is item 5 ",
+                        "style": {
+                            "fontSize": 16,
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

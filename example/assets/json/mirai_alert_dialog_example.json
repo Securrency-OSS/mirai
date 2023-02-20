@@ -1,0 +1,93 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Alert Dialog Example",
+            "align": "center",
+            "style": {
+                "fontSize": 21
+            }
+        },
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "arrow_back",
+                "color": "#ffffff"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationType": "screen",
+                "navigationStyle": "pop"
+            }
+        },
+        "backgroundColor": "#99ccff"
+    },
+    "body": {
+        "type": "padding",
+        "padding": {
+            "top": 12,
+            "left": 12,
+            "right": 12
+        },
+        "child": {
+            "type": "elevatedButton",
+            "child": {
+                "type": "text",
+                "data": "Click me to show a dialog!"
+            },
+            "onPressed": {
+                "actionType": "navigate",
+                "navigationStyle": "push",
+                "navigationType": "dialog",
+                "widgetJson": {
+                    "type": "alertDialog",
+                    "icon": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "person",
+                        "size": 40,
+                        "color": "#ff0000"
+                    },
+                    "iconColor": "#ff0000",
+                    "backgroundColor": "#ffffff",
+                    "title": {
+                        "type": "text",
+                        "data": "This is a dialog.",
+                        "align": "center",
+                        "style": {
+                            "color": "#ff0000",
+                            "fontSize": 17
+                        }
+                    },
+                    "content": {
+                        "type": "sizedBox",
+                        "width": 100,
+                        "height": 100
+                    },
+                    "actions": [
+                        {
+                            "type": "elevatedButton",
+                            "style": {
+                                "foregroundColor": "#ffffff",
+                                "backgroundColor": "#212121"
+                            },
+                            "child": {
+                                "type": "text",
+                                "data": "Dismiss"
+                            },
+                            "onPressed": {
+                                "actionType": "navigate",
+                                "navigationType": "screen",
+                                "navigationStyle": "pop"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

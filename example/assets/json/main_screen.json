@@ -34,6 +34,41 @@
                 },
                 "title": {
                     "type": "text",
+                    "data": "Mirai Alert Dialog",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai alert dialog widget.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_alert_dialog_example.json"
+                }
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "1.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
                     "data": "Mirai Appbar",
                     "align": "center",
                     "style": {
@@ -160,6 +195,41 @@
                     "navigationStyle": "push",
                     "navigationType": "screen",
                     "assetPath": "assets/json/mirai_column_example.json"
+                }
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "text",
+                    "data": "1.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Container",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "This is a mirai container widget.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "assetPath": "assets/json/mirai_container_example.json"
                 }
             },
             {
