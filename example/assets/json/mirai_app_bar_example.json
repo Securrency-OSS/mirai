@@ -2,61 +2,104 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Mirai App Bar",
-            "align": "center",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#99ccff",
+        "elevation": 0,
+        "backgroundColor": "#f5f5f5",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "color": "#ffffff"
+                "color": "#3c3c3c"
             },
             "onPressed": {
                 "actionType": "navigate",
                 "navigationType": "screen",
                 "navigationStyle": "pop"
             }
-        },
-        "actions": [
-            {
-                "type": "textButton",
-                "child": {
-                    "type": "text",
-                    "data": "Sign in"
-                },
-                "width": 100,
-                "height": 50,
-                "style": {
-                    "foregroundColor": "#ffffff"
-                }
-            }
-        ]
+        }
     },
+    "backgroundColor": "#f5f5f5",
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
+        "type": "padding",
+        "padding": {
+            "bottom": 10,
+            "top": 10
+        },
+        "child": {
+            "type": "scaffold",
+            "appBar": {
+                "type": "appBar",
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Appbar",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": 21
+                    }
+                },
+                "backgroundColor": "#6200ee",
+                "leading": {
+                    "type": "iconButton",
+                    "child": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "menu",
+                        "color": "#ffffff"
+                    }
+                },
+                "actions": [
+                    {
+                        "type": "iconButton",
+                        "child": {
+                            "type": "icon",
+                            "iconType": "cupertino",
+                            "icon": "heart_solid",
+                            "color": "#ffffff"
+                        }
+                    },
+                    {
+                        "type": "iconButton",
+                        "child": {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "search",
+                            "color": "#ffffff"
+                        }
+                    },
+                    {
+                        "type": "iconButton",
+                        "child": {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "more_horiz",
+                            "color": "#ffffff"
+                        }
+                    }
+                ]
             },
-            {
-                "type": "text",
-                "data": "This is an Appbar example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
+            "backgroundColor": "#ffffff",
+            "body": {
+                "type": "row",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "column",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Home",
+                                "style": {
+                                    "fontSize": 17
+                                }
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
+        }
     }
 }
