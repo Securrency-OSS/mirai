@@ -48,38 +48,37 @@
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
         "backgroundColor": "#99ccff",
+        "selectedItemColor": "#36374b",
+        "unselectedItemColor": "#ffffff",
         "items": [
             {
                 "type": "navigationBarItem",
-                "label": "Add",
+                "label": "Search",
                 "icon": {
                     "type": "icon",
-                    "iconType": "material",
-                    "icon": "male",
-                    "size": 40,
-                    "color": "#000000"
+                    "iconType": "cupertino",
+                    "icon": "search",
+                    "size": 40
                 }
             },
             {
                 "type": "navigationBarItem",
-                "label": "Add sharp",
+                "label": "Profile",
                 "icon": {
                     "type": "icon",
-                    "iconType": "material",
-                    "icon": "female",
-                    "size": 40,
-                    "color": "#000000"
+                    "iconType": "cupertino",
+                    "icon": "profile_circled",
+                    "size": 40
                 }
             },
             {
                 "type": "navigationBarItem",
-                "label": "Add rounded",
+                "label": "Menue",
                 "icon": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "child_care",
-                    "size": 40,
-                    "color": "#000000"
+                    "icon": "menu_rounded",
+                    "size": 40
                 }
             }
         ]

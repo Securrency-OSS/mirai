@@ -11,7 +11,6 @@
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
         "actions": []
     },
     "body": {
@@ -25,12 +24,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "1.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "add_alert"
                 },
                 "title": {
                     "type": "text",
@@ -42,7 +38,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai alert dialog widget.",
+                    "data": "Informs the user about situations that require acknowledgement",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -60,12 +56,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "1.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "app_fill"
                 },
                 "title": {
                     "type": "text",
@@ -77,7 +70,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai appbar widget.",
+                    "data": "Displays information and actions relating to the current screen",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -95,16 +88,13 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "2.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "navigation"
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Bottom Navigation Bar",
+                    "data": "Mirai Bottom Navigation",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -112,7 +102,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai bottom navigation bar widget.",
+                    "data": "Bottom navigation with cross-fading views",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -130,12 +120,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "3.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "wallet_giftcard"
                 },
                 "title": {
                     "type": "text",
@@ -147,7 +134,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a simple mirai card widget.",
+                    "data": "Card is a sheet of material used to represent some related information",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -165,12 +152,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "4.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "table_rows"
                 },
                 "title": {
                     "type": "text",
@@ -200,12 +184,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "1.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "apartment"
                 },
                 "title": {
                     "type": "text",
@@ -217,7 +198,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai container widget.",
+                    "data": "Container combines common painting, positioning, and sizing widgets",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -235,12 +216,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "5.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "control"
                 },
                 "title": {
                     "type": "text",
@@ -252,7 +230,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a simple mirai default tab controller widget.",
+                    "data": "Coordinates tab selection between a TabBar and a TabBarView",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -270,12 +248,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "6.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "smart_button"
                 },
                 "title": {
                     "type": "text",
@@ -287,7 +262,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai elevated button widget.",
+                    "data": "A Material Design elevated button",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -305,12 +280,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "7.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "blur_circular_rounded"
                 },
                 "title": {
                     "type": "text",
@@ -322,7 +294,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a floating action button widget.",
+                    "data": "A floating action button is a circular icon button that hovers over content to promote a primary action in the application",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -340,12 +312,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "8.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "heart_solid"
                 },
                 "title": {
                     "type": "text",
@@ -357,7 +326,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai icon widget.",
+                    "data": "A Material Design icon",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -375,12 +344,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "9.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "radio_button_checked"
                 },
                 "title": {
                     "type": "text",
@@ -392,7 +358,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai icon button widget.",
+                    "data": "An icon button is a picture printed on a Material widget that reacts to touches by filling with color",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -410,12 +376,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "10.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "image"
                 },
                 "title": {
                     "type": "text",
@@ -427,7 +390,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai image widget.",
+                    "data": "A widget that displays an image",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -445,12 +408,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "11.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "table_rows_sharp"
                 },
                 "title": {
                     "type": "text",
@@ -462,7 +422,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai list tile widget.",
+                    "data": "A single fixed-height row that typically contains some text as well as a leading or trailing icon",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -480,12 +440,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "12.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "view_list"
                 },
                 "title": {
                     "type": "text",
@@ -497,7 +454,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai list view widget.",
+                    "data": "A scrollable, linear list of widgets",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -515,12 +472,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "13.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "smart_button_outlined"
                 },
                 "title": {
                     "type": "text",
@@ -532,7 +486,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai outlined button widget.",
+                    "data": "A Material Design outlined button, essentially a TextButton with an outlined border",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -550,12 +504,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "14.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "padding"
                 },
                 "title": {
                     "type": "text",
@@ -567,7 +518,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai padding widget.",
+                    "data": "A widget that insets its child by the given padding",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -585,12 +536,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "15.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "table_rows"
                 },
                 "title": {
                     "type": "text",
@@ -602,7 +550,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai row widget.",
+                    "data": "Layout a list of child widgets in the horizontal direction",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -620,12 +568,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "16.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "widgets"
                 },
                 "title": {
                     "type": "text",
@@ -637,7 +582,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai scaffold widget.",
+                    "data": "Implements the basic Material Design visual layout structure",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -655,12 +600,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "17.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "swipe_down"
                 },
                 "title": {
                     "type": "text",
@@ -672,7 +614,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai scroll view widget.",
+                    "data": "A box in which a single widget can be scrolled",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -690,12 +632,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "18.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "space_bar"
                 },
                 "title": {
                     "type": "text",
@@ -707,7 +646,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai sizedbox widget.",
+                    "data": "A box with a specified size. If given a child, this widget forces its child to have a specific dimensions.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -725,12 +664,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "19.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "table_chart"
                 },
                 "title": {
                     "type": "text",
@@ -742,7 +678,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai tabbar widget.",
+                    "data": "A Material Design widget that displays a horizontal row of tabs",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -760,12 +696,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "20.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "pageview"
                 },
                 "title": {
                     "type": "text",
@@ -777,7 +710,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai tabbar view widget.",
+                    "data": "A page view that displays the widget which corresponds to the currently selected tab",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -795,12 +728,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "21.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "text_quote"
                 },
                 "title": {
                     "type": "text",
@@ -812,7 +742,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text widget.",
+                    "data": "A run of text with a single style.",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -830,12 +760,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "22.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "textbox"
                 },
                 "title": {
                     "type": "text",
@@ -847,7 +774,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text button widget.",
+                    "data": "Text button displays an ink splash on press but does not lift",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -865,12 +792,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "23.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "text_fields"
                 },
                 "title": {
                     "type": "text",
@@ -882,7 +806,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai text field widget.",
+                    "data": "Text fields allow users to type text into an app",
                     "align": "center",
                     "style": {
                         "fontSize": 12
@@ -900,12 +824,9 @@
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "24.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "text_format"
                 },
                 "title": {
                     "type": "text",
@@ -917,7 +838,7 @@
                 },
                 "subtitle": {
                     "type": "text",
-                    "data": "This is a mirai form field widget.",
+                    "data": "This widget maintains the current state of the form field",
                     "align": "center",
                     "style": {
                         "fontSize": 12
