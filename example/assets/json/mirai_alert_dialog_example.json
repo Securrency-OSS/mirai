@@ -23,71 +23,195 @@
                 "navigationType": "screen",
                 "navigationStyle": "pop"
             }
-        },
-        "backgroundColor": "#99ccff"
+        }
     },
     "body": {
         "type": "padding",
         "padding": {
-            "top": 12,
-            "left": 12,
-            "right": 12
+            "left": 120,
+            "right": 120
         },
         "child": {
-            "type": "elevatedButton",
-            "child": {
-                "type": "text",
-                "data": "Click me to show a dialog!"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationStyle": "push",
-                "navigationType": "dialog",
-                "widgetJson": {
-                    "type": "alertDialog",
-                    "icon": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "person",
-                        "size": 40,
-                        "color": "#ff0000"
-                    },
-                    "iconColor": "#ff0000",
-                    "backgroundColor": "#ffffff",
-                    "title": {
+            "type": "column",
+            "mainAxisAlignment": "center",
+            "crossAxisAlignment": "center",
+            "children": [
+                {
+                    "type": "elevatedButton",
+                    "child": {
                         "type": "text",
-                        "data": "This is a dialog.",
-                        "align": "center",
-                        "style": {
-                            "color": "#ff0000",
-                            "fontSize": 17
+                        "data": "SIMPLE ALERT"
+                    },
+                    "style": {
+                        "backgroundColor": "#6200ee",
+                        "padding": {
+                            "top": 8,
+                            "left": 12,
+                            "right": 12,
+                            "bottom": 8
                         }
                     },
-                    "content": {
-                        "type": "sizedBox",
-                        "width": 100,
-                        "height": 100
-                    },
-                    "actions": [
-                        {
-                            "type": "elevatedButton",
-                            "style": {
-                                "foregroundColor": "#ffffff",
-                                "backgroundColor": "#212121"
+                    "onPressed": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "dialog",
+                        "widgetJson": {
+                            "type": "alertDialog",
+                            "backgroundColor": "#ffffff",
+                            "content": {
+                                "type": "padding",
+                                "padding": {
+                                    "top": 0,
+                                    "left": 12,
+                                    "right": 12,
+                                    "bottom": 8
+                                },
+                                "child": {
+                                    "type": "text",
+                                    "data": "Discard draft?",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 14
+                                    }
+                                }
                             },
-                            "child": {
+                            "actions": [
+                                {
+                                    "type": "textButton",
+                                    "style": {
+                                        "foregroundColor": "#FF0000"
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "CANCEL"
+                                    },
+                                    "onPressed": {
+                                        "actionType": "navigate",
+                                        "navigationType": "screen",
+                                        "navigationStyle": "pop"
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 8
+                                },
+                                {
+                                    "type": "textButton",
+                                    "style": {
+                                        "foregroundColor": "#FF0000"
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "DISCARD"
+                                    },
+                                    "onPressed": {
+                                        "actionType": "navigate",
+                                        "navigationType": "screen",
+                                        "navigationStyle": "pop"
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 12
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 12
+                },
+                {
+                    "type": "elevatedButton",
+                    "child": {
+                        "type": "text",
+                        "data": "ALERT WITH TITLE"
+                    },
+                    "style": {
+                        "backgroundColor": "#6200ee",
+                        "padding": {
+                            "left": 12,
+                            "right": 12,
+                            "bottom": 8
+                        }
+                    },
+                    "onPressed": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "dialog",
+                        "widgetJson": {
+                            "type": "alertDialog",
+                            "backgroundColor": "#ffffff",
+                            "title": {
                                 "type": "text",
-                                "data": "Dismiss"
+                                "data": "Use Google's Location Services?",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 21
+                                }
                             },
-                            "onPressed": {
-                                "actionType": "navigate",
-                                "navigationType": "screen",
-                                "navigationStyle": "pop"
-                            }
+                            "content": {
+                                "type": "padding",
+                                "padding": {
+                                    "top": 24,
+                                    "left": 12,
+                                    "right": 12,
+                                    "bottom": 8
+                                },
+                                "child": {
+                                    "type": "text",
+                                    "data": "Let Google help apps determine location.",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 14
+                                    }
+                                }
+                            },
+                            "actions": [
+                                {
+                                    "type": "textButton",
+                                    "style": {
+                                        "foregroundColor": "#FF0000"
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "DISAGREE"
+                                    },
+                                    "onPressed": {
+                                        "actionType": "navigate",
+                                        "navigationType": "screen",
+                                        "navigationStyle": "pop"
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 8
+                                },
+                                {
+                                    "type": "textButton",
+                                    "style": {
+                                        "foregroundColor": "#FF0000"
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "AGREE"
+                                    },
+                                    "onPressed": {
+                                        "actionType": "navigate",
+                                        "navigationType": "screen",
+                                        "navigationStyle": "pop"
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 12
+                                }
+                            ]
                         }
-                    ]
+                    }
                 }
-            }
+            ]
         }
     }
 }
