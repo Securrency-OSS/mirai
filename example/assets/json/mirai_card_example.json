@@ -2,23 +2,15 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Mirai Card",
-            "align": "center",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#99ccff",
+        "elevation": 0,
+        "backgroundColor": "#f5f5f5",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "color": "#ffffff"
+                "color": "#3c3c3c"
             },
             "onPressed": {
                 "actionType": "navigate",
@@ -27,52 +19,111 @@
             }
         }
     },
+    "backgroundColor": "#f5f5f5",
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is an mirai card example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "card",
-                "color": "#99ccff",
-                "shadowColor": "#ff0000",
-                "surfaceTintColor": "#ff0000",
-                "elevation": 2,
-                "child": {
-                    "type": "container",
-                    "width": 100,
-                    "height": 100,
-                    "child": {
-                        "type": "text",
-                        "data": "Hello",
-                        "style": {
-                            "color": "#ff0000",
-                            "fontSize": 21
-                        }
+        "type": "padding",
+        "padding": {
+            "bottom": 10,
+            "top": 10
+        },
+        "child": {
+            "type": "scaffold",
+            "appBar": {
+                "type": "appBar",
+                "title": {
+                    "type": "text",
+                    "data": "Cards",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": 21
                     }
                 },
-                "margin": {
-                    "top": 10,
-                    "bottom": 10,
-                    "left": 10,
-                    "right": 10
-                }
+                "backgroundColor": "#6200ee"
+            },
+            "backgroundColor": "#ffffff",
+            "body": {
+                "type": "row",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "column",
+                        "mainAxisAlignment": "start",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "sizedBox",
+                                "height": 12
+                            },
+                            {
+                                "type": "card",
+                                "elevation": 2,
+                                "child": {
+                                    "type": "column",
+                                    "mainAxisAlignment": "start",
+                                    "crossAxisAlignment": "start",
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "src": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/00/1a/52.jpg",
+                                            "height": 250
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "height": 12
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "width": 350,
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Dubai full day tour with Entry ticket to Burj Khalifa at the Top",
+                                                "overflow": "ellipsis",
+                                                "maxLines": 2
+                                            }
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "height": 12
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "Tickets from AED 100 - 500"
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "height": 12
+                                        },
+                                        {
+                                            "type": "row",
+                                            "children": [
+                                                {
+                                                    "type": "textButton",
+                                                    "child": {
+                                                        "type": "text",
+                                                        "data": "Explore"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "sizedBox",
+                                                    "width": 24
+                                                },
+                                                {
+                                                    "type": "textButton",
+                                                    "child": {
+                                                        "type": "text",
+                                                        "data": "Share"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
+        }
     }
 }
