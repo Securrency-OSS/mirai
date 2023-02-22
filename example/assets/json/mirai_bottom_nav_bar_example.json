@@ -2,23 +2,15 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Mirai Bottom Navigation Bar",
-            "align": "center",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#99ccff",
+        "elevation": 0,
+        "backgroundColor": "#f5f5f5",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "color": "#ffffff"
+                "color": "#3c3c3c"
             },
             "onPressed": {
                 "actionType": "navigate",
@@ -27,60 +19,87 @@
             }
         }
     },
+    "backgroundColor": "#f5f5f5",
     "body": {
-        "type": "listView",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
+        "type": "padding",
+        "padding": {
+            "bottom": 10,
+            "top": 10
+        },
+        "child": {
+            "type": "scaffold",
+            "appBar": {
+                "type": "appBar",
+                "title": {
+                    "type": "text",
+                    "data": "Selected label",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": 21
+                    }
+                },
+                "backgroundColor": "#6200ee"
             },
-            {
-                "type": "text",
-                "data": "This is an bottom navigation bar example.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
+            "backgroundColor": "#ffffff",
+            "body": {
+                "type": "row",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "column",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Home",
+                                "style": {
+                                    "fontSize": 17
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bottomNavigationBar": {
+                "type": "bottomNavigationBar",
+                "backgroundColor": "#6200ee",
+                "selectedItemColor": "#ffffff",
+                "unselectedItemColor": "#B489F3",
+                "items": [
+                    {
+                        "type": "navigationBarItem",
+                        "label": "Comments",
+                        "icon": {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "comment",
+                            "size": 24
+                        }
+                    },
+                    {
+                        "type": "navigationBarItem",
+                        "label": "Calendar",
+                        "icon": {
+                            "type": "icon",
+                            "iconType": "material",
+                            "icon": "calendar_month",
+                            "size": 24
+                        }
+                    },
+                    {
+                        "type": "navigationBarItem",
+                        "label": "Account",
+                        "icon": {
+                            "type": "icon",
+                            "iconType": "cupertino",
+                            "icon": "profile_circled",
+                            "size": 24
+                        }
+                    }
+                ]
             }
-        ]
-    },
-    "bottomNavigationBar": {
-        "type": "bottomNavigationBar",
-        "backgroundColor": "#99ccff",
-        "selectedItemColor": "#36374b",
-        "unselectedItemColor": "#ffffff",
-        "items": [
-            {
-                "type": "navigationBarItem",
-                "label": "Search",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "search",
-                    "size": 40
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Profile",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "profile_circled",
-                    "size": 40
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Menue",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "menu_rounded",
-                    "size": 40
-                }
-            }
-        ]
+        }
     }
 }
