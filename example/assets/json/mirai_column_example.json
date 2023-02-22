@@ -2,23 +2,15 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Mirai Column",
-            "align": "center",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#99ccff",
+        "elevation": 0,
+        "backgroundColor": "#f5f5f5",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
                 "icon": "arrow_back",
-                "color": "#ffffff"
+                "color": "#3c3c3c"
             },
             "onPressed": {
                 "actionType": "navigate",
@@ -27,74 +19,210 @@
             }
         }
     },
+    "backgroundColor": "#f5f5f5",
     "body": {
-        "type": "column",
-        "mainAxisAlignment": "start",
-        "crossAxisAlignment": "center",
-        "mainAxisSize": "max",
-        "textDirection": "ltr",
-        "verticalDirection": "down",
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
+        "type": "padding",
+        "padding": {
+            "bottom": 10,
+            "top": 10
+        },
+        "child": {
+            "type": "scaffold",
+            "appBar": {
+                "type": "appBar",
+                "title": {
+                    "type": "text",
+                    "data": "Column",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": 21
+                    }
+                },
+                "backgroundColor": "#6200ee"
             },
-            {
-                "type": "text",
-                "data": "This is item 1",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 2",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 3",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 4",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "text",
-                "data": "This is item 5",
-                "style": {
-                    "fontSize": 16,
-                    "align": "center"
-                }
+            "backgroundColor": "#ffffff",
+            "body": {
+                "type": "column",
+                "mainAxisAlignment": "start",
+                "crossAxisAlignment": "start",
+                "children": [
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "card",
+                        "elevation": 2,
+                        "child": {
+                            "type": "row",
+                            "mainAxisAlignment": "start",
+                            "crossAxisAlignment": "start",
+                            "children": [
+                                {
+                                    "type": "sizedBox",
+                                    "width": 12
+                                },
+                                {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "calendar_month",
+                                    "size": 24,
+                                    "color": "#3c3c3c"
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 12
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "child": {
+                                        "type": "text",
+                                        "data": "Dubai Mall",
+                                        "overflow": "ellipsis",
+                                        "maxLines": 2
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "card",
+                        "elevation": 2,
+                        "child": {
+                            "type": "column",
+                            "mainAxisAlignment": "start",
+                            "crossAxisAlignment": "start",
+                            "children": [
+                                {
+                                    "type": "image",
+                                    "src": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/00/1a/52.jpg",
+                                    "height": 50
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "child": {
+                                        "type": "text",
+                                        "data": "Dubai Mall",
+                                        "overflow": "ellipsis",
+                                        "maxLines": 2
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "text",
+                                    "data": "Tickets from AED 100 - 500"
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "row",
+                                    "children": [
+                                        {
+                                            "type": "textButton",
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Explore"
+                                            }
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "width": 24
+                                        },
+                                        {
+                                            "type": "textButton",
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Share"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "card",
+                        "elevation": 2,
+                        "child": {
+                            "type": "column",
+                            "mainAxisAlignment": "start",
+                            "crossAxisAlignment": "start",
+                            "children": [
+                                {
+                                    "type": "image",
+                                    "src": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/00/1a/52.jpg",
+                                    "height": 50
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "child": {
+                                        "type": "text",
+                                        "data": "Dubai Mall",
+                                        "overflow": "ellipsis",
+                                        "maxLines": 2
+                                    }
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "text",
+                                    "data": "Tickets from AED 100 - 500"
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "height": 12
+                                },
+                                {
+                                    "type": "row",
+                                    "children": [
+                                        {
+                                            "type": "textButton",
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Explore"
+                                            }
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "width": 24
+                                        },
+                                        {
+                                            "type": "textButton",
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Share"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
-        ]
+        }
     }
 }

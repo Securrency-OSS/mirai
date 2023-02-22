@@ -1,10 +1,11 @@
+import 'package:example/app/example/example_screen_parser.dart';
 import 'package:example/app/main/main_screen.dart';
 import 'package:example/values/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 
 void main() {
-  Mirai.initialize();
+  Mirai.initialize(parsers: [const ExampleScreenParser()]);
   runApp(const MyApp());
 }
 

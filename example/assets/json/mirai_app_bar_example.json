@@ -2,104 +2,74 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "elevation": 0,
-        "backgroundColor": "#f5f5f5",
+        "title": {
+            "type": "text",
+            "data": "Appbar",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#6200ee",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#3c3c3c"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
+                "icon": "menu",
+                "color": "#ffffff"
             }
-        }
-    },
-    "backgroundColor": "#f5f5f5",
-    "body": {
-        "type": "padding",
-        "padding": {
-            "bottom": 10,
-            "top": 10
         },
-        "child": {
-            "type": "scaffold",
-            "appBar": {
-                "type": "appBar",
-                "title": {
-                    "type": "text",
-                    "data": "Mirai Appbar",
-                    "style": {
-                        "color": "#ffffff",
-                        "fontSize": 21
-                    }
-                },
-                "backgroundColor": "#6200ee",
-                "leading": {
-                    "type": "iconButton",
-                    "child": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "menu",
-                        "color": "#ffffff"
-                    }
-                },
-                "actions": [
-                    {
-                        "type": "iconButton",
-                        "child": {
-                            "type": "icon",
-                            "iconType": "cupertino",
-                            "icon": "heart_solid",
-                            "color": "#ffffff"
-                        }
-                    },
-                    {
-                        "type": "iconButton",
-                        "child": {
-                            "type": "icon",
-                            "iconType": "material",
-                            "icon": "search",
-                            "color": "#ffffff"
-                        }
-                    },
-                    {
-                        "type": "iconButton",
-                        "child": {
-                            "type": "icon",
-                            "iconType": "material",
-                            "icon": "more_horiz",
-                            "color": "#ffffff"
-                        }
-                    }
-                ]
+        "actions": [
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "heart_solid",
+                    "color": "#ffffff"
+                }
             },
-            "backgroundColor": "#ffffff",
-            "body": {
-                "type": "row",
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "search",
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "more_horiz",
+                    "color": "#ffffff"
+                }
+            }
+        ]
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
                 "mainAxisAlignment": "center",
                 "crossAxisAlignment": "center",
                 "children": [
                     {
-                        "type": "column",
-                        "mainAxisAlignment": "center",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "Home",
-                                "style": {
-                                    "fontSize": 17
-                                }
-                            }
-                        ]
+                        "type": "text",
+                        "data": "Home",
+                        "style": {
+                            "fontSize": 17
+                        }
                     }
                 ]
             }
-        }
+        ]
     }
 }
