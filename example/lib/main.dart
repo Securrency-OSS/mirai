@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 
 void main() {
-  Mirai.initialize();
   runApp(const MyApp());
 }
 
@@ -11,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MiraiApp(
+      title: 'Mirai Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
