@@ -4,60 +4,86 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Mirai Icon",
-            "align": "center",
+            "data": "Icon",
             "style": {
                 "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        }
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "column",
-        "mainAxisAlignment": "start",
+        "type": "row",
+        "mainAxisAlignment": "center",
         "crossAxisAlignment": "center",
         "children": [
             {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "row",
-                "mainAxisAlignment": "spaceEvenly",
+                "type": "column",
+                "mainAxisAlignment": "center",
                 "crossAxisAlignment": "center",
                 "children": [
                     {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "add",
-                        "color": "#ff0000"
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "icon",
+                                "iconType": "material",
+                                "icon": "add",
+                                "color": "#4D00E9",
+                                "size": 32
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "icon",
+                                "iconType": "material",
+                                "icon": "remove",
+                                "color": "#4D00E9",
+                                "size": 32
+                            }
+                        ]
                     },
                     {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "remove",
-                        "color": "#ff0000"
+                        "type": "sizedBox",
+                        "height": 24
                     },
                     {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "person",
-                        "color": "#ff0000"
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "container",
+                                "color": "#4D00E9",
+                                "child": {
+                                    "type": "icon",
+                                    "color": "#ffffff",
+                                    "iconType": "material",
+                                    "icon": "add",
+                                    "size": 32
+                                }
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "container",
+                                "color": "#4D00E9",
+                                "child": {
+                                    "type": "icon",
+                                    "color": "#ffffff",
+                                    "iconType": "material",
+                                    "icon": "remove",
+                                    "size": 32
+                                }
+                            }
+                        ]
                     }
                 ]
             }

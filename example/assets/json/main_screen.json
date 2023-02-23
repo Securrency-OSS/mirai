@@ -341,44 +341,12 @@
                 "type": "listTile",
                 "leading": {
                     "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "heart_solid"
-                },
-                "title": {
-                    "type": "text",
-                    "data": "Mirai Icon",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 21
-                    }
-                },
-                "subtitle": {
-                    "type": "text",
-                    "data": "A Material Design icon",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 12
-                    }
-                },
-                "isThreeLine": true,
-                "style": "list",
-                "onTap": {
-                    "actionType": "navigate",
-                    "navigationStyle": "push",
-                    "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_icon_button_example.json"
-                }
-            },
-            {
-                "type": "listTile",
-                "leading": {
-                    "type": "icon",
                     "iconType": "material",
                     "icon": "radio_button_checked"
                 },
                 "title": {
                     "type": "text",
-                    "data": "Mirai Icon Button",
+                    "data": "Mirai Icon",
                     "align": "center",
                     "style": {
                         "fontSize": 21
@@ -398,7 +366,45 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_icon_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_icon_example.json"
+                    }
+                }
+            },
+            {
+                "type": "listTile",
+                "leading": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "heart_solid"
+                },
+                "title": {
+                    "type": "text",
+                    "data": "Mirai Icon Button",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 21
+                    }
+                },
+                "subtitle": {
+                    "type": "text",
+                    "data": "A Material Design icon",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 12
+                    }
+                },
+                "isThreeLine": true,
+                "style": "list",
+                "onTap": {
+                    "actionType": "navigate",
+                    "navigationStyle": "push",
+                    "navigationType": "screen",
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_icon_button_example.json"
+                    }
                 }
             },
             {
