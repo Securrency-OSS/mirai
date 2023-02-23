@@ -8,12 +8,10 @@ part of 'example_screen.dart';
 
 _$_ExampleScreen _$$_ExampleScreenFromJson(Map<String, dynamic> json) =>
     _$_ExampleScreen(
-      appBar: json['appBar'] as Map<String, dynamic>?,
       assetPath: json['assetPath'] as String,
     );
 
 Map<String, dynamic> _$$_ExampleScreenToJson(_$_ExampleScreen instance) =>
     <String, dynamic>{
-      'appBar': instance.appBar,
       'assetPath': instance.assetPath,
     };

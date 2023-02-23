@@ -20,7 +20,6 @@ ExampleScreen _$ExampleScreenFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExampleScreen {
-  Map<String, dynamic>? get appBar => throw _privateConstructorUsedError;
   String get assetPath => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +34,7 @@ abstract class $ExampleScreenCopyWith<$Res> {
           ExampleScreen value, $Res Function(ExampleScreen) then) =
       _$ExampleScreenCopyWithImpl<$Res, ExampleScreen>;
   @useResult
-  $Res call({Map<String, dynamic>? appBar, String assetPath});
+  $Res call({String assetPath});
 }
 
 /// @nodoc
@@ -51,14 +50,9 @@ class _$ExampleScreenCopyWithImpl<$Res, $Val extends ExampleScreen>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appBar = freezed,
     Object? assetPath = null,
   }) {
     return _then(_value.copyWith(
-      appBar: freezed == appBar
-          ? _value.appBar
-          : appBar // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       assetPath: null == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -75,7 +69,7 @@ abstract class _$$_ExampleScreenCopyWith<$Res>
       __$$_ExampleScreenCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic>? appBar, String assetPath});
+  $Res call({String assetPath});
 }
 
 /// @nodoc
@@ -89,14 +83,9 @@ class __$$_ExampleScreenCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appBar = freezed,
     Object? assetPath = null,
   }) {
     return _then(_$_ExampleScreen(
-      appBar: freezed == appBar
-          ? _value._appBar
-          : appBar // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       assetPath: null == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -108,29 +97,17 @@ class __$$_ExampleScreenCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExampleScreen implements _ExampleScreen {
-  const _$_ExampleScreen(
-      {final Map<String, dynamic>? appBar, required this.assetPath})
-      : _appBar = appBar;
+  const _$_ExampleScreen({required this.assetPath});
 
   factory _$_ExampleScreen.fromJson(Map<String, dynamic> json) =>
       _$$_ExampleScreenFromJson(json);
-
-  final Map<String, dynamic>? _appBar;
-  @override
-  Map<String, dynamic>? get appBar {
-    final value = _appBar;
-    if (value == null) return null;
-    if (_appBar is EqualUnmodifiableMapView) return _appBar;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
 
   @override
   final String assetPath;
 
   @override
   String toString() {
-    return 'ExampleScreen(appBar: $appBar, assetPath: $assetPath)';
+    return 'ExampleScreen(assetPath: $assetPath)';
   }
 
   @override
@@ -138,15 +115,13 @@ class _$_ExampleScreen implements _ExampleScreen {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ExampleScreen &&
-            const DeepCollectionEquality().equals(other._appBar, _appBar) &&
             (identical(other.assetPath, assetPath) ||
                 other.assetPath == assetPath));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_appBar), assetPath);
+  int get hashCode => Object.hash(runtimeType, assetPath);
 
   @JsonKey(ignore: true)
   @override
@@ -163,15 +138,12 @@ class _$_ExampleScreen implements _ExampleScreen {
 }
 
 abstract class _ExampleScreen implements ExampleScreen {
-  const factory _ExampleScreen(
-      {final Map<String, dynamic>? appBar,
-      required final String assetPath}) = _$_ExampleScreen;
+  const factory _ExampleScreen({required final String assetPath}) =
+      _$_ExampleScreen;
 
   factory _ExampleScreen.fromJson(Map<String, dynamic> json) =
       _$_ExampleScreen.fromJson;
 
-  @override
-  Map<String, dynamic>? get appBar;
   @override
   String get assetPath;
   @override

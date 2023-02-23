@@ -6,7 +6,6 @@ part 'example_screen.g.dart';
 @freezed
 class ExampleScreen with _$ExampleScreen {
   const factory ExampleScreen({
-    Map<String, dynamic>? appBar,
     required String assetPath,
   }) = _ExampleScreen;
 
