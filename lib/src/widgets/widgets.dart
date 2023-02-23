@@ -4,6 +4,7 @@ export 'package:mirai/src/ui/mirai_navigation_bar_item/mirai_bottom_navigation_b
 export 'package:mirai/src/widgets/framework.dart';
 export 'package:mirai/src/widgets/mirai.dart';
 export 'package:mirai/src/widgets/mirai_alert_dialog/mirai_alert_dialog.dart';
+export 'package:mirai/src/widgets/mirai_app.dart';
 export 'package:mirai/src/widgets/mirai_app_bar/mirai_app_bar.dart';
 export 'package:mirai/src/widgets/mirai_bottom_navigation_bar/mirai_bottom_navigation_bar.dart';
 export 'package:mirai/src/widgets/mirai_card/mirai_card.dart';
