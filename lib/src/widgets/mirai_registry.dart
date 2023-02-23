@@ -19,7 +19,6 @@ class MiraiRegistry {
       return false;
     } else {
       _miraiParsers[type] = parser;
-      Log.w('Widget $type registered');
       return true;
     }
   }
