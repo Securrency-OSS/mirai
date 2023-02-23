@@ -121,7 +121,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_card_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_card_example.json"
+                    }
                 }
             },
             {
@@ -249,7 +252,7 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_alert_dialog_example.json"
+                    "assetPath": "assets/json/mirai_dialog_example.json"
                 }
             },
             {

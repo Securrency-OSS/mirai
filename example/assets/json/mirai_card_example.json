@@ -2,128 +2,77 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "elevation": 0,
-        "backgroundColor": "#f5f5f5",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#3c3c3c"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
+        "title": {
+            "type": "text",
+            "data": "Cards",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
             }
-        }
-    },
-    "backgroundColor": "#f5f5f5",
-    "body": {
-        "type": "padding",
-        "padding": {
-            "bottom": 10,
-            "top": 10
         },
-        "child": {
-            "type": "scaffold",
-            "appBar": {
-                "type": "appBar",
-                "title": {
-                    "type": "text",
-                    "data": "Cards",
-                    "style": {
-                        "color": "#ffffff",
-                        "fontSize": 21
-                    }
-                },
-                "backgroundColor": "#6200ee"
+        "backgroundColor": "#6200ee"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "column",
+        "mainAxisAlignment": "start",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 12
             },
-            "backgroundColor": "#ffffff",
-            "body": {
-                "type": "row",
-                "mainAxisAlignment": "center",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "column",
-                        "mainAxisAlignment": "start",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "sizedBox",
-                                "height": 12
-                            },
-                            {
-                                "type": "card",
-                                "elevation": 2,
-                                "child": {
-                                    "type": "column",
-                                    "mainAxisAlignment": "start",
-                                    "crossAxisAlignment": "start",
-                                    "children": [
-                                        {
-                                            "type": "image",
-                                            "src": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/00/1a/52.jpg",
-                                            "height": 250
-                                        },
-                                        {
-                                            "type": "sizedBox",
-                                            "height": 12
-                                        },
-                                        {
-                                            "type": "sizedBox",
-                                            "width": 350,
-                                            "child": {
-                                                "type": "text",
-                                                "data": "Dubai full day tour with Entry ticket to Burj Khalifa at the Top",
-                                                "overflow": "ellipsis",
-                                                "maxLines": 2
-                                            }
-                                        },
-                                        {
-                                            "type": "sizedBox",
-                                            "height": 12
-                                        },
-                                        {
-                                            "type": "text",
-                                            "data": "Tickets from AED 100 - 500"
-                                        },
-                                        {
-                                            "type": "sizedBox",
-                                            "height": 12
-                                        },
-                                        {
-                                            "type": "row",
-                                            "children": [
-                                                {
-                                                    "type": "textButton",
-                                                    "child": {
-                                                        "type": "text",
-                                                        "data": "Explore"
-                                                    }
-                                                },
-                                                {
-                                                    "type": "sizedBox",
-                                                    "width": 24
-                                                },
-                                                {
-                                                    "type": "textButton",
-                                                    "child": {
-                                                        "type": "text",
-                                                        "data": "Share"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
+            {
+                "type": "card",
+                "color": "#FFC107",
+                "elevation": 20,
+                "shadowColor": "#C8E6C9",
+                "borderOnForeground": true,
+                "margin": {
+                    "top": 20,
+                    "bottom": 20,
+                    "right": 20,
+                    "left": 20
+                },
+                "child": {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "image",
+                        "src": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                        "width": 50,
+                        "height": 50
+                    },
+                    "title": {
+                        "type": "padding",
+                        "padding": {
+                            "top": 10
+                        },
+                        "child": {
+                            "type": "text",
+                            "data": "Prof. Richard Jhonson",
+                            "align": "center",
+                            "style": {
+                                "fontSize": 21
                             }
-                        ]
+                        }
+                    },
+                    "subtitle": {
+                        "type": "padding",
+                        "padding": {
+                            "top": 10,
+                            "bottom": 10
+                        },
+                        "child": {
+                            "type": "text",
+                            "data": "Head of Department of Computer Science, The New York University Campus, Abu Dhabi, United Arab Emirates.",
+                            "align": "center",
+                            "style": {
+                                "fontSize": 12
+                            }
+                        }
                     }
-                ]
+                }
             }
-        }
+        ]
     }
 }

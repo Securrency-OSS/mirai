@@ -15,14 +15,27 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
   @override
   Widget parse(BuildContext context, ExampleScreen model) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: const Color(0XFFf5f5f5),
+        elevation: 0,
+        leading: IconButton(
+            onPressed: () => Navigator.of(context).pop(),
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Color(0XFF3c3c3c),
+            )),
+      ),
+      backgroundColor: const Color(0XFFf5f5f5),
       body: FutureBuilder(
         future: Mirai.fromAssets(model.assetPath, context),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          return snapshot.data ??
-              const Center(
-                child: CircularProgressIndicator(),
-              );
+          return Padding(
+            padding: const EdgeInsets.all(24),
+            child: snapshot.data ??
+                const Center(
+                  child: CircularProgressIndicator(),
+                ),
+          );
         },
       ),
     );

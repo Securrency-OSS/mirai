@@ -2,104 +2,74 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "elevation": 0,
-        "backgroundColor": "#f5f5f5",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#3c3c3c"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
+        "title": {
+            "type": "text",
+            "data": "Selected label",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
             }
-        }
-    },
-    "backgroundColor": "#f5f5f5",
-    "body": {
-        "type": "padding",
-        "padding": {
-            "bottom": 10,
-            "top": 10
         },
-        "child": {
-            "type": "scaffold",
-            "appBar": {
-                "type": "appBar",
-                "title": {
-                    "type": "text",
-                    "data": "Selected label",
-                    "style": {
-                        "color": "#ffffff",
-                        "fontSize": 21
-                    }
-                },
-                "backgroundColor": "#6200ee"
-            },
-            "backgroundColor": "#ffffff",
-            "body": {
-                "type": "row",
+        "backgroundColor": "#6200ee"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
                 "mainAxisAlignment": "center",
                 "crossAxisAlignment": "center",
                 "children": [
                     {
-                        "type": "column",
-                        "mainAxisAlignment": "center",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "Home",
-                                "style": {
-                                    "fontSize": 17
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "bottomNavigationBar": {
-                "type": "bottomNavigationBar",
-                "backgroundColor": "#6200ee",
-                "selectedItemColor": "#ffffff",
-                "unselectedItemColor": "#B489F3",
-                "items": [
-                    {
-                        "type": "navigationBarItem",
-                        "label": "Comments",
-                        "icon": {
-                            "type": "icon",
-                            "iconType": "material",
-                            "icon": "comment",
-                            "size": 24
-                        }
-                    },
-                    {
-                        "type": "navigationBarItem",
-                        "label": "Calendar",
-                        "icon": {
-                            "type": "icon",
-                            "iconType": "material",
-                            "icon": "calendar_month",
-                            "size": 24
-                        }
-                    },
-                    {
-                        "type": "navigationBarItem",
-                        "label": "Account",
-                        "icon": {
-                            "type": "icon",
-                            "iconType": "cupertino",
-                            "icon": "profile_circled",
-                            "size": 24
+                        "type": "text",
+                        "data": "Home",
+                        "style": {
+                            "fontSize": 17
                         }
                     }
                 ]
             }
-        }
+        ]
+    },
+    "bottomNavigationBar": {
+        "type": "bottomNavigationBar",
+        "backgroundColor": "#6200ee",
+        "selectedItemColor": "#ffffff",
+        "unselectedItemColor": "#B489F3",
+        "items": [
+            {
+                "type": "navigationBarItem",
+                "label": "Comments",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "comment",
+                    "size": 24
+                }
+            },
+            {
+                "type": "navigationBarItem",
+                "label": "Calendar",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "calendar_month",
+                    "size": 24
+                }
+            },
+            {
+                "type": "navigationBarItem",
+                "label": "Account",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "profile_circled",
+                    "size": 24
+                }
+            }
+        ]
     }
 }
