@@ -21,7 +21,9 @@ class MiraiFloatingActionButtonParser
     switch (model.buttonType) {
       case FloatingActionButtonType.extended:
         return FloatingActionButton.extended(
-          onPressed: () => model.onPressed.onCall(context),
+          onPressed: model.onPressed == null
+              ? null
+              : () => model.onPressed.onCall(context),
           icon: Mirai.fromJson(model.icon, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
@@ -44,7 +46,9 @@ class MiraiFloatingActionButtonParser
 
       case FloatingActionButtonType.large:
         return FloatingActionButton.large(
-          onPressed: () {},
+          onPressed: model.onPressed == null
+              ? null
+              : () => model.onPressed.onCall(context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,
@@ -63,7 +67,9 @@ class MiraiFloatingActionButtonParser
 
       case FloatingActionButtonType.medium:
         return FloatingActionButton(
-          onPressed: () {},
+          onPressed: model.onPressed == null
+              ? null
+              : () => model.onPressed.onCall(context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,
@@ -82,7 +88,9 @@ class MiraiFloatingActionButtonParser
 
       case FloatingActionButtonType.small:
         return FloatingActionButton.small(
-          onPressed: () {},
+          onPressed: model.onPressed == null
+              ? null
+              : () => model.onPressed.onCall(context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,

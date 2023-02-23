@@ -2,235 +2,205 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "elevation": 0,
-        "backgroundColor": "#f5f5f5",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#3c3c3c"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
+        "title": {
+            "type": "text",
+            "data": "Dialogs",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
             }
-        }
-    },
-    "backgroundColor": "#f5f5f5",
-    "body": {
-        "type": "padding",
-        "padding": {
-            "bottom": 10,
-            "top": 10
         },
-        "child": {
-            "type": "scaffold",
-            "appBar": {
-                "type": "appBar",
-                "title": {
-                    "type": "text",
-                    "data": "Mirai Alert",
-                    "align": "center",
-                    "style": {
-                        "color": "#ffffff",
-                        "fontSize": 21
-                    }
-                },
-                "backgroundColor": "#6200ee"
-            },
-            "backgroundColor": "#ffffff",
-            "body": {
-                "type": "row",
+        "backgroundColor": "#4D00E9"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
                 "mainAxisAlignment": "center",
                 "crossAxisAlignment": "center",
                 "children": [
                     {
-                        "type": "column",
-                        "mainAxisAlignment": "center",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "elevatedButton",
-                                "child": {
-                                    "type": "text",
-                                    "data": "SIMPLE ALERT"
-                                },
-                                "style": {
-                                    "backgroundColor": "#6200ee",
-                                    "padding": {
-                                        "top": 8,
-                                        "left": 12,
-                                        "right": 12,
-                                        "bottom": 8
-                                    }
-                                },
-                                "onPressed": {
-                                    "actionType": "navigate",
-                                    "navigationStyle": "push",
-                                    "navigationType": "dialog",
-                                    "widgetJson": {
-                                        "type": "alertDialog",
-                                        "backgroundColor": "#ffffff",
-                                        "content": {
-                                            "type": "padding",
-                                            "padding": {
-                                                "top": 0,
-                                                "left": 12,
-                                                "right": 12,
-                                                "bottom": 8
-                                            },
-                                            "child": {
-                                                "type": "text",
-                                                "data": "Discard draft?",
-                                                "align": "center",
-                                                "style": {
-                                                    "fontSize": 14
-                                                }
-                                            }
-                                        },
-                                        "actions": [
-                                            {
-                                                "type": "textButton",
-                                                "style": {
-                                                    "foregroundColor": "#FF0000"
-                                                },
-                                                "child": {
-                                                    "type": "text",
-                                                    "data": "CANCEL"
-                                                },
-                                                "onPressed": {
-                                                    "actionType": "navigate",
-                                                    "navigationType": "screen",
-                                                    "navigationStyle": "pop"
-                                                }
-                                            },
-                                            {
-                                                "type": "sizedBox",
-                                                "width": 8
-                                            },
-                                            {
-                                                "type": "textButton",
-                                                "style": {
-                                                    "foregroundColor": "#FF0000"
-                                                },
-                                                "child": {
-                                                    "type": "text",
-                                                    "data": "DISCARD"
-                                                },
-                                                "onPressed": {
-                                                    "actionType": "navigate",
-                                                    "navigationType": "screen",
-                                                    "navigationStyle": "pop"
-                                                }
-                                            },
-                                            {
-                                                "type": "sizedBox",
-                                                "width": 12
-                                            }
-                                        ]
-                                    }
-                                }
-                            },
-                            {
-                                "type": "sizedBox",
-                                "height": 12
-                            },
-                            {
-                                "type": "elevatedButton",
-                                "child": {
-                                    "type": "text",
-                                    "data": "ALERT WITH TITLE"
-                                },
-                                "style": {
-                                    "backgroundColor": "#6200ee",
-                                    "padding": {
-                                        "left": 12,
-                                        "right": 12,
-                                        "bottom": 8
-                                    }
-                                },
-                                "onPressed": {
-                                    "actionType": "navigate",
-                                    "navigationStyle": "push",
-                                    "navigationType": "dialog",
-                                    "widgetJson": {
-                                        "type": "alertDialog",
-                                        "backgroundColor": "#ffffff",
-                                        "title": {
-                                            "type": "text",
-                                            "data": "Use Google's Location Services?",
-                                            "align": "center",
-                                            "style": {
-                                                "fontSize": 21
-                                            }
-                                        },
-                                        "content": {
-                                            "type": "padding",
-                                            "padding": {
-                                                "top": 24,
-                                                "left": 12,
-                                                "right": 12,
-                                                "bottom": 8
-                                            },
-                                            "child": {
-                                                "type": "text",
-                                                "data": "Let Google help apps determine location.",
-                                                "align": "center",
-                                                "style": {
-                                                    "fontSize": 14
-                                                }
-                                            }
-                                        },
-                                        "actions": [
-                                            {
-                                                "type": "textButton",
-                                                "style": {
-                                                    "foregroundColor": "#FF0000"
-                                                },
-                                                "child": {
-                                                    "type": "text",
-                                                    "data": "DISAGREE"
-                                                },
-                                                "onPressed": {
-                                                    "actionType": "navigate",
-                                                    "navigationType": "screen",
-                                                    "navigationStyle": "pop"
-                                                }
-                                            },
-                                            {
-                                                "type": "sizedBox",
-                                                "width": 8
-                                            },
-                                            {
-                                                "type": "textButton",
-                                                "style": {
-                                                    "foregroundColor": "#FF0000"
-                                                },
-                                                "child": {
-                                                    "type": "text",
-                                                    "data": "AGREE"
-                                                },
-                                                "onPressed": {
-                                                    "actionType": "navigate",
-                                                    "navigationType": "screen",
-                                                    "navigationStyle": "pop"
-                                                }
-                                            },
-                                            {
-                                                "type": "sizedBox",
-                                                "width": 12
-                                            }
-                                        ]
-                                    }
-                                }
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "SIMPLE ALERT"
+                        },
+                        "style": {
+                            "backgroundColor": "#4D00E9",
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
                             }
-                        ]
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "push",
+                            "navigationType": "dialog",
+                            "widgetJson": {
+                                "type": "alertDialog",
+                                "backgroundColor": "#ffffff",
+                                "content": {
+                                    "type": "padding",
+                                    "padding": {
+                                        "top": 0,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "Discard draft?",
+                                        "align": "center",
+                                        "style": {
+                                            "fontSize": 14
+                                        }
+                                    }
+                                },
+                                "actions": [
+                                    {
+                                        "type": "textButton",
+                                        "style": {
+                                            "foregroundColor": "#FF0000"
+                                        },
+                                        "child": {
+                                            "type": "text",
+                                            "data": "CANCEL"
+                                        },
+                                        "onPressed": {
+                                            "actionType": "navigate",
+                                            "navigationType": "screen",
+                                            "navigationStyle": "pop"
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "width": 8
+                                    },
+                                    {
+                                        "type": "textButton",
+                                        "style": {
+                                            "foregroundColor": "#FF0000"
+                                        },
+                                        "child": {
+                                            "type": "text",
+                                            "data": "DISCARD"
+                                        },
+                                        "onPressed": {
+                                            "actionType": "navigate",
+                                            "navigationType": "screen",
+                                            "navigationStyle": "pop"
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "width": 12
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "ALERT WITH TITLE"
+                        },
+                        "style": {
+                            "backgroundColor": "#4D00E9",
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "push",
+                            "navigationType": "dialog",
+                            "widgetJson": {
+                                "type": "alertDialog",
+                                "backgroundColor": "#ffffff",
+                                "title": {
+                                    "type": "text",
+                                    "data": "Use Google's Location Services?",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 21
+                                    }
+                                },
+                                "content": {
+                                    "type": "padding",
+                                    "padding": {
+                                        "top": 24,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    },
+                                    "child": {
+                                        "type": "text",
+                                        "data": "Let Google help apps determine location.",
+                                        "align": "center",
+                                        "style": {
+                                            "fontSize": 14
+                                        }
+                                    }
+                                },
+                                "actions": [
+                                    {
+                                        "type": "textButton",
+                                        "style": {
+                                            "foregroundColor": "#FF0000"
+                                        },
+                                        "child": {
+                                            "type": "text",
+                                            "data": "DISAGREE"
+                                        },
+                                        "onPressed": {
+                                            "actionType": "navigate",
+                                            "navigationType": "screen",
+                                            "navigationStyle": "pop"
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "width": 8
+                                    },
+                                    {
+                                        "type": "textButton",
+                                        "style": {
+                                            "foregroundColor": "#FF0000"
+                                        },
+                                        "child": {
+                                            "type": "text",
+                                            "data": "AGREE"
+                                        },
+                                        "onPressed": {
+                                            "actionType": "navigate",
+                                            "navigationType": "screen",
+                                            "navigationStyle": "pop"
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "width": 12
+                                    }
+                                ]
+                            }
+                        }
                     }
                 ]
             }
-        }
+        ]
     }
 }

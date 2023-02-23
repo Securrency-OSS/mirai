@@ -10,7 +10,7 @@
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#6200ee"
+        "backgroundColor": "#4D00E9"
     },
     "backgroundColor": "#ffffff",
     "body": {
@@ -36,7 +36,7 @@
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "backgroundColor": "#6200ee",
+        "backgroundColor": "#4D00E9",
         "selectedItemColor": "#ffffff",
         "unselectedItemColor": "#B489F3",
         "items": [

@@ -4,36 +4,19 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Mirai Tab Controller",
-            "align": "center",
+            "data": "Chat",
             "style": {
                 "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        }
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "column",
-        "mainAxisAlignment": "start",
-        "crossAxisAlignment": "center",
-        "mainAxisSize": "max",
-        "textDirection": "ltr",
-        "verticalDirection": "down",
+        "type": "listView",
+        "physics": "never",
+        "shrinkWrap": true,
         "children": [
             {
                 "type": "sizedBox",
@@ -44,27 +27,39 @@
                 "length": 3,
                 "child": {
                     "type": "tabBar",
+                    "indicatorColor": "#4D00E9",
                     "tabs": [
                         {
                             "type": "icon",
-                            "iconType": "material",
-                            "icon": "phone",
-                            "color": "#ff0000"
+                            "iconType": "cupertino",
+                            "icon": "home",
+                            "color": "#4D00E9"
                         },
                         {
                             "type": "icon",
-                            "iconType": "material",
-                            "icon": "tablet",
-                            "color": "#ff0000"
+                            "iconType": "cupertino",
+                            "icon": "chat_bubble",
+                            "color": "#4D00E9"
                         },
                         {
                             "type": "icon",
-                            "iconType": "material",
-                            "icon": "computer",
-                            "color": "#ff0000"
+                            "iconType": "cupertino",
+                            "icon": "profile_circled",
+                            "color": "#4D00E9"
                         }
                     ]
                 }
+            },
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 700,
+                "width": 400
             }
         ]
     }
