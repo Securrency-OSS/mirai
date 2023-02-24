@@ -436,7 +436,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_image_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_image_example.json"
+                    }
                 }
             },
             {

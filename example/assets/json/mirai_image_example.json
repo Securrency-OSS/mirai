@@ -4,58 +4,107 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Mirai Image",
-            "align": "center",
+            "data": "Image",
             "style": {
                 "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        }
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "column",
-        "mainAxisAlignment": "start",
-        "crossAxisAlignment": "center",
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 25
-            },
-            {
-                "type": "column",
-                "mainAxisAlignment": "spaceEvenly",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "image",
-                        "width": 200,
-                        "height": 100,
-                        "src": "https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png"
-                    },
-                    {
-                        "type": "image",
-                        "imageType": "asset",
-                        "width": 200,
-                        "height": 100,
-                        "src": "assets/images/google_logo.png"
-                    }
-                ]
-            }
-        ]
+        "type": "scrollView",
+        "child": {
+            "type": "row",
+            "mainAxisAlignment": "center",
+            "crossAxisAlignment": "center",
+            "children": [
+                {
+                    "type": "column",
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                        {
+                            "type": "sizedBox",
+                            "height": 24
+                        },
+                        {
+                            "type": "row",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "image",
+                                    "src": "https://images.pexels.com/photos/15113967/pexels-photo-15113967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                                    "height": 150
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 20
+                                },
+                                {
+                                    "type": "image",
+                                    "src": "assets/images/example_image_1.jpg",
+                                    "imageType": "asset",
+                                    "height": 150
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 24
+                        },
+                        {
+                            "type": "row",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "image",
+                                    "src": "https://images.pexels.com/photos/15352100/pexels-photo-15352100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                                    "height": 150
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 20
+                                },
+                                {
+                                    "type": "image",
+                                    "src": "https://images.pexels.com/photos/15373031/pexels-photo-15373031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                                    "height": 150
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 24
+                        },
+                        {
+                            "type": "row",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "image",
+                                    "src": "https://images.pexels.com/photos/10041677/pexels-photo-10041677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                                    "height": 150
+                                },
+                                {
+                                    "type": "sizedBox",
+                                    "width": 20
+                                },
+                                {
+                                    "type": "image",
+                                    "src": "assets/images/example_image_2.jpg",
+                                    "imageType": "asset",
+                                    "height": 150
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 }
