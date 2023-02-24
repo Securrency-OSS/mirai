@@ -4,56 +4,56 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Tabbar Widget",
-            "align": "center",
+            "data": "Tabbar",
             "style": {
+                "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "defaultTabController",
-        "length": 3,
+        "type": "padding",
+        "padding": {
+            "top": 24
+        },
         "child": {
-            "type": "tabBar",
-            "tabs": [
-                {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "male",
-                    "size": 40,
-                    "color": "#000000"
+            "type": "defaultTabController",
+            "length": 3,
+            "child": {
+                "type": "tabBar",
+                "indicatorColor": "#4D00E9",
+                "indicatorPadding": {
+                    "top": 4
                 },
-                {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "female",
-                    "size": 40,
-                    "color": "#000000"
-                },
-                {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "child_care",
-                    "size": 40,
-                    "color": "#000000"
-                }
-            ]
+                "tabs": [
+                    {
+                        "type": "text",
+                        "data": "Red",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "data": "Orange",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "data": "Green",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    }
+                ]
+            }
         }
     }
 }

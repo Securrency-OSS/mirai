@@ -4,130 +4,52 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Scroll View",
-            "align": "center",
+            "data": "Scrollview",
             "style": {
+                "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "scrollView",
-        "child": {
-            "type": "column",
-            "mainAxisAlignment": "start",
-            "crossAxisAlignment": "center",
-            "mainAxisSize": "max",
-            "textDirection": "ltr",
-            "verticalDirection": "down",
-            "children": [
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "clipBehavior": "hardEdge",
-                    "height": 250,
-                    "width": 850
-                },
-                {
-                    "type": "text",
-                    "data": "This is item 1",
-                    "style": {
-                        "fontSize": 16,
-                        "align": "center"
-                    }
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 52
-                },
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "clipBehavior": "hardEdge",
-                    "height": 250,
-                    "width": 850
-                },
-                {
-                    "type": "text",
-                    "data": "This is item 2",
-                    "style": {
-                        "fontSize": 16,
-                        "align": "center"
-                    }
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 52
-                },
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "clipBehavior": "hardEdge",
-                    "height": 250,
-                    "width": 850
-                },
-                {
-                    "type": "text",
-                    "data": "This is item 3",
-                    "style": {
-                        "fontSize": 16,
-                        "align": "center"
-                    }
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 52
-                },
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "clipBehavior": "hardEdge",
-                    "height": 250,
-                    "width": 850
-                },
-                {
-                    "type": "text",
-                    "data": "This is item 4",
-                    "style": {
-                        "fontSize": 16,
-                        "align": "center"
-                    }
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 52
-                },
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "clipBehavior": "hardEdge",
-                    "height": 250,
-                    "width": 850
-                },
-                {
-                    "type": "text",
-                    "data": "This is item 5",
-                    "style": {
-                        "fontSize": 16,
-                        "align": "center"
-                    }
-                }
-            ]
-        }
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#672BFF",
+                "clipBehavior": "hardEdge",
+                "height": 400,
+                "width": 200
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 400,
+                "width": 200
+            },
+            {
+                "type": "sizedBox",
+                "height": 52
+            },
+            {
+                "type": "container",
+                "color": "#D9D9D9",
+                "clipBehavior": "hardEdge",
+                "height": 400,
+                "width": 200
+            }
+        ]
     }
 }

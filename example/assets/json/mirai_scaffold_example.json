@@ -4,60 +4,121 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Scaffold Widget",
-            "align": "center",
+            "data": "Scaffold",
             "style": {
+                "color": "#ffffff",
                 "fontSize": 21
             }
         },
+        "backgroundColor": "#4D00E9",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
-                "icon": "arrow_back",
+                "icon": "menu",
                 "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
             }
         },
-        "backgroundColor": "#99ccff"
+        "actions": [
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "heart_solid",
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "search",
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "more_horiz",
+                    "color": "#ffffff"
+                }
+            }
+        ]
     },
-    "body": {},
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "text",
+                        "data": "Home",
+                        "style": {
+                            "fontSize": 17
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     "floatingActionButton": {
         "type": "floatingActionButton",
-        "backgroundColor": "#99ccff",
-        "buttonType": "large",
+        "backgroundColor": "#FC3F1B",
+        "foregroundColor": "#ffffff",
+        "buttonType": "medium",
         "child": {
-            "type": "text",
-            "data": "Next"
-        }
+            "type": "icon",
+            "iconType": "material",
+            "icon": "add",
+            "size": 32
+        },
+        "onPressed": {}
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "backgroundColor": "#99ccff",
+        "backgroundColor": "#4D00E9",
+        "selectedItemColor": "#ffffff",
+        "unselectedItemColor": "#B489F3",
         "items": [
             {
                 "type": "navigationBarItem",
-                "label": "Items",
+                "label": "Comments",
                 "icon": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "category",
-                    "size": 40
+                    "icon": "comment",
+                    "size": 24
                 }
             },
             {
                 "type": "navigationBarItem",
-                "label": "People",
+                "label": "Calendar",
                 "icon": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "people",
-                    "size": 40
+                    "icon": "calendar_month",
+                    "size": 24
+                }
+            },
+            {
+                "type": "navigationBarItem",
+                "label": "Account",
+                "icon": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "profile_circled",
+                    "size": 24
                 }
             }
         ]

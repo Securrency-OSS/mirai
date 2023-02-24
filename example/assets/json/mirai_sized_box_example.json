@@ -5,27 +5,14 @@
         "title": {
             "type": "text",
             "data": "Sizedbox",
-            "align": "center",
             "style": {
+                "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
         "type": "listView",
         "shrinkWrap": true,
@@ -35,24 +22,60 @@
                 "height": 25
             },
             {
-                "type": "text",
-                "data": "This is the start point of sizedbox.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
+                "type": "container",
+                "color": "#672BFF",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 50
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 75
+            },
+            {
+                "type": "container",
+                "color": "#D9D9D9",
+                "clipBehavior": "hardEdge",
+                "height": 75
             },
             {
                 "type": "sizedBox",
                 "height": 100
             },
             {
-                "type": "text",
-                "data": "This is the end point of sizedbox with height 100px.",
-                "style": {
-                    "fontSize": 21,
-                    "align": "center"
-                }
+                "type": "container",
+                "color": "#672BFF",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 125
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 150
+            },
+            {
+                "type": "container",
+                "color": "#D9D9D9",
+                "clipBehavior": "hardEdge",
+                "height": 75
             }
         ]
     }
