@@ -5,54 +5,172 @@
         "title": {
             "type": "text",
             "data": "Text Field",
-            "align": "center",
             "style": {
-                "fontSize": 17
+                "color": "#ffffff",
+                "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "padding",
-        "padding": {
-            "top": 12,
-            "left": 12,
-            "right": 12
-        },
+        "type": "scrollView",
         "child": {
-            "type": "textField",
-            "initialValue": "",
-            "hintText": "Enter your name",
-            "maxLines": 1,
-            "keyboardType": "text",
-            "textInputAction": "done",
-            "textAlign": "start",
-            "textCapitalization": "none",
-            "textDirection": "ltr",
-            "textAlignVertical": "top",
-            "obscureText": false,
-            "style": {
-                "foregroundColor": "#ffffff"
-            },
-            "decoration": {
-                "hintText": "Please enter details"
-            },
-            "readOnly": false,
-            "enabled": true
+            "type": "column",
+            "mainAxisAlignment": "center",
+            "crossAxisAlignment": "start",
+            "children": [
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "row",
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                        {
+                            "type": "sizedBox",
+                            "width": 300,
+                            "child": {
+                                "type": "textField",
+                                "maxLines": 1,
+                                "keyboardType": "text",
+                                "textInputAction": "done",
+                                "textAlign": "start",
+                                "textCapitalization": "none",
+                                "textDirection": "ltr",
+                                "textAlignVertical": "top",
+                                "obscureText": false,
+                                "cursorColor": "#FC3F1B",
+                                "style": {
+                                    "color": "#000000"
+                                },
+                                "decoration": {
+                                    "hintText": "What do people call you?",
+                                    "filled": true,
+                                    "icon": {
+                                        "type": "icon",
+                                        "iconType": "cupertino",
+                                        "icon": "person_solid",
+                                        "size": 24
+                                    },
+                                    "hintStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "labelText": "Name*",
+                                    "labelStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "fillColor": "#E7E7E7"
+                                },
+                                "readOnly": false,
+                                "enabled": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "row",
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                        {
+                            "type": "sizedBox",
+                            "width": 300,
+                            "child": {
+                                "type": "textField",
+                                "maxLines": 1,
+                                "keyboardType": "text",
+                                "textInputAction": "done",
+                                "textAlign": "start",
+                                "textCapitalization": "none",
+                                "textDirection": "ltr",
+                                "textAlignVertical": "top",
+                                "obscureText": false,
+                                "cursorColor": "#FC3F1B",
+                                "style": {
+                                    "color": "#000000"
+                                },
+                                "decoration": {
+                                    "hintText": "Where can we reach you?",
+                                    "filled": true,
+                                    "icon": {
+                                        "type": "icon",
+                                        "iconType": "cupertino",
+                                        "icon": "phone_solid",
+                                        "size": 24
+                                    },
+                                    "hintStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "labelText": "Phone number*",
+                                    "labelStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "fillColor": "#E7E7E7"
+                                },
+                                "readOnly": false,
+                                "enabled": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "row",
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                        {
+                            "type": "sizedBox",
+                            "width": 300,
+                            "child": {
+                                "type": "textField",
+                                "maxLines": 1,
+                                "keyboardType": "text",
+                                "textInputAction": "done",
+                                "textAlign": "start",
+                                "textCapitalization": "none",
+                                "textDirection": "ltr",
+                                "textAlignVertical": "top",
+                                "obscureText": false,
+                                "cursorColor": "#FC3F1B",
+                                "style": {
+                                    "color": "#000000"
+                                },
+                                "decoration": {
+                                    "hintText": "Your email address",
+                                    "filled": true,
+                                    "icon": {
+                                        "type": "icon",
+                                        "iconType": "material",
+                                        "icon": "email",
+                                        "size": 24
+                                    },
+                                    "hintStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "labelText": "Email",
+                                    "labelStyle": {
+                                        "color": "#4D00E9"
+                                    },
+                                    "fillColor": "#E7E7E7"
+                                },
+                                "readOnly": false,
+                                "enabled": true
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

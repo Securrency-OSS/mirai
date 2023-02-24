@@ -39,6 +39,9 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
       fillColor: json['fillColor'] as String?,
       focusColor: json['focusColor'] as String?,
       hoverColor: json['hoverColor'] as String?,
+      icon: json['icon'] as Map<String, dynamic>?,
+      iconColor: json['iconColor'] as String?,
+      filled: json['filled'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$_MiraiInputDecorationToJson(
@@ -59,4 +62,7 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'fillColor': instance.fillColor,
       'focusColor': instance.focusColor,
       'hoverColor': instance.hoverColor,
+      'icon': instance.icon,
+      'iconColor': instance.iconColor,
+      'filled': instance.filled,
     };

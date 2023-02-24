@@ -58,7 +58,7 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       cursorHeight: model.cursorHeight,
       cursorColor: model.cursorColor?.toColor,
       style: MiraiTextStyleParser.parse(model.style),
-      decoration: model.decoration?.parse,
+      decoration: model.decoration?.parse(context),
     );
   }
 }

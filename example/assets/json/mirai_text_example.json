@@ -4,28 +4,15 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Text Widget",
-            "align": "center",
+            "data": "Text",
             "style": {
-                "fontSize": 17
+                "color": "#ffffff",
+                "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
         "type": "padding",
         "padding": {
@@ -34,14 +21,42 @@
             "right": 12
         },
         "child": {
-            "type": "text",
-            "data": "\nThis is a simple textview. We can present any amont of textual details here. \n\nFurthermore, we can have multiple lines. \n\nWe can have text color as well as color of the background.|n",
-            "align": "center",
-            "style": {
-                "color": "#ffffff",
-                "backgroundColor": "#99ccff",
-                "fontSize": 17
-            }
+            "type": "column",
+            "mainAxisAlignment": "start",
+            "crossAxisAlignment": "start",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "Flutter",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 23,
+                        "fontWeight": "w600"
+                    }
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 10
+                },
+                {
+                    "type": "container",
+                    "height": 1,
+                    "width": 500,
+                    "color": "#D9D9D9"
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 10
+                },
+                {
+                    "type": "text",
+                    "data": "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase. First described in 2015, Flutter was released in May 2017.",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 16
+                    }
+                }
+            ]
         }
     }
 }

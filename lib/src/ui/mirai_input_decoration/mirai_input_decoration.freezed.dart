@@ -35,6 +35,9 @@ mixin _$MiraiInputDecoration {
   String? get fillColor => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
   String? get hoverColor => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get icon => throw _privateConstructorUsedError;
+  String? get iconColor => throw _privateConstructorUsedError;
+  bool get filled => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,7 +66,10 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       MiraiTextStyle? suffixStyle,
       String? fillColor,
       String? focusColor,
-      String? hoverColor});
+      String? hoverColor,
+      Map<String, dynamic>? icon,
+      String? iconColor,
+      bool filled});
 
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
   $MiraiTextStyleCopyWith<$Res>? get helperStyle;
@@ -102,6 +108,9 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? fillColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
+    Object? icon = freezed,
+    Object? iconColor = freezed,
+    Object? filled = null,
   }) {
     return _then(_value.copyWith(
       labelText: freezed == labelText
@@ -164,6 +173,18 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.hoverColor
           : hoverColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      filled: null == filled
+          ? _value.filled
+          : filled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -263,7 +284,10 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       MiraiTextStyle? suffixStyle,
       String? fillColor,
       String? focusColor,
-      String? hoverColor});
+      String? hoverColor,
+      Map<String, dynamic>? icon,
+      String? iconColor,
+      bool filled});
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
@@ -305,6 +329,9 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? fillColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
+    Object? icon = freezed,
+    Object? iconColor = freezed,
+    Object? filled = null,
   }) {
     return _then(_$_MiraiInputDecoration(
       labelText: freezed == labelText
@@ -367,6 +394,18 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.hoverColor
           : hoverColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      icon: freezed == icon
+          ? _value._icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      filled: null == filled
+          ? _value.filled
+          : filled // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -389,7 +428,11 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       this.suffixStyle,
       this.fillColor,
       this.focusColor,
-      this.hoverColor});
+      this.hoverColor,
+      final Map<String, dynamic>? icon,
+      this.iconColor,
+      this.filled = false})
+      : _icon = icon;
 
   factory _$_MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiInputDecorationFromJson(json);
@@ -424,10 +467,25 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   final String? focusColor;
   @override
   final String? hoverColor;
+  final Map<String, dynamic>? _icon;
+  @override
+  Map<String, dynamic>? get icon {
+    final value = _icon;
+    if (value == null) return null;
+    if (_icon is EqualUnmodifiableMapView) return _icon;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  final String? iconColor;
+  @override
+  @JsonKey()
+  final bool filled;
 
   @override
   String toString() {
-    return 'MiraiInputDecoration(labelText: $labelText, labelStyle: $labelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, errorText: $errorText, errorStyle: $errorStyle, prefixText: $prefixText, prefixStyle: $prefixStyle, suffixText: $suffixText, suffixStyle: $suffixStyle, fillColor: $fillColor, focusColor: $focusColor, hoverColor: $hoverColor)';
+    return 'MiraiInputDecoration(labelText: $labelText, labelStyle: $labelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, errorText: $errorText, errorStyle: $errorStyle, prefixText: $prefixText, prefixStyle: $prefixStyle, suffixText: $suffixText, suffixStyle: $suffixStyle, fillColor: $fillColor, focusColor: $focusColor, hoverColor: $hoverColor, icon: $icon, iconColor: $iconColor, filled: $filled)';
   }
 
   @override
@@ -464,7 +522,11 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
             (identical(other.focusColor, focusColor) ||
                 other.focusColor == focusColor) &&
             (identical(other.hoverColor, hoverColor) ||
-                other.hoverColor == hoverColor));
+                other.hoverColor == hoverColor) &&
+            const DeepCollectionEquality().equals(other._icon, _icon) &&
+            (identical(other.iconColor, iconColor) ||
+                other.iconColor == iconColor) &&
+            (identical(other.filled, filled) || other.filled == filled));
   }
 
   @JsonKey(ignore: true)
@@ -485,7 +547,10 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       suffixStyle,
       fillColor,
       focusColor,
-      hoverColor);
+      hoverColor,
+      const DeepCollectionEquality().hash(_icon),
+      iconColor,
+      filled);
 
   @JsonKey(ignore: true)
   @override
@@ -518,7 +583,10 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final MiraiTextStyle? suffixStyle,
       final String? fillColor,
       final String? focusColor,
-      final String? hoverColor}) = _$_MiraiInputDecoration;
+      final String? hoverColor,
+      final Map<String, dynamic>? icon,
+      final String? iconColor,
+      final bool filled}) = _$_MiraiInputDecoration;
 
   factory _MiraiInputDecoration.fromJson(Map<String, dynamic> json) =
       _$_MiraiInputDecoration.fromJson;
@@ -553,6 +621,12 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   String? get focusColor;
   @override
   String? get hoverColor;
+  @override
+  Map<String, dynamic>? get icon;
+  @override
+  String? get iconColor;
+  @override
+  bool get filled;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiInputDecorationCopyWith<_$_MiraiInputDecoration> get copyWith =>

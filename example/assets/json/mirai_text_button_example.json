@@ -5,89 +5,138 @@
         "title": {
             "type": "text",
             "data": "Text Button",
-            "align": "center",
             "style": {
-                "fontSize": 17
+                "color": "#ffffff",
+                "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "padding",
-        "padding": {
-            "top": 12,
-            "left": 12,
-            "right": 12
-        },
-        "child": {
-            "type": "textButton",
-            "child": {
-                "type": "text",
-                "data": "Click me to show a dialog!"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationStyle": "push",
-                "navigationType": "dialog",
-                "widgetJson": {
-                    "type": "alertDialog",
-                    "icon": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "person",
-                        "size": 40,
-                        "color": "#ff0000"
-                    },
-                    "iconColor": "#ff0000",
-                    "backgroundColor": "#ffffff",
-                    "title": {
-                        "type": "text",
-                        "data": "This is a dialog.",
-                        "align": "center",
-                        "style": {
-                            "color": "#ff0000",
-                            "fontSize": 17
-                        }
-                    },
-                    "content": {
-                        "type": "sizedBox",
-                        "width": 100,
-                        "height": 100
-                    },
-                    "actions": [
-                        {
-                            "type": "elevatedButton",
-                            "style": {
-                                "foregroundColor": "#ffffff",
-                                "backgroundColor": "#212121"
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "textButton",
+                                "child": {
+                                    "type": "text",
+                                    "data": "BUTTON"
+                                },
+                                "style": {
+                                    "foregroundColor": "#4D00E9",
+                                    "padding": {
+                                        "top": 8,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    }
+                                },
+                                "onPressed": {}
                             },
-                            "child": {
-                                "type": "text",
-                                "data": "Dismiss"
+                            {
+                                "type": "sizedBox",
+                                "width": 20
                             },
-                            "onPressed": {
-                                "actionType": "navigate",
-                                "navigationType": "screen",
-                                "navigationStyle": "pop"
+                            {
+                                "type": "textButton",
+                                "child": {
+                                    "type": "row",
+                                    "children": [
+                                        {
+                                            "type": "icon",
+                                            "iconType": "material",
+                                            "icon": "add",
+                                            "size": 18
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "width": 4
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "BUTTON"
+                                        }
+                                    ]
+                                },
+                                "style": {
+                                    "foregroundColor": "#4D00E9",
+                                    "padding": {
+                                        "top": 8,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    }
+                                },
+                                "onPressed": {}
                             }
-                        }
-                    ]
-                }
+                        ]
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "textButton",
+                                "child": {
+                                    "type": "text",
+                                    "data": "BUTTON"
+                                },
+                                "style": {
+                                    "padding": {
+                                        "top": 8,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    }
+                                }
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "textButton",
+                                "child": {
+                                    "type": "row",
+                                    "children": [
+                                        {
+                                            "type": "icon",
+                                            "iconType": "material",
+                                            "icon": "add",
+                                            "size": 18
+                                        },
+                                        {
+                                            "type": "sizedBox",
+                                            "width": 4
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "BUTTON"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
             }
-        }
+        ]
     }
 }

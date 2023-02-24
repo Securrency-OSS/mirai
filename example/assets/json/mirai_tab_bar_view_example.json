@@ -4,95 +4,88 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Tab Bar View",
-            "align": "center",
+            "data": "TabBarView",
             "style": {
+                "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        },
-        "backgroundColor": "#99ccff"
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
-        "type": "defaultTabController",
-        "length": 3,
+        "type": "padding",
+        "padding": {
+            "top": 24
+        },
         "child": {
-            "type": "tabBarView",
-            "children": [
-                {
-                    "type": "container",
-                    "color": "#82ac64",
-                    "child": {
-                        "type": "column",
-                        "mainAxisAlignment": "start",
-                        "crossAxisAlignment": "start",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "Swipe left and right to see tab bar views.",
-                                "align": "center",
-                                "style": {
-                                    "fontSize": 17,
-                                    "color": "#ffffff"
+            "type": "defaultTabController",
+            "length": 3,
+            "child": {
+                "type": "tabBarView",
+                "children": [
+                    {
+                        "type": "container",
+                        "color": "#4D00E9",
+                        "child": {
+                            "type": "column",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "data": "Purple",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 17,
+                                        "color": "#ffffff"
+                                    }
                                 }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "container",
-                    "color": "#36374b",
-                    "child": {
-                        "type": "column",
-                        "mainAxisAlignment": "start",
-                        "crossAxisAlignment": "start",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "Swipe left and right to see tab bar views.",
-                                "align": "center",
-                                "style": {
-                                    "fontSize": 17,
-                                    "color": "#ffffff"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "container",
+                        "color": "#FC3F1B",
+                        "child": {
+                            "type": "column",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "data": "Orange",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 17,
+                                        "color": "#ffffff"
+                                    }
                                 }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "container",
-                    "color": "#ffff6a",
-                    "child": {
-                        "type": "column",
-                        "mainAxisAlignment": "start",
-                        "crossAxisAlignment": "start",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "Swipe left and right to see tab bar views.",
-                                "align": "center",
-                                "style": {
-                                    "fontSize": 17,
-                                    "color": "#ffffff"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "container",
+                        "color": "#D9D9D9",
+                        "child": {
+                            "type": "column",
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "center",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "data": "Gray",
+                                    "align": "center",
+                                    "style": {
+                                        "fontSize": 17,
+                                        "color": "#ffffff"
+                                    }
                                 }
-                            }
-                        ]
+                            ]
+                        }
                     }
-                }
-            ]
+                ]
+            }
         }
     }
 }
