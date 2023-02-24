@@ -541,7 +541,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_outlined_button_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_outlined_button_example.json"
+                    }
                 }
             },
             {
@@ -573,7 +576,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_padding_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_padding_example.json"
+                    }
                 }
             },
             {
@@ -605,7 +611,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_row_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_row_example.json"
+                    }
                 }
             },
             {

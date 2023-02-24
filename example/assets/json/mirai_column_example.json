@@ -75,6 +75,16 @@
                                     "children": [
                                         {
                                             "type": "outlinedButton",
+                                            "style": {
+                                                "foregroundColor": "#4D00E9",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left": 12,
+                                                    "right": 12,
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "onPressed": {},
                                             "child": {
                                                 "type": "text",
                                                 "data": "Explore",
@@ -90,6 +100,16 @@
                                         },
                                         {
                                             "type": "outlinedButton",
+                                            "style": {
+                                                "foregroundColor": "#4D00E9",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left": 12,
+                                                    "right": 12,
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "onPressed": {},
                                             "child": {
                                                 "type": "text",
                                                 "data": "Share",
@@ -163,6 +183,16 @@
                                     "children": [
                                         {
                                             "type": "outlinedButton",
+                                            "style": {
+                                                "foregroundColor": "#4D00E9",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left": 12,
+                                                    "right": 12,
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "onPressed": {},
                                             "child": {
                                                 "type": "text",
                                                 "data": "Explore",
@@ -178,6 +208,16 @@
                                         },
                                         {
                                             "type": "outlinedButton",
+                                            "style": {
+                                                "foregroundColor": "#4D00E9",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left": 12,
+                                                    "right": 12,
+                                                    "bottom": 8
+                                                }
+                                            },
+                                            "onPressed": {},
                                             "child": {
                                                 "type": "text",
                                                 "data": "Share",
