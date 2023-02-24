@@ -4,29 +4,15 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Mirai List Tile",
-            "align": "center",
+            "data": "Tiles",
             "style": {
                 "color": "#ffffff",
                 "fontSize": 21
             }
         },
-        "backgroundColor": "#99ccff",
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "arrow_back",
-                "color": "#ffffff"
-            },
-            "onPressed": {
-                "actionType": "navigate",
-                "navigationType": "screen",
-                "navigationStyle": "pop"
-            }
-        }
+        "backgroundColor": "#4D00E9"
     },
+    "backgroundColor": "#ffffff",
     "body": {
         "type": "column",
         "mainAxisAlignment": "start",
@@ -34,87 +20,91 @@
         "children": [
             {
                 "type": "sizedBox",
-                "height": 25
+                "height": 12
             },
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "color": "#ffffff",
-                        "backgroundColor": "#212121",
-                        "fontSize": 21
+                    "type": "image",
+                    "src": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                },
+                "title": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 10
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": "Andrew Symonds",
+                        "style": {
+                            "fontSize": 18
+                        }
+                    }
+                },
+                "subtitle": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 10
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": "Andrew Symonds was an Australian international cricketer, who played all three formats as a batting all-rounder. Commonly nicknamed \"Roy\", he was a key member of two World Cup winning squads. Symonds played as a right-handed, middle order batsman and alternated between medium pace and off-spin",
+                        "style": {
+                            "fontSize": 14
+                        }
                     }
                 },
                 "trailing": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "add",
-                    "color": "#ff0000"
-                },
-                "title": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 13
-                    }
-                },
-                "subtitle": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 9
-                    }
-                },
-                "isThreeLine": true,
-                "tileColor": "#ff0000",
-                "style": "list"
+                    "icon": "more_vert",
+                    "color": "#717171",
+                    "size": 24
+                }
             },
             {
                 "type": "sizedBox",
-                "height": 25
+                "height": 12
             },
             {
                 "type": "listTile",
                 "leading": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "color": "#ffffff",
-                        "backgroundColor": "#212121",
-                        "fontSize": 21
+                    "type": "image",
+                    "src": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                },
+                "title": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 10
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": "Adam Gilchrist",
+                        "style": {
+                            "fontSize": 18
+                        }
+                    }
+                },
+                "subtitle": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 10
+                    },
+                    "child": {
+                        "type": "text",
+                        "data": "Adam Craig Gilchrist is an Australian cricket commentator and former international cricketer and captain of the Australia national cricket team. He was an attacking left-handed batsman and record-breaking wicket-keeper",
+                        "style": {
+                            "fontSize": 14
+                        }
                     }
                 },
                 "trailing": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "add",
-                    "color": "#ff0000"
-                },
-                "title": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 13
-                    }
-                },
-                "subtitle": {
-                    "type": "text",
-                    "data": "Home",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 9
-                    }
-                },
-                "isThreeLine": true,
-                "tileColor": "#ff0000",
-                "style": "list"
+                    "icon": "more_vert",
+                    "color": "#717171",
+                    "size": 24
+                }
             }
         ]
     }

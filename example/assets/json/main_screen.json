@@ -471,7 +471,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_list_tile_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_list_tile_example.json"
+                    }
                 }
             },
             {
@@ -503,7 +506,10 @@
                     "actionType": "navigate",
                     "navigationStyle": "push",
                     "navigationType": "screen",
-                    "assetPath": "assets/json/mirai_list_view_example.json"
+                    "widgetJson": {
+                        "type": "exampleScreen",
+                        "assetPath": "assets/json/mirai_list_view_example.json"
+                    }
                 }
             },
             {
