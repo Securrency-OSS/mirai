@@ -27,6 +27,7 @@ class MiraiInputDecoration with _$MiraiInputDecoration {
     String? focusColor,
     String? hoverColor,
     Map<String, dynamic>? icon,
+    Map<String, dynamic>? suffixIcon,
     String? iconColor,
     @Default(false) bool filled,
   }) = _MiraiInputDecoration;
@@ -56,6 +57,7 @@ extension MiraiInputDecorationParser on MiraiInputDecoration? {
       fillColor: this?.fillColor.toColor,
       focusColor: this?.focusColor.toColor,
       hoverColor: this?.hoverColor.toColor,
+      suffixIcon: Mirai.fromJson(this?.suffixIcon, context),
     );
   }
 }

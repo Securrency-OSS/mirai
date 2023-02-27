@@ -23,6 +23,7 @@ class MiraiTextField with _$MiraiTextField {
     TextDirection? textDirection,
     @Default(false) bool readOnly,
     bool? showCursor,
+    @Default(false) expands,
     @Default(false) bool autofocus,
     @Default('•') String obscuringCharacter,
     int? maxLines,
