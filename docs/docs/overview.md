@@ -11,29 +11,31 @@ Mirai is an open-source Server-Driven UI (SDUI) library for Flutter. Mirai allow
 First, we need to add `mirai` to our pubspec.yaml file.
 
 Install the plugin by running the following command from the project root:
-```
-$ flutter pub add mirai
 
+```bash
+flutter pub add mirai
 ```
 
 This will add a line like this to your package's pubspec.yaml.
-```
+
+```yaml
 dependencies:
   mirai: ^1.0.0
 ```
+
 And then run `flutter pub get`.
 
 ## Usage
 
 Now that we have successfully installed `mirai`, we can import `mirai` in `main.dart`.  
 
-```
+```dart
 import 'package:mirai/mirai.dart';
 ```
 
 To initalize mirai, replace your `MaterialApp` with `MiraiApp`. And call your json with `Mirai.fromJson(json, context)`.
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 
@@ -56,4 +58,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-```
+``
