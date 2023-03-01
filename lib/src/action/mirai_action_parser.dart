@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/src/action/mirai_action.dart';
+import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
-import 'package:mirai/src/widgets/mirai.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {

@@ -88,4 +88,4 @@ MiraiRegistry.instance.registerAll([
     MiraiTextParser(),
     MiraiButtonParser(),
 ]);
-``
+```
