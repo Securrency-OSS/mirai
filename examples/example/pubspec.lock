@@ -158,7 +158,7 @@ packages:
   mirai:
     dependency: "direct main"
     description:
-      path: ".."
+      path: "../../packages/mirai"
       relative: true
     source: path
     version: "0.0.1"
