@@ -49,7 +49,7 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       cursorWidth: model.cursorWidth,
       cursorHeight: model.cursorHeight,
       cursorColor: model.cursorColor?.toColor,
-      style: MiraiTextStyleParser.parse(model.style),
+      style: model.style?.parse,
       decoration: model.decoration?.parse(context),
     );
   }

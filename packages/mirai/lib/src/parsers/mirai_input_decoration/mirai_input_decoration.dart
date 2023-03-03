@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-import 'package:mirai/src/widgets/widgets.dart';
 
 part 'mirai_input_decoration.freezed.dart';
 part 'mirai_input_decoration.g.dart';
