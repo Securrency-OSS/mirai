@@ -1,0 +1,82 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Sizedbox",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#4D00E9"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "listView",
+        "shrinkWrap": true,
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 25
+            },
+            {
+                "type": "container",
+                "color": "#672BFF",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 50
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 75
+            },
+            {
+                "type": "container",
+                "color": "#D9D9D9",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 100
+            },
+            {
+                "type": "container",
+                "color": "#672BFF",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 125
+            },
+            {
+                "type": "container",
+                "color": "#FC5632",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            },
+            {
+                "type": "sizedBox",
+                "height": 150
+            },
+            {
+                "type": "container",
+                "color": "#D9D9D9",
+                "clipBehavior": "hardEdge",
+                "height": 75
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Tabbar",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#4D00E9"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "padding",
+        "padding": {
+            "top": 24
+        },
+        "child": {
+            "type": "defaultTabController",
+            "length": 3,
+            "child": {
+                "type": "tabBar",
+                "indicatorColor": "#4D00E9",
+                "indicatorPadding": {
+                    "top": 4
+                },
+                "tabs": [
+                    {
+                        "type": "text",
+                        "data": "Red",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "data": "Orange",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "data": "Green",
+                        "style": {
+                            "color": "#4D00E9",
+                            "fontSize": 21
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -33,6 +33,7 @@ mixin _$MiraiTextField {
   TextDirection? get textDirection => throw _privateConstructorUsedError;
   bool get readOnly => throw _privateConstructorUsedError;
   bool? get showCursor => throw _privateConstructorUsedError;
+  dynamic get expands => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
   String get obscuringCharacter => throw _privateConstructorUsedError;
   int? get maxLines => throw _privateConstructorUsedError;
@@ -70,6 +71,7 @@ abstract class $MiraiTextFieldCopyWith<$Res> {
       TextDirection? textDirection,
       bool readOnly,
       bool? showCursor,
+      dynamic expands,
       bool autofocus,
       String obscuringCharacter,
       int? maxLines,
@@ -111,6 +113,7 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
     Object? textDirection = freezed,
     Object? readOnly = null,
     Object? showCursor = freezed,
+    Object? expands = freezed,
     Object? autofocus = null,
     Object? obscuringCharacter = null,
     Object? maxLines = freezed,
@@ -169,6 +172,10 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.showCursor
           : showCursor // ignore: cast_nullable_to_non_nullable
               as bool?,
+      expands: freezed == expands
+          ? _value.expands
+          : expands // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
@@ -265,6 +272,7 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
       TextDirection? textDirection,
       bool readOnly,
       bool? showCursor,
+      dynamic expands,
       bool autofocus,
       String obscuringCharacter,
       int? maxLines,
@@ -306,6 +314,7 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
     Object? textDirection = freezed,
     Object? readOnly = null,
     Object? showCursor = freezed,
+    Object? expands = freezed,
     Object? autofocus = null,
     Object? obscuringCharacter = null,
     Object? maxLines = freezed,
@@ -364,6 +373,7 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.showCursor
           : showCursor // ignore: cast_nullable_to_non_nullable
               as bool?,
+      expands: freezed == expands ? _value.expands! : expands,
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
@@ -431,6 +441,7 @@ class _$_MiraiTextField implements _MiraiTextField {
       this.textDirection,
       this.readOnly = false,
       this.showCursor,
+      this.expands = false,
       this.autofocus = false,
       this.obscuringCharacter = '•',
       this.maxLines,
@@ -475,6 +486,9 @@ class _$_MiraiTextField implements _MiraiTextField {
   final bool? showCursor;
   @override
   @JsonKey()
+  final dynamic expands;
+  @override
+  @JsonKey()
   final bool autofocus;
   @override
   @JsonKey()
@@ -505,7 +519,7 @@ class _$_MiraiTextField implements _MiraiTextField {
 
   @override
   String toString() {
-    return 'MiraiTextField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
+    return 'MiraiTextField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, expands: $expands, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
   }
 
   @override
@@ -534,6 +548,7 @@ class _$_MiraiTextField implements _MiraiTextField {
                 other.readOnly == readOnly) &&
             (identical(other.showCursor, showCursor) ||
                 other.showCursor == showCursor) &&
+            const DeepCollectionEquality().equals(other.expands, expands) &&
             (identical(other.autofocus, autofocus) ||
                 other.autofocus == autofocus) &&
             (identical(other.obscuringCharacter, obscuringCharacter) ||
@@ -574,6 +589,7 @@ class _$_MiraiTextField implements _MiraiTextField {
         textDirection,
         readOnly,
         showCursor,
+        const DeepCollectionEquality().hash(expands),
         autofocus,
         obscuringCharacter,
         maxLines,
@@ -615,6 +631,7 @@ abstract class _MiraiTextField implements MiraiTextField {
       final TextDirection? textDirection,
       final bool readOnly,
       final bool? showCursor,
+      final dynamic expands,
       final bool autofocus,
       final String obscuringCharacter,
       final int? maxLines,
@@ -653,6 +670,8 @@ abstract class _MiraiTextField implements MiraiTextField {
   bool get readOnly;
   @override
   bool? get showCursor;
+  @override
+  dynamic get expands;
   @override
   bool get autofocus;
   @override

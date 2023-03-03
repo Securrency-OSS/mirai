@@ -21,7 +21,9 @@ class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
   @override
   Widget parse(BuildContext context, MiraiElevatedButton model) {
     return ElevatedButton(
-      onPressed: () => model.onPressed.onCall(context),
+      onPressed: model.onPressed == null
+          ? null
+          : () => model.onPressed.onCall(context),
       autofocus: model.autofocus,
       style: _style(model.style),
       clipBehavior: model.clipBehavior,

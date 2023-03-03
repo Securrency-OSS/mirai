@@ -22,7 +22,9 @@ class MiraiOutlinedButtonParser extends MiraiParser<MiraiOutlinedButton> {
   @override
   Widget parse(BuildContext context, MiraiOutlinedButton model) {
     return OutlinedButton(
-      onPressed: () => model.onPressed.onCall(context),
+      onPressed: model.onPressed == null
+          ? null
+          : () => model.onPressed.onCall(context),
       style: _style(model.style),
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,

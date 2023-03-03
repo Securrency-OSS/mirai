@@ -13,6 +13,7 @@ class MiraiAction with _$MiraiAction {
     @Default(ActionType.none) ActionType actionType,
     MiraiRequest? request,
     Map<String, dynamic>? widgetJson,
+    String? assetPath,
     NavigationType? navigationType,
     NavigationStyle? navigationStyle,
   }) = _MiraiAction;

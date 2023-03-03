@@ -23,6 +23,7 @@ mixin _$MiraiAction {
   ActionType get actionType => throw _privateConstructorUsedError;
   MiraiRequest? get request => throw _privateConstructorUsedError;
   Map<String, dynamic>? get widgetJson => throw _privateConstructorUsedError;
+  String? get assetPath => throw _privateConstructorUsedError;
   NavigationType? get navigationType => throw _privateConstructorUsedError;
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
 
@@ -42,6 +43,7 @@ abstract class $MiraiActionCopyWith<$Res> {
       {ActionType actionType,
       MiraiRequest? request,
       Map<String, dynamic>? widgetJson,
+      String? assetPath,
       NavigationType? navigationType,
       NavigationStyle? navigationStyle});
 
@@ -64,6 +66,7 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
     Object? actionType = null,
     Object? request = freezed,
     Object? widgetJson = freezed,
+    Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
   }) {
@@ -80,6 +83,10 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
           ? _value.widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      assetPath: freezed == assetPath
+          ? _value.assetPath
+          : assetPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       navigationType: freezed == navigationType
           ? _value.navigationType
           : navigationType // ignore: cast_nullable_to_non_nullable
@@ -116,6 +123,7 @@ abstract class _$$_MiraiActionCopyWith<$Res>
       {ActionType actionType,
       MiraiRequest? request,
       Map<String, dynamic>? widgetJson,
+      String? assetPath,
       NavigationType? navigationType,
       NavigationStyle? navigationStyle});
 
@@ -137,6 +145,7 @@ class __$$_MiraiActionCopyWithImpl<$Res>
     Object? actionType = null,
     Object? request = freezed,
     Object? widgetJson = freezed,
+    Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
   }) {
@@ -153,6 +162,10 @@ class __$$_MiraiActionCopyWithImpl<$Res>
           ? _value._widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      assetPath: freezed == assetPath
+          ? _value.assetPath
+          : assetPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       navigationType: freezed == navigationType
           ? _value.navigationType
           : navigationType // ignore: cast_nullable_to_non_nullable
@@ -172,6 +185,7 @@ class _$_MiraiAction implements _MiraiAction {
       {this.actionType = ActionType.none,
       this.request,
       final Map<String, dynamic>? widgetJson,
+      this.assetPath,
       this.navigationType,
       this.navigationStyle})
       : _widgetJson = widgetJson;
@@ -195,13 +209,15 @@ class _$_MiraiAction implements _MiraiAction {
   }
 
   @override
+  final String? assetPath;
+  @override
   final NavigationType? navigationType;
   @override
   final NavigationStyle? navigationStyle;
 
   @override
   String toString() {
-    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, navigationType: $navigationType, navigationStyle: $navigationStyle)';
+    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, navigationType: $navigationType, navigationStyle: $navigationStyle)';
   }
 
   @override
@@ -214,6 +230,8 @@ class _$_MiraiAction implements _MiraiAction {
             (identical(other.request, request) || other.request == request) &&
             const DeepCollectionEquality()
                 .equals(other._widgetJson, _widgetJson) &&
+            (identical(other.assetPath, assetPath) ||
+                other.assetPath == assetPath) &&
             (identical(other.navigationType, navigationType) ||
                 other.navigationType == navigationType) &&
             (identical(other.navigationStyle, navigationStyle) ||
@@ -227,6 +245,7 @@ class _$_MiraiAction implements _MiraiAction {
       actionType,
       request,
       const DeepCollectionEquality().hash(_widgetJson),
+      assetPath,
       navigationType,
       navigationStyle);
 
@@ -249,6 +268,7 @@ abstract class _MiraiAction implements MiraiAction {
       {final ActionType actionType,
       final MiraiRequest? request,
       final Map<String, dynamic>? widgetJson,
+      final String? assetPath,
       final NavigationType? navigationType,
       final NavigationStyle? navigationStyle}) = _$_MiraiAction;
 
@@ -261,6 +281,8 @@ abstract class _MiraiAction implements MiraiAction {
   MiraiRequest? get request;
   @override
   Map<String, dynamic>? get widgetJson;
+  @override
+  String? get assetPath;
   @override
   NavigationType? get navigationType;
   @override

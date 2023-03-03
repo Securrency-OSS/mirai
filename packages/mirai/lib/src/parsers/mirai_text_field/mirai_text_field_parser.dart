@@ -45,11 +45,12 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       obscureText: model.obscureText,
       enableSuggestions: model.enableSuggestions,
       enabled: model.enabled,
+      expands: model.expands,
       cursorWidth: model.cursorWidth,
       cursorHeight: model.cursorHeight,
       cursorColor: model.cursorColor?.toColor,
-      style: model.style?.parse,
-      decoration: model.decoration?.parse,
+      style: MiraiTextStyleParser.parse(model.style),
+      decoration: model.decoration?.parse(context),
     );
   }
 }

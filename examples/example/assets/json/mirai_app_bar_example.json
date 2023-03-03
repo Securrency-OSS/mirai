@@ -1,18 +1,75 @@
 {
-    "type": "listView",
-    "shrinkWrap": true,
-    "children": [
-        {
-            "type": "sizedBox",
-            "height": 25
-        },
-        {
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
             "type": "text",
-            "data": "This is an Appbar example.",
+            "data": "Appbar",
             "style": {
-                "fontSize": 21,
-                "align": "center"
+                "color": "#ffffff",
+                "fontSize": 21
             }
-        }
-    ]
+        },
+        "backgroundColor": "#4D00E9",
+        "leading": {
+            "type": "iconButton",
+            "child": {
+                "type": "icon",
+                "iconType": "material",
+                "icon": "menu",
+                "color": "#ffffff"
+            }
+        },
+        "actions": [
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "cupertino",
+                    "icon": "heart_solid",
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "search",
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "type": "iconButton",
+                "child": {
+                    "type": "icon",
+                    "iconType": "material",
+                    "icon": "more_horiz",
+                    "color": "#ffffff"
+                }
+            }
+        ]
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "text",
+                        "data": "Home",
+                        "style": {
+                            "fontSize": 17
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }

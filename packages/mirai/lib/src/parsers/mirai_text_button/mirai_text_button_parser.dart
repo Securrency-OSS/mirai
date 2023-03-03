@@ -22,7 +22,9 @@ class MiraiTextButtonParser extends MiraiParser<MiraiTextButton> {
   @override
   Widget parse(BuildContext context, MiraiTextButton model) {
     return TextButton(
-      onPressed: () => model.onPressed.onCall(context),
+      onPressed: model.onPressed == null
+          ? null
+          : () => model.onPressed.onCall(context),
       style: _style(model.style),
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,

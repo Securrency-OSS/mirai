@@ -21,7 +21,9 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
   @override
   Widget parse(BuildContext context, MiraiIconButton model) {
     return IconButton(
-      onPressed: () => model.onPressed.onCall(context),
+      onPressed: model.onPressed == null
+          ? null
+          : () => model.onPressed.onCall(context),
       iconSize: model.iconSize,
       padding: model.padding?.parse,
       alignment: model.alignment.value,

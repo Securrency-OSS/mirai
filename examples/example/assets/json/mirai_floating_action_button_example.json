@@ -1,0 +1,116 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Floating Action Button",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": 21
+            }
+        },
+        "backgroundColor": "#4D00E9"
+    },
+    "backgroundColor": "#ffffff",
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "floatingActionButton",
+                                "backgroundColor": "#FC3F1B",
+                                "foregroundColor": "#ffffff",
+                                "buttonType": "extended",
+                                "icon": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "add",
+                                    "size": 32
+                                },
+                                "child": {
+                                    "type": "text",
+                                    "data": "Create"
+                                },
+                                "onPressed": {}
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "floatingActionButton",
+                                "backgroundColor": "#FC3F1B",
+                                "foregroundColor": "#ffffff",
+                                "buttonType": "large",
+                                "child": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "add",
+                                    "size": 32
+                                },
+                                "onPressed": {}
+                            }
+                        ]
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 52
+                    },
+                    {
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "floatingActionButton",
+                                "backgroundColor": "#D9D9D9",
+                                "foregroundColor": "#ffffff",
+                                "buttonType": "extended",
+                                "disabledElevation": 0,
+                                "icon": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "add",
+                                    "size": 32
+                                },
+                                "child": {
+                                    "type": "text",
+                                    "data": "Create"
+                                }
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "floatingActionButton",
+                                "backgroundColor": "#D9D9D9",
+                                "foregroundColor": "#ffffff",
+                                "buttonType": "large",
+                                "disabledElevation": 0,
+                                "child": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "add",
+                                    "size": 32
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
