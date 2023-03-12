@@ -1,6 +1,8 @@
-# ![Mirai Banner][mirai_banner]
+# ![Mirai][mirai_banner]
 
 [![License: MIT][license_badge]][license_link]
+
+---
 
 Mirai is a Server-Driven UI (SDUI) library for Flutter. Mirai allows you to build beautiful cross-platform applications with JSON in real-time.
 
@@ -20,7 +22,7 @@ This will add a line like this to your package's pubspec.yaml.
 
 ```yaml
 dependencies:
-  mirai: ^1.0.0
+  mirai: ^0.0.2
 ```
 
 And then run flutter pub get.
@@ -368,8 +370,7 @@ That's it with just few lines of code your SDUI app is app and running.
 >
 >Mirai provides multiple methods to parse JSONs into Flutter widgets. You can use `Mirai.fromNetwork()`,  `Mirai.fromJson()` & `Mirai.fromAsset()`
 
-
-![Form Screen Example][form_screen]
+<img src="./assets/form_screen_image.png"/>
 
 ### More examples
 
@@ -380,11 +381,11 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 - [Divyanshu Bhargava][divyanshu_github]
 - [Aasim Khan][aasim_github]
 
-----------
+---
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.png
 [license_link]: https://opensource.org/licenses/MIT
-[mirai_banner]: /assets/mirai_banner.png
+[mirai_banner]: ./assets/mirai_banner.png
 [securrency_link]: https://securrency.com
 [form_screen]: /assets/form_screen_image.png
 [divyanshu_github]: https://github.com/divyanshub024
