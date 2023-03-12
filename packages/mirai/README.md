@@ -385,8 +385,8 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.png
 [license_link]: https://opensource.org/licenses/MIT
-[mirai_banner]: ./assets/mirai_banner.png
+[mirai_banner]: https://github.com/Securrency-OSS/mirai/blob/main/assets/mirai_banner.png
 [securrency_link]: https://securrency.com
-[form_screen]: /assets/form_screen_image.png
+[form_screen]: https://github.com/Securrency-OSS/mirai/blob/main/assets/form_screen_image.png
 [divyanshu_github]: https://github.com/divyanshub024
 [aasim_github]: https://github.com/AsimKhanSecurrency
