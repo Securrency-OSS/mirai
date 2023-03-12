@@ -370,7 +370,7 @@ That's it with just few lines of code your SDUI app is app and running.
 >
 >Mirai provides multiple methods to parse JSONs into Flutter widgets. You can use `Mirai.fromNetwork()`,  `Mirai.fromJson()` & `Mirai.fromAsset()`
 
-<img src="./assets/form_screen_image.png"/>
+![Form Screen][form_screen]
 
 ### More examples
 
