@@ -373,7 +373,7 @@ That's it with just few lines of code your SDUI app is app and running.
 
 ### More examples
 
-Check out the Mirai Gallery app for more such examples.
+Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/examples/mirai_gallery) app for more such examples.
 
 ## Maintainers
 
