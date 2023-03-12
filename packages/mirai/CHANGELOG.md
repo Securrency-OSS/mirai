@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Update assets
+
 ## 0.0.2
 
 * Fix README assets
