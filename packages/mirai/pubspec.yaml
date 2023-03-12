@@ -1,6 +1,6 @@
 name: mirai
 description: A Server Driven UI library for Flutter
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Securrency-OSS/mirai.git
 
 environment:
