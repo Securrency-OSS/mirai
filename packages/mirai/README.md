@@ -1,4 +1,4 @@
-# [![Mirai Banner][mirai_banner]]
+# ![Mirai Banner][mirai_banner]
 
 [![License: MIT][license_badge]][license_link]
 
@@ -369,11 +369,16 @@ That's it with just few lines of code your SDUI app is app and running.
 >Mirai provides multiple methods to parse JSONs into Flutter widgets. You can use `Mirai.fromNetwork()`,  `Mirai.fromJson()` & `Mirai.fromAsset()`
 
 
-[![Form Screen Example][form_screen]]
+![Form Screen Example][form_screen]
 
 ### More examples
 
-Check out the Mirai Gallery app for more such examples.
+Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/examples/mirai_gallery) app for more such examples.
+
+## Maintainers
+
+- [Divyanshu Bhargava][divyanshu_github]
+- [Aasim Khan][aasim_github]
 
 ----------
 
