@@ -1,4 +1,4 @@
-# ![Mirai][mirai_banner]
+![Mirai][mirai_banner]
 
 [![License: MIT][license_badge]][license_link]
 
