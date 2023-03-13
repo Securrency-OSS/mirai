@@ -1,6 +1,9 @@
 name: Pull Request Checks
 
 on:
+  push:
+    path:
+      - "packages/mirai/**"
   pull_request:
     path:
       - "packages/mirai/**"
