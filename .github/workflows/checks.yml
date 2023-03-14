@@ -2,9 +2,6 @@ name: Pull Request Checks
 
 on:
   pull_request:
-    path:
-      - "packages/mirai/**"
-      - ".github/workflows/checks.yaml"
   
 jobs:
   checks:
