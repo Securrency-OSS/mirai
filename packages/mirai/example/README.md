@@ -1,74 +1,8 @@
-![Mirai][mirai_banner]
-
-[![License: MIT][license_badge]][license_link]
-
----
-
-Mirai is a Server-Driven UI (SDUI) library for Flutter. Mirai allows you to build beautiful cross-platform applications with JSON in real-time.
-
-Developed with 💙 by [Securrency][securrency_link]
-
-## Installation 🚀
-
-First, we need to add mirai to our pubspec.yaml file.
-
-Install the plugin by running the following command from the project root:
-
-```bash
-flutter pub add mirai
-```
-
-This will add a line like this to your package's pubspec.yaml.
-
-```yaml
-dependencies:
-  mirai: ^0.0.2
-```
-
-And then run flutter pub get.
-
-## Usage 🧑‍💻
-
-Now that we have successfully installed mirai, we can import mirai in main.dart.
-
-``` dart
-import 'package:mirai/mirai.dart';
-```
-
-To initalize mirai, replace your MaterialApp with MiraiApp. And call your json with Mirai.fromJson(json, context).
-
-Note
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MiraiApp(
-      title: 'Mirai Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Mirai.fromJson(json, context),
-    );
-  }
-}
-
-```
-
-## Eample
+# Eample
 
 Here is an example of a basic form screen build with Mirai.
 
-### Server
+## Server
 
 ```json
 {
@@ -333,7 +267,7 @@ Here is an example of a basic form screen build with Mirai.
 }
 ```
 
-### Flutter
+## Flutter
 
 ```dart
 import 'package:flutter/material.dart';
@@ -376,17 +310,6 @@ That's it with just few lines of code your SDUI app is up and running.
 
 Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/examples/mirai_gallery) app for more such examples.
 
-## Maintainers
 
-- [Divyanshu Bhargava][divyanshu_github]
-- [Aasim Khan][aasim_github]
-
----
-
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.png
-[license_link]: https://opensource.org/licenses/MIT
-[mirai_banner]: https://github.com/Securrency-OSS/mirai/blob/main/assets/mirai_banner.png
-[securrency_link]: https://securrency.com
 [form_screen]: https://github.com/Securrency-OSS/mirai/blob/main/assets/form_screen_image.png
-[divyanshu_github]: https://github.com/divyanshub024
-[aasim_github]: https://github.com/AsimKhanSecurrency
+

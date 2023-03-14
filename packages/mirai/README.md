@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
 
 ## Eample
 
-Here is an example of basic form screen build with Mirai.
+Here is an example of a basic form screen build with Mirai.
 
 ### Server
 
@@ -364,11 +364,11 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-That's it with just few lines of code your SDUI app is app and running.
-
 >Note:
 >
 >Mirai provides multiple methods to parse JSONs into Flutter widgets. You can use `Mirai.fromNetwork()`,  `Mirai.fromJson()` & `Mirai.fromAsset()`
+
+That's it with just few lines of code your SDUI app is up and running.
 
 ![Form Screen][form_screen]
 
