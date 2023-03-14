@@ -172,6 +172,7 @@
                                     "type": "floatingActionButton",
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
+                                    "heroTag": "fAB1",
                                     "child": {
                                         "type": "icon",
                                         "iconType": "material",
@@ -189,6 +190,7 @@
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
                                     "buttonType": "large",
+                                    "heroTag": "fAB2",
                                     "child": {
                                         "type": "icon",
                                         "iconType": "material",
@@ -205,6 +207,7 @@
                                     "type": "floatingActionButton",
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
+                                    "heroTag": "fAB3",
                                     "buttonType": "extended",
                                     "icon": {
                                         "type": "icon",
