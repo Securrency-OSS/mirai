@@ -22,7 +22,7 @@ This will add a line like this to your package's pubspec.yaml.
 
 ```yaml
 dependencies:
-  mirai: ^0.0.2
+  mirai: ^0.0.5
 ```
 
 And then run flutter pub get.
