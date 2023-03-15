@@ -377,7 +377,7 @@ packages:
       path: "../../packages/mirai"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.5"
   package_config:
     dependency: transitive
     description:

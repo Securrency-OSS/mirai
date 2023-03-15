@@ -77,6 +77,7 @@
         "backgroundColor": "#FC3F1B",
         "foregroundColor": "#ffffff",
         "buttonType": "medium",
+        "heroTag": "fABMedium",
         "child": {
             "type": "icon",
             "iconType": "material",

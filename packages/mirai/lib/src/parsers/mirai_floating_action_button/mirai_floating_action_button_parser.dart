@@ -42,6 +42,7 @@ class MiraiFloatingActionButtonParser
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
           tooltip: model.tooltip,
+          heroTag: model.heroTag,
           label: Mirai.fromJson(model.child, context),
         );
 
@@ -63,6 +64,7 @@ class MiraiFloatingActionButtonParser
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
           tooltip: model.tooltip,
+          heroTag: model.heroTag,
           child: Mirai.fromJson(model.child, context),
         );
 
@@ -84,6 +86,7 @@ class MiraiFloatingActionButtonParser
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
           tooltip: model.tooltip,
+          heroTag: model.heroTag,
           child: Mirai.fromJson(model.child, context),
         );
 
@@ -105,6 +108,7 @@ class MiraiFloatingActionButtonParser
           enableFeedback: model.enableFeedback,
           autofocus: model.autofocus,
           tooltip: model.tooltip,
+          heroTag: model.heroTag,
           child: Mirai.fromJson(model.child, context),
         );
     }
