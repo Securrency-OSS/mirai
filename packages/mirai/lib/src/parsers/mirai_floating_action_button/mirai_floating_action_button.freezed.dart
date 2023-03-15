@@ -40,8 +40,6 @@ mixin _$MiraiFloatingActionButton {
   double? get extendedIconLabelSpacing => throw _privateConstructorUsedError;
   bool? get enableFeedback => throw _privateConstructorUsedError;
   String? get tooltip => throw _privateConstructorUsedError;
-
-  /// Added [heroTag]
   Object? get heroTag => throw _privateConstructorUsedError;
   Map<String, dynamic> get child => throw _privateConstructorUsedError;
 
@@ -483,8 +481,6 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   final bool? enableFeedback;
   @override
   final String? tooltip;
-
-  /// Added [heroTag]
   @override
   final Object? heroTag;
   final Map<String, dynamic> _child;
@@ -655,8 +651,6 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
   @override
   String? get tooltip;
   @override
-
-  /// Added [heroTag]
   Object? get heroTag;
   @override
   Map<String, dynamic> get child;

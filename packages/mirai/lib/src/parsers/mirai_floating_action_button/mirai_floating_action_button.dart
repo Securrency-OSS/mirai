@@ -31,8 +31,6 @@ class MiraiFloatingActionButton with _$MiraiFloatingActionButton {
     double? extendedIconLabelSpacing,
     bool? enableFeedback,
     String? tooltip,
-
-    /// Added [heroTag]
     Object? heroTag,
     required Map<String, dynamic> child,
   }) = _MiraiFloatingActionButton;
