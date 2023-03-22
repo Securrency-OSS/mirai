@@ -1,0 +1,21 @@
+{
+    "brightness": "dark",
+    "scaffoldBackgroundColor": "#18262D",
+    "colorScheme": {
+        "brightness": "dark",
+        "background": "#18262D",
+        "onBackground": "#ffffff",
+        "surface": "#18262D",
+        "onSurface": "#ffffff",
+        "surfaceVariant": "#8097A0",
+        "onSurfaceVariant": "#BFCBD0",
+        "primary": "#9283E5",
+        "onPrimary": "#002231",
+        "secondary": "#8859FF",
+        "onSecondary": "#ffffff",
+        "error": "#DB1A3A",
+        "onError": "#ffffff",
+        "success": "#27BA62",
+        "onSuccess": "#ffffff"
+    }
+}
