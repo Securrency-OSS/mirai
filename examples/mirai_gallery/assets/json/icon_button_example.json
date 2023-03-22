@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Icon Button",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -30,7 +29,6 @@
                         "children": [
                             {
                                 "type": "iconButton",
-                                "color": "#4D00E9",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
@@ -45,12 +43,6 @@
                             },
                             {
                                 "type": "iconButton",
-                                "color": "#4D00E9",
-                                "highlightColor": "FC3F1B",
-                                "hoverColor": "FC3F1B",
-                                "focusColor": "FC3F1B",
-                                "splashColor": "FC3F1B",
-                                "disabledColor": "D9D9D9",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
@@ -72,8 +64,6 @@
                         "children": [
                             {
                                 "type": "iconButton",
-                                "color": "#D9D9D9",
-                                "disabledColor": "D9D9D9",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
@@ -87,12 +77,6 @@
                             },
                             {
                                 "type": "iconButton",
-                                "color": "#D9D9D9",
-                                "highlightColor": "FC3F1B",
-                                "hoverColor": "FC3F1B",
-                                "focusColor": "FC3F1B",
-                                "splashColor": "FC3F1B",
-                                "disabledColor": "D9D9D9",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",

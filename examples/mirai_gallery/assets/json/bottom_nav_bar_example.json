@@ -2,6 +2,7 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Selected label",
@@ -9,10 +10,8 @@
                 "color": "#ffffff",
                 "fontSize": 21
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -36,8 +35,6 @@
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "backgroundColor": "#4D00E9",
-        "selectedItemColor": "#ffffff",
         "unselectedItemColor": "#B489F3",
         "items": [
             {

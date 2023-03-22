@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Dialogs",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -27,10 +26,12 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "SIMPLE ALERT"
+                            "data": "SIMPLE ALERT",
+                            "style": {
+                                "color": "#ffffff"
+                            }
                         },
                         "style": {
-                            "backgroundColor": "#4D00E9",
                             "padding": {
                                 "top": 8,
                                 "left": 12,
@@ -44,7 +45,6 @@
                             "navigationType": "dialog",
                             "widgetJson": {
                                 "type": "alertDialog",
-                                "backgroundColor": "#ffffff",
                                 "content": {
                                     "type": "padding",
                                     "padding": {
@@ -65,9 +65,6 @@
                                 "actions": [
                                     {
                                         "type": "textButton",
-                                        "style": {
-                                            "foregroundColor": "#FF0000"
-                                        },
                                         "child": {
                                             "type": "text",
                                             "data": "CANCEL"
@@ -84,9 +81,6 @@
                                     },
                                     {
                                         "type": "textButton",
-                                        "style": {
-                                            "foregroundColor": "#FF0000"
-                                        },
                                         "child": {
                                             "type": "text",
                                             "data": "DISCARD"
@@ -113,10 +107,12 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "ALERT WITH TITLE"
+                            "data": "ALERT WITH TITLE",
+                            "style": {
+                                "color": "#ffffff"
+                            }
                         },
                         "style": {
-                            "backgroundColor": "#4D00E9",
                             "padding": {
                                 "top": 8,
                                 "left": 12,
@@ -130,7 +126,6 @@
                             "navigationType": "dialog",
                             "widgetJson": {
                                 "type": "alertDialog",
-                                "backgroundColor": "#ffffff",
                                 "title": {
                                     "type": "text",
                                     "data": "Use Google's Location Services?",
@@ -159,9 +154,6 @@
                                 "actions": [
                                     {
                                         "type": "textButton",
-                                        "style": {
-                                            "foregroundColor": "#FF0000"
-                                        },
                                         "child": {
                                             "type": "text",
                                             "data": "DISAGREE"
@@ -178,9 +170,6 @@
                                     },
                                     {
                                         "type": "textButton",
-                                        "style": {
-                                            "foregroundColor": "#FF0000"
-                                        },
                                         "child": {
                                             "type": "text",
                                             "data": "AGREE"

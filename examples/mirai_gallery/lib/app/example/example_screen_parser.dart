@@ -16,7 +16,7 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
   Widget parse(BuildContext context, ExampleScreen model) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0XFFf5f5f5),
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),

@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Elevated Button",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -32,10 +31,12 @@
                                 "type": "elevatedButton",
                                 "child": {
                                     "type": "text",
-                                    "data": "BUTTON"
+                                    "data": "BUTTON",
+                                    "style": {
+                                        "color": "#ffffff"
+                                    }
                                 },
                                 "style": {
-                                    "backgroundColor": "#4D00E9",
                                     "padding": {
                                         "top": 8,
                                         "left": 12,
@@ -58,7 +59,8 @@
                                             "type": "icon",
                                             "iconType": "material",
                                             "icon": "add",
-                                            "size": 18
+                                            "size": 18,
+                                            "color": "#ffffff"
                                         },
                                         {
                                             "type": "sizedBox",
@@ -66,12 +68,14 @@
                                         },
                                         {
                                             "type": "text",
-                                            "data": "BUTTON"
+                                            "data": "BUTTON",
+                                            "style": {
+                                                "color": "#ffffff"
+                                            }
                                         }
                                     ]
                                 },
                                 "style": {
-                                    "backgroundColor": "#4D00E9",
                                     "padding": {
                                         "top": 8,
                                         "left": 12,
@@ -99,7 +103,6 @@
                                     "data": "BUTTON"
                                 },
                                 "style": {
-                                    "backgroundColor": "#4D00E9",
                                     "padding": {
                                         "top": 8,
                                         "left": 12,

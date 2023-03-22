@@ -2,15 +2,15 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Scaffold",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
         },
-        "backgroundColor": "#4D00E9",
         "leading": {
             "type": "iconButton",
             "child": {
@@ -50,7 +50,6 @@
             }
         ]
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -77,7 +76,6 @@
         "backgroundColor": "#FC3F1B",
         "foregroundColor": "#ffffff",
         "buttonType": "medium",
-        "heroTag": "fABMedium",
         "child": {
             "type": "icon",
             "iconType": "material",
@@ -88,9 +86,6 @@
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "backgroundColor": "#4D00E9",
-        "selectedItemColor": "#ffffff",
-        "unselectedItemColor": "#B489F3",
         "items": [
             {
                 "type": "navigationBarItem",

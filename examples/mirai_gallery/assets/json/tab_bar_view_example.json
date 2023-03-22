@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "TabBarView",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "padding",
         "padding": {

@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Row",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "scrollView",
         "child": {
@@ -90,7 +89,6 @@
                                         ]
                                     },
                                     "style": {
-                                        "foregroundColor": "#4D00E9",
                                         "padding": {
                                             "top": 8,
                                             "left": 12,
@@ -108,10 +106,12 @@
                                     "type": "elevatedButton",
                                     "child": {
                                         "type": "text",
-                                        "data": "BUTTON"
+                                        "data": "BUTTON",
+                                        "style": {
+                                            "color": "#ffffff"
+                                        }
                                     },
                                     "style": {
-                                        "backgroundColor": "#4D00E9",
                                         "padding": {
                                             "top": 8,
                                             "left": 12,
@@ -147,7 +147,6 @@
                                         ]
                                     },
                                     "style": {
-                                        "foregroundColor": "#4D00E9",
                                         "padding": {
                                             "top": 8,
                                             "left": 12,
@@ -172,7 +171,6 @@
                                     "type": "floatingActionButton",
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
-                                    "heroTag": "fAB1",
                                     "child": {
                                         "type": "icon",
                                         "iconType": "material",
@@ -190,7 +188,6 @@
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
                                     "buttonType": "large",
-                                    "heroTag": "fAB2",
                                     "child": {
                                         "type": "icon",
                                         "iconType": "material",
@@ -207,7 +204,6 @@
                                     "type": "floatingActionButton",
                                     "backgroundColor": "#FC3F1B",
                                     "foregroundColor": "#ffffff",
-                                    "heroTag": "fAB3",
                                     "buttonType": "extended",
                                     "icon": {
                                         "type": "icon",

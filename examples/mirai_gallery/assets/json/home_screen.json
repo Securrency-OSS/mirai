@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#004D00E9",
         "title": {
             "type": "text",
             "data": "Mirai Demo",
             "align": "center",
             "style": {
-                "color": "#3c3c3c",
                 "fontSize": 21
             }
         },
-        "elevation": 0,
-        "backgroundColor": "#f5f5f5"
+        "elevation": 0
     },
     "body": {
         "type": "padding",

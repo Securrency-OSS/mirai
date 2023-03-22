@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
             ],
             theme: snapshot.data![0],
             darkTheme: snapshot.data![1],
+            themeMode: ThemeMode.dark,
             title: 'Mirai Gallery',
             home: const HomeScreen(),
           );

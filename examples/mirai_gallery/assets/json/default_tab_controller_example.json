@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Chat",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "listView",
         "physics": "never",
@@ -25,34 +24,30 @@
             {
                 "type": "defaultTabController",
                 "length": 3,
+                "indicatorColor": "#4D00E9",
                 "child": {
                     "type": "tabBar",
-                    "indicatorColor": "#4D00E9",
                     "tabs": [
                         {
                             "type": "icon",
                             "iconType": "cupertino",
                             "icon": "home",
-                            "color": "#4D00E9"
+                            "color": "#FC5632"
                         },
                         {
                             "type": "icon",
                             "iconType": "cupertino",
                             "icon": "chat_bubble",
-                            "color": "#4D00E9"
+                            "color": "#FC5632"
                         },
                         {
                             "type": "icon",
                             "iconType": "cupertino",
                             "icon": "profile_circled",
-                            "color": "#4D00E9"
+                            "color": "#FC5632"
                         }
                     ]
                 }
-            },
-            {
-                "type": "sizedBox",
-                "height": 25
             },
             {
                 "type": "container",

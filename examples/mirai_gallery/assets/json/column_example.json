@@ -2,17 +2,16 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
+        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Column",
             "style": {
-                "color": "#ffffff",
-                "fontSize": 21
+                "fontSize": 21,
+                "color": "#ffffff"
             }
-        },
-        "backgroundColor": "#4D00E9"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "column",
         "mainAxisAlignment": "start",
@@ -24,9 +23,7 @@
             },
             {
                 "type": "card",
-                "color": "#f5f5f5",
                 "elevation": 20,
-                "shadowColor": "#000000",
                 "borderOnForeground": true,
                 "margin": {
                     "top": 12,
@@ -76,7 +73,6 @@
                                         {
                                             "type": "outlinedButton",
                                             "style": {
-                                                "foregroundColor": "#4D00E9",
                                                 "padding": {
                                                     "top": 8,
                                                     "left": 12,
@@ -101,7 +97,6 @@
                                         {
                                             "type": "outlinedButton",
                                             "style": {
-                                                "foregroundColor": "#4D00E9",
                                                 "padding": {
                                                     "top": 8,
                                                     "left": 12,
@@ -132,9 +127,7 @@
             },
             {
                 "type": "card",
-                "color": "#f5f5f5",
                 "elevation": 20,
-                "shadowColor": "#000000",
                 "borderOnForeground": true,
                 "margin": {
                     "top": 12,
@@ -184,7 +177,6 @@
                                         {
                                             "type": "outlinedButton",
                                             "style": {
-                                                "foregroundColor": "#4D00E9",
                                                 "padding": {
                                                     "top": 8,
                                                     "left": 12,
@@ -209,7 +201,6 @@
                                         {
                                             "type": "outlinedButton",
                                             "style": {
-                                                "foregroundColor": "#4D00E9",
                                                 "padding": {
                                                     "top": 8,
                                                     "left": 12,
