@@ -46,7 +46,7 @@ class MiraiColorScheme with _$MiraiColorScheme {
 }
 
 extension MiraiColorSchemeParser on MiraiColorScheme {
-  ColorScheme? get parse {
+  ColorScheme get parse {
     return ColorScheme(
       brightness: brightness,
       primary: primary.toColor ?? Colors.white,
