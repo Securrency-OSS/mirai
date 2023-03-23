@@ -20,7 +20,7 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.surface,
+            backgroundColor: Colors.transparent,
             elevation: 0,
             leading: IconButton(
               onPressed: () => Navigator.of(context).pop(),
@@ -53,7 +53,7 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
               )
             ],
           ),
-          backgroundColor: Theme.of(context).colorScheme.surface,
+          backgroundColor: Theme.of(context).colorScheme.background,
           body: FutureBuilder(
             future: Mirai.fromAssets(model.assetPath, context),
             builder: (BuildContext context, AsyncSnapshot snapshot) {

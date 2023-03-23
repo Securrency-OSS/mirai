@@ -2,7 +2,6 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "backgroundColor": "#4D00E9",
         "title": {
             "type": "text",
             "data": "Chat",
