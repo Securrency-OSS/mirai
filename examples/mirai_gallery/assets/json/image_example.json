@@ -45,7 +45,7 @@
                                 },
                                 {
                                     "type": "image",
-                                    "src": "assets/images/example_image_1.jpg",
+                                    "src": "assets/images/example_image_1.jpeg",
                                     "imageType": "asset",
                                     "height": 150
                                 }
@@ -96,9 +96,10 @@
                                 },
                                 {
                                     "type": "image",
-                                    "src": "assets/images/example_image_2.jpg",
+                                    "src": "assets/images/example_image_2.jpeg",
                                     "imageType": "asset",
-                                    "height": 150
+                                    "height": 150,
+                                    "fit": "cover"
                                 }
                             ]
                         }
