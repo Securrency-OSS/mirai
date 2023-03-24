@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Listview",
-            "style": {
-                "fontSize": 21,
-                "color": "#ffffff"
-            }
+            "data": "Listview"
         }
     },
     "body": {

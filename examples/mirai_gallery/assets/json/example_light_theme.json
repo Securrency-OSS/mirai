@@ -1,6 +1,7 @@
 {
     "brightness": "light",
     "scaffoldBackgroundColor": "#ffffff",
+    "disabledColor": "#60FFFFFF",
     "colorScheme": {
         "brightness": "light",
         "background": "#ffffff",
@@ -10,7 +11,7 @@
         "surfaceVariant": "#ffffff",
         "onSurfaceVariant": "#BFCBD0",
         "primary": "#4D00E9",
-        "onPrimary": "#002231",
+        "onPrimary": "#FFFFFF",
         "secondary": "#f5f5f5",
         "onSecondary": "#ffffff",
         "error": "#DB1A3A",

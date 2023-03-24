@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Sizedbox",
-            "style": {
-                "fontSize": 21,
-                "color": "#ffffff"
-            }
+            "data": "Sizedbox"
         }
     },
     "body": {

@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Tiles",
-            "style": {
-                "fontSize": 21,
-                "color": "#ffffff"
-            }
+            "data": "Tiles"
         }
     },
     "body": {

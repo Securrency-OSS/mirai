@@ -53,7 +53,6 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
               )
             ],
           ),
-          backgroundColor: Theme.of(context).colorScheme.background,
           body: FutureBuilder(
             future: Mirai.fromAssets(model.assetPath, context),
             builder: (BuildContext context, AsyncSnapshot snapshot) {

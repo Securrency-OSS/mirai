@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Scaffold",
-            "style": {
-                "fontSize": 21,
-                "color": "#ffffff"
-            }
+            "data": "Scaffold"
         },
         "leading": {
             "type": "iconButton",

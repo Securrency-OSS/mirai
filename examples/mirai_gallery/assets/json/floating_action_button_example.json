@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Floating Action Button",
-            "style": {
-                "fontSize": 21,
-                "color": "#ffffff"
-            }
+            "data": "Floating Action Button"
         }
     },
     "body": {

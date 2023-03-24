@@ -1,6 +1,7 @@
 {
     "brightness": "dark",
     "scaffoldBackgroundColor": "#18262D",
+    "disabledColor": "#60FFFFFF",
     "colorScheme": {
         "brightness": "dark",
         "background": "#18262D",

@@ -4,11 +4,7 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Cards",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
+            "data": "Cards"
         }
     },
     "body": {
