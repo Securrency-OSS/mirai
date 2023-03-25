@@ -26,6 +26,7 @@ mixin _$MiraiImage {
   String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
+  BoxFit? get fit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +46,8 @@ abstract class $MiraiImageCopyWith<$Res> {
       MiraiImageType imageType,
       String? color,
       double? width,
-      double? height});
+      double? height,
+      BoxFit? fit});
 }
 
 /// @nodoc
@@ -67,6 +69,7 @@ class _$MiraiImageCopyWithImpl<$Res, $Val extends MiraiImage>
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? fit = freezed,
   }) {
     return _then(_value.copyWith(
       src: null == src
@@ -93,6 +96,10 @@ class _$MiraiImageCopyWithImpl<$Res, $Val extends MiraiImage>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      fit: freezed == fit
+          ? _value.fit
+          : fit // ignore: cast_nullable_to_non_nullable
+              as BoxFit?,
     ) as $Val);
   }
 }
@@ -111,7 +118,8 @@ abstract class _$$_MiraiImageCopyWith<$Res>
       MiraiImageType imageType,
       String? color,
       double? width,
-      double? height});
+      double? height,
+      BoxFit? fit});
 }
 
 /// @nodoc
@@ -131,6 +139,7 @@ class __$$_MiraiImageCopyWithImpl<$Res>
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? fit = freezed,
   }) {
     return _then(_$_MiraiImage(
       src: null == src
@@ -157,6 +166,10 @@ class __$$_MiraiImageCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      fit: freezed == fit
+          ? _value.fit
+          : fit // ignore: cast_nullable_to_non_nullable
+              as BoxFit?,
     ));
   }
 }
@@ -170,7 +183,8 @@ class _$_MiraiImage implements _MiraiImage {
       this.imageType = MiraiImageType.network,
       this.color,
       this.width,
-      this.height});
+      this.height,
+      this.fit});
 
   factory _$_MiraiImage.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiImageFromJson(json);
@@ -189,10 +203,12 @@ class _$_MiraiImage implements _MiraiImage {
   final double? width;
   @override
   final double? height;
+  @override
+  final BoxFit? fit;
 
   @override
   String toString() {
-    return 'MiraiImage(src: $src, alignment: $alignment, imageType: $imageType, color: $color, width: $width, height: $height)';
+    return 'MiraiImage(src: $src, alignment: $alignment, imageType: $imageType, color: $color, width: $width, height: $height, fit: $fit)';
   }
 
   @override
@@ -207,13 +223,14 @@ class _$_MiraiImage implements _MiraiImage {
                 other.imageType == imageType) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.width, width) || other.width == width) &&
-            (identical(other.height, height) || other.height == height));
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.fit, fit) || other.fit == fit));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, src, alignment, imageType, color, width, height);
+  int get hashCode => Object.hash(
+      runtimeType, src, alignment, imageType, color, width, height, fit);
 
   @JsonKey(ignore: true)
   @override
@@ -236,7 +253,8 @@ abstract class _MiraiImage implements MiraiImage {
       final MiraiImageType imageType,
       final String? color,
       final double? width,
-      final double? height}) = _$_MiraiImage;
+      final double? height,
+      final BoxFit? fit}) = _$_MiraiImage;
 
   factory _MiraiImage.fromJson(Map<String, dynamic> json) =
       _$_MiraiImage.fromJson;
@@ -253,6 +271,8 @@ abstract class _MiraiImage implements MiraiImage {
   double? get width;
   @override
   double? get height;
+  @override
+  BoxFit? get fit;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiImageCopyWith<_$_MiraiImage> get copyWith =>

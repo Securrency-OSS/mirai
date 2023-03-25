@@ -36,6 +36,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
         color: model.color?.toColor,
         width: model.width,
         height: model.height,
+        fit: model.fit,
         errorBuilder: (context, error, stackTrace) {
           return const SizedBox();
         },
@@ -46,6 +47,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
         color: model.color?.toColor,
         width: model.width,
         height: model.height,
+        fit: model.fit,
         errorBuilder: (context, error, stackTrace) {
           return const SizedBox();
         },
@@ -57,6 +59,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
         color: model.color?.toColor,
         width: model.width,
         height: model.height,
+        fit: model.fit,
         errorBuilder: (context, error, stackTrace) {
           return const SizedBox();
         },
