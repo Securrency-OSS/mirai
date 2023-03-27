@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Tabbar",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Tabbar"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "padding",
         "padding": {
@@ -23,34 +17,23 @@
             "length": 3,
             "child": {
                 "type": "tabBar",
-                "indicatorColor": "#4D00E9",
                 "indicatorPadding": {
                     "top": 4
                 },
+                "indicatorColor": "#FC5632",
+                "labelColor": "#FC5632",
                 "tabs": [
                     {
                         "type": "text",
-                        "data": "Red",
-                        "style": {
-                            "color": "#4D00E9",
-                            "fontSize": 21
-                        }
+                        "data": "Red"
                     },
                     {
                         "type": "text",
-                        "data": "Orange",
-                        "style": {
-                            "color": "#4D00E9",
-                            "fontSize": 21
-                        }
+                        "data": "Orange"
                     },
                     {
                         "type": "text",
-                        "data": "Green",
-                        "style": {
-                            "color": "#4D00E9",
-                            "fontSize": 21
-                        }
+                        "data": "Green"
                     }
                 ]
             }

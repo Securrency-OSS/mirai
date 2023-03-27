@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Text Field",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Text Field"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "scrollView",
         "child": {
@@ -42,10 +36,6 @@
                         "textDirection": "ltr",
                         "textAlignVertical": "top",
                         "obscureText": false,
-                        "cursorColor": "#FC3F1B",
-                        "style": {
-                            "color": "#000000"
-                        },
                         "decoration": {
                             "hintText": "What do people call you?",
                             "filled": true,
@@ -55,11 +45,7 @@
                                 "icon": "person_solid",
                                 "size": 24
                             },
-                            "hintStyle": {
-                                "color": "#797979"
-                            },
-                            "labelText": "Name*",
-                            "fillColor": "#F2F2F2"
+                            "labelText": "Name*"
                         },
                         "readOnly": false,
                         "enabled": true
@@ -78,10 +64,6 @@
                         "textDirection": "ltr",
                         "textAlignVertical": "top",
                         "obscureText": false,
-                        "cursorColor": "#FC3F1B",
-                        "style": {
-                            "color": "#000000"
-                        },
                         "decoration": {
                             "hintText": "Where can we reach you?",
                             "filled": true,
@@ -91,11 +73,7 @@
                                 "icon": "phone_solid",
                                 "size": 24
                             },
-                            "hintStyle": {
-                                "color": "#797979"
-                            },
-                            "labelText": "Phone number*",
-                            "fillColor": "#F2F2F2"
+                            "labelText": "Phone number*"
                         },
                         "readOnly": false,
                         "enabled": true
@@ -114,10 +92,6 @@
                         "textDirection": "ltr",
                         "textAlignVertical": "top",
                         "obscureText": false,
-                        "cursorColor": "#FC3F1B",
-                        "style": {
-                            "color": "#000000"
-                        },
                         "decoration": {
                             "hintText": "Your email address",
                             "filled": true,
@@ -127,11 +101,7 @@
                                 "icon": "email",
                                 "size": 24
                             },
-                            "hintStyle": {
-                                "color": "#797979"
-                            },
-                            "labelText": "Email",
-                            "fillColor": "#F2F2F2"
+                            "labelText": "Email"
                         },
                         "readOnly": false,
                         "enabled": true
@@ -146,17 +116,9 @@
                         "child": {
                             "type": "textField",
                             "expands": true,
-                            "cursorColor": "#FC3F1B",
-                            "style": {
-                                "color": "#000000"
-                            },
                             "decoration": {
                                 "filled": true,
-                                "hintStyle": {
-                                    "color": "#797979"
-                                },
-                                "labelText": "Life story",
-                                "fillColor": "#F2F2F2"
+                                "labelText": "Life story"
                             },
                             "readOnly": false,
                             "enabled": true
@@ -176,10 +138,6 @@
                         "textDirection": "ltr",
                         "textAlignVertical": "top",
                         "obscureText": true,
-                        "cursorColor": "#FC3F1B",
-                        "style": {
-                            "color": "#000000"
-                        },
                         "decoration": {
                             "filled": true,
                             "suffixIcon": {
@@ -188,11 +146,7 @@
                                 "icon": "eye",
                                 "size": 24
                             },
-                            "hintStyle": {
-                                "color": "#797979"
-                            },
-                            "labelText": "Password*",
-                            "fillColor": "#F2F2F2"
+                            "labelText": "Password*"
                         },
                         "readOnly": false,
                         "enabled": true
@@ -211,10 +165,6 @@
                         "textDirection": "ltr",
                         "textAlignVertical": "top",
                         "obscureText": true,
-                        "cursorColor": "#FC3F1B",
-                        "style": {
-                            "color": "#000000"
-                        },
                         "decoration": {
                             "filled": true,
                             "suffixIcon": {
@@ -223,11 +173,7 @@
                                 "icon": "eye",
                                 "size": 24
                             },
-                            "hintStyle": {
-                                "color": "#797979"
-                            },
-                            "labelText": "Re-type password*",
-                            "fillColor": "#F2F2F2"
+                            "labelText": "Re-type password*"
                         },
                         "readOnly": false,
                         "enabled": true

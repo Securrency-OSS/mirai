@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Cards",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Cards"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "column",
         "mainAxisAlignment": "start",
@@ -24,9 +18,7 @@
             },
             {
                 "type": "card",
-                "color": "#f5f5f5",
                 "elevation": 20,
-                "shadowColor": "#000000",
                 "borderOnForeground": true,
                 "margin": {
                     "top": 20,

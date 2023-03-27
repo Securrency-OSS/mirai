@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Floating Action Button",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Floating Action Button"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -33,7 +27,6 @@
                                 "backgroundColor": "#FC3F1B",
                                 "foregroundColor": "#ffffff",
                                 "buttonType": "extended",
-                                "heroTag": "fABExtended",
                                 "icon": {
                                     "type": "icon",
                                     "iconType": "material",
@@ -55,7 +48,6 @@
                                 "backgroundColor": "#FC3F1B",
                                 "foregroundColor": "#ffffff",
                                 "buttonType": "large",
-                                "heroTag": "fABLarge",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
@@ -77,10 +69,9 @@
                         "children": [
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#D9D9D9",
+                                "backgroundColor": "#FC3F1B",
                                 "foregroundColor": "#ffffff",
                                 "buttonType": "extended",
-                                "heroTag": "fABDisabledExtended",
                                 "disabledElevation": 0,
                                 "icon": {
                                     "type": "icon",
@@ -99,10 +90,9 @@
                             },
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#D9D9D9",
+                                "backgroundColor": "#FC3F1B",
                                 "foregroundColor": "#ffffff",
                                 "buttonType": "large",
-                                "heroTag": "fABDisabledLarge",
                                 "disabledElevation": 0,
                                 "child": {
                                     "type": "icon",

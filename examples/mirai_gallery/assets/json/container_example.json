@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Container",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Container"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "listView",
         "physics": "never",

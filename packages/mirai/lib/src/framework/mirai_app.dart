@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/mirai.dart';
 import 'package:mirai/src/framework/mirai_parser.dart';
+import 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 
 class MiraiApp extends StatefulWidget {
   const MiraiApp({
@@ -112,8 +113,8 @@ class MiraiApp extends StatefulWidget {
   final TransitionBuilder? builder;
   final String title;
   final GenerateAppTitle? onGenerateTitle;
-  final ThemeData? theme;
-  final ThemeData? darkTheme;
+  final MiraiTheme? theme;
+  final MiraiTheme? darkTheme;
   final ThemeData? highContrastTheme;
   final ThemeData? highContrastDarkTheme;
   final ThemeMode? themeMode;
@@ -170,8 +171,8 @@ class _MiraiAppState extends State<MiraiApp> {
       builder: widget.builder,
       title: widget.title,
       onGenerateTitle: widget.onGenerateTitle,
-      theme: widget.theme,
-      darkTheme: widget.darkTheme,
+      theme: widget.theme?.parse,
+      darkTheme: widget.darkTheme?.parse,
       highContrastTheme: widget.highContrastTheme,
       highContrastDarkTheme: widget.highContrastDarkTheme,
       themeMode: widget.themeMode,
@@ -209,8 +210,8 @@ class _MiraiAppState extends State<MiraiApp> {
       title: widget.title,
       onGenerateTitle: widget.onGenerateTitle,
       color: widget.color,
-      theme: widget.theme,
-      darkTheme: widget.darkTheme,
+      theme: widget.theme?.parse,
+      darkTheme: widget.darkTheme?.parse,
       highContrastTheme: widget.highContrastTheme,
       highContrastDarkTheme: widget.highContrastDarkTheme,
       themeMode: widget.themeMode,

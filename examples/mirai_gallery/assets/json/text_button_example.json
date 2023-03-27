@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Text Button",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Text Button"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -35,7 +29,6 @@
                                     "data": "BUTTON"
                                 },
                                 "style": {
-                                    "foregroundColor": "#4D00E9",
                                     "padding": {
                                         "top": 8,
                                         "left": 12,
@@ -71,7 +64,6 @@
                                     ]
                                 },
                                 "style": {
-                                    "foregroundColor": "#4D00E9",
                                     "padding": {
                                         "top": 8,
                                         "left": 12,

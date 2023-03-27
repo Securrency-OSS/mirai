@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Image",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Image"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "scrollView",
         "child": {

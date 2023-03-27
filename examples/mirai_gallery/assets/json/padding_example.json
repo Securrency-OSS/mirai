@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Padding",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Padding"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "scrollView",
         "child": {

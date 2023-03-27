@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Text",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Text"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "padding",
         "padding": {

@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Scrollview",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Scrollview"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "listView",
         "shrinkWrap": true,

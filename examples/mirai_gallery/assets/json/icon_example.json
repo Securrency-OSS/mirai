@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Icon",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Icon"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",
@@ -32,7 +26,6 @@
                                 "type": "icon",
                                 "iconType": "material",
                                 "icon": "add",
-                                "color": "#4D00E9",
                                 "size": 32
                             },
                             {
@@ -43,7 +36,6 @@
                                 "type": "icon",
                                 "iconType": "material",
                                 "icon": "remove",
-                                "color": "#4D00E9",
                                 "size": 32
                             }
                         ]
@@ -59,10 +51,8 @@
                         "children": [
                             {
                                 "type": "container",
-                                "color": "#4D00E9",
                                 "child": {
                                     "type": "icon",
-                                    "color": "#ffffff",
                                     "iconType": "material",
                                     "icon": "add",
                                     "size": 32
@@ -74,10 +64,8 @@
                             },
                             {
                                 "type": "container",
-                                "color": "#4D00E9",
                                 "child": {
                                     "type": "icon",
-                                    "color": "#ffffff",
                                     "iconType": "material",
                                     "icon": "remove",
                                     "size": 32

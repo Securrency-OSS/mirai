@@ -4,15 +4,9 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Sizedbox",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
-        },
-        "backgroundColor": "#4D00E9"
+            "data": "Sizedbox"
+        }
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "listView",
         "shrinkWrap": true,

@@ -4,20 +4,14 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Appbar",
-            "style": {
-                "color": "#ffffff",
-                "fontSize": 21
-            }
+            "data": "Appbar"
         },
-        "backgroundColor": "#4D00E9",
         "leading": {
             "type": "iconButton",
             "child": {
                 "type": "icon",
                 "iconType": "material",
-                "icon": "menu",
-                "color": "#ffffff"
+                "icon": "menu"
             }
         },
         "actions": [
@@ -26,8 +20,7 @@
                 "child": {
                     "type": "icon",
                     "iconType": "cupertino",
-                    "icon": "heart_solid",
-                    "color": "#ffffff"
+                    "icon": "heart_solid"
                 }
             },
             {
@@ -35,8 +28,7 @@
                 "child": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "search",
-                    "color": "#ffffff"
+                    "icon": "search"
                 }
             },
             {
@@ -44,13 +36,11 @@
                 "child": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "more_horiz",
-                    "color": "#ffffff"
+                    "icon": "more_horiz"
                 }
             }
         ]
     },
-    "backgroundColor": "#ffffff",
     "body": {
         "type": "row",
         "mainAxisAlignment": "center",

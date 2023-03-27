@@ -1,0 +1,22 @@
+{
+    "brightness": "dark",
+    "scaffoldBackgroundColor": "#18262D",
+    "disabledColor": "#60FFFFFF",
+    "colorScheme": {
+        "brightness": "dark",
+        "background": "#18262D",
+        "onBackground": "#ffffff",
+        "surface": "#4D00E9",
+        "onSurface": "#ffffff",
+        "surfaceVariant": "#8097A0",
+        "onSurfaceVariant": "#BFCBD0",
+        "primary": "#9283E5",
+        "onPrimary": "#ffffff",
+        "secondary": "#FC5632",
+        "onSecondary": "#ffffff",
+        "error": "#DB1A3A",
+        "onError": "#ffffff",
+        "success": "#27BA62",
+        "onSuccess": "#ffffff"
+    }
+}
