@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/framework/mirai.dart';
+import 'package:mirai/src/framework/mirai_parser.dart';
+import 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 
 class MiraiApp extends StatefulWidget {
   const MiraiApp({
