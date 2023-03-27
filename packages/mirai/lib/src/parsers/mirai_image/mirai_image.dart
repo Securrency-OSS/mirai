@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_alignment/mirai_alignment.dart';
 
@@ -17,6 +18,7 @@ class MiraiImage with _$MiraiImage {
     String? color,
     double? width,
     double? height,
+    BoxFit? fit,
   }) = _MiraiImage;
 
   factory MiraiImage.fromJson(Map<String, dynamic> json) =>
