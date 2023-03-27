@@ -1,6 +1,6 @@
 part of 'app_theme_cubit.dart';
 
-class AppThemeState extends Equatable {
+class AppThemeState {
   const AppThemeState({
     this.themeMode = ThemeMode.light,
     this.lightTheme,
@@ -22,11 +22,4 @@ class AppThemeState extends Equatable {
       darkTheme: darkTheme ?? this.darkTheme,
     );
   }
-
-  @override
-  List<Object?> get props => [
-        themeMode,
-        lightTheme,
-        darkTheme,
-      ];
 }
