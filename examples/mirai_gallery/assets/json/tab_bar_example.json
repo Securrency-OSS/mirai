@@ -20,30 +20,20 @@
                 "indicatorPadding": {
                     "top": 4
                 },
+                "indicatorColor": "#FC5632",
+                "labelColor": "#FC5632",
                 "tabs": [
                     {
                         "type": "text",
-                        "data": "Red",
-                        "style": {
-                            "fontSize": 21,
-                            "color": "#FC5632"
-                        }
+                        "data": "Red"
                     },
                     {
                         "type": "text",
-                        "data": "Orange",
-                        "style": {
-                            "fontSize": 21,
-                            "color": "#FC5632"
-                        }
+                        "data": "Orange"
                     },
                     {
                         "type": "text",
-                        "data": "Green",
-                        "style": {
-                            "fontSize": 21,
-                            "color": "#FC5632"
-                        }
+                        "data": "Green"
                     }
                 ]
             }

@@ -5,7 +5,7 @@
         "backgroundColor": "#004D00E9",
         "title": {
             "type": "text",
-            "data": "Mirai Demo",
+            "data": "Mirai Gallery",
             "align": "center",
             "style": {
                 "color": "#000000"
@@ -198,41 +198,6 @@
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/container_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "cupertino",
-                        "icon": "control"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Default Tab Controller",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "Coordinates tab selection between a TabBar and a TabBarView",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "style": "list",
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "navigationType": "screen",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/default_tab_controller_example.json"
                         }
                     }
                 },
