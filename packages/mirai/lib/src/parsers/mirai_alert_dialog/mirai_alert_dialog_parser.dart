@@ -29,7 +29,7 @@ class MiraiAlertDialogParser extends MiraiParser<MiraiAlertDialog> {
       contentPadding: model.contentPadding.parse,
       contentTextStyle: model.contentTextStyle?.parse,
       actions: model.actions
-          ?.map((action) => Mirai.fromJson(action, context))
+          ?.map((action) => Mirai.fromJson(action, context) ?? const SizedBox())
           .toList(),
       actionsPadding: model.actionsPadding.parse,
       actionsAlignment: model.actionsAlignment,

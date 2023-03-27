@@ -12,16 +12,18 @@ extension MiraiActionParser on MiraiAction? {
       }
       switch (this?.actionType ?? ActionType.none) {
         case ActionType.navigate:
-          Widget widget;
+          Widget? widget;
           if (this!.widgetJson != null) {
             widget = Mirai.fromJson(this!.widgetJson, context);
 
-            return MiraiNavigator.navigate(
-              context: context,
-              navigationType: this?.navigationType ?? NavigationType.screen,
-              navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
-              widget: widget,
-            );
+            if (widget != null) {
+              return MiraiNavigator.navigate(
+                context: context,
+                navigationType: this?.navigationType ?? NavigationType.screen,
+                navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
+                widget: widget,
+              );
+            }
           } else if (this?.request != null) {
             widget = Mirai.fromNetwork(this!.request!);
 
@@ -34,7 +36,7 @@ extension MiraiActionParser on MiraiAction? {
           } else if (this?.assetPath != null) {
             widget = await Mirai.fromAssets(this!.assetPath!, context);
 
-            if (context.mounted) {
+            if (context.mounted && widget != null) {
               return MiraiNavigator.navigate(
                 context: context,
                 navigationType: this?.navigationType ?? NavigationType.screen,

@@ -43,7 +43,7 @@ class MiraiFloatingActionButtonParser
           autofocus: model.autofocus,
           tooltip: model.tooltip,
           heroTag: model.heroTag,
-          label: Mirai.fromJson(model.child, context),
+          label: Mirai.fromJson(model.child, context) ?? const SizedBox(),
         );
 
       case FloatingActionButtonType.large:

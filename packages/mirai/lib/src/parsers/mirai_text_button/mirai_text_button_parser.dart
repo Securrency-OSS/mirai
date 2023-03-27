@@ -28,7 +28,7 @@ class MiraiTextButtonParser extends MiraiParser<MiraiTextButton> {
       style: _style(model.style),
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,
-      child: Mirai.fromJson(model.child, context),
+      child: Mirai.fromJson(model.child, context) ?? const SizedBox(),
     );
   }
 

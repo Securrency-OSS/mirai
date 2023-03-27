@@ -24,7 +24,7 @@ class MiraiTabBarViewParser extends MiraiParser<MiraiTabBarView> {
       viewportFraction: model.viewportFraction,
       clipBehavior: model.clipBehavior,
       children: model.children
-          .map((child) => Mirai.fromJson(child, context))
+          .map((child) => Mirai.fromJson(child, context) ?? const SizedBox())
           .toList(),
     );
   }

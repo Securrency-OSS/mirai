@@ -39,7 +39,7 @@ class MiraiListViewParser extends MiraiParser<MiraiListView> {
       itemBuilder: (context, index) =>
           Mirai.fromJson(model.children[index], context),
       separatorBuilder: (context, _) =>
-          Mirai.fromJson(model.separator, context),
+          Mirai.fromJson(model.separator, context) ?? const SizedBox(),
     );
   }
 }

@@ -38,7 +38,7 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
       autofocus: model.autofocus,
       isSelected: model.isSelected,
       selectedIcon: Mirai.fromJson(model.selectedIcon, context),
-      icon: Mirai.fromJson(model.child, context),
+      icon: Mirai.fromJson(model.child, context) ?? const SizedBox(),
     );
   }
 
