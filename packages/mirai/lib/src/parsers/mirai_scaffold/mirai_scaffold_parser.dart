@@ -17,10 +17,7 @@ class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
   @override
   Widget parse(BuildContext context, MiraiScaffold model) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size(double.maxFinite, 56),
-        child: Mirai.fromJson(model.appBar, context),
-      ),
+      appBar: Mirai.fromJson(model.appBar, context).toPreferredSizeWidget,
       body: Mirai.fromJson(model.body, context),
       floatingActionButton: Mirai.fromJson(model.floatingActionButton, context),
       floatingActionButtonLocation: model.floatingActionButtonLocation?.value,

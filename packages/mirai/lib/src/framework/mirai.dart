@@ -122,3 +122,11 @@ class Mirai {
     return null;
   }
 }
+
+extension MiraiExtension on Widget? {
+  PreferredSizeWidget? get toPreferredSizeWidget {
+    if (this != null) {
+      return this as PreferredSizeWidget;
+    }
+  }
+}
