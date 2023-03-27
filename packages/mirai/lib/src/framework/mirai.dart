@@ -128,5 +128,6 @@ extension MiraiExtension on Widget? {
     if (this != null) {
       return this as PreferredSizeWidget;
     }
+    return null;
   }
 }
