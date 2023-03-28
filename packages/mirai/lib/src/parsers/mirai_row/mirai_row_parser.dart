@@ -21,7 +21,7 @@ class MiraiRowParser extends MiraiParser<MiraiRow> {
       textDirection: model.textDirection,
       verticalDirection: model.verticalDirection,
       children: model.children
-          .map((value) => Mirai.fromJson(value, context))
+          .map((value) => Mirai.fromJson(value, context) ?? const SizedBox())
           .toList(),
     );
   }

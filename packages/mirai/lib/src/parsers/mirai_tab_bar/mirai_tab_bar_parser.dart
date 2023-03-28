@@ -21,7 +21,9 @@ class MiraiTabBarParser extends MiraiParser<MiraiTabBar> {
   Widget parse(BuildContext context, MiraiTabBar model) {
     return TabBar(
       controller: controller,
-      tabs: model.tabs.map((tab) => Mirai.fromJson(tab, context)).toList(),
+      tabs: model.tabs
+          .map((tab) => Mirai.fromJson(tab, context) ?? const SizedBox())
+          .toList(),
       isScrollable: model.isScrollable,
       padding: model.padding?.parse,
       indicatorColor: model.indicatorColor?.toColor,

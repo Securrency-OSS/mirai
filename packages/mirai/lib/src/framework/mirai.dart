@@ -54,7 +54,7 @@ class Mirai {
     MiraiRegistry.instance.registerAll(_parsers);
   }
 
-  static Widget fromJson(Map<String, dynamic>? json, BuildContext context) {
+  static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
     try {
       if (json != null) {
         String widgetType = json['type'];
@@ -69,8 +69,7 @@ class Mirai {
     } catch (e) {
       Log.e(e);
     }
-
-    return const SizedBox();
+    return null;
   }
 
   static Widget fromNetwork(
@@ -92,7 +91,7 @@ class Mirai {
           case ConnectionState.done:
             if (snapshot.hasData) {
               final json = jsonDecode(snapshot.data.toString());
-              return Mirai.fromJson(json, context);
+              return Mirai.fromJson(json, context) ?? const SizedBox();
             } else if (snapshot.hasError) {
               Log.e(snapshot.error);
               if (errorWidget != null) {
@@ -109,7 +108,7 @@ class Mirai {
     );
   }
 
-  static Future<Widget> fromAssets(
+  static Future<Widget?> fromAssets(
     String assetPath,
     BuildContext context,
   ) async {
@@ -120,6 +119,15 @@ class Mirai {
       return fromJson(jsonData, context);
     }
 
-    return const SizedBox();
+    return null;
+  }
+}
+
+extension MiraiExtension on Widget? {
+  PreferredSizeWidget? get toPreferredSizeWidget {
+    if (this != null) {
+      return this as PreferredSizeWidget;
+    }
+    return null;
   }
 }

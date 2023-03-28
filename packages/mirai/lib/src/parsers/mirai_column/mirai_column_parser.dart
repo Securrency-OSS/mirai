@@ -22,7 +22,7 @@ class MiraiColumnParser extends MiraiParser<MiraiColumn> {
       verticalDirection: model.verticalDirection,
       children: model.children
           .map(
-            (value) => Mirai.fromJson(value, context),
+            (value) => Mirai.fromJson(value, context) ?? const SizedBox(),
           )
           .toList(),
     );
