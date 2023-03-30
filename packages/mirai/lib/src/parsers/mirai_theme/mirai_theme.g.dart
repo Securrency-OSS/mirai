@@ -38,6 +38,14 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       shadowColor: json['shadowColor'] as String?,
       splashColor: json['splashColor'] as String?,
       unselectedWidgetColor: json['unselectedWidgetColor'] as String?,
+      iconTheme: json['iconTheme'] == null
+          ? null
+          : MiraiIconThemeData.fromJson(
+              json['iconTheme'] as Map<String, dynamic>),
+      primaryIconTheme: json['primaryIconTheme'] == null
+          ? null
+          : MiraiIconThemeData.fromJson(
+              json['primaryIconTheme'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
@@ -66,6 +74,8 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'shadowColor': instance.shadowColor,
       'splashColor': instance.splashColor,
       'unselectedWidgetColor': instance.unselectedWidgetColor,
+      'iconTheme': instance.iconTheme,
+      'primaryIconTheme': instance.primaryIconTheme,
     };
 
 const _$BrightnessEnumMap = {
