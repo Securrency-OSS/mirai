@@ -44,6 +44,8 @@ mixin _$MiraiTheme {
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
   String? get unselectedWidgetColor => throw _privateConstructorUsedError;
+  MiraiOutlinedButtonThemeData? get outlinedButtonTheme =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -81,10 +83,12 @@ abstract class $MiraiThemeCopyWith<$Res> {
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
-      String? unselectedWidgetColor});
+      String? unselectedWidgetColor,
+      MiraiOutlinedButtonThemeData? outlinedButtonTheme});
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  $MiraiOutlinedButtonThemeDataCopyWith<$Res>? get outlinedButtonTheme;
 }
 
 /// @nodoc
@@ -124,6 +128,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
+    Object? outlinedButtonTheme = freezed,
   }) {
     return _then(_value.copyWith(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -222,6 +227,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      outlinedButtonTheme: freezed == outlinedButtonTheme
+          ? _value.outlinedButtonTheme
+          : outlinedButtonTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiOutlinedButtonThemeData?,
     ) as $Val);
   }
 
@@ -246,6 +255,19 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
     return $MiraiMaterialColorCopyWith<$Res>(_value.primarySwatch!, (value) {
       return _then(_value.copyWith(primarySwatch: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiOutlinedButtonThemeDataCopyWith<$Res>? get outlinedButtonTheme {
+    if (_value.outlinedButtonTheme == null) {
+      return null;
+    }
+
+    return $MiraiOutlinedButtonThemeDataCopyWith<$Res>(
+        _value.outlinedButtonTheme!, (value) {
+      return _then(_value.copyWith(outlinedButtonTheme: value) as $Val);
     });
   }
 }
@@ -282,12 +304,15 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
-      String? unselectedWidgetColor});
+      String? unselectedWidgetColor,
+      MiraiOutlinedButtonThemeData? outlinedButtonTheme});
 
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   @override
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  @override
+  $MiraiOutlinedButtonThemeDataCopyWith<$Res>? get outlinedButtonTheme;
 }
 
 /// @nodoc
@@ -325,6 +350,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
+    Object? outlinedButtonTheme = freezed,
   }) {
     return _then(_$_MiraiTheme(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -423,6 +449,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      outlinedButtonTheme: freezed == outlinedButtonTheme
+          ? _value.outlinedButtonTheme
+          : outlinedButtonTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiOutlinedButtonThemeData?,
     ));
   }
 }
@@ -454,7 +484,8 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.secondaryHeaderColor,
       this.shadowColor,
       this.splashColor,
-      this.unselectedWidgetColor});
+      this.unselectedWidgetColor,
+      this.outlinedButtonTheme});
 
   factory _$_MiraiTheme.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiThemeFromJson(json);
@@ -507,10 +538,12 @@ class _$_MiraiTheme implements _MiraiTheme {
   final String? splashColor;
   @override
   final String? unselectedWidgetColor;
+  @override
+  final MiraiOutlinedButtonThemeData? outlinedButtonTheme;
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, outlinedButtonTheme: $outlinedButtonTheme)';
   }
 
   @override
@@ -568,7 +601,9 @@ class _$_MiraiTheme implements _MiraiTheme {
             (identical(other.splashColor, splashColor) ||
                 other.splashColor == splashColor) &&
             (identical(other.unselectedWidgetColor, unselectedWidgetColor) ||
-                other.unselectedWidgetColor == unselectedWidgetColor));
+                other.unselectedWidgetColor == unselectedWidgetColor) &&
+            (identical(other.outlinedButtonTheme, outlinedButtonTheme) ||
+                other.outlinedButtonTheme == outlinedButtonTheme));
   }
 
   @JsonKey(ignore: true)
@@ -598,7 +633,8 @@ class _$_MiraiTheme implements _MiraiTheme {
         secondaryHeaderColor,
         shadowColor,
         splashColor,
-        unselectedWidgetColor
+        unselectedWidgetColor,
+        outlinedButtonTheme
       ]);
 
   @JsonKey(ignore: true)
@@ -640,7 +676,8 @@ abstract class _MiraiTheme implements MiraiTheme {
       final String? secondaryHeaderColor,
       final String? shadowColor,
       final String? splashColor,
-      final String? unselectedWidgetColor}) = _$_MiraiTheme;
+      final String? unselectedWidgetColor,
+      final MiraiOutlinedButtonThemeData? outlinedButtonTheme}) = _$_MiraiTheme;
 
   factory _MiraiTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiTheme.fromJson;
@@ -693,6 +730,8 @@ abstract class _MiraiTheme implements MiraiTheme {
   String? get splashColor;
   @override
   String? get unselectedWidgetColor;
+  @override
+  MiraiOutlinedButtonThemeData? get outlinedButtonTheme;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiThemeCopyWith<_$_MiraiTheme> get copyWith =>
