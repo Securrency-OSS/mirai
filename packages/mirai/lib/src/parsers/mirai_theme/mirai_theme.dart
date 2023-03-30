@@ -35,8 +35,6 @@ class MiraiTheme with _$MiraiTheme {
     String? shadowColor,
     String? splashColor,
     String? unselectedWidgetColor,
-
-    // TYPOGRAPHY & ICONOGRAPHY
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
   }) = _MiraiTheme;
@@ -71,7 +69,6 @@ extension MiraiThemeParser on MiraiTheme {
       splashColor: splashColor.toColor,
       unselectedWidgetColor: unselectedWidgetColor.toColor,
       primarySwatch: primarySwatch?.parse,
-      // TYPOGRAPHY & ICONOGRAPHY
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
     );

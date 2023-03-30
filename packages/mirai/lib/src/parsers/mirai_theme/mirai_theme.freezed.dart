@@ -43,8 +43,7 @@ mixin _$MiraiTheme {
   String? get secondaryHeaderColor => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
-  String? get unselectedWidgetColor =>
-      throw _privateConstructorUsedError; // TYPOGRAPHY & ICONOGRAPHY
+  String? get unselectedWidgetColor => throw _privateConstructorUsedError;
   MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
   MiraiIconThemeData? get primaryIconTheme =>
       throw _privateConstructorUsedError;
@@ -567,7 +566,6 @@ class _$_MiraiTheme implements _MiraiTheme {
   final String? splashColor;
   @override
   final String? unselectedWidgetColor;
-// TYPOGRAPHY & ICONOGRAPHY
   @override
   final MiraiIconThemeData? iconTheme;
   @override
@@ -766,7 +764,7 @@ abstract class _MiraiTheme implements MiraiTheme {
   String? get splashColor;
   @override
   String? get unselectedWidgetColor;
-  @override // TYPOGRAPHY & ICONOGRAPHY
+  @override
   MiraiIconThemeData? get iconTheme;
   @override
   MiraiIconThemeData? get primaryIconTheme;
