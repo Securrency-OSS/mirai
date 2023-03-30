@@ -18,5 +18,21 @@
         "onError": "#ffffff",
         "success": "#27BA62",
         "onSuccess": "#ffffff"
+    },
+    "iconTheme": {
+        "size": 24,
+        "fill": 1,
+        "color": "#DB1A3A",
+        "opacity": 0.7,
+        "shadows": [
+            {
+                "color": "#002231",
+                "offset": {
+                    "dx": 0.2,
+                    "dy": 0.4
+                },
+                "blurRadius": 1
+            }
+        ]
     }
 }
