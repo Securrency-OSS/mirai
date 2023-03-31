@@ -15,6 +15,14 @@ _$_MiraiAppBarTheme _$$_MiraiAppBarThemeFromJson(Map<String, dynamic> json) =>
           (json['scrolledUnderElevation'] as num?)?.toDouble(),
       shadowColor: json['shadowColor'] as String?,
       surfaceTintColor: json['surfaceTintColor'] as String?,
+      iconTheme: json['iconTheme'] == null
+          ? null
+          : MiraiIconThemeData.fromJson(
+              json['iconTheme'] as Map<String, dynamic>),
+      actionsIconTheme: json['actionsIconTheme'] == null
+          ? null
+          : MiraiIconThemeData.fromJson(
+              json['actionsIconTheme'] as Map<String, dynamic>),
       centerTitle: json['centerTitle'] as bool?,
       titleSpacing: (json['titleSpacing'] as num?)?.toDouble(),
       toolbarHeight: (json['toolbarHeight'] as num?)?.toDouble(),
@@ -26,6 +34,10 @@ _$_MiraiAppBarTheme _$$_MiraiAppBarThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiTextStyle.fromJson(
               json['titleTextStyle'] as Map<String, dynamic>),
+      systemOverlayStyle: json['systemOverlayStyle'] == null
+          ? null
+          : MiraiSystemUIOverlayStyle.fromJson(
+              json['systemOverlayStyle'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiAppBarThemeToJson(_$_MiraiAppBarTheme instance) =>
@@ -36,9 +48,12 @@ Map<String, dynamic> _$$_MiraiAppBarThemeToJson(_$_MiraiAppBarTheme instance) =>
       'scrolledUnderElevation': instance.scrolledUnderElevation,
       'shadowColor': instance.shadowColor,
       'surfaceTintColor': instance.surfaceTintColor,
+      'iconTheme': instance.iconTheme,
+      'actionsIconTheme': instance.actionsIconTheme,
       'centerTitle': instance.centerTitle,
       'titleSpacing': instance.titleSpacing,
       'toolbarHeight': instance.toolbarHeight,
       'toolbarTextStyle': instance.toolbarTextStyle,
       'titleTextStyle': instance.titleTextStyle,
+      'systemOverlayStyle': instance.systemOverlayStyle,
     };

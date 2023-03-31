@@ -1,0 +1,339 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'mirai_system_ui_olverlay_style.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+MiraiSystemUIOverlayStyle _$MiraiSystemUIOverlayStyleFromJson(
+    Map<String, dynamic> json) {
+  return _MiraiSystemUIOverlayStyle.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MiraiSystemUIOverlayStyle {
+  String? get systemNavigationBarColor => throw _privateConstructorUsedError;
+  String? get systemNavigationBarDividerColor =>
+      throw _privateConstructorUsedError;
+  Brightness? get systemNavigationBarIconBrightness =>
+      throw _privateConstructorUsedError;
+  bool? get systemNavigationBarContrastEnforced =>
+      throw _privateConstructorUsedError;
+  String? get statusBarColor => throw _privateConstructorUsedError;
+  Brightness? get statusBarBrightness => throw _privateConstructorUsedError;
+  Brightness? get statusBarIconBrightness => throw _privateConstructorUsedError;
+  bool? get systemStatusBarContrastEnforced =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiSystemUIOverlayStyleCopyWith<MiraiSystemUIOverlayStyle> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MiraiSystemUIOverlayStyleCopyWith<$Res> {
+  factory $MiraiSystemUIOverlayStyleCopyWith(MiraiSystemUIOverlayStyle value,
+          $Res Function(MiraiSystemUIOverlayStyle) then) =
+      _$MiraiSystemUIOverlayStyleCopyWithImpl<$Res, MiraiSystemUIOverlayStyle>;
+  @useResult
+  $Res call(
+      {String? systemNavigationBarColor,
+      String? systemNavigationBarDividerColor,
+      Brightness? systemNavigationBarIconBrightness,
+      bool? systemNavigationBarContrastEnforced,
+      String? statusBarColor,
+      Brightness? statusBarBrightness,
+      Brightness? statusBarIconBrightness,
+      bool? systemStatusBarContrastEnforced});
+}
+
+/// @nodoc
+class _$MiraiSystemUIOverlayStyleCopyWithImpl<$Res,
+        $Val extends MiraiSystemUIOverlayStyle>
+    implements $MiraiSystemUIOverlayStyleCopyWith<$Res> {
+  _$MiraiSystemUIOverlayStyleCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? systemNavigationBarColor = freezed,
+    Object? systemNavigationBarDividerColor = freezed,
+    Object? systemNavigationBarIconBrightness = freezed,
+    Object? systemNavigationBarContrastEnforced = freezed,
+    Object? statusBarColor = freezed,
+    Object? statusBarBrightness = freezed,
+    Object? statusBarIconBrightness = freezed,
+    Object? systemStatusBarContrastEnforced = freezed,
+  }) {
+    return _then(_value.copyWith(
+      systemNavigationBarColor: freezed == systemNavigationBarColor
+          ? _value.systemNavigationBarColor
+          : systemNavigationBarColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      systemNavigationBarDividerColor: freezed ==
+              systemNavigationBarDividerColor
+          ? _value.systemNavigationBarDividerColor
+          : systemNavigationBarDividerColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      systemNavigationBarIconBrightness: freezed ==
+              systemNavigationBarIconBrightness
+          ? _value.systemNavigationBarIconBrightness
+          : systemNavigationBarIconBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      systemNavigationBarContrastEnforced: freezed ==
+              systemNavigationBarContrastEnforced
+          ? _value.systemNavigationBarContrastEnforced
+          : systemNavigationBarContrastEnforced // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      statusBarColor: freezed == statusBarColor
+          ? _value.statusBarColor
+          : statusBarColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusBarBrightness: freezed == statusBarBrightness
+          ? _value.statusBarBrightness
+          : statusBarBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      statusBarIconBrightness: freezed == statusBarIconBrightness
+          ? _value.statusBarIconBrightness
+          : statusBarIconBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      systemStatusBarContrastEnforced: freezed ==
+              systemStatusBarContrastEnforced
+          ? _value.systemStatusBarContrastEnforced
+          : systemStatusBarContrastEnforced // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MiraiSystemUIOverlayStyleCopyWith<$Res>
+    implements $MiraiSystemUIOverlayStyleCopyWith<$Res> {
+  factory _$$_MiraiSystemUIOverlayStyleCopyWith(
+          _$_MiraiSystemUIOverlayStyle value,
+          $Res Function(_$_MiraiSystemUIOverlayStyle) then) =
+      __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? systemNavigationBarColor,
+      String? systemNavigationBarDividerColor,
+      Brightness? systemNavigationBarIconBrightness,
+      bool? systemNavigationBarContrastEnforced,
+      String? statusBarColor,
+      Brightness? statusBarBrightness,
+      Brightness? statusBarIconBrightness,
+      bool? systemStatusBarContrastEnforced});
+}
+
+/// @nodoc
+class __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>
+    extends _$MiraiSystemUIOverlayStyleCopyWithImpl<$Res,
+        _$_MiraiSystemUIOverlayStyle>
+    implements _$$_MiraiSystemUIOverlayStyleCopyWith<$Res> {
+  __$$_MiraiSystemUIOverlayStyleCopyWithImpl(
+      _$_MiraiSystemUIOverlayStyle _value,
+      $Res Function(_$_MiraiSystemUIOverlayStyle) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? systemNavigationBarColor = freezed,
+    Object? systemNavigationBarDividerColor = freezed,
+    Object? systemNavigationBarIconBrightness = freezed,
+    Object? systemNavigationBarContrastEnforced = freezed,
+    Object? statusBarColor = freezed,
+    Object? statusBarBrightness = freezed,
+    Object? statusBarIconBrightness = freezed,
+    Object? systemStatusBarContrastEnforced = freezed,
+  }) {
+    return _then(_$_MiraiSystemUIOverlayStyle(
+      systemNavigationBarColor: freezed == systemNavigationBarColor
+          ? _value.systemNavigationBarColor
+          : systemNavigationBarColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      systemNavigationBarDividerColor: freezed ==
+              systemNavigationBarDividerColor
+          ? _value.systemNavigationBarDividerColor
+          : systemNavigationBarDividerColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      systemNavigationBarIconBrightness: freezed ==
+              systemNavigationBarIconBrightness
+          ? _value.systemNavigationBarIconBrightness
+          : systemNavigationBarIconBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      systemNavigationBarContrastEnforced: freezed ==
+              systemNavigationBarContrastEnforced
+          ? _value.systemNavigationBarContrastEnforced
+          : systemNavigationBarContrastEnforced // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      statusBarColor: freezed == statusBarColor
+          ? _value.statusBarColor
+          : statusBarColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusBarBrightness: freezed == statusBarBrightness
+          ? _value.statusBarBrightness
+          : statusBarBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      statusBarIconBrightness: freezed == statusBarIconBrightness
+          ? _value.statusBarIconBrightness
+          : statusBarIconBrightness // ignore: cast_nullable_to_non_nullable
+              as Brightness?,
+      systemStatusBarContrastEnforced: freezed ==
+              systemStatusBarContrastEnforced
+          ? _value.systemStatusBarContrastEnforced
+          : systemStatusBarContrastEnforced // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MiraiSystemUIOverlayStyle implements _MiraiSystemUIOverlayStyle {
+  const _$_MiraiSystemUIOverlayStyle(
+      {this.systemNavigationBarColor,
+      this.systemNavigationBarDividerColor,
+      this.systemNavigationBarIconBrightness,
+      this.systemNavigationBarContrastEnforced,
+      this.statusBarColor,
+      this.statusBarBrightness,
+      this.statusBarIconBrightness,
+      this.systemStatusBarContrastEnforced});
+
+  factory _$_MiraiSystemUIOverlayStyle.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiSystemUIOverlayStyleFromJson(json);
+
+  @override
+  final String? systemNavigationBarColor;
+  @override
+  final String? systemNavigationBarDividerColor;
+  @override
+  final Brightness? systemNavigationBarIconBrightness;
+  @override
+  final bool? systemNavigationBarContrastEnforced;
+  @override
+  final String? statusBarColor;
+  @override
+  final Brightness? statusBarBrightness;
+  @override
+  final Brightness? statusBarIconBrightness;
+  @override
+  final bool? systemStatusBarContrastEnforced;
+
+  @override
+  String toString() {
+    return 'MiraiSystemUIOverlayStyle(systemNavigationBarColor: $systemNavigationBarColor, systemNavigationBarDividerColor: $systemNavigationBarDividerColor, systemNavigationBarIconBrightness: $systemNavigationBarIconBrightness, systemNavigationBarContrastEnforced: $systemNavigationBarContrastEnforced, statusBarColor: $statusBarColor, statusBarBrightness: $statusBarBrightness, statusBarIconBrightness: $statusBarIconBrightness, systemStatusBarContrastEnforced: $systemStatusBarContrastEnforced)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MiraiSystemUIOverlayStyle &&
+            (identical(other.systemNavigationBarColor, systemNavigationBarColor) ||
+                other.systemNavigationBarColor == systemNavigationBarColor) &&
+            (identical(other.systemNavigationBarDividerColor,
+                    systemNavigationBarDividerColor) ||
+                other.systemNavigationBarDividerColor ==
+                    systemNavigationBarDividerColor) &&
+            (identical(other.systemNavigationBarIconBrightness,
+                    systemNavigationBarIconBrightness) ||
+                other.systemNavigationBarIconBrightness ==
+                    systemNavigationBarIconBrightness) &&
+            (identical(other.systemNavigationBarContrastEnforced,
+                    systemNavigationBarContrastEnforced) ||
+                other.systemNavigationBarContrastEnforced ==
+                    systemNavigationBarContrastEnforced) &&
+            (identical(other.statusBarColor, statusBarColor) ||
+                other.statusBarColor == statusBarColor) &&
+            (identical(other.statusBarBrightness, statusBarBrightness) ||
+                other.statusBarBrightness == statusBarBrightness) &&
+            (identical(other.statusBarIconBrightness, statusBarIconBrightness) ||
+                other.statusBarIconBrightness == statusBarIconBrightness) &&
+            (identical(other.systemStatusBarContrastEnforced,
+                    systemStatusBarContrastEnforced) ||
+                other.systemStatusBarContrastEnforced ==
+                    systemStatusBarContrastEnforced));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      systemNavigationBarColor,
+      systemNavigationBarDividerColor,
+      systemNavigationBarIconBrightness,
+      systemNavigationBarContrastEnforced,
+      statusBarColor,
+      statusBarBrightness,
+      statusBarIconBrightness,
+      systemStatusBarContrastEnforced);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MiraiSystemUIOverlayStyleCopyWith<_$_MiraiSystemUIOverlayStyle>
+      get copyWith => __$$_MiraiSystemUIOverlayStyleCopyWithImpl<
+          _$_MiraiSystemUIOverlayStyle>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MiraiSystemUIOverlayStyleToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MiraiSystemUIOverlayStyle implements MiraiSystemUIOverlayStyle {
+  const factory _MiraiSystemUIOverlayStyle(
+          {final String? systemNavigationBarColor,
+          final String? systemNavigationBarDividerColor,
+          final Brightness? systemNavigationBarIconBrightness,
+          final bool? systemNavigationBarContrastEnforced,
+          final String? statusBarColor,
+          final Brightness? statusBarBrightness,
+          final Brightness? statusBarIconBrightness,
+          final bool? systemStatusBarContrastEnforced}) =
+      _$_MiraiSystemUIOverlayStyle;
+
+  factory _MiraiSystemUIOverlayStyle.fromJson(Map<String, dynamic> json) =
+      _$_MiraiSystemUIOverlayStyle.fromJson;
+
+  @override
+  String? get systemNavigationBarColor;
+  @override
+  String? get systemNavigationBarDividerColor;
+  @override
+  Brightness? get systemNavigationBarIconBrightness;
+  @override
+  bool? get systemNavigationBarContrastEnforced;
+  @override
+  String? get statusBarColor;
+  @override
+  Brightness? get statusBarBrightness;
+  @override
+  Brightness? get statusBarIconBrightness;
+  @override
+  bool? get systemStatusBarContrastEnforced;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MiraiSystemUIOverlayStyleCopyWith<_$_MiraiSystemUIOverlayStyle>
+      get copyWith => throw _privateConstructorUsedError;
+}

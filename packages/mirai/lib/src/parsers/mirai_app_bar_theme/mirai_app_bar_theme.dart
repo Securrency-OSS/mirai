@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/mirai.dart';
+import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
+import 'package:mirai/src/parsers/mirai_system_ui_olverlay_style/mirai_system_ui_olverlay_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_app_bar_theme.freezed.dart';
@@ -15,15 +17,14 @@ class MiraiAppBarTheme with _$MiraiAppBarTheme {
     double? scrolledUnderElevation,
     String? shadowColor,
     String? surfaceTintColor,
-    // ShapeBorder? shape,
-    // IconThemeData? iconTheme,
-    // IconThemeData? actionsIconTheme,
+    MiraiIconThemeData? iconTheme,
+    MiraiIconThemeData? actionsIconTheme,
     bool? centerTitle,
     double? titleSpacing,
     double? toolbarHeight,
     MiraiTextStyle? toolbarTextStyle,
     MiraiTextStyle? titleTextStyle,
-    // SystemUiOverlayStyle? systemOverlayStyle,
+    MiraiSystemUIOverlayStyle? systemOverlayStyle,
   }) = _MiraiAppBarTheme;
 
   factory MiraiAppBarTheme.fromJson(Map<String, dynamic> json) =>
@@ -44,6 +45,7 @@ extension MiraiAppBarThemeParser on MiraiAppBarTheme {
       toolbarHeight: toolbarHeight,
       toolbarTextStyle: toolbarTextStyle?.parse,
       titleTextStyle: titleTextStyle?.parse,
+      systemOverlayStyle: systemOverlayStyle?.parse,
     );
   }
 }

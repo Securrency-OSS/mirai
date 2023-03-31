@@ -34,5 +34,11 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "appBarTheme": {
+        "backgroundColor": "#4D00E9",
+        "foregroundColor": "#FFFFFF",
+        "centerTitle": true,
+        "surfaceTintColor": "#FFFFFF"
     }
 }

@@ -25,15 +25,17 @@ mixin _$MiraiAppBarTheme {
   double? get elevation => throw _privateConstructorUsedError;
   double? get scrolledUnderElevation => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
-  String? get surfaceTintColor =>
-      throw _privateConstructorUsedError; // ShapeBorder? shape,
-// IconThemeData? iconTheme,
-// IconThemeData? actionsIconTheme,
+  String? get surfaceTintColor => throw _privateConstructorUsedError;
+  MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
+  MiraiIconThemeData? get actionsIconTheme =>
+      throw _privateConstructorUsedError;
   bool? get centerTitle => throw _privateConstructorUsedError;
   double? get titleSpacing => throw _privateConstructorUsedError;
   double? get toolbarHeight => throw _privateConstructorUsedError;
   MiraiTextStyle? get toolbarTextStyle => throw _privateConstructorUsedError;
   MiraiTextStyle? get titleTextStyle => throw _privateConstructorUsedError;
+  MiraiSystemUIOverlayStyle? get systemOverlayStyle =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,14 +56,20 @@ abstract class $MiraiAppBarThemeCopyWith<$Res> {
       double? scrolledUnderElevation,
       String? shadowColor,
       String? surfaceTintColor,
+      MiraiIconThemeData? iconTheme,
+      MiraiIconThemeData? actionsIconTheme,
       bool? centerTitle,
       double? titleSpacing,
       double? toolbarHeight,
       MiraiTextStyle? toolbarTextStyle,
-      MiraiTextStyle? titleTextStyle});
+      MiraiTextStyle? titleTextStyle,
+      MiraiSystemUIOverlayStyle? systemOverlayStyle});
 
+  $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
+  $MiraiIconThemeDataCopyWith<$Res>? get actionsIconTheme;
   $MiraiTextStyleCopyWith<$Res>? get toolbarTextStyle;
   $MiraiTextStyleCopyWith<$Res>? get titleTextStyle;
+  $MiraiSystemUIOverlayStyleCopyWith<$Res>? get systemOverlayStyle;
 }
 
 /// @nodoc
@@ -83,11 +91,14 @@ class _$MiraiAppBarThemeCopyWithImpl<$Res, $Val extends MiraiAppBarTheme>
     Object? scrolledUnderElevation = freezed,
     Object? shadowColor = freezed,
     Object? surfaceTintColor = freezed,
+    Object? iconTheme = freezed,
+    Object? actionsIconTheme = freezed,
     Object? centerTitle = freezed,
     Object? titleSpacing = freezed,
     Object? toolbarHeight = freezed,
     Object? toolbarTextStyle = freezed,
     Object? titleTextStyle = freezed,
+    Object? systemOverlayStyle = freezed,
   }) {
     return _then(_value.copyWith(
       backgroundColor: freezed == backgroundColor
@@ -114,6 +125,14 @@ class _$MiraiAppBarThemeCopyWithImpl<$Res, $Val extends MiraiAppBarTheme>
           ? _value.surfaceTintColor
           : surfaceTintColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      iconTheme: freezed == iconTheme
+          ? _value.iconTheme
+          : iconTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiIconThemeData?,
+      actionsIconTheme: freezed == actionsIconTheme
+          ? _value.actionsIconTheme
+          : actionsIconTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiIconThemeData?,
       centerTitle: freezed == centerTitle
           ? _value.centerTitle
           : centerTitle // ignore: cast_nullable_to_non_nullable
@@ -134,7 +153,35 @@ class _$MiraiAppBarThemeCopyWithImpl<$Res, $Val extends MiraiAppBarTheme>
           ? _value.titleTextStyle
           : titleTextStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      systemOverlayStyle: freezed == systemOverlayStyle
+          ? _value.systemOverlayStyle
+          : systemOverlayStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiSystemUIOverlayStyle?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiIconThemeDataCopyWith<$Res>? get iconTheme {
+    if (_value.iconTheme == null) {
+      return null;
+    }
+
+    return $MiraiIconThemeDataCopyWith<$Res>(_value.iconTheme!, (value) {
+      return _then(_value.copyWith(iconTheme: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiIconThemeDataCopyWith<$Res>? get actionsIconTheme {
+    if (_value.actionsIconTheme == null) {
+      return null;
+    }
+
+    return $MiraiIconThemeDataCopyWith<$Res>(_value.actionsIconTheme!, (value) {
+      return _then(_value.copyWith(actionsIconTheme: value) as $Val);
+    });
   }
 
   @override
@@ -160,6 +207,19 @@ class _$MiraiAppBarThemeCopyWithImpl<$Res, $Val extends MiraiAppBarTheme>
       return _then(_value.copyWith(titleTextStyle: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiSystemUIOverlayStyleCopyWith<$Res>? get systemOverlayStyle {
+    if (_value.systemOverlayStyle == null) {
+      return null;
+    }
+
+    return $MiraiSystemUIOverlayStyleCopyWith<$Res>(_value.systemOverlayStyle!,
+        (value) {
+      return _then(_value.copyWith(systemOverlayStyle: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -177,16 +237,25 @@ abstract class _$$_MiraiAppBarThemeCopyWith<$Res>
       double? scrolledUnderElevation,
       String? shadowColor,
       String? surfaceTintColor,
+      MiraiIconThemeData? iconTheme,
+      MiraiIconThemeData? actionsIconTheme,
       bool? centerTitle,
       double? titleSpacing,
       double? toolbarHeight,
       MiraiTextStyle? toolbarTextStyle,
-      MiraiTextStyle? titleTextStyle});
+      MiraiTextStyle? titleTextStyle,
+      MiraiSystemUIOverlayStyle? systemOverlayStyle});
 
+  @override
+  $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
+  @override
+  $MiraiIconThemeDataCopyWith<$Res>? get actionsIconTheme;
   @override
   $MiraiTextStyleCopyWith<$Res>? get toolbarTextStyle;
   @override
   $MiraiTextStyleCopyWith<$Res>? get titleTextStyle;
+  @override
+  $MiraiSystemUIOverlayStyleCopyWith<$Res>? get systemOverlayStyle;
 }
 
 /// @nodoc
@@ -206,11 +275,14 @@ class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
     Object? scrolledUnderElevation = freezed,
     Object? shadowColor = freezed,
     Object? surfaceTintColor = freezed,
+    Object? iconTheme = freezed,
+    Object? actionsIconTheme = freezed,
     Object? centerTitle = freezed,
     Object? titleSpacing = freezed,
     Object? toolbarHeight = freezed,
     Object? toolbarTextStyle = freezed,
     Object? titleTextStyle = freezed,
+    Object? systemOverlayStyle = freezed,
   }) {
     return _then(_$_MiraiAppBarTheme(
       backgroundColor: freezed == backgroundColor
@@ -237,6 +309,14 @@ class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
           ? _value.surfaceTintColor
           : surfaceTintColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      iconTheme: freezed == iconTheme
+          ? _value.iconTheme
+          : iconTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiIconThemeData?,
+      actionsIconTheme: freezed == actionsIconTheme
+          ? _value.actionsIconTheme
+          : actionsIconTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiIconThemeData?,
       centerTitle: freezed == centerTitle
           ? _value.centerTitle
           : centerTitle // ignore: cast_nullable_to_non_nullable
@@ -257,6 +337,10 @@ class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
           ? _value.titleTextStyle
           : titleTextStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      systemOverlayStyle: freezed == systemOverlayStyle
+          ? _value.systemOverlayStyle
+          : systemOverlayStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiSystemUIOverlayStyle?,
     ));
   }
 }
@@ -271,11 +355,14 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
       this.scrolledUnderElevation,
       this.shadowColor,
       this.surfaceTintColor,
+      this.iconTheme,
+      this.actionsIconTheme,
       this.centerTitle,
       this.titleSpacing,
       this.toolbarHeight,
       this.toolbarTextStyle,
-      this.titleTextStyle});
+      this.titleTextStyle,
+      this.systemOverlayStyle});
 
   factory _$_MiraiAppBarTheme.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiAppBarThemeFromJson(json);
@@ -292,9 +379,10 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
   final String? shadowColor;
   @override
   final String? surfaceTintColor;
-// ShapeBorder? shape,
-// IconThemeData? iconTheme,
-// IconThemeData? actionsIconTheme,
+  @override
+  final MiraiIconThemeData? iconTheme;
+  @override
+  final MiraiIconThemeData? actionsIconTheme;
   @override
   final bool? centerTitle;
   @override
@@ -305,10 +393,12 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
   final MiraiTextStyle? toolbarTextStyle;
   @override
   final MiraiTextStyle? titleTextStyle;
+  @override
+  final MiraiSystemUIOverlayStyle? systemOverlayStyle;
 
   @override
   String toString() {
-    return 'MiraiAppBarTheme(backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, elevation: $elevation, scrolledUnderElevation: $scrolledUnderElevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, centerTitle: $centerTitle, titleSpacing: $titleSpacing, toolbarHeight: $toolbarHeight, toolbarTextStyle: $toolbarTextStyle, titleTextStyle: $titleTextStyle)';
+    return 'MiraiAppBarTheme(backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, elevation: $elevation, scrolledUnderElevation: $scrolledUnderElevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconTheme: $iconTheme, actionsIconTheme: $actionsIconTheme, centerTitle: $centerTitle, titleSpacing: $titleSpacing, toolbarHeight: $toolbarHeight, toolbarTextStyle: $toolbarTextStyle, titleTextStyle: $titleTextStyle, systemOverlayStyle: $systemOverlayStyle)';
   }
 
   @override
@@ -328,6 +418,10 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
                 other.shadowColor == shadowColor) &&
             (identical(other.surfaceTintColor, surfaceTintColor) ||
                 other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.iconTheme, iconTheme) ||
+                other.iconTheme == iconTheme) &&
+            (identical(other.actionsIconTheme, actionsIconTheme) ||
+                other.actionsIconTheme == actionsIconTheme) &&
             (identical(other.centerTitle, centerTitle) ||
                 other.centerTitle == centerTitle) &&
             (identical(other.titleSpacing, titleSpacing) ||
@@ -337,7 +431,9 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
             (identical(other.toolbarTextStyle, toolbarTextStyle) ||
                 other.toolbarTextStyle == toolbarTextStyle) &&
             (identical(other.titleTextStyle, titleTextStyle) ||
-                other.titleTextStyle == titleTextStyle));
+                other.titleTextStyle == titleTextStyle) &&
+            (identical(other.systemOverlayStyle, systemOverlayStyle) ||
+                other.systemOverlayStyle == systemOverlayStyle));
   }
 
   @JsonKey(ignore: true)
@@ -350,11 +446,14 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
       scrolledUnderElevation,
       shadowColor,
       surfaceTintColor,
+      iconTheme,
+      actionsIconTheme,
       centerTitle,
       titleSpacing,
       toolbarHeight,
       toolbarTextStyle,
-      titleTextStyle);
+      titleTextStyle,
+      systemOverlayStyle);
 
   @JsonKey(ignore: true)
   @override
@@ -372,17 +471,21 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
 
 abstract class _MiraiAppBarTheme implements MiraiAppBarTheme {
   const factory _MiraiAppBarTheme(
-      {final String? backgroundColor,
-      final String? foregroundColor,
-      final double? elevation,
-      final double? scrolledUnderElevation,
-      final String? shadowColor,
-      final String? surfaceTintColor,
-      final bool? centerTitle,
-      final double? titleSpacing,
-      final double? toolbarHeight,
-      final MiraiTextStyle? toolbarTextStyle,
-      final MiraiTextStyle? titleTextStyle}) = _$_MiraiAppBarTheme;
+          {final String? backgroundColor,
+          final String? foregroundColor,
+          final double? elevation,
+          final double? scrolledUnderElevation,
+          final String? shadowColor,
+          final String? surfaceTintColor,
+          final MiraiIconThemeData? iconTheme,
+          final MiraiIconThemeData? actionsIconTheme,
+          final bool? centerTitle,
+          final double? titleSpacing,
+          final double? toolbarHeight,
+          final MiraiTextStyle? toolbarTextStyle,
+          final MiraiTextStyle? titleTextStyle,
+          final MiraiSystemUIOverlayStyle? systemOverlayStyle}) =
+      _$_MiraiAppBarTheme;
 
   factory _MiraiAppBarTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiAppBarTheme.fromJson;
@@ -399,9 +502,11 @@ abstract class _MiraiAppBarTheme implements MiraiAppBarTheme {
   String? get shadowColor;
   @override
   String? get surfaceTintColor;
-  @override // ShapeBorder? shape,
-// IconThemeData? iconTheme,
-// IconThemeData? actionsIconTheme,
+  @override
+  MiraiIconThemeData? get iconTheme;
+  @override
+  MiraiIconThemeData? get actionsIconTheme;
+  @override
   bool? get centerTitle;
   @override
   double? get titleSpacing;
@@ -411,6 +516,8 @@ abstract class _MiraiAppBarTheme implements MiraiAppBarTheme {
   MiraiTextStyle? get toolbarTextStyle;
   @override
   MiraiTextStyle? get titleTextStyle;
+  @override
+  MiraiSystemUIOverlayStyle? get systemOverlayStyle;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiAppBarThemeCopyWith<_$_MiraiAppBarTheme> get copyWith =>
