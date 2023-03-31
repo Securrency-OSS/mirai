@@ -18,6 +18,7 @@ class MiraiAppBar with _$MiraiAppBar {
     String? foregroundColor,
     String? surfaceTintColor,
     @Default([]) List<Map<String, dynamic>> actions,
+    Map<String, dynamic>? bottom,
     double? titleSpacing,
     @Default(1.0) double toolbarOpacity,
     @Default(1.0) double bottomOpacity,

@@ -28,6 +28,7 @@ class MiraiAppBarParser extends MiraiParser<MiraiAppBar> {
       actions: model.actions
           .map((action) => Mirai.fromJson(action, context) ?? const SizedBox())
           .toList(),
+      bottom: Mirai.fromJson(model.bottom, context).toPreferredSizeWidget,
       titleSpacing: model.titleSpacing,
       toolbarOpacity: model.toolbarOpacity,
       bottomOpacity: model.bottomOpacity,
