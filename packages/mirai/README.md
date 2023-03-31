@@ -1,5 +1,6 @@
 ![Mirai][mirai_banner]
 
+[![pub package](https://img.shields.io/pub/v/mirai.svg)](https://pub.dev/packages/mirai)
 [![License: MIT][license_badge]][license_link]
 
 ---
@@ -17,15 +18,6 @@ Install the plugin by running the following command from the project root:
 ```bash
 flutter pub add mirai
 ```
-
-This will add a line like this to your package's pubspec.yaml.
-
-```yaml
-dependencies:
-  mirai: ^0.0.2
-```
-
-And then run flutter pub get.
 
 ## Usage 🧑‍💻
 
