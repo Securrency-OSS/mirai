@@ -730,41 +730,6 @@
                     "type": "listTile",
                     "leading": {
                         "type": "icon",
-                        "iconType": "material",
-                        "icon": "pageview"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Tabbar View",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "A page view that displays the widget which corresponds to the currently selected tab",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "style": "list",
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "navigationType": "screen",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/tab_bar_view_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
                         "iconType": "cupertino",
                         "icon": "text_quote"
                     },
