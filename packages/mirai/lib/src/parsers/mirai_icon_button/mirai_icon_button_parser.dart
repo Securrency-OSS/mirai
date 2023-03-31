@@ -44,6 +44,7 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
 
   ButtonStyle _style(MiraiButtonStyle? style) {
     return IconButton.styleFrom(
+      iconSize: style?.iconSize,
       foregroundColor: style?.foregroundColor.toColor,
       backgroundColor: style?.backgroundColor.toColor,
       disabledForegroundColor: style?.disabledForegroundColor.toColor,
