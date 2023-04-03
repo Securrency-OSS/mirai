@@ -24,8 +24,10 @@ extension MiraiTextButtonThemeDataParser on MiraiTextButtonThemeData {
     return TextButton.styleFrom(
       foregroundColor: style?.foregroundColor.toColor,
       backgroundColor: style?.backgroundColor.toColor,
+      iconColor: style?.iconColor.toColor,
       disabledForegroundColor: style?.disabledForegroundColor.toColor,
       disabledBackgroundColor: style?.disabledBackgroundColor.toColor,
+      disabledIconColor: style?.disabledIconColor.toColor,
       shadowColor: style?.shadowColor.toColor,
       surfaceTintColor: style?.surfaceTintColor.toColor,
       elevation: style?.elevation,

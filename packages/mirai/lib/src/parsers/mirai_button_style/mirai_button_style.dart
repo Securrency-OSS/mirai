@@ -15,6 +15,8 @@ class MiraiButtonStyle with _$MiraiButtonStyle {
     String? disabledBackgroundColor,
     String? shadowColor,
     String? surfaceTintColor,
+    String? iconColor,
+    String? disabledIconColor,
     double? elevation,
     MiraiTextStyle? textStyle,
     MiraiEdgeInsets? padding,

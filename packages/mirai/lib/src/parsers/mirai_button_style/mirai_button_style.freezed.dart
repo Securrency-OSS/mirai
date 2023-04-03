@@ -26,6 +26,8 @@ mixin _$MiraiButtonStyle {
   String? get disabledBackgroundColor => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get surfaceTintColor => throw _privateConstructorUsedError;
+  String? get iconColor => throw _privateConstructorUsedError;
+  String? get disabledIconColor => throw _privateConstructorUsedError;
   double? get elevation => throw _privateConstructorUsedError;
   MiraiTextStyle? get textStyle => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
@@ -53,6 +55,8 @@ abstract class $MiraiButtonStyleCopyWith<$Res> {
       String? disabledBackgroundColor,
       String? shadowColor,
       String? surfaceTintColor,
+      String? iconColor,
+      String? disabledIconColor,
       double? elevation,
       MiraiTextStyle? textStyle,
       MiraiEdgeInsets? padding,
@@ -87,6 +91,8 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
     Object? disabledBackgroundColor = freezed,
     Object? shadowColor = freezed,
     Object? surfaceTintColor = freezed,
+    Object? iconColor = freezed,
+    Object? disabledIconColor = freezed,
     Object? elevation = freezed,
     Object? textStyle = freezed,
     Object? padding = freezed,
@@ -119,6 +125,14 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
       surfaceTintColor: freezed == surfaceTintColor
           ? _value.surfaceTintColor
           : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      disabledIconColor: freezed == disabledIconColor
+          ? _value.disabledIconColor
+          : disabledIconColor // ignore: cast_nullable_to_non_nullable
               as String?,
       elevation: freezed == elevation
           ? _value.elevation
@@ -227,6 +241,8 @@ abstract class _$$_MiraiButtonStyleCopyWith<$Res>
       String? disabledBackgroundColor,
       String? shadowColor,
       String? surfaceTintColor,
+      String? iconColor,
+      String? disabledIconColor,
       double? elevation,
       MiraiTextStyle? textStyle,
       MiraiEdgeInsets? padding,
@@ -264,6 +280,8 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
     Object? disabledBackgroundColor = freezed,
     Object? shadowColor = freezed,
     Object? surfaceTintColor = freezed,
+    Object? iconColor = freezed,
+    Object? disabledIconColor = freezed,
     Object? elevation = freezed,
     Object? textStyle = freezed,
     Object? padding = freezed,
@@ -296,6 +314,14 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
       surfaceTintColor: freezed == surfaceTintColor
           ? _value.surfaceTintColor
           : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iconColor: freezed == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      disabledIconColor: freezed == disabledIconColor
+          ? _value.disabledIconColor
+          : disabledIconColor // ignore: cast_nullable_to_non_nullable
               as String?,
       elevation: freezed == elevation
           ? _value.elevation
@@ -339,6 +365,8 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       this.disabledBackgroundColor,
       this.shadowColor,
       this.surfaceTintColor,
+      this.iconColor,
+      this.disabledIconColor,
       this.elevation,
       this.textStyle,
       this.padding,
@@ -363,6 +391,10 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
   @override
   final String? surfaceTintColor;
   @override
+  final String? iconColor;
+  @override
+  final String? disabledIconColor;
+  @override
   final double? elevation;
   @override
   final MiraiTextStyle? textStyle;
@@ -379,7 +411,7 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
 
   @override
   String toString() {
-    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, enableFeedback: $enableFeedback)';
+    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconColor: $iconColor, disabledIconColor: $disabledIconColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, enableFeedback: $enableFeedback)';
   }
 
   @override
@@ -401,6 +433,10 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
                 other.shadowColor == shadowColor) &&
             (identical(other.surfaceTintColor, surfaceTintColor) ||
                 other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.iconColor, iconColor) ||
+                other.iconColor == iconColor) &&
+            (identical(other.disabledIconColor, disabledIconColor) ||
+                other.disabledIconColor == disabledIconColor) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
             (identical(other.textStyle, textStyle) ||
@@ -426,6 +462,8 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       disabledBackgroundColor,
       shadowColor,
       surfaceTintColor,
+      iconColor,
+      disabledIconColor,
       elevation,
       textStyle,
       padding,
@@ -456,6 +494,8 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
       final String? disabledBackgroundColor,
       final String? shadowColor,
       final String? surfaceTintColor,
+      final String? iconColor,
+      final String? disabledIconColor,
       final double? elevation,
       final MiraiTextStyle? textStyle,
       final MiraiEdgeInsets? padding,
@@ -479,6 +519,10 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
   String? get shadowColor;
   @override
   String? get surfaceTintColor;
+  @override
+  String? get iconColor;
+  @override
+  String? get disabledIconColor;
   @override
   double? get elevation;
   @override
