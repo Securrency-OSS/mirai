@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
+import 'package:mirai/src/parsers/mirai_floating_action_theme_data/mirai_floating_action_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -37,6 +38,7 @@ class MiraiTheme with _$MiraiTheme {
     String? unselectedWidgetColor,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
+    MiraiFloatingActionThemeData? floatingActionButtonTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -71,6 +73,7 @@ extension MiraiThemeParser on MiraiTheme {
       primarySwatch: primarySwatch?.parse,
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
+      floatingActionButtonTheme: floatingActionButtonTheme?.parse,
     );
   }
 }
