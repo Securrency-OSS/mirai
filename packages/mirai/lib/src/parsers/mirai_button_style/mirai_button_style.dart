@@ -100,6 +100,7 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
+      iconSize: iconSize,
     );
   }
 }
