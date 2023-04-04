@@ -40,7 +40,7 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       unselectedWidgetColor: json['unselectedWidgetColor'] as String?,
       elevatedButtonTheme: json['elevatedButtonTheme'] == null
           ? null
-          : MiraiElevatedButtonThemeData.fromJson(
+          : MiraiButtonStyle.fromJson(
               json['elevatedButtonTheme'] as Map<String, dynamic>),
       iconTheme: json['iconTheme'] == null
           ? null
