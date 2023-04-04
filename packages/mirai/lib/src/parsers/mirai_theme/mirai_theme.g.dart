@@ -42,6 +42,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiButtonStyle.fromJson(
               json['elevatedButtonTheme'] as Map<String, dynamic>),
+      outlinedButtonTheme: json['outlinedButtonTheme'] == null
+          ? null
+          : MiraiButtonStyle.fromJson(
+              json['outlinedButtonTheme'] as Map<String, dynamic>),
       iconTheme: json['iconTheme'] == null
           ? null
           : MiraiIconThemeData.fromJson(
@@ -79,6 +83,7 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'splashColor': instance.splashColor,
       'unselectedWidgetColor': instance.unselectedWidgetColor,
       'elevatedButtonTheme': instance.elevatedButtonTheme,
+      'outlinedButtonTheme': instance.outlinedButtonTheme,
       'iconTheme': instance.iconTheme,
       'primaryIconTheme': instance.primaryIconTheme,
     };

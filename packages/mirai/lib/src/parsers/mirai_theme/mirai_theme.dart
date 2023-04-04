@@ -37,6 +37,7 @@ class MiraiTheme with _$MiraiTheme {
     String? splashColor,
     String? unselectedWidgetColor,
     MiraiButtonStyle? elevatedButtonTheme,
+    MiraiButtonStyle? outlinedButtonTheme,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
   }) = _MiraiTheme;
@@ -73,6 +74,8 @@ extension MiraiThemeParser on MiraiTheme {
       primarySwatch: primarySwatch?.parse,
       elevatedButtonTheme:
           ElevatedButtonThemeData(style: elevatedButtonTheme?.parseElevated),
+      outlinedButtonTheme:
+          OutlinedButtonThemeData(style: outlinedButtonTheme?.parseOutlined),
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
     );

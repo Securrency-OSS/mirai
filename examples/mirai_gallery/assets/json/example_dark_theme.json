@@ -18,5 +18,11 @@
         "onError": "#ffffff",
         "success": "#27BA62",
         "onSuccess": "#ffffff"
+    },
+    "outlinedButtonTheme": {
+        "style": {
+            "foregroundColor": "#9283E5",
+            "disabledForegroundColor": "#609283E5"
+        }
     }
 }
