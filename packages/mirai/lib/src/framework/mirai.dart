@@ -7,6 +7,7 @@ import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
 
@@ -45,6 +46,7 @@ class Mirai {
     const MiraiDefaultTabControllerParser(),
     const MiraiScrollViewParser(),
     const MiraiAlertDialogParser(),
+    const MiraiTabParser(),
   ];
 
   static Future<void> initialize({

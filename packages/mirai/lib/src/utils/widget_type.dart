@@ -25,4 +25,5 @@ enum WidgetType {
   listView,
   defaultTabController,
   scrollView,
+  tab,
 }
