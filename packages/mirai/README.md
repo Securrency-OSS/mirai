@@ -387,4 +387,4 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 [securrency_link]: https://securrency.com
 [form_screen]: https://github.com/Securrency-OSS/mirai/blob/main/assets/form_screen_image.png
 [divyanshu_github]: https://github.com/divyanshub024
-[aasim_github]: https://github.com/AsimKhanSecurrency
+[aasim_github]: https://github.com/iamasimkhan
