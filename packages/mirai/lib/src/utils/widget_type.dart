@@ -15,6 +15,7 @@ enum WidgetType {
   appBar,
   textButton,
   sizedBox,
+  fractionallySizedBox,
   alertDialog,
   tabBarView,
   tabBar,
@@ -25,4 +26,5 @@ enum WidgetType {
   listView,
   defaultTabController,
   scrollView,
+  tab,
 }

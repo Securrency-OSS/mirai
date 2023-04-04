@@ -696,6 +696,41 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "space_bar"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Fractionally Sizedbox",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A widget that sizes its child to a fraction of the total available space.",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/fractionally_sized_box_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "table_chart"
                     },
                     "title": {
@@ -723,41 +758,6 @@
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/tab_bar_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "pageview"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Tabbar View",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "A page view that displays the widget which corresponds to the currently selected tab",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "style": "list",
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "navigationType": "screen",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/tab_bar_view_example.json"
                         }
                     }
                 },

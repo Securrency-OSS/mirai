@@ -130,6 +130,14 @@
                                             "data": "BUTTON"
                                         }
                                     ]
+                                },
+                                "style": {
+                                    "padding": {
+                                        "top": 8,
+                                        "left": 12,
+                                        "right": 12,
+                                        "bottom": 8
+                                    }
                                 }
                             }
                         ]

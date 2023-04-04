@@ -24,5 +24,29 @@
             "foregroundColor": "#4D00E9",
             "disabledForegroundColor": "#604D00E9"
         }
+    },
+    "elevatedButtonTheme": {
+        "style": {
+            "backgroundColor": "#4D00E9",
+            "disabledBackgroundColor": "#604D00E9",
+            "foregroundColor": "#FFFFFF",
+            "disabledForegroundColor": "#60FFFFFF"
+        }
+    },
+    "iconTheme": {
+        "size": 24,
+        "fill": 1,
+        "color": "#DB1A3A",
+        "opacity": 0.7,
+        "shadows": [
+            {
+                "color": "#002231",
+                "offset": {
+                    "dx": 0.2,
+                    "dy": 0.4
+                },
+                "blurRadius": 1
+            }
+        ]
     }
 }

@@ -26,6 +26,7 @@ _$_MiraiAppBar _$$_MiraiAppBarFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
           const [],
+      bottom: json['bottom'] as Map<String, dynamic>?,
       titleSpacing: (json['titleSpacing'] as num?)?.toDouble(),
       toolbarOpacity: (json['toolbarOpacity'] as num?)?.toDouble() ?? 1.0,
       bottomOpacity: (json['bottomOpacity'] as num?)?.toDouble() ?? 1.0,
@@ -49,6 +50,7 @@ Map<String, dynamic> _$$_MiraiAppBarToJson(_$_MiraiAppBar instance) =>
       'foregroundColor': instance.foregroundColor,
       'surfaceTintColor': instance.surfaceTintColor,
       'actions': instance.actions,
+      'bottom': instance.bottom,
       'titleSpacing': instance.titleSpacing,
       'toolbarOpacity': instance.toolbarOpacity,
       'bottomOpacity': instance.bottomOpacity,
