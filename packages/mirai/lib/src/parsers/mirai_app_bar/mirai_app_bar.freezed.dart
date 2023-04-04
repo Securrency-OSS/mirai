@@ -29,6 +29,7 @@ mixin _$MiraiAppBar {
   String? get foregroundColor => throw _privateConstructorUsedError;
   String? get surfaceTintColor => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get actions => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get bottom => throw _privateConstructorUsedError;
   double? get titleSpacing => throw _privateConstructorUsedError;
   double get toolbarOpacity => throw _privateConstructorUsedError;
   double get bottomOpacity => throw _privateConstructorUsedError;
@@ -61,6 +62,7 @@ abstract class $MiraiAppBarCopyWith<$Res> {
       String? foregroundColor,
       String? surfaceTintColor,
       List<Map<String, dynamic>> actions,
+      Map<String, dynamic>? bottom,
       double? titleSpacing,
       double toolbarOpacity,
       double bottomOpacity,
@@ -97,6 +99,7 @@ class _$MiraiAppBarCopyWithImpl<$Res, $Val extends MiraiAppBar>
     Object? foregroundColor = freezed,
     Object? surfaceTintColor = freezed,
     Object? actions = null,
+    Object? bottom = freezed,
     Object? titleSpacing = freezed,
     Object? toolbarOpacity = null,
     Object? bottomOpacity = null,
@@ -144,6 +147,10 @@ class _$MiraiAppBarCopyWithImpl<$Res, $Val extends MiraiAppBar>
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      bottom: freezed == bottom
+          ? _value.bottom
+          : bottom // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       titleSpacing: freezed == titleSpacing
           ? _value.titleSpacing
           : titleSpacing // ignore: cast_nullable_to_non_nullable
@@ -226,6 +233,7 @@ abstract class _$$_MiraiAppBarCopyWith<$Res>
       String? foregroundColor,
       String? surfaceTintColor,
       List<Map<String, dynamic>> actions,
+      Map<String, dynamic>? bottom,
       double? titleSpacing,
       double toolbarOpacity,
       double bottomOpacity,
@@ -262,6 +270,7 @@ class __$$_MiraiAppBarCopyWithImpl<$Res>
     Object? foregroundColor = freezed,
     Object? surfaceTintColor = freezed,
     Object? actions = null,
+    Object? bottom = freezed,
     Object? titleSpacing = freezed,
     Object? toolbarOpacity = null,
     Object? bottomOpacity = null,
@@ -309,6 +318,10 @@ class __$$_MiraiAppBarCopyWithImpl<$Res>
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      bottom: freezed == bottom
+          ? _value._bottom
+          : bottom // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       titleSpacing: freezed == titleSpacing
           ? _value.titleSpacing
           : titleSpacing // ignore: cast_nullable_to_non_nullable
@@ -362,6 +375,7 @@ class _$_MiraiAppBar implements _MiraiAppBar {
       this.foregroundColor,
       this.surfaceTintColor,
       final List<Map<String, dynamic>> actions = const [],
+      final Map<String, dynamic>? bottom,
       this.titleSpacing,
       this.toolbarOpacity = 1.0,
       this.bottomOpacity = 1.0,
@@ -373,7 +387,8 @@ class _$_MiraiAppBar implements _MiraiAppBar {
       this.scrolledUnderElevation})
       : _leading = leading,
         _title = title,
-        _actions = actions;
+        _actions = actions,
+        _bottom = bottom;
 
   factory _$_MiraiAppBar.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiAppBarFromJson(json);
@@ -419,6 +434,16 @@ class _$_MiraiAppBar implements _MiraiAppBar {
     return EqualUnmodifiableListView(_actions);
   }
 
+  final Map<String, dynamic>? _bottom;
+  @override
+  Map<String, dynamic>? get bottom {
+    final value = _bottom;
+    if (value == null) return null;
+    if (_bottom is EqualUnmodifiableMapView) return _bottom;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final double? titleSpacing;
   @override
@@ -443,7 +468,7 @@ class _$_MiraiAppBar implements _MiraiAppBar {
 
   @override
   String toString() {
-    return 'MiraiAppBar(leading: $leading, title: $title, titleTextStyle: $titleTextStyle, toolbarTextStyle: $toolbarTextStyle, shadowColor: $shadowColor, backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, surfaceTintColor: $surfaceTintColor, actions: $actions, titleSpacing: $titleSpacing, toolbarOpacity: $toolbarOpacity, bottomOpacity: $bottomOpacity, toolbarHeight: $toolbarHeight, leadingWidth: $leadingWidth, primary: $primary, centerTitle: $centerTitle, elevation: $elevation, scrolledUnderElevation: $scrolledUnderElevation)';
+    return 'MiraiAppBar(leading: $leading, title: $title, titleTextStyle: $titleTextStyle, toolbarTextStyle: $toolbarTextStyle, shadowColor: $shadowColor, backgroundColor: $backgroundColor, foregroundColor: $foregroundColor, surfaceTintColor: $surfaceTintColor, actions: $actions, bottom: $bottom, titleSpacing: $titleSpacing, toolbarOpacity: $toolbarOpacity, bottomOpacity: $bottomOpacity, toolbarHeight: $toolbarHeight, leadingWidth: $leadingWidth, primary: $primary, centerTitle: $centerTitle, elevation: $elevation, scrolledUnderElevation: $scrolledUnderElevation)';
   }
 
   @override
@@ -466,6 +491,7 @@ class _$_MiraiAppBar implements _MiraiAppBar {
             (identical(other.surfaceTintColor, surfaceTintColor) ||
                 other.surfaceTintColor == surfaceTintColor) &&
             const DeepCollectionEquality().equals(other._actions, _actions) &&
+            const DeepCollectionEquality().equals(other._bottom, _bottom) &&
             (identical(other.titleSpacing, titleSpacing) ||
                 other.titleSpacing == titleSpacing) &&
             (identical(other.toolbarOpacity, toolbarOpacity) ||
@@ -487,26 +513,28 @@ class _$_MiraiAppBar implements _MiraiAppBar {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_leading),
-      const DeepCollectionEquality().hash(_title),
-      titleTextStyle,
-      toolbarTextStyle,
-      shadowColor,
-      backgroundColor,
-      foregroundColor,
-      surfaceTintColor,
-      const DeepCollectionEquality().hash(_actions),
-      titleSpacing,
-      toolbarOpacity,
-      bottomOpacity,
-      toolbarHeight,
-      leadingWidth,
-      primary,
-      centerTitle,
-      elevation,
-      scrolledUnderElevation);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(_leading),
+        const DeepCollectionEquality().hash(_title),
+        titleTextStyle,
+        toolbarTextStyle,
+        shadowColor,
+        backgroundColor,
+        foregroundColor,
+        surfaceTintColor,
+        const DeepCollectionEquality().hash(_actions),
+        const DeepCollectionEquality().hash(_bottom),
+        titleSpacing,
+        toolbarOpacity,
+        bottomOpacity,
+        toolbarHeight,
+        leadingWidth,
+        primary,
+        centerTitle,
+        elevation,
+        scrolledUnderElevation
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -533,6 +561,7 @@ abstract class _MiraiAppBar implements MiraiAppBar {
       final String? foregroundColor,
       final String? surfaceTintColor,
       final List<Map<String, dynamic>> actions,
+      final Map<String, dynamic>? bottom,
       final double? titleSpacing,
       final double toolbarOpacity,
       final double bottomOpacity,
@@ -564,6 +593,8 @@ abstract class _MiraiAppBar implements MiraiAppBar {
   String? get surfaceTintColor;
   @override
   List<Map<String, dynamic>> get actions;
+  @override
+  Map<String, dynamic>? get bottom;
   @override
   double? get titleSpacing;
   @override
