@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
@@ -35,6 +36,7 @@ class MiraiTheme with _$MiraiTheme {
     String? shadowColor,
     String? splashColor,
     String? unselectedWidgetColor,
+    MiraiButtonStyle? elevatedButtonTheme,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
   }) = _MiraiTheme;
@@ -69,6 +71,8 @@ extension MiraiThemeParser on MiraiTheme {
       splashColor: splashColor.toColor,
       unselectedWidgetColor: unselectedWidgetColor.toColor,
       primarySwatch: primarySwatch?.parse,
+      elevatedButtonTheme:
+          ElevatedButtonThemeData(style: elevatedButtonTheme?.parseElevated),
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
     );

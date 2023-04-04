@@ -19,6 +19,14 @@
         "success": "#27BA62",
         "onSuccess": "#ffffff"
     },
+    "elevatedButtonTheme": {
+        "style": {
+            "backgroundColor": "#4D00E9",
+            "disabledBackgroundColor": "#604D00E9",
+            "foregroundColor": "#FFFFFF",
+            "disabledForegroundColor": "#60FFFFFF"
+        }
+    },
     "iconTheme": {
         "size": 24,
         "fill": 1,
