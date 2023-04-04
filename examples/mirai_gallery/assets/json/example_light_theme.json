@@ -19,6 +19,12 @@
         "success": "#27BA62",
         "onSuccess": "#ffffff"
     },
+    "outlinedButtonTheme": {
+        "style": {
+            "foregroundColor": "#4D00E9",
+            "disabledForegroundColor": "#604D00E9"
+        }
+    },
     "elevatedButtonTheme": {
         "style": {
             "backgroundColor": "#4D00E9",
