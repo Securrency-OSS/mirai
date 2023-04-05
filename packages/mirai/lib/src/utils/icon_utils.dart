@@ -1923,7 +1923,6 @@ final Map<String, IconData> materialIconMap = {
   'album_sharp': Icons.album_sharp,
   'album_rounded': Icons.album_rounded,
   'album_outlined': Icons.album_outlined,
-  'format_align_center': Icons.format_align_center,
   'align_horizontal_center': Icons.align_horizontal_center,
   'align_horizontal_center_sharp': Icons.align_horizontal_center_sharp,
   'align_horizontal_center_rounded': Icons.align_horizontal_center_rounded,
