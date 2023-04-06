@@ -68,10 +68,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MiraiApp(
       title: 'Mirai Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Mirai.fromJson(json, context),
+      homeBuilder: (context) => Mirai.fromJson(json, context),
     );
   }
 }
