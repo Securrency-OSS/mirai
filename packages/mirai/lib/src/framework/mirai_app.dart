@@ -6,7 +6,7 @@ class MiraiApp extends StatelessWidget {
     super.key,
     this.navigatorKey,
     this.scaffoldMessengerKey,
-    this.home,
+    this.homeBuilder,
     Map<String, WidgetBuilder> this.routes = const <String, WidgetBuilder>{},
     this.initialRoute,
     this.onGenerateRoute,
@@ -85,7 +85,7 @@ class MiraiApp extends StatelessWidget {
   })  : navigatorObservers = null,
         navigatorKey = null,
         onGenerateRoute = null,
-        home = null,
+        homeBuilder = null,
         onGenerateInitialRoutes = null,
         onUnknownRoute = null,
         routes = null,
@@ -93,7 +93,7 @@ class MiraiApp extends StatelessWidget {
 
   final GlobalKey<NavigatorState>? navigatorKey;
   final GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey;
-  final Widget? home;
+  final Widget? Function(BuildContext)? homeBuilder;
   final Map<String, WidgetBuilder>? routes;
   final String? initialRoute;
   final RouteFactory? onGenerateRoute;
@@ -145,7 +145,14 @@ class MiraiApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
-      home: home,
+      home: Builder(
+        builder: (context) {
+          if (homeBuilder != null) {
+            return homeBuilder!(context) ?? const SizedBox();
+          }
+          return const SizedBox();
+        },
+      ),
       routes: routes ?? {},
       initialRoute: initialRoute,
       onGenerateRoute: onGenerateRoute,
