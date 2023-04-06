@@ -176,7 +176,13 @@
                             "labelText": "Re-type password*"
                         },
                         "readOnly": false,
-                        "enabled": true
+                        "enabled": true,
+                        "validatorRules": [
+                            {
+                                "rule": "",
+                                "message": ""
+                            }
+                        ]
                     }
                 ]
             }

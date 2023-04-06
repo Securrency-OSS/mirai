@@ -23,34 +23,56 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
   String get type => WidgetType.textField.name;
 
   @override
-  Widget parse(BuildContext context, MiraiTextField model) {
-    controller?.text = model.initialValue;
+  Widget parse(BuildContext context, MiraiTextField model) =>
+      _TextFieldWidget(controller, focusNode, model: model);
+}
+
+class _TextFieldWidget extends StatefulWidget {
+  const _TextFieldWidget(
+    this.controller,
+    this.focusNode, {
+    required this.model,
+  });
+
+  final TextEditingController? controller;
+  final FocusNode? focusNode;
+  final MiraiTextField model;
+
+  @override
+  State<_TextFieldWidget> createState() => __TextFieldWidgetState();
+}
+
+class __TextFieldWidgetState extends State<_TextFieldWidget> {
+  @override
+  Widget build(BuildContext context) {
+    widget.controller?.text = widget.model.initialValue;
 
     return TextField(
-      controller: controller ?? TextEditingController(text: model.initialValue),
-      focusNode: focusNode,
-      keyboardType: model.keyboardType?.value,
-      textInputAction: model.textInputAction,
-      textCapitalization: model.textCapitalization,
-      textAlign: model.textAlign,
-      textAlignVertical: model.textAlignVertical?.value,
-      textDirection: model.textDirection,
-      readOnly: model.readOnly,
-      showCursor: model.showCursor,
-      autofocus: model.autofocus,
-      obscuringCharacter: model.obscuringCharacter,
-      maxLines: model.maxLines,
-      minLines: model.minLines,
-      maxLength: model.maxLength,
-      obscureText: model.obscureText,
-      enableSuggestions: model.enableSuggestions,
-      enabled: model.enabled,
-      expands: model.expands,
-      cursorWidth: model.cursorWidth,
-      cursorHeight: model.cursorHeight,
-      cursorColor: model.cursorColor?.toColor,
-      style: model.style?.parse,
-      decoration: model.decoration?.parse(context),
+      controller: widget.controller ??
+          TextEditingController(text: widget.model.initialValue),
+      focusNode: widget.focusNode,
+      keyboardType: widget.model.keyboardType?.value,
+      textInputAction: widget.model.textInputAction,
+      textCapitalization: widget.model.textCapitalization,
+      textAlign: widget.model.textAlign,
+      textAlignVertical: widget.model.textAlignVertical?.value,
+      textDirection: widget.model.textDirection,
+      readOnly: widget.model.readOnly,
+      showCursor: widget.model.showCursor,
+      autofocus: widget.model.autofocus,
+      obscuringCharacter: widget.model.obscuringCharacter,
+      maxLines: widget.model.maxLines,
+      minLines: widget.model.minLines,
+      maxLength: widget.model.maxLength,
+      obscureText: widget.model.obscureText,
+      enableSuggestions: widget.model.enableSuggestions,
+      enabled: widget.model.enabled,
+      expands: widget.model.expands,
+      cursorWidth: widget.model.cursorWidth,
+      cursorHeight: widget.model.cursorHeight,
+      cursorColor: widget.model.cursorColor?.toColor,
+      style: widget.model.style?.parse,
+      decoration: widget.model.decoration?.parse(context),
     );
   }
 }
