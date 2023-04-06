@@ -5,13 +5,13 @@
 
 ---
 
-Mirai is a Server-Driven UI (SDUI) library for Flutter. Mirai allows you to build beautiful cross-platform applications with JSON in real-time.
+Mirai is a Server-Driven UI (SDUI) library for Flutter. Mirai allows you to build beautiful cross-platform applications with JSON in real time.
 
 Developed with 💙 by [Securrency][securrency_link]
 
 ## Installation 🚀
 
-First, we need to add mirai to our pubspec.yaml file.
+First, we need to add Mirai to our pubspec.yaml file.
 
 Install the plugin by running the following command from the project root:
 
@@ -21,21 +21,43 @@ flutter pub add mirai
 
 ## Usage 🧑‍💻
 
-Now that we have successfully installed mirai, we can import mirai in main.dart.
+Now that we have successfully installed Mirai, we can import Mirai in main.dart.
 
-``` dart
+```dart
 import 'package:mirai/mirai.dart';
 ```
 
-To initalize mirai, replace your MaterialApp with MiraiApp. And call your json with Mirai.fromJson(json, context).
+Next, within main function initialize Mirai.
 
-Note
+```dart
+void main() async {
+  await Mirai.initialize();
+
+  runApp(const MyApp());
+}
+```
+
+You can also specify your custom Parsers in `Mirai.initialize`. 
+
+```dart
+void main() async {
+  await Mirai.initialize(parsers: const [
+    ExampleScreenParser(),
+  ]);
+
+  runApp(const MyApp());
+}
+```
+
+Finally, replace your MaterialApp with MiraiApp. And call your json with Mirai.fromJson(json, context).
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
 
-void main() {
+void main() async {
+  await Mirai.initialize();
+
   runApp(const MyApp());
 }
 
