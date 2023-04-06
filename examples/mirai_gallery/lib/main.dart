@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             theme: state.lightTheme,
             darkTheme: state.darkTheme,
             themeMode: state.themeMode,
-            home: const HomeScreen(),
+            homeBuilder: (context) => const HomeScreen(),
             title: 'Mirai Gallery',
           );
         },
