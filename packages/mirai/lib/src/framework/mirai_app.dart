@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/framework/mirai.dart';
-import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 
-class MiraiApp extends StatefulWidget {
+class MiraiApp extends StatelessWidget {
   const MiraiApp({
     super.key,
-    this.parsers = const [],
     this.navigatorKey,
     this.scaffoldMessengerKey,
     this.home,
@@ -52,7 +49,6 @@ class MiraiApp extends StatefulWidget {
 
   const MiraiApp.router({
     super.key,
-    this.parsers = const [],
     this.scaffoldMessengerKey,
     this.routeInformationProvider,
     this.routeInformationParser,
@@ -95,7 +91,6 @@ class MiraiApp extends StatefulWidget {
         routes = null,
         initialRoute = null;
 
-  final List<MiraiParser> parsers;
   final GlobalKey<NavigatorState>? navigatorKey;
   final GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey;
   final Widget? home;
@@ -139,19 +134,8 @@ class MiraiApp extends StatefulWidget {
   final bool useInheritedMediaQuery;
 
   @override
-  State<MiraiApp> createState() => _MiraiAppState();
-}
-
-class _MiraiAppState extends State<MiraiApp> {
-  @override
-  void initState() {
-    Mirai.initialize(parsers: widget.parsers);
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    if (widget.routerDelegate != null || widget.routerConfig != null) {
+    if (routerDelegate != null || routerConfig != null) {
       return _materialRouterApp;
     }
     return _materialApp;
@@ -159,80 +143,80 @@ class _MiraiAppState extends State<MiraiApp> {
 
   Widget get _materialApp {
     return MaterialApp(
-      navigatorKey: widget.navigatorKey,
-      scaffoldMessengerKey: widget.scaffoldMessengerKey,
-      home: widget.home,
-      routes: widget.routes ?? {},
-      initialRoute: widget.initialRoute,
-      onGenerateRoute: widget.onGenerateRoute,
-      onGenerateInitialRoutes: widget.onGenerateInitialRoutes,
-      onUnknownRoute: widget.onUnknownRoute,
-      navigatorObservers: widget.navigatorObservers ?? [],
-      builder: widget.builder,
-      title: widget.title,
-      onGenerateTitle: widget.onGenerateTitle,
-      theme: widget.theme?.parse,
-      darkTheme: widget.darkTheme?.parse,
-      highContrastTheme: widget.highContrastTheme,
-      highContrastDarkTheme: widget.highContrastDarkTheme,
-      themeMode: widget.themeMode,
-      themeAnimationDuration: widget.themeAnimationDuration,
-      themeAnimationCurve: widget.themeAnimationCurve,
-      color: widget.color,
-      locale: widget.locale,
-      localizationsDelegates: widget.localizationsDelegates,
-      localeListResolutionCallback: widget.localeListResolutionCallback,
-      localeResolutionCallback: widget.localeResolutionCallback,
-      supportedLocales: widget.supportedLocales,
-      showPerformanceOverlay: widget.showPerformanceOverlay,
-      checkerboardRasterCacheImages: widget.checkerboardRasterCacheImages,
-      checkerboardOffscreenLayers: widget.checkerboardOffscreenLayers,
-      showSemanticsDebugger: widget.showSemanticsDebugger,
-      debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,
-      shortcuts: widget.shortcuts,
-      actions: widget.actions,
-      restorationScopeId: widget.restorationScopeId,
-      scrollBehavior: widget.scrollBehavior,
-      debugShowMaterialGrid: widget.debugShowMaterialGrid,
-      useInheritedMediaQuery: widget.useInheritedMediaQuery,
+      navigatorKey: navigatorKey,
+      scaffoldMessengerKey: scaffoldMessengerKey,
+      home: home,
+      routes: routes ?? {},
+      initialRoute: initialRoute,
+      onGenerateRoute: onGenerateRoute,
+      onGenerateInitialRoutes: onGenerateInitialRoutes,
+      onUnknownRoute: onUnknownRoute,
+      navigatorObservers: navigatorObservers ?? [],
+      builder: builder,
+      title: title,
+      onGenerateTitle: onGenerateTitle,
+      theme: theme?.parse,
+      darkTheme: darkTheme?.parse,
+      highContrastTheme: highContrastTheme,
+      highContrastDarkTheme: highContrastDarkTheme,
+      themeMode: themeMode,
+      themeAnimationDuration: themeAnimationDuration,
+      themeAnimationCurve: themeAnimationCurve,
+      color: color,
+      locale: locale,
+      localizationsDelegates: localizationsDelegates,
+      localeListResolutionCallback: localeListResolutionCallback,
+      localeResolutionCallback: localeResolutionCallback,
+      supportedLocales: supportedLocales,
+      showPerformanceOverlay: showPerformanceOverlay,
+      checkerboardRasterCacheImages: checkerboardRasterCacheImages,
+      checkerboardOffscreenLayers: checkerboardOffscreenLayers,
+      showSemanticsDebugger: showSemanticsDebugger,
+      debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+      shortcuts: shortcuts,
+      actions: actions,
+      restorationScopeId: restorationScopeId,
+      scrollBehavior: scrollBehavior,
+      debugShowMaterialGrid: debugShowMaterialGrid,
+      useInheritedMediaQuery: useInheritedMediaQuery,
     );
   }
 
   Widget get _materialRouterApp {
     return MaterialApp.router(
-      scaffoldMessengerKey: widget.scaffoldMessengerKey,
-      routeInformationProvider: widget.routeInformationProvider,
-      routeInformationParser: widget.routeInformationParser,
-      routerDelegate: widget.routerDelegate,
-      routerConfig: widget.routerConfig,
-      backButtonDispatcher: widget.backButtonDispatcher,
-      builder: widget.builder,
-      title: widget.title,
-      onGenerateTitle: widget.onGenerateTitle,
-      color: widget.color,
-      theme: widget.theme?.parse,
-      darkTheme: widget.darkTheme?.parse,
-      highContrastTheme: widget.highContrastTheme,
-      highContrastDarkTheme: widget.highContrastDarkTheme,
-      themeMode: widget.themeMode,
-      themeAnimationDuration: widget.themeAnimationDuration,
-      themeAnimationCurve: widget.themeAnimationCurve,
-      locale: widget.locale,
-      localizationsDelegates: widget.localizationsDelegates,
-      localeListResolutionCallback: widget.localeListResolutionCallback,
-      localeResolutionCallback: widget.localeResolutionCallback,
-      supportedLocales: widget.supportedLocales,
-      debugShowMaterialGrid: widget.debugShowMaterialGrid,
-      showPerformanceOverlay: widget.showPerformanceOverlay,
-      checkerboardRasterCacheImages: widget.checkerboardRasterCacheImages,
-      checkerboardOffscreenLayers: widget.checkerboardOffscreenLayers,
-      showSemanticsDebugger: widget.showSemanticsDebugger,
-      debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,
-      shortcuts: widget.shortcuts,
-      actions: widget.actions,
-      restorationScopeId: widget.restorationScopeId,
-      scrollBehavior: widget.scrollBehavior,
-      useInheritedMediaQuery: widget.useInheritedMediaQuery,
+      scaffoldMessengerKey: scaffoldMessengerKey,
+      routeInformationProvider: routeInformationProvider,
+      routeInformationParser: routeInformationParser,
+      routerDelegate: routerDelegate,
+      routerConfig: routerConfig,
+      backButtonDispatcher: backButtonDispatcher,
+      builder: builder,
+      title: title,
+      onGenerateTitle: onGenerateTitle,
+      color: color,
+      theme: theme?.parse,
+      darkTheme: darkTheme?.parse,
+      highContrastTheme: highContrastTheme,
+      highContrastDarkTheme: highContrastDarkTheme,
+      themeMode: themeMode,
+      themeAnimationDuration: themeAnimationDuration,
+      themeAnimationCurve: themeAnimationCurve,
+      locale: locale,
+      localizationsDelegates: localizationsDelegates,
+      localeListResolutionCallback: localeListResolutionCallback,
+      localeResolutionCallback: localeResolutionCallback,
+      supportedLocales: supportedLocales,
+      debugShowMaterialGrid: debugShowMaterialGrid,
+      showPerformanceOverlay: showPerformanceOverlay,
+      checkerboardRasterCacheImages: checkerboardRasterCacheImages,
+      checkerboardOffscreenLayers: checkerboardOffscreenLayers,
+      showSemanticsDebugger: showSemanticsDebugger,
+      debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+      shortcuts: shortcuts,
+      actions: actions,
+      restorationScopeId: restorationScopeId,
+      scrollBehavior: scrollBehavior,
+      useInheritedMediaQuery: useInheritedMediaQuery,
     );
   }
 }
