@@ -8,27 +8,20 @@
         }
     },
     "body": {
-        "type": "container",
-        "color": "#A9A9D9",
+        "type": "center",
         "child": {
-            "type": "center",
-            "heightFactor": 2.6,
-            "widthFactor": 2,
+            "type": "container",
+            "alignment": "center",
+            "height": 200,
+            "width": 150,
+            "color": "#800000",
             "child": {
-                "type": "container",
-                "alignment": "center",
-                "height": 200,
-                "width": 150,
-                "color": "#800000",
-                "child": {
-                    "type": "text",
-                    "data": "Flutter",
-                    "style": {
-                        "color": "#ffffff",
-                        "fontSize": 23
-                    }
-                },
-                "onPressed": {}
+                "type": "text",
+                "data": "Flutter",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": 23
+                }
             }
         }
     }
