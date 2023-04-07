@@ -46,8 +46,6 @@ mixin _$MiraiTextField {
   double? get cursorHeight => throw _privateConstructorUsedError;
   String? get cursorColor => throw _privateConstructorUsedError;
   String? get hintText => throw _privateConstructorUsedError;
-  List<MiraiTextValidation> get validatorRules =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -85,8 +83,7 @@ abstract class $MiraiTextFieldCopyWith<$Res> {
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String? hintText,
-      List<MiraiTextValidation> validatorRules});
+      String? hintText});
 
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
   $MiraiTextStyleCopyWith<$Res>? get style;
@@ -129,7 +126,6 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
     Object? hintText = freezed,
-    Object? validatorRules = null,
   }) {
     return _then(_value.copyWith(
       decoration: freezed == decoration
@@ -228,10 +224,6 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
               as String?,
-      validatorRules: null == validatorRules
-          ? _value.validatorRules
-          : validatorRules // ignore: cast_nullable_to_non_nullable
-              as List<MiraiTextValidation>,
     ) as $Val);
   }
 
@@ -292,8 +284,7 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String? hintText,
-      List<MiraiTextValidation> validatorRules});
+      String? hintText});
 
   @override
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
@@ -336,7 +327,6 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
     Object? hintText = freezed,
-    Object? validatorRules = null,
   }) {
     return _then(_$_MiraiTextField(
       decoration: freezed == decoration
@@ -432,10 +422,6 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
               as String?,
-      validatorRules: null == validatorRules
-          ? _value._validatorRules
-          : validatorRules // ignore: cast_nullable_to_non_nullable
-              as List<MiraiTextValidation>,
     ));
   }
 }
@@ -467,9 +453,7 @@ class _$_MiraiTextField implements _MiraiTextField {
       this.cursorWidth = 2,
       this.cursorHeight,
       this.cursorColor,
-      this.hintText,
-      final List<MiraiTextValidation> validatorRules = const []})
-      : _validatorRules = validatorRules;
+      this.hintText});
 
   factory _$_MiraiTextField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFieldFromJson(json);
@@ -532,18 +516,10 @@ class _$_MiraiTextField implements _MiraiTextField {
   final String? cursorColor;
   @override
   final String? hintText;
-  final List<MiraiTextValidation> _validatorRules;
-  @override
-  @JsonKey()
-  List<MiraiTextValidation> get validatorRules {
-    if (_validatorRules is EqualUnmodifiableListView) return _validatorRules;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_validatorRules);
-  }
 
   @override
   String toString() {
-    return 'MiraiTextField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, expands: $expands, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText, validatorRules: $validatorRules)';
+    return 'MiraiTextField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, expands: $expands, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
   }
 
   @override
@@ -595,9 +571,7 @@ class _$_MiraiTextField implements _MiraiTextField {
             (identical(other.cursorColor, cursorColor) ||
                 other.cursorColor == cursorColor) &&
             (identical(other.hintText, hintText) ||
-                other.hintText == hintText) &&
-            const DeepCollectionEquality()
-                .equals(other._validatorRules, _validatorRules));
+                other.hintText == hintText));
   }
 
   @JsonKey(ignore: true)
@@ -627,8 +601,7 @@ class _$_MiraiTextField implements _MiraiTextField {
         cursorWidth,
         cursorHeight,
         cursorColor,
-        hintText,
-        const DeepCollectionEquality().hash(_validatorRules)
+        hintText
       ]);
 
   @JsonKey(ignore: true)
@@ -670,8 +643,7 @@ abstract class _MiraiTextField implements MiraiTextField {
       final double cursorWidth,
       final double? cursorHeight,
       final String? cursorColor,
-      final String? hintText,
-      final List<MiraiTextValidation> validatorRules}) = _$_MiraiTextField;
+      final String? hintText}) = _$_MiraiTextField;
 
   factory _MiraiTextField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextField.fromJson;
@@ -724,8 +696,6 @@ abstract class _MiraiTextField implements MiraiTextField {
   String? get cursorColor;
   @override
   String? get hintText;
-  @override
-  List<MiraiTextValidation> get validatorRules;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextFieldCopyWith<_$_MiraiTextField> get copyWith =>

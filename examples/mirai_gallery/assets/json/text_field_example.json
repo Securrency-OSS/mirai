@@ -27,7 +27,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -47,6 +47,13 @@
                             },
                             "labelText": "Name*"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "^[A-Za-z .`'/-]{2,32}$",
+                                "message": "We need you name"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -55,7 +62,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -75,6 +82,13 @@
                             },
                             "labelText": "Phone number*"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
+                                "message": "Enter your correct phone number"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -83,7 +97,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -103,6 +117,13 @@
                             },
                             "labelText": "Email"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "validateEmail",
+                                "message": "The email address should be valid"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -129,7 +150,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -148,6 +169,13 @@
                             },
                             "labelText": "Password*"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "validatePassword",
+                                "message": "The password should be correct"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -156,7 +184,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -177,10 +205,11 @@
                         },
                         "readOnly": false,
                         "enabled": true,
+                        "autovalidateMode": "onUserInteraction",
                         "validatorRules": [
                             {
-                                "rule": "",
-                                "message": ""
+                                "rule": "validatePassword",
+                                "message": "The password should be correct"
                             }
                         ]
                     }

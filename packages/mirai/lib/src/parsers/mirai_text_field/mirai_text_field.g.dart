@@ -44,11 +44,6 @@ _$_MiraiTextField _$$_MiraiTextFieldFromJson(Map<String, dynamic> json) =>
       cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
       cursorColor: json['cursorColor'] as String?,
       hintText: json['hintText'] as String?,
-      validatorRules: (json['validatorRules'] as List<dynamic>?)
-              ?.map((e) =>
-                  MiraiTextValidation.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
     );
 
 Map<String, dynamic> _$$_MiraiTextFieldToJson(_$_MiraiTextField instance) =>
@@ -79,7 +74,6 @@ Map<String, dynamic> _$$_MiraiTextFieldToJson(_$_MiraiTextField instance) =>
       'cursorHeight': instance.cursorHeight,
       'cursorColor': instance.cursorColor,
       'hintText': instance.hintText,
-      'validatorRules': instance.validatorRules,
     };
 
 const _$MiraiTextInputTypeEnumMap = {

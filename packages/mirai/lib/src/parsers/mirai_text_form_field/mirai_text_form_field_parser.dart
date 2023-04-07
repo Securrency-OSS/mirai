@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.
 import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
+import 'package:mirai/src/utils/input_validations.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
@@ -59,6 +60,18 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       cursorColor: model.cursorColor?.toColor,
       style: model.style?.parse,
       decoration: model.decoration.parse(context),
+      autovalidateMode: model.autovalidateMode,
+      validator: (value) {
+        if (value != null && model.validatorRules.isNotEmpty) {
+          for (final validatorRule in model.validatorRules) {
+            if (!InputValidation.validate(value, validatorRule.rule)) {
+              return validatorRule.message;
+            }
+          }
+        }
+
+        return null;
+      },
     );
   }
 }

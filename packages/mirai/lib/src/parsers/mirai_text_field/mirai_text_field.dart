@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
-import 'package:mirai/src/parsers/mirai_text_validation/mirai_text_validation.dart';
 import 'package:mirai/src/utils/text_input_utils.dart';
 
 export 'package:mirai/src/parsers/mirai_text_field/mirai_text_field_parser.dart';
@@ -37,7 +36,6 @@ class MiraiTextField with _$MiraiTextField {
     double? cursorHeight,
     String? cursorColor,
     String? hintText,
-    @Default([]) List<MiraiTextValidation> validatorRules,
   }) = _MiraiTextField;
 
   factory MiraiTextField.fromJson(Map<String, dynamic> json) =>
