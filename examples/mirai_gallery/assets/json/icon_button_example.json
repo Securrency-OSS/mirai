@@ -27,8 +27,7 @@
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 },
                                 "onPressed": {}
                             },
@@ -41,8 +40,7 @@
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "remove",
-                                    "size": 32
+                                    "icon": "remove"
                                 },
                                 "onPressed": {}
                             }
@@ -62,8 +60,7 @@
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 }
                             },
                             {
@@ -75,8 +72,7 @@
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "remove",
-                                    "size": 32
+                                    "icon": "remove"
                                 }
                             }
                         ]
