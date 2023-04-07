@@ -136,6 +136,41 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "format_align_center"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Center",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A widget that centers its child within itself.",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/center_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "table_rows"
                     },
                     "title": {
