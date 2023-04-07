@@ -24,6 +24,7 @@ class MiraiButtonStyle with _$MiraiButtonStyle {
     MiraiSize? fixedSize,
     MiraiSize? maximumSize,
     bool? enableFeedback,
+    double? iconSize,
   }) = _MiraiButtonStyle;
 
   factory MiraiButtonStyle.fromJson(Map<String, dynamic> json) =>
@@ -99,6 +100,7 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
+      iconSize: iconSize,
     );
   }
 }
