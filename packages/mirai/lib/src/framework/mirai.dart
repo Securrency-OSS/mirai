@@ -7,6 +7,7 @@ import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
@@ -27,6 +28,7 @@ class Mirai {
     const MiraiElevatedButtonParser(),
     const MiraiImageParser(),
     const MiraiIconParser(),
+    const MiraiCenterParser(),
     const MiraiRowParser(),
     const MiraiColumnParser(),
     const MiraiIconButtonParser(),
