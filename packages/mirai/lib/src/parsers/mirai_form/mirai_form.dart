@@ -10,6 +10,7 @@ part 'mirai_form.g.dart';
 @freezed
 class MiraiForm with _$MiraiForm {
   const factory MiraiForm({
+    String? formKey,
     MiraiAction? onChanged,
     AutovalidateMode? autovalidateMode,
     required Map<String, dynamic> child,

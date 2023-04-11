@@ -11,7 +11,7 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
   MiraiForm getModel(Map<String, dynamic> json) => MiraiForm.fromJson(json);
 
   @override
-  String get type => WidgetType.floatingActionButton.name;
+  String get type => WidgetType.form.name;
 
   @override
   Widget parse(BuildContext context, MiraiForm model) {

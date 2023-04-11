@@ -20,6 +20,7 @@ MiraiForm _$MiraiFormFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiForm {
+  String? get formKey => throw _privateConstructorUsedError;
   MiraiAction? get onChanged => throw _privateConstructorUsedError;
   AutovalidateMode? get autovalidateMode => throw _privateConstructorUsedError;
   Map<String, dynamic> get child => throw _privateConstructorUsedError;
@@ -36,7 +37,8 @@ abstract class $MiraiFormCopyWith<$Res> {
       _$MiraiFormCopyWithImpl<$Res, MiraiForm>;
   @useResult
   $Res call(
-      {MiraiAction? onChanged,
+      {String? formKey,
+      MiraiAction? onChanged,
       AutovalidateMode? autovalidateMode,
       Map<String, dynamic> child});
 
@@ -56,11 +58,16 @@ class _$MiraiFormCopyWithImpl<$Res, $Val extends MiraiForm>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? formKey = freezed,
     Object? onChanged = freezed,
     Object? autovalidateMode = freezed,
     Object? child = null,
   }) {
     return _then(_value.copyWith(
+      formKey: freezed == formKey
+          ? _value.formKey
+          : formKey // ignore: cast_nullable_to_non_nullable
+              as String?,
       onChanged: freezed == onChanged
           ? _value.onChanged
           : onChanged // ignore: cast_nullable_to_non_nullable
@@ -97,7 +104,8 @@ abstract class _$$_MiraiFormCopyWith<$Res> implements $MiraiFormCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {MiraiAction? onChanged,
+      {String? formKey,
+      MiraiAction? onChanged,
       AutovalidateMode? autovalidateMode,
       Map<String, dynamic> child});
 
@@ -116,11 +124,16 @@ class __$$_MiraiFormCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? formKey = freezed,
     Object? onChanged = freezed,
     Object? autovalidateMode = freezed,
     Object? child = null,
   }) {
     return _then(_$_MiraiForm(
+      formKey: freezed == formKey
+          ? _value.formKey
+          : formKey // ignore: cast_nullable_to_non_nullable
+              as String?,
       onChanged: freezed == onChanged
           ? _value.onChanged
           : onChanged // ignore: cast_nullable_to_non_nullable
@@ -141,7 +154,8 @@ class __$$_MiraiFormCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiForm implements _MiraiForm {
   const _$_MiraiForm(
-      {this.onChanged,
+      {this.formKey,
+      this.onChanged,
       this.autovalidateMode,
       required final Map<String, dynamic> child})
       : _child = child;
@@ -149,6 +163,8 @@ class _$_MiraiForm implements _MiraiForm {
   factory _$_MiraiForm.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiFormFromJson(json);
 
+  @override
+  final String? formKey;
   @override
   final MiraiAction? onChanged;
   @override
@@ -163,7 +179,7 @@ class _$_MiraiForm implements _MiraiForm {
 
   @override
   String toString() {
-    return 'MiraiForm(onChanged: $onChanged, autovalidateMode: $autovalidateMode, child: $child)';
+    return 'MiraiForm(formKey: $formKey, onChanged: $onChanged, autovalidateMode: $autovalidateMode, child: $child)';
   }
 
   @override
@@ -171,6 +187,7 @@ class _$_MiraiForm implements _MiraiForm {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiForm &&
+            (identical(other.formKey, formKey) || other.formKey == formKey) &&
             (identical(other.onChanged, onChanged) ||
                 other.onChanged == onChanged) &&
             (identical(other.autovalidateMode, autovalidateMode) ||
@@ -180,8 +197,8 @@ class _$_MiraiForm implements _MiraiForm {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, onChanged, autovalidateMode,
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, formKey, onChanged,
+      autovalidateMode, const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
   @override
@@ -199,13 +216,16 @@ class _$_MiraiForm implements _MiraiForm {
 
 abstract class _MiraiForm implements MiraiForm {
   const factory _MiraiForm(
-      {final MiraiAction? onChanged,
+      {final String? formKey,
+      final MiraiAction? onChanged,
       final AutovalidateMode? autovalidateMode,
       required final Map<String, dynamic> child}) = _$_MiraiForm;
 
   factory _MiraiForm.fromJson(Map<String, dynamic> json) =
       _$_MiraiForm.fromJson;
 
+  @override
+  String? get formKey;
   @override
   MiraiAction? get onChanged;
   @override

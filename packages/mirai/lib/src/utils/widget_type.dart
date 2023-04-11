@@ -28,4 +28,5 @@ enum WidgetType {
   defaultTabController,
   scrollView,
   tab,
+  form,
 }
