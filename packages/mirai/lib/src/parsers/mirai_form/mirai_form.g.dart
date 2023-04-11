@@ -7,7 +7,6 @@ part of 'mirai_form.dart';
 // **************************************************************************
 
 _$_MiraiForm _$$_MiraiFormFromJson(Map<String, dynamic> json) => _$_MiraiForm(
-      formKey: json['formKey'] as String?,
       onChanged: json['onChanged'] == null
           ? null
           : MiraiAction.fromJson(json['onChanged'] as Map<String, dynamic>),
@@ -18,7 +17,6 @@ _$_MiraiForm _$$_MiraiFormFromJson(Map<String, dynamic> json) => _$_MiraiForm(
 
 Map<String, dynamic> _$$_MiraiFormToJson(_$_MiraiForm instance) =>
     <String, dynamic>{
-      'formKey': instance.formKey,
       'onChanged': instance.onChanged,
       'autovalidateMode': _$AutovalidateModeEnumMap[instance.autovalidateMode],
       'child': instance.child,

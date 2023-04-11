@@ -52,6 +52,12 @@ extension MiraiActionParser on MiraiAction? {
           return MiraiNetwork.request(this!.request!);
         case ActionType.none:
           break;
+        case ActionType.validation:
+          if (Form.of(context).validate()) {
+            Form.of(context).save();
+          }
+
+          break;
       }
     }
     return null;

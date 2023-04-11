@@ -16,11 +16,13 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
   @override
   Widget parse(BuildContext context, MiraiForm model) {
     return Form(
-      onChanged: model.onChanged == null
-          ? null
-          : () => model.onChanged.onCall(context),
+      onChanged: () => model.onChanged?.onCall(context),
       autovalidateMode: model.autovalidateMode,
-      child: Mirai.fromJson(model.child, context) ?? const SizedBox(),
+      child: Builder(
+        builder: (ctx) {
+          return Mirai.fromJson(model.child, ctx) ?? const SizedBox();
+        },
+      ),
     );
   }
 }

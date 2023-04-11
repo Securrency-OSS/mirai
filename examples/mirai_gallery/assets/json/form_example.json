@@ -163,6 +163,27 @@
                             },
                             "readOnly": false,
                             "enabled": true
+                        },
+                        {
+                            "type": "elevatedButton",
+                            "child": {
+                                "type": "text",
+                                "data": "Submit",
+                                "style": {
+                                    "color": "#ffffff"
+                                }
+                            },
+                            "style": {
+                                "padding": {
+                                    "top": 8,
+                                    "left": 12,
+                                    "right": 12,
+                                    "bottom": 8
+                                }
+                            },
+                            "onPressed": {
+                                "actionType": "validation"
+                            }
                         }
                     ]
                 }
