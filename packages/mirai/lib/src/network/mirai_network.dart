@@ -4,7 +4,9 @@ import 'package:mirai/src/network/mirai_request.dart';
 class MiraiNetwork {
   const MiraiNetwork._();
 
-  static final _dio = Dio();
+  static late Dio _dio;
+
+  static void initialize(Dio dio) => _dio = dio;
 
   static Future<Response?> request(MiraiRequest request) {
     switch (request.method) {
