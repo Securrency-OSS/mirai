@@ -57,9 +57,11 @@ class Mirai {
 
   static Future<void> initialize({
     List<MiraiParser> parsers = const [],
+    Dio? dio,
   }) async {
     _parsers.addAll(parsers);
     MiraiRegistry.instance.registerAll(_parsers);
+    MiraiNetwork.initialize(dio ?? Dio());
   }
 
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
