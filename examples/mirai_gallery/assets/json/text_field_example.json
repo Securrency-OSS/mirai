@@ -47,6 +47,12 @@
                             },
                             "labelText": "Name*"
                         },
+                        "inputFormatters": [
+                            {
+                                "type": "allow",
+                                "rule": "[a-zA-Z]"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -75,6 +81,11 @@
                             },
                             "labelText": "Phone number*"
                         },
+                        "inputFormatters": [
+                            {
+                                "type": "digitsOnly"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -103,6 +114,41 @@
                             },
                             "labelText": "Email"
                         },
+                        "readOnly": false,
+                        "enabled": true
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "textField",
+                        "maxLines": 1,
+                        "keyboardType": "text",
+                        "textInputAction": "done",
+                        "textAlign": "start",
+                        "textCapitalization": "none",
+                        "textDirection": "ltr",
+                        "textAlignVertical": "top",
+                        "obscureText": false,
+                        "decoration": {
+                            "filled": true,
+                            "icon": {
+                                "type": "icon",
+                                "iconType": "material",
+                                "icon": "credit_card",
+                                "size": 24
+                            },
+                            "hintText": "XXXX XXXX XXXX XXXX",
+                            "labelText": "Credit Card"
+                        },
+                        "inputFormatters": [
+                            {
+                                "type": "masked",
+                                "rule": "XXXX-XXXX-XXXX-XXXX",
+                                "value": "-"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
