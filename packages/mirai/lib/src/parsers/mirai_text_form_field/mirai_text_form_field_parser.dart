@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
+import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
@@ -63,10 +64,15 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       autovalidateMode: model.autovalidateMode,
       validator: (value) {
         if (value != null && model.validatorRules.isNotEmpty) {
-          for (final validatorRule in model.validatorRules) {
-            if (!InputValidation.validate(value, validatorRule.rule)) {
-              return validatorRule.message;
-            }
+          for (MiraiFormFieldValidator validator in model.validatorRules) {
+            try {
+              InputValidationType? validationType = InputValidationType.values
+                  .firstWhere((e) => e.name == validator.rule);
+
+              if (!validationType.validate(value, validator.rule)) {
+                return validator.message;
+              }
+            } catch (_) {}
           }
         }
 

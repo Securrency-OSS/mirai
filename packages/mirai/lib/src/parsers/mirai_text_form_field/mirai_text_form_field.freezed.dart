@@ -56,7 +56,7 @@ mixin _$MiraiTextFormField {
   String? get cursorColor => throw _privateConstructorUsedError;
   String? get hintText => throw _privateConstructorUsedError;
   AutovalidateMode? get autovalidateMode => throw _privateConstructorUsedError;
-  List<MiraiTextValidation> get validatorRules =>
+  List<MiraiFormFieldValidator> get validatorRules =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -105,7 +105,7 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       String? cursorColor,
       String? hintText,
       AutovalidateMode? autovalidateMode,
-      List<MiraiTextValidation> validatorRules});
+      List<MiraiFormFieldValidator> validatorRules});
 
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
   $MiraiTextStyleCopyWith<$Res>? get style;
@@ -296,7 +296,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
       validatorRules: null == validatorRules
           ? _value.validatorRules
           : validatorRules // ignore: cast_nullable_to_non_nullable
-              as List<MiraiTextValidation>,
+              as List<MiraiFormFieldValidator>,
     ) as $Val);
   }
 
@@ -375,7 +375,7 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
       String? cursorColor,
       String? hintText,
       AutovalidateMode? autovalidateMode,
-      List<MiraiTextValidation> validatorRules});
+      List<MiraiFormFieldValidator> validatorRules});
 
   @override
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
@@ -567,7 +567,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
       validatorRules: null == validatorRules
           ? _value._validatorRules
           : validatorRules // ignore: cast_nullable_to_non_nullable
-              as List<MiraiTextValidation>,
+              as List<MiraiFormFieldValidator>,
     ));
   }
 }
@@ -610,7 +610,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       this.cursorColor,
       this.hintText,
       this.autovalidateMode,
-      final List<MiraiTextValidation> validatorRules = const []})
+      final List<MiraiFormFieldValidator> validatorRules = const []})
       : _validatorRules = validatorRules;
 
   factory _$_MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
@@ -694,10 +694,10 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   final String? hintText;
   @override
   final AutovalidateMode? autovalidateMode;
-  final List<MiraiTextValidation> _validatorRules;
+  final List<MiraiFormFieldValidator> _validatorRules;
   @override
   @JsonKey()
-  List<MiraiTextValidation> get validatorRules {
+  List<MiraiFormFieldValidator> get validatorRules {
     if (_validatorRules is EqualUnmodifiableListView) return _validatorRules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_validatorRules);
@@ -839,40 +839,41 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
-      {final MiraiInputDecoration? decoration,
-      final String? initialValue,
-      final MiraiTextInputType? keyboardType,
-      final TextInputAction? textInputAction,
-      final TextCapitalization textCapitalization,
-      final MiraiTextStyle? style,
-      final TextAlign textAlign,
-      final MiraiTextAlignVertical? textAlignVertical,
-      final TextDirection? textDirection,
-      final bool readOnly,
-      final bool? showCursor,
-      final bool autofocus,
-      final String obscuringCharacter,
-      final int? maxLines,
-      final int? minLines,
-      final int? maxLength,
-      final bool obscureText,
-      final bool autocorrect,
-      final SmartDashesType? smartDashesType,
-      final SmartQuotesType? smartQuotesType,
-      final MaxLengthEnforcement? maxLengthEnforcement,
-      final bool expands,
-      final Brightness? keyboardAppearance,
-      final MiraiEdgeInsets scrollPadding,
-      final String? restorationId,
-      final bool enableIMEPersonalizedLearning,
-      final bool enableSuggestions,
-      final bool? enabled,
-      final double cursorWidth,
-      final double? cursorHeight,
-      final String? cursorColor,
-      final String? hintText,
-      final AutovalidateMode? autovalidateMode,
-      final List<MiraiTextValidation> validatorRules}) = _$_MiraiTextFormField;
+          {final MiraiInputDecoration? decoration,
+          final String? initialValue,
+          final MiraiTextInputType? keyboardType,
+          final TextInputAction? textInputAction,
+          final TextCapitalization textCapitalization,
+          final MiraiTextStyle? style,
+          final TextAlign textAlign,
+          final MiraiTextAlignVertical? textAlignVertical,
+          final TextDirection? textDirection,
+          final bool readOnly,
+          final bool? showCursor,
+          final bool autofocus,
+          final String obscuringCharacter,
+          final int? maxLines,
+          final int? minLines,
+          final int? maxLength,
+          final bool obscureText,
+          final bool autocorrect,
+          final SmartDashesType? smartDashesType,
+          final SmartQuotesType? smartQuotesType,
+          final MaxLengthEnforcement? maxLengthEnforcement,
+          final bool expands,
+          final Brightness? keyboardAppearance,
+          final MiraiEdgeInsets scrollPadding,
+          final String? restorationId,
+          final bool enableIMEPersonalizedLearning,
+          final bool enableSuggestions,
+          final bool? enabled,
+          final double cursorWidth,
+          final double? cursorHeight,
+          final String? cursorColor,
+          final String? hintText,
+          final AutovalidateMode? autovalidateMode,
+          final List<MiraiFormFieldValidator> validatorRules}) =
+      _$_MiraiTextFormField;
 
   factory _MiraiTextFormField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextFormField.fromJson;
@@ -944,7 +945,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   @override
   AutovalidateMode? get autovalidateMode;
   @override
-  List<MiraiTextValidation> get validatorRules;
+  List<MiraiFormFieldValidator> get validatorRules;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextFormFieldCopyWith<_$_MiraiTextFormField> get copyWith =>

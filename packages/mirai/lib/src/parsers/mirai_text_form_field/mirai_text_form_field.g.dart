@@ -65,7 +65,7 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
           _$AutovalidateModeEnumMap, json['autovalidateMode']),
       validatorRules: (json['validatorRules'] as List<dynamic>?)
               ?.map((e) =>
-                  MiraiTextValidation.fromJson(e as Map<String, dynamic>))
+                  MiraiFormFieldValidator.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );

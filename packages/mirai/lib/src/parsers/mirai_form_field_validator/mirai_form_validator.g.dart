@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'mirai_text_validation.dart';
+part of 'mirai_form_validator.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTextValidation _$$_MiraiTextValidationFromJson(
+_$_MiraiFormFieldValidator _$$_MiraiFormFieldValidatorFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiTextValidation(
+    _$_MiraiFormFieldValidator(
       rule: json['rule'] as String,
       message: json['message'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiTextValidationToJson(
-        _$_MiraiTextValidation instance) =>
+Map<String, dynamic> _$$_MiraiFormFieldValidatorToJson(
+        _$_MiraiFormFieldValidator instance) =>
     <String, dynamic>{
       'rule': instance.rule,
       'message': instance.message,
