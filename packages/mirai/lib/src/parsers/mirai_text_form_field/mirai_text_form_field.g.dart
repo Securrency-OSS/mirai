@@ -61,6 +61,11 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
       cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
       cursorColor: json['cursorColor'] as String?,
       hintText: json['hintText'] as String?,
+      inputFormatters: (json['inputFormatters'] as List<dynamic>?)
+              ?.map((e) =>
+                  MiraiInputFormatter.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
@@ -101,6 +106,7 @@ Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
       'cursorHeight': instance.cursorHeight,
       'cursorColor': instance.cursorColor,
       'hintText': instance.hintText,
+      'inputFormatters': instance.inputFormatters,
     };
 
 const _$MiraiTextInputTypeEnumMap = {
