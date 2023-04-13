@@ -10,7 +10,6 @@
     "body": {
         "type": "form",
         "autovalidateMode": "onUserInteraction",
-        "formKey": "formValidation",
         "child": {
             "type": "container",
             "padding": {
@@ -232,7 +231,7 @@
                                 }
                             },
                             "onPressed": {
-                                "actionType": "validation"
+                                "actionType": "formValidation"
                             }
                         }
                     ]
