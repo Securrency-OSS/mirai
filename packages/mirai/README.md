@@ -37,13 +37,18 @@ void main() async {
 }
 ```
 
-You can also specify your custom Parsers in `Mirai.initialize`. 
+You can also specify your custom Parsers in `Mirai.initialize` and `Dio` instance.
 
 ```dart
 void main() async {
-  await Mirai.initialize(parsers: const [
-    ExampleScreenParser(),
-  ]);
+  final dio = Dio()
+
+  await Mirai.initialize(
+    parsers: const [
+      ExampleScreenParser(),
+    ],
+    dio: dio,
+  );
 
   runApp(const MyApp());
 }
