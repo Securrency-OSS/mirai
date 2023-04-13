@@ -14,7 +14,7 @@ dependencies:
   json_annotation: ^4.8.0
   logger: ^1.2.2
   dio: ^5.0.1
-
+  flutter_bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:

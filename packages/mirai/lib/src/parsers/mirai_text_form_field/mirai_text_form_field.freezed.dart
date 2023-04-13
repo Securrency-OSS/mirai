@@ -20,6 +20,7 @@ MiraiTextFormField _$MiraiTextFormFieldFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiTextFormField {
+  String get key => throw _privateConstructorUsedError;
   MiraiInputDecoration? get decoration => throw _privateConstructorUsedError;
   String? get initialValue => throw _privateConstructorUsedError;
   MiraiTextInputType? get keyboardType => throw _privateConstructorUsedError;
@@ -69,7 +70,8 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       _$MiraiTextFormFieldCopyWithImpl<$Res, MiraiTextFormField>;
   @useResult
   $Res call(
-      {MiraiInputDecoration? decoration,
+      {String key,
+      MiraiInputDecoration? decoration,
       String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
@@ -120,6 +122,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? key = null,
     Object? decoration = freezed,
     Object? initialValue = freezed,
     Object? keyboardType = freezed,
@@ -154,6 +157,10 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? hintText = freezed,
   }) {
     return _then(_value.copyWith(
+      key: null == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
       decoration: freezed == decoration
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
@@ -327,7 +334,8 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiInputDecoration? decoration,
+      {String key,
+      MiraiInputDecoration? decoration,
       String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
@@ -379,6 +387,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? key = null,
     Object? decoration = freezed,
     Object? initialValue = freezed,
     Object? keyboardType = freezed,
@@ -413,6 +422,10 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? hintText = freezed,
   }) {
     return _then(_$_MiraiTextFormField(
+      key: null == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
       decoration: freezed == decoration
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
@@ -549,7 +562,8 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiTextFormField implements _MiraiTextFormField {
   const _$_MiraiTextFormField(
-      {this.decoration,
+      {required this.key,
+      this.decoration,
       this.initialValue,
       this.keyboardType,
       this.textInputAction,
@@ -586,6 +600,8 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   factory _$_MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFormFieldFromJson(json);
 
+  @override
+  final String key;
   @override
   final MiraiInputDecoration? decoration;
   @override
@@ -665,7 +681,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
   @override
   String toString() {
-    return 'MiraiTextFormField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
+    return 'MiraiTextFormField(key: $key, decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
   }
 
   @override
@@ -673,6 +689,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiTextFormField &&
+            (identical(other.key, key) || other.key == key) &&
             (identical(other.decoration, decoration) ||
                 other.decoration == decoration) &&
             (identical(other.initialValue, initialValue) ||
@@ -742,6 +759,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        key,
         decoration,
         initialValue,
         keyboardType,
@@ -793,7 +811,8 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
-      {final MiraiInputDecoration? decoration,
+      {required final String key,
+      final MiraiInputDecoration? decoration,
       final String? initialValue,
       final MiraiTextInputType? keyboardType,
       final TextInputAction? textInputAction,
@@ -829,6 +848,8 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   factory _MiraiTextFormField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextFormField.fromJson;
 
+  @override
+  String get key;
   @override
   MiraiInputDecoration? get decoration;
   @override

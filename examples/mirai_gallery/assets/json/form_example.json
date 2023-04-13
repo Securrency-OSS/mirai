@@ -32,6 +32,7 @@
                         },
                         {
                             "type": "textFormField",
+                            "key": "name",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -60,6 +61,7 @@
                         },
                         {
                             "type": "textFormField",
+                            "key": "phone",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -88,6 +90,7 @@
                         },
                         {
                             "type": "textFormField",
+                            "key": "email",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -116,6 +119,36 @@
                         },
                         {
                             "type": "textFormField",
+                            "key": "card",
+                            "maxLines": 1,
+                            "keyboardType": "number",
+                            "textInputAction": "done",
+                            "textAlign": "start",
+                            "textCapitalization": "none",
+                            "textDirection": "ltr",
+                            "textAlignVertical": "top",
+                            "obscureText": false,
+                            "decoration": {
+                                "hintText": "XXXX XXXX XXXX XXXX",
+                                "filled": true,
+                                "icon": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "credit_card",
+                                    "size": 24
+                                },
+                                "labelText": "Credit Card"
+                            },
+                            "readOnly": false,
+                            "enabled": true
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 24
+                        },
+                        {
+                            "type": "textFormField",
+                            "key": "password",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -126,6 +159,12 @@
                             "obscureText": true,
                             "decoration": {
                                 "filled": true,
+                                "icon": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "password",
+                                    "size": 24
+                                },
                                 "suffixIcon": {
                                     "type": "icon",
                                     "iconType": "cupertino",
@@ -143,6 +182,7 @@
                         },
                         {
                             "type": "textFormField",
+                            "key": "confirmPassword",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -153,6 +193,12 @@
                             "obscureText": true,
                             "decoration": {
                                 "filled": true,
+                                "icon": {
+                                    "type": "icon",
+                                    "iconType": "material",
+                                    "icon": "password",
+                                    "size": 24
+                                },
                                 "suffixIcon": {
                                     "type": "icon",
                                     "iconType": "cupertino",
@@ -163,6 +209,10 @@
                             },
                             "readOnly": false,
                             "enabled": true
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": 32
                         },
                         {
                             "type": "elevatedButton",
@@ -176,8 +226,8 @@
                             "style": {
                                 "padding": {
                                     "top": 8,
-                                    "left": 12,
-                                    "right": 12,
+                                    "left": 24,
+                                    "right": 24,
                                     "bottom": 8
                                 }
                             },

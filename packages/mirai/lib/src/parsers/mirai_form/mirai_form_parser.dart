@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
+import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
@@ -15,13 +17,16 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
 
   @override
   Widget parse(BuildContext context, MiraiForm model) {
-    return Form(
-      onChanged: () => model.onChanged?.onCall(context),
-      autovalidateMode: model.autovalidateMode,
-      child: Builder(
-        builder: (ctx) {
-          return Mirai.fromJson(model.child, ctx) ?? const SizedBox();
-        },
+    return BlocProvider(
+      create: (_) => MiraiFormCubit(),
+      child: Form(
+        onChanged: () => model.onChanged?.onCall(context),
+        autovalidateMode: model.autovalidateMode,
+        child: BlocBuilder<MiraiFormCubit, MiraiFormState>(
+          builder: (ctx, state) {
+            return Mirai.fromJson(model.child, ctx) ?? const SizedBox();
+          },
+        ),
       ),
     );
   }

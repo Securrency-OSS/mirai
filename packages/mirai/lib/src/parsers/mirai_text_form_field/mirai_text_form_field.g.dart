@@ -9,6 +9,7 @@ part of 'mirai_text_form_field.dart';
 _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiTextFormField(
+      key: json['key'] as String,
       decoration: json['decoration'] == null
           ? null
           : MiraiInputDecoration.fromJson(
@@ -66,6 +67,7 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
 Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
         _$_MiraiTextFormField instance) =>
     <String, dynamic>{
+      'key': instance.key,
       'decoration': instance.decoration,
       'initialValue': instance.initialValue,
       'keyboardType': _$MiraiTextInputTypeEnumMap[instance.keyboardType],

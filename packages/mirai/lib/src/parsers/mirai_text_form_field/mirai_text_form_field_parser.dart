@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
+import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
@@ -25,8 +27,21 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
 
   @override
   Widget parse(BuildContext context, MiraiTextFormField model) {
+    TextEditingController storedController =
+        controller ?? TextEditingController();
+
+    try {
+      storedController =
+          context.read<MiraiFormCubit>().getController(model.key) ??
+              storedController;
+
+      context.read<MiraiFormCubit>().addController(
+        {model.key: storedController},
+      );
+    } catch (_) {}
+
     return TextFormField(
-      controller: controller,
+      controller: storedController,
       focusNode: focusNode,
       initialValue: model.initialValue,
       keyboardType: model.keyboardType?.value,
