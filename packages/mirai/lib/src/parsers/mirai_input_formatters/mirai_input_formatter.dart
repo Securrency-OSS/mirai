@@ -9,7 +9,6 @@ class MiraiInputFormatter with _$MiraiInputFormatter {
   const factory MiraiInputFormatter({
     required InputFormatterType type,
     String? rule,
-    String? value,
   }) = _MiraiInputFormatter;
 
   factory MiraiInputFormatter.fromJson(Map<String, dynamic> json) =>

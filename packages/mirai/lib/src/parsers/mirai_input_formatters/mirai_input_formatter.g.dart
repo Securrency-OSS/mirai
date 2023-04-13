@@ -11,7 +11,6 @@ _$_MiraiInputFormatter _$$_MiraiInputFormatterFromJson(
     _$_MiraiInputFormatter(
       type: $enumDecode(_$InputFormatterTypeEnumMap, json['type']),
       rule: json['rule'] as String?,
-      value: json['value'] as String?,
     );
 
 Map<String, dynamic> _$$_MiraiInputFormatterToJson(
@@ -19,13 +18,9 @@ Map<String, dynamic> _$$_MiraiInputFormatterToJson(
     <String, dynamic>{
       'type': _$InputFormatterTypeEnumMap[instance.type]!,
       'rule': instance.rule,
-      'value': instance.value,
     };
 
 const _$InputFormatterTypeEnumMap = {
-  InputFormatterType.digitsOnly: 'digitsOnly',
-  InputFormatterType.singleLineFormatter: 'singleLineFormatter',
   InputFormatterType.allow: 'allow',
   InputFormatterType.deny: 'deny',
-  InputFormatterType.masked: 'masked',
 };

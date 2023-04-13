@@ -22,7 +22,6 @@ MiraiInputFormatter _$MiraiInputFormatterFromJson(Map<String, dynamic> json) {
 mixin _$MiraiInputFormatter {
   InputFormatterType get type => throw _privateConstructorUsedError;
   String? get rule => throw _privateConstructorUsedError;
-  String? get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +35,7 @@ abstract class $MiraiInputFormatterCopyWith<$Res> {
           MiraiInputFormatter value, $Res Function(MiraiInputFormatter) then) =
       _$MiraiInputFormatterCopyWithImpl<$Res, MiraiInputFormatter>;
   @useResult
-  $Res call({InputFormatterType type, String? rule, String? value});
+  $Res call({InputFormatterType type, String? rule});
 }
 
 /// @nodoc
@@ -54,7 +53,6 @@ class _$MiraiInputFormatterCopyWithImpl<$Res, $Val extends MiraiInputFormatter>
   $Res call({
     Object? type = null,
     Object? rule = freezed,
-    Object? value = freezed,
   }) {
     return _then(_value.copyWith(
       type: null == type
@@ -64,10 +62,6 @@ class _$MiraiInputFormatterCopyWithImpl<$Res, $Val extends MiraiInputFormatter>
       rule: freezed == rule
           ? _value.rule
           : rule // ignore: cast_nullable_to_non_nullable
-              as String?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -81,7 +75,7 @@ abstract class _$$_MiraiInputFormatterCopyWith<$Res>
       __$$_MiraiInputFormatterCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({InputFormatterType type, String? rule, String? value});
+  $Res call({InputFormatterType type, String? rule});
 }
 
 /// @nodoc
@@ -97,7 +91,6 @@ class __$$_MiraiInputFormatterCopyWithImpl<$Res>
   $Res call({
     Object? type = null,
     Object? rule = freezed,
-    Object? value = freezed,
   }) {
     return _then(_$_MiraiInputFormatter(
       type: null == type
@@ -108,10 +101,6 @@ class __$$_MiraiInputFormatterCopyWithImpl<$Res>
           ? _value.rule
           : rule // ignore: cast_nullable_to_non_nullable
               as String?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -119,7 +108,7 @@ class __$$_MiraiInputFormatterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiInputFormatter implements _MiraiInputFormatter {
-  const _$_MiraiInputFormatter({required this.type, this.rule, this.value});
+  const _$_MiraiInputFormatter({required this.type, this.rule});
 
   factory _$_MiraiInputFormatter.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiInputFormatterFromJson(json);
@@ -128,12 +117,10 @@ class _$_MiraiInputFormatter implements _MiraiInputFormatter {
   final InputFormatterType type;
   @override
   final String? rule;
-  @override
-  final String? value;
 
   @override
   String toString() {
-    return 'MiraiInputFormatter(type: $type, rule: $rule, value: $value)';
+    return 'MiraiInputFormatter(type: $type, rule: $rule)';
   }
 
   @override
@@ -142,13 +129,12 @@ class _$_MiraiInputFormatter implements _MiraiInputFormatter {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiInputFormatter &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.rule, rule) || other.rule == rule) &&
-            (identical(other.value, value) || other.value == value));
+            (identical(other.rule, rule) || other.rule == rule));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, rule, value);
+  int get hashCode => Object.hash(runtimeType, type, rule);
 
   @JsonKey(ignore: true)
   @override
@@ -168,8 +154,7 @@ class _$_MiraiInputFormatter implements _MiraiInputFormatter {
 abstract class _MiraiInputFormatter implements MiraiInputFormatter {
   const factory _MiraiInputFormatter(
       {required final InputFormatterType type,
-      final String? rule,
-      final String? value}) = _$_MiraiInputFormatter;
+      final String? rule}) = _$_MiraiInputFormatter;
 
   factory _MiraiInputFormatter.fromJson(Map<String, dynamic> json) =
       _$_MiraiInputFormatter.fromJson;
@@ -178,8 +163,6 @@ abstract class _MiraiInputFormatter implements MiraiInputFormatter {
   InputFormatterType get type;
   @override
   String? get rule;
-  @override
-  String? get value;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiInputFormatterCopyWith<_$_MiraiInputFormatter> get copyWith =>

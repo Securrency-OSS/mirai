@@ -83,7 +83,8 @@
                         },
                         "inputFormatters": [
                             {
-                                "type": "digitsOnly"
+                                "type": "deny",
+                                "rule": "[a-zA-Z]"
                             }
                         ],
                         "readOnly": false,
@@ -144,9 +145,8 @@
                         },
                         "inputFormatters": [
                             {
-                                "type": "masked",
-                                "rule": "XXXX-XXXX-XXXX-XXXX",
-                                "value": "-"
+                                "type": "deny",
+                                "rule": "[a-zA-Z]"
                             }
                         ],
                         "readOnly": false,
