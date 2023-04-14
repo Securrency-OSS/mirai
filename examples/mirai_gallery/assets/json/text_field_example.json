@@ -130,7 +130,7 @@
                         "autovalidateMode": "onUserInteraction",
                         "validatorRules": [
                             {
-                                "rule": "validateEmail",
+                                "rule": "isEmail",
                                 "message": "Enter a valid email address"
                             }
                         ],
@@ -216,7 +216,7 @@
                         "autovalidateMode": "onUserInteraction",
                         "validatorRules": [
                             {
-                                "rule": "validatePassword",
+                                "rule": "isPassword",
                                 "message": "Enter a valid password"
                             }
                         ],
@@ -252,7 +252,7 @@
                         "autovalidateMode": "onUserInteraction",
                         "validatorRules": [
                             {
-                                "rule": "validatePassword",
+                                "rule": "isPassword",
                                 "message": "Enter a valid password"
                             }
                         ]
