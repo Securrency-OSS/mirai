@@ -63,6 +63,11 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
       hintText: json['hintText'] as String?,
       autovalidateMode: $enumDecodeNullable(
           _$AutovalidateModeEnumMap, json['autovalidateMode']),
+      inputFormatters: (json['inputFormatters'] as List<dynamic>?)
+              ?.map((e) =>
+                  MiraiInputFormatter.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       validatorRules: (json['validatorRules'] as List<dynamic>?)
               ?.map((e) =>
                   MiraiFormFieldValidator.fromJson(e as Map<String, dynamic>))
@@ -109,6 +114,7 @@ Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
       'cursorColor': instance.cursorColor,
       'hintText': instance.hintText,
       'autovalidateMode': _$AutovalidateModeEnumMap[instance.autovalidateMode],
+      'inputFormatters': instance.inputFormatters,
       'validatorRules': instance.validatorRules,
     };
 

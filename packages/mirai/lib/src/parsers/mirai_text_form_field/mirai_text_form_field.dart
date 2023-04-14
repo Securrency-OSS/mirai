@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
+import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/text_input_utils.dart';
 
@@ -49,6 +50,7 @@ class MiraiTextFormField with _$MiraiTextFormField {
     String? cursorColor,
     String? hintText,
     AutovalidateMode? autovalidateMode,
+    @Default([]) List<MiraiInputFormatter> inputFormatters,
     @Default([]) List<MiraiFormFieldValidator> validatorRules,
   }) = _MiraiTextFormField;
 
