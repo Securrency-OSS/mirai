@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
+import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
 import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -59,6 +60,10 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       cursorColor: model.cursorColor?.toColor,
       style: model.style?.parse,
       decoration: model.decoration.parse(context),
+      inputFormatters: model.inputFormatters
+          .map((MiraiInputFormatter formatter) =>
+              formatter.type.format(formatter.rule ?? ""))
+          .toList(),
     );
   }
 }

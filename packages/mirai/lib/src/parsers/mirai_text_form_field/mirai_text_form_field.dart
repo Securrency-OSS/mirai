@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
+import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/text_input_utils.dart';
 
@@ -46,6 +47,7 @@ class MiraiTextFormField with _$MiraiTextFormField {
     double? cursorHeight,
     String? cursorColor,
     String? hintText,
+    @Default([]) List<MiraiInputFormatter> inputFormatters,
   }) = _MiraiTextFormField;
 
   factory MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
