@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/framework/framework.dart';
-import 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
-import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
