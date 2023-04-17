@@ -30,13 +30,13 @@ class MiraiBoxDecoration with _$MiraiBoxDecoration {
 }
 
 extension MiraiBoxDecorationParser on MiraiBoxDecoration? {
-  BoxDecoration get parse {
+  BoxDecoration? get parse {
     return BoxDecoration(
       color: this?.color.toColor,
       backgroundBlendMode: this?.blendMode,
       boxShadow: this?.boxShadow?.map((elem) => elem.parse).toList(),
       shape: this?.shape ?? BoxShape.rectangle,
-      border: this?.border.parse,
+      border: this?.border?.parse,
       borderRadius: this?.borderRadius.parse,
       image: this?.image.parse,
       gradient: this?.gradient?.parse,

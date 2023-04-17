@@ -26,8 +26,9 @@ class MiraiContainerImage with _$MiraiContainerImage {
 }
 
 extension MiraiContainerImageParser on MiraiContainerImage? {
-  DecorationImage get parse {
-    DecorationImage networkImage() => DecorationImage(
+  DecorationImage? get parse {
+    if (this?.src == null) return null;
+    DecorationImage? networkImage() => DecorationImage(
           image: NetworkImage(
             this?.src ?? '',
           ),
@@ -35,7 +36,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
           fit: this?.fit,
         );
 
-    DecorationImage fileImage() => DecorationImage(
+    DecorationImage? fileImage() => DecorationImage(
           image: FileImage(
             File(this?.src ?? ''),
           ),
@@ -43,7 +44,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
           fit: this?.fit,
         );
 
-    DecorationImage assetImage() => DecorationImage(
+    DecorationImage? assetImage() => DecorationImage(
           image: AssetImage(
             this?.src ?? '',
           ),
@@ -59,7 +60,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
       case MiraiContainerImageType.asset:
         return assetImage();
       default:
-        return networkImage();
+        return null;
     }
   }
 }

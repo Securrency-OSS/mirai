@@ -260,9 +260,7 @@ class _$_MiraiContainer implements _MiraiContainer {
       this.margin,
       final Map<String, dynamic>? child,
       this.clipBehavior = Clip.none})
-      : assert(color == null || decoration == null,
-            'Cannot provide both a color and a decoration'),
-        _child = child;
+      : _child = child;
 
   factory _$_MiraiContainer.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiContainerFromJson(json);

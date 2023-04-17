@@ -10,8 +10,6 @@ part 'mirai_container.g.dart';
 
 @freezed
 class MiraiContainer with _$MiraiContainer {
-  // @Assert('color == null || decoration == null', 'Cannot provide both a color and a decoration\n')
-  @Assert('color == null || decoration == null', 'Cannot provide both a color and a decoration')
   const factory MiraiContainer({
     MiraiAlignment? alignment,
     MiraiEdgeInsets? padding,

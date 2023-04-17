@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/parsers/mirai_border_side/mirai_border_side.dart';
+import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_border.freezed.dart';
+
 part 'mirai_border.g.dart';
 
 @freezed
 class MiraiBorder with _$MiraiBorder {
   const factory MiraiBorder({
-    MiraiBorderSide? top,
-    MiraiBorderSide? right,
-    MiraiBorderSide? bottom,
-    MiraiBorderSide? left,
+    String? color,
+    @Default(BorderStyle.solid) BorderStyle borderStyle,
+    @Default(1.0) double width,
+    @Default(BorderSide.strokeAlignInside) double strokeAlign,
   }) = _MiraiBorder;
 
   factory MiraiBorder.fromJson(Map<String, dynamic> json) =>
       _$MiraiBorderFromJson(json);
 }
 
-extension MiraiBorderParser on MiraiBorder? {
+extension MiraiBorderParser on MiraiBorder {
   Border get parse {
-    return Border(
-      right: this?.right.parse ?? BorderSide.none,
-      left: this?.left.parse ?? BorderSide.none,
-      top: this?.top.parse ?? BorderSide.none,
-      bottom: this?.bottom.parse ?? BorderSide.none,
+    return Border.all(
+      color: color.toColor ?? const Color(0xFF000000),
+      width: width,
+      style: borderStyle,
+      strokeAlign: strokeAlign,
     );
   }
 }

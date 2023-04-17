@@ -20,10 +20,10 @@ MiraiBorder _$MiraiBorderFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiBorder {
-  MiraiBorderSide? get top => throw _privateConstructorUsedError;
-  MiraiBorderSide? get right => throw _privateConstructorUsedError;
-  MiraiBorderSide? get bottom => throw _privateConstructorUsedError;
-  MiraiBorderSide? get left => throw _privateConstructorUsedError;
+  String? get color => throw _privateConstructorUsedError;
+  BorderStyle get borderStyle => throw _privateConstructorUsedError;
+  double get width => throw _privateConstructorUsedError;
+  double get strokeAlign => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,15 +38,10 @@ abstract class $MiraiBorderCopyWith<$Res> {
       _$MiraiBorderCopyWithImpl<$Res, MiraiBorder>;
   @useResult
   $Res call(
-      {MiraiBorderSide? top,
-      MiraiBorderSide? right,
-      MiraiBorderSide? bottom,
-      MiraiBorderSide? left});
-
-  $MiraiBorderSideCopyWith<$Res>? get top;
-  $MiraiBorderSideCopyWith<$Res>? get right;
-  $MiraiBorderSideCopyWith<$Res>? get bottom;
-  $MiraiBorderSideCopyWith<$Res>? get left;
+      {String? color,
+      BorderStyle borderStyle,
+      double width,
+      double strokeAlign});
 }
 
 /// @nodoc
@@ -62,77 +57,29 @@ class _$MiraiBorderCopyWithImpl<$Res, $Val extends MiraiBorder>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? top = freezed,
-    Object? right = freezed,
-    Object? bottom = freezed,
-    Object? left = freezed,
+    Object? color = freezed,
+    Object? borderStyle = null,
+    Object? width = null,
+    Object? strokeAlign = null,
   }) {
     return _then(_value.copyWith(
-      top: freezed == top
-          ? _value.top
-          : top // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      right: freezed == right
-          ? _value.right
-          : right // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      bottom: freezed == bottom
-          ? _value.bottom
-          : bottom // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      left: freezed == left
-          ? _value.left
-          : left // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      borderStyle: null == borderStyle
+          ? _value.borderStyle
+          : borderStyle // ignore: cast_nullable_to_non_nullable
+              as BorderStyle,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      strokeAlign: null == strokeAlign
+          ? _value.strokeAlign
+          : strokeAlign // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiBorderSideCopyWith<$Res>? get top {
-    if (_value.top == null) {
-      return null;
-    }
-
-    return $MiraiBorderSideCopyWith<$Res>(_value.top!, (value) {
-      return _then(_value.copyWith(top: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiBorderSideCopyWith<$Res>? get right {
-    if (_value.right == null) {
-      return null;
-    }
-
-    return $MiraiBorderSideCopyWith<$Res>(_value.right!, (value) {
-      return _then(_value.copyWith(right: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiBorderSideCopyWith<$Res>? get bottom {
-    if (_value.bottom == null) {
-      return null;
-    }
-
-    return $MiraiBorderSideCopyWith<$Res>(_value.bottom!, (value) {
-      return _then(_value.copyWith(bottom: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiBorderSideCopyWith<$Res>? get left {
-    if (_value.left == null) {
-      return null;
-    }
-
-    return $MiraiBorderSideCopyWith<$Res>(_value.left!, (value) {
-      return _then(_value.copyWith(left: value) as $Val);
-    });
   }
 }
 
@@ -145,19 +92,10 @@ abstract class _$$_MiraiBorderCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiBorderSide? top,
-      MiraiBorderSide? right,
-      MiraiBorderSide? bottom,
-      MiraiBorderSide? left});
-
-  @override
-  $MiraiBorderSideCopyWith<$Res>? get top;
-  @override
-  $MiraiBorderSideCopyWith<$Res>? get right;
-  @override
-  $MiraiBorderSideCopyWith<$Res>? get bottom;
-  @override
-  $MiraiBorderSideCopyWith<$Res>? get left;
+      {String? color,
+      BorderStyle borderStyle,
+      double width,
+      double strokeAlign});
 }
 
 /// @nodoc
@@ -171,28 +109,28 @@ class __$$_MiraiBorderCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? top = freezed,
-    Object? right = freezed,
-    Object? bottom = freezed,
-    Object? left = freezed,
+    Object? color = freezed,
+    Object? borderStyle = null,
+    Object? width = null,
+    Object? strokeAlign = null,
   }) {
     return _then(_$_MiraiBorder(
-      top: freezed == top
-          ? _value.top
-          : top // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      right: freezed == right
-          ? _value.right
-          : right // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      bottom: freezed == bottom
-          ? _value.bottom
-          : bottom // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
-      left: freezed == left
-          ? _value.left
-          : left // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      borderStyle: null == borderStyle
+          ? _value.borderStyle
+          : borderStyle // ignore: cast_nullable_to_non_nullable
+              as BorderStyle,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      strokeAlign: null == strokeAlign
+          ? _value.strokeAlign
+          : strokeAlign // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -200,23 +138,30 @@ class __$$_MiraiBorderCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiBorder implements _MiraiBorder {
-  const _$_MiraiBorder({this.top, this.right, this.bottom, this.left});
+  const _$_MiraiBorder(
+      {this.color,
+      this.borderStyle = BorderStyle.solid,
+      this.width = 1.0,
+      this.strokeAlign = BorderSide.strokeAlignInside});
 
   factory _$_MiraiBorder.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiBorderFromJson(json);
 
   @override
-  final MiraiBorderSide? top;
+  final String? color;
   @override
-  final MiraiBorderSide? right;
+  @JsonKey()
+  final BorderStyle borderStyle;
   @override
-  final MiraiBorderSide? bottom;
+  @JsonKey()
+  final double width;
   @override
-  final MiraiBorderSide? left;
+  @JsonKey()
+  final double strokeAlign;
 
   @override
   String toString() {
-    return 'MiraiBorder(top: $top, right: $right, bottom: $bottom, left: $left)';
+    return 'MiraiBorder(color: $color, borderStyle: $borderStyle, width: $width, strokeAlign: $strokeAlign)';
   }
 
   @override
@@ -224,15 +169,18 @@ class _$_MiraiBorder implements _MiraiBorder {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiBorder &&
-            (identical(other.top, top) || other.top == top) &&
-            (identical(other.right, right) || other.right == right) &&
-            (identical(other.bottom, bottom) || other.bottom == bottom) &&
-            (identical(other.left, left) || other.left == left));
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.borderStyle, borderStyle) ||
+                other.borderStyle == borderStyle) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.strokeAlign, strokeAlign) ||
+                other.strokeAlign == strokeAlign));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, top, right, bottom, left);
+  int get hashCode =>
+      Object.hash(runtimeType, color, borderStyle, width, strokeAlign);
 
   @JsonKey(ignore: true)
   @override
@@ -250,22 +198,22 @@ class _$_MiraiBorder implements _MiraiBorder {
 
 abstract class _MiraiBorder implements MiraiBorder {
   const factory _MiraiBorder(
-      {final MiraiBorderSide? top,
-      final MiraiBorderSide? right,
-      final MiraiBorderSide? bottom,
-      final MiraiBorderSide? left}) = _$_MiraiBorder;
+      {final String? color,
+      final BorderStyle borderStyle,
+      final double width,
+      final double strokeAlign}) = _$_MiraiBorder;
 
   factory _MiraiBorder.fromJson(Map<String, dynamic> json) =
       _$_MiraiBorder.fromJson;
 
   @override
-  MiraiBorderSide? get top;
+  String? get color;
   @override
-  MiraiBorderSide? get right;
+  BorderStyle get borderStyle;
   @override
-  MiraiBorderSide? get bottom;
+  double get width;
   @override
-  MiraiBorderSide? get left;
+  double get strokeAlign;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiBorderCopyWith<_$_MiraiBorder> get copyWith =>

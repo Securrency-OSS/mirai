@@ -18,8 +18,11 @@ class MiraiContainerParser extends MiraiParser<MiraiContainer> {
     return Container(
       alignment: model.alignment?.value,
       padding: model.padding.parse,
-      decoration: model.decoration.parse,
-      color: model.color.toColor,
+      decoration: model.color == null
+          ? model.decoration.parse
+          : model.decoration.parse?.copyWith(
+              color: model.color.toColor,
+            ),
       width: model.width,
       height: model.height,
       margin: model.margin.parse,
