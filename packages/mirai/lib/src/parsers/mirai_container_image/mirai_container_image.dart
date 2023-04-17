@@ -3,9 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_alignment/mirai_alignment.dart';
-
-export 'package:mirai/src/parsers/mirai_image/mirai_image_parser.dart';
-
+export 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
 part 'mirai_container_image.freezed.dart';
 
 part 'mirai_container_image.g.dart';
