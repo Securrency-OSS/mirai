@@ -6,7 +6,6 @@ import 'package:mirai/src/parsers/mirai_box_shadow/mirai_box_shadow.dart';
 import 'package:mirai/src/parsers/mirai_container_image/mirai_container_image.dart';
 import 'package:mirai/src/parsers/mirai_gradient/mirai_gradient.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-
 part 'mirai_box_decoration.freezed.dart';
 
 part 'mirai_box_decoration.g.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-
 part 'mirai_border.freezed.dart';
 
 part 'mirai_border.g.dart';

@@ -1,11 +1,6 @@
-/// @Author: Pritam Das
-/// @Email: pritamdas@freo.money
-/// @Date: 2023-04-13, Thu, 15:09
-
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-
 part 'mirai_border_side.freezed.dart';
 
 part 'mirai_border_side.g.dart';

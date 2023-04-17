@@ -5,9 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_alignment/mirai_alignment.dart';
 import 'package:mirai/src/parsers/mirai_alignment_geometry/mirai_alignment_geometry.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-
-export 'package:mirai/src/parsers/mirai_image/mirai_image_parser.dart';
-
+export 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
 part 'mirai_gradient.freezed.dart';
 
 part 'mirai_gradient.g.dart';
@@ -36,7 +34,7 @@ class MiraiGradient with _$MiraiGradient {
 }
 
 extension MiraiGradientParser on MiraiGradient {
-  Gradient get parse {
+  Gradient? get parse {
     Gradient linearGradient() => LinearGradient(
           colors: colors.map((e) => e.toColor!).toList(),
           begin: begin.value,
@@ -72,7 +70,7 @@ extension MiraiGradientParser on MiraiGradient {
       case MiraiGradientType.sweep:
         return sweepGradient();
       default:
-        return linearGradient();
+        return null;
     }
   }
 }
