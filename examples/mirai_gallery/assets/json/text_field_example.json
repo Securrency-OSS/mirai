@@ -27,7 +27,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -47,6 +47,18 @@
                             },
                             "labelText": "Name*"
                         },
+                        "inputFormatters": [
+                            {
+                                "type": "allow",
+                                "rule": "[a-zA-Z]"
+                            }
+                        ],
+                        "validatorRules": [
+                            {
+                                "rule": "^[A-Za-z .`'/-]{2,32}$",
+                                "message": "Enter a valid name"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -55,7 +67,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -75,6 +87,18 @@
                             },
                             "labelText": "Phone number*"
                         },
+                        "inputFormatters": [
+                            {
+                                "type": "deny",
+                                "rule": "[a-zA-Z]"
+                            }
+                        ],
+                        "validatorRules": [
+                            {
+                                "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
+                                "message": "Enter a valid phone number"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -83,7 +107,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -103,6 +127,47 @@
                             },
                             "labelText": "Email"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "isEmail",
+                                "message": "Enter a valid email address"
+                            }
+                        ],
+                        "readOnly": false,
+                        "enabled": true
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "textField",
+                        "maxLines": 1,
+                        "keyboardType": "text",
+                        "textInputAction": "done",
+                        "textAlign": "start",
+                        "textCapitalization": "none",
+                        "textDirection": "ltr",
+                        "textAlignVertical": "top",
+                        "obscureText": false,
+                        "decoration": {
+                            "filled": true,
+                            "icon": {
+                                "type": "icon",
+                                "iconType": "material",
+                                "icon": "credit_card",
+                                "size": 24
+                            },
+                            "hintText": "XXXX XXXX XXXX XXXX",
+                            "labelText": "Credit Card"
+                        },
+                        "inputFormatters": [
+                            {
+                                "type": "deny",
+                                "rule": "[a-zA-Z]"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -129,7 +194,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -148,6 +213,13 @@
                             },
                             "labelText": "Password*"
                         },
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "isPassword",
+                                "message": "Enter a valid password"
+                            }
+                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -156,7 +228,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textField",
+                        "type": "textFormField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -176,7 +248,14 @@
                             "labelText": "Re-type password*"
                         },
                         "readOnly": false,
-                        "enabled": true
+                        "enabled": true,
+                        "autovalidateMode": "onUserInteraction",
+                        "validatorRules": [
+                            {
+                                "rule": "isPassword",
+                                "message": "Enter a valid password"
+                            }
+                        ]
                     }
                 ]
             }

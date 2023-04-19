@@ -36,7 +36,7 @@ const _$ActionTypeEnumMap = {
   ActionType.navigate: 'navigate',
   ActionType.request: 'request',
   ActionType.none: 'none',
-  ActionType.validation: 'validation',
+  ActionType.formValidation: 'formValidation',
 };
 
 const _$NavigationTypeEnumMap = {

@@ -21,7 +21,10 @@
                 "color": "#672BFF",
                 "clipBehavior": "hardEdge",
                 "height": 250,
-                "width": 200
+                "width": 200,
+                "decoration": {
+
+                }
             },
             {
                 "type": "sizedBox",

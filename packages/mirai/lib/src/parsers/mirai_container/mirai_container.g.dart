@@ -13,6 +13,10 @@ _$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
       padding: json['padding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      decoration: json['decoration'] == null
+          ? null
+          : MiraiBoxDecoration.fromJson(
+              json['decoration'] as Map<String, dynamic>),
       color: json['color'] as String?,
       width: (json['width'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
@@ -28,6 +32,7 @@ Map<String, dynamic> _$$_MiraiContainerToJson(_$_MiraiContainer instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment],
       'padding': instance.padding,
+      'decoration': instance.decoration,
       'color': instance.color,
       'width': instance.width,
       'height': instance.height,

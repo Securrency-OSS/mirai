@@ -22,6 +22,7 @@ MiraiContainer _$MiraiContainerFromJson(Map<String, dynamic> json) {
 mixin _$MiraiContainer {
   MiraiAlignment? get alignment => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
+  MiraiBoxDecoration? get decoration => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
@@ -44,6 +45,7 @@ abstract class $MiraiContainerCopyWith<$Res> {
   $Res call(
       {MiraiAlignment? alignment,
       MiraiEdgeInsets? padding,
+      MiraiBoxDecoration? decoration,
       String? color,
       double? width,
       double? height,
@@ -52,6 +54,7 @@ abstract class $MiraiContainerCopyWith<$Res> {
       Clip clipBehavior});
 
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
+  $MiraiBoxDecorationCopyWith<$Res>? get decoration;
   $MiraiEdgeInsetsCopyWith<$Res>? get margin;
 }
 
@@ -70,6 +73,7 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
   $Res call({
     Object? alignment = freezed,
     Object? padding = freezed,
+    Object? decoration = freezed,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
@@ -86,6 +90,10 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxDecoration?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -127,6 +135,18 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
 
   @override
   @pragma('vm:prefer-inline')
+  $MiraiBoxDecorationCopyWith<$Res>? get decoration {
+    if (_value.decoration == null) {
+      return null;
+    }
+
+    return $MiraiBoxDecorationCopyWith<$Res>(_value.decoration!, (value) {
+      return _then(_value.copyWith(decoration: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $MiraiEdgeInsetsCopyWith<$Res>? get margin {
     if (_value.margin == null) {
       return null;
@@ -149,6 +169,7 @@ abstract class _$$_MiraiContainerCopyWith<$Res>
   $Res call(
       {MiraiAlignment? alignment,
       MiraiEdgeInsets? padding,
+      MiraiBoxDecoration? decoration,
       String? color,
       double? width,
       double? height,
@@ -158,6 +179,8 @@ abstract class _$$_MiraiContainerCopyWith<$Res>
 
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
+  @override
+  $MiraiBoxDecorationCopyWith<$Res>? get decoration;
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get margin;
 }
@@ -175,6 +198,7 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
   $Res call({
     Object? alignment = freezed,
     Object? padding = freezed,
+    Object? decoration = freezed,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
@@ -191,6 +215,10 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxDecoration?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -225,6 +253,7 @@ class _$_MiraiContainer implements _MiraiContainer {
   const _$_MiraiContainer(
       {this.alignment,
       this.padding,
+      this.decoration,
       this.color,
       this.width,
       this.height,
@@ -240,6 +269,8 @@ class _$_MiraiContainer implements _MiraiContainer {
   final MiraiAlignment? alignment;
   @override
   final MiraiEdgeInsets? padding;
+  @override
+  final MiraiBoxDecoration? decoration;
   @override
   final String? color;
   @override
@@ -264,7 +295,7 @@ class _$_MiraiContainer implements _MiraiContainer {
 
   @override
   String toString() {
-    return 'MiraiContainer(alignment: $alignment, padding: $padding, color: $color, width: $width, height: $height, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
+    return 'MiraiContainer(alignment: $alignment, padding: $padding, decoration: $decoration, color: $color, width: $width, height: $height, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
   }
 
   @override
@@ -275,6 +306,8 @@ class _$_MiraiContainer implements _MiraiContainer {
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.decoration, decoration) ||
+                other.decoration == decoration) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
@@ -290,6 +323,7 @@ class _$_MiraiContainer implements _MiraiContainer {
       runtimeType,
       alignment,
       padding,
+      decoration,
       color,
       width,
       height,
@@ -315,6 +349,7 @@ abstract class _MiraiContainer implements MiraiContainer {
   const factory _MiraiContainer(
       {final MiraiAlignment? alignment,
       final MiraiEdgeInsets? padding,
+      final MiraiBoxDecoration? decoration,
       final String? color,
       final double? width,
       final double? height,
@@ -329,6 +364,8 @@ abstract class _MiraiContainer implements MiraiContainer {
   MiraiAlignment? get alignment;
   @override
   MiraiEdgeInsets? get padding;
+  @override
+  MiraiBoxDecoration? get decoration;
   @override
   String? get color;
   @override
