@@ -9,9 +9,15 @@ enum MiraiAlignment {
   centerRight,
   bottomLeft,
   bottomCenter,
-  bottomRight;
+  bottomRight,
+  topStart,
+  topEnd,
+  centerStart,
+  centerEnd,
+  bottomStart,
+  bottomEnd;
 
-  Alignment get value {
+  Alignment get valueByPosition {
     switch (this) {
       case MiraiAlignment.topLeft:
         return Alignment.topLeft;
@@ -31,6 +37,33 @@ enum MiraiAlignment {
         return Alignment.bottomCenter;
       case MiraiAlignment.bottomRight:
         return Alignment.bottomRight;
+      default:
+        return Alignment.topLeft;
+    }
+  }
+
+  AlignmentDirectional get valueByDirection {
+    switch (this) {
+      case MiraiAlignment.topStart:
+        return AlignmentDirectional.topStart;
+      case MiraiAlignment.topCenter:
+        return AlignmentDirectional.topCenter;
+      case MiraiAlignment.topEnd:
+        return AlignmentDirectional.topEnd;
+      case MiraiAlignment.centerStart:
+        return AlignmentDirectional.centerStart;
+      case MiraiAlignment.center:
+        return AlignmentDirectional.center;
+      case MiraiAlignment.centerEnd:
+        return AlignmentDirectional.centerEnd;
+      case MiraiAlignment.bottomStart:
+        return AlignmentDirectional.bottomStart;
+      case MiraiAlignment.bottomCenter:
+        return AlignmentDirectional.bottomCenter;
+      case MiraiAlignment.bottomEnd:
+        return AlignmentDirectional.bottomEnd;
+      default:
+        return AlignmentDirectional.topStart;
     }
   }
 }

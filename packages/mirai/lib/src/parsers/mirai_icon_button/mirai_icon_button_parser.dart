@@ -23,7 +23,7 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
           : () => model.onPressed.onCall(context),
       iconSize: model.iconSize,
       padding: model.padding?.parse,
-      alignment: model.alignment.value,
+      alignment: model.alignment.valueByPosition,
       splashRadius: model.splashRadius,
       color: model.color.toColor,
       focusColor: model.focusColor.toColor,

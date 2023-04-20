@@ -32,7 +32,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
 
   Widget _networkImage(MiraiImage model) => Image.network(
         model.src,
-        alignment: model.alignment.value,
+        alignment: model.alignment.valueByPosition,
         color: model.color?.toColor,
         width: model.width,
         height: model.height,
@@ -43,7 +43,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
       );
   Widget _fileImage(MiraiImage model) => Image.file(
         File(model.src),
-        alignment: model.alignment.value,
+        alignment: model.alignment.valueByPosition,
         color: model.color?.toColor,
         width: model.width,
         height: model.height,
@@ -55,7 +55,7 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
 
   Widget _assetImage(MiraiImage model) => Image.asset(
         model.src,
-        alignment: model.alignment.value,
+        alignment: model.alignment.valueByPosition,
         color: model.color?.toColor,
         width: model.width,
         height: model.height,

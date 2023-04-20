@@ -17,7 +17,7 @@ class MiraiFractionallySizedBoxParser
   @override
   Widget parse(BuildContext context, MiraiFractionallySizedBox model) {
     return FractionallySizedBox(
-      alignment: model.alignment?.value ?? Alignment.center,
+      alignment: model.alignment?.valueByPosition ?? Alignment.center,
       widthFactor: model.widthFactor,
       heightFactor: model.heightFactor,
       child: Mirai.fromJson(model.child, context),
