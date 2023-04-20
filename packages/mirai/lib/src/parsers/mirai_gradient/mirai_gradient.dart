@@ -1,10 +1,12 @@
 import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_gradient.freezed.dart';
+
 part 'mirai_gradient.g.dart';
 
 enum MiraiGradientType { linear, radial, sweep }
@@ -34,8 +36,8 @@ extension MiraiGradientParser on MiraiGradient {
   Gradient? get parse {
     Gradient linearGradient() => LinearGradient(
           colors: colors.map((e) => e.toColor!).toList(),
-          begin: begin.value,
-          end: end.value,
+          begin: begin.valueByPosition,
+          end: end.valueByPosition,
           stops: stops,
           tileMode: tileMode,
         );
@@ -47,13 +49,13 @@ extension MiraiGradientParser on MiraiGradient {
           focal: focal?.parse,
           focalRadius: focalRadius,
           radius: radius,
-          center: center.value,
+          center: center.valueByPosition,
         );
 
     Gradient sweepGradient() => SweepGradient(
           colors: colors.map((e) => e.toColor!).toList(),
           stops: stops,
-          center: center.value,
+          center: center.valueByPosition,
           startAngle: startAngle,
           endAngle: endAngle,
           tileMode: tileMode,

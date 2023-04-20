@@ -28,7 +28,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
           image: NetworkImage(
             this?.src ?? '',
           ),
-          alignment: this?.alignment.value ?? Alignment.center,
+          alignment: this?.alignment.valueByPosition ?? Alignment.center,
           fit: this?.fit,
         );
 
@@ -36,7 +36,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
           image: FileImage(
             File(this?.src ?? ''),
           ),
-          alignment: this?.alignment.value ?? Alignment.center,
+          alignment: this?.alignment.valueByPosition ?? Alignment.center,
           fit: this?.fit,
         );
 
@@ -44,7 +44,7 @@ extension MiraiContainerImageParser on MiraiContainerImage? {
           image: AssetImage(
             this?.src ?? '',
           ),
-          alignment: this?.alignment.value ?? Alignment.center,
+          alignment: this?.alignment.valueByPosition ?? Alignment.center,
           fit: this?.fit,
         );
 
