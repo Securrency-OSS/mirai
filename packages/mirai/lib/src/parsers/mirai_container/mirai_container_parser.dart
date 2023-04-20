@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/src/framework/framework.dart';
+import 'package:mirai/src/parsers/mirai_box_decoration/mirai_box_decoration.dart';
 import 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -20,7 +21,11 @@ class MiraiContainerParser extends MiraiParser<MiraiContainer> {
     return Container(
       alignment: model.alignment?.valueByPosition,
       padding: model.padding.parse,
-      color: model.color.toColor,
+      decoration: model.color == null
+          ? model.decoration.parse
+          : model.decoration.parse?.copyWith(
+              color: model.color.toColor,
+            ),
       width: model.width,
       height: model.height,
       margin: model.margin.parse,
