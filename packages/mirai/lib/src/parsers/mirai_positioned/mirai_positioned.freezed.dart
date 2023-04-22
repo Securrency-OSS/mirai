@@ -1,0 +1,336 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'mirai_positioned.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+MiraiPositioned _$MiraiPositionedFromJson(Map<String, dynamic> json) {
+  return _MiraiPositioned.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MiraiPositioned {
+  MiraiPositionedType? get positionedType => throw _privateConstructorUsedError;
+  double? get left => throw _privateConstructorUsedError;
+  double? get top => throw _privateConstructorUsedError;
+  double? get right => throw _privateConstructorUsedError;
+  double? get bottom => throw _privateConstructorUsedError;
+  double? get width => throw _privateConstructorUsedError;
+  double? get height => throw _privateConstructorUsedError;
+  TextDirection get textDirection => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiPositionedCopyWith<MiraiPositioned> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MiraiPositionedCopyWith<$Res> {
+  factory $MiraiPositionedCopyWith(
+          MiraiPositioned value, $Res Function(MiraiPositioned) then) =
+      _$MiraiPositionedCopyWithImpl<$Res, MiraiPositioned>;
+  @useResult
+  $Res call(
+      {MiraiPositionedType? positionedType,
+      double? left,
+      double? top,
+      double? right,
+      double? bottom,
+      double? width,
+      double? height,
+      TextDirection textDirection,
+      Map<String, dynamic>? child});
+}
+
+/// @nodoc
+class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
+    implements $MiraiPositionedCopyWith<$Res> {
+  _$MiraiPositionedCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? positionedType = freezed,
+    Object? left = freezed,
+    Object? top = freezed,
+    Object? right = freezed,
+    Object? bottom = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? textDirection = null,
+    Object? child = freezed,
+  }) {
+    return _then(_value.copyWith(
+      positionedType: freezed == positionedType
+          ? _value.positionedType
+          : positionedType // ignore: cast_nullable_to_non_nullable
+              as MiraiPositionedType?,
+      left: freezed == left
+          ? _value.left
+          : left // ignore: cast_nullable_to_non_nullable
+              as double?,
+      top: freezed == top
+          ? _value.top
+          : top // ignore: cast_nullable_to_non_nullable
+              as double?,
+      right: freezed == right
+          ? _value.right
+          : right // ignore: cast_nullable_to_non_nullable
+              as double?,
+      bottom: freezed == bottom
+          ? _value.bottom
+          : bottom // ignore: cast_nullable_to_non_nullable
+              as double?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      textDirection: null == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MiraiPositionedCopyWith<$Res>
+    implements $MiraiPositionedCopyWith<$Res> {
+  factory _$$_MiraiPositionedCopyWith(
+          _$_MiraiPositioned value, $Res Function(_$_MiraiPositioned) then) =
+      __$$_MiraiPositionedCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {MiraiPositionedType? positionedType,
+      double? left,
+      double? top,
+      double? right,
+      double? bottom,
+      double? width,
+      double? height,
+      TextDirection textDirection,
+      Map<String, dynamic>? child});
+}
+
+/// @nodoc
+class __$$_MiraiPositionedCopyWithImpl<$Res>
+    extends _$MiraiPositionedCopyWithImpl<$Res, _$_MiraiPositioned>
+    implements _$$_MiraiPositionedCopyWith<$Res> {
+  __$$_MiraiPositionedCopyWithImpl(
+      _$_MiraiPositioned _value, $Res Function(_$_MiraiPositioned) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? positionedType = freezed,
+    Object? left = freezed,
+    Object? top = freezed,
+    Object? right = freezed,
+    Object? bottom = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? textDirection = null,
+    Object? child = freezed,
+  }) {
+    return _then(_$_MiraiPositioned(
+      positionedType: freezed == positionedType
+          ? _value.positionedType
+          : positionedType // ignore: cast_nullable_to_non_nullable
+              as MiraiPositionedType?,
+      left: freezed == left
+          ? _value.left
+          : left // ignore: cast_nullable_to_non_nullable
+              as double?,
+      top: freezed == top
+          ? _value.top
+          : top // ignore: cast_nullable_to_non_nullable
+              as double?,
+      right: freezed == right
+          ? _value.right
+          : right // ignore: cast_nullable_to_non_nullable
+              as double?,
+      bottom: freezed == bottom
+          ? _value.bottom
+          : bottom // ignore: cast_nullable_to_non_nullable
+              as double?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      textDirection: null == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection,
+      child: freezed == child
+          ? _value._child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MiraiPositioned implements _MiraiPositioned {
+  const _$_MiraiPositioned(
+      {this.positionedType,
+      this.left,
+      this.top,
+      this.right,
+      this.bottom,
+      this.width,
+      this.height,
+      this.textDirection = TextDirection.ltr,
+      final Map<String, dynamic>? child})
+      : _child = child;
+
+  factory _$_MiraiPositioned.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiPositionedFromJson(json);
+
+  @override
+  final MiraiPositionedType? positionedType;
+  @override
+  final double? left;
+  @override
+  final double? top;
+  @override
+  final double? right;
+  @override
+  final double? bottom;
+  @override
+  final double? width;
+  @override
+  final double? height;
+  @override
+  @JsonKey()
+  final TextDirection textDirection;
+  final Map<String, dynamic>? _child;
+  @override
+  Map<String, dynamic>? get child {
+    final value = _child;
+    if (value == null) return null;
+    if (_child is EqualUnmodifiableMapView) return _child;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MiraiPositioned(positionedType: $positionedType, left: $left, top: $top, right: $right, bottom: $bottom, width: $width, height: $height, textDirection: $textDirection, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MiraiPositioned &&
+            (identical(other.positionedType, positionedType) ||
+                other.positionedType == positionedType) &&
+            (identical(other.left, left) || other.left == left) &&
+            (identical(other.top, top) || other.top == top) &&
+            (identical(other.right, right) || other.right == right) &&
+            (identical(other.bottom, bottom) || other.bottom == bottom) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection) &&
+            const DeepCollectionEquality().equals(other._child, _child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      positionedType,
+      left,
+      top,
+      right,
+      bottom,
+      width,
+      height,
+      textDirection,
+      const DeepCollectionEquality().hash(_child));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
+      __$$_MiraiPositionedCopyWithImpl<_$_MiraiPositioned>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MiraiPositionedToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MiraiPositioned implements MiraiPositioned {
+  const factory _MiraiPositioned(
+      {final MiraiPositionedType? positionedType,
+      final double? left,
+      final double? top,
+      final double? right,
+      final double? bottom,
+      final double? width,
+      final double? height,
+      final TextDirection textDirection,
+      final Map<String, dynamic>? child}) = _$_MiraiPositioned;
+
+  factory _MiraiPositioned.fromJson(Map<String, dynamic> json) =
+      _$_MiraiPositioned.fromJson;
+
+  @override
+  MiraiPositionedType? get positionedType;
+  @override
+  double? get left;
+  @override
+  double? get top;
+  @override
+  double? get right;
+  @override
+  double? get bottom;
+  @override
+  double? get width;
+  @override
+  double? get height;
+  @override
+  TextDirection get textDirection;
+  @override
+  Map<String, dynamic>? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
+      throw _privateConstructorUsedError;
+}

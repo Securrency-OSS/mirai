@@ -10,7 +10,7 @@ class MiraiStackParser extends MiraiParser<MiraiStack> {
   MiraiStack getModel(Map<String, dynamic> json) => MiraiStack.fromJson(json);
 
   @override
-  String get type => WidgetType.column.name;
+  String get type => WidgetType.stack.name;
 
   @override
   Widget parse(BuildContext context, MiraiStack model) {

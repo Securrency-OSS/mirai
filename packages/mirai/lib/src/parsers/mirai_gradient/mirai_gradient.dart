@@ -6,7 +6,6 @@ import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_gradient.freezed.dart';
-
 part 'mirai_gradient.g.dart';
 
 enum MiraiGradientType { linear, radial, sweep }
