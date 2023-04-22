@@ -28,6 +28,7 @@ mixin _$MiraiPositioned {
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
   TextDirection get textDirection => throw _privateConstructorUsedError;
+  MiraiRect? get rect => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,7 +52,10 @@ abstract class $MiraiPositionedCopyWith<$Res> {
       double? width,
       double? height,
       TextDirection textDirection,
+      MiraiRect? rect,
       Map<String, dynamic>? child});
+
+  $MiraiRectCopyWith<$Res>? get rect;
 }
 
 /// @nodoc
@@ -75,6 +79,7 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
     Object? width = freezed,
     Object? height = freezed,
     Object? textDirection = null,
+    Object? rect = freezed,
     Object? child = freezed,
   }) {
     return _then(_value.copyWith(
@@ -110,11 +115,27 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
               as TextDirection,
+      rect: freezed == rect
+          ? _value.rect
+          : rect // ignore: cast_nullable_to_non_nullable
+              as MiraiRect?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiRectCopyWith<$Res>? get rect {
+    if (_value.rect == null) {
+      return null;
+    }
+
+    return $MiraiRectCopyWith<$Res>(_value.rect!, (value) {
+      return _then(_value.copyWith(rect: value) as $Val);
+    });
   }
 }
 
@@ -135,7 +156,11 @@ abstract class _$$_MiraiPositionedCopyWith<$Res>
       double? width,
       double? height,
       TextDirection textDirection,
+      MiraiRect? rect,
       Map<String, dynamic>? child});
+
+  @override
+  $MiraiRectCopyWith<$Res>? get rect;
 }
 
 /// @nodoc
@@ -157,6 +182,7 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
     Object? width = freezed,
     Object? height = freezed,
     Object? textDirection = null,
+    Object? rect = freezed,
     Object? child = freezed,
   }) {
     return _then(_$_MiraiPositioned(
@@ -192,6 +218,10 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
           ? _value.textDirection
           : textDirection // ignore: cast_nullable_to_non_nullable
               as TextDirection,
+      rect: freezed == rect
+          ? _value.rect
+          : rect // ignore: cast_nullable_to_non_nullable
+              as MiraiRect?,
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -212,6 +242,7 @@ class _$_MiraiPositioned implements _MiraiPositioned {
       this.width,
       this.height,
       this.textDirection = TextDirection.ltr,
+      this.rect,
       final Map<String, dynamic>? child})
       : _child = child;
 
@@ -235,6 +266,8 @@ class _$_MiraiPositioned implements _MiraiPositioned {
   @override
   @JsonKey()
   final TextDirection textDirection;
+  @override
+  final MiraiRect? rect;
   final Map<String, dynamic>? _child;
   @override
   Map<String, dynamic>? get child {
@@ -247,7 +280,7 @@ class _$_MiraiPositioned implements _MiraiPositioned {
 
   @override
   String toString() {
-    return 'MiraiPositioned(positionedType: $positionedType, left: $left, top: $top, right: $right, bottom: $bottom, width: $width, height: $height, textDirection: $textDirection, child: $child)';
+    return 'MiraiPositioned(positionedType: $positionedType, left: $left, top: $top, right: $right, bottom: $bottom, width: $width, height: $height, textDirection: $textDirection, rect: $rect, child: $child)';
   }
 
   @override
@@ -265,6 +298,7 @@ class _$_MiraiPositioned implements _MiraiPositioned {
             (identical(other.height, height) || other.height == height) &&
             (identical(other.textDirection, textDirection) ||
                 other.textDirection == textDirection) &&
+            (identical(other.rect, rect) || other.rect == rect) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
 
@@ -280,6 +314,7 @@ class _$_MiraiPositioned implements _MiraiPositioned {
       width,
       height,
       textDirection,
+      rect,
       const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
@@ -306,6 +341,7 @@ abstract class _MiraiPositioned implements MiraiPositioned {
       final double? width,
       final double? height,
       final TextDirection textDirection,
+      final MiraiRect? rect,
       final Map<String, dynamic>? child}) = _$_MiraiPositioned;
 
   factory _MiraiPositioned.fromJson(Map<String, dynamic> json) =
@@ -327,6 +363,8 @@ abstract class _MiraiPositioned implements MiraiPositioned {
   double? get height;
   @override
   TextDirection get textDirection;
+  @override
+  MiraiRect? get rect;
   @override
   Map<String, dynamic>? get child;
   @override

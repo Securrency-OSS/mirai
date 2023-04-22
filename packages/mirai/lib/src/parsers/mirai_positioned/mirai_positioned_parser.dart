@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_positioned/mirai_positioned.dart';
+import 'package:mirai/src/parsers/mirai_rect/mirai_rect.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
@@ -31,6 +32,11 @@ class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
           top: model.top,
           right: model.right,
           bottom: model.bottom,
+          child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
+        );
+      case MiraiPositionedType.fromRect:
+        return Positioned.fromRect(
+          rect: model.rect?.parse ?? Rect.zero,
           child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
         );
       default:

@@ -19,6 +19,9 @@ _$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
       textDirection:
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']) ??
               TextDirection.ltr,
+      rect: json['rect'] == null
+          ? null
+          : MiraiRect.fromJson(json['rect'] as Map<String, dynamic>),
       child: json['child'] as Map<String, dynamic>?,
     );
 
@@ -32,12 +35,14 @@ Map<String, dynamic> _$$_MiraiPositionedToJson(_$_MiraiPositioned instance) =>
       'width': instance.width,
       'height': instance.height,
       'textDirection': _$TextDirectionEnumMap[instance.textDirection]!,
+      'rect': instance.rect,
       'child': instance.child,
     };
 
 const _$MiraiPositionedTypeEnumMap = {
   MiraiPositionedType.directional: 'directional',
   MiraiPositionedType.fill: 'fill',
+  MiraiPositionedType.fromRect: 'fromRect',
 };
 
 const _$TextDirectionEnumMap = {
