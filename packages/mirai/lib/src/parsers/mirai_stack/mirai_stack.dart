@@ -10,7 +10,8 @@ part 'mirai_stack.g.dart';
 @freezed
 class MiraiStack with _$MiraiStack {
   const factory MiraiStack({
-    @Default(MiraiAlignmentDirectional.topStart) MiraiAlignmentDirectional alignment,
+    @Default(MiraiAlignmentDirectional.topStart)
+        MiraiAlignmentDirectional alignment,
     @Default(Clip.hardEdge) Clip clipBehavior,
     @Default(StackFit.loose) StackFit fit,
     TextDirection? textDirection,
