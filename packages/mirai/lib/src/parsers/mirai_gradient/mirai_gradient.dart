@@ -35,8 +35,8 @@ extension MiraiGradientParser on MiraiGradient {
   Gradient? get parse {
     Gradient linearGradient() => LinearGradient(
           colors: colors.map((e) => e.toColor!).toList(),
-          begin: begin.valueByPosition,
-          end: end.valueByPosition,
+          begin: begin.value,
+          end: end.value,
           stops: stops,
           tileMode: tileMode,
         );
@@ -48,13 +48,13 @@ extension MiraiGradientParser on MiraiGradient {
           focal: focal?.parse,
           focalRadius: focalRadius,
           radius: radius,
-          center: center.valueByPosition,
+          center: center.value,
         );
 
     Gradient sweepGradient() => SweepGradient(
           colors: colors.map((e) => e.toColor!).toList(),
           stops: stops,
-          center: center.valueByPosition,
+          center: center.value,
           startAngle: startAngle,
           endAngle: endAngle,
           tileMode: tileMode,

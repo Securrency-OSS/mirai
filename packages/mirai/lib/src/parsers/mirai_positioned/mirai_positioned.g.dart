@@ -16,6 +16,8 @@ _$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
       bottom: (json['bottom'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
+      start: (json['start'] as num?)?.toDouble(),
+      end: (json['end'] as num?)?.toDouble(),
       textDirection:
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']) ??
               TextDirection.ltr,
@@ -34,6 +36,8 @@ Map<String, dynamic> _$$_MiraiPositionedToJson(_$_MiraiPositioned instance) =>
       'bottom': instance.bottom,
       'width': instance.width,
       'height': instance.height,
+      'start': instance.start,
+      'end': instance.end,
       'textDirection': _$TextDirectionEnumMap[instance.textDirection]!,
       'rect': instance.rect,
       'child': instance.child,

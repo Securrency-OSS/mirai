@@ -64,10 +64,4 @@ const _$MiraiAlignmentEnumMap = {
   MiraiAlignment.bottomLeft: 'bottomLeft',
   MiraiAlignment.bottomCenter: 'bottomCenter',
   MiraiAlignment.bottomRight: 'bottomRight',
-  MiraiAlignment.topStart: 'topStart',
-  MiraiAlignment.topEnd: 'topEnd',
-  MiraiAlignment.centerStart: 'centerStart',
-  MiraiAlignment.centerEnd: 'centerEnd',
-  MiraiAlignment.bottomStart: 'bottomStart',
-  MiraiAlignment.bottomEnd: 'bottomEnd',
 };

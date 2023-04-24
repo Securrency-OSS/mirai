@@ -15,14 +15,12 @@ class MiraiStackParser extends MiraiParser<MiraiStack> {
   @override
   Widget parse(BuildContext context, MiraiStack model) {
     return Stack(
-      alignment: model.alignment.valueByDirection,
+      alignment: model.alignment.value,
       clipBehavior: model.clipBehavior,
       fit: model.fit,
       textDirection: model.textDirection,
       children: model.children
-          .map(
-            (value) => Mirai.fromJson(value, context) ?? const SizedBox(),
-          )
+          .map((value) => Mirai.fromJson(value, context) ?? const SizedBox())
           .toList(),
     );
   }

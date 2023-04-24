@@ -19,36 +19,34 @@ class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
     switch (model.positionedType) {
       case MiraiPositionedType.directional:
         return Positioned.directional(
-          textDirection: model.textDirection,
-          top: model.top,
-          bottom: model.bottom,
-          height: model.height,
-          width: model.width,
-          child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
-        );
+            textDirection: model.textDirection,
+            top: model.top,
+            bottom: model.bottom,
+            height: model.height,
+            width: model.width,
+            start: model.start,
+            end: model.end,
+            child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       case MiraiPositionedType.fill:
         return Positioned.fill(
-          left: model.left,
-          top: model.top,
-          right: model.right,
-          bottom: model.bottom,
-          child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
-        );
+            left: model.left,
+            top: model.top,
+            right: model.right,
+            bottom: model.bottom,
+            child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       case MiraiPositionedType.fromRect:
         return Positioned.fromRect(
-          rect: model.rect?.parse ?? Rect.zero,
-          child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
-        );
+            rect: model.rect?.parse ?? Rect.zero,
+            child: Mirai.fromJson(model.child, context) ?? const SizedBox());
       default:
         return Positioned(
-          left: model.left,
-          top: model.top,
-          right: model.right,
-          bottom: model.bottom,
-          height: model.height,
-          width: model.width,
-          child: Mirai.fromJson(model.child, context) ?? const Placeholder(),
-        );
+            left: model.left,
+            top: model.top,
+            right: model.right,
+            bottom: model.bottom,
+            height: model.height,
+            width: model.width,
+            child: Mirai.fromJson(model.child, context) ?? const SizedBox());
     }
   }
 }

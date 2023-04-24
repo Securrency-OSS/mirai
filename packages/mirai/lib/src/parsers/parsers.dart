@@ -2,6 +2,7 @@ library parsers;
 
 export 'package:mirai/src/parsers/mirai_alert_dialog/mirai_alert_dialog.dart';
 export 'package:mirai/src/parsers/mirai_alignment/mirai_alignment.dart';
+export 'package:mirai/src/parsers/mirai_alignment_directional/mirai_alignment_directional.dart';
 export 'package:mirai/src/parsers/mirai_alignment_geometry/mirai_alignment_geometry.dart';
 export 'package:mirai/src/parsers/mirai_app_bar/mirai_app_bar.dart';
 export 'package:mirai/src/parsers/mirai_border/mirai_border.dart';

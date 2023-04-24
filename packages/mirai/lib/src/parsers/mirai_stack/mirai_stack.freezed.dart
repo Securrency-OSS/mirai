@@ -15,12 +15,12 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MiraiStack _$MiraiStackFromJson(Map<String, dynamic> json) {
-  return _MiraiColumn.fromJson(json);
+  return _MiraiStack.fromJson(json);
 }
 
 /// @nodoc
 mixin _$MiraiStack {
-  MiraiAlignment get alignment => throw _privateConstructorUsedError;
+  MiraiAlignmentDirectional get alignment => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
   StackFit get fit => throw _privateConstructorUsedError;
   TextDirection? get textDirection => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $MiraiStackCopyWith<$Res> {
       _$MiraiStackCopyWithImpl<$Res, MiraiStack>;
   @useResult
   $Res call(
-      {MiraiAlignment alignment,
+      {MiraiAlignmentDirectional alignment,
       Clip clipBehavior,
       StackFit fit,
       TextDirection? textDirection,
@@ -69,7 +69,7 @@ class _$MiraiStackCopyWithImpl<$Res, $Val extends MiraiStack>
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
-              as MiraiAlignment,
+              as MiraiAlignmentDirectional,
       clipBehavior: null == clipBehavior
           ? _value.clipBehavior
           : clipBehavior // ignore: cast_nullable_to_non_nullable
@@ -91,15 +91,15 @@ class _$MiraiStackCopyWithImpl<$Res, $Val extends MiraiStack>
 }
 
 /// @nodoc
-abstract class _$$_MiraiColumnCopyWith<$Res>
+abstract class _$$_MiraiStackCopyWith<$Res>
     implements $MiraiStackCopyWith<$Res> {
-  factory _$$_MiraiColumnCopyWith(
-          _$_MiraiColumn value, $Res Function(_$_MiraiColumn) then) =
-      __$$_MiraiColumnCopyWithImpl<$Res>;
+  factory _$$_MiraiStackCopyWith(
+          _$_MiraiStack value, $Res Function(_$_MiraiStack) then) =
+      __$$_MiraiStackCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {MiraiAlignment alignment,
+      {MiraiAlignmentDirectional alignment,
       Clip clipBehavior,
       StackFit fit,
       TextDirection? textDirection,
@@ -107,11 +107,11 @@ abstract class _$$_MiraiColumnCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiColumnCopyWithImpl<$Res>
-    extends _$MiraiStackCopyWithImpl<$Res, _$_MiraiColumn>
-    implements _$$_MiraiColumnCopyWith<$Res> {
-  __$$_MiraiColumnCopyWithImpl(
-      _$_MiraiColumn _value, $Res Function(_$_MiraiColumn) _then)
+class __$$_MiraiStackCopyWithImpl<$Res>
+    extends _$MiraiStackCopyWithImpl<$Res, _$_MiraiStack>
+    implements _$$_MiraiStackCopyWith<$Res> {
+  __$$_MiraiStackCopyWithImpl(
+      _$_MiraiStack _value, $Res Function(_$_MiraiStack) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,11 +123,11 @@ class __$$_MiraiColumnCopyWithImpl<$Res>
     Object? textDirection = freezed,
     Object? children = null,
   }) {
-    return _then(_$_MiraiColumn(
+    return _then(_$_MiraiStack(
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
-              as MiraiAlignment,
+              as MiraiAlignmentDirectional,
       clipBehavior: null == clipBehavior
           ? _value.clipBehavior
           : clipBehavior // ignore: cast_nullable_to_non_nullable
@@ -150,21 +150,21 @@ class __$$_MiraiColumnCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiColumn implements _MiraiColumn {
-  const _$_MiraiColumn(
-      {this.alignment = MiraiAlignment.topStart,
+class _$_MiraiStack implements _MiraiStack {
+  const _$_MiraiStack(
+      {this.alignment = MiraiAlignmentDirectional.topStart,
       this.clipBehavior = Clip.hardEdge,
       this.fit = StackFit.loose,
       this.textDirection,
       final List<Map<String, dynamic>> children = const []})
       : _children = children;
 
-  factory _$_MiraiColumn.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiColumnFromJson(json);
+  factory _$_MiraiStack.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiStackFromJson(json);
 
   @override
   @JsonKey()
-  final MiraiAlignment alignment;
+  final MiraiAlignmentDirectional alignment;
   @override
   @JsonKey()
   final Clip clipBehavior;
@@ -191,7 +191,7 @@ class _$_MiraiColumn implements _MiraiColumn {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiColumn &&
+            other is _$_MiraiStack &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.clipBehavior, clipBehavior) ||
@@ -210,30 +210,30 @@ class _$_MiraiColumn implements _MiraiColumn {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiColumnCopyWith<_$_MiraiColumn> get copyWith =>
-      __$$_MiraiColumnCopyWithImpl<_$_MiraiColumn>(this, _$identity);
+  _$$_MiraiStackCopyWith<_$_MiraiStack> get copyWith =>
+      __$$_MiraiStackCopyWithImpl<_$_MiraiStack>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiColumnToJson(
+    return _$$_MiraiStackToJson(
       this,
     );
   }
 }
 
-abstract class _MiraiColumn implements MiraiStack {
-  const factory _MiraiColumn(
-      {final MiraiAlignment alignment,
+abstract class _MiraiStack implements MiraiStack {
+  const factory _MiraiStack(
+      {final MiraiAlignmentDirectional alignment,
       final Clip clipBehavior,
       final StackFit fit,
       final TextDirection? textDirection,
-      final List<Map<String, dynamic>> children}) = _$_MiraiColumn;
+      final List<Map<String, dynamic>> children}) = _$_MiraiStack;
 
-  factory _MiraiColumn.fromJson(Map<String, dynamic> json) =
-      _$_MiraiColumn.fromJson;
+  factory _MiraiStack.fromJson(Map<String, dynamic> json) =
+      _$_MiraiStack.fromJson;
 
   @override
-  MiraiAlignment get alignment;
+  MiraiAlignmentDirectional get alignment;
   @override
   Clip get clipBehavior;
   @override
@@ -244,6 +244,6 @@ abstract class _MiraiColumn implements MiraiStack {
   List<Map<String, dynamic>> get children;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiColumnCopyWith<_$_MiraiColumn> get copyWith =>
+  _$$_MiraiStackCopyWith<_$_MiraiStack> get copyWith =>
       throw _privateConstructorUsedError;
 }

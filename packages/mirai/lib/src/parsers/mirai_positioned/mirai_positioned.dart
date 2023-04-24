@@ -24,6 +24,8 @@ class MiraiPositioned with _$MiraiPositioned {
     double? bottom,
     double? width,
     double? height,
+    double? start,
+    double? end,
     @Default(TextDirection.ltr) TextDirection textDirection,
     MiraiRect? rect,
     Map<String, dynamic>? child,

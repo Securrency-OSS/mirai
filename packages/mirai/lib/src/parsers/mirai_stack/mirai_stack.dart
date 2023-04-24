@@ -10,12 +10,12 @@ part 'mirai_stack.g.dart';
 @freezed
 class MiraiStack with _$MiraiStack {
   const factory MiraiStack({
-    @Default(MiraiAlignment.topStart) MiraiAlignment alignment,
+    @Default(MiraiAlignmentDirectional.topStart) MiraiAlignmentDirectional alignment,
     @Default(Clip.hardEdge) Clip clipBehavior,
     @Default(StackFit.loose) StackFit fit,
     TextDirection? textDirection,
     @Default([]) List<Map<String, dynamic>> children,
-  }) = _MiraiColumn;
+  }) = _MiraiStack;
 
   factory MiraiStack.fromJson(Map<String, dynamic> json) =>
       _$MiraiStackFromJson(json);

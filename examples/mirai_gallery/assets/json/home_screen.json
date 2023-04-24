@@ -211,7 +211,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Stack",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -219,13 +218,11 @@
                     "subtitle": {
                         "type": "text",
                         "data": "This is a mirai stack widget.",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",

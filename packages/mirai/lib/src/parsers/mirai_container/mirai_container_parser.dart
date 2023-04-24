@@ -19,7 +19,7 @@ class MiraiContainerParser extends MiraiParser<MiraiContainer> {
   @override
   Widget parse(BuildContext context, MiraiContainer model) {
     return Container(
-      alignment: model.alignment?.valueByPosition,
+      alignment: model.alignment?.value,
       padding: model.padding.parse,
       decoration: model.color == null
           ? model.decoration.parse
