@@ -6,6 +6,8 @@ enum WidgetType {
   center,
   row,
   column,
+  stack,
+  positioned,
   container,
   image,
   icon,
