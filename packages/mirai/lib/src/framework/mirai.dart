@@ -32,6 +32,8 @@ class Mirai {
     const MiraiCenterParser(),
     const MiraiRowParser(),
     const MiraiColumnParser(),
+    const MiraiStackParser(),
+    const MiraiPositionedParser(),
     const MiraiIconButtonParser(),
     const MiraiFloatingActionButtonParser(),
     const MiraiOutlinedButtonParser(),
