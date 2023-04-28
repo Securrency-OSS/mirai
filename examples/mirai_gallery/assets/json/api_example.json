@@ -1,0 +1,94 @@
+{
+    "type": "scaffold",
+    "body": {
+        "type": "scrollView",
+        "child": {
+            "type": "column",
+            "crossAxisAlignment": "start",
+            "children": [
+                {
+                    "type": "padding",
+                    "padding": {
+                        "left": 24,
+                        "right": 24
+                    },
+                    "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "children": [
+                            {
+                                "type": "sizedBox",
+                                "height": 24
+                            },
+                            {
+                                "type": "text",
+                                "data": "Navigate to next screen after api call",
+                                "style": {
+                                    "fontSize": 21,
+                                    "fontWeight": "w700"
+                                }
+                            },
+                            {
+                                "type": "sizedBox",
+                                "height": 48
+                            },
+                            {
+                                "type": "row",
+                                "mainAxisAlignment": "center",
+                                "children": [
+                                    {
+                                        "type": "textButton",
+                                        "onPressed": {
+                                            "actionType": "request",
+                                            "request": {
+                                                "url": "https://demo-identity.securrency.com/connect/token",
+                                                "method": "post",
+                                                "headers": {
+                                                    "contentType": "application/x-www-form-urlencoded"
+                                                },
+                                                "contentType": "application/x-www-form-urlencoded",
+                                                "data": {
+                                                    "username": "asim.khan@securrency.com",
+                                                    "password": "testUser123!",
+                                                    "client_id": "mobile",
+                                                    "scope": "openid email roles profile identity.public identity.admin entity securrency.finance securrency.exchange securrency.ens",
+                                                    "grant_type": "mobile"
+                                                }
+                                            },
+                                            "subAction": {
+                                                "actionType": "navigate",
+                                                "navigationStyle": "push",
+                                                "navigationType": "screen",
+                                                "widgetJson": {
+                                                    "type": "exampleScreen",
+                                                    "assetPath": "assets/json/container_example.json"
+                                                },
+                                                "subAction": {
+                                                    "actionType": "navigate",
+                                                    "navigationStyle": "push",
+                                                    "navigationType": "screen",
+                                                    "widgetJson": {
+                                                        "type": "exampleScreen",
+                                                        "assetPath": "assets/json/card_example.json"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "child": {
+                                            "type": "text",
+                                            "data": "Navigate",
+                                            "style": {
+                                                "fontSize": 12,
+                                                "fontWeight": "w700"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

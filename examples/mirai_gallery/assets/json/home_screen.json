@@ -932,6 +932,41 @@
                             "assetPath": "assets/json/text_field_example.json"
                         }
                     }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "cell_wifi"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "API Demo",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "API is important and integral part of the app",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/api_example.json"
+                        }
+                    }
                 }
             ]
         }

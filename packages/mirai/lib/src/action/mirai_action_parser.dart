@@ -6,6 +6,8 @@ import 'package:mirai/src/network/mirai_network.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
+    dynamic response;
+
     if (this != null) {
       if (this?.navigationStyle == NavigationStyle.pop) {
         MiraiNavigator.navigateBack(context);
@@ -17,7 +19,7 @@ extension MiraiActionParser on MiraiAction? {
             widget = Mirai.fromJson(this!.widgetJson, context);
 
             if (widget != null) {
-              return MiraiNavigator.navigate(
+              response = MiraiNavigator.navigate(
                 context: context,
                 navigationType: this?.navigationType ?? NavigationType.screen,
                 navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
@@ -27,7 +29,7 @@ extension MiraiActionParser on MiraiAction? {
           } else if (this?.request != null) {
             widget = Mirai.fromNetwork(this!.request!);
 
-            return MiraiNavigator.navigate(
+            response = MiraiNavigator.navigate(
               context: context,
               navigationType: this?.navigationType ?? NavigationType.screen,
               navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
@@ -37,7 +39,7 @@ extension MiraiActionParser on MiraiAction? {
             widget = await Mirai.fromAssets(this!.assetPath!, context);
 
             if (context.mounted && widget != null) {
-              return MiraiNavigator.navigate(
+              response = MiraiNavigator.navigate(
                 context: context,
                 navigationType: this?.navigationType ?? NavigationType.screen,
                 navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
@@ -47,13 +49,18 @@ extension MiraiActionParser on MiraiAction? {
           }
 
           break;
-
         case ActionType.request:
-          return MiraiNetwork.request(this!.request!);
+          response = await MiraiNetwork.request(this!.request!);
+          break;
         case ActionType.none:
           break;
       }
     }
-    return null;
+
+    if (this?.subAction != null) {
+      return this?.subAction.onCall(context);
+    } else {
+      return response;
+    }
   }
 }

@@ -26,6 +26,7 @@ mixin _$MiraiAction {
   String? get assetPath => throw _privateConstructorUsedError;
   NavigationType? get navigationType => throw _privateConstructorUsedError;
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
+  MiraiAction? get subAction => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,9 +46,11 @@ abstract class $MiraiActionCopyWith<$Res> {
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       NavigationType? navigationType,
-      NavigationStyle? navigationStyle});
+      NavigationStyle? navigationStyle,
+      MiraiAction? subAction});
 
   $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiActionCopyWith<$Res>? get subAction;
 }
 
 /// @nodoc
@@ -69,6 +72,7 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
     Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
+    Object? subAction = freezed,
   }) {
     return _then(_value.copyWith(
       actionType: null == actionType
@@ -95,6 +99,10 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
               as NavigationStyle?,
+      subAction: freezed == subAction
+          ? _value.subAction
+          : subAction // ignore: cast_nullable_to_non_nullable
+              as MiraiAction?,
     ) as $Val);
   }
 
@@ -107,6 +115,18 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
 
     return $MiraiRequestCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiActionCopyWith<$Res>? get subAction {
+    if (_value.subAction == null) {
+      return null;
+    }
+
+    return $MiraiActionCopyWith<$Res>(_value.subAction!, (value) {
+      return _then(_value.copyWith(subAction: value) as $Val);
     });
   }
 }
@@ -125,10 +145,13 @@ abstract class _$$_MiraiActionCopyWith<$Res>
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       NavigationType? navigationType,
-      NavigationStyle? navigationStyle});
+      NavigationStyle? navigationStyle,
+      MiraiAction? subAction});
 
   @override
   $MiraiRequestCopyWith<$Res>? get request;
+  @override
+  $MiraiActionCopyWith<$Res>? get subAction;
 }
 
 /// @nodoc
@@ -148,6 +171,7 @@ class __$$_MiraiActionCopyWithImpl<$Res>
     Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
+    Object? subAction = freezed,
   }) {
     return _then(_$_MiraiAction(
       actionType: null == actionType
@@ -174,6 +198,10 @@ class __$$_MiraiActionCopyWithImpl<$Res>
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
               as NavigationStyle?,
+      subAction: freezed == subAction
+          ? _value.subAction
+          : subAction // ignore: cast_nullable_to_non_nullable
+              as MiraiAction?,
     ));
   }
 }
@@ -187,7 +215,8 @@ class _$_MiraiAction implements _MiraiAction {
       final Map<String, dynamic>? widgetJson,
       this.assetPath,
       this.navigationType,
-      this.navigationStyle})
+      this.navigationStyle,
+      this.subAction})
       : _widgetJson = widgetJson;
 
   factory _$_MiraiAction.fromJson(Map<String, dynamic> json) =>
@@ -214,10 +243,12 @@ class _$_MiraiAction implements _MiraiAction {
   final NavigationType? navigationType;
   @override
   final NavigationStyle? navigationStyle;
+  @override
+  final MiraiAction? subAction;
 
   @override
   String toString() {
-    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, navigationType: $navigationType, navigationStyle: $navigationStyle)';
+    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, navigationType: $navigationType, navigationStyle: $navigationStyle, subAction: $subAction)';
   }
 
   @override
@@ -235,7 +266,9 @@ class _$_MiraiAction implements _MiraiAction {
             (identical(other.navigationType, navigationType) ||
                 other.navigationType == navigationType) &&
             (identical(other.navigationStyle, navigationStyle) ||
-                other.navigationStyle == navigationStyle));
+                other.navigationStyle == navigationStyle) &&
+            (identical(other.subAction, subAction) ||
+                other.subAction == subAction));
   }
 
   @JsonKey(ignore: true)
@@ -247,7 +280,8 @@ class _$_MiraiAction implements _MiraiAction {
       const DeepCollectionEquality().hash(_widgetJson),
       assetPath,
       navigationType,
-      navigationStyle);
+      navigationStyle,
+      subAction);
 
   @JsonKey(ignore: true)
   @override
@@ -270,7 +304,8 @@ abstract class _MiraiAction implements MiraiAction {
       final Map<String, dynamic>? widgetJson,
       final String? assetPath,
       final NavigationType? navigationType,
-      final NavigationStyle? navigationStyle}) = _$_MiraiAction;
+      final NavigationStyle? navigationStyle,
+      final MiraiAction? subAction}) = _$_MiraiAction;
 
   factory _MiraiAction.fromJson(Map<String, dynamic> json) =
       _$_MiraiAction.fromJson;
@@ -287,6 +322,8 @@ abstract class _MiraiAction implements MiraiAction {
   NavigationType? get navigationType;
   @override
   NavigationStyle? get navigationStyle;
+  @override
+  MiraiAction? get subAction;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiActionCopyWith<_$_MiraiAction> get copyWith =>
