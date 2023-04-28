@@ -6,6 +6,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
+import 'package:mirai/src/utils/log.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
@@ -57,11 +58,16 @@ extension MiraiActionParser on MiraiAction? {
           break;
         case ActionType.formValidation:
           if (Form.of(context).validate()) {
-            Form.of(context).save();
-
             try {
-              final _ = context.read<MiraiFormCubit>().state.controllers;
-            } catch (_) {}
+              final controllers =
+                  context.read<MiraiFormCubit>().state.controllers;
+              for (var controller in controllers.keys) {
+                Log.d(
+                    "For key : $controller  Value : ${controllers[controller]?.value.text}");
+              }
+            } catch (e) {
+              Log.e(e);
+            }
           }
 
           break;

@@ -10,6 +10,7 @@ import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.da
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/input_validations.dart';
+import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
@@ -41,7 +42,9 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       context.read<MiraiFormCubit>().addController(
         {model.key: storedController},
       );
-    } catch (_) {}
+    } catch (e) {
+      Log.e(e);
+    }
 
     return TextFormField(
       controller: storedController,
@@ -56,6 +59,7 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       readOnly: model.readOnly,
       showCursor: model.showCursor,
       autofocus: model.autofocus,
+      autovalidateMode: model.autovalidateMode,
       obscuringCharacter: model.obscuringCharacter,
       maxLines: model.maxLines,
       minLines: model.minLines,
@@ -91,7 +95,9 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
               if (!validationType.validate(value, validator.rule)) {
                 return validator.message;
               }
-            } catch (_) {}
+            } catch (e) {
+              Log.e(e);
+            }
           }
         }
 

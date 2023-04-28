@@ -9,7 +9,6 @@
     },
     "body": {
         "type": "form",
-        "autovalidateMode": "onUserInteraction",
         "child": {
             "type": "container",
             "padding": {
@@ -51,6 +50,19 @@
                                 },
                                 "labelText": "Name*"
                             },
+                            "inputFormatters": [
+                                {
+                                    "type": "allow",
+                                    "rule": "[a-zA-Z]"
+                                }
+                            ],
+                            "validatorRules": [
+                                {
+                                    "rule": "isName",
+                                    "message": "Enter a valid name"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },
@@ -80,6 +92,23 @@
                                 },
                                 "labelText": "Phone number*"
                             },
+                            "inputFormatters": [
+                                {
+                                    "type": "deny",
+                                    "rule": "[a-zA-Z]"
+                                }
+                            ],
+                            "validatorRules": [
+                                {
+                                    "rule": "isNotEmpty",
+                                    "message": "Enter a valid phone number"
+                                },
+                                {
+                                    "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
+                                    "message": "Enter a valid phone number"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },
@@ -109,6 +138,13 @@
                                 },
                                 "labelText": "Email"
                             },
+                            "validatorRules": [
+                                {
+                                    "rule": "isEmail",
+                                    "message": "Enter a valid email address"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },
@@ -138,6 +174,19 @@
                                 },
                                 "labelText": "Credit Card"
                             },
+                            "validatorRules": [
+                                {
+                                    "rule": "isNotEmpty",
+                                    "message": "Enter a valid card numbder"
+                                }
+                            ],
+                            "inputFormatters": [
+                                {
+                                    "type": "deny",
+                                    "rule": "[a-zA-Z]"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },
@@ -172,6 +221,13 @@
                                 },
                                 "labelText": "Password*"
                             },
+                            "validatorRules": [
+                                {
+                                    "rule": "isPassword",
+                                    "message": "Enter a valid password"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },
@@ -206,6 +262,13 @@
                                 },
                                 "labelText": "Re-type password*"
                             },
+                            "validatorRules": [
+                                {
+                                    "rule": "isPassword",
+                                    "message": "Enter a valid password"
+                                }
+                            ],
+                            "autovalidateMode": "onUserInteraction",
                             "readOnly": false,
                             "enabled": true
                         },

@@ -22,8 +22,8 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
       child: Form(
         onChanged: () => model.onChanged?.onCall(context),
         autovalidateMode: model.autovalidateMode,
-        child: BlocBuilder<MiraiFormCubit, MiraiFormState>(
-          builder: (ctx, state) {
+        child: Builder(
+          builder: (ctx) {
             return Mirai.fromJson(model.child, ctx) ?? const SizedBox();
           },
         ),

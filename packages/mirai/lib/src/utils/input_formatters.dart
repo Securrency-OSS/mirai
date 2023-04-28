@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:mirai/src/utils/log.dart';
 
 enum InputFormatterType {
   allow,
@@ -13,7 +14,8 @@ enum InputFormatterType {
         case InputFormatterType.deny:
           return FilteringTextInputFormatter.deny(RegExp(rule));
       }
-    } catch (_) {
+    } catch (e) {
+      Log.e(e);
       return FilteringTextInputFormatter.allow(RegExp(''));
     }
   }
