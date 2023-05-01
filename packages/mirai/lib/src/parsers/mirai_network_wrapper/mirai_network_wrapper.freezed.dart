@@ -1,0 +1,188 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'mirai_network_wrapper.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+MiraiNetworkWrapper _$MiraiNetworkWrapperFromJson(Map<String, dynamic> json) {
+  return _MiraiNetworkWrapper.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MiraiNetworkWrapper {
+  Map<String, dynamic> get data => throw _privateConstructorUsedError;
+  Map<String, dynamic> get body => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiNetworkWrapperCopyWith<MiraiNetworkWrapper> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MiraiNetworkWrapperCopyWith<$Res> {
+  factory $MiraiNetworkWrapperCopyWith(
+          MiraiNetworkWrapper value, $Res Function(MiraiNetworkWrapper) then) =
+      _$MiraiNetworkWrapperCopyWithImpl<$Res, MiraiNetworkWrapper>;
+  @useResult
+  $Res call({Map<String, dynamic> data, Map<String, dynamic> body});
+}
+
+/// @nodoc
+class _$MiraiNetworkWrapperCopyWithImpl<$Res, $Val extends MiraiNetworkWrapper>
+    implements $MiraiNetworkWrapperCopyWith<$Res> {
+  _$MiraiNetworkWrapperCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? body = null,
+  }) {
+    return _then(_value.copyWith(
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      body: null == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MiraiNetworkWrapperCopyWith<$Res>
+    implements $MiraiNetworkWrapperCopyWith<$Res> {
+  factory _$$_MiraiNetworkWrapperCopyWith(_$_MiraiNetworkWrapper value,
+          $Res Function(_$_MiraiNetworkWrapper) then) =
+      __$$_MiraiNetworkWrapperCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Map<String, dynamic> data, Map<String, dynamic> body});
+}
+
+/// @nodoc
+class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
+    extends _$MiraiNetworkWrapperCopyWithImpl<$Res, _$_MiraiNetworkWrapper>
+    implements _$$_MiraiNetworkWrapperCopyWith<$Res> {
+  __$$_MiraiNetworkWrapperCopyWithImpl(_$_MiraiNetworkWrapper _value,
+      $Res Function(_$_MiraiNetworkWrapper) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? body = null,
+  }) {
+    return _then(_$_MiraiNetworkWrapper(
+      data: null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      body: null == body
+          ? _value._body
+          : body // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
+  const _$_MiraiNetworkWrapper(
+      {required final Map<String, dynamic> data,
+      required final Map<String, dynamic> body})
+      : _data = data,
+        _body = body;
+
+  factory _$_MiraiNetworkWrapper.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiNetworkWrapperFromJson(json);
+
+  final Map<String, dynamic> _data;
+  @override
+  Map<String, dynamic> get data {
+    if (_data is EqualUnmodifiableMapView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_data);
+  }
+
+  final Map<String, dynamic> _body;
+  @override
+  Map<String, dynamic> get body {
+    if (_body is EqualUnmodifiableMapView) return _body;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_body);
+  }
+
+  @override
+  String toString() {
+    return 'MiraiNetworkWrapper(data: $data, body: $body)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MiraiNetworkWrapper &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other._body, _body));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(_body));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MiraiNetworkWrapperCopyWith<_$_MiraiNetworkWrapper> get copyWith =>
+      __$$_MiraiNetworkWrapperCopyWithImpl<_$_MiraiNetworkWrapper>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MiraiNetworkWrapperToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MiraiNetworkWrapper implements MiraiNetworkWrapper {
+  const factory _MiraiNetworkWrapper(
+      {required final Map<String, dynamic> data,
+      required final Map<String, dynamic> body}) = _$_MiraiNetworkWrapper;
+
+  factory _MiraiNetworkWrapper.fromJson(Map<String, dynamic> json) =
+      _$_MiraiNetworkWrapper.fromJson;
+
+  @override
+  Map<String, dynamic> get data;
+  @override
+  Map<String, dynamic> get body;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MiraiNetworkWrapperCopyWith<_$_MiraiNetworkWrapper> get copyWith =>
+      throw _privateConstructorUsedError;
+}

@@ -1,92 +1,175 @@
 {
     "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "API Demo"
+        }
+    },
     "body": {
         "type": "scrollView",
         "child": {
-            "type": "column",
-            "crossAxisAlignment": "start",
+            "type": "row",
+            "mainAxisAlignment": "center",
+            "crossAxisAlignment": "center",
             "children": [
                 {
-                    "type": "padding",
-                    "padding": {
-                        "left": 24,
-                        "right": 24
-                    },
-                    "child": {
-                        "type": "column",
-                        "crossAxisAlignment": "start",
-                        "children": [
-                            {
-                                "type": "sizedBox",
-                                "height": 24
-                            },
-                            {
+                    "type": "column",
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                        {
+                            "type": "sizedBox",
+                            "height": 24
+                        },
+                        {
+                            "type": "elevatedButton",
+                            "child": {
                                 "type": "text",
-                                "data": "Navigate to next screen after api call",
+                                "data": "Login",
                                 "style": {
-                                    "fontSize": 21,
-                                    "fontWeight": "w700"
+                                    "color": "#ffffff"
                                 }
                             },
-                            {
-                                "type": "sizedBox",
-                                "height": 48
+                            "style": {
+                                "padding": {
+                                    "top": 8,
+                                    "left": 12,
+                                    "right": 12,
+                                    "bottom": 8
+                                }
                             },
-                            {
-                                "type": "row",
-                                "mainAxisAlignment": "center",
-                                "children": [
-                                    {
-                                        "type": "textButton",
-                                        "onPressed": {
-                                            "actionType": "request",
-                                            "request": {
-                                                "url": "https://demo-identity.securrency.com/connect/token",
-                                                "method": "post",
-                                                "headers": {
-                                                    "contentType": "application/x-www-form-urlencoded"
-                                                },
-                                                "contentType": "application/x-www-form-urlencoded",
-                                                "data": {
-                                                    "username": "asim.khan@securrency.com",
-                                                    "password": "testUser123!",
-                                                    "client_id": "mobile",
-                                                    "scope": "openid email roles profile identity.public identity.admin entity securrency.finance securrency.exchange securrency.ens",
-                                                    "grant_type": "mobile"
+                            "onPressed": {
+                                "actionType": "request",
+                                "request": {
+                                    "url": "https://demo-identity.securrency.com/connect/token",
+                                    "method": "post",
+                                    "headers": {
+                                        "contentType": "application/x-www-form-urlencoded"
+                                    },
+                                    "contentType": "application/x-www-form-urlencoded",
+                                    "data": {
+                                        "username": "asim.khan@securrency.com",
+                                        "password": "testUser123!",
+                                        "client_id": "mobile",
+                                        "scope": "openid email roles profile identity.public identity.admin entity securrency.finance securrency.exchange securrency.ens",
+                                        "grant_type": "mobile"
+                                    }
+                                },
+                                "actionStates": {
+                                    "success": {
+                                        "actionType": "navigate",
+                                        "navigationStyle": "push",
+                                        "navigationType": "screen",
+                                        "widgetJson": {
+                                            "type": "scaffold",
+                                            "appBar": {
+                                                "type": "appBar",
+                                                "title": {
+                                                    "type": "text",
+                                                    "data": "Successfully logged in"
                                                 }
                                             },
-                                            "subAction": {
-                                                "actionType": "navigate",
-                                                "navigationStyle": "push",
-                                                "navigationType": "screen",
-                                                "widgetJson": {
-                                                    "type": "exampleScreen",
-                                                    "assetPath": "assets/json/container_example.json"
-                                                },
-                                                "subAction": {
-                                                    "actionType": "navigate",
-                                                    "navigationStyle": "push",
-                                                    "navigationType": "screen",
-                                                    "widgetJson": {
-                                                        "type": "exampleScreen",
-                                                        "assetPath": "assets/json/card_example.json"
+                                            "body": {
+                                                "type": "row",
+                                                "mainAxisAlignment": "center",
+                                                "crossAxisAlignment": "center",
+                                                "children": [
+                                                    {
+                                                        "type": "column",
+                                                        "mainAxisAlignment": "center",
+                                                        "crossAxisAlignment": "center",
+                                                        "children": [
+                                                            {
+                                                                "type": "sizedBox",
+                                                                "height": 24
+                                                            },
+                                                            {
+                                                                "type": "sizedBox",
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "mainAxisAlignment": "center",
+                                                                    "crossAxisAlignment": "center",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "text",
+                                                                            "data": "Access Token",
+                                                                            "align": "center",
+                                                                            "style": {
+                                                                                "fontSize": 16
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "sizedBox",
+                                                                            "width": 12
+                                                                        },
+                                                                        {
+                                                                            "type": "text",
+                                                                            "data": "$access_token",
+                                                                            "maxLines": 3,
+                                                                            "overflow": "ellipsis",
+                                                                            "align": "center",
+                                                                            "style": {
+                                                                                "fontSize": 16
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "sizedBox",
+                                                                "height": 24
+                                                            },
+                                                            {
+                                                                "type": "sizedBox",
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "mainAxisAlignment": "center",
+                                                                    "crossAxisAlignment": "center",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "text",
+                                                                            "data": "Expires In",
+                                                                            "align": "center",
+                                                                            "style": {
+                                                                                "fontSize": 16
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "sizedBox",
+                                                                            "width": 12
+                                                                        },
+                                                                        {
+                                                                            "type": "text",
+                                                                            "data": "$expires_in",
+                                                                            "align": "center",
+                                                                            "style": {
+                                                                                "fontSize": 16
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
                                                     }
-                                                }
-                                            }
-                                        },
-                                        "child": {
-                                            "type": "text",
-                                            "data": "Navigate",
-                                            "style": {
-                                                "fontSize": 12,
-                                                "fontWeight": "w700"
+                                                ]
                                             }
                                         }
+                                    },
+                                    "failure": {
+                                        "actionType": "navigate",
+                                        "navigationStyle": "push",
+                                        "navigationType": "screen",
+                                        "widgetJson": {
+                                            "type": "exampleScreen",
+                                            "assetPath": "assets/json/api_failure.json"
+                                        }
                                     }
-                                ]
+                                }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             ]
         }

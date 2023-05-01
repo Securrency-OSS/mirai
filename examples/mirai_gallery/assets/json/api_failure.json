@@ -1,0 +1,12 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Failed to login"
+        },
+        "backgroundColor": "#DB1A3A"
+    },
+    "body": {}
+}
