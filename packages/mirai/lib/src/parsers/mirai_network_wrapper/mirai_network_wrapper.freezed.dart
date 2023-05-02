@@ -20,7 +20,8 @@ MiraiNetworkWrapper _$MiraiNetworkWrapperFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiNetworkWrapper {
-  Map<String, dynamic> get data => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  MiraiRequest? get onLoad => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +36,12 @@ abstract class $MiraiNetworkWrapperCopyWith<$Res> {
           MiraiNetworkWrapper value, $Res Function(MiraiNetworkWrapper) then) =
       _$MiraiNetworkWrapperCopyWithImpl<$Res, MiraiNetworkWrapper>;
   @useResult
-  $Res call({Map<String, dynamic> data, Map<String, dynamic> body});
+  $Res call(
+      {Map<String, dynamic>? data,
+      MiraiRequest? onLoad,
+      Map<String, dynamic> body});
+
+  $MiraiRequestCopyWith<$Res>? get onLoad;
 }
 
 /// @nodoc
@@ -51,19 +57,36 @@ class _$MiraiNetworkWrapperCopyWithImpl<$Res, $Val extends MiraiNetworkWrapper>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? data = freezed,
+    Object? onLoad = freezed,
     Object? body = null,
   }) {
     return _then(_value.copyWith(
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Map<String, dynamic>?,
+      onLoad: freezed == onLoad
+          ? _value.onLoad
+          : onLoad // ignore: cast_nullable_to_non_nullable
+              as MiraiRequest?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiRequestCopyWith<$Res>? get onLoad {
+    if (_value.onLoad == null) {
+      return null;
+    }
+
+    return $MiraiRequestCopyWith<$Res>(_value.onLoad!, (value) {
+      return _then(_value.copyWith(onLoad: value) as $Val);
+    });
   }
 }
 
@@ -75,7 +98,13 @@ abstract class _$$_MiraiNetworkWrapperCopyWith<$Res>
       __$$_MiraiNetworkWrapperCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic> data, Map<String, dynamic> body});
+  $Res call(
+      {Map<String, dynamic>? data,
+      MiraiRequest? onLoad,
+      Map<String, dynamic> body});
+
+  @override
+  $MiraiRequestCopyWith<$Res>? get onLoad;
 }
 
 /// @nodoc
@@ -89,14 +118,19 @@ class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? data = freezed,
+    Object? onLoad = freezed,
     Object? body = null,
   }) {
     return _then(_$_MiraiNetworkWrapper(
-      data: null == data
+      data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Map<String, dynamic>?,
+      onLoad: freezed == onLoad
+          ? _value.onLoad
+          : onLoad // ignore: cast_nullable_to_non_nullable
+              as MiraiRequest?,
       body: null == body
           ? _value._body
           : body // ignore: cast_nullable_to_non_nullable
@@ -109,7 +143,8 @@ class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   const _$_MiraiNetworkWrapper(
-      {required final Map<String, dynamic> data,
+      {final Map<String, dynamic>? data,
+      this.onLoad,
       required final Map<String, dynamic> body})
       : _data = data,
         _body = body;
@@ -117,14 +152,18 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   factory _$_MiraiNetworkWrapper.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiNetworkWrapperFromJson(json);
 
-  final Map<String, dynamic> _data;
+  final Map<String, dynamic>? _data;
   @override
-  Map<String, dynamic> get data {
+  Map<String, dynamic>? get data {
+    final value = _data;
+    if (value == null) return null;
     if (_data is EqualUnmodifiableMapView) return _data;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_data);
+    return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final MiraiRequest? onLoad;
   final Map<String, dynamic> _body;
   @override
   Map<String, dynamic> get body {
@@ -135,7 +174,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
 
   @override
   String toString() {
-    return 'MiraiNetworkWrapper(data: $data, body: $body)';
+    return 'MiraiNetworkWrapper(data: $data, onLoad: $onLoad, body: $body)';
   }
 
   @override
@@ -144,6 +183,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiNetworkWrapper &&
             const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.onLoad, onLoad) || other.onLoad == onLoad) &&
             const DeepCollectionEquality().equals(other._body, _body));
   }
 
@@ -152,6 +192,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_data),
+      onLoad,
       const DeepCollectionEquality().hash(_body));
 
   @JsonKey(ignore: true)
@@ -171,14 +212,17 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
 
 abstract class _MiraiNetworkWrapper implements MiraiNetworkWrapper {
   const factory _MiraiNetworkWrapper(
-      {required final Map<String, dynamic> data,
+      {final Map<String, dynamic>? data,
+      final MiraiRequest? onLoad,
       required final Map<String, dynamic> body}) = _$_MiraiNetworkWrapper;
 
   factory _MiraiNetworkWrapper.fromJson(Map<String, dynamic> json) =
       _$_MiraiNetworkWrapper.fromJson;
 
   @override
-  Map<String, dynamic> get data;
+  Map<String, dynamic>? get data;
+  @override
+  MiraiRequest? get onLoad;
   @override
   Map<String, dynamic> get body;
   @override

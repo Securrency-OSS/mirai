@@ -1,0 +1,83 @@
+{
+    "type": "networkWrapper",
+    "onLoad": {
+        "url": "https://demo-identity.securrency.com/api/v1/person/profile",
+        "method": "get",
+        "headers": {
+            "accept": "application/json",
+            "Authorization": "Bearer CE0FDFAE56E8D275E2DF129BAEB1F9DAA76D271D2D3B8FA4CABEE491FDAEA2E2"
+        },
+        "contentType": "application/json"
+    },
+    "body": {
+        "type": "scaffold",
+        "appBar": {
+            "type": "appBar",
+            "title": {
+                "type": "text",
+                "data": "User Profile"
+            }
+        },
+        "body": {
+            "type": "padding",
+            "padding": {
+                "top": 12,
+                "left": 12,
+                "right": 12
+            },
+            "child": {
+                "type": "column",
+                "mainAxisAlignment": "start",
+                "crossAxisAlignment": "start",
+                "children": [
+                    {
+                        "type": "text",
+                        "data": "First Name",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 23,
+                            "fontWeight": "w600"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "text",
+                        "data": "firstName",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 16
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "text",
+                        "data": "Last Name",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 23,
+                            "fontWeight": "w600"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "text",
+                        "data": "lastName",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 16
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

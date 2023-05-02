@@ -21,13 +21,37 @@ class MiraiNetworkWrapperParser extends MiraiParser<MiraiNetworkWrapper> {
   Widget parse(BuildContext context, MiraiNetworkWrapper model) {
     Map<String, dynamic> bodyJson = Map<String, dynamic>.from(model.body);
 
-    if (bodyJson.containsKey("assetPath")) {
-      return FutureBuilder(
-        future: _loadFromAssets(bodyJson["assetPath"]),
+    if (model.data != null) {
+      if (bodyJson.containsKey("assetPath")) {
+        return FutureBuilder(
+          future: _loadBodyFromAssets(bodyJson["assetPath"]),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              bodyJson = snapshot.data;
+              model.data!.forEach((key, value) {
+                _updateBodyJson(bodyJson, key, value);
+              });
+
+              return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
+            }
+
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          },
+        );
+      } else {
+        model.data!.forEach((key, value) {
+          _updateBodyJson(bodyJson, key, value);
+        });
+        return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
+      }
+    } else if (model.onLoad != null) {
+      return FutureBuilder<Map<String, dynamic>>(
+        future: _loadDataFromRequest(model.onLoad!),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
-            bodyJson = snapshot.data;
-            model.data.forEach((key, value) {
+            snapshot.data.forEach((key, value) {
               _updateBodyJson(bodyJson, key, value);
             });
 
@@ -39,15 +63,28 @@ class MiraiNetworkWrapperParser extends MiraiParser<MiraiNetworkWrapper> {
           );
         },
       );
-    } else {
-      model.data.forEach((key, value) {
-        _updateBodyJson(bodyJson, key, value);
-      });
-      return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
     }
+
+    return Mirai.fromJson(model.body, context) ?? const SizedBox();
   }
 
-  Future<Map<String, dynamic>> _loadFromAssets(String assetPath) async {
+  Future<Map<String, dynamic>> _loadDataFromRequest(
+      MiraiRequest request) async {
+    final response = await MiraiNetwork.request(request);
+    if (response?.data != null) {
+      switch (response?.statusCode) {
+        case 200:
+          return response!.data as Map<String, dynamic>;
+
+        default:
+          ;
+      }
+    }
+
+    return {};
+  }
+
+  Future<Map<String, dynamic>> _loadBodyFromAssets(String assetPath) async {
     final String data = await rootBundle.loadString(assetPath);
     return jsonDecode(data);
   }
