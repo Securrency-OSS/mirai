@@ -8,82 +8,64 @@
         }
     },
     "body": {
-        "type": "row",
-        "mainAxisAlignment": "center",
-        "crossAxisAlignment": "center",
-        "children": [
-            {
-                "type": "column",
-                "mainAxisAlignment": "center",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "sizedBox",
-                        "height": 24
-                    },
-                    {
-                        "type": "row",
-                        "mainAxisAlignment": "center",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "image",
-                                "src": "https://images.pexels.com/photos/2718416/pexels-photo-2718416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                                "width": 100
-                            },
-                            {
-                                "type": "sizedBox",
-                                "width": 12
-                            },
-                            {
-                                "type": "image",
-                                "src": "https://images.pexels.com/photos/121629/pexels-photo-121629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                                "width": 100
-                            },
-                            {
-                                "type": "sizedBox",
-                                "width": 12
-                            },
-                            {
-                                "type": "image",
-                                "src": "https://images.pexels.com/photos/1414642/pexels-photo-1414642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                                "width": 100
-                            }
-                        ]
-                    },
-                    {
-                        "type": "sizedBox",
-                        "height": 24
-                    },
-                    {
-                        "type": "row",
-                        "mainAxisAlignment": "center",
-                        "crossAxisAlignment": "center",
-                        "children": [
-                            {
-                                "type": "text",
-                                "data": "access_token",
-                                "align": "center",
-                                "style": {
-                                    "fontSize": 16
-                                }
-                            },
-                            {
-                                "type": "sizedBox",
-                                "width": 12
-                            },
-                            {
-                                "type": "text",
-                                "data": "$access_token",
-                                "align": "center",
-                                "style": {
-                                    "fontSize": 16
-                                }
-                            }
-                        ]
+        "type": "padding",
+        "padding": {
+            "top": 12,
+            "left": 12,
+            "right": 12
+        },
+        "child": {
+            "type": "column",
+            "mainAxisAlignment": "start",
+            "crossAxisAlignment": "start",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "Access Token",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 23,
+                        "fontWeight": "w600"
                     }
-                ]
-            }
-        ]
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "text",
+                    "data": "$access_token",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 16
+                    }
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "text",
+                    "data": "Expires In",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 23,
+                        "fontWeight": "w600"
+                    }
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 24
+                },
+                {
+                    "type": "text",
+                    "data": "$expires_in",
+                    "align": "center",
+                    "style": {
+                        "fontSize": 16
+                    }
+                }
+            ]
+        }
     }
 }
