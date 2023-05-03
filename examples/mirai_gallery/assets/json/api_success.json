@@ -34,7 +34,7 @@
                 },
                 {
                     "type": "text",
-                    "data": "$access_token",
+                    "data": "access_token",
                     "align": "center",
                     "style": {
                         "fontSize": 16
@@ -59,7 +59,7 @@
                 },
                 {
                     "type": "text",
-                    "data": "$expires_in",
+                    "data": "expires_in",
                     "align": "center",
                     "style": {
                         "fontSize": 16

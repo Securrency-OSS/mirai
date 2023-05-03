@@ -57,8 +57,8 @@
                                         "grant_type": "mobile"
                                     }
                                 },
-                                "actionStates": {
-                                    "success": {
+                                "actions": {
+                                    "200": {
                                         "actionType": "navigate",
                                         "navigationStyle": "push",
                                         "navigationType": "screen",
@@ -67,7 +67,7 @@
                                             "assetPath": "assets/json/api_success.json"
                                         }
                                     },
-                                    "failure": {
+                                    "401": {
                                         "actionType": "navigate",
                                         "navigationStyle": "push",
                                         "navigationType": "screen",

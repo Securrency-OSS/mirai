@@ -46,9 +46,9 @@ class MiraiNetworkWrapperParser extends MiraiParser<MiraiNetworkWrapper> {
         });
         return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
       }
-    } else if (model.onLoad != null) {
+    } else if (model.action != null) {
       return FutureBuilder<Map<String, dynamic>>(
-        future: _loadDataFromRequest(model.onLoad!),
+        future: _loadDataFromRequest(model.action!.request!),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
             snapshot.data.forEach((key, value) {

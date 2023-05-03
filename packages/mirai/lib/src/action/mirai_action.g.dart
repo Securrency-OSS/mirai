@@ -20,9 +20,9 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$NavigationTypeEnumMap, json['navigationType']),
       navigationStyle: $enumDecodeNullable(
           _$NavigationStyleEnumMap, json['navigationStyle']),
-      actionStates: (json['actionStates'] as Map<String, dynamic>?)?.map(
-        (k, e) => MapEntry($enumDecode(_$ActionStateTypeEnumMap, k),
-            MiraiAction.fromJson(e as Map<String, dynamic>)),
+      actions: (json['actions'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(
+            int.parse(k), MiraiAction.fromJson(e as Map<String, dynamic>)),
       ),
     );
 
@@ -34,8 +34,7 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'assetPath': instance.assetPath,
       'navigationType': _$NavigationTypeEnumMap[instance.navigationType],
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
-      'actionStates': instance.actionStates
-          ?.map((k, e) => MapEntry(_$ActionStateTypeEnumMap[k]!, e)),
+      'actions': instance.actions?.map((k, e) => MapEntry(k.toString(), e)),
     };
 
 const _$ActionTypeEnumMap = {
@@ -56,9 +55,4 @@ const _$NavigationStyleEnumMap = {
   NavigationStyle.pushReplacement: 'pushReplacement',
   NavigationStyle.pushAndRemoveAll: 'pushAndRemoveAll',
   NavigationStyle.popAll: 'popAll',
-};
-
-const _$ActionStateTypeEnumMap = {
-  ActionStateType.success: 'success',
-  ActionStateType.failure: 'failure',
 };

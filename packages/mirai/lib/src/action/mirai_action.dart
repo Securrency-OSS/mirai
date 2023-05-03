@@ -7,8 +7,6 @@ part 'mirai_action.g.dart';
 
 enum ActionType { navigate, request, none }
 
-enum ActionStateType { success, failure }
-
 @freezed
 class MiraiAction with _$MiraiAction {
   factory MiraiAction({
@@ -18,7 +16,7 @@ class MiraiAction with _$MiraiAction {
     String? assetPath,
     NavigationType? navigationType,
     NavigationStyle? navigationStyle,
-    Map<ActionStateType, MiraiAction>? actionStates,
+    Map<int, MiraiAction>? actions,
   }) = _MiraiAction;
 
   factory MiraiAction.fromJson(Map<String, dynamic> json) =>

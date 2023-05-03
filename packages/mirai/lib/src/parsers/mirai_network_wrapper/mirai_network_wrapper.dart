@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/mirai.dart';
 
 part 'mirai_network_wrapper.freezed.dart';
 part 'mirai_network_wrapper.g.dart';
@@ -8,7 +8,7 @@ part 'mirai_network_wrapper.g.dart';
 class MiraiNetworkWrapper with _$MiraiNetworkWrapper {
   const factory MiraiNetworkWrapper({
     Map<String, dynamic>? data,
-    MiraiRequest? onLoad,
+    MiraiAction? action,
     required Map<String, dynamic> body,
   }) = _MiraiNetworkWrapper;
 

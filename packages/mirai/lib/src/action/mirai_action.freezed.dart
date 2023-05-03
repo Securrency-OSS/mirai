@@ -26,8 +26,7 @@ mixin _$MiraiAction {
   String? get assetPath => throw _privateConstructorUsedError;
   NavigationType? get navigationType => throw _privateConstructorUsedError;
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
-  Map<ActionStateType, MiraiAction>? get actionStates =>
-      throw _privateConstructorUsedError;
+  Map<int, MiraiAction>? get actions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,7 +47,7 @@ abstract class $MiraiActionCopyWith<$Res> {
       String? assetPath,
       NavigationType? navigationType,
       NavigationStyle? navigationStyle,
-      Map<ActionStateType, MiraiAction>? actionStates});
+      Map<int, MiraiAction>? actions});
 
   $MiraiRequestCopyWith<$Res>? get request;
 }
@@ -72,7 +71,7 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
     Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
-    Object? actionStates = freezed,
+    Object? actions = freezed,
   }) {
     return _then(_value.copyWith(
       actionType: null == actionType
@@ -99,10 +98,10 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
               as NavigationStyle?,
-      actionStates: freezed == actionStates
-          ? _value.actionStates
-          : actionStates // ignore: cast_nullable_to_non_nullable
-              as Map<ActionStateType, MiraiAction>?,
+      actions: freezed == actions
+          ? _value.actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as Map<int, MiraiAction>?,
     ) as $Val);
   }
 
@@ -134,7 +133,7 @@ abstract class _$$_MiraiActionCopyWith<$Res>
       String? assetPath,
       NavigationType? navigationType,
       NavigationStyle? navigationStyle,
-      Map<ActionStateType, MiraiAction>? actionStates});
+      Map<int, MiraiAction>? actions});
 
   @override
   $MiraiRequestCopyWith<$Res>? get request;
@@ -157,7 +156,7 @@ class __$$_MiraiActionCopyWithImpl<$Res>
     Object? assetPath = freezed,
     Object? navigationType = freezed,
     Object? navigationStyle = freezed,
-    Object? actionStates = freezed,
+    Object? actions = freezed,
   }) {
     return _then(_$_MiraiAction(
       actionType: null == actionType
@@ -184,10 +183,10 @@ class __$$_MiraiActionCopyWithImpl<$Res>
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
               as NavigationStyle?,
-      actionStates: freezed == actionStates
-          ? _value._actionStates
-          : actionStates // ignore: cast_nullable_to_non_nullable
-              as Map<ActionStateType, MiraiAction>?,
+      actions: freezed == actions
+          ? _value._actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as Map<int, MiraiAction>?,
     ));
   }
 }
@@ -202,9 +201,9 @@ class _$_MiraiAction implements _MiraiAction {
       this.assetPath,
       this.navigationType,
       this.navigationStyle,
-      final Map<ActionStateType, MiraiAction>? actionStates})
+      final Map<int, MiraiAction>? actions})
       : _widgetJson = widgetJson,
-        _actionStates = actionStates;
+        _actions = actions;
 
   factory _$_MiraiAction.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiActionFromJson(json);
@@ -230,19 +229,19 @@ class _$_MiraiAction implements _MiraiAction {
   final NavigationType? navigationType;
   @override
   final NavigationStyle? navigationStyle;
-  final Map<ActionStateType, MiraiAction>? _actionStates;
+  final Map<int, MiraiAction>? _actions;
   @override
-  Map<ActionStateType, MiraiAction>? get actionStates {
-    final value = _actionStates;
+  Map<int, MiraiAction>? get actions {
+    final value = _actions;
     if (value == null) return null;
-    if (_actionStates is EqualUnmodifiableMapView) return _actionStates;
+    if (_actions is EqualUnmodifiableMapView) return _actions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
 
   @override
   String toString() {
-    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, navigationType: $navigationType, navigationStyle: $navigationStyle, actionStates: $actionStates)';
+    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, navigationType: $navigationType, navigationStyle: $navigationStyle, actions: $actions)';
   }
 
   @override
@@ -261,8 +260,7 @@ class _$_MiraiAction implements _MiraiAction {
                 other.navigationType == navigationType) &&
             (identical(other.navigationStyle, navigationStyle) ||
                 other.navigationStyle == navigationStyle) &&
-            const DeepCollectionEquality()
-                .equals(other._actionStates, _actionStates));
+            const DeepCollectionEquality().equals(other._actions, _actions));
   }
 
   @JsonKey(ignore: true)
@@ -275,7 +273,7 @@ class _$_MiraiAction implements _MiraiAction {
       assetPath,
       navigationType,
       navigationStyle,
-      const DeepCollectionEquality().hash(_actionStates));
+      const DeepCollectionEquality().hash(_actions));
 
   @JsonKey(ignore: true)
   @override
@@ -299,7 +297,7 @@ abstract class _MiraiAction implements MiraiAction {
       final String? assetPath,
       final NavigationType? navigationType,
       final NavigationStyle? navigationStyle,
-      final Map<ActionStateType, MiraiAction>? actionStates}) = _$_MiraiAction;
+      final Map<int, MiraiAction>? actions}) = _$_MiraiAction;
 
   factory _MiraiAction.fromJson(Map<String, dynamic> json) =
       _$_MiraiAction.fromJson;
@@ -317,7 +315,7 @@ abstract class _MiraiAction implements MiraiAction {
   @override
   NavigationStyle? get navigationStyle;
   @override
-  Map<ActionStateType, MiraiAction>? get actionStates;
+  Map<int, MiraiAction>? get actions;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiActionCopyWith<_$_MiraiAction> get copyWith =>

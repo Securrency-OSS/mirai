@@ -21,7 +21,7 @@ MiraiNetworkWrapper _$MiraiNetworkWrapperFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiNetworkWrapper {
   Map<String, dynamic>? get data => throw _privateConstructorUsedError;
-  MiraiRequest? get onLoad => throw _privateConstructorUsedError;
+  MiraiAction? get action => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,10 +38,10 @@ abstract class $MiraiNetworkWrapperCopyWith<$Res> {
   @useResult
   $Res call(
       {Map<String, dynamic>? data,
-      MiraiRequest? onLoad,
+      MiraiAction? action,
       Map<String, dynamic> body});
 
-  $MiraiRequestCopyWith<$Res>? get onLoad;
+  $MiraiActionCopyWith<$Res>? get action;
 }
 
 /// @nodoc
@@ -58,7 +58,7 @@ class _$MiraiNetworkWrapperCopyWithImpl<$Res, $Val extends MiraiNetworkWrapper>
   @override
   $Res call({
     Object? data = freezed,
-    Object? onLoad = freezed,
+    Object? action = freezed,
     Object? body = null,
   }) {
     return _then(_value.copyWith(
@@ -66,10 +66,10 @@ class _$MiraiNetworkWrapperCopyWithImpl<$Res, $Val extends MiraiNetworkWrapper>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      onLoad: freezed == onLoad
-          ? _value.onLoad
-          : onLoad // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+      action: freezed == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as MiraiAction?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -79,13 +79,13 @@ class _$MiraiNetworkWrapperCopyWithImpl<$Res, $Val extends MiraiNetworkWrapper>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiRequestCopyWith<$Res>? get onLoad {
-    if (_value.onLoad == null) {
+  $MiraiActionCopyWith<$Res>? get action {
+    if (_value.action == null) {
       return null;
     }
 
-    return $MiraiRequestCopyWith<$Res>(_value.onLoad!, (value) {
-      return _then(_value.copyWith(onLoad: value) as $Val);
+    return $MiraiActionCopyWith<$Res>(_value.action!, (value) {
+      return _then(_value.copyWith(action: value) as $Val);
     });
   }
 }
@@ -100,11 +100,11 @@ abstract class _$$_MiraiNetworkWrapperCopyWith<$Res>
   @useResult
   $Res call(
       {Map<String, dynamic>? data,
-      MiraiRequest? onLoad,
+      MiraiAction? action,
       Map<String, dynamic> body});
 
   @override
-  $MiraiRequestCopyWith<$Res>? get onLoad;
+  $MiraiActionCopyWith<$Res>? get action;
 }
 
 /// @nodoc
@@ -119,7 +119,7 @@ class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
   @override
   $Res call({
     Object? data = freezed,
-    Object? onLoad = freezed,
+    Object? action = freezed,
     Object? body = null,
   }) {
     return _then(_$_MiraiNetworkWrapper(
@@ -127,10 +127,10 @@ class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      onLoad: freezed == onLoad
-          ? _value.onLoad
-          : onLoad // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+      action: freezed == action
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as MiraiAction?,
       body: null == body
           ? _value._body
           : body // ignore: cast_nullable_to_non_nullable
@@ -144,7 +144,7 @@ class __$$_MiraiNetworkWrapperCopyWithImpl<$Res>
 class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   const _$_MiraiNetworkWrapper(
       {final Map<String, dynamic>? data,
-      this.onLoad,
+      this.action,
       required final Map<String, dynamic> body})
       : _data = data,
         _body = body;
@@ -163,7 +163,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   }
 
   @override
-  final MiraiRequest? onLoad;
+  final MiraiAction? action;
   final Map<String, dynamic> _body;
   @override
   Map<String, dynamic> get body {
@@ -174,7 +174,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
 
   @override
   String toString() {
-    return 'MiraiNetworkWrapper(data: $data, onLoad: $onLoad, body: $body)';
+    return 'MiraiNetworkWrapper(data: $data, action: $action, body: $body)';
   }
 
   @override
@@ -183,7 +183,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiNetworkWrapper &&
             const DeepCollectionEquality().equals(other._data, _data) &&
-            (identical(other.onLoad, onLoad) || other.onLoad == onLoad) &&
+            (identical(other.action, action) || other.action == action) &&
             const DeepCollectionEquality().equals(other._body, _body));
   }
 
@@ -192,7 +192,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_data),
-      onLoad,
+      action,
       const DeepCollectionEquality().hash(_body));
 
   @JsonKey(ignore: true)
@@ -213,7 +213,7 @@ class _$_MiraiNetworkWrapper implements _MiraiNetworkWrapper {
 abstract class _MiraiNetworkWrapper implements MiraiNetworkWrapper {
   const factory _MiraiNetworkWrapper(
       {final Map<String, dynamic>? data,
-      final MiraiRequest? onLoad,
+      final MiraiAction? action,
       required final Map<String, dynamic> body}) = _$_MiraiNetworkWrapper;
 
   factory _MiraiNetworkWrapper.fromJson(Map<String, dynamic> json) =
@@ -222,7 +222,7 @@ abstract class _MiraiNetworkWrapper implements MiraiNetworkWrapper {
   @override
   Map<String, dynamic>? get data;
   @override
-  MiraiRequest? get onLoad;
+  MiraiAction? get action;
   @override
   Map<String, dynamic> get body;
   @override

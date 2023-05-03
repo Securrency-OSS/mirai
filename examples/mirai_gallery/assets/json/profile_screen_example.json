@@ -1,13 +1,15 @@
 {
     "type": "networkWrapper",
-    "onLoad": {
-        "url": "https://demo-identity.securrency.com/api/v1/person/profile",
-        "method": "get",
-        "headers": {
-            "accept": "application/json",
-            "Authorization": "Bearer CE0FDFAE56E8D275E2DF129BAEB1F9DAA76D271D2D3B8FA4CABEE491FDAEA2E2"
-        },
-        "contentType": "application/json"
+    "action": {
+        "request": {
+            "url": "https://demo-identity.securrency.com/api/v1/person/profile",
+            "method": "get",
+            "headers": {
+                "accept": "application/json",
+                "Authorization": "Bearer 19FFB9B93EEDAE1A11CF04EA867970360759DA45B71111BEC8FC877181664ED8"
+            },
+            "contentType": "application/json"
+        }
     },
     "body": {
         "type": "scaffold",
@@ -41,7 +43,7 @@
                     },
                     {
                         "type": "sizedBox",
-                        "height": 24
+                        "height": 12
                     },
                     {
                         "type": "text",
@@ -53,7 +55,7 @@
                     },
                     {
                         "type": "sizedBox",
-                        "height": 24
+                        "height": 12
                     },
                     {
                         "type": "text",
@@ -66,11 +68,61 @@
                     },
                     {
                         "type": "sizedBox",
-                        "height": 24
+                        "height": 12
                     },
                     {
                         "type": "text",
                         "data": "lastName",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 16
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "text",
+                        "data": "Email",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 23,
+                            "fontWeight": "w600"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "text",
+                        "data": "primaryEmail",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 16
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "text",
+                        "data": "Country Code",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 23,
+                            "fontWeight": "w600"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    },
+                    {
+                        "type": "text",
+                        "data": "countryCode3",
                         "align": "center",
                         "style": {
                             "fontSize": 16
