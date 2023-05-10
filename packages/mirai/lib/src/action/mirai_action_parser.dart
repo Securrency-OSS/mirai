@@ -3,6 +3,7 @@ import 'package:mirai/src/action/mirai_action.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
+import 'package:mirai/src/storage/mirai_storage_parser.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
@@ -10,6 +11,11 @@ extension MiraiActionParser on MiraiAction? {
       if (this?.navigationStyle == NavigationStyle.pop) {
         MiraiNavigator.navigateBack(context);
       }
+
+      if (this?.storage != null) {
+        return this?.storage?.onCall();
+      }
+
       switch (this?.actionType ?? ActionType.none) {
         case ActionType.navigate:
           Widget? widget;

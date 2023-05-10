@@ -1,0 +1,106 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Storage"
+        }
+    },
+    "body": {
+        "type": "column",
+        "mainAxisAlignment": "start",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "row",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "outlinedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Store 'name:jack'"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "storage": {
+                                "type": "store",
+                                "key": "name",
+                                "value": "jack"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "width": 12
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Retreive 'name:'",
+                            "style": {
+                                "color": "#ffffff"
+                            }
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "storage": {
+                                "type": "retreive",
+                                "key": "name"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "center",
+                "child": {
+                    "type": "outlinedButton",
+                    "child": {
+                        "type": "text",
+                        "data": "Delete 'name:'"
+                    },
+                    "style": {
+                        "padding": {
+                            "top": 8,
+                            "left": 12,
+                            "right": 12,
+                            "bottom": 8
+                        }
+                    },
+                    "onPressed": {
+                        "storage": {
+                            "type": "delete",
+                            "key": "name"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
