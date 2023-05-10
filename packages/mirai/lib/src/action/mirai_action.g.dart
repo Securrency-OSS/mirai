@@ -20,10 +20,13 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$NavigationTypeEnumMap, json['navigationType']),
       navigationStyle: $enumDecodeNullable(
           _$NavigationStyleEnumMap, json['navigationStyle']),
-      actions: (json['actions'] as Map<String, dynamic>?)?.map(
+      requestStates: (json['requestStates'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(
             int.parse(k), MiraiAction.fromJson(e as Map<String, dynamic>)),
       ),
+      childAction: json['childAction'] == null
+          ? null
+          : MiraiAction.fromJson(json['childAction'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
@@ -34,7 +37,9 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'assetPath': instance.assetPath,
       'navigationType': _$NavigationTypeEnumMap[instance.navigationType],
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
-      'actions': instance.actions?.map((k, e) => MapEntry(k.toString(), e)),
+      'requestStates':
+          instance.requestStates?.map((k, e) => MapEntry(k.toString(), e)),
+      'childAction': instance.childAction,
     };
 
 const _$ActionTypeEnumMap = {

@@ -57,7 +57,7 @@
                                         "grant_type": "mobile"
                                     }
                                 },
-                                "actions": {
+                                "requestStates": {
                                     "200": {
                                         "actionType": "navigate",
                                         "navigationStyle": "push",

@@ -55,6 +55,7 @@ class MiraiNetworkWrapperParser extends MiraiParser<MiraiNetworkWrapper> {
               _updateBodyJson(bodyJson, key, value);
             });
 
+            // TODO :: Handle actions (nested navigation)
             return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
           }
 

@@ -14,21 +14,24 @@ extension MiraiActionParser on MiraiAction? {
         case ActionType.request:
           final response = await MiraiNetwork.request(this!.request!);
           if (response?.data != null) {
-            for (int status in this?.actions?.keys ?? []) {
+            for (int status in this?.requestStates?.keys ?? []) {
               if (status == response?.statusCode) {
                 Map<String, dynamic> data = response?.data ?? {};
 
                 final networkWrapper = {
                   "type": "networkWrapper",
                   "data": data,
-                  "body": this?.actions?[status]?.widgetJson
+                  "body": this?.requestStates?[status]?.widgetJson
                 };
 
-                return _navigate(context,
-                    screen: Mirai.fromJson(networkWrapper, context));
+                if (context.mounted) {
+                  return _navigate(context,
+                      screen: Mirai.fromJson(networkWrapper, context));
+                }
               }
             }
           }
+
           break;
         case ActionType.none:
           break;
