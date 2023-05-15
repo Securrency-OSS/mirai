@@ -48,13 +48,10 @@
                         "width": 12
                     },
                     {
-                        "type": "elevatedButton",
+                        "type": "outlinedButton",
                         "child": {
                             "type": "text",
-                            "data": "Retreive 'name:'",
-                            "style": {
-                                "color": "#ffffff"
-                            }
+                            "data": "Retreive 'name:'"
                         },
                         "style": {
                             "padding": {
@@ -99,6 +96,38 @@
                             "key": "name"
                         }
                     }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 0,
+                    "right": 0
+                },
+                "child": {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Stored Value for key:name",
+                            "align": "center",
+                            "style": {
+                                "fontSize": 16
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "data": "$MiraiStorage('token')",
+                            "align": "center",
+                            "style": {
+                                "fontSize": 16
+                            }
+                        }
+                    ]
                 }
             }
         ]

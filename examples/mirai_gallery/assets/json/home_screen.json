@@ -227,7 +227,7 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
-                        "icon": "layers"
+                        "icon": "storage"
                     },
                     "title": {
                         "type": "text",
