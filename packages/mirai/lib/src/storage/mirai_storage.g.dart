@@ -9,7 +9,7 @@ part of 'mirai_storage.dart';
 _$_MiraiStorage _$$_MiraiStorageFromJson(Map<String, dynamic> json) =>
     _$_MiraiStorage(
       type: $enumDecodeNullable(_$MiraiStorageTypeEnumMap, json['type']) ??
-          MiraiStorageType.retreive,
+          MiraiStorageType.read,
       key: json['key'] as String,
       value: json['value'] as String?,
     );
@@ -22,7 +22,7 @@ Map<String, dynamic> _$$_MiraiStorageToJson(_$_MiraiStorage instance) =>
     };
 
 const _$MiraiStorageTypeEnumMap = {
+  MiraiStorageType.write: 'write',
+  MiraiStorageType.read: 'read',
   MiraiStorageType.delete: 'delete',
-  MiraiStorageType.store: 'store',
-  MiraiStorageType.retreive: 'retreive',
 };

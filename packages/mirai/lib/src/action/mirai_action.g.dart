@@ -39,6 +39,7 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
 const _$ActionTypeEnumMap = {
   ActionType.navigate: 'navigate',
   ActionType.request: 'request',
+  ActionType.storage: 'storage',
   ActionType.none: 'none',
 };
 

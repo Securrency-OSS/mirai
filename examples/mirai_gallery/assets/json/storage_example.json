@@ -25,7 +25,7 @@
                         "type": "outlinedButton",
                         "child": {
                             "type": "text",
-                            "data": "Store 'name:jack'"
+                            "data": "write 'name:jack'"
                         },
                         "style": {
                             "padding": {
@@ -37,7 +37,7 @@
                         },
                         "onPressed": {
                             "storage": {
-                                "type": "store",
+                                "type": "write",
                                 "key": "name",
                                 "value": "jack"
                             }
@@ -51,7 +51,7 @@
                         "type": "outlinedButton",
                         "child": {
                             "type": "text",
-                            "data": "Retreive 'name:'"
+                            "data": "read 'name:'"
                         },
                         "style": {
                             "padding": {
@@ -63,7 +63,7 @@
                         },
                         "onPressed": {
                             "storage": {
-                                "type": "retreive",
+                                "type": "read",
                                 "key": "name"
                             }
                         }
@@ -109,25 +109,31 @@
                     "right": 0
                 },
                 "child": {
-                    "type": "column",
-                    "children": [
-                        {
-                            "type": "text",
-                            "data": "Stored Value for key:name",
-                            "align": "center",
-                            "style": {
-                                "fontSize": 16
+                    "type": "storageWidget",
+                    "storageKeys": [
+                        "name"
+                    ],
+                    "body": {
+                        "type": "column",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "writed Value for key:name",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 16
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "data": "$name",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 16
+                                }
                             }
-                        },
-                        {
-                            "type": "text",
-                            "data": "$MiraiStorage('token')",
-                            "align": "center",
-                            "style": {
-                                "fontSize": 16
-                            }
-                        }
-                    ]
+                        ]
+                    }
                 }
             }
         ]

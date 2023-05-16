@@ -6,7 +6,7 @@ import 'package:mirai/src/storage/mirai_storage.dart';
 part 'mirai_action.freezed.dart';
 part 'mirai_action.g.dart';
 
-enum ActionType { navigate, request, none }
+enum ActionType { navigate, request, storage, none }
 
 @freezed
 class MiraiAction with _$MiraiAction {

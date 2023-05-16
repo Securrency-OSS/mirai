@@ -120,7 +120,7 @@ class __$$_MiraiStorageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiStorage implements _MiraiStorage {
   _$_MiraiStorage(
-      {this.type = MiraiStorageType.retreive, required this.key, this.value});
+      {this.type = MiraiStorageType.read, required this.key, this.value});
 
   factory _$_MiraiStorage.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiStorageFromJson(json);
