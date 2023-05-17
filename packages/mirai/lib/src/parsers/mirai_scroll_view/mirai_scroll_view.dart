@@ -12,14 +12,18 @@ part 'mirai_scroll_view.g.dart';
 @freezed
 class MiraiScrollView with _$MiraiScrollView {
   const factory MiraiScrollView({
-    @Default(Axis.vertical) Axis scrollDirection,
-    @Default(false) bool reverse,
+    @Default(Axis.vertical)
+        Axis scrollDirection,
+    @Default(false)
+        bool reverse,
     MiraiEdgeInsets? padding,
     bool? primary,
     MiraiScrollPhysics? physics,
     Map<String, dynamic>? child,
-    @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
-    @Default(Clip.hardEdge) Clip clipBehavior,
+    @Default(DragStartBehavior.start)
+        DragStartBehavior dragStartBehavior,
+    @Default(Clip.hardEdge)
+        Clip clipBehavior,
     String? restorationId,
     @Default(ScrollViewKeyboardDismissBehavior.manual)
         ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
