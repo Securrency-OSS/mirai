@@ -15,7 +15,8 @@ class MiraiFloatingActionButton with _$MiraiFloatingActionButton {
     MiraiTextStyle? textStyle,
     @Default(FloatingActionButtonType.small)
         FloatingActionButtonType buttonType,
-    @Default(false) bool autofocus,
+    @Default(false)
+        bool autofocus,
     Map<String, dynamic>? icon,
     String? backgroundColor,
     String? foregroundColor,
