@@ -185,7 +185,6 @@ class MiraiApp extends StatelessWidget {
       restorationScopeId: restorationScopeId,
       scrollBehavior: scrollBehavior,
       debugShowMaterialGrid: debugShowMaterialGrid,
-      useInheritedMediaQuery: useInheritedMediaQuery,
     );
   }
 
@@ -223,7 +222,6 @@ class MiraiApp extends StatelessWidget {
       actions: actions,
       restorationScopeId: restorationScopeId,
       scrollBehavior: scrollBehavior,
-      useInheritedMediaQuery: useInheritedMediaQuery,
     );
   }
 }
