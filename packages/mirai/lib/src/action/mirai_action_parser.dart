@@ -55,12 +55,11 @@ extension MiraiActionParser on MiraiAction? {
           return MiraiNetwork.request(this!.request!);
 
         case ActionType.storage:
-          switch (this?.storage?.type ?? MiraiStorageType.read) {
+          switch (this?.storage?.type ?? MiraiStorageType.write) {
             case MiraiStorageType.write:
               return SecureStorage.write(
                   this?.storage?.key ?? "", this?.storage?.value ?? "");
-            case MiraiStorageType.read:
-              return SecureStorage.read(this?.storage?.key ?? "");
+
             case MiraiStorageType.delete:
               return SecureStorage.delete(this?.storage?.key ?? "");
           }
