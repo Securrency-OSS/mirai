@@ -17,17 +17,15 @@ class MiraiStorageWidgetParser extends MiraiParser<MiraiStorageWidget> {
 
   @override
   Widget parse(BuildContext context, MiraiStorageWidget model) {
-    Map<String, dynamic> bodyJson = Map<String, dynamic>.from(model.body);
-
     return FutureBuilder<Map<String, dynamic>>(
       future: _loadDataFromStorage(model.storageKeys),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           snapshot.data.forEach((key, value) {
-            _updateBodyJson(bodyJson, key, value);
+            _updateBodyJson(model.body, key, value);
           });
 
-          return Mirai.fromJson(bodyJson, context) ?? const SizedBox();
+          return Mirai.fromJson(model.body, context) ?? const SizedBox();
         }
 
         return const Center(
@@ -38,7 +36,7 @@ class MiraiStorageWidgetParser extends MiraiParser<MiraiStorageWidget> {
   }
 
   Future<Map<String, dynamic>> _loadDataFromStorage(List<String> keys) async {
-    Map<String, String> data = {};
+    final Map<String, String> data = {};
 
     for (String key in keys) {
       final value = await StorageManager.read(key) ?? "";
@@ -50,7 +48,7 @@ class MiraiStorageWidgetParser extends MiraiParser<MiraiStorageWidget> {
 
   _updateBodyJson(Map<String, dynamic> data, String key, dynamic value) {
     for (MapEntry<String, dynamic> mapEntry in data.entries) {
-      if (key.sameKeySymbol("${mapEntry.value}")) {
+      if (_sameKeySymbol(key, "${mapEntry.value}")) {
         try {
           data.update(
             mapEntry.key,
@@ -74,15 +72,13 @@ class MiraiStorageWidgetParser extends MiraiParser<MiraiStorageWidget> {
       }
     }
   }
-}
 
-extension StringExt on String {
-  bool sameKeySymbol(String value) {
-    if (value == this) {
+  bool _sameKeySymbol(String value1, String value2) {
+    if (value1 == value2) {
       return true;
-    } else if (contains("\$") || value.contains("\$")) {
-      if (replaceAll(RegExp(r'[^\w\s]+'), '') ==
-          value.replaceAll(RegExp(r'[^\w\s]+'), '')) {
+    } else if (value1.contains("\$") || value2.contains("\$")) {
+      if (value1.replaceAll(RegExp(r'[^\w\s]+'), '') ==
+          value2.replaceAll(RegExp(r'[^\w\s]+'), '')) {
         return true;
       }
     }

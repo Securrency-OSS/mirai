@@ -46,28 +46,6 @@
                     {
                         "type": "sizedBox",
                         "width": 12
-                    },
-                    {
-                        "type": "outlinedButton",
-                        "child": {
-                            "type": "text",
-                            "data": "read 'name:'"
-                        },
-                        "style": {
-                            "padding": {
-                                "top": 8,
-                                "left": 12,
-                                "right": 12,
-                                "bottom": 8
-                            }
-                        },
-                        "onPressed": {
-                            "actionType": "storage",
-                            "storage": {
-                                "type": "read",
-                                "key": "name"
-                            }
-                        }
                     }
                 ]
             },
