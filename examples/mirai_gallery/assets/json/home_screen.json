@@ -227,6 +227,38 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "storage"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Storage",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "This is an example of how mirai-storage works.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/storage_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "apartment"
                     },
                     "title": {

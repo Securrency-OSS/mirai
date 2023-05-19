@@ -1,0 +1,143 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Storage"
+        }
+    },
+    "body": {
+        "type": "column",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "row",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "outlinedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "write 'name:jack'"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "storage",
+                            "storage": {
+                                "type": "write",
+                                "key": "name",
+                                "value": "jack"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "width": 12
+                    },
+                    {
+                        "type": "outlinedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "read 'name:'"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "storage",
+                            "storage": {
+                                "type": "read",
+                                "key": "name"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "center",
+                "child": {
+                    "type": "outlinedButton",
+                    "child": {
+                        "type": "text",
+                        "data": "Delete 'name:'"
+                    },
+                    "style": {
+                        "padding": {
+                            "top": 8,
+                            "left": 12,
+                            "right": 12,
+                            "bottom": 8
+                        }
+                    },
+                    "onPressed": {
+                        "actionType": "storage",
+                        "storage": {
+                            "type": "delete",
+                            "key": "name"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "sizedBox",
+                "height": 24
+            },
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 0,
+                    "right": 0
+                },
+                "child": {
+                    "type": "storageWidget",
+                    "storageKeys": [
+                        "name"
+                    ],
+                    "body": {
+                        "type": "column",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "writed Value for key:name",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 16
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "data": "$name",
+                                "align": "center",
+                                "style": {
+                                    "fontSize": 16
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
