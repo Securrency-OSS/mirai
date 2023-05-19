@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
@@ -11,6 +12,7 @@ import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
+import 'package:mirai/src/storage/storage_manager.dart';
 import 'package:mirai/src/utils/log.dart';
 
 typedef ErrorWidgetBuilder = Widget Function(
@@ -62,6 +64,7 @@ class Mirai {
     _parsers.addAll(parsers);
     MiraiRegistry.instance.registerAll(_parsers);
     MiraiNetwork.initialize(dio ?? Dio());
+    StorageManager.initialize(const FlutterSecureStorage())
   }
 
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {

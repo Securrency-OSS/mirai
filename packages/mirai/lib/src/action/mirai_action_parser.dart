@@ -4,7 +4,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/storage/mirai_storage.dart';
-import 'package:mirai/src/storage/secure_storage.dart';
+import 'package:mirai/src/storage/storage_manager.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
