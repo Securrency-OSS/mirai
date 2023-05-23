@@ -51,5 +51,11 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "bottomAppBarTheme": {
+        "color": "#DB1A3A",
+        "elevation": 2,
+        "surfaceTintColor": "#ffffff",
+        "shadowColor": "#002231"
     }
 }
