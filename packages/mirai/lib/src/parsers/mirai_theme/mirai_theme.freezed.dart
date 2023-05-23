@@ -52,6 +52,8 @@ mixin _$MiraiTheme {
   MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
   MiraiIconThemeData? get primaryIconTheme =>
       throw _privateConstructorUsedError;
+  MiraiBottomAppBarTheme? get bottomAppBarTheme =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -94,7 +96,8 @@ abstract class $MiraiThemeCopyWith<$Res> {
       MiraiButtonStyle? outlinedButtonTheme,
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
-      MiraiIconThemeData? primaryIconTheme});
+      MiraiIconThemeData? primaryIconTheme,
+      MiraiBottomAppBarTheme? bottomAppBarTheme});
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
@@ -103,6 +106,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiButtonStyleCopyWith<$Res>? get iconButtonTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
+  $MiraiBottomAppBarThemeCopyWith<$Res>? get bottomAppBarTheme;
 }
 
 /// @nodoc
@@ -147,6 +151,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? iconButtonTheme = freezed,
     Object? iconTheme = freezed,
     Object? primaryIconTheme = freezed,
+    Object? bottomAppBarTheme = freezed,
   }) {
     return _then(_value.copyWith(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -265,6 +270,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.primaryIconTheme
           : primaryIconTheme // ignore: cast_nullable_to_non_nullable
               as MiraiIconThemeData?,
+      bottomAppBarTheme: freezed == bottomAppBarTheme
+          ? _value.bottomAppBarTheme
+          : bottomAppBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiBottomAppBarTheme?,
     ) as $Val);
   }
 
@@ -353,6 +362,19 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
       return _then(_value.copyWith(primaryIconTheme: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBottomAppBarThemeCopyWith<$Res>? get bottomAppBarTheme {
+    if (_value.bottomAppBarTheme == null) {
+      return null;
+    }
+
+    return $MiraiBottomAppBarThemeCopyWith<$Res>(_value.bottomAppBarTheme!,
+        (value) {
+      return _then(_value.copyWith(bottomAppBarTheme: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -392,7 +414,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       MiraiButtonStyle? outlinedButtonTheme,
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
-      MiraiIconThemeData? primaryIconTheme});
+      MiraiIconThemeData? primaryIconTheme,
+      MiraiBottomAppBarTheme? bottomAppBarTheme});
 
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
@@ -408,6 +431,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
   @override
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
+  @override
+  $MiraiBottomAppBarThemeCopyWith<$Res>? get bottomAppBarTheme;
 }
 
 /// @nodoc
@@ -450,6 +475,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? iconButtonTheme = freezed,
     Object? iconTheme = freezed,
     Object? primaryIconTheme = freezed,
+    Object? bottomAppBarTheme = freezed,
   }) {
     return _then(_$_MiraiTheme(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -568,6 +594,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.primaryIconTheme
           : primaryIconTheme // ignore: cast_nullable_to_non_nullable
               as MiraiIconThemeData?,
+      bottomAppBarTheme: freezed == bottomAppBarTheme
+          ? _value.bottomAppBarTheme
+          : bottomAppBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiBottomAppBarTheme?,
     ));
   }
 }
@@ -604,7 +634,8 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.outlinedButtonTheme,
       this.iconButtonTheme,
       this.iconTheme,
-      this.primaryIconTheme});
+      this.primaryIconTheme,
+      this.bottomAppBarTheme});
 
   factory _$_MiraiTheme.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiThemeFromJson(json);
@@ -667,10 +698,12 @@ class _$_MiraiTheme implements _MiraiTheme {
   final MiraiIconThemeData? iconTheme;
   @override
   final MiraiIconThemeData? primaryIconTheme;
+  @override
+  final MiraiBottomAppBarTheme? bottomAppBarTheme;
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, bottomAppBarTheme: $bottomAppBarTheme)';
   }
 
   @override
@@ -678,8 +711,7 @@ class _$_MiraiTheme implements _MiraiTheme {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiTheme &&
-            (identical(other.applyElevationOverlayColor,
-                    applyElevationOverlayColor) ||
+            (identical(other.applyElevationOverlayColor, applyElevationOverlayColor) ||
                 other.applyElevationOverlayColor ==
                     applyElevationOverlayColor) &&
             (identical(other.useMaterial3, useMaterial3) ||
@@ -718,7 +750,8 @@ class _$_MiraiTheme implements _MiraiTheme {
                 other.primaryColorLight == primaryColorLight) &&
             (identical(other.primarySwatch, primarySwatch) ||
                 other.primarySwatch == primarySwatch) &&
-            (identical(other.scaffoldBackgroundColor, scaffoldBackgroundColor) ||
+            (identical(
+                    other.scaffoldBackgroundColor, scaffoldBackgroundColor) ||
                 other.scaffoldBackgroundColor == scaffoldBackgroundColor) &&
             (identical(other.secondaryHeaderColor, secondaryHeaderColor) ||
                 other.secondaryHeaderColor == secondaryHeaderColor) &&
@@ -737,7 +770,9 @@ class _$_MiraiTheme implements _MiraiTheme {
             (identical(other.iconTheme, iconTheme) ||
                 other.iconTheme == iconTheme) &&
             (identical(other.primaryIconTheme, primaryIconTheme) ||
-                other.primaryIconTheme == primaryIconTheme));
+                other.primaryIconTheme == primaryIconTheme) &&
+            (identical(other.bottomAppBarTheme, bottomAppBarTheme) ||
+                other.bottomAppBarTheme == bottomAppBarTheme));
   }
 
   @JsonKey(ignore: true)
@@ -772,7 +807,8 @@ class _$_MiraiTheme implements _MiraiTheme {
         outlinedButtonTheme,
         iconButtonTheme,
         iconTheme,
-        primaryIconTheme
+        primaryIconTheme,
+        bottomAppBarTheme
       ]);
 
   @JsonKey(ignore: true)
@@ -819,7 +855,8 @@ abstract class _MiraiTheme implements MiraiTheme {
       final MiraiButtonStyle? outlinedButtonTheme,
       final MiraiButtonStyle? iconButtonTheme,
       final MiraiIconThemeData? iconTheme,
-      final MiraiIconThemeData? primaryIconTheme}) = _$_MiraiTheme;
+      final MiraiIconThemeData? primaryIconTheme,
+      final MiraiBottomAppBarTheme? bottomAppBarTheme}) = _$_MiraiTheme;
 
   factory _MiraiTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiTheme.fromJson;
@@ -882,6 +919,8 @@ abstract class _MiraiTheme implements MiraiTheme {
   MiraiIconThemeData? get iconTheme;
   @override
   MiraiIconThemeData? get primaryIconTheme;
+  @override
+  MiraiBottomAppBarTheme? get bottomAppBarTheme;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiThemeCopyWith<_$_MiraiTheme> get copyWith =>
