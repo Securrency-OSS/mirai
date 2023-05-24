@@ -51,5 +51,14 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "bottomSheetTheme": {
+        "backgroundColor": "#4D00E9",
+        "surfaceTintColor": "#ffffff",
+        "elevation": 5,
+        "modalBackgroundColor": "#4D00E9",
+        "modalBarrierColor": "#60FFFFFF",
+        "shadowColor": "#002231",
+        "modalElevation": 5
     }
 }
