@@ -24,5 +24,11 @@
             "foregroundColor": "#9283E5",
             "disabledForegroundColor": "#609283E5"
         }
+    },
+    "bottomNavigationBarTheme": {
+        "backgroundColor": "#4D00E9",
+        "selectedItemColor": "#ffffff",
+        "unselectedItemColor": "#80ffffff",
+        "elevation": 2
     }
 }

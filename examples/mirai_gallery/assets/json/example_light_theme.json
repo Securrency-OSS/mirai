@@ -51,5 +51,11 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "bottomNavigationBarTheme": {
+        "backgroundColor": "#27BA62",
+        "selectedItemColor": "#4D00E9",
+        "unselectedItemColor": "#804D00E9",
+        "elevation": 2
     }
 }
