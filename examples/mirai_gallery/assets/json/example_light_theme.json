@@ -51,5 +51,10 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "buttonTheme": {
+        "buttonColor": "#4D00E9",
+        "disabledColor": "#60FFFFFF",
+        "focusColor": "#f5f5f5"
     }
 }
