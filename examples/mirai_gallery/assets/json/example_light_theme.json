@@ -51,5 +51,14 @@
                 "blurRadius": 1
             }
         ]
+    },
+    "dialogTheme": {
+        "backgroundColor": "#D9D9D9",
+        "elevation": 2,
+        "shadowColor": "#002231",
+        "surfaceTintColor": "#DB1A3A",
+        "shape": {
+            "color": "#4D00E9"
+        }
     }
 }
