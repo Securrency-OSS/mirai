@@ -20,51 +20,38 @@ class MiraiTextFormField with _$MiraiTextFormField {
     String? initialValue,
     MiraiTextInputType? keyboardType,
     TextInputAction? textInputAction,
-    @Default(TextCapitalization.none)
-        TextCapitalization textCapitalization,
+    @Default(TextCapitalization.none) TextCapitalization textCapitalization,
     MiraiTextStyle? style,
-    @Default(TextAlign.start)
-        TextAlign textAlign,
+    @Default(TextAlign.start) TextAlign textAlign,
     MiraiTextAlignVertical? textAlignVertical,
     TextDirection? textDirection,
-    @Default(false)
-        bool readOnly,
+    @Default(false) bool readOnly,
     bool? showCursor,
-    @Default(false)
-        bool autofocus,
-    @Default('•')
-        String obscuringCharacter,
+    @Default(false) bool autofocus,
+    @Default('•') String obscuringCharacter,
     int? maxLines,
     int? minLines,
     int? maxLength,
-    @Default(false)
-        bool obscureText,
-    @Default(true)
-        bool autocorrect,
+    @Default(false) bool obscureText,
+    @Default(true) bool autocorrect,
     SmartDashesType? smartDashesType,
     SmartQuotesType? smartQuotesType,
     MaxLengthEnforcement? maxLengthEnforcement,
-    @Default(false)
-        bool expands,
+    @Default(false) bool expands,
     Brightness? keyboardAppearance,
     @Default(MiraiEdgeInsets(bottom: 20, top: 20, left: 20, right: 20))
-        MiraiEdgeInsets scrollPadding,
+    MiraiEdgeInsets scrollPadding,
     String? restorationId,
-    @Default(true)
-        bool enableIMEPersonalizedLearning,
-    @Default(true)
-        bool enableSuggestions,
+    @Default(true) bool enableIMEPersonalizedLearning,
+    @Default(true) bool enableSuggestions,
     bool? enabled,
-    @Default(2)
-        double cursorWidth,
+    @Default(2) double cursorWidth,
     double? cursorHeight,
     String? cursorColor,
     String? hintText,
     AutovalidateMode? autovalidateMode,
-    @Default([])
-        List<MiraiInputFormatter> inputFormatters,
-    @Default([])
-        List<MiraiFormFieldValidator> validatorRules,
+    @Default([]) List<MiraiInputFormatter> inputFormatters,
+    @Default([]) List<MiraiFormFieldValidator> validatorRules,
   }) = _MiraiTextFormField;
 
   factory MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
