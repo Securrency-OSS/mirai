@@ -43,6 +43,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiButtonStyle? iconButtonTheme,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
+    MiraiButtonStyle? textButtonTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -83,6 +84,7 @@ extension MiraiThemeParser on MiraiTheme {
       iconButtonTheme: IconButtonThemeData(style: iconButtonTheme?.parseIcon),
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
+      textButtonTheme: TextButtonThemeData(style: textButtonTheme?.parseText),
     );
   }
 }
