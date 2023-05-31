@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'mirai_system_ui_olverlay_style.dart';
+part of 'mirai_system_ui_overlay_style.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

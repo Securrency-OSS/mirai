@@ -2,8 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
-part 'mirai_system_ui_olverlay_style.freezed.dart';
-part 'mirai_system_ui_olverlay_style.g.dart';
+part 'mirai_system_ui_overlay_style.freezed.dart';
+part 'mirai_system_ui_overlay_style.g.dart';
 
 @freezed
 class MiraiSystemUIOverlayStyle with _$MiraiSystemUIOverlayStyle {
