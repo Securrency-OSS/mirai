@@ -35,6 +35,7 @@ mixin _$MiraiButtonStyle {
   MiraiSize? get fixedSize => throw _privateConstructorUsedError;
   MiraiSize? get maximumSize => throw _privateConstructorUsedError;
   bool? get enableFeedback => throw _privateConstructorUsedError;
+  double? get iconSize => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,7 +64,8 @@ abstract class $MiraiButtonStyleCopyWith<$Res> {
       MiraiSize? minimumSize,
       MiraiSize? fixedSize,
       MiraiSize? maximumSize,
-      bool? enableFeedback});
+      bool? enableFeedback,
+      double? iconSize});
 
   $MiraiTextStyleCopyWith<$Res>? get textStyle;
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
@@ -100,6 +102,7 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
     Object? fixedSize = freezed,
     Object? maximumSize = freezed,
     Object? enableFeedback = freezed,
+    Object? iconSize = freezed,
   }) {
     return _then(_value.copyWith(
       foregroundColor: freezed == foregroundColor
@@ -162,6 +165,10 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
               as bool?,
+      iconSize: freezed == iconSize
+          ? _value.iconSize
+          : iconSize // ignore: cast_nullable_to_non_nullable
+              as double?,
     ) as $Val);
   }
 
@@ -249,7 +256,8 @@ abstract class _$$_MiraiButtonStyleCopyWith<$Res>
       MiraiSize? minimumSize,
       MiraiSize? fixedSize,
       MiraiSize? maximumSize,
-      bool? enableFeedback});
+      bool? enableFeedback,
+      double? iconSize});
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get textStyle;
@@ -289,6 +297,7 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
     Object? fixedSize = freezed,
     Object? maximumSize = freezed,
     Object? enableFeedback = freezed,
+    Object? iconSize = freezed,
   }) {
     return _then(_$_MiraiButtonStyle(
       foregroundColor: freezed == foregroundColor
@@ -351,6 +360,10 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
               as bool?,
+      iconSize: freezed == iconSize
+          ? _value.iconSize
+          : iconSize // ignore: cast_nullable_to_non_nullable
+              as double?,
     ));
   }
 }
@@ -373,7 +386,8 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       this.minimumSize,
       this.fixedSize,
       this.maximumSize,
-      this.enableFeedback});
+      this.enableFeedback,
+      this.iconSize});
 
   factory _$_MiraiButtonStyle.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiButtonStyleFromJson(json);
@@ -408,10 +422,12 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
   final MiraiSize? maximumSize;
   @override
   final bool? enableFeedback;
+  @override
+  final double? iconSize;
 
   @override
   String toString() {
-    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconColor: $iconColor, disabledIconColor: $disabledIconColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, enableFeedback: $enableFeedback)';
+    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconColor: $iconColor, disabledIconColor: $disabledIconColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, enableFeedback: $enableFeedback, iconSize: $iconSize)';
   }
 
   @override
@@ -449,7 +465,9 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
             (identical(other.maximumSize, maximumSize) ||
                 other.maximumSize == maximumSize) &&
             (identical(other.enableFeedback, enableFeedback) ||
-                other.enableFeedback == enableFeedback));
+                other.enableFeedback == enableFeedback) &&
+            (identical(other.iconSize, iconSize) ||
+                other.iconSize == iconSize));
   }
 
   @JsonKey(ignore: true)
@@ -470,7 +488,8 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       minimumSize,
       fixedSize,
       maximumSize,
-      enableFeedback);
+      enableFeedback,
+      iconSize);
 
   @JsonKey(ignore: true)
   @override
@@ -502,7 +521,8 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
       final MiraiSize? minimumSize,
       final MiraiSize? fixedSize,
       final MiraiSize? maximumSize,
-      final bool? enableFeedback}) = _$_MiraiButtonStyle;
+      final bool? enableFeedback,
+      final double? iconSize}) = _$_MiraiButtonStyle;
 
   factory _MiraiButtonStyle.fromJson(Map<String, dynamic> json) =
       _$_MiraiButtonStyle.fromJson;
@@ -537,6 +557,8 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
   MiraiSize? get maximumSize;
   @override
   bool? get enableFeedback;
+  @override
+  double? get iconSize;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiButtonStyleCopyWith<_$_MiraiButtonStyle> get copyWith =>

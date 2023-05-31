@@ -55,6 +55,11 @@ mixin _$MiraiTextFormField {
   double? get cursorHeight => throw _privateConstructorUsedError;
   String? get cursorColor => throw _privateConstructorUsedError;
   String? get hintText => throw _privateConstructorUsedError;
+  AutovalidateMode? get autovalidateMode => throw _privateConstructorUsedError;
+  List<MiraiInputFormatter> get inputFormatters =>
+      throw _privateConstructorUsedError;
+  List<MiraiFormFieldValidator> get validatorRules =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -100,7 +105,10 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String? hintText});
+      String? hintText,
+      AutovalidateMode? autovalidateMode,
+      List<MiraiInputFormatter> inputFormatters,
+      List<MiraiFormFieldValidator> validatorRules});
 
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
   $MiraiTextStyleCopyWith<$Res>? get style;
@@ -152,6 +160,9 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
     Object? hintText = freezed,
+    Object? autovalidateMode = freezed,
+    Object? inputFormatters = null,
+    Object? validatorRules = null,
   }) {
     return _then(_value.copyWith(
       decoration: freezed == decoration
@@ -282,6 +293,18 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
               as String?,
+      autovalidateMode: freezed == autovalidateMode
+          ? _value.autovalidateMode
+          : autovalidateMode // ignore: cast_nullable_to_non_nullable
+              as AutovalidateMode?,
+      inputFormatters: null == inputFormatters
+          ? _value.inputFormatters
+          : inputFormatters // ignore: cast_nullable_to_non_nullable
+              as List<MiraiInputFormatter>,
+      validatorRules: null == validatorRules
+          ? _value.validatorRules
+          : validatorRules // ignore: cast_nullable_to_non_nullable
+              as List<MiraiFormFieldValidator>,
     ) as $Val);
   }
 
@@ -358,7 +381,10 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
       double cursorWidth,
       double? cursorHeight,
       String? cursorColor,
-      String? hintText});
+      String? hintText,
+      AutovalidateMode? autovalidateMode,
+      List<MiraiInputFormatter> inputFormatters,
+      List<MiraiFormFieldValidator> validatorRules});
 
   @override
   $MiraiInputDecorationCopyWith<$Res>? get decoration;
@@ -411,6 +437,9 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? cursorHeight = freezed,
     Object? cursorColor = freezed,
     Object? hintText = freezed,
+    Object? autovalidateMode = freezed,
+    Object? inputFormatters = null,
+    Object? validatorRules = null,
   }) {
     return _then(_$_MiraiTextFormField(
       decoration: freezed == decoration
@@ -541,6 +570,18 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
           ? _value.hintText
           : hintText // ignore: cast_nullable_to_non_nullable
               as String?,
+      autovalidateMode: freezed == autovalidateMode
+          ? _value.autovalidateMode
+          : autovalidateMode // ignore: cast_nullable_to_non_nullable
+              as AutovalidateMode?,
+      inputFormatters: null == inputFormatters
+          ? _value._inputFormatters
+          : inputFormatters // ignore: cast_nullable_to_non_nullable
+              as List<MiraiInputFormatter>,
+      validatorRules: null == validatorRules
+          ? _value._validatorRules
+          : validatorRules // ignore: cast_nullable_to_non_nullable
+              as List<MiraiFormFieldValidator>,
     ));
   }
 }
@@ -581,7 +622,12 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       this.cursorWidth = 2,
       this.cursorHeight,
       this.cursorColor,
-      this.hintText});
+      this.hintText,
+      this.autovalidateMode,
+      final List<MiraiInputFormatter> inputFormatters = const [],
+      final List<MiraiFormFieldValidator> validatorRules = const []})
+      : _inputFormatters = inputFormatters,
+        _validatorRules = validatorRules;
 
   factory _$_MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFormFieldFromJson(json);
@@ -662,10 +708,29 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   final String? cursorColor;
   @override
   final String? hintText;
+  @override
+  final AutovalidateMode? autovalidateMode;
+  final List<MiraiInputFormatter> _inputFormatters;
+  @override
+  @JsonKey()
+  List<MiraiInputFormatter> get inputFormatters {
+    if (_inputFormatters is EqualUnmodifiableListView) return _inputFormatters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_inputFormatters);
+  }
+
+  final List<MiraiFormFieldValidator> _validatorRules;
+  @override
+  @JsonKey()
+  List<MiraiFormFieldValidator> get validatorRules {
+    if (_validatorRules is EqualUnmodifiableListView) return _validatorRules;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_validatorRules);
+  }
 
   @override
   String toString() {
-    return 'MiraiTextFormField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText)';
+    return 'MiraiTextFormField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText, autovalidateMode: $autovalidateMode, inputFormatters: $inputFormatters, validatorRules: $validatorRules)';
   }
 
   @override
@@ -735,7 +800,13 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
             (identical(other.cursorColor, cursorColor) ||
                 other.cursorColor == cursorColor) &&
             (identical(other.hintText, hintText) ||
-                other.hintText == hintText));
+                other.hintText == hintText) &&
+            (identical(other.autovalidateMode, autovalidateMode) ||
+                other.autovalidateMode == autovalidateMode) &&
+            const DeepCollectionEquality()
+                .equals(other._inputFormatters, _inputFormatters) &&
+            const DeepCollectionEquality()
+                .equals(other._validatorRules, _validatorRules));
   }
 
   @JsonKey(ignore: true)
@@ -773,7 +844,10 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
         cursorWidth,
         cursorHeight,
         cursorColor,
-        hintText
+        hintText,
+        autovalidateMode,
+        const DeepCollectionEquality().hash(_inputFormatters),
+        const DeepCollectionEquality().hash(_validatorRules)
       ]);
 
   @JsonKey(ignore: true)
@@ -793,38 +867,42 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
-      {final MiraiInputDecoration? decoration,
-      final String? initialValue,
-      final MiraiTextInputType? keyboardType,
-      final TextInputAction? textInputAction,
-      final TextCapitalization textCapitalization,
-      final MiraiTextStyle? style,
-      final TextAlign textAlign,
-      final MiraiTextAlignVertical? textAlignVertical,
-      final TextDirection? textDirection,
-      final bool readOnly,
-      final bool? showCursor,
-      final bool autofocus,
-      final String obscuringCharacter,
-      final int? maxLines,
-      final int? minLines,
-      final int? maxLength,
-      final bool obscureText,
-      final bool autocorrect,
-      final SmartDashesType? smartDashesType,
-      final SmartQuotesType? smartQuotesType,
-      final MaxLengthEnforcement? maxLengthEnforcement,
-      final bool expands,
-      final Brightness? keyboardAppearance,
-      final MiraiEdgeInsets scrollPadding,
-      final String? restorationId,
-      final bool enableIMEPersonalizedLearning,
-      final bool enableSuggestions,
-      final bool? enabled,
-      final double cursorWidth,
-      final double? cursorHeight,
-      final String? cursorColor,
-      final String? hintText}) = _$_MiraiTextFormField;
+          {final MiraiInputDecoration? decoration,
+          final String? initialValue,
+          final MiraiTextInputType? keyboardType,
+          final TextInputAction? textInputAction,
+          final TextCapitalization textCapitalization,
+          final MiraiTextStyle? style,
+          final TextAlign textAlign,
+          final MiraiTextAlignVertical? textAlignVertical,
+          final TextDirection? textDirection,
+          final bool readOnly,
+          final bool? showCursor,
+          final bool autofocus,
+          final String obscuringCharacter,
+          final int? maxLines,
+          final int? minLines,
+          final int? maxLength,
+          final bool obscureText,
+          final bool autocorrect,
+          final SmartDashesType? smartDashesType,
+          final SmartQuotesType? smartQuotesType,
+          final MaxLengthEnforcement? maxLengthEnforcement,
+          final bool expands,
+          final Brightness? keyboardAppearance,
+          final MiraiEdgeInsets scrollPadding,
+          final String? restorationId,
+          final bool enableIMEPersonalizedLearning,
+          final bool enableSuggestions,
+          final bool? enabled,
+          final double cursorWidth,
+          final double? cursorHeight,
+          final String? cursorColor,
+          final String? hintText,
+          final AutovalidateMode? autovalidateMode,
+          final List<MiraiInputFormatter> inputFormatters,
+          final List<MiraiFormFieldValidator> validatorRules}) =
+      _$_MiraiTextFormField;
 
   factory _MiraiTextFormField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextFormField.fromJson;
@@ -893,6 +971,12 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   String? get cursorColor;
   @override
   String? get hintText;
+  @override
+  AutovalidateMode? get autovalidateMode;
+  @override
+  List<MiraiInputFormatter> get inputFormatters;
+  @override
+  List<MiraiFormFieldValidator> get validatorRules;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextFormFieldCopyWith<_$_MiraiTextFormField> get copyWith =>

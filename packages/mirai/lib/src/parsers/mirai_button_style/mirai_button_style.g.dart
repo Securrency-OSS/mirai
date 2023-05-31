@@ -33,6 +33,7 @@ _$_MiraiButtonStyle _$$_MiraiButtonStyleFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiSize.fromJson(json['maximumSize'] as Map<String, dynamic>),
       enableFeedback: json['enableFeedback'] as bool?,
+      iconSize: (json['iconSize'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$_MiraiButtonStyleToJson(_$_MiraiButtonStyle instance) =>
@@ -52,4 +53,5 @@ Map<String, dynamic> _$$_MiraiButtonStyleToJson(_$_MiraiButtonStyle instance) =>
       'fixedSize': instance.fixedSize,
       'maximumSize': instance.maximumSize,
       'enableFeedback': instance.enableFeedback,
+      'iconSize': instance.iconSize,
     };

@@ -1,0 +1,28 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Center"
+        }
+    },
+    "body": {
+        "type": "center",
+        "child": {
+            "type": "container",
+            "alignment": "center",
+            "height": 200,
+            "width": 150,
+            "color": "#800000",
+            "child": {
+                "type": "text",
+                "data": "Flutter",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": 23
+                }
+            }
+        }
+    }
+}
