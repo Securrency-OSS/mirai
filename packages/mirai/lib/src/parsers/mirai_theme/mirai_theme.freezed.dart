@@ -44,6 +44,7 @@ mixin _$MiraiTheme {
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
   String? get unselectedWidgetColor => throw _privateConstructorUsedError;
+  MiraiAppBarTheme? get appBarTheme => throw _privateConstructorUsedError;
   MiraiButtonStyle? get elevatedButtonTheme =>
       throw _privateConstructorUsedError;
   MiraiButtonStyle? get outlinedButtonTheme =>
@@ -91,6 +92,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
       String? shadowColor,
       String? splashColor,
       String? unselectedWidgetColor,
+      MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
       MiraiButtonStyle? outlinedButtonTheme,
       MiraiButtonStyle? iconButtonTheme,
@@ -100,6 +102,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
   $MiraiButtonStyleCopyWith<$Res>? get elevatedButtonTheme;
   $MiraiButtonStyleCopyWith<$Res>? get outlinedButtonTheme;
   $MiraiButtonStyleCopyWith<$Res>? get iconButtonTheme;
@@ -145,6 +148,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
+    Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
     Object? outlinedButtonTheme = freezed,
     Object? iconButtonTheme = freezed,
@@ -249,6 +253,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      appBarTheme: freezed == appBarTheme
+          ? _value.appBarTheme
+          : appBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiAppBarTheme?,
       elevatedButtonTheme: freezed == elevatedButtonTheme
           ? _value.elevatedButtonTheme
           : elevatedButtonTheme // ignore: cast_nullable_to_non_nullable
@@ -297,6 +305,18 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
     return $MiraiMaterialColorCopyWith<$Res>(_value.primarySwatch!, (value) {
       return _then(_value.copyWith(primarySwatch: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme {
+    if (_value.appBarTheme == null) {
+      return null;
+    }
+
+    return $MiraiAppBarThemeCopyWith<$Res>(_value.appBarTheme!, (value) {
+      return _then(_value.copyWith(appBarTheme: value) as $Val);
     });
   }
 
@@ -408,6 +428,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       String? shadowColor,
       String? splashColor,
       String? unselectedWidgetColor,
+      MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
       MiraiButtonStyle? outlinedButtonTheme,
       MiraiButtonStyle? iconButtonTheme,
@@ -419,6 +440,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   @override
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  @override
+  $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
   @override
   $MiraiButtonStyleCopyWith<$Res>? get elevatedButtonTheme;
   @override
@@ -468,6 +491,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
+    Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
     Object? outlinedButtonTheme = freezed,
     Object? iconButtonTheme = freezed,
@@ -572,6 +596,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      appBarTheme: freezed == appBarTheme
+          ? _value.appBarTheme
+          : appBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiAppBarTheme?,
       elevatedButtonTheme: freezed == elevatedButtonTheme
           ? _value.elevatedButtonTheme
           : elevatedButtonTheme // ignore: cast_nullable_to_non_nullable
@@ -628,6 +656,7 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.shadowColor,
       this.splashColor,
       this.unselectedWidgetColor,
+      this.appBarTheme,
       this.elevatedButtonTheme,
       this.outlinedButtonTheme,
       this.iconButtonTheme,
@@ -687,6 +716,8 @@ class _$_MiraiTheme implements _MiraiTheme {
   @override
   final String? unselectedWidgetColor;
   @override
+  final MiraiAppBarTheme? appBarTheme;
+  @override
   final MiraiButtonStyle? elevatedButtonTheme;
   @override
   final MiraiButtonStyle? outlinedButtonTheme;
@@ -701,7 +732,7 @@ class _$_MiraiTheme implements _MiraiTheme {
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, textButtonTheme: $textButtonTheme)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, textButtonTheme: $textButtonTheme)';
   }
 
   @override
@@ -748,8 +779,7 @@ class _$_MiraiTheme implements _MiraiTheme {
                 other.primaryColorLight == primaryColorLight) &&
             (identical(other.primarySwatch, primarySwatch) ||
                 other.primarySwatch == primarySwatch) &&
-            (identical(
-                    other.scaffoldBackgroundColor, scaffoldBackgroundColor) ||
+            (identical(other.scaffoldBackgroundColor, scaffoldBackgroundColor) ||
                 other.scaffoldBackgroundColor == scaffoldBackgroundColor) &&
             (identical(other.secondaryHeaderColor, secondaryHeaderColor) ||
                 other.secondaryHeaderColor == secondaryHeaderColor) &&
@@ -759,6 +789,8 @@ class _$_MiraiTheme implements _MiraiTheme {
                 other.splashColor == splashColor) &&
             (identical(other.unselectedWidgetColor, unselectedWidgetColor) ||
                 other.unselectedWidgetColor == unselectedWidgetColor) &&
+            (identical(other.appBarTheme, appBarTheme) ||
+                other.appBarTheme == appBarTheme) &&
             (identical(other.elevatedButtonTheme, elevatedButtonTheme) ||
                 other.elevatedButtonTheme == elevatedButtonTheme) &&
             (identical(other.outlinedButtonTheme, outlinedButtonTheme) ||
@@ -801,6 +833,7 @@ class _$_MiraiTheme implements _MiraiTheme {
         shadowColor,
         splashColor,
         unselectedWidgetColor,
+        appBarTheme,
         elevatedButtonTheme,
         outlinedButtonTheme,
         iconButtonTheme,
@@ -849,6 +882,7 @@ abstract class _MiraiTheme implements MiraiTheme {
       final String? shadowColor,
       final String? splashColor,
       final String? unselectedWidgetColor,
+      final MiraiAppBarTheme? appBarTheme,
       final MiraiButtonStyle? elevatedButtonTheme,
       final MiraiButtonStyle? outlinedButtonTheme,
       final MiraiButtonStyle? iconButtonTheme,
@@ -907,6 +941,8 @@ abstract class _MiraiTheme implements MiraiTheme {
   String? get splashColor;
   @override
   String? get unselectedWidgetColor;
+  @override
+  MiraiAppBarTheme? get appBarTheme;
   @override
   MiraiButtonStyle? get elevatedButtonTheme;
   @override
