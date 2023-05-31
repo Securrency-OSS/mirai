@@ -6,7 +6,6 @@
         "title": {
             "type": "text",
             "data": "Mirai Gallery",
-            "align": "center",
             "style": {
                 "color": "#000000"
             }
@@ -36,7 +35,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Appbar",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -44,7 +42,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Displays information and actions relating to the current screen",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -71,7 +68,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Bottom Navigation",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -79,7 +75,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Bottom navigation with cross-fading views",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -106,7 +101,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Card",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -114,7 +108,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Card is a sheet of material used to represent some related information",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -136,12 +129,44 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "format_align_center"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A widget that centers its child within itself.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/center_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "table_rows"
                     },
                     "title": {
                         "type": "text",
                         "data": "Mirai Column",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -149,7 +174,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "This is a mirai column widget.",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -171,12 +195,43 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "layers"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Stack",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "This is a mirai stack widget.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/stack_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "apartment"
                     },
                     "title": {
                         "type": "text",
                         "data": "Mirai Container",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -184,7 +239,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Container combines common painting, positioning, and sizing widgets",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -211,7 +265,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Dialog",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -219,7 +272,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Informs the user about situations that require acknowledgement",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -246,7 +298,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Elevated Button",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -254,7 +305,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A Material Design elevated button",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -281,7 +331,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Floating Action Button",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -289,7 +338,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A floating action button is a circular icon button that hovers over content to promote a primary action in the application",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -316,7 +364,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Icon",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -324,7 +371,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "An icon button is a picture printed on a Material widget that reacts to touches by filling with color",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -351,7 +397,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Icon Button",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -359,7 +404,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A Material Design icon",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -386,7 +430,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Image",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -394,7 +437,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A widget that displays an image",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -421,7 +463,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai List Tile",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -429,7 +470,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A single fixed-height row that typically contains some text as well as a leading or trailing icon",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -456,7 +496,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai List View",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -464,7 +503,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A scrollable, linear list of widgets",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -491,7 +529,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Outlined Button",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -499,7 +536,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A Material Design outlined button, essentially a TextButton with an outlined border",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -526,7 +562,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Padding",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -534,7 +569,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A widget that insets its child by the given padding",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -561,7 +595,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Row",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -569,7 +602,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Layout a list of child widgets in the horizontal direction",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -596,7 +628,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Scaffold",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -604,7 +635,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Implements the basic Material Design visual layout structure",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -631,7 +661,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Scroll View",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -639,7 +668,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A box in which a single widget can be scrolled",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -666,7 +694,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Sizedbox",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -674,7 +701,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A box with a specified size. If given a child, this widget forces its child to have a specific dimensions.",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -696,12 +722,44 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "space_bar"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Fractionally Sizedbox",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A widget that sizes its child to a fraction of the total available space.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/fractionally_sized_box_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "table_chart"
                     },
                     "title": {
                         "type": "text",
                         "data": "Mirai Tabbar",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -709,7 +767,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A Material Design widget that displays a horizontal row of tabs",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -736,7 +793,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Text",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -744,7 +800,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "A run of text with a single style.",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -771,7 +826,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Text Button",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -779,7 +833,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Text button displays an ink splash on press but does not lift",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }
@@ -806,7 +859,6 @@
                     "title": {
                         "type": "text",
                         "data": "Mirai Text Field",
-                        "align": "center",
                         "style": {
                             "fontSize": 21
                         }
@@ -814,7 +866,6 @@
                     "subtitle": {
                         "type": "text",
                         "data": "Text fields allow users to type text into an app",
-                        "align": "center",
                         "style": {
                             "fontSize": 12
                         }

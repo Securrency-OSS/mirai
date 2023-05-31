@@ -7,6 +7,8 @@ import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
+import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
@@ -26,8 +28,11 @@ class Mirai {
     const MiraiElevatedButtonParser(),
     const MiraiImageParser(),
     const MiraiIconParser(),
+    const MiraiCenterParser(),
     const MiraiRowParser(),
     const MiraiColumnParser(),
+    const MiraiStackParser(),
+    const MiraiPositionedParser(),
     const MiraiIconButtonParser(),
     const MiraiFloatingActionButtonParser(),
     const MiraiOutlinedButtonParser(),
@@ -36,6 +41,7 @@ class Mirai {
     const MiraiTextButtonParser(),
     const MiraiScaffoldParser(),
     const MiraiSizedBoxParser(),
+    const MiraiFractionallySizedBoxParser(),
     const MiraiTextFormFieldParser(),
     const MiraiTabBarViewParser(),
     const MiraiTabBarParser(),
@@ -51,9 +57,11 @@ class Mirai {
 
   static Future<void> initialize({
     List<MiraiParser> parsers = const [],
+    Dio? dio,
   }) async {
     _parsers.addAll(parsers);
     MiraiRegistry.instance.registerAll(_parsers);
+    MiraiNetwork.initialize(dio ?? Dio());
   }
 
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {

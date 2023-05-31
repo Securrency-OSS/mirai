@@ -27,13 +27,40 @@ And then run `flutter pub get`.
 
 ## Usage
 
-Now that we have successfully installed `mirai`, we can import `mirai` in `main.dart`.  
+Now that we have successfully installed Mirai, we can import Mirai in main.dart.
 
 ```dart
 import 'package:mirai/mirai.dart';
 ```
 
-To initalize mirai, replace your `MaterialApp` with `MiraiApp`. And call your json with `Mirai.fromJson(json, context)`.
+Next, within main function initialize Mirai.
+
+```dart
+void main() async {
+  await Mirai.initialize();
+
+  runApp(const MyApp());
+}
+```
+
+You can also specify your custom Parsers in `Mirai.initialize` and `Dio` instance.
+
+```dart
+void main() async {
+  final dio = Dio()
+
+  await Mirai.initialize(
+    parsers: const [
+      ExampleScreenParser(),
+    ],
+    dio: dio,
+  );
+
+  runApp(const MyApp());
+}
+```
+
+Finally, replace your MaterialApp with MiraiApp. And call your json with Mirai.fromJson(json, context).
 
 ```dart
 import 'package:flutter/material.dart';
@@ -50,10 +77,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MiraiApp(
       title: 'Mirai Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Mirai.fromJson(json, context),
+      homeBuilder: (context) => Mirai.fromJson(json, context),
     );
   }
 }

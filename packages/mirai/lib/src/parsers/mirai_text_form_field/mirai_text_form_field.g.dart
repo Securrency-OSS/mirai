@@ -61,6 +61,18 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
       cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
       cursorColor: json['cursorColor'] as String?,
       hintText: json['hintText'] as String?,
+      autovalidateMode: $enumDecodeNullable(
+          _$AutovalidateModeEnumMap, json['autovalidateMode']),
+      inputFormatters: (json['inputFormatters'] as List<dynamic>?)
+              ?.map((e) =>
+                  MiraiInputFormatter.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      validatorRules: (json['validatorRules'] as List<dynamic>?)
+              ?.map((e) =>
+                  MiraiFormFieldValidator.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
@@ -101,6 +113,9 @@ Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
       'cursorHeight': instance.cursorHeight,
       'cursorColor': instance.cursorColor,
       'hintText': instance.hintText,
+      'autovalidateMode': _$AutovalidateModeEnumMap[instance.autovalidateMode],
+      'inputFormatters': instance.inputFormatters,
+      'validatorRules': instance.validatorRules,
     };
 
 const _$MiraiTextInputTypeEnumMap = {
@@ -180,4 +195,10 @@ const _$MaxLengthEnforcementEnumMap = {
 const _$BrightnessEnumMap = {
   Brightness.dark: 'dark',
   Brightness.light: 'light',
+};
+
+const _$AutovalidateModeEnumMap = {
+  AutovalidateMode.disabled: 'disabled',
+  AutovalidateMode.always: 'always',
+  AutovalidateMode.onUserInteraction: 'onUserInteraction',
 };
