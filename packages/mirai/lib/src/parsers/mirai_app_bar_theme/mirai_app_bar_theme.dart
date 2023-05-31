@@ -40,6 +40,8 @@ extension MiraiAppBarThemeParser on MiraiAppBarTheme {
       scrolledUnderElevation: scrolledUnderElevation,
       shadowColor: shadowColor.toColor,
       surfaceTintColor: surfaceTintColor.toColor,
+      iconTheme: iconTheme?.parse,
+      actionsIconTheme: actionsIconTheme?.parse,
       centerTitle: centerTitle,
       titleSpacing: titleSpacing,
       toolbarHeight: toolbarHeight,
