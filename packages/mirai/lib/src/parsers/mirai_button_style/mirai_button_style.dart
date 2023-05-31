@@ -60,6 +60,8 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       disabledBackgroundColor: disabledBackgroundColor.toColor,
       shadowColor: shadowColor.toColor,
       surfaceTintColor: surfaceTintColor.toColor,
+      iconColor: iconColor.toColor,
+      disabledIconColor: disabledIconColor.toColor,
       elevation: elevation,
       textStyle: textStyle?.parse,
       enableFeedback: enableFeedback,
