@@ -3,12 +3,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
-part 'mirai_floating_action_theme_data.freezed.dart';
-part 'mirai_floating_action_theme_data.g.dart';
+part 'mirai_floating_action_button_theme_data.freezed.dart';
+part 'mirai_floating_action_button_theme_data.g.dart';
 
 @freezed
-class MiraiFloatingActionThemeData with _$MiraiFloatingActionThemeData {
-  const factory MiraiFloatingActionThemeData({
+class MiraiFloatingActionButtonThemeData
+    with _$MiraiFloatingActionButtonThemeData {
+  const factory MiraiFloatingActionButtonThemeData({
     String? foregroundColor,
     String? backgroundColor,
     String? focusColor,
@@ -24,13 +25,14 @@ class MiraiFloatingActionThemeData with _$MiraiFloatingActionThemeData {
     double? extendedIconLabelSpacing,
     MiraiEdgeInsets? extendedPadding,
     MiraiTextStyle? extendedTextStyle,
-  }) = _MiraiFloatingActionThemeData;
+  }) = _MiraiFloatingActionButtonThemeData;
 
-  factory MiraiFloatingActionThemeData.fromJson(Map<String, dynamic> json) =>
-      _$MiraiFloatingActionThemeDataFromJson(json);
+  factory MiraiFloatingActionButtonThemeData.fromJson(
+          Map<String, dynamic> json) =>
+      _$MiraiFloatingActionButtonThemeDataFromJson(json);
 }
 
-extension MiraiFloatingActionThemeParser on MiraiFloatingActionThemeData {
+extension MiraiFloatingActionThemeParser on MiraiFloatingActionButtonThemeData {
   FloatingActionButtonThemeData get parse {
     return FloatingActionButtonThemeData(
       foregroundColor: foregroundColor.toColor,

@@ -51,13 +51,5 @@
                 "blurRadius": 1
             }
         ]
-    },
-    "floatingActionButtonTheme": {
-        "foregroundColor": "#FFFFFF",
-        "backgroundColor": "#FC3F1B",
-        "focusColor": "#604D00E9",
-        "hoverColor": "#604D00E9",
-        "iconSize": 24,
-        "elevation": 2
     }
 }

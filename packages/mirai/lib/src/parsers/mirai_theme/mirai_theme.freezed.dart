@@ -52,7 +52,7 @@ mixin _$MiraiTheme {
   MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
   MiraiIconThemeData? get primaryIconTheme =>
       throw _privateConstructorUsedError;
-  MiraiFloatingActionThemeData? get floatingActionButtonTheme =>
+  MiraiFloatingActionButtonThemeData? get floatingActionButtonTheme =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -97,7 +97,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
       MiraiIconThemeData? primaryIconTheme,
-      MiraiFloatingActionThemeData? floatingActionButtonTheme});
+      MiraiFloatingActionButtonThemeData? floatingActionButtonTheme});
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
@@ -106,7 +106,8 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiButtonStyleCopyWith<$Res>? get iconButtonTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
-  $MiraiFloatingActionThemeDataCopyWith<$Res>? get floatingActionButtonTheme;
+  $MiraiFloatingActionButtonThemeDataCopyWith<$Res>?
+      get floatingActionButtonTheme;
 }
 
 /// @nodoc
@@ -273,7 +274,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
       floatingActionButtonTheme: freezed == floatingActionButtonTheme
           ? _value.floatingActionButtonTheme
           : floatingActionButtonTheme // ignore: cast_nullable_to_non_nullable
-              as MiraiFloatingActionThemeData?,
+              as MiraiFloatingActionButtonThemeData?,
     ) as $Val);
   }
 
@@ -365,12 +366,13 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiFloatingActionThemeDataCopyWith<$Res>? get floatingActionButtonTheme {
+  $MiraiFloatingActionButtonThemeDataCopyWith<$Res>?
+      get floatingActionButtonTheme {
     if (_value.floatingActionButtonTheme == null) {
       return null;
     }
 
-    return $MiraiFloatingActionThemeDataCopyWith<$Res>(
+    return $MiraiFloatingActionButtonThemeDataCopyWith<$Res>(
         _value.floatingActionButtonTheme!, (value) {
       return _then(_value.copyWith(floatingActionButtonTheme: value) as $Val);
     });
@@ -415,7 +417,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
       MiraiIconThemeData? primaryIconTheme,
-      MiraiFloatingActionThemeData? floatingActionButtonTheme});
+      MiraiFloatingActionButtonThemeData? floatingActionButtonTheme});
 
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
@@ -432,7 +434,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   @override
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
   @override
-  $MiraiFloatingActionThemeDataCopyWith<$Res>? get floatingActionButtonTheme;
+  $MiraiFloatingActionButtonThemeDataCopyWith<$Res>?
+      get floatingActionButtonTheme;
 }
 
 /// @nodoc
@@ -597,7 +600,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
       floatingActionButtonTheme: freezed == floatingActionButtonTheme
           ? _value.floatingActionButtonTheme
           : floatingActionButtonTheme // ignore: cast_nullable_to_non_nullable
-              as MiraiFloatingActionThemeData?,
+              as MiraiFloatingActionButtonThemeData?,
     ));
   }
 }
@@ -699,7 +702,7 @@ class _$_MiraiTheme implements _MiraiTheme {
   @override
   final MiraiIconThemeData? primaryIconTheme;
   @override
-  final MiraiFloatingActionThemeData? floatingActionButtonTheme;
+  final MiraiFloatingActionButtonThemeData? floatingActionButtonTheme;
 
   @override
   String toString() {
@@ -827,37 +830,37 @@ class _$_MiraiTheme implements _MiraiTheme {
 
 abstract class _MiraiTheme implements MiraiTheme {
   const factory _MiraiTheme(
-          {final bool? applyElevationOverlayColor,
-          final bool? useMaterial3,
-          final Brightness? brightness,
-          final String? canvasColor,
-          final String? cardColor,
-          final MiraiColorScheme? colorScheme,
-          final String? colorSchemeSeed,
-          final String? dialogBackgroundColor,
-          final String? disabledColor,
-          final String? dividerColor,
-          final String? focusColor,
-          final String? highlightColor,
-          final String? hintColor,
-          final String? hoverColor,
-          final String? indicatorColor,
-          final String? primaryColor,
-          final String? primaryColorDark,
-          final String? primaryColorLight,
-          final MiraiMaterialColor? primarySwatch,
-          final String? scaffoldBackgroundColor,
-          final String? secondaryHeaderColor,
-          final String? shadowColor,
-          final String? splashColor,
-          final String? unselectedWidgetColor,
-          final MiraiButtonStyle? elevatedButtonTheme,
-          final MiraiButtonStyle? outlinedButtonTheme,
-          final MiraiButtonStyle? iconButtonTheme,
-          final MiraiIconThemeData? iconTheme,
-          final MiraiIconThemeData? primaryIconTheme,
-          final MiraiFloatingActionThemeData? floatingActionButtonTheme}) =
-      _$_MiraiTheme;
+      {final bool? applyElevationOverlayColor,
+      final bool? useMaterial3,
+      final Brightness? brightness,
+      final String? canvasColor,
+      final String? cardColor,
+      final MiraiColorScheme? colorScheme,
+      final String? colorSchemeSeed,
+      final String? dialogBackgroundColor,
+      final String? disabledColor,
+      final String? dividerColor,
+      final String? focusColor,
+      final String? highlightColor,
+      final String? hintColor,
+      final String? hoverColor,
+      final String? indicatorColor,
+      final String? primaryColor,
+      final String? primaryColorDark,
+      final String? primaryColorLight,
+      final MiraiMaterialColor? primarySwatch,
+      final String? scaffoldBackgroundColor,
+      final String? secondaryHeaderColor,
+      final String? shadowColor,
+      final String? splashColor,
+      final String? unselectedWidgetColor,
+      final MiraiButtonStyle? elevatedButtonTheme,
+      final MiraiButtonStyle? outlinedButtonTheme,
+      final MiraiButtonStyle? iconButtonTheme,
+      final MiraiIconThemeData? iconTheme,
+      final MiraiIconThemeData? primaryIconTheme,
+      final MiraiFloatingActionButtonThemeData?
+          floatingActionButtonTheme}) = _$_MiraiTheme;
 
   factory _MiraiTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiTheme.fromJson;
@@ -921,7 +924,7 @@ abstract class _MiraiTheme implements MiraiTheme {
   @override
   MiraiIconThemeData? get primaryIconTheme;
   @override
-  MiraiFloatingActionThemeData? get floatingActionButtonTheme;
+  MiraiFloatingActionButtonThemeData? get floatingActionButtonTheme;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiThemeCopyWith<_$_MiraiTheme> get copyWith =>

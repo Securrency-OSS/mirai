@@ -60,7 +60,7 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
               json['primaryIconTheme'] as Map<String, dynamic>),
       floatingActionButtonTheme: json['floatingActionButtonTheme'] == null
           ? null
-          : MiraiFloatingActionThemeData.fromJson(
+          : MiraiFloatingActionButtonThemeData.fromJson(
               json['floatingActionButtonTheme'] as Map<String, dynamic>),
     );
 
