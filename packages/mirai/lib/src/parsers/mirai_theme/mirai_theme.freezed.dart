@@ -52,8 +52,7 @@ mixin _$MiraiTheme {
   MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
   MiraiIconThemeData? get primaryIconTheme =>
       throw _privateConstructorUsedError;
-  MiraiTextButtonThemeData? get textButtonTheme =>
-      throw _privateConstructorUsedError;
+  MiraiButtonStyle? get textButtonTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -97,7 +96,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
       MiraiIconThemeData? primaryIconTheme,
-      MiraiTextButtonThemeData? textButtonTheme});
+      MiraiButtonStyle? textButtonTheme});
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
@@ -106,7 +105,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiButtonStyleCopyWith<$Res>? get iconButtonTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get iconTheme;
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
-  $MiraiTextButtonThemeDataCopyWith<$Res>? get textButtonTheme;
+  $MiraiButtonStyleCopyWith<$Res>? get textButtonTheme;
 }
 
 /// @nodoc
@@ -273,7 +272,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
       textButtonTheme: freezed == textButtonTheme
           ? _value.textButtonTheme
           : textButtonTheme // ignore: cast_nullable_to_non_nullable
-              as MiraiTextButtonThemeData?,
+              as MiraiButtonStyle?,
     ) as $Val);
   }
 
@@ -365,13 +364,12 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiTextButtonThemeDataCopyWith<$Res>? get textButtonTheme {
+  $MiraiButtonStyleCopyWith<$Res>? get textButtonTheme {
     if (_value.textButtonTheme == null) {
       return null;
     }
 
-    return $MiraiTextButtonThemeDataCopyWith<$Res>(_value.textButtonTheme!,
-        (value) {
+    return $MiraiButtonStyleCopyWith<$Res>(_value.textButtonTheme!, (value) {
       return _then(_value.copyWith(textButtonTheme: value) as $Val);
     });
   }
@@ -415,7 +413,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       MiraiButtonStyle? iconButtonTheme,
       MiraiIconThemeData? iconTheme,
       MiraiIconThemeData? primaryIconTheme,
-      MiraiTextButtonThemeData? textButtonTheme});
+      MiraiButtonStyle? textButtonTheme});
 
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
@@ -432,7 +430,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   @override
   $MiraiIconThemeDataCopyWith<$Res>? get primaryIconTheme;
   @override
-  $MiraiTextButtonThemeDataCopyWith<$Res>? get textButtonTheme;
+  $MiraiButtonStyleCopyWith<$Res>? get textButtonTheme;
 }
 
 /// @nodoc
@@ -597,7 +595,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
       textButtonTheme: freezed == textButtonTheme
           ? _value.textButtonTheme
           : textButtonTheme // ignore: cast_nullable_to_non_nullable
-              as MiraiTextButtonThemeData?,
+              as MiraiButtonStyle?,
     ));
   }
 }
@@ -699,7 +697,7 @@ class _$_MiraiTheme implements _MiraiTheme {
   @override
   final MiraiIconThemeData? primaryIconTheme;
   @override
-  final MiraiTextButtonThemeData? textButtonTheme;
+  final MiraiButtonStyle? textButtonTheme;
 
   @override
   String toString() {
@@ -856,7 +854,7 @@ abstract class _MiraiTheme implements MiraiTheme {
       final MiraiButtonStyle? iconButtonTheme,
       final MiraiIconThemeData? iconTheme,
       final MiraiIconThemeData? primaryIconTheme,
-      final MiraiTextButtonThemeData? textButtonTheme}) = _$_MiraiTheme;
+      final MiraiButtonStyle? textButtonTheme}) = _$_MiraiTheme;
 
   factory _MiraiTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiTheme.fromJson;
@@ -920,7 +918,7 @@ abstract class _MiraiTheme implements MiraiTheme {
   @override
   MiraiIconThemeData? get primaryIconTheme;
   @override
-  MiraiTextButtonThemeData? get textButtonTheme;
+  MiraiButtonStyle? get textButtonTheme;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiThemeCopyWith<_$_MiraiTheme> get copyWith =>

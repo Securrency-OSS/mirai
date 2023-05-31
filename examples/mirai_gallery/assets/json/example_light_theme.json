@@ -51,13 +51,5 @@
                 "blurRadius": 1
             }
         ]
-    },
-    "textButtonTheme": {
-        "style": {
-            "foregroundColor": "#4D00E9",
-            "iconColor": "#4D00E9",
-            "disabledForegroundColor": "#604D00E9",
-            "disabledIconColor": "#604D00E9"
-        }
     }
 }
