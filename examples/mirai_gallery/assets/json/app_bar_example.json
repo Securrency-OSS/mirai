@@ -12,7 +12,8 @@
                 "type": "icon",
                 "iconType": "material",
                 "icon": "menu"
-            }
+            },
+            "onPressed": {}
         },
         "actions": [
             {
@@ -21,7 +22,8 @@
                     "type": "icon",
                     "iconType": "cupertino",
                     "icon": "heart_solid"
-                }
+                },
+                "onPressed": {}
             },
             {
                 "type": "iconButton",
@@ -29,7 +31,8 @@
                     "type": "icon",
                     "iconType": "material",
                     "icon": "search"
-                }
+                },
+                "onPressed": {}
             },
             {
                 "type": "iconButton",
@@ -37,7 +40,8 @@
                     "type": "icon",
                     "iconType": "material",
                     "icon": "more_horiz"
-                }
+                },
+                "onPressed": {}
             }
         ]
     },
