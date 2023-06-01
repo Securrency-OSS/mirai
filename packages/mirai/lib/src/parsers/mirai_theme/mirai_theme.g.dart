@@ -62,6 +62,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiIconThemeData.fromJson(
               json['primaryIconTheme'] as Map<String, dynamic>),
+      floatingActionButtonTheme: json['floatingActionButtonTheme'] == null
+          ? null
+          : MiraiFloatingActionButtonThemeData.fromJson(
+              json['floatingActionButtonTheme'] as Map<String, dynamic>),
       textButtonTheme: json['textButtonTheme'] == null
           ? null
           : MiraiButtonStyle.fromJson(
@@ -100,6 +104,7 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'iconButtonTheme': instance.iconButtonTheme,
       'iconTheme': instance.iconTheme,
       'primaryIconTheme': instance.primaryIconTheme,
+      'floatingActionButtonTheme': instance.floatingActionButtonTheme,
       'textButtonTheme': instance.textButtonTheme,
     };
 
