@@ -8,6 +8,7 @@ export 'package:mirai/src/parsers/mirai_app_bar/mirai_app_bar.dart';
 export 'package:mirai/src/parsers/mirai_border/mirai_border.dart';
 export 'package:mirai/src/parsers/mirai_border_radius/mirai_border_radius.dart';
 export 'package:mirai/src/parsers/mirai_border_side/mirai_border_side.dart';
+export 'package:mirai/src/parsers/mirai_bottom_app_bar_theme/mirai_bottom_app_bar_theme.dart';
 export 'package:mirai/src/parsers/mirai_bottom_navigation_bar/mirai_bottom_navigation_bar.dart';
 export 'package:mirai/src/parsers/mirai_box_decoration/mirai_box_decoration.dart';
 export 'package:mirai/src/parsers/mirai_box_shadow/mirai_box_shadow.dart';
