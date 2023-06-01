@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_app_bar_theme/mirai_bottom_app_bar_theme.dart';
+import 'package:mirai/src/parsers/mirai_bottom_nav_bar_theme/mirai_bottom_nav_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';
@@ -48,6 +49,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiFloatingActionButtonThemeData? floatingActionButtonTheme,
     MiraiButtonStyle? textButtonTheme,
     MiraiBottomAppBarTheme? bottomAppBarTheme,
+    MiraiBottomNavBarThemeData? bottomNavigationBarTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -91,6 +93,7 @@ extension MiraiThemeParser on MiraiTheme {
       floatingActionButtonTheme: floatingActionButtonTheme?.parse,
       textButtonTheme: TextButtonThemeData(style: textButtonTheme?.parseText),
       bottomAppBarTheme: bottomAppBarTheme?.parse,
+      bottomNavigationBarTheme: bottomNavigationBarTheme?.parse,
     );
   }
 }
