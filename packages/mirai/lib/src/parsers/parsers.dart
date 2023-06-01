@@ -27,6 +27,7 @@ export 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
 export 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 export 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
 export 'package:mirai/src/parsers/mirai_list_tile/mirai_list_tile.dart';
+export 'package:mirai/src/parsers/mirai_list_tile_theme_data/mirai_list_tile_theme_data.dart';
 export 'package:mirai/src/parsers/mirai_list_view/mirai_list_view.dart';
 export 'package:mirai/src/parsers/mirai_navigation_bar_item/mirai_bottom_navigation_bar_item.dart';
 export 'package:mirai/src/parsers/mirai_outlined_button/mirai_outlined_button.dart';
