@@ -5,30 +5,18 @@
     "colorScheme": {
         "brightness": "dark",
         "background": "#18262D",
-        "onBackground": "#ffffff",
+        "onBackground": "#FFFFFF",
         "surface": "#4D00E9",
-        "onSurface": "#ffffff",
+        "onSurface": "#FFFFFF",
         "surfaceVariant": "#8097A0",
         "onSurfaceVariant": "#BFCBD0",
         "primary": "#9283E5",
-        "onPrimary": "#ffffff",
-        "secondary": "#FC5632",
-        "onSecondary": "#ffffff",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#625B71",
+        "onSecondary": "#FFFFFF",
         "error": "#DB1A3A",
-        "onError": "#ffffff",
+        "onError": "#FFFFFF",
         "success": "#27BA62",
-        "onSuccess": "#ffffff"
-    },
-    "outlinedButtonTheme": {
-        "style": {
-            "foregroundColor": "#9283E5",
-            "disabledForegroundColor": "#609283E5"
-        }
-    },
-    "bottomNavigationBarTheme": {
-        "backgroundColor": "#4D00E9",
-        "selectedItemColor": "#ffffff",
-        "unselectedItemColor": "#80ffffff",
-        "elevation": 2
+        "onSuccess": "#FFFFFF"
     }
 }
