@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
+import 'package:mirai/src/parsers/mirai_tab_bar_theme_data/mirai_tab_bar_theme_data.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_theme.freezed.dart';
@@ -44,6 +45,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
     MiraiButtonStyle? textButtonTheme,
+    MiraiTabBarThemeData? tabBarTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -85,6 +87,7 @@ extension MiraiThemeParser on MiraiTheme {
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
       textButtonTheme: TextButtonThemeData(style: textButtonTheme?.parseText),
+      tabBarTheme: tabBarTheme?.parse,
     );
   }
 }
