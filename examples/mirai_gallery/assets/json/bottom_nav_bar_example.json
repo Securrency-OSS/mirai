@@ -30,7 +30,6 @@
     },
     "bottomNavigationBar": {
         "type": "bottomNavigationBar",
-        "unselectedItemColor": "#B489F3",
         "items": [
             {
                 "type": "navigationBarItem",
