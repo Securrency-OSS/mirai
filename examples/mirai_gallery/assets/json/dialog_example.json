@@ -21,10 +21,7 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "SIMPLE ALERT",
-                            "style": {
-                                "color": "#ffffff"
-                            }
+                            "data": "SIMPLE ALERT"
                         },
                         "style": {
                             "padding": {
@@ -102,10 +99,7 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "ALERT WITH TITLE",
-                            "style": {
-                                "color": "#ffffff"
-                            }
+                            "data": "ALERT WITH TITLE"
                         },
                         "style": {
                             "padding": {
