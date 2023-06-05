@@ -1,7 +1,7 @@
 {
     "brightness": "light",
-    "scaffoldBackgroundColor": "#FFFFFF",
-    "disabledColor": "#60FFFFFF",
+    "scaffoldBackgroundColor": "#FEF7FF",
+    "disabledColor": "#60FEF7FF",
     "colorScheme": {
         "brightness": "light",
         "primary": "#6750A4",
