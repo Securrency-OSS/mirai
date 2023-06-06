@@ -52,6 +52,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiBottomSheetThemeData? bottomSheetTheme,
     MiraiCardThemeData? cardTheme,
     MiraiListTileThemeData? listTileTheme,
+    MiraiNavigationBarThemeData? navigationBarTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -100,6 +101,7 @@ extension MiraiThemeParser on MiraiTheme {
       bottomSheetTheme: bottomSheetTheme?.parse,
       cardTheme: cardTheme?.parse,
       listTileTheme: listTileTheme?.parse,
+      navigationBarTheme: navigationBarTheme?.parse,
     );
   }
 }
