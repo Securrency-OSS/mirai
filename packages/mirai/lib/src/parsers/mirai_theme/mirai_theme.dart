@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
-import 'package:mirai/src/parsers/mirai_bottom_app_bar_theme/mirai_bottom_app_bar_theme.dart';
-import 'package:mirai/src/parsers/mirai_bottom_nav_bar_theme/mirai_bottom_nav_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
-import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
-import 'package:mirai/src/parsers/mirai_card_theme_data/mirai_card_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
-import 'package:mirai/src/parsers/mirai_dialog_theme/mirai_dialog_theme.dart';
-import 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -56,6 +51,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiBottomNavBarThemeData? bottomNavigationBarTheme,
     MiraiBottomSheetThemeData? bottomSheetTheme,
     MiraiCardThemeData? cardTheme,
+    MiraiListTileThemeData? listTileTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -103,6 +99,7 @@ extension MiraiThemeParser on MiraiTheme {
       bottomNavigationBarTheme: bottomNavigationBarTheme?.parse,
       bottomSheetTheme: bottomSheetTheme?.parse,
       cardTheme: cardTheme?.parse,
+      listTileTheme: listTileTheme?.parse,
     );
   }
 }

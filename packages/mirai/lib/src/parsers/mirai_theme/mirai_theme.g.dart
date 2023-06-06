@@ -90,6 +90,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiCardThemeData.fromJson(
               json['cardTheme'] as Map<String, dynamic>),
+      listTileTheme: json['listTileTheme'] == null
+          ? null
+          : MiraiListTileThemeData.fromJson(
+              json['listTileTheme'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
@@ -131,6 +135,7 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'bottomNavigationBarTheme': instance.bottomNavigationBarTheme,
       'bottomSheetTheme': instance.bottomSheetTheme,
       'cardTheme': instance.cardTheme,
+      'listTileTheme': instance.listTileTheme,
     };
 
 const _$BrightnessEnumMap = {
