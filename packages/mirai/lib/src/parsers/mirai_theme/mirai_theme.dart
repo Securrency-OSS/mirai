@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
-import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
+import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
-import 'package:mirai/src/parsers/mirai_tab_bar_theme_data/mirai_tab_bar_theme_data.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_theme.freezed.dart';
@@ -44,7 +44,15 @@ class MiraiTheme with _$MiraiTheme {
     MiraiButtonStyle? iconButtonTheme,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
+    MiraiDialogTheme? dialogTheme,
+    MiraiFloatingActionButtonThemeData? floatingActionButtonTheme,
     MiraiButtonStyle? textButtonTheme,
+    MiraiBottomAppBarTheme? bottomAppBarTheme,
+    MiraiBottomNavBarThemeData? bottomNavigationBarTheme,
+    MiraiBottomSheetThemeData? bottomSheetTheme,
+    MiraiCardThemeData? cardTheme,
+    MiraiListTileThemeData? listTileTheme,
+    MiraiNavigationBarThemeData? navigationBarTheme,
     MiraiTabBarThemeData? tabBarTheme,
   }) = _MiraiTheme;
 
@@ -86,7 +94,15 @@ extension MiraiThemeParser on MiraiTheme {
       iconButtonTheme: IconButtonThemeData(style: iconButtonTheme?.parseIcon),
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
+      dialogTheme: dialogTheme?.parse,
+      floatingActionButtonTheme: floatingActionButtonTheme?.parse,
       textButtonTheme: TextButtonThemeData(style: textButtonTheme?.parseText),
+      bottomAppBarTheme: bottomAppBarTheme?.parse,
+      bottomNavigationBarTheme: bottomNavigationBarTheme?.parse,
+      bottomSheetTheme: bottomSheetTheme?.parse,
+      cardTheme: cardTheme?.parse,
+      listTileTheme: listTileTheme?.parse,
+      navigationBarTheme: navigationBarTheme?.parse,
       tabBarTheme: tabBarTheme?.parse,
     );
   }
