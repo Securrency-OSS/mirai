@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_bottom_app_bar_theme/mirai_bottom_app_ba
 import 'package:mirai/src/parsers/mirai_bottom_nav_bar_theme/mirai_bottom_nav_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
 import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
+import 'package:mirai/src/parsers/mirai_card_theme_data/mirai_card_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
@@ -52,6 +53,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiBottomAppBarTheme? bottomAppBarTheme,
     MiraiBottomNavBarThemeData? bottomNavigationBarTheme,
     MiraiBottomSheetThemeData? bottomSheetTheme,
+    MiraiCardThemeData? cardTheme,
   }) = _MiraiTheme;
 
   factory MiraiTheme.fromJson(Map<String, dynamic> json) =>
@@ -97,6 +99,7 @@ extension MiraiThemeParser on MiraiTheme {
       bottomAppBarTheme: bottomAppBarTheme?.parse,
       bottomNavigationBarTheme: bottomNavigationBarTheme?.parse,
       bottomSheetTheme: bottomSheetTheme?.parse,
+      cardTheme: cardTheme?.parse,
     );
   }
 }
