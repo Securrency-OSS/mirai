@@ -31,11 +31,9 @@ class MiraiAlertDialog with _$MiraiAlertDialog {
     double? elevation,
     String? semanticLabel,
     @Default(MiraiEdgeInsets(left: 40, right: 40, top: 24, bottom: 24))
-        MiraiEdgeInsets insetPadding,
-    @Default(Clip.none)
-        Clip clipBehavior,
-    @Default(false)
-        bool scrollable,
+    MiraiEdgeInsets insetPadding,
+    @Default(Clip.none) Clip clipBehavior,
+    @Default(false) bool scrollable,
   }) = _MiraiAlertDialog;
 
   factory MiraiAlertDialog.fromJson(Map<String, dynamic> json) =>

@@ -38,6 +38,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       shadowColor: json['shadowColor'] as String?,
       splashColor: json['splashColor'] as String?,
       unselectedWidgetColor: json['unselectedWidgetColor'] as String?,
+      appBarTheme: json['appBarTheme'] == null
+          ? null
+          : MiraiAppBarTheme.fromJson(
+              json['appBarTheme'] as Map<String, dynamic>),
       elevatedButtonTheme: json['elevatedButtonTheme'] == null
           ? null
           : MiraiButtonStyle.fromJson(
@@ -58,6 +62,26 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiIconThemeData.fromJson(
               json['primaryIconTheme'] as Map<String, dynamic>),
+      floatingActionButtonTheme: json['floatingActionButtonTheme'] == null
+          ? null
+          : MiraiFloatingActionButtonThemeData.fromJson(
+              json['floatingActionButtonTheme'] as Map<String, dynamic>),
+      textButtonTheme: json['textButtonTheme'] == null
+          ? null
+          : MiraiButtonStyle.fromJson(
+              json['textButtonTheme'] as Map<String, dynamic>),
+      bottomAppBarTheme: json['bottomAppBarTheme'] == null
+          ? null
+          : MiraiBottomAppBarTheme.fromJson(
+              json['bottomAppBarTheme'] as Map<String, dynamic>),
+      bottomNavigationBarTheme: json['bottomNavigationBarTheme'] == null
+          ? null
+          : MiraiBottomNavBarThemeData.fromJson(
+              json['bottomNavigationBarTheme'] as Map<String, dynamic>),
+      bottomSheetTheme: json['bottomSheetTheme'] == null
+          ? null
+          : MiraiBottomSheetThemeData.fromJson(
+              json['bottomSheetTheme'] as Map<String, dynamic>),
       buttonTheme: json['buttonTheme'] == null
           ? null
           : MiraiButtonThemeData.fromJson(
@@ -90,11 +114,17 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'shadowColor': instance.shadowColor,
       'splashColor': instance.splashColor,
       'unselectedWidgetColor': instance.unselectedWidgetColor,
+      'appBarTheme': instance.appBarTheme,
       'elevatedButtonTheme': instance.elevatedButtonTheme,
       'outlinedButtonTheme': instance.outlinedButtonTheme,
       'iconButtonTheme': instance.iconButtonTheme,
       'iconTheme': instance.iconTheme,
       'primaryIconTheme': instance.primaryIconTheme,
+      'floatingActionButtonTheme': instance.floatingActionButtonTheme,
+      'textButtonTheme': instance.textButtonTheme,
+      'bottomAppBarTheme': instance.bottomAppBarTheme,
+      'bottomNavigationBarTheme': instance.bottomNavigationBarTheme,
+      'bottomSheetTheme': instance.bottomSheetTheme,
       'buttonTheme': instance.buttonTheme,
     };
 
