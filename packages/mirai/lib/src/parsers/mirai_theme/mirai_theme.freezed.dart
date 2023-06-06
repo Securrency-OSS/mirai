@@ -68,6 +68,7 @@ mixin _$MiraiTheme {
       throw _privateConstructorUsedError;
   MiraiNavigationBarThemeData? get navigationBarTheme =>
       throw _privateConstructorUsedError;
+  MiraiTabBarThemeData? get tabBarTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -120,7 +121,8 @@ abstract class $MiraiThemeCopyWith<$Res> {
       MiraiBottomSheetThemeData? bottomSheetTheme,
       MiraiCardThemeData? cardTheme,
       MiraiListTileThemeData? listTileTheme,
-      MiraiNavigationBarThemeData? navigationBarTheme});
+      MiraiNavigationBarThemeData? navigationBarTheme,
+      MiraiTabBarThemeData? tabBarTheme});
 
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
@@ -140,6 +142,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiCardThemeDataCopyWith<$Res>? get cardTheme;
   $MiraiListTileThemeDataCopyWith<$Res>? get listTileTheme;
   $MiraiNavigationBarThemeDataCopyWith<$Res>? get navigationBarTheme;
+  $MiraiTabBarThemeDataCopyWith<$Res>? get tabBarTheme;
 }
 
 /// @nodoc
@@ -194,6 +197,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? cardTheme = freezed,
     Object? listTileTheme = freezed,
     Object? navigationBarTheme = freezed,
+    Object? tabBarTheme = freezed,
   }) {
     return _then(_value.copyWith(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -352,6 +356,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.navigationBarTheme
           : navigationBarTheme // ignore: cast_nullable_to_non_nullable
               as MiraiNavigationBarThemeData?,
+      tabBarTheme: freezed == tabBarTheme
+          ? _value.tabBarTheme
+          : tabBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTabBarThemeData?,
     ) as $Val);
   }
 
@@ -567,6 +575,18 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
       return _then(_value.copyWith(navigationBarTheme: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiTabBarThemeDataCopyWith<$Res>? get tabBarTheme {
+    if (_value.tabBarTheme == null) {
+      return null;
+    }
+
+    return $MiraiTabBarThemeDataCopyWith<$Res>(_value.tabBarTheme!, (value) {
+      return _then(_value.copyWith(tabBarTheme: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -616,7 +636,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       MiraiBottomSheetThemeData? bottomSheetTheme,
       MiraiCardThemeData? cardTheme,
       MiraiListTileThemeData? listTileTheme,
-      MiraiNavigationBarThemeData? navigationBarTheme});
+      MiraiNavigationBarThemeData? navigationBarTheme,
+      MiraiTabBarThemeData? tabBarTheme});
 
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
@@ -653,6 +674,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   $MiraiListTileThemeDataCopyWith<$Res>? get listTileTheme;
   @override
   $MiraiNavigationBarThemeDataCopyWith<$Res>? get navigationBarTheme;
+  @override
+  $MiraiTabBarThemeDataCopyWith<$Res>? get tabBarTheme;
 }
 
 /// @nodoc
@@ -705,6 +728,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? cardTheme = freezed,
     Object? listTileTheme = freezed,
     Object? navigationBarTheme = freezed,
+    Object? tabBarTheme = freezed,
   }) {
     return _then(_$_MiraiTheme(
       applyElevationOverlayColor: freezed == applyElevationOverlayColor
@@ -863,6 +887,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.navigationBarTheme
           : navigationBarTheme // ignore: cast_nullable_to_non_nullable
               as MiraiNavigationBarThemeData?,
+      tabBarTheme: freezed == tabBarTheme
+          ? _value.tabBarTheme
+          : tabBarTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTabBarThemeData?,
     ));
   }
 }
@@ -909,7 +937,8 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.bottomSheetTheme,
       this.cardTheme,
       this.listTileTheme,
-      this.navigationBarTheme});
+      this.navigationBarTheme,
+      this.tabBarTheme});
 
   factory _$_MiraiTheme.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiThemeFromJson(json);
@@ -992,10 +1021,12 @@ class _$_MiraiTheme implements _MiraiTheme {
   final MiraiListTileThemeData? listTileTheme;
   @override
   final MiraiNavigationBarThemeData? navigationBarTheme;
+  @override
+  final MiraiTabBarThemeData? tabBarTheme;
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme, tabBarTheme: $tabBarTheme)';
   }
 
   @override
@@ -1073,7 +1104,8 @@ class _$_MiraiTheme implements _MiraiTheme {
             (identical(other.bottomSheetTheme, bottomSheetTheme) || other.bottomSheetTheme == bottomSheetTheme) &&
             (identical(other.cardTheme, cardTheme) || other.cardTheme == cardTheme) &&
             (identical(other.listTileTheme, listTileTheme) || other.listTileTheme == listTileTheme) &&
-            (identical(other.navigationBarTheme, navigationBarTheme) || other.navigationBarTheme == navigationBarTheme));
+            (identical(other.navigationBarTheme, navigationBarTheme) || other.navigationBarTheme == navigationBarTheme) &&
+            (identical(other.tabBarTheme, tabBarTheme) || other.tabBarTheme == tabBarTheme));
   }
 
   @JsonKey(ignore: true)
@@ -1118,7 +1150,8 @@ class _$_MiraiTheme implements _MiraiTheme {
         bottomSheetTheme,
         cardTheme,
         listTileTheme,
-        navigationBarTheme
+        navigationBarTheme,
+        tabBarTheme
       ]);
 
   @JsonKey(ignore: true)
@@ -1175,7 +1208,8 @@ abstract class _MiraiTheme implements MiraiTheme {
       final MiraiBottomSheetThemeData? bottomSheetTheme,
       final MiraiCardThemeData? cardTheme,
       final MiraiListTileThemeData? listTileTheme,
-      final MiraiNavigationBarThemeData? navigationBarTheme}) = _$_MiraiTheme;
+      final MiraiNavigationBarThemeData? navigationBarTheme,
+      final MiraiTabBarThemeData? tabBarTheme}) = _$_MiraiTheme;
 
   factory _MiraiTheme.fromJson(Map<String, dynamic> json) =
       _$_MiraiTheme.fromJson;
@@ -1258,6 +1292,8 @@ abstract class _MiraiTheme implements MiraiTheme {
   MiraiListTileThemeData? get listTileTheme;
   @override
   MiraiNavigationBarThemeData? get navigationBarTheme;
+  @override
+  MiraiTabBarThemeData? get tabBarTheme;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiThemeCopyWith<_$_MiraiTheme> get copyWith =>
