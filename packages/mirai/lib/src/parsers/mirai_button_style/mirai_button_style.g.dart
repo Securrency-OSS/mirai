@@ -14,6 +14,8 @@ _$_MiraiButtonStyle _$$_MiraiButtonStyleFromJson(Map<String, dynamic> json) =>
       disabledBackgroundColor: json['disabledBackgroundColor'] as String?,
       shadowColor: json['shadowColor'] as String?,
       surfaceTintColor: json['surfaceTintColor'] as String?,
+      iconColor: json['iconColor'] as String?,
+      disabledIconColor: json['disabledIconColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       textStyle: json['textStyle'] == null
           ? null
@@ -42,6 +44,8 @@ Map<String, dynamic> _$$_MiraiButtonStyleToJson(_$_MiraiButtonStyle instance) =>
       'disabledBackgroundColor': instance.disabledBackgroundColor,
       'shadowColor': instance.shadowColor,
       'surfaceTintColor': instance.surfaceTintColor,
+      'iconColor': instance.iconColor,
+      'disabledIconColor': instance.disabledIconColor,
       'elevation': instance.elevation,
       'textStyle': instance.textStyle,
       'padding': instance.padding,
