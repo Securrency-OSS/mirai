@@ -20,6 +20,7 @@ export 'package:mirai/src/parsers/mirai_column/mirai_column.dart';
 export 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
 export 'package:mirai/src/parsers/mirai_container_image/mirai_container_image.dart';
 export 'package:mirai/src/parsers/mirai_default_tab_controller/mirai_default_tab_controller.dart';
+export 'package:mirai/src/parsers/mirai_dialog_theme/mirai_dialog_theme.dart';
 export 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 export 'package:mirai/src/parsers/mirai_elevated_button/mirai_elevated_button.dart';
 export 'package:mirai/src/parsers/mirai_floating_action_button/mirai_floating_action_button.dart';

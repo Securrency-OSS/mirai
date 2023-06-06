@@ -7,6 +7,7 @@ import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_th
 import 'package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart';
 import 'package:mirai/src/parsers/mirai_card_theme_data/mirai_card_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
+import 'package:mirai/src/parsers/mirai_dialog_theme/mirai_dialog_theme.dart';
 import 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
@@ -48,6 +49,7 @@ class MiraiTheme with _$MiraiTheme {
     MiraiButtonStyle? iconButtonTheme,
     MiraiIconThemeData? iconTheme,
     MiraiIconThemeData? primaryIconTheme,
+    MiraiDialogTheme? dialogTheme,
     MiraiFloatingActionButtonThemeData? floatingActionButtonTheme,
     MiraiButtonStyle? textButtonTheme,
     MiraiBottomAppBarTheme? bottomAppBarTheme,
@@ -94,6 +96,7 @@ extension MiraiThemeParser on MiraiTheme {
       iconButtonTheme: IconButtonThemeData(style: iconButtonTheme?.parseIcon),
       iconTheme: iconTheme?.parse,
       primaryIconTheme: primaryIconTheme?.parse,
+      dialogTheme: dialogTheme?.parse,
       floatingActionButtonTheme: floatingActionButtonTheme?.parse,
       textButtonTheme: TextButtonThemeData(style: textButtonTheme?.parseText),
       bottomAppBarTheme: bottomAppBarTheme?.parse,
