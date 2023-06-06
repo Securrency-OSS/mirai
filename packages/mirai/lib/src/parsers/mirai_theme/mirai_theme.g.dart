@@ -62,6 +62,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiIconThemeData.fromJson(
               json['primaryIconTheme'] as Map<String, dynamic>),
+      dialogTheme: json['dialogTheme'] == null
+          ? null
+          : MiraiDialogTheme.fromJson(
+              json['dialogTheme'] as Map<String, dynamic>),
       floatingActionButtonTheme: json['floatingActionButtonTheme'] == null
           ? null
           : MiraiFloatingActionButtonThemeData.fromJson(
@@ -78,6 +82,26 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiBottomNavBarThemeData.fromJson(
               json['bottomNavigationBarTheme'] as Map<String, dynamic>),
+      bottomSheetTheme: json['bottomSheetTheme'] == null
+          ? null
+          : MiraiBottomSheetThemeData.fromJson(
+              json['bottomSheetTheme'] as Map<String, dynamic>),
+      cardTheme: json['cardTheme'] == null
+          ? null
+          : MiraiCardThemeData.fromJson(
+              json['cardTheme'] as Map<String, dynamic>),
+      listTileTheme: json['listTileTheme'] == null
+          ? null
+          : MiraiListTileThemeData.fromJson(
+              json['listTileTheme'] as Map<String, dynamic>),
+      navigationBarTheme: json['navigationBarTheme'] == null
+          ? null
+          : MiraiNavigationBarThemeData.fromJson(
+              json['navigationBarTheme'] as Map<String, dynamic>),
+      tabBarTheme: json['tabBarTheme'] == null
+          ? null
+          : MiraiTabBarThemeData.fromJson(
+              json['tabBarTheme'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
@@ -112,10 +136,16 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'iconButtonTheme': instance.iconButtonTheme,
       'iconTheme': instance.iconTheme,
       'primaryIconTheme': instance.primaryIconTheme,
+      'dialogTheme': instance.dialogTheme,
       'floatingActionButtonTheme': instance.floatingActionButtonTheme,
       'textButtonTheme': instance.textButtonTheme,
       'bottomAppBarTheme': instance.bottomAppBarTheme,
       'bottomNavigationBarTheme': instance.bottomNavigationBarTheme,
+      'bottomSheetTheme': instance.bottomSheetTheme,
+      'cardTheme': instance.cardTheme,
+      'listTileTheme': instance.listTileTheme,
+      'navigationBarTheme': instance.navigationBarTheme,
+      'tabBarTheme': instance.tabBarTheme,
     };
 
 const _$BrightnessEnumMap = {
