@@ -27,7 +27,7 @@ class MiraiListView with _$MiraiListView {
     int? semanticChildCount,
     @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
     @Default(ScrollViewKeyboardDismissBehavior.manual)
-        ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
     String? restorationId,
     @Default(Clip.hardEdge) Clip clipBehavior,
   }) = _MiraiListView;

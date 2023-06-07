@@ -22,7 +22,7 @@ class MiraiScrollView with _$MiraiScrollView {
     @Default(Clip.hardEdge) Clip clipBehavior,
     String? restorationId,
     @Default(ScrollViewKeyboardDismissBehavior.manual)
-        ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
   }) = _MiraiScrollView;
 
   factory MiraiScrollView.fromJson(Map<String, dynamic> json) =>
