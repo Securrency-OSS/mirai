@@ -1,3 +1,17 @@
+## 0.3.0
+
+- Added support for the appBarTheme (#96) by @i-asimkhan
+- Added support for the textButtonTheme (#98) by @i-asimkhan
+- Added support for the floatingActionButtonTheme (#99) by @i-asimkhan
+- Added support for the bottomNavBarTheme (#136) by @i-asimkhan
+- Added support for the bottomSheetTheme (#137) by @i-asimkhan
+- Added support for the CardTheme (#139) by @i-asimkhan
+- Added support for the dialog theme (#140) by @i-asimkhan
+- Added support for the MiraiNavigationBarThemeData (#142) by @i-asimkhan
+- Added support for the MiraiTabBarThemeData (#143) by @i-asimkhan
+- Added support for the MiraiTabBarThemeData (#143) by @i-asimkhan
+- Added CODE_OF_CONDUCT(#122) by @divyanshub024
+
 ## 0.2.0
 
 * BREAKING: feat: Call `Mirai.initialize` to initialize Mirai (#103)
