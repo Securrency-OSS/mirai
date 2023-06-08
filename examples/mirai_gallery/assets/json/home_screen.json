@@ -2,13 +2,9 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "backgroundColor": "#004D00E9",
         "title": {
             "type": "text",
-            "data": "Mirai Gallery",
-            "style": {
-                "color": "#000000"
-            }
+            "data": "Mirai Gallery"
         },
         "elevation": 0
     },
