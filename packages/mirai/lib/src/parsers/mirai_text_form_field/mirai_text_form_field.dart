@@ -40,7 +40,7 @@ class MiraiTextFormField with _$MiraiTextFormField {
     @Default(false) bool expands,
     Brightness? keyboardAppearance,
     @Default(MiraiEdgeInsets(bottom: 20, top: 20, left: 20, right: 20))
-        MiraiEdgeInsets scrollPadding,
+    MiraiEdgeInsets scrollPadding,
     String? restorationId,
     @Default(true) bool enableIMEPersonalizedLearning,
     @Default(true) bool enableSuggestions,

@@ -11,9 +11,9 @@
             "child": {
                 "type": "icon",
                 "iconType": "material",
-                "icon": "menu",
-                "color": "#ffffff"
-            }
+                "icon": "menu"
+            },
+            "onPressed": {}
         },
         "actions": [
             {
@@ -21,27 +21,27 @@
                 "child": {
                     "type": "icon",
                     "iconType": "cupertino",
-                    "icon": "heart_solid",
-                    "color": "#ffffff"
-                }
+                    "icon": "heart_solid"
+                },
+                "onPressed": {}
             },
             {
                 "type": "iconButton",
                 "child": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "search",
-                    "color": "#ffffff"
-                }
+                    "icon": "search"
+                },
+                "onPressed": {}
             },
             {
                 "type": "iconButton",
                 "child": {
                     "type": "icon",
                     "iconType": "material",
-                    "icon": "more_horiz",
-                    "color": "#ffffff"
-                }
+                    "icon": "more_horiz"
+                },
+                "onPressed": {}
             }
         ]
     },

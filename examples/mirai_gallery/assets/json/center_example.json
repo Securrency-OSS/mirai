@@ -14,12 +14,11 @@
             "alignment": "center",
             "height": 200,
             "width": 150,
-            "color": "#800000",
+            "color": "#FC5632",
             "child": {
                 "type": "text",
                 "data": "Flutter",
                 "style": {
-                    "color": "#ffffff",
                     "fontSize": 23
                 }
             }

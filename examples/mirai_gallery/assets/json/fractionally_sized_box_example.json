@@ -21,10 +21,7 @@
                 "type": "elevatedButton",
                 "child": {
                     "type": "text",
-                    "data": "FLUTTER",
-                    "style": {
-                        "color": "#ffffff"
-                    }
+                    "data": "FLUTTER"
                 },
                 "onPressed": {}
             }

@@ -11,7 +11,7 @@ part 'mirai_stack.g.dart';
 class MiraiStack with _$MiraiStack {
   const factory MiraiStack({
     @Default(MiraiAlignmentDirectional.topStart)
-        MiraiAlignmentDirectional alignment,
+    MiraiAlignmentDirectional alignment,
     @Default(Clip.hardEdge) Clip clipBehavior,
     @Default(StackFit.loose) StackFit fit,
     TextDirection? textDirection,

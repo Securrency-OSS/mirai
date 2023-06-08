@@ -20,6 +20,10 @@
             "crossAxisAlignment": "start",
             "children": [
                 {
+                    "type": "sizedBox",
+                    "height": 12
+                },
+                {
                     "type": "text",
                     "data": "Flutter",
                     "align": "center",
@@ -30,17 +34,7 @@
                 },
                 {
                     "type": "sizedBox",
-                    "height": 10
-                },
-                {
-                    "type": "container",
-                    "height": 1,
-                    "width": 500,
-                    "color": "#D9D9D9"
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 10
+                    "height": 32
                 },
                 {
                     "type": "text",

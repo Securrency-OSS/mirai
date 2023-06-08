@@ -1,28 +1,21 @@
 {
     "brightness": "dark",
-    "scaffoldBackgroundColor": "#18262D",
     "disabledColor": "#60FFFFFF",
     "colorScheme": {
         "brightness": "dark",
-        "background": "#18262D",
-        "onBackground": "#ffffff",
-        "surface": "#4D00E9",
-        "onSurface": "#ffffff",
-        "surfaceVariant": "#8097A0",
-        "onSurfaceVariant": "#BFCBD0",
-        "primary": "#9283E5",
-        "onPrimary": "#ffffff",
-        "secondary": "#FC5632",
-        "onSecondary": "#ffffff",
-        "error": "#DB1A3A",
-        "onError": "#ffffff",
+        "primary": "#CCBDFA",
+        "onPrimary": "#341F6E",
+        "secondary": "#C9C2D9",
+        "onSecondary": "#322D40",
+        "surface": "#1C1B1E",
+        "onSurface": "#E5E1E6",
+        "background": "#1C1B1E",
+        "onBackground": "#E5E1E6",
+        "surfaceVariant": "#48454D",
+        "onSurfaceVariant": "#C9C4CE",
+        "error": "#F4B7AE",
+        "onError": "#600F0C",
         "success": "#27BA62",
-        "onSuccess": "#ffffff"
-    },
-    "outlinedButtonTheme": {
-        "style": {
-            "foregroundColor": "#9283E5",
-            "disabledForegroundColor": "#609283E5"
-        }
+        "onSuccess": "#FFFFFF"
     }
 }

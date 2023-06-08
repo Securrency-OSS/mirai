@@ -24,14 +24,11 @@
                         "children": [
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#FC3F1B",
-                                "foregroundColor": "#ffffff",
                                 "buttonType": "extended",
                                 "icon": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 },
                                 "child": {
                                     "type": "text",
@@ -45,14 +42,11 @@
                             },
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#FC3F1B",
-                                "foregroundColor": "#ffffff",
                                 "buttonType": "large",
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 },
                                 "onPressed": {}
                             }
@@ -69,15 +63,12 @@
                         "children": [
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#FC3F1B",
-                                "foregroundColor": "#ffffff",
                                 "buttonType": "extended",
                                 "disabledElevation": 0,
                                 "icon": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 },
                                 "child": {
                                     "type": "text",
@@ -90,15 +81,12 @@
                             },
                             {
                                 "type": "floatingActionButton",
-                                "backgroundColor": "#FC3F1B",
-                                "foregroundColor": "#ffffff",
                                 "buttonType": "large",
                                 "disabledElevation": 0,
                                 "child": {
                                     "type": "icon",
                                     "iconType": "material",
-                                    "icon": "add",
-                                    "size": 32
+                                    "icon": "add"
                                 }
                             }
                         ]
