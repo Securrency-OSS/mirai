@@ -16,8 +16,16 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
 
   @override
   Widget parse(BuildContext context, MiraiText model) {
-    return Text(
-      model.data,
+    return Text.rich(
+      TextSpan(
+        text: model.data,
+        children: model.children
+            .map((child) => TextSpan(
+                  text: child.data,
+                  style: child.style?.parse,
+                ))
+            .toList(),
+      ),
       style: model.style?.parse,
       textAlign: model.textAlign,
       textDirection: model.textDirection,
