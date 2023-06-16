@@ -11,14 +11,14 @@ sidebar_position: 2
 
 ## Properties
 
-| Properties | Description |
-| --- | --- |
-| actionType | Defines weather the action will be Navigation or Network Call |
-| request | Network request to be called by MiraiAction |
-| widgetJson | widgetJson is used to navigate from the local json |
-| assetPath | Define the assetPath for your json |
-| navigationType | Defines the navigationType, like screen Navigation, dialog or bottomSheet. |
-| navigationStyle | Defines the Navigation Style, like push, pop, etc. |
+| Properties      | Description                                                                |
+| --------------- | -------------------------------------------------------------------------- |
+| actionType      | Defines weather the action will be Navigation or Network Call              |
+| request         | Network request to be called by MiraiAction                                |
+| widgetJson      | widgetJson is used to navigate from the local json                         |
+| assetPath       | Define the assetPath for your json                                         |
+| navigationType  | Defines the navigationType, like screen Navigation, dialog or bottomSheet. |
+| navigationStyle | Defines the Navigation Style, like push, pop, etc.                         |
 
 ## Example
 
