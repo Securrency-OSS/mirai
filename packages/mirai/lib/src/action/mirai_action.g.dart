@@ -16,6 +16,7 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
           : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
       widgetJson: json['widgetJson'] as Map<String, dynamic>?,
       assetPath: json['assetPath'] as String?,
+      routeName: json['routeName'] as String?,
       navigationType:
           $enumDecodeNullable(_$NavigationTypeEnumMap, json['navigationType']),
       navigationStyle: $enumDecodeNullable(
@@ -28,6 +29,7 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'request': instance.request,
       'widgetJson': instance.widgetJson,
       'assetPath': instance.assetPath,
+      'routeName': instance.routeName,
       'navigationType': _$NavigationTypeEnumMap[instance.navigationType],
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
     };
@@ -50,4 +52,7 @@ const _$NavigationStyleEnumMap = {
   NavigationStyle.pushReplacement: 'pushReplacement',
   NavigationStyle.pushAndRemoveAll: 'pushAndRemoveAll',
   NavigationStyle.popAll: 'popAll',
+  NavigationStyle.pushNamed: 'pushNamed',
+  NavigationStyle.pushNamedAndRemoveUntil: 'pushNamedAndRemoveUntil',
+  NavigationStyle.pushReplacementNamed: 'pushReplacementNamed',
 };

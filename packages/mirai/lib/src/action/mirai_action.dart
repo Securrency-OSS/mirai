@@ -14,6 +14,7 @@ class MiraiAction with _$MiraiAction {
     MiraiRequest? request,
     Map<String, dynamic>? widgetJson,
     String? assetPath,
+    String? routeName,
     NavigationType? navigationType,
     NavigationStyle? navigationStyle,
   }) = _MiraiAction;

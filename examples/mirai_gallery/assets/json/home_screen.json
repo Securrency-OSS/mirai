@@ -520,6 +520,39 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "navigation"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Navigation",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Shows examples of different types of navigation types and styles in Mirai",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/navigator_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "smart_button_outlined"
                     },
                     "title": {

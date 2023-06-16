@@ -44,6 +44,15 @@ extension MiraiActionParser on MiraiAction? {
                 widget: widget,
               );
             }
+          } else if (this?.routeName != null) {
+            if (context.mounted) {
+              return MiraiNavigator.navigate(
+                context: context,
+                navigationType: this?.navigationType ?? NavigationType.screen,
+                navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
+                routeName: this?.routeName,
+              );
+            }
           }
 
           break;
