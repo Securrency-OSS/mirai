@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Mirai Action
 
-MiraiAction is a callback that lets you handle all your callbacks of flutter widgets in Mirai widgets.
+This page describes how to bind flutter widget events or actions to Json widget model in `Mirai`. For instance, to define an action on user input or on press of a button. Actions are divided into two main types:- navigation and network request.
 
 ## Reference
 
 ### Model
 
-MiraiAction model is a dart @freezed model class defined in dart for the json model vlaues being passed in the widget json. It has the following parameters. 
+MiraiAction model is a dart [@freezed](https://pub.dev/packages/freezed) class defined in dart for the json model vlaues in the `Mirai` widget json. It has the following properties. 
 
 
 | Parameter       | Type                                            | Description                                                                |
@@ -34,7 +34,7 @@ MiraiActionType enum defines the types of actions supported in Mirai Action.
 
 ### Parser 
 
-MiraiAction parser is an extension on MiraiAction which has an `onCall` method that takes build context. 
+MiraiAction parser is an extension on MiraiAction model which has an `onCall` method that takes a build context as a parameter. This method handles user requirements based on the type of action. It takes use of [MiraiNavigator](https://github.com/Securrency-OSS/mirai/blob/main/packages/mirai/lib/src/navigation/mirai_navigator.dart) for the navigation and [MiraiNetwork](https://github.com/Securrency-OSS/mirai/blob/main/packages/mirai/lib/src/network/mirai_network.dart) for the network calls.  
 
 ```
  Future<dynamic>? onCall(BuildContext context) async { ... }
