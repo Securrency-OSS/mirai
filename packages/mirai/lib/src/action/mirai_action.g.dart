@@ -21,6 +21,8 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$NavigationTypeEnumMap, json['navigationType']),
       navigationStyle: $enumDecodeNullable(
           _$NavigationStyleEnumMap, json['navigationStyle']),
+      result: json['result'] as Map<String, dynamic>?,
+      arguments: json['arguments'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
@@ -32,6 +34,8 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'routeName': instance.routeName,
       'navigationType': _$NavigationTypeEnumMap[instance.navigationType],
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
+      'result': instance.result,
+      'arguments': instance.arguments,
     };
 
 const _$ActionTypeEnumMap = {

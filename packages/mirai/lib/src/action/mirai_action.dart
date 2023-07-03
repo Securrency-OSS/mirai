@@ -17,6 +17,8 @@ class MiraiAction with _$MiraiAction {
     String? routeName,
     NavigationType? navigationType,
     NavigationStyle? navigationStyle,
+    Map<String, dynamic>? result,
+    Map<String, dynamic>? arguments,
   }) = _MiraiAction;
 
   factory MiraiAction.fromJson(Map<String, dynamic> json) =>
