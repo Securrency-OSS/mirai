@@ -65,23 +65,23 @@ class MiraiNavigator {
 
         default:
       }
-    } else if (widget != null) {
+    } else {
       switch (navigationStyle) {
         case NavigationStyle.push:
-          return Navigator.push(
-              context, MaterialPageRoute(builder: (_) => widget));
+          return Navigator.push(context,
+              MaterialPageRoute(builder: (_) => widget ?? const SizedBox()));
 
         case NavigationStyle.pop:
           Navigator.pop(context, result);
 
         case NavigationStyle.pushReplacement:
-          return Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => widget));
+          return Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (_) => widget ?? const SizedBox()));
 
         case NavigationStyle.pushAndRemoveAll:
           return Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (_) => widget),
+            MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
             ModalRoute.withName('/'),
           );
 
