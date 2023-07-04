@@ -43,7 +43,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -76,7 +75,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -109,7 +107,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -142,7 +139,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -175,7 +171,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -240,7 +235,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -273,7 +267,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -306,7 +299,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -339,7 +331,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -372,7 +363,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -405,7 +395,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -438,7 +427,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -471,7 +459,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -504,7 +491,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -537,7 +523,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -570,7 +555,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -603,7 +587,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -636,7 +619,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -669,7 +651,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -702,7 +683,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -735,7 +715,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -768,7 +747,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -801,7 +779,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -834,7 +811,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -867,7 +843,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
@@ -900,7 +875,6 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
