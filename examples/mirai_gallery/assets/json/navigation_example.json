@@ -1,0 +1,235 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Navigation"
+        }
+    },
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "push",
+                            "navigationType": "screen",
+                            "widgetJson": {
+                                "type": "exampleScreen",
+                                "assetPath": "assets/json/navigation_example.json"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Pop"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pop",
+                            "navigationType": "screen",
+                            "widgetJson": {
+                                "type": "exampleScreen",
+                                "assetPath": "assets/json/navigation_example.json"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push and Replace"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pushReplacement",
+                            "navigationType": "screen",
+                            "widgetJson": {
+                                "type": "exampleScreen",
+                                "assetPath": "assets/json/navigation_example.json"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push and Remove All"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pushAndRemoveAll",
+                            "navigationType": "screen",
+                            "widgetJson": {
+                                "type": "exampleScreen",
+                                "assetPath": "assets/json/navigation_example.json"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Pop All"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "popAll",
+                            "navigationType": "screen",
+                            "widgetJson": {
+                                "type": "exampleScreen",
+                                "assetPath": "assets/json/navigation_example.json"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push Named and Replace"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pushReplacementNamed",
+                            "navigationType": "screen",
+                            "routeName": "/detailsScreen"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push Named"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pushNamed",
+                            "navigationType": "screen",
+                            "routeName": "/detailsScreen"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 8
+                    },
+                    {
+                        "type": "elevatedButton",
+                        "child": {
+                            "type": "text",
+                            "data": "Push Named and Remove Until"
+                        },
+                        "style": {
+                            "padding": {
+                                "top": 8,
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 8
+                            }
+                        },
+                        "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pushNamedAndRemoveUntil",
+                            "navigationType": "screen",
+                            "routeName": "/homeScreen"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

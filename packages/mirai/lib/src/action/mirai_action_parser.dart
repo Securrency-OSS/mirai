@@ -7,9 +7,6 @@ import 'package:mirai/src/network/mirai_network.dart';
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
     if (this != null) {
-      if (this?.navigationStyle == NavigationStyle.pop) {
-        MiraiNavigator.navigateBack(context, result: this?.result);
-      }
       switch (this?.actionType ?? ActionType.none) {
         case ActionType.navigate:
           Widget? widget;

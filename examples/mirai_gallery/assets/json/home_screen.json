@@ -544,7 +544,7 @@
                         "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
-                            "assetPath": "assets/json/navigator_example.json"
+                            "assetPath": "assets/json/navigation_example.json"
                         }
                     }
                 },

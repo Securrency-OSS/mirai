@@ -41,13 +41,6 @@ class MiraiNavigator {
     }
   }
 
-  static void navigateBack<T extends Object?>(
-    BuildContext context, {
-    T? result,
-  }) {
-    Navigator.pop(context, result);
-  }
-
   static Future<dynamic>? _navigateToScreen<T extends Object?>(
     BuildContext context,
     NavigationStyle navigationStyle,
