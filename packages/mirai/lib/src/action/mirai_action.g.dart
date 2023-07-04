@@ -57,6 +57,6 @@ const _$NavigationStyleEnumMap = {
   NavigationStyle.pushAndRemoveAll: 'pushAndRemoveAll',
   NavigationStyle.popAll: 'popAll',
   NavigationStyle.pushNamed: 'pushNamed',
-  NavigationStyle.pushNamedAndRemoveUntil: 'pushNamedAndRemoveUntil',
+  NavigationStyle.pushNamedAndRemoveAll: 'pushNamedAndRemoveAll',
   NavigationStyle.pushReplacementNamed: 'pushReplacementNamed',
 };

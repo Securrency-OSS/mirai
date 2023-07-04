@@ -7,7 +7,7 @@ enum NavigationStyle {
   pushAndRemoveAll,
   popAll,
   pushNamed,
-  pushNamedAndRemoveUntil,
+  pushNamedAndRemoveAll,
   pushReplacementNamed
 }
 
@@ -49,47 +49,57 @@ class MiraiNavigator {
     T? result,
     T? arguments,
   ) {
-    if (routeName != null) {
-      switch (navigationStyle) {
-        case NavigationStyle.pushNamed:
-          Navigator.pushNamed(context, routeName, arguments: arguments);
+    switch (navigationStyle) {
+      case NavigationStyle.push:
+        return Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
+        );
 
-        case NavigationStyle.pushNamedAndRemoveUntil:
-          Navigator.pushNamedAndRemoveUntil(
-              context, routeName, ModalRoute.withName('/'),
-              arguments: arguments);
+      case NavigationStyle.pop:
+        Navigator.pop(context, result);
+        break;
 
-        case NavigationStyle.pushReplacementNamed:
-          Navigator.pushReplacementNamed(context, routeName,
-              arguments: arguments);
+      case NavigationStyle.pushReplacement:
+        return Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
+          result: result,
+        );
 
-        default:
-      }
-    } else {
-      switch (navigationStyle) {
-        case NavigationStyle.push:
-          return Navigator.push(context,
-              MaterialPageRoute(builder: (_) => widget ?? const SizedBox()));
+      case NavigationStyle.pushAndRemoveAll:
+        return Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
+          ModalRoute.withName('/'),
+        );
 
-        case NavigationStyle.pop:
-          Navigator.pop(context, result);
+      case NavigationStyle.popAll:
+        Navigator.popUntil(context, ModalRoute.withName('/'));
+        break;
 
-        case NavigationStyle.pushReplacement:
-          return Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (_) => widget ?? const SizedBox()));
+      case NavigationStyle.pushNamed:
+        return Navigator.pushNamed(
+          context,
+          routeName!,
+          arguments: arguments,
+        );
 
-        case NavigationStyle.pushAndRemoveAll:
-          return Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
-            ModalRoute.withName('/'),
-          );
+      case NavigationStyle.pushNamedAndRemoveAll:
+        return Navigator.pushNamedAndRemoveUntil(
+          context,
+          routeName!,
+          ModalRoute.withName('/'),
+          arguments: arguments,
+        );
 
-        case NavigationStyle.popAll:
-          Navigator.popUntil(context, ModalRoute.withName('/'));
-
-        default:
-      }
+      case NavigationStyle.pushReplacementNamed:
+        return Navigator.pushReplacementNamed(
+          context,
+          routeName!,
+          result: result,
+          arguments: arguments,
+        );
     }
 
     return null;

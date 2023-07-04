@@ -47,7 +47,7 @@ extension MiraiActionParser on MiraiAction? {
                 arguments: this?.arguments,
               );
             }
-          } else if (this?.routeName != null) {
+          } else {
             if (context.mounted) {
               return MiraiNavigator.navigate(
                 context: context,

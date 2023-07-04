@@ -61,12 +61,7 @@
                         },
                         "onPressed": {
                             "actionType": "navigate",
-                            "navigationStyle": "pop",
-                            "navigationType": "screen",
-                            "widgetJson": {
-                                "type": "exampleScreen",
-                                "assetPath": "assets/json/navigation_example.json"
-                            }
+                            "navigationStyle": "pop"
                         }
                     },
                     {
@@ -145,12 +140,7 @@
                         },
                         "onPressed": {
                             "actionType": "navigate",
-                            "navigationStyle": "popAll",
-                            "navigationType": "screen",
-                            "widgetJson": {
-                                "type": "exampleScreen",
-                                "assetPath": "assets/json/navigation_example.json"
-                            }
+                            "navigationStyle": "popAll"
                         }
                     },
                     {
@@ -223,7 +213,7 @@
                         },
                         "onPressed": {
                             "actionType": "navigate",
-                            "navigationStyle": "pushNamedAndRemoveUntil",
+                            "navigationStyle": "pushNamedAndRemoveAll",
                             "navigationType": "screen",
                             "routeName": "/homeScreen"
                         }
