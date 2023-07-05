@@ -178,6 +178,10 @@
                                 {
                                     "rule": "isNotEmpty",
                                     "message": "Enter a valid card numbder"
+                                },
+                                {
+                                    "rule": "^[1-9]{15,16}$",
+                                    "message": "Enter a valid credit card number"
                                 }
                             ],
                             "inputFormatters": [
