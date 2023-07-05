@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
-enum NavigationStyle { push, pop, pushReplacement, pushAndRemoveAll, popAll }
+enum NavigationStyle {
+  push,
+  pop,
+  pushReplacement,
+  pushAndRemoveAll,
+  popAll,
+  pushNamed,
+  pushNamedAndRemoveAll,
+  pushReplacementNamed
+}
 
 enum NavigationType { screen, dialog, bottomSheet }
 
@@ -11,65 +20,88 @@ class MiraiNavigator {
     required BuildContext context,
     required NavigationStyle navigationStyle,
     required NavigationType navigationType,
-    required Widget widget,
+    Widget? widget,
+    String? routeName,
     T? result,
+    T? arguments,
   }) {
-    switch (navigationType) {
-      case NavigationType.screen:
-        return _navigateToScreen(
-          context,
-          navigationStyle,
-          widget,
-          result,
-        );
-
-      case NavigationType.bottomSheet:
-        return _showBottomSheet(context, widget);
-
-      case NavigationType.dialog:
-        return _showDialog(context, widget);
+    if (navigationType == NavigationType.bottomSheet && widget != null) {
+      return _showBottomSheet(context, widget);
+    } else if (navigationType == NavigationType.dialog && widget != null) {
+      return _showDialog(context, widget);
+    } else {
+      return _navigateToScreen(
+        context,
+        navigationStyle,
+        widget,
+        routeName,
+        result,
+        arguments,
+      );
     }
-  }
-
-  static void navigateBack<T extends Object?>(
-    BuildContext context, {
-    T? result,
-  }) {
-    Navigator.pop(context, result);
   }
 
   static Future<dynamic>? _navigateToScreen<T extends Object?>(
     BuildContext context,
     NavigationStyle navigationStyle,
-    Widget widget,
+    Widget? widget,
+    String? routeName,
     T? result,
+    T? arguments,
   ) {
     switch (navigationStyle) {
       case NavigationStyle.push:
         return Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => widget),
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
         );
 
       case NavigationStyle.pop:
         Navigator.pop(context, result);
         break;
+
       case NavigationStyle.pushReplacement:
         return Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => widget),
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
+          result: result,
         );
 
       case NavigationStyle.pushAndRemoveAll:
         return Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (_) => widget),
+          MaterialPageRoute(builder: (_) => widget ?? const SizedBox()),
           ModalRoute.withName('/'),
         );
 
       case NavigationStyle.popAll:
         Navigator.popUntil(context, ModalRoute.withName('/'));
+        break;
+
+      case NavigationStyle.pushNamed:
+        return Navigator.pushNamed(
+          context,
+          routeName!,
+          arguments: arguments,
+        );
+
+      case NavigationStyle.pushNamedAndRemoveAll:
+        return Navigator.pushNamedAndRemoveUntil(
+          context,
+          routeName!,
+          ModalRoute.withName('/'),
+          arguments: arguments,
+        );
+
+      case NavigationStyle.pushReplacementNamed:
+        return Navigator.pushReplacementNamed(
+          context,
+          routeName!,
+          result: result,
+          arguments: arguments,
+        );
     }
+
     return null;
   }
 

@@ -14,8 +14,11 @@ class MiraiAction with _$MiraiAction {
     MiraiRequest? request,
     Map<String, dynamic>? widgetJson,
     String? assetPath,
+    String? routeName,
     NavigationType? navigationType,
     NavigationStyle? navigationStyle,
+    Map<String, dynamic>? result,
+    Map<String, dynamic>? arguments,
   }) = _MiraiAction;
 
   factory MiraiAction.fromJson(Map<String, dynamic> json) =>
