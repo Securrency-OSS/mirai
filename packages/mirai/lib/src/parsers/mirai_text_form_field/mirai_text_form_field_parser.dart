@@ -95,8 +95,11 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
               if (!validationType.validate(value, validator.rule)) {
                 return validator.message;
               }
-            } catch (e) {
-              Log.e(e);
+            } catch (_) {
+              if (!InputValidationType.general
+                  .validate(value, validator.rule)) {
+                return validator.message;
+              }
             }
           }
         }
