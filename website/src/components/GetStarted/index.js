@@ -11,7 +11,7 @@ export default function GetStarted() {
                     Start Building with Mirai Today
                 </h2>
                 <div>
-                    <Link className='button button--primary button--lg' to='https://github.com/Securrency-OSS/mirai'>Get Started</Link>
+                    <Link className='button button--primary button--lg' to='docs/intro'>Get Started</Link>
                 </div>
             </div>
         </section>
