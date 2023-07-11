@@ -15,6 +15,8 @@ class MiraiExpandedParser extends MiraiParser<MiraiExpanded> {
 
   @override
   Widget parse(BuildContext context, MiraiExpanded model) {
-    return Expanded(child: Mirai.fromJson(model.child, context) ?? SizedBox());
+    return Expanded(
+      child: Mirai.fromJson(model.child, context) ?? const SizedBox(),
+    );
   }
 }
