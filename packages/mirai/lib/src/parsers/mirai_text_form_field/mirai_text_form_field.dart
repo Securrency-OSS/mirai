@@ -16,6 +16,7 @@ part 'mirai_text_form_field.g.dart';
 @freezed
 class MiraiTextFormField with _$MiraiTextFormField {
   const factory MiraiTextFormField({
+    required String key,
     MiraiInputDecoration? decoration,
     String? initialValue,
     MiraiTextInputType? keyboardType,

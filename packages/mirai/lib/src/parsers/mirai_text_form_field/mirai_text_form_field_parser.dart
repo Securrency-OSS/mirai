@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
+import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
@@ -8,6 +10,7 @@ import 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.da
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/input_validations.dart';
+import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
@@ -28,8 +31,23 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
 
   @override
   Widget parse(BuildContext context, MiraiTextFormField model) {
+    TextEditingController storedController =
+        controller ?? TextEditingController();
+
+    try {
+      storedController =
+          context.read<MiraiFormCubit>().getController(model.key) ??
+              storedController;
+
+      context.read<MiraiFormCubit>().addController(
+        {model.key: storedController},
+      );
+    } catch (e) {
+      Log.e(e);
+    }
+
     return TextFormField(
-      controller: controller,
+      controller: storedController,
       focusNode: focusNode,
       initialValue: model.initialValue,
       keyboardType: model.keyboardType?.value,
@@ -41,6 +59,7 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       readOnly: model.readOnly,
       showCursor: model.showCursor,
       autofocus: model.autofocus,
+      autovalidateMode: model.autovalidateMode,
       obscuringCharacter: model.obscuringCharacter,
       maxLines: model.maxLines,
       minLines: model.minLines,
@@ -76,7 +95,12 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
               if (!validationType.validate(value, validator.rule)) {
                 return validator.message;
               }
-            } catch (_) {}
+            } catch (_) {
+              if (!InputValidationType.general
+                  .validate(value, validator.rule)) {
+                return validator.message;
+              }
+            }
           }
         }
 
