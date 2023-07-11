@@ -10,6 +10,7 @@ class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
   @override
   MiraiElevatedButton getModel(Map<String, dynamic> json) =>
       MiraiElevatedButton.fromJson(json);
+
   @override
   String get type => WidgetType.elevatedButton.name;
 
