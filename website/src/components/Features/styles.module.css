@@ -1,0 +1,76 @@
+.featureSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.featureRow {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureRowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 40%;
+}
+
+.featureImage {
+    width: 40%;
+}
+
+.featureLabel {
+    font-size: 24px;
+    color: var(--ifm-color-primary);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.featureTitle {
+    font-size: 40px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.featureDescription {
+    font-size: 24px;
+    opacity: 80%;
+    z-index: 1;
+}
+
+.normal {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(#acdd22, #27ba62);
+    border-radius: 50%;
+    position: absolute;
+    left: -50px;
+    align-self: center;
+    filter: blur(50px);
+    z-index: 0;
+}
+
+.reverse {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(#acdd22, #27ba62);
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    align-self: center;
+    filter: blur(50px);
+    z-index: 0;
+}

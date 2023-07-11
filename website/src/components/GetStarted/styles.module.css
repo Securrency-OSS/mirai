@@ -1,0 +1,18 @@
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+.getStarted {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 0;
+}
+
+.title {
+    font-size: 40px;
+}

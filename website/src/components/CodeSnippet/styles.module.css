@@ -1,0 +1,20 @@
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.snippet {
+    display: flex;
+    flex-direction: row;
+    background-color: #212121;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.icon {
+    width: 24px;
+}

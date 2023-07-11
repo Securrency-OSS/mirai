@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 4em 0;
+  background-color: var(--ifm-background-color);
+  align-self: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(#acdd22, #27ba62);
+  border-radius: 50%;
+  position: absolute;
+  top: 10rem;
+  left: 40%;
+  filter: blur(8rem);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 8rem 0;
+}
+
+.headline {
+  font-size: 56px;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.subHeadline {
+  font-size: 20px;
+  max-width: 50rem;
+  align-self: center;
+}
+
+.bannerCta {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-self: center;
+  padding: 2rem 0;
+}
