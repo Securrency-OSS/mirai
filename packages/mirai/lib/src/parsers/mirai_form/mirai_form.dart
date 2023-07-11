@@ -11,6 +11,7 @@ part 'mirai_form.g.dart';
 class MiraiForm with _$MiraiForm {
   const factory MiraiForm({
     MiraiAction? onChanged,
+    MiraiAction? onBuild,
     AutovalidateMode? autovalidateMode,
     required Map<String, dynamic> child,
   }) = _MiraiForm;

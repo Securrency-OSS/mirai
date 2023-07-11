@@ -9,6 +9,12 @@
     },
     "body": {
         "type": "form",
+        "onBuild": {
+            "signal": {
+                "signalType": "listen",
+                "name": "submit"
+            }
+        },
         "child": {
             "type": "container",
             "padding": {
@@ -298,7 +304,16 @@
                                 }
                             },
                             "onPressed": {
-                                "actionType": "formValidation"
+                                "signal": {
+                                    "signalType": "send",
+                                    "name": "submit"
+                                }
+                            },
+                            "onBuild": {
+                                "signal": {
+                                    "signalType": "listen",
+                                    "name": "enableDisableSubmit"
+                                }
                             }
                         }
                     ]

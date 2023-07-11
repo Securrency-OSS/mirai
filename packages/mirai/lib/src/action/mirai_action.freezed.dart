@@ -29,6 +29,7 @@ mixin _$MiraiAction {
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
   Map<String, dynamic>? get result => throw _privateConstructorUsedError;
   Map<String, dynamic>? get arguments => throw _privateConstructorUsedError;
+  MiraiSignal? get signal => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,9 +52,11 @@ abstract class $MiraiActionCopyWith<$Res> {
       NavigationType? navigationType,
       NavigationStyle? navigationStyle,
       Map<String, dynamic>? result,
-      Map<String, dynamic>? arguments});
+      Map<String, dynamic>? arguments,
+      MiraiSignal? signal});
 
   $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiSignalCopyWith<$Res>? get signal;
 }
 
 /// @nodoc
@@ -78,6 +81,7 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
     Object? navigationStyle = freezed,
     Object? result = freezed,
     Object? arguments = freezed,
+    Object? signal = freezed,
   }) {
     return _then(_value.copyWith(
       actionType: null == actionType
@@ -116,6 +120,10 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
           ? _value.arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      signal: freezed == signal
+          ? _value.signal
+          : signal // ignore: cast_nullable_to_non_nullable
+              as MiraiSignal?,
     ) as $Val);
   }
 
@@ -128,6 +136,18 @@ class _$MiraiActionCopyWithImpl<$Res, $Val extends MiraiAction>
 
     return $MiraiRequestCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiSignalCopyWith<$Res>? get signal {
+    if (_value.signal == null) {
+      return null;
+    }
+
+    return $MiraiSignalCopyWith<$Res>(_value.signal!, (value) {
+      return _then(_value.copyWith(signal: value) as $Val);
     });
   }
 }
@@ -149,10 +169,13 @@ abstract class _$$_MiraiActionCopyWith<$Res>
       NavigationType? navigationType,
       NavigationStyle? navigationStyle,
       Map<String, dynamic>? result,
-      Map<String, dynamic>? arguments});
+      Map<String, dynamic>? arguments,
+      MiraiSignal? signal});
 
   @override
   $MiraiRequestCopyWith<$Res>? get request;
+  @override
+  $MiraiSignalCopyWith<$Res>? get signal;
 }
 
 /// @nodoc
@@ -175,6 +198,7 @@ class __$$_MiraiActionCopyWithImpl<$Res>
     Object? navigationStyle = freezed,
     Object? result = freezed,
     Object? arguments = freezed,
+    Object? signal = freezed,
   }) {
     return _then(_$_MiraiAction(
       actionType: null == actionType
@@ -213,6 +237,10 @@ class __$$_MiraiActionCopyWithImpl<$Res>
           ? _value._arguments
           : arguments // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      signal: freezed == signal
+          ? _value.signal
+          : signal // ignore: cast_nullable_to_non_nullable
+              as MiraiSignal?,
     ));
   }
 }
@@ -229,7 +257,8 @@ class _$_MiraiAction implements _MiraiAction {
       this.navigationType,
       this.navigationStyle,
       final Map<String, dynamic>? result,
-      final Map<String, dynamic>? arguments})
+      final Map<String, dynamic>? arguments,
+      this.signal})
       : _widgetJson = widgetJson,
         _result = result,
         _arguments = arguments;
@@ -281,8 +310,11 @@ class _$_MiraiAction implements _MiraiAction {
   }
 
   @override
+  final MiraiSignal? signal;
+
+  @override
   String toString() {
-    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, routeName: $routeName, navigationType: $navigationType, navigationStyle: $navigationStyle, result: $result, arguments: $arguments)';
+    return 'MiraiAction(actionType: $actionType, request: $request, widgetJson: $widgetJson, assetPath: $assetPath, routeName: $routeName, navigationType: $navigationType, navigationStyle: $navigationStyle, result: $result, arguments: $arguments, signal: $signal)';
   }
 
   @override
@@ -305,7 +337,8 @@ class _$_MiraiAction implements _MiraiAction {
                 other.navigationStyle == navigationStyle) &&
             const DeepCollectionEquality().equals(other._result, _result) &&
             const DeepCollectionEquality()
-                .equals(other._arguments, _arguments));
+                .equals(other._arguments, _arguments) &&
+            (identical(other.signal, signal) || other.signal == signal));
   }
 
   @JsonKey(ignore: true)
@@ -320,7 +353,8 @@ class _$_MiraiAction implements _MiraiAction {
       navigationType,
       navigationStyle,
       const DeepCollectionEquality().hash(_result),
-      const DeepCollectionEquality().hash(_arguments));
+      const DeepCollectionEquality().hash(_arguments),
+      signal);
 
   @JsonKey(ignore: true)
   @override
@@ -346,7 +380,8 @@ abstract class _MiraiAction implements MiraiAction {
       final NavigationType? navigationType,
       final NavigationStyle? navigationStyle,
       final Map<String, dynamic>? result,
-      final Map<String, dynamic>? arguments}) = _$_MiraiAction;
+      final Map<String, dynamic>? arguments,
+      final MiraiSignal? signal}) = _$_MiraiAction;
 
   factory _MiraiAction.fromJson(Map<String, dynamic> json) =
       _$_MiraiAction.fromJson;
@@ -370,7 +405,184 @@ abstract class _MiraiAction implements MiraiAction {
   @override
   Map<String, dynamic>? get arguments;
   @override
+  MiraiSignal? get signal;
+  @override
   @JsonKey(ignore: true)
   _$$_MiraiActionCopyWith<_$_MiraiAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MiraiSignal _$MiraiSignalFromJson(Map<String, dynamic> json) {
+  return _MiraiSignal.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MiraiSignal {
+  SignalType get signalType => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  dynamic get value => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiSignalCopyWith<MiraiSignal> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MiraiSignalCopyWith<$Res> {
+  factory $MiraiSignalCopyWith(
+          MiraiSignal value, $Res Function(MiraiSignal) then) =
+      _$MiraiSignalCopyWithImpl<$Res, MiraiSignal>;
+  @useResult
+  $Res call({SignalType signalType, String name, dynamic value});
+}
+
+/// @nodoc
+class _$MiraiSignalCopyWithImpl<$Res, $Val extends MiraiSignal>
+    implements $MiraiSignalCopyWith<$Res> {
+  _$MiraiSignalCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? signalType = null,
+    Object? name = null,
+    Object? value = freezed,
+  }) {
+    return _then(_value.copyWith(
+      signalType: null == signalType
+          ? _value.signalType
+          : signalType // ignore: cast_nullable_to_non_nullable
+              as SignalType,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MiraiSignalCopyWith<$Res>
+    implements $MiraiSignalCopyWith<$Res> {
+  factory _$$_MiraiSignalCopyWith(
+          _$_MiraiSignal value, $Res Function(_$_MiraiSignal) then) =
+      __$$_MiraiSignalCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({SignalType signalType, String name, dynamic value});
+}
+
+/// @nodoc
+class __$$_MiraiSignalCopyWithImpl<$Res>
+    extends _$MiraiSignalCopyWithImpl<$Res, _$_MiraiSignal>
+    implements _$$_MiraiSignalCopyWith<$Res> {
+  __$$_MiraiSignalCopyWithImpl(
+      _$_MiraiSignal _value, $Res Function(_$_MiraiSignal) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? signalType = null,
+    Object? name = null,
+    Object? value = freezed,
+  }) {
+    return _then(_$_MiraiSignal(
+      signalType: null == signalType
+          ? _value.signalType
+          : signalType // ignore: cast_nullable_to_non_nullable
+              as SignalType,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_MiraiSignal implements _MiraiSignal {
+  _$_MiraiSignal(
+      {this.signalType = SignalType.send, required this.name, this.value});
+
+  factory _$_MiraiSignal.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiSignalFromJson(json);
+
+  @override
+  @JsonKey()
+  final SignalType signalType;
+  @override
+  final String name;
+  @override
+  final dynamic value;
+
+  @override
+  String toString() {
+    return 'MiraiSignal(signalType: $signalType, name: $name, value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MiraiSignal &&
+            (identical(other.signalType, signalType) ||
+                other.signalType == signalType) &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other.value, value));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, signalType, name,
+      const DeepCollectionEquality().hash(value));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MiraiSignalCopyWith<_$_MiraiSignal> get copyWith =>
+      __$$_MiraiSignalCopyWithImpl<_$_MiraiSignal>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MiraiSignalToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MiraiSignal implements MiraiSignal {
+  factory _MiraiSignal(
+      {final SignalType signalType,
+      required final String name,
+      final dynamic value}) = _$_MiraiSignal;
+
+  factory _MiraiSignal.fromJson(Map<String, dynamic> json) =
+      _$_MiraiSignal.fromJson;
+
+  @override
+  SignalType get signalType;
+  @override
+  String get name;
+  @override
+  dynamic get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MiraiSignalCopyWith<_$_MiraiSignal> get copyWith =>
       throw _privateConstructorUsedError;
 }

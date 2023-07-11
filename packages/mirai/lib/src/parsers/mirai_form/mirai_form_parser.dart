@@ -17,6 +17,10 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
 
   @override
   Widget parse(BuildContext context, MiraiForm model) {
+    if (model.onBuild != null) {
+      model.onBuild.onCall(context);
+    }
+
     return BlocProvider(
       create: (_) => MiraiFormCubit(),
       child: Form(

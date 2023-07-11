@@ -19,8 +19,26 @@ class MiraiAction with _$MiraiAction {
     NavigationStyle? navigationStyle,
     Map<String, dynamic>? result,
     Map<String, dynamic>? arguments,
+    MiraiSignal? signal,
   }) = _MiraiAction;
 
   factory MiraiAction.fromJson(Map<String, dynamic> json) =>
       _$MiraiActionFromJson(json);
+}
+
+enum SignalType {
+  listen,
+  send,
+}
+
+@freezed
+class MiraiSignal with _$MiraiSignal {
+  factory MiraiSignal({
+    @Default(SignalType.send) SignalType signalType,
+    required String name,
+    dynamic value,
+  }) = _MiraiSignal;
+
+  factory MiraiSignal.fromJson(Map<String, dynamic> json) =>
+      _$MiraiSignalFromJson(json);
 }

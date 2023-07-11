@@ -23,6 +23,9 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
           _$NavigationStyleEnumMap, json['navigationStyle']),
       result: json['result'] as Map<String, dynamic>?,
       arguments: json['arguments'] as Map<String, dynamic>?,
+      signal: json['signal'] == null
+          ? null
+          : MiraiSignal.fromJson(json['signal'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
@@ -36,6 +39,7 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],
       'result': instance.result,
       'arguments': instance.arguments,
+      'signal': instance.signal,
     };
 
 const _$ActionTypeEnumMap = {
@@ -60,4 +64,25 @@ const _$NavigationStyleEnumMap = {
   NavigationStyle.pushNamed: 'pushNamed',
   NavigationStyle.pushNamedAndRemoveAll: 'pushNamedAndRemoveAll',
   NavigationStyle.pushReplacementNamed: 'pushReplacementNamed',
+};
+
+_$_MiraiSignal _$$_MiraiSignalFromJson(Map<String, dynamic> json) =>
+    _$_MiraiSignal(
+      signalType:
+          $enumDecodeNullable(_$SignalTypeEnumMap, json['signalType']) ??
+              SignalType.send,
+      name: json['name'] as String,
+      value: json['value'],
+    );
+
+Map<String, dynamic> _$$_MiraiSignalToJson(_$_MiraiSignal instance) =>
+    <String, dynamic>{
+      'signalType': _$SignalTypeEnumMap[instance.signalType]!,
+      'name': instance.name,
+      'value': instance.value,
+    };
+
+const _$SignalTypeEnumMap = {
+  SignalType.listen: 'listen',
+  SignalType.send: 'send',
 };

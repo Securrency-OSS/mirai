@@ -7,10 +7,23 @@ import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/utils/log.dart';
+import 'package:mirai/src/utils/mirai_stream.dart';
 
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
     if (this != null) {
+      if (this?.signal != null) {
+        if (this?.signal?.signalType == SignalType.listen) {
+          MiraiStream.listen(this?.signal?.name ?? '', (value) {
+            Log.d(value);
+          });
+        } else if (this?.signal?.signalType == SignalType.send) {
+          MiraiStream.add({'name': this?.signal?.name, 'value': 'Dummy value'});
+        }
+
+        return;
+      }
+
       switch (this?.actionType ?? ActionType.none) {
         case ActionType.navigate:
           Widget? widget;
