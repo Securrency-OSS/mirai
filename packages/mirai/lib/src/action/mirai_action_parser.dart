@@ -5,7 +5,7 @@ import 'package:mirai/src/action/mirai_action.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/navigation/mirai_navigator.dart';
 import 'package:mirai/src/network/mirai_network.dart';
-import 'package:mirai/src/parsers/mirai_form/cubit/cubit/mirai_form_cubit.dart';
+import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/utils/log.dart';
 
 extension MiraiActionParser on MiraiAction? {

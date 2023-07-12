@@ -12,7 +12,7 @@ class MiraiForm with _$MiraiForm {
   const factory MiraiForm({
     MiraiAction? onChanged,
     AutovalidateMode? autovalidateMode,
-    required Map<String, dynamic> child,
+    required List<Map<String, dynamic>> children,
   }) = _MiraiForm;
 
   factory MiraiForm.fromJson(Map<String, dynamic> json) =>

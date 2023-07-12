@@ -31,4 +31,5 @@ enum WidgetType {
   scrollView,
   tab,
   form,
+  formField,
 }
