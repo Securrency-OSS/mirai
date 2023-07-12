@@ -9,6 +9,10 @@ part of 'mirai_theme.dart';
 _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
     _$_MiraiTheme(
       applyElevationOverlayColor: json['applyElevationOverlayColor'] as bool?,
+      inputDecorationTheme: json['inputDecorationTheme'] == null
+          ? null
+          : MiraiInputDecorationTheme.fromJson(
+              json['inputDecorationTheme'] as Map<String, dynamic>),
       useMaterial3: json['useMaterial3'] as bool?,
       brightness: $enumDecodeNullable(_$BrightnessEnumMap, json['brightness']),
       canvasColor: json['canvasColor'] as String?,
@@ -107,6 +111,7 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
     <String, dynamic>{
       'applyElevationOverlayColor': instance.applyElevationOverlayColor,
+      'inputDecorationTheme': instance.inputDecorationTheme,
       'useMaterial3': instance.useMaterial3,
       'brightness': _$BrightnessEnumMap[instance.brightness],
       'canvasColor': instance.canvasColor,

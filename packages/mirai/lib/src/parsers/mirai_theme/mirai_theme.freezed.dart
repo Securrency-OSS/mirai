@@ -21,6 +21,8 @@ MiraiTheme _$MiraiThemeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiTheme {
   bool? get applyElevationOverlayColor => throw _privateConstructorUsedError;
+  MiraiInputDecorationTheme? get inputDecorationTheme =>
+      throw _privateConstructorUsedError;
   bool? get useMaterial3 => throw _privateConstructorUsedError;
   Brightness? get brightness => throw _privateConstructorUsedError;
   String? get canvasColor => throw _privateConstructorUsedError;
@@ -84,6 +86,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
   @useResult
   $Res call(
       {bool? applyElevationOverlayColor,
+      MiraiInputDecorationTheme? inputDecorationTheme,
       bool? useMaterial3,
       Brightness? brightness,
       String? canvasColor,
@@ -124,6 +127,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
       MiraiNavigationBarThemeData? navigationBarTheme,
       MiraiTabBarThemeData? tabBarTheme});
 
+  $MiraiInputDecorationThemeCopyWith<$Res>? get inputDecorationTheme;
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
   $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
@@ -159,6 +163,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
   @override
   $Res call({
     Object? applyElevationOverlayColor = freezed,
+    Object? inputDecorationTheme = freezed,
     Object? useMaterial3 = freezed,
     Object? brightness = freezed,
     Object? canvasColor = freezed,
@@ -204,6 +209,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.applyElevationOverlayColor
           : applyElevationOverlayColor // ignore: cast_nullable_to_non_nullable
               as bool?,
+      inputDecorationTheme: freezed == inputDecorationTheme
+          ? _value.inputDecorationTheme
+          : inputDecorationTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiInputDecorationTheme?,
       useMaterial3: freezed == useMaterial3
           ? _value.useMaterial3
           : useMaterial3 // ignore: cast_nullable_to_non_nullable
@@ -361,6 +370,19 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           : tabBarTheme // ignore: cast_nullable_to_non_nullable
               as MiraiTabBarThemeData?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputDecorationThemeCopyWith<$Res>? get inputDecorationTheme {
+    if (_value.inputDecorationTheme == null) {
+      return null;
+    }
+
+    return $MiraiInputDecorationThemeCopyWith<$Res>(
+        _value.inputDecorationTheme!, (value) {
+      return _then(_value.copyWith(inputDecorationTheme: value) as $Val);
+    });
   }
 
   @override
@@ -599,6 +621,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   @useResult
   $Res call(
       {bool? applyElevationOverlayColor,
+      MiraiInputDecorationTheme? inputDecorationTheme,
       bool? useMaterial3,
       Brightness? brightness,
       String? canvasColor,
@@ -639,6 +662,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       MiraiNavigationBarThemeData? navigationBarTheme,
       MiraiTabBarThemeData? tabBarTheme});
 
+  @override
+  $MiraiInputDecorationThemeCopyWith<$Res>? get inputDecorationTheme;
   @override
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   @override
@@ -690,6 +715,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
   @override
   $Res call({
     Object? applyElevationOverlayColor = freezed,
+    Object? inputDecorationTheme = freezed,
     Object? useMaterial3 = freezed,
     Object? brightness = freezed,
     Object? canvasColor = freezed,
@@ -735,6 +761,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.applyElevationOverlayColor
           : applyElevationOverlayColor // ignore: cast_nullable_to_non_nullable
               as bool?,
+      inputDecorationTheme: freezed == inputDecorationTheme
+          ? _value.inputDecorationTheme
+          : inputDecorationTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiInputDecorationTheme?,
       useMaterial3: freezed == useMaterial3
           ? _value.useMaterial3
           : useMaterial3 // ignore: cast_nullable_to_non_nullable
@@ -900,6 +930,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
 class _$_MiraiTheme implements _MiraiTheme {
   const _$_MiraiTheme(
       {this.applyElevationOverlayColor,
+      this.inputDecorationTheme,
       this.useMaterial3,
       this.brightness,
       this.canvasColor,
@@ -945,6 +976,8 @@ class _$_MiraiTheme implements _MiraiTheme {
 
   @override
   final bool? applyElevationOverlayColor;
+  @override
+  final MiraiInputDecorationTheme? inputDecorationTheme;
   @override
   final bool? useMaterial3;
   @override
@@ -1026,7 +1059,7 @@ class _$_MiraiTheme implements _MiraiTheme {
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme, tabBarTheme: $tabBarTheme)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, inputDecorationTheme: $inputDecorationTheme, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme, tabBarTheme: $tabBarTheme)';
   }
 
   @override
@@ -1037,6 +1070,8 @@ class _$_MiraiTheme implements _MiraiTheme {
             (identical(other.applyElevationOverlayColor, applyElevationOverlayColor) ||
                 other.applyElevationOverlayColor ==
                     applyElevationOverlayColor) &&
+            (identical(other.inputDecorationTheme, inputDecorationTheme) ||
+                other.inputDecorationTheme == inputDecorationTheme) &&
             (identical(other.useMaterial3, useMaterial3) ||
                 other.useMaterial3 == useMaterial3) &&
             (identical(other.brightness, brightness) ||
@@ -1113,6 +1148,7 @@ class _$_MiraiTheme implements _MiraiTheme {
   int get hashCode => Object.hashAll([
         runtimeType,
         applyElevationOverlayColor,
+        inputDecorationTheme,
         useMaterial3,
         brightness,
         canvasColor,
@@ -1171,6 +1207,7 @@ class _$_MiraiTheme implements _MiraiTheme {
 abstract class _MiraiTheme implements MiraiTheme {
   const factory _MiraiTheme(
       {final bool? applyElevationOverlayColor,
+      final MiraiInputDecorationTheme? inputDecorationTheme,
       final bool? useMaterial3,
       final Brightness? brightness,
       final String? canvasColor,
@@ -1216,6 +1253,8 @@ abstract class _MiraiTheme implements MiraiTheme {
 
   @override
   bool? get applyElevationOverlayColor;
+  @override
+  MiraiInputDecorationTheme? get inputDecorationTheme;
   @override
   bool? get useMaterial3;
   @override
