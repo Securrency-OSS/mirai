@@ -10,6 +10,20 @@ import 'package:mirai/src/utils/color_utils.dart';
 part 'mirai_input_decoration_theme.freezed.dart';
 part 'mirai_input_decoration_theme.g.dart';
 
+enum MiraiFloatingLabelAlignment {
+  start,
+  center;
+
+  FloatingLabelAlignment get parse {
+    switch (this) {
+      case start:
+        return FloatingLabelAlignment.start;
+      case center:
+        return FloatingLabelAlignment.center;
+    }
+  }
+}
+
 @freezed
 class MiraiInputDecorationTheme with _$MiraiInputDecorationTheme {
   const factory MiraiInputDecorationTheme({
@@ -20,8 +34,8 @@ class MiraiInputDecorationTheme with _$MiraiInputDecorationTheme {
     MiraiTextStyle? hintStyle,
     MiraiTextStyle? errorStyle,
     int? errorMaxLines,
-    floatingLabelBehavior,
-    floatingLabelAlignment,
+    FloatingLabelBehavior? floatingLabelBehavior,
+    MiraiFloatingLabelAlignment? floatingLabelAlignment,
     @Default(false) bool isDense,
     MiraiEdgeInsets? contentPadding,
     @Default(false) bool isCollapsed,
@@ -61,8 +75,10 @@ extension MiraiInputDecorationThemeParser on MiraiInputDecorationTheme? {
       hintStyle: this?.hintStyle?.parse,
       errorStyle: this?.errorStyle?.parse,
       errorMaxLines: this?.errorMaxLines,
-      floatingLabelBehavior: this?.floatingLabelBehavior,
-      floatingLabelAlignment: this?.floatingLabelAlignment,
+      floatingLabelBehavior:
+          this?.floatingLabelBehavior ?? FloatingLabelBehavior.auto,
+      floatingLabelAlignment:
+          this?.floatingLabelAlignment?.parse ?? FloatingLabelAlignment.start,
       isDense: this?.isDense ?? false,
       contentPadding: this?.contentPadding?.parse,
       isCollapsed: this?.isCollapsed ?? false,
