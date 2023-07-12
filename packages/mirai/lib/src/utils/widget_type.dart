@@ -30,4 +30,5 @@ enum WidgetType {
   defaultTabController,
   scrollView,
   tab,
+  expanded,
 }
