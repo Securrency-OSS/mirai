@@ -28,8 +28,10 @@ _$_MiraiInputDecorationTheme _$$_MiraiInputDecorationThemeFromJson(
           ? null
           : MiraiTextStyle.fromJson(json['errorStyle'] as Map<String, dynamic>),
       errorMaxLines: json['errorMaxLines'] as int?,
-      floatingLabelBehavior: json['floatingLabelBehavior'],
-      floatingLabelAlignment: json['floatingLabelAlignment'],
+      floatingLabelBehavior: $enumDecodeNullable(
+          _$FloatingLabelBehaviorEnumMap, json['floatingLabelBehavior']),
+      floatingLabelAlignment: $enumDecodeNullable(
+          _$MiraiFloatingLabelAlignmentEnumMap, json['floatingLabelAlignment']),
       isDense: json['isDense'] as bool? ?? false,
       contentPadding: json['contentPadding'] == null
           ? null
@@ -103,8 +105,10 @@ Map<String, dynamic> _$$_MiraiInputDecorationThemeToJson(
       'hintStyle': instance.hintStyle,
       'errorStyle': instance.errorStyle,
       'errorMaxLines': instance.errorMaxLines,
-      'floatingLabelBehavior': instance.floatingLabelBehavior,
-      'floatingLabelAlignment': instance.floatingLabelAlignment,
+      'floatingLabelBehavior':
+          _$FloatingLabelBehaviorEnumMap[instance.floatingLabelBehavior],
+      'floatingLabelAlignment':
+          _$MiraiFloatingLabelAlignmentEnumMap[instance.floatingLabelAlignment],
       'isDense': instance.isDense,
       'contentPadding': instance.contentPadding,
       'isCollapsed': instance.isCollapsed,
@@ -129,3 +133,14 @@ Map<String, dynamic> _$$_MiraiInputDecorationThemeToJson(
       'alignLabelWithHint': instance.alignLabelWithHint,
       'constraints': instance.constraints,
     };
+
+const _$FloatingLabelBehaviorEnumMap = {
+  FloatingLabelBehavior.never: 'never',
+  FloatingLabelBehavior.auto: 'auto',
+  FloatingLabelBehavior.always: 'always',
+};
+
+const _$MiraiFloatingLabelAlignmentEnumMap = {
+  MiraiFloatingLabelAlignment.start: 'start',
+  MiraiFloatingLabelAlignment.center: 'center',
+};

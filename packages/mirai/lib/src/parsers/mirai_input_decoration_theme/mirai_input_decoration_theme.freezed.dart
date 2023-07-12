@@ -28,8 +28,10 @@ mixin _$MiraiInputDecorationTheme {
   MiraiTextStyle? get hintStyle => throw _privateConstructorUsedError;
   MiraiTextStyle? get errorStyle => throw _privateConstructorUsedError;
   int? get errorMaxLines => throw _privateConstructorUsedError;
-  dynamic get floatingLabelBehavior => throw _privateConstructorUsedError;
-  dynamic get floatingLabelAlignment => throw _privateConstructorUsedError;
+  FloatingLabelBehavior? get floatingLabelBehavior =>
+      throw _privateConstructorUsedError;
+  MiraiFloatingLabelAlignment? get floatingLabelAlignment =>
+      throw _privateConstructorUsedError;
   bool get isDense => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get contentPadding => throw _privateConstructorUsedError;
   bool get isCollapsed => throw _privateConstructorUsedError;
@@ -76,8 +78,8 @@ abstract class $MiraiInputDecorationThemeCopyWith<$Res> {
       MiraiTextStyle? hintStyle,
       MiraiTextStyle? errorStyle,
       int? errorMaxLines,
-      dynamic floatingLabelBehavior,
-      dynamic floatingLabelAlignment,
+      FloatingLabelBehavior? floatingLabelBehavior,
+      MiraiFloatingLabelAlignment? floatingLabelAlignment,
       bool isDense,
       MiraiEdgeInsets? contentPadding,
       bool isCollapsed,
@@ -201,11 +203,11 @@ class _$MiraiInputDecorationThemeCopyWithImpl<$Res,
       floatingLabelBehavior: freezed == floatingLabelBehavior
           ? _value.floatingLabelBehavior
           : floatingLabelBehavior // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as FloatingLabelBehavior?,
       floatingLabelAlignment: freezed == floatingLabelAlignment
           ? _value.floatingLabelAlignment
           : floatingLabelAlignment // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as MiraiFloatingLabelAlignment?,
       isDense: null == isDense
           ? _value.isDense
           : isDense // ignore: cast_nullable_to_non_nullable
@@ -536,8 +538,8 @@ abstract class _$$_MiraiInputDecorationThemeCopyWith<$Res>
       MiraiTextStyle? hintStyle,
       MiraiTextStyle? errorStyle,
       int? errorMaxLines,
-      dynamic floatingLabelBehavior,
-      dynamic floatingLabelAlignment,
+      FloatingLabelBehavior? floatingLabelBehavior,
+      MiraiFloatingLabelAlignment? floatingLabelAlignment,
       bool isDense,
       MiraiEdgeInsets? contentPadding,
       bool isCollapsed,
@@ -676,11 +678,13 @@ class __$$_MiraiInputDecorationThemeCopyWithImpl<$Res>
           : errorMaxLines // ignore: cast_nullable_to_non_nullable
               as int?,
       floatingLabelBehavior: freezed == floatingLabelBehavior
-          ? _value.floatingLabelBehavior!
-          : floatingLabelBehavior,
+          ? _value.floatingLabelBehavior
+          : floatingLabelBehavior // ignore: cast_nullable_to_non_nullable
+              as FloatingLabelBehavior?,
       floatingLabelAlignment: freezed == floatingLabelAlignment
-          ? _value.floatingLabelAlignment!
-          : floatingLabelAlignment,
+          ? _value.floatingLabelAlignment
+          : floatingLabelAlignment // ignore: cast_nullable_to_non_nullable
+              as MiraiFloatingLabelAlignment?,
       isDense: null == isDense
           ? _value.isDense
           : isDense // ignore: cast_nullable_to_non_nullable
@@ -832,9 +836,9 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
   @override
   final int? errorMaxLines;
   @override
-  final dynamic floatingLabelBehavior;
+  final FloatingLabelBehavior? floatingLabelBehavior;
   @override
-  final dynamic floatingLabelAlignment;
+  final MiraiFloatingLabelAlignment? floatingLabelAlignment;
   @override
   @JsonKey()
   final bool isDense;
@@ -910,10 +914,10 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
                 other.errorStyle == errorStyle) &&
             (identical(other.errorMaxLines, errorMaxLines) ||
                 other.errorMaxLines == errorMaxLines) &&
-            const DeepCollectionEquality()
-                .equals(other.floatingLabelBehavior, floatingLabelBehavior) &&
-            const DeepCollectionEquality()
-                .equals(other.floatingLabelAlignment, floatingLabelAlignment) &&
+            (identical(other.floatingLabelBehavior, floatingLabelBehavior) ||
+                other.floatingLabelBehavior == floatingLabelBehavior) &&
+            (identical(other.floatingLabelAlignment, floatingLabelAlignment) ||
+                other.floatingLabelAlignment == floatingLabelAlignment) &&
             (identical(other.isDense, isDense) || other.isDense == isDense) &&
             (identical(other.contentPadding, contentPadding) ||
                 other.contentPadding == contentPadding) &&
@@ -970,8 +974,8 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
         hintStyle,
         errorStyle,
         errorMaxLines,
-        const DeepCollectionEquality().hash(floatingLabelBehavior),
-        const DeepCollectionEquality().hash(floatingLabelAlignment),
+        floatingLabelBehavior,
+        floatingLabelAlignment,
         isDense,
         contentPadding,
         isCollapsed,
@@ -1021,8 +1025,8 @@ abstract class _MiraiInputDecorationTheme implements MiraiInputDecorationTheme {
       final MiraiTextStyle? hintStyle,
       final MiraiTextStyle? errorStyle,
       final int? errorMaxLines,
-      final dynamic floatingLabelBehavior,
-      final dynamic floatingLabelAlignment,
+      final FloatingLabelBehavior? floatingLabelBehavior,
+      final MiraiFloatingLabelAlignment? floatingLabelAlignment,
       final bool isDense,
       final MiraiEdgeInsets? contentPadding,
       final bool isCollapsed,
@@ -1065,9 +1069,9 @@ abstract class _MiraiInputDecorationTheme implements MiraiInputDecorationTheme {
   @override
   int? get errorMaxLines;
   @override
-  dynamic get floatingLabelBehavior;
+  FloatingLabelBehavior? get floatingLabelBehavior;
   @override
-  dynamic get floatingLabelAlignment;
+  MiraiFloatingLabelAlignment? get floatingLabelAlignment;
   @override
   bool get isDense;
   @override
