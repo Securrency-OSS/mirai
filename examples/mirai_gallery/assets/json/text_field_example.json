@@ -225,7 +225,7 @@
                         },
                         "readOnly": false,
                         "enabled": true,
-                        "autovalidateMode": "onUserInteraction",
+                        "autovalidateMode": "onUserInteraction"
                     }
                 ]
             }

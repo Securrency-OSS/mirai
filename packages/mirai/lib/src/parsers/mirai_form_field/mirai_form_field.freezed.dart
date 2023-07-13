@@ -21,8 +21,6 @@ MiraiFormField _$MiraiFormFieldFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiFormField {
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
-  bool get isTypeAction => throw _privateConstructorUsedError;
-  String? get valueComparisonKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,10 +34,7 @@ abstract class $MiraiFormFieldCopyWith<$Res> {
           MiraiFormField value, $Res Function(MiraiFormField) then) =
       _$MiraiFormFieldCopyWithImpl<$Res, MiraiFormField>;
   @useResult
-  $Res call(
-      {Map<String, dynamic>? child,
-      bool isTypeAction,
-      String? valueComparisonKey});
+  $Res call({Map<String, dynamic>? child});
 }
 
 /// @nodoc
@@ -56,22 +51,12 @@ class _$MiraiFormFieldCopyWithImpl<$Res, $Val extends MiraiFormField>
   @override
   $Res call({
     Object? child = freezed,
-    Object? isTypeAction = null,
-    Object? valueComparisonKey = freezed,
   }) {
     return _then(_value.copyWith(
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      isTypeAction: null == isTypeAction
-          ? _value.isTypeAction
-          : isTypeAction // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueComparisonKey: freezed == valueComparisonKey
-          ? _value.valueComparisonKey
-          : valueComparisonKey // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -84,10 +69,7 @@ abstract class _$$_MiraiFormFieldCopyWith<$Res>
       __$$_MiraiFormFieldCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {Map<String, dynamic>? child,
-      bool isTypeAction,
-      String? valueComparisonKey});
+  $Res call({Map<String, dynamic>? child});
 }
 
 /// @nodoc
@@ -102,22 +84,12 @@ class __$$_MiraiFormFieldCopyWithImpl<$Res>
   @override
   $Res call({
     Object? child = freezed,
-    Object? isTypeAction = null,
-    Object? valueComparisonKey = freezed,
   }) {
     return _then(_$_MiraiFormField(
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      isTypeAction: null == isTypeAction
-          ? _value.isTypeAction
-          : isTypeAction // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueComparisonKey: freezed == valueComparisonKey
-          ? _value.valueComparisonKey
-          : valueComparisonKey // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -125,11 +97,7 @@ class __$$_MiraiFormFieldCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiFormField implements _MiraiFormField {
-  const _$_MiraiFormField(
-      {final Map<String, dynamic>? child,
-      this.isTypeAction = false,
-      this.valueComparisonKey})
-      : _child = child;
+  const _$_MiraiFormField({final Map<String, dynamic>? child}) : _child = child;
 
   factory _$_MiraiFormField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiFormFieldFromJson(json);
@@ -145,14 +113,8 @@ class _$_MiraiFormField implements _MiraiFormField {
   }
 
   @override
-  @JsonKey()
-  final bool isTypeAction;
-  @override
-  final String? valueComparisonKey;
-
-  @override
   String toString() {
-    return 'MiraiFormField(child: $child, isTypeAction: $isTypeAction, valueComparisonKey: $valueComparisonKey)';
+    return 'MiraiFormField(child: $child)';
   }
 
   @override
@@ -160,20 +122,13 @@ class _$_MiraiFormField implements _MiraiFormField {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiFormField &&
-            const DeepCollectionEquality().equals(other._child, _child) &&
-            (identical(other.isTypeAction, isTypeAction) ||
-                other.isTypeAction == isTypeAction) &&
-            (identical(other.valueComparisonKey, valueComparisonKey) ||
-                other.valueComparisonKey == valueComparisonKey));
+            const DeepCollectionEquality().equals(other._child, _child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_child),
-      isTypeAction,
-      valueComparisonKey);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
   @override
@@ -190,20 +145,14 @@ class _$_MiraiFormField implements _MiraiFormField {
 }
 
 abstract class _MiraiFormField implements MiraiFormField {
-  const factory _MiraiFormField(
-      {final Map<String, dynamic>? child,
-      final bool isTypeAction,
-      final String? valueComparisonKey}) = _$_MiraiFormField;
+  const factory _MiraiFormField({final Map<String, dynamic>? child}) =
+      _$_MiraiFormField;
 
   factory _MiraiFormField.fromJson(Map<String, dynamic> json) =
       _$_MiraiFormField.fromJson;
 
   @override
   Map<String, dynamic>? get child;
-  @override
-  bool get isTypeAction;
-  @override
-  String? get valueComparisonKey;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiFormFieldCopyWith<_$_MiraiFormField> get copyWith =>

@@ -12,16 +12,14 @@ _$_MiraiForm _$$_MiraiFormFromJson(Map<String, dynamic> json) => _$_MiraiForm(
           : MiraiAction.fromJson(json['onChanged'] as Map<String, dynamic>),
       autovalidateMode: $enumDecodeNullable(
           _$AutovalidateModeEnumMap, json['autovalidateMode']),
-      children: (json['children'] as List<dynamic>)
-          .map((e) => e as Map<String, dynamic>)
-          .toList(),
+      child: json['child'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$$_MiraiFormToJson(_$_MiraiForm instance) =>
     <String, dynamic>{
       'onChanged': instance.onChanged,
       'autovalidateMode': _$AutovalidateModeEnumMap[instance.autovalidateMode],
-      'children': instance.children,
+      'child': instance.child,
     };
 
 const _$AutovalidateModeEnumMap = {

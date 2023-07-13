@@ -27,18 +27,7 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
             //   return previous.controllers.values == current.controllers.values;
             // },
             builder: (context, state) {
-              return ListView.separated(
-                itemBuilder: (context, index) {
-                  return Mirai.fromJson(model.children[index], context) ??
-                      const SizedBox();
-                },
-                separatorBuilder: (context, index) {
-                  return const SizedBox(
-                    height: 20,
-                  );
-                },
-                itemCount: model.children.length,
-              );
+              return Mirai.fromJson(model.child, context) ?? const SizedBox();
             },
           )),
     );

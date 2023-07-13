@@ -7,8 +7,6 @@ part 'mirai_form_field.g.dart';
 class MiraiFormField with _$MiraiFormField {
   const factory MiraiFormField({
     Map<String, dynamic>? child,
-    @Default(false) bool isTypeAction,
-    String? valueComparisonKey,
   }) = _MiraiFormField;
 
   factory MiraiFormField.fromJson(Map<String, dynamic> json) =>

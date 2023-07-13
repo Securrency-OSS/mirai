@@ -20,16 +20,10 @@ class MiraiFormFieldParser extends MiraiParser<MiraiFormField> {
     Map<String, dynamic> child = Map<String, dynamic>.from(model.child ?? {});
 
     final formFilled = context.read<MiraiFormCubit>().formFilled;
-    if (model.isTypeAction && !formFilled) {
+    if (!formFilled) {
       child['onPressed'] = null;
     }
 
     return Mirai.fromJson(child, context) ?? const SizedBox();
-
-    // return BlocBuilder<MiraiFormCubit, MiraiFormState>(
-    //   builder: (context, state) {
-
-    //   },
-    // );
   }
 }

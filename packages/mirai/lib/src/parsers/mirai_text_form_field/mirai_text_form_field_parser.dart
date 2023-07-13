@@ -44,6 +44,7 @@ class _TextFormFieldWidget extends StatefulWidget {
 class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
   TextEditingController controller = TextEditingController();
   FocusNode? focusNode = FocusNode();
+  bool obscureText = false;
 
   @override
   void initState() {
@@ -62,6 +63,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       }
     });
 
+    obscureText = widget.model.obscureText;
     super.initState();
   }
 
@@ -91,7 +93,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       maxLines: widget.model.maxLines,
       minLines: widget.model.minLines,
       maxLength: widget.model.maxLength,
-      obscureText: widget.model.obscureText,
+      obscureText: obscureText,
       autocorrect: widget.model.autocorrect,
       smartDashesType: widget.model.smartDashesType,
       smartQuotesType: widget.model.smartQuotesType,
@@ -107,7 +109,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       cursorHeight: widget.model.cursorHeight,
       cursorColor: widget.model.cursorColor?.toColor,
       style: widget.model.style?.parse,
-      decoration: widget.model.decoration?.parse(context),
+      decoration: _inputDecoration(widget.model),
       inputFormatters: widget.model.inputFormatters
           .map((MiraiInputFormatter formatter) =>
               formatter.type.format(formatter.rule ?? ""))
@@ -125,6 +127,25 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
         return validation;
       },
     );
+  }
+
+  InputDecoration? _inputDecoration(MiraiTextFormField model) {
+    if (model.obscureText) {
+      return model.decoration?.parse(context).copyWith(
+            suffixIcon: GestureDetector(
+              onTap: () {
+                setState(() {
+                  obscureText = !obscureText;
+                });
+              },
+              child: Mirai.fromJson(
+                      widget.model.decoration?.suffixIcon, context) ??
+                  const SizedBox(),
+            ),
+          );
+    }
+
+    return model.decoration?.parse(context);
   }
 
   String? _validate(String? value, MiraiTextFormField model) {
