@@ -13,4 +13,4 @@ jobs:
       id-token: write # Required for authentication using OIDC
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
     with:
-      working-directory: ../../packages/mirai
+      working-directory: ./packages/mirai
