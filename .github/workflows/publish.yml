@@ -9,10 +9,11 @@ on:
 # Publish using custom workflow
 jobs:
   publish:
+    defaults:
+      run:
+        working-directory: ./packages/mirai
     permissions:
       id-token: write # Required for authentication using OIDC
-    with:
-      working-directory: ../../packages/mirai
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
