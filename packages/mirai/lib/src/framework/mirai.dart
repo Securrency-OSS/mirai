@@ -59,6 +59,7 @@ class Mirai {
     const MiraiFormParser(),
     const MiraiFormFieldParser(),
     const MiraiTwoStateWidgetParser(),
+    const MiraiExpandedParser(),
   ];
 
   static Future<void> initialize({

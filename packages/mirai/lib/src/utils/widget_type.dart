@@ -33,4 +33,5 @@ enum WidgetType {
   form,
   formField,
   twoStateWidget,
+  expanded,
 }

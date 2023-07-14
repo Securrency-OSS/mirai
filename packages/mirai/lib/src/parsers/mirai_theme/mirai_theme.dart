@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
+import 'package:mirai/src/parsers/mirai_input_decoration_theme/mirai_input_decoration_theme.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
@@ -15,6 +16,7 @@ part 'mirai_theme.g.dart';
 class MiraiTheme with _$MiraiTheme {
   const factory MiraiTheme({
     bool? applyElevationOverlayColor,
+    MiraiInputDecorationTheme? inputDecorationTheme,
     bool? useMaterial3,
     Brightness? brightness,
     String? canvasColor,
@@ -64,6 +66,7 @@ extension MiraiThemeParser on MiraiTheme {
   ThemeData? get parse {
     return ThemeData(
       applyElevationOverlayColor: applyElevationOverlayColor,
+      inputDecorationTheme: inputDecorationTheme.parse,
       useMaterial3: useMaterial3,
       brightness: brightness,
       canvasColor: canvasColor?.toColor,

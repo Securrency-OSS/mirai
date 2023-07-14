@@ -1,3 +1,10 @@
+## 0.4.0
+
+- feat: Extending rich text functionality to Mirai Text (#158) by @divyanshub024
+- feat: Added support for pushNamed in Mirai Navigation (#159) by @i-asimkhan
+- feat: Added support for Expanded Widget (#165) by @divyanshub024
+- feat: Added support for InputDecorationTheme & InputBorder (#166) by @divyanshub024
+
 ## 0.3.0
 
 - Added support for the appBarTheme (#96) by @i-asimkhan
