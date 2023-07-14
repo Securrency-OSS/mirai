@@ -40,7 +40,7 @@ mixin _$MiraiTextFormField {
   int? get maxLines => throw _privateConstructorUsedError;
   int? get minLines => throw _privateConstructorUsedError;
   int? get maxLength => throw _privateConstructorUsedError;
-  bool get obscureText => throw _privateConstructorUsedError;
+  bool? get obscureText => throw _privateConstructorUsedError;
   bool get autocorrect => throw _privateConstructorUsedError;
   SmartDashesType? get smartDashesType => throw _privateConstructorUsedError;
   SmartQuotesType? get smartQuotesType => throw _privateConstructorUsedError;
@@ -94,7 +94,7 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       int? maxLines,
       int? minLines,
       int? maxLength,
-      bool obscureText,
+      bool? obscureText,
       bool autocorrect,
       SmartDashesType? smartDashesType,
       SmartQuotesType? smartQuotesType,
@@ -150,7 +150,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? maxLines = freezed,
     Object? minLines = freezed,
     Object? maxLength = freezed,
-    Object? obscureText = null,
+    Object? obscureText = freezed,
     Object? autocorrect = null,
     Object? smartDashesType = freezed,
     Object? smartQuotesType = freezed,
@@ -243,10 +243,10 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as int?,
-      obscureText: null == obscureText
+      obscureText: freezed == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autocorrect: null == autocorrect
           ? _value.autocorrect
           : autocorrect // ignore: cast_nullable_to_non_nullable
@@ -382,7 +382,7 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
       int? maxLines,
       int? minLines,
       int? maxLength,
-      bool obscureText,
+      bool? obscureText,
       bool autocorrect,
       SmartDashesType? smartDashesType,
       SmartQuotesType? smartQuotesType,
@@ -439,7 +439,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? maxLines = freezed,
     Object? minLines = freezed,
     Object? maxLength = freezed,
-    Object? obscureText = null,
+    Object? obscureText = freezed,
     Object? autocorrect = null,
     Object? smartDashesType = freezed,
     Object? smartQuotesType = freezed,
@@ -532,10 +532,10 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as int?,
-      obscureText: null == obscureText
+      obscureText: freezed == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autocorrect: null == autocorrect
           ? _value.autocorrect
           : autocorrect // ignore: cast_nullable_to_non_nullable
@@ -634,7 +634,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       this.maxLines,
       this.minLines,
       this.maxLength,
-      this.obscureText = false,
+      this.obscureText,
       this.autocorrect = true,
       this.smartDashesType,
       this.smartQuotesType,
@@ -702,8 +702,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @override
   final int? maxLength;
   @override
-  @JsonKey()
-  final bool obscureText;
+  final bool? obscureText;
   @override
   @JsonKey()
   final bool autocorrect;
@@ -922,7 +921,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
           final int? maxLines,
           final int? minLines,
           final int? maxLength,
-          final bool obscureText,
+          final bool? obscureText,
           final bool autocorrect,
           final SmartDashesType? smartDashesType,
           final SmartQuotesType? smartQuotesType,
@@ -983,7 +982,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   @override
   int? get maxLength;
   @override
-  bool get obscureText;
+  bool? get obscureText;
   @override
   bool get autocorrect;
   @override

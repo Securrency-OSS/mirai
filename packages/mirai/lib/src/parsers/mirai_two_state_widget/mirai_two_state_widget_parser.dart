@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_two_state_widget/mirai_two_state_widget.dart';
+import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiTwoStateWidgetParser extends MiraiParser<MiraiTwoStateWidget> {
@@ -37,9 +38,13 @@ class __MiraiTwoStateWidgetState extends State<_MiraiTwoStateWidget> {
 
   @override
   void initState() {
-    context
-        .read<MiraiFormCubit>()
-        .registerValue(widget.model.key, widget.model.state);
+    try {
+      context
+          .read<MiraiFormCubit>()
+          .registerValue(widget.model.key, widget.model.state);
+    } catch (e) {
+      Log.d(e);
+    }
 
     super.initState();
   }
@@ -52,10 +57,16 @@ class __MiraiTwoStateWidgetState extends State<_MiraiTwoStateWidget> {
           trueState = !trueState;
         });
 
-        context.read<MiraiFormCubit>().updateValue(widget.model.key, trueState);
-        context
-            .read<MiraiFormCubit>()
-            .updateValidation(widget.model.key, trueState);
+        try {
+          context
+              .read<MiraiFormCubit>()
+              .updateValue(widget.model.key, trueState);
+          context
+              .read<MiraiFormCubit>()
+              .updateValidation(widget.model.key, trueState);
+        } catch (e) {
+          Log.d(e);
+        }
       },
       child: Mirai.fromJson(
               trueState ? widget.model.trueState : widget.model.falseState,

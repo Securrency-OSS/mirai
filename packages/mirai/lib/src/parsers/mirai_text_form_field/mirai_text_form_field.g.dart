@@ -39,7 +39,7 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
       maxLines: json['maxLines'] as int?,
       minLines: json['minLines'] as int?,
       maxLength: json['maxLength'] as int?,
-      obscureText: json['obscureText'] as bool? ?? false,
+      obscureText: json['obscureText'] as bool?,
       autocorrect: json['autocorrect'] as bool? ?? true,
       smartDashesType: $enumDecodeNullable(
           _$SmartDashesTypeEnumMap, json['smartDashesType']),

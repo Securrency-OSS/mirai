@@ -52,13 +52,12 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       context
           .read<MiraiFormCubit>()
           .registerValue(widget.model.key, widget.model.initialValue ?? "");
-
-      controller = TextEditingController(text: widget.model.initialValue);
     } catch (e) {
       Log.e(e);
     }
 
-    obscureText = widget.model.obscureText;
+    controller = TextEditingController(text: widget.model.initialValue);
+    obscureText = widget.model.obscureText ?? false;
     super.initState();
   }
 
@@ -68,10 +67,14 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       controller: controller,
       focusNode: focusNode,
       onChanged: (value) {
-        context.read<MiraiFormCubit>().updateValue(
-              widget.model.key,
-              value,
-            );
+        try {
+          context.read<MiraiFormCubit>().updateValue(
+                widget.model.key,
+                value,
+              );
+        } catch (e) {
+          Log.e(e);
+        }
       },
       initialValue: widget.model.initialValue,
       keyboardType: widget.model.keyboardType?.value,
@@ -115,9 +118,13 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           widget.model,
         );
 
-        context
-            .read<MiraiFormCubit>()
-            .updateValidation(widget.model.key, validation == null);
+        try {
+          context
+              .read<MiraiFormCubit>()
+              .updateValidation(widget.model.key, validation == null);
+        } catch (e) {
+          Log.e(e);
+        }
 
         return validation;
       },
@@ -125,7 +132,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
   }
 
   InputDecoration? _inputDecoration(MiraiTextFormField model) {
-    if (model.obscureText) {
+    if (model.obscureText != null) {
       return model.decoration?.parse(context).copyWith(
             suffixIcon: GestureDetector(
               onTap: () {
@@ -152,9 +159,13 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
           String? compareVal;
           if (widget.model.compareKey != null) {
-            compareVal = context
-                .read<MiraiFormCubit>()
-                .getValue(widget.model.compareKey!);
+            try {
+              compareVal = context
+                  .read<MiraiFormCubit>()
+                  .getValue(widget.model.compareKey!);
+            } catch (e) {
+              Log.e(e);
+            }
           }
           if (!validationType.validate(value, validator.rule,
               compareValue: compareVal)) {
@@ -169,5 +180,16 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
     }
 
     return null;
+  }
+
+  @override
+  void dispose() {
+    try {
+      controller.dispose();
+    } catch (e) {
+      Log.e(e);
+    }
+
+    super.dispose();
   }
 }

@@ -34,7 +34,7 @@ class MiraiTextFormField with _$MiraiTextFormField {
     int? maxLines,
     int? minLines,
     int? maxLength,
-    @Default(false) bool obscureText,
+    bool? obscureText,
     @Default(true) bool autocorrect,
     SmartDashesType? smartDashesType,
     SmartQuotesType? smartQuotesType,
