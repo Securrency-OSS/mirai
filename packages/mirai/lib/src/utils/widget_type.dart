@@ -32,4 +32,5 @@ enum WidgetType {
   tab,
   form,
   formField,
+  twoStateWidget,
 }

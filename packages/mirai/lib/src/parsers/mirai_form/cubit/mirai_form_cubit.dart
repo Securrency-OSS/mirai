@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'mirai_form_state.dart';
@@ -6,47 +5,42 @@ part 'mirai_form_state.dart';
 class MiraiFormCubit extends Cubit<MiraiFormState> {
   MiraiFormCubit() : super(const MiraiFormState());
 
-  void addController(String key, TextEditingController controller) {
-    Map<String, TextEditingController> controllers =
-        Map<String, TextEditingController>.from(state.controllers);
+  void registerValue(String key, dynamic value) {
     Map<String, dynamic> values = Map<String, dynamic>.from(state.values);
     Map<String, bool> validations = Map<String, bool>.from(state.validations);
 
-    controllers[key] = controller;
-    values[key] = "";
+    values[key] = value;
     validations[key] = false;
 
-    emit(MiraiFormState(
-      controllers: controllers,
-      values: values,
-    ));
+    emit(
+      MiraiFormState(
+        values: values,
+        validations: validations,
+      ),
+    );
   }
 
-  TextEditingController? getController(String key) {
-    return state.controllers[key];
+  bool? getValidation(String key) {
+    return state.validations[key];
   }
 
   String? getValue(String key) {
-    return getController(key)?.value.text;
+    return state.values[key];
   }
 
-  void removeController(String key) {
-    Map<String, TextEditingController> controllers =
-        Map<String, TextEditingController>.from(state.controllers);
+  void removeValue(String key) {
     Map<String, dynamic> values = Map<String, dynamic>.from(state.values);
     Map<String, bool> validations = Map<String, bool>.from(state.validations);
 
-    controllers.remove(key);
     values.remove(key);
     validations.remove(key);
 
     emit(MiraiFormState(
-      controllers: controllers,
       values: values,
     ));
   }
 
-  void updateValue(String key, String value) {
+  void updateValue(String key, dynamic value) {
     Map<String, dynamic> values = Map<String, dynamic>.from(state.values);
 
     values[key] = value;
@@ -54,7 +48,6 @@ class MiraiFormCubit extends Cubit<MiraiFormState> {
     emit(MiraiFormState(
       values: values,
       validations: state.validations,
-      controllers: state.controllers,
     ));
   }
 
@@ -66,15 +59,16 @@ class MiraiFormCubit extends Cubit<MiraiFormState> {
     emit(MiraiFormState(
       validations: validations,
       values: state.values,
-      controllers: state.controllers,
     ));
   }
 
   bool get formFilled {
-    final controllers = state.values.entries.toList();
-    for (var i = 0; i < controllers.length; i++) {
-      if (controllers[i].value == null ||
-          ((controllers[i].value) as String).isEmpty) {
+    final values = state.values.entries.toList();
+    for (var i = 0; i < values.length; i++) {
+      final value = values[i].value;
+      if (value == null ||
+          (value is String && value.isEmpty) ||
+          (value is bool && value == false)) {
         return false;
       }
     }

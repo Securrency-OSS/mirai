@@ -48,20 +48,15 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
   @override
   void initState() {
-    Future.microtask(() {
-      try {
-        controller =
-            context.read<MiraiFormCubit>().getController(widget.model.key) ??
-                TextEditingController();
+    try {
+      context
+          .read<MiraiFormCubit>()
+          .registerValue(widget.model.key, widget.model.initialValue ?? "");
 
-        context.read<MiraiFormCubit>().addController(
-              widget.model.key,
-              controller,
-            );
-      } catch (e) {
-        Log.e(e);
-      }
-    });
+      controller = TextEditingController(text: widget.model.initialValue);
+    } catch (e) {
+      Log.e(e);
+    }
 
     obscureText = widget.model.obscureText;
     super.initState();

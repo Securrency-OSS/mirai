@@ -5,7 +5,7 @@ import 'package:mirai/src/network/mirai_request.dart';
 part 'mirai_action.freezed.dart';
 part 'mirai_action.g.dart';
 
-enum ActionType { navigate, request, none, formValidation }
+enum ActionType { navigate, request, none }
 
 @freezed
 class MiraiAction with _$MiraiAction {

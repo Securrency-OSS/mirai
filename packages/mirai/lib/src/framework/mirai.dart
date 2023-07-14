@@ -12,6 +12,7 @@ import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
+import 'package:mirai/src/parsers/mirai_two_state_widget/mirai_two_state_widget_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
 
@@ -57,6 +58,7 @@ class Mirai {
     const MiraiTabParser(),
     const MiraiFormParser(),
     const MiraiFormFieldParser(),
+    const MiraiTwoStateWidgetParser(),
   ];
 
   static Future<void> initialize({
