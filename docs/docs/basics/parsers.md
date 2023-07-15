@@ -159,7 +159,7 @@ MiraiRegistry.instance.registerAction(parser);
 2.`registerAllActions`: this method takes a list of `MiraiActionParser` and register it.
 
 ```dart
-MiraiRegistry.instance.registerAll([
+MiraiRegistry.instance.registerAllActions([
     MiraiShareParser(),
     MiraiBluetoothParser(),
 ]);
