@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -20,7 +19,7 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
     return IconButton(
       onPressed: model.onPressed == null
           ? null
-          : () => model.onPressed.onCall(context),
+          : () => Mirai.onCallFromJson(model.onPressed, context),
       iconSize: model.iconSize,
       padding: model.padding?.parse,
       alignment: model.alignment.value,

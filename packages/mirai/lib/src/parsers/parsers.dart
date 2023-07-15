@@ -1,5 +1,6 @@
 library parsers;
 
+export 'package:mirai/src/parsers/mirai_actions/mirai_actions.dart';
 export 'package:mirai/src/parsers/mirai_alert_dialog/mirai_alert_dialog.dart';
 export 'package:mirai/src/parsers/mirai_alignment/mirai_alignment.dart';
 export 'package:mirai/src/parsers/mirai_alignment_directional/mirai_alignment_directional.dart';

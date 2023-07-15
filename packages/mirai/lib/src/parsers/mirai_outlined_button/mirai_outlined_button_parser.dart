@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/widget_type.dart';
@@ -19,7 +18,7 @@ class MiraiOutlinedButtonParser extends MiraiParser<MiraiOutlinedButton> {
     return OutlinedButton(
       onPressed: model.onPressed == null
           ? null
-          : () => model.onPressed.onCall(context),
+          : () => Mirai.onCallFromJson(model.onPressed, context),
       style: model.style?.parseOutlined,
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,
