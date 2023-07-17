@@ -13,7 +13,7 @@ class MiraiFloatingActionButton with _$MiraiFloatingActionButton {
     Map<String, dynamic>? onPressed,
     MiraiTextStyle? textStyle,
     @Default(FloatingActionButtonType.small)
-        FloatingActionButtonType buttonType,
+    FloatingActionButtonType buttonType,
     @Default(false) bool autofocus,
     Map<String, dynamic>? icon,
     String? backgroundColor,
