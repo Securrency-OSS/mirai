@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/framework/mirai_action_parser.dart';
 import 'package:mirai/src/framework/mirai_parser.dart';
+import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
