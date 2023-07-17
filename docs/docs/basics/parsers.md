@@ -90,9 +90,9 @@ MiraiRegistry.instance.registerAll([
 ]);
 ```
 
-## Creating a Action Parser
+## Creating an Action Parser
 
-To create a action parser, simply extend a class with `MiraiActionParser`.
+To create an action parser, simply extend a class with `MiraiActionParser`.
 
 ```dart
 import 'dart:async';
@@ -125,9 +125,9 @@ The above code snippet contains 3 main components
 
 - `getModel`: This is where you will define the model for your action, which you will receive in `onCall` method. The ideal way is to create a model class and return the fromJson function.
 
-- `onCall`: This is where the json is parsed into action. The `onCall` method provides you with `context` and the `model` and returns the result of the action.
+- `onCall`: This is where the JSON is parsed into an action. The `onCall` method provides you with `context` and the `model` and returns the result of the action.
 
-## Registering a Action Parser
+## Registering an Action Parser
 
 Like the Widget Parser registration, there are two ways to register a parser:
 
