@@ -7,9 +7,6 @@ import 'package:mirai/src/network/mirai_network.dart';
 extension MiraiActionParser on MiraiAction? {
   Future<dynamic>? onCall(BuildContext context) async {
     if (this != null) {
-      if (this?.navigationStyle == NavigationStyle.pop) {
-        MiraiNavigator.navigateBack(context);
-      }
       switch (this?.actionType ?? ActionType.none) {
         case ActionType.navigate:
           Widget? widget;
@@ -22,6 +19,8 @@ extension MiraiActionParser on MiraiAction? {
                 navigationType: this?.navigationType ?? NavigationType.screen,
                 navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
                 widget: widget,
+                result: this?.result,
+                arguments: this?.arguments,
               );
             }
           } else if (this?.request != null) {
@@ -32,6 +31,8 @@ extension MiraiActionParser on MiraiAction? {
               navigationType: this?.navigationType ?? NavigationType.screen,
               navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
               widget: widget,
+              result: this?.result,
+              arguments: this?.arguments,
             );
           } else if (this?.assetPath != null) {
             widget = await Mirai.fromAssets(this!.assetPath!, context);
@@ -42,6 +43,19 @@ extension MiraiActionParser on MiraiAction? {
                 navigationType: this?.navigationType ?? NavigationType.screen,
                 navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
                 widget: widget,
+                result: this?.result,
+                arguments: this?.arguments,
+              );
+            }
+          } else {
+            if (context.mounted) {
+              return MiraiNavigator.navigate(
+                context: context,
+                navigationType: this?.navigationType ?? NavigationType.screen,
+                navigationStyle: this?.navigationStyle ?? NavigationStyle.push,
+                routeName: this?.routeName,
+                result: this?.result,
+                arguments: this?.arguments,
               );
             }
           }

@@ -41,7 +41,7 @@ You can also specify your custom Parsers in `Mirai.initialize` and `Dio` instanc
 
 ```dart
 void main() async {
-  final dio = Dio()
+  final dio = Dio();
 
   await Mirai.initialize(
     parsers: const [
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-## Eample
+## Example
 
 Here is an example of a basic form screen build with Mirai.
 
