@@ -53,6 +53,7 @@ class Mirai {
     const MiraiScrollViewParser(),
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
+    const MiraiExpandedParser(),
   ];
 
   static Future<void> initialize({
