@@ -66,6 +66,8 @@ final darkTheme = MiraiTheme.fromJson(darkThemeJsonData);
 
 ```
 
+## Usage
+
 Mirai does not support themed widget like this in Flutter `Theme(child: Container())` hence app based themes can only be created using Mirai and for that we need to pass these to the MaterialApp constructor like this. 
 
 ```dart
