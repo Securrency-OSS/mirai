@@ -10,7 +10,7 @@ This page describes how to bind flutter widget events or actions to Json widget 
 
 ### Model
 
-MiraiAction model is a dart [@freezed](https://pub.dev/packages/freezed) class defined in dart for the json model vlaues in the `Mirai` widget json. It has the following properties. 
+MiraiAction model is a dart [@freezed](https://pub.dev/packages/freezed) class defined in dart for the json model values in the `Mirai` widget json. It has the following properties. 
 
 
 | Parameter       | Type                                            | Description                                                                |
@@ -28,7 +28,7 @@ MiraiActionType enum defines the types of actions supported in Mirai Action.
 - navigate 
     This is a type of action which involves navigation to a screen or a dialog.
 - request 
-    This is a network request action which can involve fetching deta from an api. 
+    This is a network request action which can involve fetching data from an api. 
 - none 
 
 
@@ -44,7 +44,7 @@ MiraiAction parser is an extension on MiraiAction model which has an `onCall` me
 
 ### In Json models 
 
-In widget Json we can add the MiraiAction model for any callback of  the wiget like onPressed of a button. In the following json example navigation action is performed after `onTap` of a `MiraiListTile`.
+In widget Json we can add the MiraiAction model for any callback of  the widget like onPressed of a button. In the following json example navigation action is performed after `onTap` of a `MiraiListTile`.
 
 ```json
  "onTap": {
@@ -58,7 +58,7 @@ In widget Json we can add the MiraiAction model for any callback of  the wiget l
 }
 ```
 
-Similary we can call an api on `OnPressed` of a Button.
+Similarly we can call an api on `OnPressed` of a Button.
 
 ```json
 "onPressed": {
