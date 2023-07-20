@@ -23,7 +23,7 @@ child: Text(song.name),
 
 ## Reference
 
-`MiraiNavigator` is a singelton dart class with public methods `navigate` and `navigateBack`, both of these methods navigate back and forth among screens or widgets using the flutter [Navigator](https://api.flutter.dev/flutter/widgets/Navigator-class.html) class using the parent's build context.
+`MiraiNavigator` is a singleton dart class with public methods `navigate` and `navigateBack`, both of these methods navigate back and forth among screens or widgets using the flutter [Navigator](https://api.flutter.dev/flutter/widgets/Navigator-class.html) class using the parent's build context.
 
 
 ### Navigation Types
@@ -58,7 +58,7 @@ child: Text(song.name),
 
 ### In Json models 
 
-In widget Json we can define the navigation related values in the the [MiraiAction]((/docs/basics/actions#model)) model for any callback of the wiget like onPressed of a button. In the following json example navigation is performed after `onTap` of a `MiraiListTile`.
+In widget Json we can define the navigation related values in the the [MiraiAction]((/docs/basics/actions#model)) model for any callback of the widget like onPressed of a button. In the following json example navigation is performed after `onTap` of a `MiraiListTile`.
 
 ```json
  "onTap": {
@@ -72,7 +72,7 @@ In widget Json we can define the navigation related values in the the [MiraiActi
 }
 ```
 
-Similary we can show a dialog by simply changing the type of navigation.
+Similarly we can show a dialog by simply changing the type of navigation.
 
 ```json
  "onPressed": {
@@ -165,7 +165,7 @@ With `MiraiNavigator` it has become very simple to change the style or type of a
 
 ### In Mirai Widget 
 
-In `Mirai` we can perform navigtion based on an action performed using `MiraiAction`. Lets see how it is done in `MiraiActionModel`.
+In `Mirai` we can perform navigation based on an action performed using `MiraiAction`. Lets see how it is done in `MiraiActionModel`.
 
 ```dart
 /// navigate type of action is going to handle navigation in Mirai
@@ -175,7 +175,7 @@ enum ActionType { navigate, request, none }
 class MiraiAction with _$MiraiAction {
   factory MiraiAction({
     ...
-    NavigationType? navigationType, // defines the tyoe of navigation
+    NavigationType? navigationType, // defines the type of navigation
     NavigationStyle? navigationStyle, // defines the style of navigation
     ...
   }) = _MiraiAction;
