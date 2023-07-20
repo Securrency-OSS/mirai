@@ -34,7 +34,7 @@ ElevatedButton(
 
 ### Model
 
-`MiraiElevatedButton` model is a [@freezed](https://pub.dev/packages/freezed) type class defined in dart for the json model vlaues in the `Mirai` widget json. This model will bind the json values into a flutter elevated button with all the properties. The properties are listed below:
+`MiraiElevatedButton` model is a [@freezed](https://pub.dev/packages/freezed) type class defined in dart for the json model values in the `Mirai` widget json. This model will bind the json values into a flutter elevated button with all the properties. The properties are listed below:
 
 
 | Parameter    | Type                                                                                                                                                     | Description                                                                                                       |
@@ -88,7 +88,7 @@ You can also add the button styling by using the style value in the button json.
 
 ![image info](./../pictures/elevated-button.png)
 
-Similary, you can design an elevated button with leading and trailing icons.
+Similarly, you can design an elevated button with leading and trailing icons.
 
 ```json
 {
