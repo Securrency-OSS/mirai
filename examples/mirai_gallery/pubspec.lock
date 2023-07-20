@@ -393,7 +393,7 @@ packages:
       path: "../../packages/mirai"
       relative: true
     source: path
-    version: "0.3.0"
+    version: "0.4.0"
   nested:
     dependency: transitive
     description:
