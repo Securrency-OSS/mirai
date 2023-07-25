@@ -1,6 +1,7 @@
 {
     "brightness": "dark",
     "disabledColor": "#60FFFFFF",
+    "fontFamily": "Handjet",
     "colorScheme": {
         "brightness": "dark",
         "primary": "#CCBDFA",
