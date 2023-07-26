@@ -1,7 +1,10 @@
 {
     "brightness": "light",
     "disabledColor": "#60FEF7FF",
-    "fontFamily": "LisuBosa",
+    "fontFamily": {
+        "family": "Handjet",
+        "resource": "asset"
+    },
     "colorScheme": {
         "brightness": "light",
         "primary": "#6750a4",

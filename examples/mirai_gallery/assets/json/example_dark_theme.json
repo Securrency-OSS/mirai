@@ -1,7 +1,10 @@
 {
     "brightness": "dark",
     "disabledColor": "#60FFFFFF",
-    "fontFamily": "Handjet",
+    "fontFamily": {
+        "family": "Macondo Swash Caps",
+        "resource": "gfont"
+    },
     "colorScheme": {
         "brightness": "dark",
         "primary": "#CCBDFA",
