@@ -44,9 +44,8 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       unselectedWidgetColor: json['unselectedWidgetColor'] as String?,
       fontFamily: json['fontFamily'] as String?,
       fontFamilyFallback: (json['fontFamilyFallback'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
+          ?.map((e) => e as String)
+          .toList(),
       appBarTheme: json['appBarTheme'] == null
           ? null
           : MiraiAppBarTheme.fromJson(

@@ -15,6 +15,10 @@ _$_MiraiTextStyle _$$_MiraiTextStyleFromJson(Map<String, dynamic> json) =>
       fontWeight:
           $enumDecodeNullable(_$MiraiFontWeightEnumMap, json['fontWeight']),
       fontStyle: $enumDecodeNullable(_$FontStyleEnumMap, json['fontStyle']),
+      fontFamily: json['fontFamily'] as String?,
+      fontFamilyFallback: (json['fontFamilyFallback'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       letterSpacing: (json['letterSpacing'] as num?)?.toDouble(),
       wordSpacing: (json['wordSpacing'] as num?)?.toDouble(),
       textBaseline:
@@ -30,6 +34,8 @@ Map<String, dynamic> _$$_MiraiTextStyleToJson(_$_MiraiTextStyle instance) =>
       'fontSize': instance.fontSize,
       'fontWeight': _$MiraiFontWeightEnumMap[instance.fontWeight],
       'fontStyle': _$FontStyleEnumMap[instance.fontStyle],
+      'fontFamily': instance.fontFamily,
+      'fontFamilyFallback': instance.fontFamilyFallback,
       'letterSpacing': instance.letterSpacing,
       'wordSpacing': instance.wordSpacing,
       'textBaseline': _$TextBaselineEnumMap[instance.textBaseline],

@@ -41,7 +41,7 @@ class MiraiTheme with _$MiraiTheme {
     String? splashColor,
     String? unselectedWidgetColor,
     String? fontFamily,
-    @Default([]) List<String> fontFamilyFallback,
+    List<String>? fontFamilyFallback,
     MiraiAppBarTheme? appBarTheme,
     MiraiButtonStyle? elevatedButtonTheme,
     MiraiButtonStyle? outlinedButtonTheme,

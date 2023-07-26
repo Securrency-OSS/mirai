@@ -29,20 +29,25 @@
                     "align": "center",
                     "style": {
                         "fontSize": 23,
-                        "fontWeight": "w600"
+                        "fontWeight": "w600",
+                        "fontFamily": "Handjet"
                     }
                 },
                 {
                     "type": "sizedBox",
-                    "height": 32
+                    "height": 24
                 },
                 {
                     "type": "text",
-                    "data": "This is a normal Text."
+                    "data": "This is a normal Text.",
+                    "style": {
+                        "fontSize": 14,
+                        "fontFamily": "LisuBosa"
+                    }
                 },
                 {
                     "type": "sizedBox",
-                    "height": 16
+                    "height": 8
                 },
                 {
                     "type": "text",

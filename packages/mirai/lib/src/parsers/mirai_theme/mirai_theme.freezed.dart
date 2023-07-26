@@ -47,7 +47,7 @@ mixin _$MiraiTheme {
   String? get splashColor => throw _privateConstructorUsedError;
   String? get unselectedWidgetColor => throw _privateConstructorUsedError;
   String? get fontFamily => throw _privateConstructorUsedError;
-  List<String> get fontFamilyFallback => throw _privateConstructorUsedError;
+  List<String>? get fontFamilyFallback => throw _privateConstructorUsedError;
   MiraiAppBarTheme? get appBarTheme => throw _privateConstructorUsedError;
   MiraiButtonStyle? get elevatedButtonTheme =>
       throw _privateConstructorUsedError;
@@ -113,7 +113,7 @@ abstract class $MiraiThemeCopyWith<$Res> {
       String? splashColor,
       String? unselectedWidgetColor,
       String? fontFamily,
-      List<String> fontFamilyFallback,
+      List<String>? fontFamilyFallback,
       MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
       MiraiButtonStyle? outlinedButtonTheme,
@@ -192,7 +192,7 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
     Object? fontFamily = freezed,
-    Object? fontFamilyFallback = null,
+    Object? fontFamilyFallback = freezed,
     Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
     Object? outlinedButtonTheme = freezed,
@@ -315,10 +315,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
               as String?,
-      fontFamilyFallback: null == fontFamilyFallback
+      fontFamilyFallback: freezed == fontFamilyFallback
           ? _value.fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
       appBarTheme: freezed == appBarTheme
           ? _value.appBarTheme
           : appBarTheme // ignore: cast_nullable_to_non_nullable
@@ -660,7 +660,7 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       String? splashColor,
       String? unselectedWidgetColor,
       String? fontFamily,
-      List<String> fontFamilyFallback,
+      List<String>? fontFamilyFallback,
       MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
       MiraiButtonStyle? outlinedButtonTheme,
@@ -756,7 +756,7 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? splashColor = freezed,
     Object? unselectedWidgetColor = freezed,
     Object? fontFamily = freezed,
-    Object? fontFamilyFallback = null,
+    Object? fontFamilyFallback = freezed,
     Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
     Object? outlinedButtonTheme = freezed,
@@ -879,10 +879,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
               as String?,
-      fontFamilyFallback: null == fontFamilyFallback
+      fontFamilyFallback: freezed == fontFamilyFallback
           ? _value._fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
       appBarTheme: freezed == appBarTheme
           ? _value.appBarTheme
           : appBarTheme // ignore: cast_nullable_to_non_nullable
@@ -981,7 +981,7 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.splashColor,
       this.unselectedWidgetColor,
       this.fontFamily,
-      final List<String> fontFamilyFallback = const [],
+      final List<String>? fontFamilyFallback,
       this.appBarTheme,
       this.elevatedButtonTheme,
       this.outlinedButtonTheme,
@@ -1055,14 +1055,15 @@ class _$_MiraiTheme implements _MiraiTheme {
   final String? unselectedWidgetColor;
   @override
   final String? fontFamily;
-  final List<String> _fontFamilyFallback;
+  final List<String>? _fontFamilyFallback;
   @override
-  @JsonKey()
-  List<String> get fontFamilyFallback {
+  List<String>? get fontFamilyFallback {
+    final value = _fontFamilyFallback;
+    if (value == null) return null;
     if (_fontFamilyFallback is EqualUnmodifiableListView)
       return _fontFamilyFallback;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_fontFamilyFallback);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -1277,7 +1278,7 @@ abstract class _MiraiTheme implements MiraiTheme {
       final String? splashColor,
       final String? unselectedWidgetColor,
       final String? fontFamily,
-      final List<String> fontFamilyFallback,
+      final List<String>? fontFamilyFallback,
       final MiraiAppBarTheme? appBarTheme,
       final MiraiButtonStyle? elevatedButtonTheme,
       final MiraiButtonStyle? outlinedButtonTheme,
@@ -1351,7 +1352,7 @@ abstract class _MiraiTheme implements MiraiTheme {
   @override
   String? get fontFamily;
   @override
-  List<String> get fontFamilyFallback;
+  List<String>? get fontFamilyFallback;
   @override
   MiraiAppBarTheme? get appBarTheme;
   @override
