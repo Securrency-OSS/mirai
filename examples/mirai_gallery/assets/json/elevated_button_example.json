@@ -34,6 +34,20 @@
                                         "left": 12,
                                         "right": 12,
                                         "bottom": 8
+                                    },
+                                    "shape": {
+                                        "side": {
+                                            "color": "#800080",
+                                            "width": 2,
+                                            "strokeAlign": 0,
+                                            "borderStyle": "solid"
+                                        },
+                                        "borderRadius": {
+                                            "topLeft": 8,
+                                            "topRight": 8,
+                                            "bottomLeft": 8,
+                                            "bottomRight": 8
+                                        }
                                     }
                                 },
                                 "onPressed": {}
