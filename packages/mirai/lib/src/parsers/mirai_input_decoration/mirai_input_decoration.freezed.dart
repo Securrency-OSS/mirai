@@ -32,13 +32,38 @@ mixin _$MiraiInputDecoration {
   MiraiTextStyle? get prefixStyle => throw _privateConstructorUsedError;
   String? get suffixText => throw _privateConstructorUsedError;
   MiraiTextStyle? get suffixStyle => throw _privateConstructorUsedError;
+  bool get filled => throw _privateConstructorUsedError;
   String? get fillColor => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
   String? get hoverColor => throw _privateConstructorUsedError;
   Map<String, dynamic>? get icon => throw _privateConstructorUsedError;
   Map<String, dynamic>? get suffixIcon => throw _privateConstructorUsedError;
   String? get iconColor => throw _privateConstructorUsedError;
-  bool get filled => throw _privateConstructorUsedError;
+  MiraiTextStyle? get floatingLabelStyle => throw _privateConstructorUsedError;
+  int? get helperMaxLines => throw _privateConstructorUsedError;
+  int? get errorMaxLines => throw _privateConstructorUsedError;
+  FloatingLabelBehavior? get floatingLabelBehavior =>
+      throw _privateConstructorUsedError;
+  MiraiFloatingLabelAlignment? get floatingLabelAlignment =>
+      throw _privateConstructorUsedError;
+  bool get isDense => throw _privateConstructorUsedError;
+  MiraiEdgeInsets? get contentPadding => throw _privateConstructorUsedError;
+  bool get isCollapsed => throw _privateConstructorUsedError;
+  String? get prefixIconColor => throw _privateConstructorUsedError;
+  String? get suffixIconColor => throw _privateConstructorUsedError;
+  MiraiTextStyle? get counterStyle => throw _privateConstructorUsedError;
+  MiraiBorderSide? get activeIndicatorBorder =>
+      throw _privateConstructorUsedError;
+  MiraiBorderSide? get outlineBorder => throw _privateConstructorUsedError;
+  MiraiInputBorder? get errorBorder => throw _privateConstructorUsedError;
+  MiraiInputBorder? get focusedBorder => throw _privateConstructorUsedError;
+  MiraiInputBorder? get focusedErrorBorder =>
+      throw _privateConstructorUsedError;
+  MiraiInputBorder? get disabledBorder => throw _privateConstructorUsedError;
+  MiraiInputBorder? get enabledBorder => throw _privateConstructorUsedError;
+  MiraiInputBorder? get border => throw _privateConstructorUsedError;
+  bool get alignLabelWithHint => throw _privateConstructorUsedError;
+  MiraiBoxConstraints? get constraints => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,13 +90,34 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       MiraiTextStyle? prefixStyle,
       String? suffixText,
       MiraiTextStyle? suffixStyle,
+      bool filled,
       String? fillColor,
       String? focusColor,
       String? hoverColor,
       Map<String, dynamic>? icon,
       Map<String, dynamic>? suffixIcon,
       String? iconColor,
-      bool filled});
+      MiraiTextStyle? floatingLabelStyle,
+      int? helperMaxLines,
+      int? errorMaxLines,
+      FloatingLabelBehavior? floatingLabelBehavior,
+      MiraiFloatingLabelAlignment? floatingLabelAlignment,
+      bool isDense,
+      MiraiEdgeInsets? contentPadding,
+      bool isCollapsed,
+      String? prefixIconColor,
+      String? suffixIconColor,
+      MiraiTextStyle? counterStyle,
+      MiraiBorderSide? activeIndicatorBorder,
+      MiraiBorderSide? outlineBorder,
+      MiraiInputBorder? errorBorder,
+      MiraiInputBorder? focusedBorder,
+      MiraiInputBorder? focusedErrorBorder,
+      MiraiInputBorder? disabledBorder,
+      MiraiInputBorder? enabledBorder,
+      MiraiInputBorder? border,
+      bool alignLabelWithHint,
+      MiraiBoxConstraints? constraints});
 
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
   $MiraiTextStyleCopyWith<$Res>? get helperStyle;
@@ -79,6 +125,18 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
   $MiraiTextStyleCopyWith<$Res>? get errorStyle;
   $MiraiTextStyleCopyWith<$Res>? get prefixStyle;
   $MiraiTextStyleCopyWith<$Res>? get suffixStyle;
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
+  $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
+  $MiraiTextStyleCopyWith<$Res>? get counterStyle;
+  $MiraiBorderSideCopyWith<$Res>? get activeIndicatorBorder;
+  $MiraiBorderSideCopyWith<$Res>? get outlineBorder;
+  $MiraiInputBorderCopyWith<$Res>? get errorBorder;
+  $MiraiInputBorderCopyWith<$Res>? get focusedBorder;
+  $MiraiInputBorderCopyWith<$Res>? get focusedErrorBorder;
+  $MiraiInputBorderCopyWith<$Res>? get disabledBorder;
+  $MiraiInputBorderCopyWith<$Res>? get enabledBorder;
+  $MiraiInputBorderCopyWith<$Res>? get border;
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
 }
 
 /// @nodoc
@@ -107,13 +165,34 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? prefixStyle = freezed,
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
+    Object? filled = null,
     Object? fillColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
     Object? icon = freezed,
     Object? suffixIcon = freezed,
     Object? iconColor = freezed,
-    Object? filled = null,
+    Object? floatingLabelStyle = freezed,
+    Object? helperMaxLines = freezed,
+    Object? errorMaxLines = freezed,
+    Object? floatingLabelBehavior = freezed,
+    Object? floatingLabelAlignment = freezed,
+    Object? isDense = null,
+    Object? contentPadding = freezed,
+    Object? isCollapsed = null,
+    Object? prefixIconColor = freezed,
+    Object? suffixIconColor = freezed,
+    Object? counterStyle = freezed,
+    Object? activeIndicatorBorder = freezed,
+    Object? outlineBorder = freezed,
+    Object? errorBorder = freezed,
+    Object? focusedBorder = freezed,
+    Object? focusedErrorBorder = freezed,
+    Object? disabledBorder = freezed,
+    Object? enabledBorder = freezed,
+    Object? border = freezed,
+    Object? alignLabelWithHint = null,
+    Object? constraints = freezed,
   }) {
     return _then(_value.copyWith(
       labelText: freezed == labelText
@@ -164,6 +243,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.suffixStyle
           : suffixStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      filled: null == filled
+          ? _value.filled
+          : filled // ignore: cast_nullable_to_non_nullable
+              as bool,
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
@@ -188,10 +271,90 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.iconColor
           : iconColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      filled: null == filled
-          ? _value.filled
-          : filled // ignore: cast_nullable_to_non_nullable
+      floatingLabelStyle: freezed == floatingLabelStyle
+          ? _value.floatingLabelStyle
+          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      helperMaxLines: freezed == helperMaxLines
+          ? _value.helperMaxLines
+          : helperMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      errorMaxLines: freezed == errorMaxLines
+          ? _value.errorMaxLines
+          : errorMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      floatingLabelBehavior: freezed == floatingLabelBehavior
+          ? _value.floatingLabelBehavior
+          : floatingLabelBehavior // ignore: cast_nullable_to_non_nullable
+              as FloatingLabelBehavior?,
+      floatingLabelAlignment: freezed == floatingLabelAlignment
+          ? _value.floatingLabelAlignment
+          : floatingLabelAlignment // ignore: cast_nullable_to_non_nullable
+              as MiraiFloatingLabelAlignment?,
+      isDense: null == isDense
+          ? _value.isDense
+          : isDense // ignore: cast_nullable_to_non_nullable
               as bool,
+      contentPadding: freezed == contentPadding
+          ? _value.contentPadding
+          : contentPadding // ignore: cast_nullable_to_non_nullable
+              as MiraiEdgeInsets?,
+      isCollapsed: null == isCollapsed
+          ? _value.isCollapsed
+          : isCollapsed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      prefixIconColor: freezed == prefixIconColor
+          ? _value.prefixIconColor
+          : prefixIconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      suffixIconColor: freezed == suffixIconColor
+          ? _value.suffixIconColor
+          : suffixIconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      counterStyle: freezed == counterStyle
+          ? _value.counterStyle
+          : counterStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      activeIndicatorBorder: freezed == activeIndicatorBorder
+          ? _value.activeIndicatorBorder
+          : activeIndicatorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiBorderSide?,
+      outlineBorder: freezed == outlineBorder
+          ? _value.outlineBorder
+          : outlineBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiBorderSide?,
+      errorBorder: freezed == errorBorder
+          ? _value.errorBorder
+          : errorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      focusedBorder: freezed == focusedBorder
+          ? _value.focusedBorder
+          : focusedBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      focusedErrorBorder: freezed == focusedErrorBorder
+          ? _value.focusedErrorBorder
+          : focusedErrorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      disabledBorder: freezed == disabledBorder
+          ? _value.disabledBorder
+          : disabledBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      enabledBorder: freezed == enabledBorder
+          ? _value.enabledBorder
+          : enabledBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      border: freezed == border
+          ? _value.border
+          : border // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      alignLabelWithHint: null == alignLabelWithHint
+          ? _value.alignLabelWithHint
+          : alignLabelWithHint // ignore: cast_nullable_to_non_nullable
+              as bool,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
     ) as $Val);
   }
 
@@ -266,6 +429,151 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
       return _then(_value.copyWith(suffixStyle: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle {
+    if (_value.floatingLabelStyle == null) {
+      return null;
+    }
+
+    return $MiraiTextStyleCopyWith<$Res>(_value.floatingLabelStyle!, (value) {
+      return _then(_value.copyWith(floatingLabelStyle: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding {
+    if (_value.contentPadding == null) {
+      return null;
+    }
+
+    return $MiraiEdgeInsetsCopyWith<$Res>(_value.contentPadding!, (value) {
+      return _then(_value.copyWith(contentPadding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiTextStyleCopyWith<$Res>? get counterStyle {
+    if (_value.counterStyle == null) {
+      return null;
+    }
+
+    return $MiraiTextStyleCopyWith<$Res>(_value.counterStyle!, (value) {
+      return _then(_value.copyWith(counterStyle: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBorderSideCopyWith<$Res>? get activeIndicatorBorder {
+    if (_value.activeIndicatorBorder == null) {
+      return null;
+    }
+
+    return $MiraiBorderSideCopyWith<$Res>(_value.activeIndicatorBorder!,
+        (value) {
+      return _then(_value.copyWith(activeIndicatorBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBorderSideCopyWith<$Res>? get outlineBorder {
+    if (_value.outlineBorder == null) {
+      return null;
+    }
+
+    return $MiraiBorderSideCopyWith<$Res>(_value.outlineBorder!, (value) {
+      return _then(_value.copyWith(outlineBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get errorBorder {
+    if (_value.errorBorder == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.errorBorder!, (value) {
+      return _then(_value.copyWith(errorBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get focusedBorder {
+    if (_value.focusedBorder == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.focusedBorder!, (value) {
+      return _then(_value.copyWith(focusedBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get focusedErrorBorder {
+    if (_value.focusedErrorBorder == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.focusedErrorBorder!, (value) {
+      return _then(_value.copyWith(focusedErrorBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get disabledBorder {
+    if (_value.disabledBorder == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.disabledBorder!, (value) {
+      return _then(_value.copyWith(disabledBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get enabledBorder {
+    if (_value.enabledBorder == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.enabledBorder!, (value) {
+      return _then(_value.copyWith(enabledBorder: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiInputBorderCopyWith<$Res>? get border {
+    if (_value.border == null) {
+      return null;
+    }
+
+    return $MiraiInputBorderCopyWith<$Res>(_value.border!, (value) {
+      return _then(_value.copyWith(border: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $MiraiBoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -289,13 +597,34 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       MiraiTextStyle? prefixStyle,
       String? suffixText,
       MiraiTextStyle? suffixStyle,
+      bool filled,
       String? fillColor,
       String? focusColor,
       String? hoverColor,
       Map<String, dynamic>? icon,
       Map<String, dynamic>? suffixIcon,
       String? iconColor,
-      bool filled});
+      MiraiTextStyle? floatingLabelStyle,
+      int? helperMaxLines,
+      int? errorMaxLines,
+      FloatingLabelBehavior? floatingLabelBehavior,
+      MiraiFloatingLabelAlignment? floatingLabelAlignment,
+      bool isDense,
+      MiraiEdgeInsets? contentPadding,
+      bool isCollapsed,
+      String? prefixIconColor,
+      String? suffixIconColor,
+      MiraiTextStyle? counterStyle,
+      MiraiBorderSide? activeIndicatorBorder,
+      MiraiBorderSide? outlineBorder,
+      MiraiInputBorder? errorBorder,
+      MiraiInputBorder? focusedBorder,
+      MiraiInputBorder? focusedErrorBorder,
+      MiraiInputBorder? disabledBorder,
+      MiraiInputBorder? enabledBorder,
+      MiraiInputBorder? border,
+      bool alignLabelWithHint,
+      MiraiBoxConstraints? constraints});
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
@@ -309,6 +638,30 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
   $MiraiTextStyleCopyWith<$Res>? get prefixStyle;
   @override
   $MiraiTextStyleCopyWith<$Res>? get suffixStyle;
+  @override
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
+  @override
+  $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
+  @override
+  $MiraiTextStyleCopyWith<$Res>? get counterStyle;
+  @override
+  $MiraiBorderSideCopyWith<$Res>? get activeIndicatorBorder;
+  @override
+  $MiraiBorderSideCopyWith<$Res>? get outlineBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get errorBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get focusedBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get focusedErrorBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get disabledBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get enabledBorder;
+  @override
+  $MiraiInputBorderCopyWith<$Res>? get border;
+  @override
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
 }
 
 /// @nodoc
@@ -334,13 +687,34 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? prefixStyle = freezed,
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
+    Object? filled = null,
     Object? fillColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
     Object? icon = freezed,
     Object? suffixIcon = freezed,
     Object? iconColor = freezed,
-    Object? filled = null,
+    Object? floatingLabelStyle = freezed,
+    Object? helperMaxLines = freezed,
+    Object? errorMaxLines = freezed,
+    Object? floatingLabelBehavior = freezed,
+    Object? floatingLabelAlignment = freezed,
+    Object? isDense = null,
+    Object? contentPadding = freezed,
+    Object? isCollapsed = null,
+    Object? prefixIconColor = freezed,
+    Object? suffixIconColor = freezed,
+    Object? counterStyle = freezed,
+    Object? activeIndicatorBorder = freezed,
+    Object? outlineBorder = freezed,
+    Object? errorBorder = freezed,
+    Object? focusedBorder = freezed,
+    Object? focusedErrorBorder = freezed,
+    Object? disabledBorder = freezed,
+    Object? enabledBorder = freezed,
+    Object? border = freezed,
+    Object? alignLabelWithHint = null,
+    Object? constraints = freezed,
   }) {
     return _then(_$_MiraiInputDecoration(
       labelText: freezed == labelText
@@ -391,6 +765,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.suffixStyle
           : suffixStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      filled: null == filled
+          ? _value.filled
+          : filled // ignore: cast_nullable_to_non_nullable
+              as bool,
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
@@ -415,10 +793,90 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.iconColor
           : iconColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      filled: null == filled
-          ? _value.filled
-          : filled // ignore: cast_nullable_to_non_nullable
+      floatingLabelStyle: freezed == floatingLabelStyle
+          ? _value.floatingLabelStyle
+          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      helperMaxLines: freezed == helperMaxLines
+          ? _value.helperMaxLines
+          : helperMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      errorMaxLines: freezed == errorMaxLines
+          ? _value.errorMaxLines
+          : errorMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      floatingLabelBehavior: freezed == floatingLabelBehavior
+          ? _value.floatingLabelBehavior
+          : floatingLabelBehavior // ignore: cast_nullable_to_non_nullable
+              as FloatingLabelBehavior?,
+      floatingLabelAlignment: freezed == floatingLabelAlignment
+          ? _value.floatingLabelAlignment
+          : floatingLabelAlignment // ignore: cast_nullable_to_non_nullable
+              as MiraiFloatingLabelAlignment?,
+      isDense: null == isDense
+          ? _value.isDense
+          : isDense // ignore: cast_nullable_to_non_nullable
               as bool,
+      contentPadding: freezed == contentPadding
+          ? _value.contentPadding
+          : contentPadding // ignore: cast_nullable_to_non_nullable
+              as MiraiEdgeInsets?,
+      isCollapsed: null == isCollapsed
+          ? _value.isCollapsed
+          : isCollapsed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      prefixIconColor: freezed == prefixIconColor
+          ? _value.prefixIconColor
+          : prefixIconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      suffixIconColor: freezed == suffixIconColor
+          ? _value.suffixIconColor
+          : suffixIconColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      counterStyle: freezed == counterStyle
+          ? _value.counterStyle
+          : counterStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      activeIndicatorBorder: freezed == activeIndicatorBorder
+          ? _value.activeIndicatorBorder
+          : activeIndicatorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiBorderSide?,
+      outlineBorder: freezed == outlineBorder
+          ? _value.outlineBorder
+          : outlineBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiBorderSide?,
+      errorBorder: freezed == errorBorder
+          ? _value.errorBorder
+          : errorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      focusedBorder: freezed == focusedBorder
+          ? _value.focusedBorder
+          : focusedBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      focusedErrorBorder: freezed == focusedErrorBorder
+          ? _value.focusedErrorBorder
+          : focusedErrorBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      disabledBorder: freezed == disabledBorder
+          ? _value.disabledBorder
+          : disabledBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      enabledBorder: freezed == enabledBorder
+          ? _value.enabledBorder
+          : enabledBorder // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      border: freezed == border
+          ? _value.border
+          : border // ignore: cast_nullable_to_non_nullable
+              as MiraiInputBorder?,
+      alignLabelWithHint: null == alignLabelWithHint
+          ? _value.alignLabelWithHint
+          : alignLabelWithHint // ignore: cast_nullable_to_non_nullable
+              as bool,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
     ));
   }
 }
@@ -439,13 +897,34 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       this.prefixStyle,
       this.suffixText,
       this.suffixStyle,
+      this.filled = false,
       this.fillColor,
       this.focusColor,
       this.hoverColor,
       final Map<String, dynamic>? icon,
       final Map<String, dynamic>? suffixIcon,
       this.iconColor,
-      this.filled = false})
+      this.floatingLabelStyle,
+      this.helperMaxLines,
+      this.errorMaxLines,
+      this.floatingLabelBehavior,
+      this.floatingLabelAlignment,
+      this.isDense = false,
+      this.contentPadding,
+      this.isCollapsed = false,
+      this.prefixIconColor,
+      this.suffixIconColor,
+      this.counterStyle,
+      this.activeIndicatorBorder,
+      this.outlineBorder,
+      this.errorBorder,
+      this.focusedBorder,
+      this.focusedErrorBorder,
+      this.disabledBorder,
+      this.enabledBorder,
+      this.border,
+      this.alignLabelWithHint = false,
+      this.constraints})
       : _icon = icon,
         _suffixIcon = suffixIcon;
 
@@ -477,6 +956,9 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @override
   final MiraiTextStyle? suffixStyle;
   @override
+  @JsonKey()
+  final bool filled;
+  @override
   final String? fillColor;
   @override
   final String? focusColor;
@@ -505,12 +987,54 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @override
   final String? iconColor;
   @override
+  final MiraiTextStyle? floatingLabelStyle;
+  @override
+  final int? helperMaxLines;
+  @override
+  final int? errorMaxLines;
+  @override
+  final FloatingLabelBehavior? floatingLabelBehavior;
+  @override
+  final MiraiFloatingLabelAlignment? floatingLabelAlignment;
+  @override
   @JsonKey()
-  final bool filled;
+  final bool isDense;
+  @override
+  final MiraiEdgeInsets? contentPadding;
+  @override
+  @JsonKey()
+  final bool isCollapsed;
+  @override
+  final String? prefixIconColor;
+  @override
+  final String? suffixIconColor;
+  @override
+  final MiraiTextStyle? counterStyle;
+  @override
+  final MiraiBorderSide? activeIndicatorBorder;
+  @override
+  final MiraiBorderSide? outlineBorder;
+  @override
+  final MiraiInputBorder? errorBorder;
+  @override
+  final MiraiInputBorder? focusedBorder;
+  @override
+  final MiraiInputBorder? focusedErrorBorder;
+  @override
+  final MiraiInputBorder? disabledBorder;
+  @override
+  final MiraiInputBorder? enabledBorder;
+  @override
+  final MiraiInputBorder? border;
+  @override
+  @JsonKey()
+  final bool alignLabelWithHint;
+  @override
+  final MiraiBoxConstraints? constraints;
 
   @override
   String toString() {
-    return 'MiraiInputDecoration(labelText: $labelText, labelStyle: $labelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, errorText: $errorText, errorStyle: $errorStyle, prefixText: $prefixText, prefixStyle: $prefixStyle, suffixText: $suffixText, suffixStyle: $suffixStyle, fillColor: $fillColor, focusColor: $focusColor, hoverColor: $hoverColor, icon: $icon, suffixIcon: $suffixIcon, iconColor: $iconColor, filled: $filled)';
+    return 'MiraiInputDecoration(labelText: $labelText, labelStyle: $labelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, errorText: $errorText, errorStyle: $errorStyle, prefixText: $prefixText, prefixStyle: $prefixStyle, suffixText: $suffixText, suffixStyle: $suffixStyle, filled: $filled, fillColor: $fillColor, focusColor: $focusColor, hoverColor: $hoverColor, icon: $icon, suffixIcon: $suffixIcon, iconColor: $iconColor, floatingLabelStyle: $floatingLabelStyle, helperMaxLines: $helperMaxLines, errorMaxLines: $errorMaxLines, floatingLabelBehavior: $floatingLabelBehavior, floatingLabelAlignment: $floatingLabelAlignment, isDense: $isDense, contentPadding: $contentPadding, isCollapsed: $isCollapsed, prefixIconColor: $prefixIconColor, suffixIconColor: $suffixIconColor, counterStyle: $counterStyle, activeIndicatorBorder: $activeIndicatorBorder, outlineBorder: $outlineBorder, errorBorder: $errorBorder, focusedBorder: $focusedBorder, focusedErrorBorder: $focusedErrorBorder, disabledBorder: $disabledBorder, enabledBorder: $enabledBorder, border: $border, alignLabelWithHint: $alignLabelWithHint, constraints: $constraints)';
   }
 
   @override
@@ -542,6 +1066,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
                 other.suffixText == suffixText) &&
             (identical(other.suffixStyle, suffixStyle) ||
                 other.suffixStyle == suffixStyle) &&
+            (identical(other.filled, filled) || other.filled == filled) &&
             (identical(other.fillColor, fillColor) ||
                 other.fillColor == fillColor) &&
             (identical(other.focusColor, focusColor) ||
@@ -553,7 +1078,46 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
                 .equals(other._suffixIcon, _suffixIcon) &&
             (identical(other.iconColor, iconColor) ||
                 other.iconColor == iconColor) &&
-            (identical(other.filled, filled) || other.filled == filled));
+            (identical(other.floatingLabelStyle, floatingLabelStyle) ||
+                other.floatingLabelStyle == floatingLabelStyle) &&
+            (identical(other.helperMaxLines, helperMaxLines) ||
+                other.helperMaxLines == helperMaxLines) &&
+            (identical(other.errorMaxLines, errorMaxLines) ||
+                other.errorMaxLines == errorMaxLines) &&
+            (identical(other.floatingLabelBehavior, floatingLabelBehavior) ||
+                other.floatingLabelBehavior == floatingLabelBehavior) &&
+            (identical(other.floatingLabelAlignment, floatingLabelAlignment) ||
+                other.floatingLabelAlignment == floatingLabelAlignment) &&
+            (identical(other.isDense, isDense) || other.isDense == isDense) &&
+            (identical(other.contentPadding, contentPadding) ||
+                other.contentPadding == contentPadding) &&
+            (identical(other.isCollapsed, isCollapsed) ||
+                other.isCollapsed == isCollapsed) &&
+            (identical(other.prefixIconColor, prefixIconColor) ||
+                other.prefixIconColor == prefixIconColor) &&
+            (identical(other.suffixIconColor, suffixIconColor) ||
+                other.suffixIconColor == suffixIconColor) &&
+            (identical(other.counterStyle, counterStyle) ||
+                other.counterStyle == counterStyle) &&
+            (identical(other.activeIndicatorBorder, activeIndicatorBorder) ||
+                other.activeIndicatorBorder == activeIndicatorBorder) &&
+            (identical(other.outlineBorder, outlineBorder) ||
+                other.outlineBorder == outlineBorder) &&
+            (identical(other.errorBorder, errorBorder) ||
+                other.errorBorder == errorBorder) &&
+            (identical(other.focusedBorder, focusedBorder) ||
+                other.focusedBorder == focusedBorder) &&
+            (identical(other.focusedErrorBorder, focusedErrorBorder) ||
+                other.focusedErrorBorder == focusedErrorBorder) &&
+            (identical(other.disabledBorder, disabledBorder) ||
+                other.disabledBorder == disabledBorder) &&
+            (identical(other.enabledBorder, enabledBorder) ||
+                other.enabledBorder == enabledBorder) &&
+            (identical(other.border, border) || other.border == border) &&
+            (identical(other.alignLabelWithHint, alignLabelWithHint) ||
+                other.alignLabelWithHint == alignLabelWithHint) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints));
   }
 
   @JsonKey(ignore: true)
@@ -572,13 +1136,34 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         prefixStyle,
         suffixText,
         suffixStyle,
+        filled,
         fillColor,
         focusColor,
         hoverColor,
         const DeepCollectionEquality().hash(_icon),
         const DeepCollectionEquality().hash(_suffixIcon),
         iconColor,
-        filled
+        floatingLabelStyle,
+        helperMaxLines,
+        errorMaxLines,
+        floatingLabelBehavior,
+        floatingLabelAlignment,
+        isDense,
+        contentPadding,
+        isCollapsed,
+        prefixIconColor,
+        suffixIconColor,
+        counterStyle,
+        activeIndicatorBorder,
+        outlineBorder,
+        errorBorder,
+        focusedBorder,
+        focusedErrorBorder,
+        disabledBorder,
+        enabledBorder,
+        border,
+        alignLabelWithHint,
+        constraints
       ]);
 
   @JsonKey(ignore: true)
@@ -610,13 +1195,34 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final MiraiTextStyle? prefixStyle,
       final String? suffixText,
       final MiraiTextStyle? suffixStyle,
+      final bool filled,
       final String? fillColor,
       final String? focusColor,
       final String? hoverColor,
       final Map<String, dynamic>? icon,
       final Map<String, dynamic>? suffixIcon,
       final String? iconColor,
-      final bool filled}) = _$_MiraiInputDecoration;
+      final MiraiTextStyle? floatingLabelStyle,
+      final int? helperMaxLines,
+      final int? errorMaxLines,
+      final FloatingLabelBehavior? floatingLabelBehavior,
+      final MiraiFloatingLabelAlignment? floatingLabelAlignment,
+      final bool isDense,
+      final MiraiEdgeInsets? contentPadding,
+      final bool isCollapsed,
+      final String? prefixIconColor,
+      final String? suffixIconColor,
+      final MiraiTextStyle? counterStyle,
+      final MiraiBorderSide? activeIndicatorBorder,
+      final MiraiBorderSide? outlineBorder,
+      final MiraiInputBorder? errorBorder,
+      final MiraiInputBorder? focusedBorder,
+      final MiraiInputBorder? focusedErrorBorder,
+      final MiraiInputBorder? disabledBorder,
+      final MiraiInputBorder? enabledBorder,
+      final MiraiInputBorder? border,
+      final bool alignLabelWithHint,
+      final MiraiBoxConstraints? constraints}) = _$_MiraiInputDecoration;
 
   factory _MiraiInputDecoration.fromJson(Map<String, dynamic> json) =
       _$_MiraiInputDecoration.fromJson;
@@ -646,6 +1252,8 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   MiraiTextStyle? get suffixStyle;
   @override
+  bool get filled;
+  @override
   String? get fillColor;
   @override
   String? get focusColor;
@@ -658,7 +1266,47 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   String? get iconColor;
   @override
-  bool get filled;
+  MiraiTextStyle? get floatingLabelStyle;
+  @override
+  int? get helperMaxLines;
+  @override
+  int? get errorMaxLines;
+  @override
+  FloatingLabelBehavior? get floatingLabelBehavior;
+  @override
+  MiraiFloatingLabelAlignment? get floatingLabelAlignment;
+  @override
+  bool get isDense;
+  @override
+  MiraiEdgeInsets? get contentPadding;
+  @override
+  bool get isCollapsed;
+  @override
+  String? get prefixIconColor;
+  @override
+  String? get suffixIconColor;
+  @override
+  MiraiTextStyle? get counterStyle;
+  @override
+  MiraiBorderSide? get activeIndicatorBorder;
+  @override
+  MiraiBorderSide? get outlineBorder;
+  @override
+  MiraiInputBorder? get errorBorder;
+  @override
+  MiraiInputBorder? get focusedBorder;
+  @override
+  MiraiInputBorder? get focusedErrorBorder;
+  @override
+  MiraiInputBorder? get disabledBorder;
+  @override
+  MiraiInputBorder? get enabledBorder;
+  @override
+  MiraiInputBorder? get border;
+  @override
+  bool get alignLabelWithHint;
+  @override
+  MiraiBoxConstraints? get constraints;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiInputDecorationCopyWith<_$_MiraiInputDecoration> get copyWith =>
