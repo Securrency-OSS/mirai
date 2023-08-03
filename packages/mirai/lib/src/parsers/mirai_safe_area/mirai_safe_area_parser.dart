@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:mirai/src/framework/framework.dart';
-import 'package:mirai/src/parsers/parsers.dart';
+import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 import 'mirai_safe_area.dart';
