@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
+import 'package:mirai/src/action_parsers/mirai_navigate_action/mirai_navigate_action.dart';
 import 'package:mirai/src/framework/framework.dart';
-import 'package:mirai/src/parsers/mirai_actions/mirai_navigate_action/mirai_navigate_action.dart';
 
 class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
   const MiraiNavigateActionParser();
