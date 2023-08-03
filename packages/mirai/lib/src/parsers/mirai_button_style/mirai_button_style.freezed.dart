@@ -34,6 +34,7 @@ mixin _$MiraiButtonStyle {
   MiraiSize? get minimumSize => throw _privateConstructorUsedError;
   MiraiSize? get fixedSize => throw _privateConstructorUsedError;
   MiraiSize? get maximumSize => throw _privateConstructorUsedError;
+  MiraiRoundedRectangleBorder? get shape => throw _privateConstructorUsedError;
   bool? get enableFeedback => throw _privateConstructorUsedError;
   double? get iconSize => throw _privateConstructorUsedError;
 
@@ -64,6 +65,7 @@ abstract class $MiraiButtonStyleCopyWith<$Res> {
       MiraiSize? minimumSize,
       MiraiSize? fixedSize,
       MiraiSize? maximumSize,
+      MiraiRoundedRectangleBorder? shape,
       bool? enableFeedback,
       double? iconSize});
 
@@ -72,6 +74,7 @@ abstract class $MiraiButtonStyleCopyWith<$Res> {
   $MiraiSizeCopyWith<$Res>? get minimumSize;
   $MiraiSizeCopyWith<$Res>? get fixedSize;
   $MiraiSizeCopyWith<$Res>? get maximumSize;
+  $MiraiRoundedRectangleBorderCopyWith<$Res>? get shape;
 }
 
 /// @nodoc
@@ -101,6 +104,7 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
     Object? minimumSize = freezed,
     Object? fixedSize = freezed,
     Object? maximumSize = freezed,
+    Object? shape = freezed,
     Object? enableFeedback = freezed,
     Object? iconSize = freezed,
   }) {
@@ -161,6 +165,10 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
           ? _value.maximumSize
           : maximumSize // ignore: cast_nullable_to_non_nullable
               as MiraiSize?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as MiraiRoundedRectangleBorder?,
       enableFeedback: freezed == enableFeedback
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
@@ -231,6 +239,18 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
       return _then(_value.copyWith(maximumSize: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiRoundedRectangleBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $MiraiRoundedRectangleBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -256,6 +276,7 @@ abstract class _$$_MiraiButtonStyleCopyWith<$Res>
       MiraiSize? minimumSize,
       MiraiSize? fixedSize,
       MiraiSize? maximumSize,
+      MiraiRoundedRectangleBorder? shape,
       bool? enableFeedback,
       double? iconSize});
 
@@ -269,6 +290,8 @@ abstract class _$$_MiraiButtonStyleCopyWith<$Res>
   $MiraiSizeCopyWith<$Res>? get fixedSize;
   @override
   $MiraiSizeCopyWith<$Res>? get maximumSize;
+  @override
+  $MiraiRoundedRectangleBorderCopyWith<$Res>? get shape;
 }
 
 /// @nodoc
@@ -296,6 +319,7 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
     Object? minimumSize = freezed,
     Object? fixedSize = freezed,
     Object? maximumSize = freezed,
+    Object? shape = freezed,
     Object? enableFeedback = freezed,
     Object? iconSize = freezed,
   }) {
@@ -356,6 +380,10 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
           ? _value.maximumSize
           : maximumSize // ignore: cast_nullable_to_non_nullable
               as MiraiSize?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as MiraiRoundedRectangleBorder?,
       enableFeedback: freezed == enableFeedback
           ? _value.enableFeedback
           : enableFeedback // ignore: cast_nullable_to_non_nullable
@@ -386,6 +414,7 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       this.minimumSize,
       this.fixedSize,
       this.maximumSize,
+      this.shape,
       this.enableFeedback,
       this.iconSize});
 
@@ -421,13 +450,15 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
   @override
   final MiraiSize? maximumSize;
   @override
+  final MiraiRoundedRectangleBorder? shape;
+  @override
   final bool? enableFeedback;
   @override
   final double? iconSize;
 
   @override
   String toString() {
-    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconColor: $iconColor, disabledIconColor: $disabledIconColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, enableFeedback: $enableFeedback, iconSize: $iconSize)';
+    return 'MiraiButtonStyle(foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, disabledForegroundColor: $disabledForegroundColor, disabledBackgroundColor: $disabledBackgroundColor, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconColor: $iconColor, disabledIconColor: $disabledIconColor, elevation: $elevation, textStyle: $textStyle, padding: $padding, minimumSize: $minimumSize, fixedSize: $fixedSize, maximumSize: $maximumSize, shape: $shape, enableFeedback: $enableFeedback, iconSize: $iconSize)';
   }
 
   @override
@@ -464,6 +495,7 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
                 other.fixedSize == fixedSize) &&
             (identical(other.maximumSize, maximumSize) ||
                 other.maximumSize == maximumSize) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
             (identical(other.enableFeedback, enableFeedback) ||
                 other.enableFeedback == enableFeedback) &&
             (identical(other.iconSize, iconSize) ||
@@ -488,6 +520,7 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       minimumSize,
       fixedSize,
       maximumSize,
+      shape,
       enableFeedback,
       iconSize);
 
@@ -521,6 +554,7 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
       final MiraiSize? minimumSize,
       final MiraiSize? fixedSize,
       final MiraiSize? maximumSize,
+      final MiraiRoundedRectangleBorder? shape,
       final bool? enableFeedback,
       final double? iconSize}) = _$_MiraiButtonStyle;
 
@@ -555,6 +589,8 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
   MiraiSize? get fixedSize;
   @override
   MiraiSize? get maximumSize;
+  @override
+  MiraiRoundedRectangleBorder? get shape;
   @override
   bool? get enableFeedback;
   @override
