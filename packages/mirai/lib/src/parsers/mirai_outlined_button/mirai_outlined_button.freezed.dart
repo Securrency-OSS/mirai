@@ -20,7 +20,7 @@ MiraiOutlinedButton _$MiraiOutlinedButtonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiOutlinedButton {
-  MiraiAction? get onPressed => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onPressed => throw _privateConstructorUsedError;
   MiraiButtonStyle? get style => throw _privateConstructorUsedError;
   dynamic get autofocus => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
@@ -39,13 +39,12 @@ abstract class $MiraiOutlinedButtonCopyWith<$Res> {
       _$MiraiOutlinedButtonCopyWithImpl<$Res, MiraiOutlinedButton>;
   @useResult
   $Res call(
-      {MiraiAction? onPressed,
+      {Map<String, dynamic>? onPressed,
       MiraiButtonStyle? style,
       dynamic autofocus,
       Clip clipBehavior,
       Map<String, dynamic> child});
 
-  $MiraiActionCopyWith<$Res>? get onPressed;
   $MiraiButtonStyleCopyWith<$Res>? get style;
 }
 
@@ -72,7 +71,7 @@ class _$MiraiOutlinedButtonCopyWithImpl<$Res, $Val extends MiraiOutlinedButton>
       onPressed: freezed == onPressed
           ? _value.onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
@@ -90,18 +89,6 @@ class _$MiraiOutlinedButtonCopyWithImpl<$Res, $Val extends MiraiOutlinedButton>
           : child // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiActionCopyWith<$Res>? get onPressed {
-    if (_value.onPressed == null) {
-      return null;
-    }
-
-    return $MiraiActionCopyWith<$Res>(_value.onPressed!, (value) {
-      return _then(_value.copyWith(onPressed: value) as $Val);
-    });
   }
 
   @override
@@ -126,14 +113,12 @@ abstract class _$$_MiraiOutlinedButtonCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiAction? onPressed,
+      {Map<String, dynamic>? onPressed,
       MiraiButtonStyle? style,
       dynamic autofocus,
       Clip clipBehavior,
       Map<String, dynamic> child});
 
-  @override
-  $MiraiActionCopyWith<$Res>? get onPressed;
   @override
   $MiraiButtonStyleCopyWith<$Res>? get style;
 }
@@ -157,9 +142,9 @@ class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
   }) {
     return _then(_$_MiraiOutlinedButton(
       onPressed: freezed == onPressed
-          ? _value.onPressed
+          ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
@@ -181,18 +166,27 @@ class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
   const _$_MiraiOutlinedButton(
-      {this.onPressed,
+      {final Map<String, dynamic>? onPressed,
       this.style,
       this.autofocus = false,
       this.clipBehavior = Clip.none,
       required final Map<String, dynamic> child})
-      : _child = child;
+      : _onPressed = onPressed,
+        _child = child;
 
   factory _$_MiraiOutlinedButton.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiOutlinedButtonFromJson(json);
 
+  final Map<String, dynamic>? _onPressed;
   @override
-  final MiraiAction? onPressed;
+  Map<String, dynamic>? get onPressed {
+    final value = _onPressed;
+    if (value == null) return null;
+    if (_onPressed is EqualUnmodifiableMapView) return _onPressed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final MiraiButtonStyle? style;
   @override
@@ -219,8 +213,8 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiOutlinedButton &&
-            (identical(other.onPressed, onPressed) ||
-                other.onPressed == onPressed) &&
+            const DeepCollectionEquality()
+                .equals(other._onPressed, _onPressed) &&
             (identical(other.style, style) || other.style == style) &&
             const DeepCollectionEquality().equals(other.autofocus, autofocus) &&
             (identical(other.clipBehavior, clipBehavior) ||
@@ -232,7 +226,7 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      onPressed,
+      const DeepCollectionEquality().hash(_onPressed),
       style,
       const DeepCollectionEquality().hash(autofocus),
       clipBehavior,
@@ -255,7 +249,7 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
 
 abstract class _MiraiOutlinedButton implements MiraiOutlinedButton {
   const factory _MiraiOutlinedButton(
-      {final MiraiAction? onPressed,
+      {final Map<String, dynamic>? onPressed,
       final MiraiButtonStyle? style,
       final dynamic autofocus,
       final Clip clipBehavior,
@@ -265,7 +259,7 @@ abstract class _MiraiOutlinedButton implements MiraiOutlinedButton {
       _$_MiraiOutlinedButton.fromJson;
 
   @override
-  MiraiAction? get onPressed;
+  Map<String, dynamic>? get onPressed;
   @override
   MiraiButtonStyle? get style;
   @override
