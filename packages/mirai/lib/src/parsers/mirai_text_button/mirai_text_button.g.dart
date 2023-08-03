@@ -8,9 +8,7 @@ part of 'mirai_text_button.dart';
 
 _$_MiraiTextButton _$$_MiraiTextButtonFromJson(Map<String, dynamic> json) =>
     _$_MiraiTextButton(
-      onPressed: json['onPressed'] == null
-          ? null
-          : MiraiAction.fromJson(json['onPressed'] as Map<String, dynamic>),
+      onPressed: json['onPressed'] as Map<String, dynamic>?,
       style: json['style'] == null
           ? null
           : MiraiButtonStyle.fromJson(json['style'] as Map<String, dynamic>),
