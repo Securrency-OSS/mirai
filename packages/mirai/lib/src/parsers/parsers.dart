@@ -41,6 +41,7 @@ export 'package:mirai/src/parsers/mirai_outlined_button/mirai_outlined_button.da
 export 'package:mirai/src/parsers/mirai_padding/mirai_padding.dart';
 export 'package:mirai/src/parsers/mirai_positioned/mirai_positioned.dart';
 export 'package:mirai/src/parsers/mirai_row/mirai_row.dart';
+export 'package:mirai/src/parsers/mirai_safe_area/mirai_safe_area.dart';
 export 'package:mirai/src/parsers/mirai_scaffold/mirai_scaffold.dart';
 export 'package:mirai/src/parsers/mirai_scroll_view/mirai_scroll_view.dart';
 export 'package:mirai/src/parsers/mirai_size/mirai_size.dart';

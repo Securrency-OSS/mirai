@@ -54,6 +54,7 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiExpandedParser(),
+    const MiraiSafeAreaParser(),
   ];
 
   static Future<void> initialize({
