@@ -6,11 +6,11 @@ sidebar_position: 1
 
 Now that we have installed Mirai, let's talk about the "parsers".
 
-Mirai Parser are the most important part of the Mirai framework. A parser is the class which will parse your json data into Flutter widget.
+Mirai Parser are the most important part of the Mirai framework. A parser is the class which will parse your json data into Flutter widget and actions.
 
-## Creating a Parser
+## Creating a Widget Parser
 
-To create a parser, simply extend a class with `MiraiParser`.
+To create a widget parser, simply extend a class with `MiraiParser`.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -44,24 +44,24 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
 }
 ```
 
-The above code snippet contains 3 main componets
+The above code snippet contains 3 main components
 
-- `type`: This is where you define the widget type, which is a uniquie identifier for the widget.
+- `type`: This is where you define the widget type, which is a unique identifier for the widget.
 
-- `getModel`: This is where you will define the model for your widget, which you will receive in `parse` method. The ideal way is to create a model class and returnt he fromJson function.
+- `getModel`: This is where you will define the model for your widget, which you will receive in `parse` method. The ideal way is to create a model class and return the fromJson function.
 
 - `parse`: This is where the json is parsed into widget. The `parse` method provides you with `context` and the `model` and returns a widget.
 
-## Registering a Parser
+## Registering a Widget Parser
 
 There are two ways to register a parser:
 
-1. Register in MiraiApp
-2. Register through MiraiRegistry
+1. Register in `MiraiApp`
+2. Register through `MiraiRegistry`
 
 ### Register in MiraiApp
 
-You can register your parser my passing it on MiraiApp.
+You can register your parser my passing it on `MiraiApp`.
 
 ```dart
     MiraiApp(
@@ -73,19 +73,94 @@ You can register your parser my passing it on MiraiApp.
 
 ### Register through MiraiRegistry
 
-MiraiRegistry provides you with two method to register the parser.
+`MiraiRegistry` provides you with two method to register the widget parser.
 
-1.`register`: register method takes a `MiraiParser` and register it.
+1.`register`: this method takes a `MiraiParser` and register it.
 
 ```dart
 MiraiRegistry.instance.register(parser);
 ```
 
-2.`registerAll`: registerAll method takes a list of `MiraiParser` and regsiter it.
+2.`registerAll`: this method takes a list of `MiraiParser` and register it.
 
 ```dart
 MiraiRegistry.instance.registerAll([
     MiraiTextParser(),
     MiraiButtonParser(),
+]);
+```
+
+## Creating an Action Parser
+
+To create an action parser, simply extend a class with `MiraiActionParser`.
+
+```dart
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:mirai/mirai.dart';
+
+class MiraiShareParser extends MiraiActionParser<MiraiShare> {
+  const MiraiShareParser();
+
+  @override
+  MiraiShare getModel(Map<String, dynamic> json) => MiraiShare.fromJson(json);
+
+  @override
+  String get type => 'share';
+
+  @override
+  FutureOr<dynamic> onCall(BuildContext context, MiraiShare model) {
+    return MiraiShare.share(
+      subject: model.subject,
+      text: model.text,
+    );
+  }
+}
+```
+
+The above code snippet contains 3 main components
+
+- `type`: This is where you define the action type, which is a unique identifier for the action.
+
+- `getModel`: This is where you will define the model for your action, which you will receive in `onCall` method. The ideal way is to create a model class and return the fromJson function.
+
+- `onCall`: This is where the JSON is parsed into an action. The `onCall` method provides you with `context` and the `model` and returns the result of the action.
+
+## Registering an Action Parser
+
+Like the Widget Parser registration, there are two ways to register a parser:
+
+1. Register in `MiraiApp`
+2. Register through `MiraiRegistry`
+
+### Register in MiraiApp
+
+You can register your parser my passing it on `MiraiApp`.
+
+```dart
+    MiraiApp(
+      actionParsers: [
+        MiraiShareParser(),
+      ],
+    );
+```
+
+### Register through MiraiRegistry
+
+`MiraiRegistry` provides you with two method to register the action parser.
+
+1.`registerAction`: this method takes a `MiraiActionParser` and register it.
+
+```dart
+MiraiRegistry.instance.registerAction(parser);
+```
+
+2.`registerAllActions`: this method takes a list of `MiraiActionParser` and register it.
+
+```dart
+MiraiRegistry.instance.registerAllActions([
+    MiraiShareParser(),
+    MiraiBluetoothParser(),
 ]);
 ```

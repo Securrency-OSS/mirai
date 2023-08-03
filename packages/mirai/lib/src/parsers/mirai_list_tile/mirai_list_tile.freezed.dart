@@ -20,8 +20,8 @@ MiraiListTile _$MiraiListTileFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiListTile {
-  MiraiAction? get onTap => throw _privateConstructorUsedError;
-  MiraiAction? get onLongPress => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onTap => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onLongPress => throw _privateConstructorUsedError;
   Map<String, dynamic>? get leading => throw _privateConstructorUsedError;
   Map<String, dynamic>? get title => throw _privateConstructorUsedError;
   Map<String, dynamic>? get subtitle => throw _privateConstructorUsedError;
@@ -58,8 +58,8 @@ abstract class $MiraiListTileCopyWith<$Res> {
       _$MiraiListTileCopyWithImpl<$Res, MiraiListTile>;
   @useResult
   $Res call(
-      {MiraiAction? onTap,
-      MiraiAction? onLongPress,
+      {Map<String, dynamic>? onTap,
+      Map<String, dynamic>? onLongPress,
       Map<String, dynamic>? leading,
       Map<String, dynamic>? title,
       Map<String, dynamic>? subtitle,
@@ -83,8 +83,6 @@ abstract class $MiraiListTileCopyWith<$Res> {
       double? minVerticalPadding,
       double? minLeadingWidth});
 
-  $MiraiActionCopyWith<$Res>? get onTap;
-  $MiraiActionCopyWith<$Res>? get onLongPress;
   $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
 }
 
@@ -130,11 +128,11 @@ class _$MiraiListTileCopyWithImpl<$Res, $Val extends MiraiListTile>
       onTap: freezed == onTap
           ? _value.onTap
           : onTap // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       onLongPress: freezed == onLongPress
           ? _value.onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       leading: freezed == leading
           ? _value.leading
           : leading // ignore: cast_nullable_to_non_nullable
@@ -228,30 +226,6 @@ class _$MiraiListTileCopyWithImpl<$Res, $Val extends MiraiListTile>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiActionCopyWith<$Res>? get onTap {
-    if (_value.onTap == null) {
-      return null;
-    }
-
-    return $MiraiActionCopyWith<$Res>(_value.onTap!, (value) {
-      return _then(_value.copyWith(onTap: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiActionCopyWith<$Res>? get onLongPress {
-    if (_value.onLongPress == null) {
-      return null;
-    }
-
-    return $MiraiActionCopyWith<$Res>(_value.onLongPress!, (value) {
-      return _then(_value.copyWith(onLongPress: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding {
     if (_value.contentPadding == null) {
       return null;
@@ -272,8 +246,8 @@ abstract class _$$_MiraiListTileCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiAction? onTap,
-      MiraiAction? onLongPress,
+      {Map<String, dynamic>? onTap,
+      Map<String, dynamic>? onLongPress,
       Map<String, dynamic>? leading,
       Map<String, dynamic>? title,
       Map<String, dynamic>? subtitle,
@@ -297,10 +271,6 @@ abstract class _$$_MiraiListTileCopyWith<$Res>
       double? minVerticalPadding,
       double? minLeadingWidth});
 
-  @override
-  $MiraiActionCopyWith<$Res>? get onTap;
-  @override
-  $MiraiActionCopyWith<$Res>? get onLongPress;
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
 }
@@ -343,13 +313,13 @@ class __$$_MiraiListTileCopyWithImpl<$Res>
   }) {
     return _then(_$_MiraiListTile(
       onTap: freezed == onTap
-          ? _value.onTap
+          ? _value._onTap
           : onTap // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       onLongPress: freezed == onLongPress
-          ? _value.onLongPress
+          ? _value._onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       leading: freezed == leading
           ? _value._leading
           : leading // ignore: cast_nullable_to_non_nullable
@@ -446,8 +416,8 @@ class __$$_MiraiListTileCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiListTile implements _MiraiListTile {
   const _$_MiraiListTile(
-      {this.onTap,
-      this.onLongPress,
+      {final Map<String, dynamic>? onTap,
+      final Map<String, dynamic>? onLongPress,
       final Map<String, dynamic>? leading,
       final Map<String, dynamic>? title,
       final Map<String, dynamic>? subtitle,
@@ -470,7 +440,9 @@ class _$_MiraiListTile implements _MiraiListTile {
       this.horizontalTitleGap,
       this.minVerticalPadding,
       this.minLeadingWidth})
-      : _leading = leading,
+      : _onTap = onTap,
+        _onLongPress = onLongPress,
+        _leading = leading,
         _title = title,
         _subtitle = subtitle,
         _trailing = trailing;
@@ -478,10 +450,26 @@ class _$_MiraiListTile implements _MiraiListTile {
   factory _$_MiraiListTile.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiListTileFromJson(json);
 
+  final Map<String, dynamic>? _onTap;
   @override
-  final MiraiAction? onTap;
+  Map<String, dynamic>? get onTap {
+    final value = _onTap;
+    if (value == null) return null;
+    if (_onTap is EqualUnmodifiableMapView) return _onTap;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  final Map<String, dynamic>? _onLongPress;
   @override
-  final MiraiAction? onLongPress;
+  Map<String, dynamic>? get onLongPress {
+    final value = _onLongPress;
+    if (value == null) return null;
+    if (_onLongPress is EqualUnmodifiableMapView) return _onLongPress;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   final Map<String, dynamic>? _leading;
   @override
   Map<String, dynamic>? get leading {
@@ -573,9 +561,9 @@ class _$_MiraiListTile implements _MiraiListTile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiListTile &&
-            (identical(other.onTap, onTap) || other.onTap == onTap) &&
-            (identical(other.onLongPress, onLongPress) ||
-                other.onLongPress == onLongPress) &&
+            const DeepCollectionEquality().equals(other._onTap, _onTap) &&
+            const DeepCollectionEquality()
+                .equals(other._onLongPress, _onLongPress) &&
             const DeepCollectionEquality().equals(other._leading, _leading) &&
             const DeepCollectionEquality().equals(other._title, _title) &&
             const DeepCollectionEquality().equals(other._subtitle, _subtitle) &&
@@ -619,8 +607,8 @@ class _$_MiraiListTile implements _MiraiListTile {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        onTap,
-        onLongPress,
+        const DeepCollectionEquality().hash(_onTap),
+        const DeepCollectionEquality().hash(_onLongPress),
         const DeepCollectionEquality().hash(_leading),
         const DeepCollectionEquality().hash(_title),
         const DeepCollectionEquality().hash(_subtitle),
@@ -661,8 +649,8 @@ class _$_MiraiListTile implements _MiraiListTile {
 
 abstract class _MiraiListTile implements MiraiListTile {
   const factory _MiraiListTile(
-      {final MiraiAction? onTap,
-      final MiraiAction? onLongPress,
+      {final Map<String, dynamic>? onTap,
+      final Map<String, dynamic>? onLongPress,
       final Map<String, dynamic>? leading,
       final Map<String, dynamic>? title,
       final Map<String, dynamic>? subtitle,
@@ -690,9 +678,9 @@ abstract class _MiraiListTile implements MiraiListTile {
       _$_MiraiListTile.fromJson;
 
   @override
-  MiraiAction? get onTap;
+  Map<String, dynamic>? get onTap;
   @override
-  MiraiAction? get onLongPress;
+  Map<String, dynamic>? get onLongPress;
   @override
   Map<String, dynamic>? get leading;
   @override

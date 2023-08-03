@@ -9,9 +9,7 @@ part of 'mirai_outlined_button.dart';
 _$_MiraiOutlinedButton _$$_MiraiOutlinedButtonFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiOutlinedButton(
-      onPressed: json['onPressed'] == null
-          ? null
-          : MiraiAction.fromJson(json['onPressed'] as Map<String, dynamic>),
+      onPressed: json['onPressed'] as Map<String, dynamic>?,
       style: json['style'] == null
           ? null
           : MiraiButtonStyle.fromJson(json['style'] as Map<String, dynamic>),

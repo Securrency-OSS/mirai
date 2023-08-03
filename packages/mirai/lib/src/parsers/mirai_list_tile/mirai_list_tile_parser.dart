@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_list_tile/mirai_list_tile.dart';
@@ -19,8 +18,8 @@ class MiraiListTileParser extends MiraiParser<MiraiListTile> {
   @override
   Widget parse(BuildContext context, MiraiListTile model) {
     return ListTile(
-      onTap: () => model.onTap.onCall(context),
-      onLongPress: () => model.onLongPress.onCall(context),
+      onTap: () => Mirai.onCallFromJson(model.onTap, context),
+      onLongPress: () => Mirai.onCallFromJson(model.onLongPress, context),
       leading: Mirai.fromJson(model.leading, context),
       title: Mirai.fromJson(model.title, context),
       subtitle: Mirai.fromJson(model.subtitle, context),
