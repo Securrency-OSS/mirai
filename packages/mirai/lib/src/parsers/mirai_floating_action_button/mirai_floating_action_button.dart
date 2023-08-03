@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/action/mirai_action.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/button_utils.dart';
 
@@ -11,7 +10,7 @@ part 'mirai_floating_action_button.g.dart';
 @freezed
 class MiraiFloatingActionButton with _$MiraiFloatingActionButton {
   const factory MiraiFloatingActionButton({
-    MiraiAction? onPressed,
+    Map<String, dynamic>? onPressed,
     MiraiTextStyle? textStyle,
     @Default(FloatingActionButtonType.small)
     FloatingActionButtonType buttonType,

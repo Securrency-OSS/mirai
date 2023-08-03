@@ -21,7 +21,7 @@ MiraiFloatingActionButton _$MiraiFloatingActionButtonFromJson(
 
 /// @nodoc
 mixin _$MiraiFloatingActionButton {
-  MiraiAction? get onPressed => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onPressed => throw _privateConstructorUsedError;
   MiraiTextStyle? get textStyle => throw _privateConstructorUsedError;
   FloatingActionButtonType get buttonType => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
@@ -56,7 +56,7 @@ abstract class $MiraiFloatingActionButtonCopyWith<$Res> {
       _$MiraiFloatingActionButtonCopyWithImpl<$Res, MiraiFloatingActionButton>;
   @useResult
   $Res call(
-      {MiraiAction? onPressed,
+      {Map<String, dynamic>? onPressed,
       MiraiTextStyle? textStyle,
       FloatingActionButtonType buttonType,
       bool autofocus,
@@ -78,7 +78,6 @@ abstract class $MiraiFloatingActionButtonCopyWith<$Res> {
       Object? heroTag,
       Map<String, dynamic> child});
 
-  $MiraiActionCopyWith<$Res>? get onPressed;
   $MiraiTextStyleCopyWith<$Res>? get textStyle;
   $MiraiTextStyleCopyWith<$Res>? get extendedTextStyle;
 }
@@ -123,7 +122,7 @@ class _$MiraiFloatingActionButtonCopyWithImpl<$Res,
       onPressed: freezed == onPressed
           ? _value.onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       textStyle: freezed == textStyle
           ? _value.textStyle
           : textStyle // ignore: cast_nullable_to_non_nullable
@@ -206,18 +205,6 @@ class _$MiraiFloatingActionButtonCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiActionCopyWith<$Res>? get onPressed {
-    if (_value.onPressed == null) {
-      return null;
-    }
-
-    return $MiraiActionCopyWith<$Res>(_value.onPressed!, (value) {
-      return _then(_value.copyWith(onPressed: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $MiraiTextStyleCopyWith<$Res>? get textStyle {
     if (_value.textStyle == null) {
       return null;
@@ -251,7 +238,7 @@ abstract class _$$_MiraiFloatingActionButtonCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiAction? onPressed,
+      {Map<String, dynamic>? onPressed,
       MiraiTextStyle? textStyle,
       FloatingActionButtonType buttonType,
       bool autofocus,
@@ -273,8 +260,6 @@ abstract class _$$_MiraiFloatingActionButtonCopyWith<$Res>
       Object? heroTag,
       Map<String, dynamic> child});
 
-  @override
-  $MiraiActionCopyWith<$Res>? get onPressed;
   @override
   $MiraiTextStyleCopyWith<$Res>? get textStyle;
   @override
@@ -318,9 +303,9 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
   }) {
     return _then(_$_MiraiFloatingActionButton(
       onPressed: freezed == onPressed
-          ? _value.onPressed
+          ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as MiraiAction?,
+              as Map<String, dynamic>?,
       textStyle: freezed == textStyle
           ? _value.textStyle
           : textStyle // ignore: cast_nullable_to_non_nullable
@@ -406,7 +391,7 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   const _$_MiraiFloatingActionButton(
-      {this.onPressed,
+      {final Map<String, dynamic>? onPressed,
       this.textStyle,
       this.buttonType = FloatingActionButtonType.small,
       this.autofocus = false,
@@ -427,14 +412,23 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
       this.tooltip,
       this.heroTag,
       required final Map<String, dynamic> child})
-      : _icon = icon,
+      : _onPressed = onPressed,
+        _icon = icon,
         _child = child;
 
   factory _$_MiraiFloatingActionButton.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiFloatingActionButtonFromJson(json);
 
+  final Map<String, dynamic>? _onPressed;
   @override
-  final MiraiAction? onPressed;
+  Map<String, dynamic>? get onPressed {
+    final value = _onPressed;
+    if (value == null) return null;
+    if (_onPressed is EqualUnmodifiableMapView) return _onPressed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final MiraiTextStyle? textStyle;
   @override
@@ -501,8 +495,8 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiFloatingActionButton &&
-            (identical(other.onPressed, onPressed) ||
-                other.onPressed == onPressed) &&
+            const DeepCollectionEquality()
+                .equals(other._onPressed, _onPressed) &&
             (identical(other.textStyle, textStyle) ||
                 other.textStyle == textStyle) &&
             (identical(other.buttonType, buttonType) ||
@@ -546,7 +540,7 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        onPressed,
+        const DeepCollectionEquality().hash(_onPressed),
         textStyle,
         buttonType,
         autofocus,
@@ -586,7 +580,7 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
 
 abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
   const factory _MiraiFloatingActionButton(
-          {final MiraiAction? onPressed,
+          {final Map<String, dynamic>? onPressed,
           final MiraiTextStyle? textStyle,
           final FloatingActionButtonType buttonType,
           final bool autofocus,
@@ -613,7 +607,7 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
       _$_MiraiFloatingActionButton.fromJson;
 
   @override
-  MiraiAction? get onPressed;
+  Map<String, dynamic>? get onPressed;
   @override
   MiraiTextStyle? get textStyle;
   @override
