@@ -49,6 +49,10 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18.0),
+        side: BorderSide(color: Colors.red),
+      ),
     );
   }
 
@@ -69,6 +73,7 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
+      // shape:
     );
   }
 
@@ -87,6 +92,7 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
+      // shape:
     );
   }
 
@@ -105,6 +111,7 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       maximumSize: maximumSize?.parse,
       padding: padding.parse,
       iconSize: iconSize,
+      // shape:
     );
   }
 }
