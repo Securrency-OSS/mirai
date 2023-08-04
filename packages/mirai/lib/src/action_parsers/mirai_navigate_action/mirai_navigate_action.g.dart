@@ -1,16 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'mirai_action.dart';
+part of 'mirai_navigate_action.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
-    _$_MiraiAction(
-      actionType:
-          $enumDecodeNullable(_$ActionTypeEnumMap, json['actionType']) ??
-              ActionType.none,
+_$_MiraiNavigateAction _$$_MiraiNavigateActionFromJson(
+        Map<String, dynamic> json) =>
+    _$_MiraiNavigateAction(
       request: json['request'] == null
           ? null
           : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
@@ -25,9 +23,9 @@ _$_MiraiAction _$$_MiraiActionFromJson(Map<String, dynamic> json) =>
       arguments: json['arguments'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
+Map<String, dynamic> _$$_MiraiNavigateActionToJson(
+        _$_MiraiNavigateAction instance) =>
     <String, dynamic>{
-      'actionType': _$ActionTypeEnumMap[instance.actionType]!,
       'request': instance.request,
       'widgetJson': instance.widgetJson,
       'assetPath': instance.assetPath,
@@ -37,12 +35,6 @@ Map<String, dynamic> _$$_MiraiActionToJson(_$_MiraiAction instance) =>
       'result': instance.result,
       'arguments': instance.arguments,
     };
-
-const _$ActionTypeEnumMap = {
-  ActionType.navigate: 'navigate',
-  ActionType.request: 'request',
-  ActionType.none: 'none',
-};
 
 const _$NavigationTypeEnumMap = {
   NavigationType.screen: 'screen',
