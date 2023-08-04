@@ -57,6 +57,7 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiExpandedParser(),
+    const MiraiFlexibleParser(),
     const MiraiSafeAreaParser(),
   ];
 

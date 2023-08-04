@@ -31,5 +31,6 @@ enum WidgetType {
   scrollView,
   tab,
   expanded,
+  flexible,
   safeArea,
 }
