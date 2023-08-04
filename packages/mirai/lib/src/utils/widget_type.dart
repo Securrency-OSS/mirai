@@ -32,4 +32,5 @@ enum WidgetType {
   tab,
   expanded,
   flexible,
+  safeArea,
 }
