@@ -25,18 +25,17 @@ mixin _$MiraiInputDecoration {
   Map<String, dynamic>? get label => throw _privateConstructorUsedError;
   String? get labelText => throw _privateConstructorUsedError;
   MiraiTextStyle? get labelStyle => throw _privateConstructorUsedError;
+  MiraiTextStyle? get floatingLabelStyle => throw _privateConstructorUsedError;
   String? get helperText => throw _privateConstructorUsedError;
   MiraiTextStyle? get helperStyle => throw _privateConstructorUsedError;
   String? get hintText => throw _privateConstructorUsedError;
   MiraiTextStyle? get hintStyle => throw _privateConstructorUsedError;
-  String? get errorText => throw _privateConstructorUsedError;
-  MiraiTextStyle? get errorStyle => throw _privateConstructorUsedError;
-  int? get errorMaxLines => throw _privateConstructorUsedError;
-  String? get hoverColor => throw _privateConstructorUsedError;
-  MiraiTextStyle? get floatingLabelStyle => throw _privateConstructorUsedError;
   int? get helperMaxLines => throw _privateConstructorUsedError;
   TextDirection? get hintTextDirection => throw _privateConstructorUsedError;
   int? get hintMaxLines => throw _privateConstructorUsedError;
+  String? get errorText => throw _privateConstructorUsedError;
+  MiraiTextStyle? get errorStyle => throw _privateConstructorUsedError;
+  int? get errorMaxLines => throw _privateConstructorUsedError;
   FloatingLabelBehavior? get floatingLabelBehavior =>
       throw _privateConstructorUsedError;
   MiraiFloatingLabelAlignment? get floatingLabelAlignment =>
@@ -48,7 +47,6 @@ mixin _$MiraiInputDecoration {
   MiraiBoxConstraints? get prefixIconConstraints =>
       throw _privateConstructorUsedError;
   Map<String, dynamic>? get prefix => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get counter => throw _privateConstructorUsedError;
   String? get prefixText => throw _privateConstructorUsedError;
   MiraiTextStyle? get prefixStyle => throw _privateConstructorUsedError;
   String? get prefixIconColor => throw _privateConstructorUsedError;
@@ -59,10 +57,12 @@ mixin _$MiraiInputDecoration {
   String? get suffixText => throw _privateConstructorUsedError;
   MiraiTextStyle? get suffixStyle => throw _privateConstructorUsedError;
   String? get suffixIconColor => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get counter => throw _privateConstructorUsedError;
   String? get counterText => throw _privateConstructorUsedError;
   MiraiTextStyle? get counterStyle => throw _privateConstructorUsedError;
   bool get filled => throw _privateConstructorUsedError;
   String? get fillColor => throw _privateConstructorUsedError;
+  String? get hoverColor => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
   MiraiInputBorder? get errorBorder => throw _privateConstructorUsedError;
   MiraiInputBorder? get focusedBorder => throw _privateConstructorUsedError;
@@ -94,18 +94,17 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       Map<String, dynamic>? label,
       String? labelText,
       MiraiTextStyle? labelStyle,
+      MiraiTextStyle? floatingLabelStyle,
       String? helperText,
       MiraiTextStyle? helperStyle,
       String? hintText,
       MiraiTextStyle? hintStyle,
-      String? errorText,
-      MiraiTextStyle? errorStyle,
-      int? errorMaxLines,
-      String? hoverColor,
-      MiraiTextStyle? floatingLabelStyle,
       int? helperMaxLines,
       TextDirection? hintTextDirection,
       int? hintMaxLines,
+      String? errorText,
+      MiraiTextStyle? errorStyle,
+      int? errorMaxLines,
       FloatingLabelBehavior? floatingLabelBehavior,
       MiraiFloatingLabelAlignment? floatingLabelAlignment,
       bool isCollapsed,
@@ -114,7 +113,6 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       Map<String, dynamic>? prefixIcon,
       MiraiBoxConstraints? prefixIconConstraints,
       Map<String, dynamic>? prefix,
-      Map<String, dynamic>? counter,
       String? prefixText,
       MiraiTextStyle? prefixStyle,
       String? prefixIconColor,
@@ -124,10 +122,12 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       String? suffixText,
       MiraiTextStyle? suffixStyle,
       String? suffixIconColor,
+      Map<String, dynamic>? counter,
       String? counterText,
       MiraiTextStyle? counterStyle,
       bool filled,
       String? fillColor,
+      String? hoverColor,
       String? focusColor,
       MiraiInputBorder? errorBorder,
       MiraiInputBorder? focusedBorder,
@@ -141,10 +141,10 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       MiraiBoxConstraints? constraints});
 
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
   $MiraiTextStyleCopyWith<$Res>? get helperStyle;
   $MiraiTextStyleCopyWith<$Res>? get hintStyle;
   $MiraiTextStyleCopyWith<$Res>? get errorStyle;
-  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
   $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
   $MiraiBoxConstraintsCopyWith<$Res>? get prefixIconConstraints;
   $MiraiTextStyleCopyWith<$Res>? get prefixStyle;
@@ -179,18 +179,17 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? label = freezed,
     Object? labelText = freezed,
     Object? labelStyle = freezed,
+    Object? floatingLabelStyle = freezed,
     Object? helperText = freezed,
     Object? helperStyle = freezed,
     Object? hintText = freezed,
     Object? hintStyle = freezed,
-    Object? errorText = freezed,
-    Object? errorStyle = freezed,
-    Object? errorMaxLines = freezed,
-    Object? hoverColor = freezed,
-    Object? floatingLabelStyle = freezed,
     Object? helperMaxLines = freezed,
     Object? hintTextDirection = freezed,
     Object? hintMaxLines = freezed,
+    Object? errorText = freezed,
+    Object? errorStyle = freezed,
+    Object? errorMaxLines = freezed,
     Object? floatingLabelBehavior = freezed,
     Object? floatingLabelAlignment = freezed,
     Object? isCollapsed = null,
@@ -199,7 +198,6 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? prefixIcon = freezed,
     Object? prefixIconConstraints = freezed,
     Object? prefix = freezed,
-    Object? counter = freezed,
     Object? prefixText = freezed,
     Object? prefixStyle = freezed,
     Object? prefixIconColor = freezed,
@@ -209,10 +207,12 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
     Object? suffixIconColor = freezed,
+    Object? counter = freezed,
     Object? counterText = freezed,
     Object? counterStyle = freezed,
     Object? filled = null,
     Object? fillColor = freezed,
+    Object? hoverColor = freezed,
     Object? focusColor = freezed,
     Object? errorBorder = freezed,
     Object? focusedBorder = freezed,
@@ -246,6 +246,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.labelStyle
           : labelStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      floatingLabelStyle: freezed == floatingLabelStyle
+          ? _value.floatingLabelStyle
+          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
       helperText: freezed == helperText
           ? _value.helperText
           : helperText // ignore: cast_nullable_to_non_nullable
@@ -262,26 +266,6 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.hintStyle
           : hintStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
-      errorText: freezed == errorText
-          ? _value.errorText
-          : errorText // ignore: cast_nullable_to_non_nullable
-              as String?,
-      errorStyle: freezed == errorStyle
-          ? _value.errorStyle
-          : errorStyle // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
-      errorMaxLines: freezed == errorMaxLines
-          ? _value.errorMaxLines
-          : errorMaxLines // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hoverColor: freezed == hoverColor
-          ? _value.hoverColor
-          : hoverColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      floatingLabelStyle: freezed == floatingLabelStyle
-          ? _value.floatingLabelStyle
-          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
       helperMaxLines: freezed == helperMaxLines
           ? _value.helperMaxLines
           : helperMaxLines // ignore: cast_nullable_to_non_nullable
@@ -293,6 +277,18 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
       hintMaxLines: freezed == hintMaxLines
           ? _value.hintMaxLines
           : hintMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      errorText: freezed == errorText
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errorStyle: freezed == errorStyle
+          ? _value.errorStyle
+          : errorStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      errorMaxLines: freezed == errorMaxLines
+          ? _value.errorMaxLines
+          : errorMaxLines // ignore: cast_nullable_to_non_nullable
               as int?,
       floatingLabelBehavior: freezed == floatingLabelBehavior
           ? _value.floatingLabelBehavior
@@ -325,10 +321,6 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
       prefix: freezed == prefix
           ? _value.prefix
           : prefix // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      counter: freezed == counter
-          ? _value.counter
-          : counter // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
       prefixText: freezed == prefixText
           ? _value.prefixText
@@ -366,6 +358,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.suffixIconColor
           : suffixIconColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      counter: freezed == counter
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       counterText: freezed == counterText
           ? _value.counterText
           : counterText // ignore: cast_nullable_to_non_nullable
@@ -381,6 +377,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
               as String?,
       focusColor: freezed == focusColor
           ? _value.focusColor
@@ -443,6 +443,18 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle {
+    if (_value.floatingLabelStyle == null) {
+      return null;
+    }
+
+    return $MiraiTextStyleCopyWith<$Res>(_value.floatingLabelStyle!, (value) {
+      return _then(_value.copyWith(floatingLabelStyle: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $MiraiTextStyleCopyWith<$Res>? get helperStyle {
     if (_value.helperStyle == null) {
       return null;
@@ -474,18 +486,6 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
 
     return $MiraiTextStyleCopyWith<$Res>(_value.errorStyle!, (value) {
       return _then(_value.copyWith(errorStyle: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle {
-    if (_value.floatingLabelStyle == null) {
-      return null;
-    }
-
-    return $MiraiTextStyleCopyWith<$Res>(_value.floatingLabelStyle!, (value) {
-      return _then(_value.copyWith(floatingLabelStyle: value) as $Val);
     });
   }
 
@@ -662,18 +662,17 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       Map<String, dynamic>? label,
       String? labelText,
       MiraiTextStyle? labelStyle,
+      MiraiTextStyle? floatingLabelStyle,
       String? helperText,
       MiraiTextStyle? helperStyle,
       String? hintText,
       MiraiTextStyle? hintStyle,
-      String? errorText,
-      MiraiTextStyle? errorStyle,
-      int? errorMaxLines,
-      String? hoverColor,
-      MiraiTextStyle? floatingLabelStyle,
       int? helperMaxLines,
       TextDirection? hintTextDirection,
       int? hintMaxLines,
+      String? errorText,
+      MiraiTextStyle? errorStyle,
+      int? errorMaxLines,
       FloatingLabelBehavior? floatingLabelBehavior,
       MiraiFloatingLabelAlignment? floatingLabelAlignment,
       bool isCollapsed,
@@ -682,7 +681,6 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       Map<String, dynamic>? prefixIcon,
       MiraiBoxConstraints? prefixIconConstraints,
       Map<String, dynamic>? prefix,
-      Map<String, dynamic>? counter,
       String? prefixText,
       MiraiTextStyle? prefixStyle,
       String? prefixIconColor,
@@ -692,10 +690,12 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       String? suffixText,
       MiraiTextStyle? suffixStyle,
       String? suffixIconColor,
+      Map<String, dynamic>? counter,
       String? counterText,
       MiraiTextStyle? counterStyle,
       bool filled,
       String? fillColor,
+      String? hoverColor,
       String? focusColor,
       MiraiInputBorder? errorBorder,
       MiraiInputBorder? focusedBorder,
@@ -711,13 +711,13 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
   @override
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
   @override
+  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
+  @override
   $MiraiTextStyleCopyWith<$Res>? get helperStyle;
   @override
   $MiraiTextStyleCopyWith<$Res>? get hintStyle;
   @override
   $MiraiTextStyleCopyWith<$Res>? get errorStyle;
-  @override
-  $MiraiTextStyleCopyWith<$Res>? get floatingLabelStyle;
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get contentPadding;
   @override
@@ -762,18 +762,17 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? label = freezed,
     Object? labelText = freezed,
     Object? labelStyle = freezed,
+    Object? floatingLabelStyle = freezed,
     Object? helperText = freezed,
     Object? helperStyle = freezed,
     Object? hintText = freezed,
     Object? hintStyle = freezed,
-    Object? errorText = freezed,
-    Object? errorStyle = freezed,
-    Object? errorMaxLines = freezed,
-    Object? hoverColor = freezed,
-    Object? floatingLabelStyle = freezed,
     Object? helperMaxLines = freezed,
     Object? hintTextDirection = freezed,
     Object? hintMaxLines = freezed,
+    Object? errorText = freezed,
+    Object? errorStyle = freezed,
+    Object? errorMaxLines = freezed,
     Object? floatingLabelBehavior = freezed,
     Object? floatingLabelAlignment = freezed,
     Object? isCollapsed = null,
@@ -782,7 +781,6 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? prefixIcon = freezed,
     Object? prefixIconConstraints = freezed,
     Object? prefix = freezed,
-    Object? counter = freezed,
     Object? prefixText = freezed,
     Object? prefixStyle = freezed,
     Object? prefixIconColor = freezed,
@@ -792,10 +790,12 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
     Object? suffixIconColor = freezed,
+    Object? counter = freezed,
     Object? counterText = freezed,
     Object? counterStyle = freezed,
     Object? filled = null,
     Object? fillColor = freezed,
+    Object? hoverColor = freezed,
     Object? focusColor = freezed,
     Object? errorBorder = freezed,
     Object? focusedBorder = freezed,
@@ -829,6 +829,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.labelStyle
           : labelStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      floatingLabelStyle: freezed == floatingLabelStyle
+          ? _value.floatingLabelStyle
+          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
       helperText: freezed == helperText
           ? _value.helperText
           : helperText // ignore: cast_nullable_to_non_nullable
@@ -845,26 +849,6 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.hintStyle
           : hintStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
-      errorText: freezed == errorText
-          ? _value.errorText
-          : errorText // ignore: cast_nullable_to_non_nullable
-              as String?,
-      errorStyle: freezed == errorStyle
-          ? _value.errorStyle
-          : errorStyle // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
-      errorMaxLines: freezed == errorMaxLines
-          ? _value.errorMaxLines
-          : errorMaxLines // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hoverColor: freezed == hoverColor
-          ? _value.hoverColor
-          : hoverColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      floatingLabelStyle: freezed == floatingLabelStyle
-          ? _value.floatingLabelStyle
-          : floatingLabelStyle // ignore: cast_nullable_to_non_nullable
-              as MiraiTextStyle?,
       helperMaxLines: freezed == helperMaxLines
           ? _value.helperMaxLines
           : helperMaxLines // ignore: cast_nullable_to_non_nullable
@@ -876,6 +860,18 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
       hintMaxLines: freezed == hintMaxLines
           ? _value.hintMaxLines
           : hintMaxLines // ignore: cast_nullable_to_non_nullable
+              as int?,
+      errorText: freezed == errorText
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errorStyle: freezed == errorStyle
+          ? _value.errorStyle
+          : errorStyle // ignore: cast_nullable_to_non_nullable
+              as MiraiTextStyle?,
+      errorMaxLines: freezed == errorMaxLines
+          ? _value.errorMaxLines
+          : errorMaxLines // ignore: cast_nullable_to_non_nullable
               as int?,
       floatingLabelBehavior: freezed == floatingLabelBehavior
           ? _value.floatingLabelBehavior
@@ -908,10 +904,6 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
       prefix: freezed == prefix
           ? _value._prefix
           : prefix // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      counter: freezed == counter
-          ? _value._counter
-          : counter // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
       prefixText: freezed == prefixText
           ? _value.prefixText
@@ -949,6 +941,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.suffixIconColor
           : suffixIconColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      counter: freezed == counter
+          ? _value._counter
+          : counter // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       counterText: freezed == counterText
           ? _value.counterText
           : counterText // ignore: cast_nullable_to_non_nullable
@@ -964,6 +960,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
               as String?,
       focusColor: freezed == focusColor
           ? _value.focusColor
@@ -1022,18 +1022,17 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       final Map<String, dynamic>? label,
       this.labelText,
       this.labelStyle,
+      this.floatingLabelStyle,
       this.helperText,
       this.helperStyle,
       this.hintText,
       this.hintStyle,
-      this.errorText,
-      this.errorStyle,
-      this.errorMaxLines,
-      this.hoverColor,
-      this.floatingLabelStyle,
       this.helperMaxLines,
       this.hintTextDirection,
       this.hintMaxLines,
+      this.errorText,
+      this.errorStyle,
+      this.errorMaxLines,
       this.floatingLabelBehavior,
       this.floatingLabelAlignment,
       this.isCollapsed = false,
@@ -1042,7 +1041,6 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       final Map<String, dynamic>? prefixIcon,
       this.prefixIconConstraints,
       final Map<String, dynamic>? prefix,
-      final Map<String, dynamic>? counter,
       this.prefixText,
       this.prefixStyle,
       this.prefixIconColor,
@@ -1052,10 +1050,12 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       this.suffixText,
       this.suffixStyle,
       this.suffixIconColor,
+      final Map<String, dynamic>? counter,
       this.counterText,
       this.counterStyle,
       this.filled = false,
       this.fillColor,
+      this.hoverColor,
       this.focusColor,
       this.errorBorder,
       this.focusedBorder,
@@ -1071,9 +1071,9 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         _label = label,
         _prefixIcon = prefixIcon,
         _prefix = prefix,
-        _counter = counter,
         _suffix = suffix,
-        _suffixIcon = suffixIcon;
+        _suffixIcon = suffixIcon,
+        _counter = counter;
 
   factory _$_MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiInputDecorationFromJson(json);
@@ -1105,6 +1105,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @override
   final MiraiTextStyle? labelStyle;
   @override
+  final MiraiTextStyle? floatingLabelStyle;
+  @override
   final String? helperText;
   @override
   final MiraiTextStyle? helperStyle;
@@ -1113,21 +1115,17 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @override
   final MiraiTextStyle? hintStyle;
   @override
-  final String? errorText;
-  @override
-  final MiraiTextStyle? errorStyle;
-  @override
-  final int? errorMaxLines;
-  @override
-  final String? hoverColor;
-  @override
-  final MiraiTextStyle? floatingLabelStyle;
-  @override
   final int? helperMaxLines;
   @override
   final TextDirection? hintTextDirection;
   @override
   final int? hintMaxLines;
+  @override
+  final String? errorText;
+  @override
+  final MiraiTextStyle? errorStyle;
+  @override
+  final int? errorMaxLines;
   @override
   final FloatingLabelBehavior? floatingLabelBehavior;
   @override
@@ -1158,16 +1156,6 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
     final value = _prefix;
     if (value == null) return null;
     if (_prefix is EqualUnmodifiableMapView) return _prefix;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, dynamic>? _counter;
-  @override
-  Map<String, dynamic>? get counter {
-    final value = _counter;
-    if (value == null) return null;
-    if (_counter is EqualUnmodifiableMapView) return _counter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1206,6 +1194,16 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   final MiraiTextStyle? suffixStyle;
   @override
   final String? suffixIconColor;
+  final Map<String, dynamic>? _counter;
+  @override
+  Map<String, dynamic>? get counter {
+    final value = _counter;
+    if (value == null) return null;
+    if (_counter is EqualUnmodifiableMapView) return _counter;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final String? counterText;
   @override
@@ -1215,6 +1213,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   final bool filled;
   @override
   final String? fillColor;
+  @override
+  final String? hoverColor;
   @override
   final String? focusColor;
   @override
@@ -1242,7 +1242,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
 
   @override
   String toString() {
-    return 'MiraiInputDecoration(icon: $icon, iconColor: $iconColor, label: $label, labelText: $labelText, labelStyle: $labelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, errorText: $errorText, errorStyle: $errorStyle, errorMaxLines: $errorMaxLines, hoverColor: $hoverColor, floatingLabelStyle: $floatingLabelStyle, helperMaxLines: $helperMaxLines, hintTextDirection: $hintTextDirection, hintMaxLines: $hintMaxLines, floatingLabelBehavior: $floatingLabelBehavior, floatingLabelAlignment: $floatingLabelAlignment, isCollapsed: $isCollapsed, isDense: $isDense, contentPadding: $contentPadding, prefixIcon: $prefixIcon, prefixIconConstraints: $prefixIconConstraints, prefix: $prefix, counter: $counter, prefixText: $prefixText, prefixStyle: $prefixStyle, prefixIconColor: $prefixIconColor, suffix: $suffix, suffixIcon: $suffixIcon, suffixIconConstraints: $suffixIconConstraints, suffixText: $suffixText, suffixStyle: $suffixStyle, suffixIconColor: $suffixIconColor, counterText: $counterText, counterStyle: $counterStyle, filled: $filled, fillColor: $fillColor, focusColor: $focusColor, errorBorder: $errorBorder, focusedBorder: $focusedBorder, focusedErrorBorder: $focusedErrorBorder, disabledBorder: $disabledBorder, enabledBorder: $enabledBorder, border: $border, enabled: $enabled, semanticCounterText: $semanticCounterText, alignLabelWithHint: $alignLabelWithHint, constraints: $constraints)';
+    return 'MiraiInputDecoration(icon: $icon, iconColor: $iconColor, label: $label, labelText: $labelText, labelStyle: $labelStyle, floatingLabelStyle: $floatingLabelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, helperMaxLines: $helperMaxLines, hintTextDirection: $hintTextDirection, hintMaxLines: $hintMaxLines, errorText: $errorText, errorStyle: $errorStyle, errorMaxLines: $errorMaxLines, floatingLabelBehavior: $floatingLabelBehavior, floatingLabelAlignment: $floatingLabelAlignment, isCollapsed: $isCollapsed, isDense: $isDense, contentPadding: $contentPadding, prefixIcon: $prefixIcon, prefixIconConstraints: $prefixIconConstraints, prefix: $prefix, prefixText: $prefixText, prefixStyle: $prefixStyle, prefixIconColor: $prefixIconColor, suffix: $suffix, suffixIcon: $suffixIcon, suffixIconConstraints: $suffixIconConstraints, suffixText: $suffixText, suffixStyle: $suffixStyle, suffixIconColor: $suffixIconColor, counter: $counter, counterText: $counterText, counterStyle: $counterStyle, filled: $filled, fillColor: $fillColor, hoverColor: $hoverColor, focusColor: $focusColor, errorBorder: $errorBorder, focusedBorder: $focusedBorder, focusedErrorBorder: $focusedErrorBorder, disabledBorder: $disabledBorder, enabledBorder: $enabledBorder, border: $border, enabled: $enabled, semanticCounterText: $semanticCounterText, alignLabelWithHint: $alignLabelWithHint, constraints: $constraints)';
   }
 
   @override
@@ -1258,6 +1258,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
                 other.labelText == labelText) &&
             (identical(other.labelStyle, labelStyle) ||
                 other.labelStyle == labelStyle) &&
+            (identical(other.floatingLabelStyle, floatingLabelStyle) ||
+                other.floatingLabelStyle == floatingLabelStyle) &&
             (identical(other.helperText, helperText) ||
                 other.helperText == helperText) &&
             (identical(other.helperStyle, helperStyle) ||
@@ -1266,22 +1268,18 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
                 other.hintText == hintText) &&
             (identical(other.hintStyle, hintStyle) ||
                 other.hintStyle == hintStyle) &&
-            (identical(other.errorText, errorText) ||
-                other.errorText == errorText) &&
-            (identical(other.errorStyle, errorStyle) ||
-                other.errorStyle == errorStyle) &&
-            (identical(other.errorMaxLines, errorMaxLines) ||
-                other.errorMaxLines == errorMaxLines) &&
-            (identical(other.hoverColor, hoverColor) ||
-                other.hoverColor == hoverColor) &&
-            (identical(other.floatingLabelStyle, floatingLabelStyle) ||
-                other.floatingLabelStyle == floatingLabelStyle) &&
             (identical(other.helperMaxLines, helperMaxLines) ||
                 other.helperMaxLines == helperMaxLines) &&
             (identical(other.hintTextDirection, hintTextDirection) ||
                 other.hintTextDirection == hintTextDirection) &&
             (identical(other.hintMaxLines, hintMaxLines) ||
                 other.hintMaxLines == hintMaxLines) &&
+            (identical(other.errorText, errorText) ||
+                other.errorText == errorText) &&
+            (identical(other.errorStyle, errorStyle) ||
+                other.errorStyle == errorStyle) &&
+            (identical(other.errorMaxLines, errorMaxLines) ||
+                other.errorMaxLines == errorMaxLines) &&
             (identical(other.floatingLabelBehavior, floatingLabelBehavior) ||
                 other.floatingLabelBehavior == floatingLabelBehavior) &&
             (identical(other.floatingLabelAlignment, floatingLabelAlignment) ||
@@ -1296,7 +1294,6 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
             (identical(other.prefixIconConstraints, prefixIconConstraints) ||
                 other.prefixIconConstraints == prefixIconConstraints) &&
             const DeepCollectionEquality().equals(other._prefix, _prefix) &&
-            const DeepCollectionEquality().equals(other._counter, _counter) &&
             (identical(other.prefixText, prefixText) ||
                 other.prefixText == prefixText) &&
             (identical(other.prefixStyle, prefixStyle) ||
@@ -1314,6 +1311,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
                 other.suffixStyle == suffixStyle) &&
             (identical(other.suffixIconColor, suffixIconColor) ||
                 other.suffixIconColor == suffixIconColor) &&
+            const DeepCollectionEquality().equals(other._counter, _counter) &&
             (identical(other.counterText, counterText) ||
                 other.counterText == counterText) &&
             (identical(other.counterStyle, counterStyle) ||
@@ -1321,6 +1319,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
             (identical(other.filled, filled) || other.filled == filled) &&
             (identical(other.fillColor, fillColor) ||
                 other.fillColor == fillColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
             (identical(other.focusColor, focusColor) ||
                 other.focusColor == focusColor) &&
             (identical(other.errorBorder, errorBorder) ||
@@ -1352,18 +1352,17 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         const DeepCollectionEquality().hash(_label),
         labelText,
         labelStyle,
+        floatingLabelStyle,
         helperText,
         helperStyle,
         hintText,
         hintStyle,
-        errorText,
-        errorStyle,
-        errorMaxLines,
-        hoverColor,
-        floatingLabelStyle,
         helperMaxLines,
         hintTextDirection,
         hintMaxLines,
+        errorText,
+        errorStyle,
+        errorMaxLines,
         floatingLabelBehavior,
         floatingLabelAlignment,
         isCollapsed,
@@ -1372,7 +1371,6 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         const DeepCollectionEquality().hash(_prefixIcon),
         prefixIconConstraints,
         const DeepCollectionEquality().hash(_prefix),
-        const DeepCollectionEquality().hash(_counter),
         prefixText,
         prefixStyle,
         prefixIconColor,
@@ -1382,10 +1380,12 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         suffixText,
         suffixStyle,
         suffixIconColor,
+        const DeepCollectionEquality().hash(_counter),
         counterText,
         counterStyle,
         filled,
         fillColor,
+        hoverColor,
         focusColor,
         errorBorder,
         focusedBorder,
@@ -1421,18 +1421,17 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final Map<String, dynamic>? label,
       final String? labelText,
       final MiraiTextStyle? labelStyle,
+      final MiraiTextStyle? floatingLabelStyle,
       final String? helperText,
       final MiraiTextStyle? helperStyle,
       final String? hintText,
       final MiraiTextStyle? hintStyle,
-      final String? errorText,
-      final MiraiTextStyle? errorStyle,
-      final int? errorMaxLines,
-      final String? hoverColor,
-      final MiraiTextStyle? floatingLabelStyle,
       final int? helperMaxLines,
       final TextDirection? hintTextDirection,
       final int? hintMaxLines,
+      final String? errorText,
+      final MiraiTextStyle? errorStyle,
+      final int? errorMaxLines,
       final FloatingLabelBehavior? floatingLabelBehavior,
       final MiraiFloatingLabelAlignment? floatingLabelAlignment,
       final bool isCollapsed,
@@ -1441,7 +1440,6 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final Map<String, dynamic>? prefixIcon,
       final MiraiBoxConstraints? prefixIconConstraints,
       final Map<String, dynamic>? prefix,
-      final Map<String, dynamic>? counter,
       final String? prefixText,
       final MiraiTextStyle? prefixStyle,
       final String? prefixIconColor,
@@ -1451,10 +1449,12 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final String? suffixText,
       final MiraiTextStyle? suffixStyle,
       final String? suffixIconColor,
+      final Map<String, dynamic>? counter,
       final String? counterText,
       final MiraiTextStyle? counterStyle,
       final bool filled,
       final String? fillColor,
+      final String? hoverColor,
       final String? focusColor,
       final MiraiInputBorder? errorBorder,
       final MiraiInputBorder? focusedBorder,
@@ -1481,6 +1481,8 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   MiraiTextStyle? get labelStyle;
   @override
+  MiraiTextStyle? get floatingLabelStyle;
+  @override
   String? get helperText;
   @override
   MiraiTextStyle? get helperStyle;
@@ -1489,21 +1491,17 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   MiraiTextStyle? get hintStyle;
   @override
-  String? get errorText;
-  @override
-  MiraiTextStyle? get errorStyle;
-  @override
-  int? get errorMaxLines;
-  @override
-  String? get hoverColor;
-  @override
-  MiraiTextStyle? get floatingLabelStyle;
-  @override
   int? get helperMaxLines;
   @override
   TextDirection? get hintTextDirection;
   @override
   int? get hintMaxLines;
+  @override
+  String? get errorText;
+  @override
+  MiraiTextStyle? get errorStyle;
+  @override
+  int? get errorMaxLines;
   @override
   FloatingLabelBehavior? get floatingLabelBehavior;
   @override
@@ -1520,8 +1518,6 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   MiraiBoxConstraints? get prefixIconConstraints;
   @override
   Map<String, dynamic>? get prefix;
-  @override
-  Map<String, dynamic>? get counter;
   @override
   String? get prefixText;
   @override
@@ -1541,6 +1537,8 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   String? get suffixIconColor;
   @override
+  Map<String, dynamic>? get counter;
+  @override
   String? get counterText;
   @override
   MiraiTextStyle? get counterStyle;
@@ -1548,6 +1546,8 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   bool get filled;
   @override
   String? get fillColor;
+  @override
+  String? get hoverColor;
   @override
   String? get focusColor;
   @override

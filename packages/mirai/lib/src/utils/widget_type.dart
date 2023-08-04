@@ -32,7 +32,7 @@ enum WidgetType {
   tab,
   form,
   formField,
-  twoStateWidget,
+  checkBox,
   expanded,
   flexible,
   safeArea,

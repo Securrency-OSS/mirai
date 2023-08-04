@@ -51,7 +51,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
     try {
       context
           .read<MiraiFormCubit>()
-          .registerValue(widget.model.key, widget.model.initialValue ?? "");
+          .registerValue(widget.model.id, widget.model.initialValue ?? "");
     } catch (e) {
       Log.e(e);
     }
@@ -69,7 +69,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       onChanged: (value) {
         try {
           context.read<MiraiFormCubit>().updateValue(
-                widget.model.key,
+                widget.model.id,
                 value,
               );
         } catch (e) {
@@ -121,7 +121,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
         try {
           context
               .read<MiraiFormCubit>()
-              .updateValidation(widget.model.key, validation == null);
+              .updateValidation(widget.model.id, validation == null);
         } catch (e) {
           Log.e(e);
         }
@@ -158,11 +158,11 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
               .firstWhere((e) => e.name == validator.rule);
 
           String? compareVal;
-          if (widget.model.compareKey != null) {
+          if (widget.model.compareId != null) {
             try {
               compareVal = context
                   .read<MiraiFormCubit>()
-                  .getValue(widget.model.compareKey!);
+                  .getValue(widget.model.compareId!);
             } catch (e) {
               Log.e(e);
             }

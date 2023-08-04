@@ -16,6 +16,10 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
       labelStyle: json['labelStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
+      floatingLabelStyle: json['floatingLabelStyle'] == null
+          ? null
+          : MiraiTextStyle.fromJson(
+              json['floatingLabelStyle'] as Map<String, dynamic>),
       helperText: json['helperText'] as String?,
       helperStyle: json['helperStyle'] == null
           ? null
@@ -25,20 +29,15 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
       hintStyle: json['hintStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['hintStyle'] as Map<String, dynamic>),
+      helperMaxLines: json['helperMaxLines'] as int?,
+      hintTextDirection: $enumDecodeNullable(
+          _$TextDirectionEnumMap, json['hintTextDirection']),
+      hintMaxLines: json['hintMaxLines'] as int?,
       errorText: json['errorText'] as String?,
       errorStyle: json['errorStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['errorStyle'] as Map<String, dynamic>),
       errorMaxLines: json['errorMaxLines'] as int?,
-      hoverColor: json['hoverColor'] as String?,
-      floatingLabelStyle: json['floatingLabelStyle'] == null
-          ? null
-          : MiraiTextStyle.fromJson(
-              json['floatingLabelStyle'] as Map<String, dynamic>),
-      helperMaxLines: json['helperMaxLines'] as int?,
-      hintTextDirection: $enumDecodeNullable(
-          _$TextDirectionEnumMap, json['hintTextDirection']),
-      hintMaxLines: json['hintMaxLines'] as int?,
       floatingLabelBehavior: $enumDecodeNullable(
           _$FloatingLabelBehaviorEnumMap, json['floatingLabelBehavior']),
       floatingLabelAlignment: $enumDecodeNullable(
@@ -55,7 +54,6 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
           : MiraiBoxConstraints.fromJson(
               json['prefixIconConstraints'] as Map<String, dynamic>),
       prefix: json['prefix'] as Map<String, dynamic>?,
-      counter: json['counter'] as Map<String, dynamic>?,
       prefixText: json['prefixText'] as String?,
       prefixStyle: json['prefixStyle'] == null
           ? null
@@ -74,6 +72,7 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
           : MiraiTextStyle.fromJson(
               json['suffixStyle'] as Map<String, dynamic>),
       suffixIconColor: json['suffixIconColor'] as String?,
+      counter: json['counter'] as Map<String, dynamic>?,
       counterText: json['counterText'] as String?,
       counterStyle: json['counterStyle'] == null
           ? null
@@ -81,6 +80,7 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
               json['counterStyle'] as Map<String, dynamic>),
       filled: json['filled'] as bool? ?? false,
       fillColor: json['fillColor'] as String?,
+      hoverColor: json['hoverColor'] as String?,
       focusColor: json['focusColor'] as String?,
       errorBorder: json['errorBorder'] == null
           ? null
@@ -122,18 +122,17 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'label': instance.label,
       'labelText': instance.labelText,
       'labelStyle': instance.labelStyle,
+      'floatingLabelStyle': instance.floatingLabelStyle,
       'helperText': instance.helperText,
       'helperStyle': instance.helperStyle,
       'hintText': instance.hintText,
       'hintStyle': instance.hintStyle,
-      'errorText': instance.errorText,
-      'errorStyle': instance.errorStyle,
-      'errorMaxLines': instance.errorMaxLines,
-      'hoverColor': instance.hoverColor,
-      'floatingLabelStyle': instance.floatingLabelStyle,
       'helperMaxLines': instance.helperMaxLines,
       'hintTextDirection': _$TextDirectionEnumMap[instance.hintTextDirection],
       'hintMaxLines': instance.hintMaxLines,
+      'errorText': instance.errorText,
+      'errorStyle': instance.errorStyle,
+      'errorMaxLines': instance.errorMaxLines,
       'floatingLabelBehavior':
           _$FloatingLabelBehaviorEnumMap[instance.floatingLabelBehavior],
       'floatingLabelAlignment':
@@ -144,7 +143,6 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'prefixIcon': instance.prefixIcon,
       'prefixIconConstraints': instance.prefixIconConstraints,
       'prefix': instance.prefix,
-      'counter': instance.counter,
       'prefixText': instance.prefixText,
       'prefixStyle': instance.prefixStyle,
       'prefixIconColor': instance.prefixIconColor,
@@ -154,10 +152,12 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'suffixText': instance.suffixText,
       'suffixStyle': instance.suffixStyle,
       'suffixIconColor': instance.suffixIconColor,
+      'counter': instance.counter,
       'counterText': instance.counterText,
       'counterStyle': instance.counterStyle,
       'filled': instance.filled,
       'fillColor': instance.fillColor,
+      'hoverColor': instance.hoverColor,
       'focusColor': instance.focusColor,
       'errorBorder': instance.errorBorder,
       'focusedBorder': instance.focusedBorder,

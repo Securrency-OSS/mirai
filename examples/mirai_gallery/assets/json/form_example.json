@@ -8,7 +8,7 @@
         }
     },
     "body": {
-        "type": "container",
+        "type": "padding",
         "padding": {
             "left": 12,
             "right": 12,
@@ -16,17 +16,15 @@
             "bottom": 12
         },
         "child": {
-            "type": "form",
+            "type": "scrollView",
             "child": {
-                "type": "scrollView",
+                "type": "form",
                 "child": {
                     "type": "column",
-                    "mainAxisAlignment": "center",
-                    "crossAxisAlignment": "center",
                     "children": [
                         {
                             "type": "textFormField",
-                            "key": "name",
+                            "id": "name",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -67,7 +65,7 @@
                         },
                         {
                             "type": "textFormField",
-                            "key": "phone",
+                            "id": "phone",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -112,7 +110,7 @@
                         },
                         {
                             "type": "textFormField",
-                            "key": "email",
+                            "id": "email",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -147,7 +145,7 @@
                         },
                         {
                             "type": "textFormField",
-                            "key": "card",
+                            "id": "card",
                             "maxLines": 1,
                             "keyboardType": "number",
                             "textInputAction": "done",
@@ -192,8 +190,8 @@
                         },
                         {
                             "type": "textFormField",
-                            "key": "password",
-                            "compareKey": "confirmPassword",
+                            "id": "password",
+                            "compareId": "confirmPassword",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -234,8 +232,8 @@
                         },
                         {
                             "type": "textFormField",
-                            "key": "confirmPassword",
-                            "compareKey": "password",
+                            "id": "confirmPassword",
+                            "compareId": "password",
                             "maxLines": 1,
                             "keyboardType": "text",
                             "textInputAction": "done",
@@ -243,7 +241,7 @@
                             "textCapitalization": "none",
                             "textDirection": "ltr",
                             "textAlignVertical": "top",
-                            "obscureText": false,
+                            "obscureText": true,
                             "decoration": {
                                 "filled": true,
                                 "icon": {
@@ -284,32 +282,20 @@
                             "crossAxisAlignment": "start",
                             "children": [
                                 {
-                                    "type": "twoStateWidget",
-                                    "key": "terms",
-                                    "state": false,
-                                    "trueState": {
-                                        "type": "icon",
-                                        "iconType": "material",
-                                        "icon": "check_box_rounded",
-                                        "size": 18
-                                    },
-                                    "falseState": {
-                                        "type": "icon",
-                                        "iconType": "material",
-                                        "icon": "check_box_outline_blank_rounded",
-                                        "size": 18
-                                    }
+                                    "type": "checkBox",
+                                    "id": "terms",
+                                    "value": false,
+                                    "tristate": false,
+                                    "splashRadius": 0,
+                                    "autofocus": false
                                 },
                                 {
                                     "type": "sizedBox",
                                     "width": 16
                                 },
                                 {
-                                    "type": "sizedBox",
-                                    "child": {
-                                        "type": "text",
-                                        "data": "I have read and accept the Terms & \nConditions and Privacy Policy"
-                                    }
+                                    "type": "text",
+                                    "data": "I have read and accept the Terms & \nConditions and Privacy Policy"
                                 }
                             ]
                         },
