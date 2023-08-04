@@ -34,4 +34,6 @@ enum WidgetType {
   formField,
   twoStateWidget,
   expanded,
+  flexible,
+  safeArea,
 }

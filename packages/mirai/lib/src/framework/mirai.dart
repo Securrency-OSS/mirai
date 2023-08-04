@@ -63,6 +63,8 @@ class Mirai {
     const MiraiFormFieldParser(),
     const MiraiTwoStateWidgetParser(),
     const MiraiExpandedParser(),
+    const MiraiFlexibleParser(),
+    const MiraiSafeAreaParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
