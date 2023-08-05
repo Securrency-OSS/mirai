@@ -24,8 +24,10 @@ export 'package:mirai/src/parsers/mirai_dialog_theme/mirai_dialog_theme.dart';
 export 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 export 'package:mirai/src/parsers/mirai_elevated_button/mirai_elevated_button.dart';
 export 'package:mirai/src/parsers/mirai_expanded/mirai_expanded.dart';
+export 'package:mirai/src/parsers/mirai_flexible/mirai_flexible.dart';
 export 'package:mirai/src/parsers/mirai_floating_action_button/mirai_floating_action_button.dart';
 export 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';
+export 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
 export 'package:mirai/src/parsers/mirai_gradient/mirai_gradient.dart';
 export 'package:mirai/src/parsers/mirai_icon/mirai_icon.dart';
 export 'package:mirai/src/parsers/mirai_icon_button/mirai_icon_button.dart';
@@ -41,6 +43,7 @@ export 'package:mirai/src/parsers/mirai_outlined_button/mirai_outlined_button.da
 export 'package:mirai/src/parsers/mirai_padding/mirai_padding.dart';
 export 'package:mirai/src/parsers/mirai_positioned/mirai_positioned.dart';
 export 'package:mirai/src/parsers/mirai_row/mirai_row.dart';
+export 'package:mirai/src/parsers/mirai_safe_area/mirai_safe_area.dart';
 export 'package:mirai/src/parsers/mirai_scaffold/mirai_scaffold.dart';
 export 'package:mirai/src/parsers/mirai_scroll_view/mirai_scroll_view.dart';
 export 'package:mirai/src/parsers/mirai_size/mirai_size.dart';

@@ -27,7 +27,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textFormField",
+                        "type": "textField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -53,12 +53,6 @@
                                 "rule": "[a-zA-Z]"
                             }
                         ],
-                        "validatorRules": [
-                            {
-                                "rule": "^[A-Za-z .`'/-]{2,32}$",
-                                "message": "Enter a valid name"
-                            }
-                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -67,7 +61,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textFormField",
+                        "type": "textField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -93,12 +87,6 @@
                                 "rule": "[a-zA-Z]"
                             }
                         ],
-                        "validatorRules": [
-                            {
-                                "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
-                                "message": "Enter a valid phone number"
-                            }
-                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -107,7 +95,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textFormField",
+                        "type": "textField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -128,12 +116,6 @@
                             "labelText": "Email"
                         },
                         "autovalidateMode": "onUserInteraction",
-                        "validatorRules": [
-                            {
-                                "rule": "isEmail",
-                                "message": "Enter a valid email address"
-                            }
-                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -194,7 +176,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textFormField",
+                        "type": "textField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -214,12 +196,6 @@
                             "labelText": "Password*"
                         },
                         "autovalidateMode": "onUserInteraction",
-                        "validatorRules": [
-                            {
-                                "rule": "isPassword",
-                                "message": "Enter a valid password"
-                            }
-                        ],
                         "readOnly": false,
                         "enabled": true
                     },
@@ -228,7 +204,7 @@
                         "height": 24
                     },
                     {
-                        "type": "textFormField",
+                        "type": "textField",
                         "maxLines": 1,
                         "keyboardType": "text",
                         "textInputAction": "done",
@@ -249,13 +225,7 @@
                         },
                         "readOnly": false,
                         "enabled": true,
-                        "autovalidateMode": "onUserInteraction",
-                        "validatorRules": [
-                            {
-                                "rule": "isPassword",
-                                "message": "Enter a valid password"
-                            }
-                        ]
+                        "autovalidateMode": "onUserInteraction"
                     }
                 ]
             }

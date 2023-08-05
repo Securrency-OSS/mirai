@@ -30,5 +30,10 @@ enum WidgetType {
   defaultTabController,
   scrollView,
   tab,
+  form,
+  formField,
+  checkBox,
   expanded,
+  flexible,
+  safeArea,
 }

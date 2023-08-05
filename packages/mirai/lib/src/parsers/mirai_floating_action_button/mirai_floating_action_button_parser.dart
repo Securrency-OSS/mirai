@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_floating_action_button/mirai_floating_action_button.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
@@ -25,7 +24,7 @@ class MiraiFloatingActionButtonParser
         return FloatingActionButton.extended(
           onPressed: model.onPressed == null
               ? null
-              : () => model.onPressed.onCall(context),
+              : () => Mirai.onCallFromJson(model.onPressed, context),
           icon: Mirai.fromJson(model.icon, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
@@ -50,7 +49,7 @@ class MiraiFloatingActionButtonParser
         return FloatingActionButton.large(
           onPressed: model.onPressed == null
               ? null
-              : () => model.onPressed.onCall(context),
+              : () => Mirai.onCallFromJson(model.onPressed, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,
@@ -72,7 +71,7 @@ class MiraiFloatingActionButtonParser
         return FloatingActionButton(
           onPressed: model.onPressed == null
               ? null
-              : () => model.onPressed.onCall(context),
+              : () => Mirai.onCallFromJson(model.onPressed, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,
@@ -94,7 +93,7 @@ class MiraiFloatingActionButtonParser
         return FloatingActionButton.small(
           onPressed: model.onPressed == null
               ? null
-              : () => model.onPressed.onCall(context),
+              : () => Mirai.onCallFromJson(model.onPressed, context),
           backgroundColor: model.backgroundColor?.toColor,
           foregroundColor: model.foregroundColor?.toColor,
           focusColor: model.focusColor?.toColor,

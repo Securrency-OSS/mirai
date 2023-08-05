@@ -9,6 +9,8 @@ part of 'mirai_text_form_field.dart';
 _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiTextFormField(
+      id: json['id'] as String,
+      compareId: json['compareId'] as String?,
       decoration: json['decoration'] == null
           ? null
           : MiraiInputDecoration.fromJson(
@@ -37,7 +39,7 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
       maxLines: json['maxLines'] as int?,
       minLines: json['minLines'] as int?,
       maxLength: json['maxLength'] as int?,
-      obscureText: json['obscureText'] as bool? ?? false,
+      obscureText: json['obscureText'] as bool?,
       autocorrect: json['autocorrect'] as bool? ?? true,
       smartDashesType: $enumDecodeNullable(
           _$SmartDashesTypeEnumMap, json['smartDashesType']),
@@ -78,6 +80,8 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
 Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
         _$_MiraiTextFormField instance) =>
     <String, dynamic>{
+      'id': instance.id,
+      'compareId': instance.compareId,
       'decoration': instance.decoration,
       'initialValue': instance.initialValue,
       'keyboardType': _$MiraiTextInputTypeEnumMap[instance.keyboardType],

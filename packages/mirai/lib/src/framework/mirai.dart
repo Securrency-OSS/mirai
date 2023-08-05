@@ -1,13 +1,19 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mirai/src/action_parsers/action_parsers.dart';
+import 'package:mirai/src/framework/mirai_action_parser.dart';
 import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
+import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
+import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
+import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
@@ -53,15 +59,29 @@ class Mirai {
     const MiraiScrollViewParser(),
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
+    const MiraiFormParser(),
+    const MiraiFormFieldParser(),
+    const MiraiCheckBoxWidgetParser(),
     const MiraiExpandedParser(),
+    const MiraiFlexibleParser(),
+    const MiraiSafeAreaParser(),
+  ];
+
+  static final _actionParsers = <MiraiActionParser>[
+    const MiraiNoneActionParser(),
+    const MiraiNavigateActionParser(),
+    const MiraiRequestActionParser(),
   ];
 
   static Future<void> initialize({
     List<MiraiParser> parsers = const [],
+    List<MiraiActionParser> actionParsers = const [],
     Dio? dio,
   }) async {
     _parsers.addAll(parsers);
+    _actionParsers.addAll(actionParsers);
     MiraiRegistry.instance.registerAll(_parsers);
+    MiraiRegistry.instance.registerAllActions(_actionParsers);
     MiraiNetwork.initialize(dio ?? Dio());
   }
 
@@ -75,6 +95,28 @@ class Mirai {
           return miraiParser.parse(context, model);
         } else {
           Log.w('Widget type [$widgetType] not supported');
+        }
+      }
+    } catch (e) {
+      Log.e(e);
+    }
+    return null;
+  }
+
+  static FutureOr<dynamic> onCallFromJson(
+    Map<String, dynamic>? json,
+    BuildContext context,
+  ) {
+    try {
+      if (json != null && json['actionType'] != null) {
+        String actionType = json['actionType'];
+        MiraiActionParser? miraiActionParser =
+            MiraiRegistry.instance.getActionParser(actionType);
+        if (miraiActionParser != null) {
+          final model = miraiActionParser.getModel(json);
+          return miraiActionParser.onCall(context, model);
+        } else {
+          Log.w('Action type [$actionType] not supported');
         }
       }
     } catch (e) {
