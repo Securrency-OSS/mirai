@@ -2,7 +2,9 @@ enum InputValidationType {
   isEmail,
   isName,
   isPassword,
-  isNotEmpty;
+  isNotEmpty,
+  compare,
+  general;
 
   RegExp get _emailRegExp => RegExp(
       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
@@ -11,7 +13,7 @@ enum InputValidationType {
       r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@#$%^&£*\-_+=[\]{}|\\:,?\/`~""()<>;!]*$');
   RegExp get _isNotEmptyRegExp => RegExp("^[0-9a-zA-Z .`'/-]{1,50}\$");
 
-  bool validate(String value, String rule) {
+  bool validate(String value, String rule, {String? compareValue}) {
     switch (this) {
       case InputValidationType.isEmail:
         return _emailRegExp.hasMatch(value);
@@ -24,6 +26,9 @@ enum InputValidationType {
 
       case InputValidationType.isNotEmpty:
         return _isNotEmptyRegExp.hasMatch(value);
+
+      case InputValidationType.compare:
+        return value == compareValue;
 
       default:
         return RegExp(rule).hasMatch(value);
