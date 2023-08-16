@@ -5,7 +5,7 @@ import 'package:mirai/mirai.dart';
 part 'mirai_input_border.freezed.dart';
 part 'mirai_input_border.g.dart';
 
-enum MiraiInputBorderType { underlineInputBorder, outlineInputBorder }
+enum MiraiInputBorderType { none, underlineInputBorder, outlineInputBorder }
 
 @freezed
 class MiraiInputBorder with _$MiraiInputBorder {
@@ -24,6 +24,8 @@ class MiraiInputBorder with _$MiraiInputBorder {
 extension MiraiInputBorderParser on MiraiInputBorder {
   InputBorder get parse {
     switch (type) {
+      case MiraiInputBorderType.none:
+        return InputBorder.none;
       case MiraiInputBorderType.underlineInputBorder:
         return UnderlineInputBorder(
           borderSide: borderSide.parse,
