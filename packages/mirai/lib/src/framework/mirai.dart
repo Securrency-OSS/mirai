@@ -5,7 +5,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
+import 'package:mirai/src/action_parsers/mirai_set_state_action/mirai_set_state_action_parser.dart';
+import 'package:mirai/src/computed_parsers/mirai_computed_state/mirai_computed_state_parser.dart';
+import 'package:mirai/src/computed_parsers/mirai_computed_sum/mirai_computed_sum_parser.dart';
+import 'package:mirai/src/computed_parsers/mirai_computed_to_string/mirai_computed_to_string_parser.dart';
 import 'package:mirai/src/framework/mirai_action_parser.dart';
+import 'package:mirai/src/framework/mirai_computed_parser.dart';
 import 'package:mirai/src/framework/mirai_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
 import 'package:mirai/src/network/mirai_network.dart';
@@ -15,6 +20,7 @@ import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
+import 'package:mirai/src/parsers/mirai_state/mirai_state_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/log.dart';
@@ -44,6 +50,7 @@ class Mirai {
     const MiraiOutlinedButtonParser(),
     const MiraiPaddingParser(),
     const MiraiAppBarParser(),
+    const MiraiStateParser(),
     const MiraiTextButtonParser(),
     const MiraiScaffoldParser(),
     const MiraiSizedBoxParser(),
@@ -71,6 +78,13 @@ class Mirai {
     const MiraiNoneActionParser(),
     const MiraiNavigateActionParser(),
     const MiraiRequestActionParser(),
+    const MiraiSetStateActionParser(),
+  ];
+
+  static final _computedParsers = <MiraiComputedParser>[
+    const MiraiComputedStateParser(),
+    const MiraiComputedSumParser(),
+    const MiraiComputedToStringParser(),
   ];
 
   static Future<void> initialize({
@@ -82,6 +96,7 @@ class Mirai {
     _actionParsers.addAll(actionParsers);
     MiraiRegistry.instance.registerAll(_parsers);
     MiraiRegistry.instance.registerAllActions(_actionParsers);
+    MiraiRegistry.instance.registerAllComputed(_computedParsers);
     MiraiNetwork.initialize(dio ?? Dio());
   }
 
@@ -110,8 +125,7 @@ class Mirai {
     try {
       if (json != null && json['actionType'] != null) {
         String actionType = json['actionType'];
-        MiraiActionParser? miraiActionParser =
-            MiraiRegistry.instance.getActionParser(actionType);
+        MiraiActionParser? miraiActionParser = MiraiRegistry.instance.getActionParser(actionType);
         if (miraiActionParser != null) {
           final model = miraiActionParser.getModel(json);
           return miraiActionParser.onCall(context, model);

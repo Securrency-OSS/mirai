@@ -1,4 +1,5 @@
 import 'package:mirai/src/framework/framework.dart';
+import 'package:mirai/src/framework/mirai_computed_parser.dart';
 import 'package:mirai/src/utils/log.dart';
 
 class MiraiRegistry {
@@ -11,6 +12,8 @@ class MiraiRegistry {
   static MiraiRegistry get instance => _singleton;
 
   static final _miraiParsers = <String, MiraiParser>{};
+
+  static final _miraiComputedParsers = <String, MiraiComputedParser>{};
 
   static final _miraiActionParsers = <String, MiraiActionParser>{};
 
@@ -36,6 +39,17 @@ class MiraiRegistry {
     }
   }
 
+  bool registerComputed(MiraiComputedParser parser) {
+    final String type = parser.type;
+    if (_miraiActionParsers.containsKey(type)) {
+      Log.w('Computed $type is already registered');
+      return false;
+    } else {
+      _miraiComputedParsers[type] = parser;
+      return true;
+    }
+  }
+
   Future<dynamic> registerAll(List<MiraiParser> parsers) {
     return Future.forEach(
       parsers,
@@ -54,11 +68,19 @@ class MiraiRegistry {
     );
   }
 
+  Future<dynamic> registerAllComputed(List<MiraiComputedParser> parsers) {
+    return Future.forEach(parsers, registerComputed);
+  }
+
   MiraiParser<dynamic>? getParser(String type) {
     return _miraiParsers[type];
   }
 
   MiraiActionParser<dynamic>? getActionParser(String type) {
     return _miraiActionParsers[type];
+  }
+
+  MiraiComputedParser<dynamic>? getComputedParser(String type) {
+    return _miraiComputedParsers[type];
   }
 }

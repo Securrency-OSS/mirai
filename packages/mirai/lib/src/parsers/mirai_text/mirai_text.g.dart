@@ -7,7 +7,7 @@ part of 'mirai_text.dart';
 // **************************************************************************
 
 _$_MiraiText _$$_MiraiTextFromJson(Map<String, dynamic> json) => _$_MiraiText(
-      data: json['data'] as String,
+      data: json['data'],
       children: (json['children'] as List<dynamic>?)
               ?.map((e) => MiraiTextSpan.fromJson(e as Map<String, dynamic>))
               .toList() ??

@@ -30,6 +30,38 @@
                     },
                     "title": {
                         "type": "text",
+                        "data": "Mirai Computed State",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Displays information and actions relating to the current screen",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/computed_state_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "cupertino",
+                        "icon": "app_fill"
+                    },
+                    "title": {
+                        "type": "text",
                         "data": "Mirai Appbar",
                         "style": {
                             "fontSize": 21

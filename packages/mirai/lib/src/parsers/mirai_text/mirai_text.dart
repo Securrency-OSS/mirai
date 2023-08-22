@@ -10,7 +10,7 @@ part 'mirai_text.g.dart';
 @freezed
 class MiraiText with _$MiraiText {
   const factory MiraiText({
-    required String data,
+    required dynamic data,
     @Default([]) List<MiraiTextSpan> children,
     MiraiTextStyle? style,
     TextAlign? textAlign,
@@ -24,8 +24,7 @@ class MiraiText with _$MiraiText {
     String? selectionColor,
   }) = _MiraiText;
 
-  factory MiraiText.fromJson(Map<String, dynamic> json) =>
-      _$MiraiTextFromJson(json);
+  factory MiraiText.fromJson(Map<String, dynamic> json) => _$MiraiTextFromJson(json);
 }
 
 @freezed
@@ -35,6 +34,5 @@ class MiraiTextSpan with _$MiraiTextSpan {
     MiraiTextStyle? style,
   }) = _MiraiTextSpan;
 
-  factory MiraiTextSpan.fromJson(Map<String, dynamic> json) =>
-      _$MiraiTextSpanFromJson(json);
+  factory MiraiTextSpan.fromJson(Map<String, dynamic> json) => _$MiraiTextSpanFromJson(json);
 }

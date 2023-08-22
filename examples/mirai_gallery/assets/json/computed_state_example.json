@@ -1,0 +1,62 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "State example"
+        }
+    },
+    "body": {
+        "type": "state",
+        "initialState": {
+            "counter": 1
+        },
+        "child": {
+            "type": "column",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "Counter"
+                },
+                {
+                    "type": "text",
+                    "data": {
+                        "type": "computedToString",
+                        "value": {
+                            "type": "computedState",
+                            "key": "counter"
+                        }
+                    }
+                },
+                {
+                    "type": "elevatedButton",
+                    "child": {
+                        "type": "text",
+                        "data": "Increment"
+                    },
+                    "style": {
+                        "padding": {
+                            "top": 8,
+                            "left": 12,
+                            "right": 12,
+                            "bottom": 8
+                        }
+                    },
+                    "onPressed": {
+                        "actionType": "setState",
+                        "key": "counter",
+                        "value": {
+                            "type": "computedSum",
+                            "firstValue": {
+                                "type": "computedState",
+                                "key": "counter"
+                            },
+                            "secondValue": 1
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

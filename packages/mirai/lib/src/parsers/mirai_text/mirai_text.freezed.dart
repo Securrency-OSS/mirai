@@ -20,7 +20,7 @@ MiraiText _$MiraiTextFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiText {
-  String get data => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
   List<MiraiTextSpan> get children => throw _privateConstructorUsedError;
   MiraiTextStyle? get style => throw _privateConstructorUsedError;
   TextAlign? get textAlign => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $MiraiTextCopyWith<$Res> {
       _$MiraiTextCopyWithImpl<$Res, MiraiText>;
   @useResult
   $Res call(
-      {String data,
+      {dynamic data,
       List<MiraiTextSpan> children,
       MiraiTextStyle? style,
       TextAlign? textAlign,
@@ -74,7 +74,7 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? data = freezed,
     Object? children = null,
     Object? style = freezed,
     Object? textAlign = freezed,
@@ -88,10 +88,10 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
     Object? selectionColor = freezed,
   }) {
     return _then(_value.copyWith(
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
+              as dynamic,
       children: null == children
           ? _value.children
           : children // ignore: cast_nullable_to_non_nullable
@@ -160,7 +160,7 @@ abstract class _$$_MiraiTextCopyWith<$Res> implements $MiraiTextCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String data,
+      {dynamic data,
       List<MiraiTextSpan> children,
       MiraiTextStyle? style,
       TextAlign? textAlign,
@@ -188,7 +188,7 @@ class __$$_MiraiTextCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? data = freezed,
     Object? children = null,
     Object? style = freezed,
     Object? textAlign = freezed,
@@ -202,10 +202,10 @@ class __$$_MiraiTextCopyWithImpl<$Res>
     Object? selectionColor = freezed,
   }) {
     return _then(_$_MiraiText(
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
+              as dynamic,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -276,7 +276,7 @@ class _$_MiraiText implements _MiraiText {
       _$$_MiraiTextFromJson(json);
 
   @override
-  final String data;
+  final dynamic data;
   final List<MiraiTextSpan> _children;
   @override
   @JsonKey()
@@ -317,7 +317,7 @@ class _$_MiraiText implements _MiraiText {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiText &&
-            (identical(other.data, data) || other.data == data) &&
+            const DeepCollectionEquality().equals(other.data, data) &&
             const DeepCollectionEquality().equals(other._children, _children) &&
             (identical(other.style, style) || other.style == style) &&
             (identical(other.textAlign, textAlign) ||
@@ -344,7 +344,7 @@ class _$_MiraiText implements _MiraiText {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      data,
+      const DeepCollectionEquality().hash(data),
       const DeepCollectionEquality().hash(_children),
       style,
       textAlign,
@@ -373,7 +373,7 @@ class _$_MiraiText implements _MiraiText {
 
 abstract class _MiraiText implements MiraiText {
   const factory _MiraiText(
-      {required final String data,
+      {required final dynamic data,
       final List<MiraiTextSpan> children,
       final MiraiTextStyle? style,
       final TextAlign? textAlign,
@@ -390,7 +390,7 @@ abstract class _MiraiText implements MiraiText {
       _$_MiraiText.fromJson;
 
   @override
-  String get data;
+  dynamic get data;
   @override
   List<MiraiTextSpan> get children;
   @override

@@ -7,6 +7,7 @@ enum WidgetType {
   row,
   column,
   stack,
+  state,
   positioned,
   container,
   image,
