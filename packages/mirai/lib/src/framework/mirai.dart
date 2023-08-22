@@ -90,10 +90,12 @@ class Mirai {
   static Future<void> initialize({
     List<MiraiParser> parsers = const [],
     List<MiraiActionParser> actionParsers = const [],
+    List<MiraiComputedParser> computedParsers = const [],
     Dio? dio,
   }) async {
     _parsers.addAll(parsers);
     _actionParsers.addAll(actionParsers);
+    _computedParsers.addAll(computedParsers);
     MiraiRegistry.instance.registerAll(_parsers);
     MiraiRegistry.instance.registerAllActions(_actionParsers);
     MiraiRegistry.instance.registerAllComputed(_computedParsers);
