@@ -20,7 +20,7 @@ MiraiCheckBoxWidget _$MiraiCheckBoxWidgetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiCheckBoxWidget {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   bool? get value => throw _privateConstructorUsedError;
   String? get activeColor => throw _privateConstructorUsedError;
   MiraiMaterialColor? get fillColor => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $MiraiCheckBoxWidgetCopyWith<$Res> {
       _$MiraiCheckBoxWidgetCopyWithImpl<$Res, MiraiCheckBoxWidget>;
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       bool? value,
       String? activeColor,
       MiraiMaterialColor? fillColor,
@@ -76,7 +76,7 @@ class _$MiraiCheckBoxWidgetCopyWithImpl<$Res, $Val extends MiraiCheckBoxWidget>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? value = freezed,
     Object? activeColor = freezed,
     Object? fillColor = freezed,
@@ -90,10 +90,10 @@ class _$MiraiCheckBoxWidgetCopyWithImpl<$Res, $Val extends MiraiCheckBoxWidget>
     Object? isError = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -175,7 +175,7 @@ abstract class _$$_MiraiCheckBoxWidgetCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       bool? value,
       String? activeColor,
       MiraiMaterialColor? fillColor,
@@ -205,7 +205,7 @@ class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? value = freezed,
     Object? activeColor = freezed,
     Object? fillColor = freezed,
@@ -219,10 +219,10 @@ class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
     Object? isError = null,
   }) {
     return _then(_$_MiraiCheckBoxWidget(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -275,7 +275,7 @@ class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
   const _$_MiraiCheckBoxWidget(
-      {required this.id,
+      {this.id,
       this.value,
       this.activeColor,
       this.fillColor,
@@ -292,7 +292,7 @@ class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
       _$$_MiraiCheckBoxWidgetFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final bool? value;
   @override
@@ -386,7 +386,7 @@ class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
 
 abstract class _MiraiCheckBoxWidget implements MiraiCheckBoxWidget {
   const factory _MiraiCheckBoxWidget(
-      {required final String id,
+      {final String? id,
       final bool? value,
       final String? activeColor,
       final MiraiMaterialColor? fillColor,
@@ -403,7 +403,7 @@ abstract class _MiraiCheckBoxWidget implements MiraiCheckBoxWidget {
       _$_MiraiCheckBoxWidget.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   bool? get value;
   @override

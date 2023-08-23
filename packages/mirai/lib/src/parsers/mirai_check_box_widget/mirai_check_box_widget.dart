@@ -7,7 +7,7 @@ part 'mirai_check_box_widget.g.dart';
 @freezed
 class MiraiCheckBoxWidget with _$MiraiCheckBoxWidget {
   const factory MiraiCheckBoxWidget({
-    required String id,
+    String? id,
     bool? value,
     String? activeColor,
     MiraiMaterialColor? fillColor,
