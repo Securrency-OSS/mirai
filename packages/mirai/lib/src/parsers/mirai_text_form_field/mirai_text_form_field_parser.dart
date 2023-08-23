@@ -48,12 +48,10 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
   @override
   void initState() {
-    try {
+    if (widget.model.id != null) {
       context
           .read<MiraiFormCubit>()
-          .registerValue(widget.model.id, widget.model.initialValue ?? "");
-    } catch (e) {
-      Log.e(e);
+          .registerValue(widget.model.id!, widget.model.initialValue ?? "");
     }
 
     controller = TextEditingController(text: widget.model.initialValue);
@@ -67,13 +65,11 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       controller: controller,
       focusNode: focusNode,
       onChanged: (value) {
-        try {
+        if (widget.model.id != null) {
           context.read<MiraiFormCubit>().updateValue(
-                widget.model.id,
+                widget.model.id!,
                 value,
               );
-        } catch (e) {
-          Log.e(e);
         }
       },
       initialValue: widget.model.initialValue,
@@ -118,12 +114,10 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           widget.model,
         );
 
-        try {
+        if (widget.model.id != null) {
           context
               .read<MiraiFormCubit>()
-              .updateValidation(widget.model.id, validation == null);
-        } catch (e) {
-          Log.e(e);
+              .updateValidation(widget.model.id!, validation == null);
         }
 
         return validation;

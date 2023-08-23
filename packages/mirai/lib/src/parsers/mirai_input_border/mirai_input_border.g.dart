@@ -30,6 +30,7 @@ Map<String, dynamic> _$$_MiraiInputBorderToJson(_$_MiraiInputBorder instance) =>
     };
 
 const _$MiraiInputBorderTypeEnumMap = {
+  MiraiInputBorderType.none: 'none',
   MiraiInputBorderType.underlineInputBorder: 'underlineInputBorder',
   MiraiInputBorderType.outlineInputBorder: 'outlineInputBorder',
 };
