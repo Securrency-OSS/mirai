@@ -32,6 +32,9 @@ _$_MiraiButtonStyle _$$_MiraiButtonStyleFromJson(Map<String, dynamic> json) =>
       maximumSize: json['maximumSize'] == null
           ? null
           : MiraiSize.fromJson(json['maximumSize'] as Map<String, dynamic>),
+      side: json['side'] == null
+          ? null
+          : MiraiBorderSide.fromJson(json['side'] as Map<String, dynamic>),
       shape: json['shape'] == null
           ? null
           : MiraiRoundedRectangleBorder.fromJson(
@@ -56,6 +59,7 @@ Map<String, dynamic> _$$_MiraiButtonStyleToJson(_$_MiraiButtonStyle instance) =>
       'minimumSize': instance.minimumSize,
       'fixedSize': instance.fixedSize,
       'maximumSize': instance.maximumSize,
+      'side': instance.side,
       'shape': instance.shape,
       'enableFeedback': instance.enableFeedback,
       'iconSize': instance.iconSize,
