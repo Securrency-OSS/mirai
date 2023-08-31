@@ -29,20 +29,31 @@
                     "align": "center",
                     "style": {
                         "fontSize": 23,
-                        "fontWeight": "w600"
+                        "fontWeight": "w600",
+                        "fontFamily": {
+                            "family": "Handjet",
+                            "resource": "asset"
+                        }
                     }
                 },
                 {
                     "type": "sizedBox",
-                    "height": 32
+                    "height": 24
                 },
                 {
                     "type": "text",
-                    "data": "This is a normal Text."
+                    "data": "This is a normal Text.",
+                    "style": {
+                        "fontSize": 14,
+                        "fontFamily": {
+                            "family": "Macondo Swash Caps",
+                            "resource": "gfont"
+                        }
+                    }
                 },
                 {
                     "type": "sizedBox",
-                    "height": 16
+                    "height": 8
                 },
                 {
                     "type": "text",

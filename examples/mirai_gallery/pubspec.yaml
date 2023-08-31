@@ -64,3 +64,34 @@ flutter:
   assets:
     - assets/images/
     - assets/json/
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Black.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-BlackItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Bold.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-BoldItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-ExtraBold.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-ExtraLight.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-ExtraLightItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Italic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Light.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-LightItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Medium.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-MediumItalic.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-Regular.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-SemiBold.ttf
+        - asset: assets/fonts/Lisu_Bosa/LisuBosa-SemiBoldItalic.ttf
+
+    - family: Handjet
+      fonts:
+        - asset: assets/fonts/Handjet/Handjet-Black.ttf
+        - asset: assets/fonts/Handjet/Handjet-Bold.ttf
+        - asset: assets/fonts/Handjet/Handjet-ExtraBold.ttf
+        - asset: assets/fonts/Handjet/Handjet-ExtraLight.ttf
+        - asset: assets/fonts/Handjet/Handjet-Light.ttf
+        - asset: assets/fonts/Handjet/Handjet-Medium.ttf
+        - asset: assets/fonts/Handjet/Handjet-Regular.ttf
+        - asset: assets/fonts/Handjet/Handjet-SemiBold.ttf
+        - asset: assets/fonts/Handjet/Handjet-Thin.ttf

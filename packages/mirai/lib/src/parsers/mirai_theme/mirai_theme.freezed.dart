@@ -45,6 +45,11 @@ mixin _$MiraiTheme {
   String? get secondaryHeaderColor => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
+  MiraiFontFamily? get fontFamily => throw _privateConstructorUsedError;
+  List<MiraiFontFamily>? get fontFamilyFallback =>
+      throw _privateConstructorUsedError;
+  MiraiTextTheme? get textTheme => throw _privateConstructorUsedError;
+  MiraiTextTheme? get primaryTextTheme => throw _privateConstructorUsedError;
   String? get unselectedWidgetColor => throw _privateConstructorUsedError;
   MiraiAppBarTheme? get appBarTheme => throw _privateConstructorUsedError;
   MiraiButtonStyle? get elevatedButtonTheme =>
@@ -109,6 +114,10 @@ abstract class $MiraiThemeCopyWith<$Res> {
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
+      MiraiFontFamily? fontFamily,
+      List<MiraiFontFamily>? fontFamilyFallback,
+      MiraiTextTheme? textTheme,
+      MiraiTextTheme? primaryTextTheme,
       String? unselectedWidgetColor,
       MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
@@ -130,6 +139,9 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiInputDecorationThemeCopyWith<$Res>? get inputDecorationTheme;
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
+  $MiraiTextThemeCopyWith<$Res>? get textTheme;
+  $MiraiTextThemeCopyWith<$Res>? get primaryTextTheme;
   $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
   $MiraiButtonStyleCopyWith<$Res>? get elevatedButtonTheme;
   $MiraiButtonStyleCopyWith<$Res>? get outlinedButtonTheme;
@@ -186,6 +198,10 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
     Object? secondaryHeaderColor = freezed,
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
+    Object? fontFamily = freezed,
+    Object? fontFamilyFallback = freezed,
+    Object? textTheme = freezed,
+    Object? primaryTextTheme = freezed,
     Object? unselectedWidgetColor = freezed,
     Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
@@ -301,6 +317,22 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
           ? _value.splashColor
           : splashColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      fontFamily: freezed == fontFamily
+          ? _value.fontFamily
+          : fontFamily // ignore: cast_nullable_to_non_nullable
+              as MiraiFontFamily?,
+      fontFamilyFallback: freezed == fontFamilyFallback
+          ? _value.fontFamilyFallback
+          : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
+              as List<MiraiFontFamily>?,
+      textTheme: freezed == textTheme
+          ? _value.textTheme
+          : textTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTextTheme?,
+      primaryTextTheme: freezed == primaryTextTheme
+          ? _value.primaryTextTheme
+          : primaryTextTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTextTheme?,
       unselectedWidgetColor: freezed == unselectedWidgetColor
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
@@ -406,6 +438,42 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
     return $MiraiMaterialColorCopyWith<$Res>(_value.primarySwatch!, (value) {
       return _then(_value.copyWith(primarySwatch: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiFontFamilyCopyWith<$Res>? get fontFamily {
+    if (_value.fontFamily == null) {
+      return null;
+    }
+
+    return $MiraiFontFamilyCopyWith<$Res>(_value.fontFamily!, (value) {
+      return _then(_value.copyWith(fontFamily: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiTextThemeCopyWith<$Res>? get textTheme {
+    if (_value.textTheme == null) {
+      return null;
+    }
+
+    return $MiraiTextThemeCopyWith<$Res>(_value.textTheme!, (value) {
+      return _then(_value.copyWith(textTheme: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiTextThemeCopyWith<$Res>? get primaryTextTheme {
+    if (_value.primaryTextTheme == null) {
+      return null;
+    }
+
+    return $MiraiTextThemeCopyWith<$Res>(_value.primaryTextTheme!, (value) {
+      return _then(_value.copyWith(primaryTextTheme: value) as $Val);
     });
   }
 
@@ -644,6 +712,10 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
+      MiraiFontFamily? fontFamily,
+      List<MiraiFontFamily>? fontFamilyFallback,
+      MiraiTextTheme? textTheme,
+      MiraiTextTheme? primaryTextTheme,
       String? unselectedWidgetColor,
       MiraiAppBarTheme? appBarTheme,
       MiraiButtonStyle? elevatedButtonTheme,
@@ -668,6 +740,12 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   @override
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
+  @override
+  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
+  @override
+  $MiraiTextThemeCopyWith<$Res>? get textTheme;
+  @override
+  $MiraiTextThemeCopyWith<$Res>? get primaryTextTheme;
   @override
   $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
   @override
@@ -738,6 +816,10 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
     Object? secondaryHeaderColor = freezed,
     Object? shadowColor = freezed,
     Object? splashColor = freezed,
+    Object? fontFamily = freezed,
+    Object? fontFamilyFallback = freezed,
+    Object? textTheme = freezed,
+    Object? primaryTextTheme = freezed,
     Object? unselectedWidgetColor = freezed,
     Object? appBarTheme = freezed,
     Object? elevatedButtonTheme = freezed,
@@ -853,6 +935,22 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
           ? _value.splashColor
           : splashColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      fontFamily: freezed == fontFamily
+          ? _value.fontFamily
+          : fontFamily // ignore: cast_nullable_to_non_nullable
+              as MiraiFontFamily?,
+      fontFamilyFallback: freezed == fontFamilyFallback
+          ? _value._fontFamilyFallback
+          : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
+              as List<MiraiFontFamily>?,
+      textTheme: freezed == textTheme
+          ? _value.textTheme
+          : textTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTextTheme?,
+      primaryTextTheme: freezed == primaryTextTheme
+          ? _value.primaryTextTheme
+          : primaryTextTheme // ignore: cast_nullable_to_non_nullable
+              as MiraiTextTheme?,
       unselectedWidgetColor: freezed == unselectedWidgetColor
           ? _value.unselectedWidgetColor
           : unselectedWidgetColor // ignore: cast_nullable_to_non_nullable
@@ -953,6 +1051,10 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.secondaryHeaderColor,
       this.shadowColor,
       this.splashColor,
+      this.fontFamily,
+      final List<MiraiFontFamily>? fontFamilyFallback,
+      this.textTheme,
+      this.primaryTextTheme,
       this.unselectedWidgetColor,
       this.appBarTheme,
       this.elevatedButtonTheme,
@@ -969,7 +1071,8 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.cardTheme,
       this.listTileTheme,
       this.navigationBarTheme,
-      this.tabBarTheme});
+      this.tabBarTheme})
+      : _fontFamilyFallback = fontFamilyFallback;
 
   factory _$_MiraiTheme.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiThemeFromJson(json);
@@ -1023,6 +1126,23 @@ class _$_MiraiTheme implements _MiraiTheme {
   @override
   final String? splashColor;
   @override
+  final MiraiFontFamily? fontFamily;
+  final List<MiraiFontFamily>? _fontFamilyFallback;
+  @override
+  List<MiraiFontFamily>? get fontFamilyFallback {
+    final value = _fontFamilyFallback;
+    if (value == null) return null;
+    if (_fontFamilyFallback is EqualUnmodifiableListView)
+      return _fontFamilyFallback;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final MiraiTextTheme? textTheme;
+  @override
+  final MiraiTextTheme? primaryTextTheme;
+  @override
   final String? unselectedWidgetColor;
   @override
   final MiraiAppBarTheme? appBarTheme;
@@ -1059,7 +1179,7 @@ class _$_MiraiTheme implements _MiraiTheme {
 
   @override
   String toString() {
-    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, inputDecorationTheme: $inputDecorationTheme, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme, tabBarTheme: $tabBarTheme)';
+    return 'MiraiTheme(applyElevationOverlayColor: $applyElevationOverlayColor, inputDecorationTheme: $inputDecorationTheme, useMaterial3: $useMaterial3, brightness: $brightness, canvasColor: $canvasColor, cardColor: $cardColor, colorScheme: $colorScheme, colorSchemeSeed: $colorSchemeSeed, dialogBackgroundColor: $dialogBackgroundColor, disabledColor: $disabledColor, dividerColor: $dividerColor, focusColor: $focusColor, highlightColor: $highlightColor, hintColor: $hintColor, hoverColor: $hoverColor, indicatorColor: $indicatorColor, primaryColor: $primaryColor, primaryColorDark: $primaryColorDark, primaryColorLight: $primaryColorLight, primarySwatch: $primarySwatch, scaffoldBackgroundColor: $scaffoldBackgroundColor, secondaryHeaderColor: $secondaryHeaderColor, shadowColor: $shadowColor, splashColor: $splashColor, fontFamily: $fontFamily, fontFamilyFallback: $fontFamilyFallback, textTheme: $textTheme, primaryTextTheme: $primaryTextTheme, unselectedWidgetColor: $unselectedWidgetColor, appBarTheme: $appBarTheme, elevatedButtonTheme: $elevatedButtonTheme, outlinedButtonTheme: $outlinedButtonTheme, iconButtonTheme: $iconButtonTheme, iconTheme: $iconTheme, primaryIconTheme: $primaryIconTheme, dialogTheme: $dialogTheme, floatingActionButtonTheme: $floatingActionButtonTheme, textButtonTheme: $textButtonTheme, bottomAppBarTheme: $bottomAppBarTheme, bottomNavigationBarTheme: $bottomNavigationBarTheme, bottomSheetTheme: $bottomSheetTheme, cardTheme: $cardTheme, listTileTheme: $listTileTheme, navigationBarTheme: $navigationBarTheme, tabBarTheme: $tabBarTheme)';
   }
 
   @override
@@ -1116,6 +1236,14 @@ class _$_MiraiTheme implements _MiraiTheme {
                 other.shadowColor == shadowColor) &&
             (identical(other.splashColor, splashColor) ||
                 other.splashColor == splashColor) &&
+            (identical(other.fontFamily, fontFamily) ||
+                other.fontFamily == fontFamily) &&
+            const DeepCollectionEquality()
+                .equals(other._fontFamilyFallback, _fontFamilyFallback) &&
+            (identical(other.textTheme, textTheme) ||
+                other.textTheme == textTheme) &&
+            (identical(other.primaryTextTheme, primaryTextTheme) ||
+                other.primaryTextTheme == primaryTextTheme) &&
             (identical(other.unselectedWidgetColor, unselectedWidgetColor) ||
                 other.unselectedWidgetColor == unselectedWidgetColor) &&
             (identical(other.appBarTheme, appBarTheme) ||
@@ -1124,14 +1252,10 @@ class _$_MiraiTheme implements _MiraiTheme {
                 other.elevatedButtonTheme == elevatedButtonTheme) &&
             (identical(other.outlinedButtonTheme, outlinedButtonTheme) ||
                 other.outlinedButtonTheme == outlinedButtonTheme) &&
-            (identical(other.iconButtonTheme, iconButtonTheme) ||
-                other.iconButtonTheme == iconButtonTheme) &&
-            (identical(other.iconTheme, iconTheme) ||
-                other.iconTheme == iconTheme) &&
-            (identical(other.primaryIconTheme, primaryIconTheme) ||
-                other.primaryIconTheme == primaryIconTheme) &&
-            (identical(other.dialogTheme, dialogTheme) ||
-                other.dialogTheme == dialogTheme) &&
+            (identical(other.iconButtonTheme, iconButtonTheme) || other.iconButtonTheme == iconButtonTheme) &&
+            (identical(other.iconTheme, iconTheme) || other.iconTheme == iconTheme) &&
+            (identical(other.primaryIconTheme, primaryIconTheme) || other.primaryIconTheme == primaryIconTheme) &&
+            (identical(other.dialogTheme, dialogTheme) || other.dialogTheme == dialogTheme) &&
             (identical(other.floatingActionButtonTheme, floatingActionButtonTheme) || other.floatingActionButtonTheme == floatingActionButtonTheme) &&
             (identical(other.textButtonTheme, textButtonTheme) || other.textButtonTheme == textButtonTheme) &&
             (identical(other.bottomAppBarTheme, bottomAppBarTheme) || other.bottomAppBarTheme == bottomAppBarTheme) &&
@@ -1171,6 +1295,10 @@ class _$_MiraiTheme implements _MiraiTheme {
         secondaryHeaderColor,
         shadowColor,
         splashColor,
+        fontFamily,
+        const DeepCollectionEquality().hash(_fontFamilyFallback),
+        textTheme,
+        primaryTextTheme,
         unselectedWidgetColor,
         appBarTheme,
         elevatedButtonTheme,
@@ -1230,6 +1358,10 @@ abstract class _MiraiTheme implements MiraiTheme {
       final String? secondaryHeaderColor,
       final String? shadowColor,
       final String? splashColor,
+      final MiraiFontFamily? fontFamily,
+      final List<MiraiFontFamily>? fontFamilyFallback,
+      final MiraiTextTheme? textTheme,
+      final MiraiTextTheme? primaryTextTheme,
       final String? unselectedWidgetColor,
       final MiraiAppBarTheme? appBarTheme,
       final MiraiButtonStyle? elevatedButtonTheme,
@@ -1299,6 +1431,14 @@ abstract class _MiraiTheme implements MiraiTheme {
   String? get shadowColor;
   @override
   String? get splashColor;
+  @override
+  MiraiFontFamily? get fontFamily;
+  @override
+  List<MiraiFontFamily>? get fontFamilyFallback;
+  @override
+  MiraiTextTheme? get textTheme;
+  @override
+  MiraiTextTheme? get primaryTextTheme;
   @override
   String? get unselectedWidgetColor;
   @override

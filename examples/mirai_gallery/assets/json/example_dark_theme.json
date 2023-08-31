@@ -1,6 +1,10 @@
 {
     "brightness": "dark",
     "disabledColor": "#60FFFFFF",
+    "fontFamily": {
+        "family": "Macondo Swash Caps",
+        "resource": "gfont"
+    },
     "colorScheme": {
         "brightness": "dark",
         "primary": "#CCBDFA",

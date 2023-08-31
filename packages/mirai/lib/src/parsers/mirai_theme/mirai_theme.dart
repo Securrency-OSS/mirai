@@ -4,9 +4,11 @@ import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
+import 'package:mirai/src/parsers/mirai_font_family/mirai_font_family.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration_theme/mirai_input_decoration_theme.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
+import 'package:mirai/src/parsers/mirai_text_theme/mirai_text_theme.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_theme.freezed.dart';
@@ -39,6 +41,10 @@ class MiraiTheme with _$MiraiTheme {
     String? secondaryHeaderColor,
     String? shadowColor,
     String? splashColor,
+    MiraiFontFamily? fontFamily,
+    List<MiraiFontFamily>? fontFamilyFallback,
+    MiraiTextTheme? textTheme,
+    MiraiTextTheme? primaryTextTheme,
     String? unselectedWidgetColor,
     MiraiAppBarTheme? appBarTheme,
     MiraiButtonStyle? elevatedButtonTheme,
@@ -63,7 +69,7 @@ class MiraiTheme with _$MiraiTheme {
 }
 
 extension MiraiThemeParser on MiraiTheme {
-  ThemeData? get parse {
+  ThemeData? parse(BuildContext context) {
     return ThemeData(
       applyElevationOverlayColor: applyElevationOverlayColor,
       inputDecorationTheme: inputDecorationTheme.parse,
@@ -87,6 +93,12 @@ extension MiraiThemeParser on MiraiTheme {
       secondaryHeaderColor: secondaryHeaderColor.toColor,
       shadowColor: shadowColor.toColor,
       splashColor: splashColor.toColor,
+      fontFamily: fontFamily?.parse,
+      fontFamilyFallback: fontFamilyFallback
+          ?.map((family) => family.parse ?? "Roboto")
+          .toList(),
+      textTheme: textTheme?.parse,
+      primaryTextTheme: primaryTextTheme?.parse,
       unselectedWidgetColor: unselectedWidgetColor.toColor,
       primarySwatch: primarySwatch?.parse,
       appBarTheme: appBarTheme?.parse,
