@@ -78,7 +78,7 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
           ? null
           : MiraiTextStyle.fromJson(
               json['counterStyle'] as Map<String, dynamic>),
-      filled: json['filled'] as bool? ?? false,
+      filled: json['filled'] as bool?,
       fillColor: json['fillColor'] as String?,
       hoverColor: json['hoverColor'] as String?,
       focusColor: json['focusColor'] as String?,

@@ -9,7 +9,7 @@ part of 'mirai_text_form_field.dart';
 _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiTextFormField(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       compareId: json['compareId'] as String?,
       decoration: json['decoration'] == null
           ? null

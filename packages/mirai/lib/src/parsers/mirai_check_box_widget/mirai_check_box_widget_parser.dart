@@ -5,7 +5,6 @@ import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget.
 import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
-import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiCheckBoxWidgetParser extends MiraiParser<MiraiCheckBoxWidget> {
@@ -40,12 +39,10 @@ class __MiraiCheckBoxWidgetState extends State<_MiraiCheckBoxWidget> {
 
   @override
   void initState() {
-    try {
+    if (widget.model.id != null) {
       context
           .read<MiraiFormCubit>()
-          .registerValue(widget.model.id, widget.model.value);
-    } catch (e) {
-      Log.d(e);
+          .registerValue(widget.model.id!, widget.model.value);
     }
 
     super.initState();
@@ -59,16 +56,13 @@ class __MiraiCheckBoxWidgetState extends State<_MiraiCheckBoxWidget> {
           setState(() {
             isMarkChecked = !isMarkChecked;
           });
-
-          try {
+          if (widget.model.id != null) {
             context
                 .read<MiraiFormCubit>()
-                .updateValue(widget.model.id, isMarkChecked);
+                .updateValue(widget.model.id!, isMarkChecked);
             context
                 .read<MiraiFormCubit>()
-                .updateValidation(widget.model.id, isMarkChecked);
-          } catch (e) {
-            Log.d(e);
+                .updateValidation(widget.model.id!, isMarkChecked);
           }
         },
         activeColor: widget.model.activeColor.toColor,

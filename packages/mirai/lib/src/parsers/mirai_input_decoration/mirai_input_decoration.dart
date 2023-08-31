@@ -50,7 +50,7 @@ class MiraiInputDecoration with _$MiraiInputDecoration {
     Map<String, dynamic>? counter,
     String? counterText,
     MiraiTextStyle? counterStyle,
-    @Default(false) bool filled,
+    bool? filled,
     String? fillColor,
     String? hoverColor,
     String? focusColor,
