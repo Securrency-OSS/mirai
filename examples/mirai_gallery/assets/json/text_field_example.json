@@ -226,6 +226,42 @@
                         "readOnly": false,
                         "enabled": true,
                         "autovalidateMode": "onUserInteraction"
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 24
+                    },
+                    {
+                        "type": "textField",
+                        "maxLines": 1,
+                        "keyboardType": "text",
+                        "textInputAction": "done",
+                        "textAlign": "start",
+                        "textCapitalization": "none",
+                        "textDirection": "ltr",
+                        "textAlignVertical": "top",
+                        "obscureText": true,
+                        "decoration": {
+                            "filled": true,
+                            "labelText": "Gradient TextField",
+                            "border": {
+                                "type": "outlineInputBorder",
+                                "borderRadius": {
+                                    "topLeft": 8,
+                                    "topRight": 8,
+                                    "bottomLeft": 8,
+                                    "bottomRight": 8
+                                },
+                                "gradient": {
+                                    "colors": [
+                                        "#FF0000", "#0000FF"
+                                    ]
+                                }
+                            }
+                        },
+                        "readOnly": false,
+                        "enabled": true,
+                        "autovalidateMode": "onUserInteraction"
                     }
                 ]
             }
