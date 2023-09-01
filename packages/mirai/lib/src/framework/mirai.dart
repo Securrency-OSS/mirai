@@ -71,6 +71,7 @@ class Mirai {
     const MiraiNoneActionParser(),
     const MiraiNavigateActionParser(),
     const MiraiRequestActionParser(),
+    const MiraiEachActionParser(),
   ];
 
   static Future<void> initialize({
