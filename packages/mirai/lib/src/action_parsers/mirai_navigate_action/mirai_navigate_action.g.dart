@@ -38,7 +38,6 @@ Map<String, dynamic> _$$_MiraiNavigateActionToJson(
 
 const _$NavigationTypeEnumMap = {
   NavigationType.screen: 'screen',
-  NavigationType.dialog: 'dialog',
   NavigationType.bottomSheet: 'bottomSheet',
 };
 

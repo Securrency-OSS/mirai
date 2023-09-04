@@ -186,6 +186,38 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "add_alert"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Dialog",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Informs the user about situations that require acknowledgement",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/dialog_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "layers"
                     },
                     "title": {
@@ -242,38 +274,6 @@
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/container_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "add_alert"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Dialog",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "Informs the user about situations that require acknowledgement",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "navigationType": "screen",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/dialog_example.json"
                         }
                     }
                 },
