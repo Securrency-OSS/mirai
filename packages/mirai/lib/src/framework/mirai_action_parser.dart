@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 abstract class MiraiActionParser<T> {
   const MiraiActionParser();
 
-  String get type;
+  String get actionType;
 
   T getModel(Map<String, dynamic> json);
 

@@ -11,7 +11,7 @@ enum NavigationStyle {
   pushReplacementNamed
 }
 
-enum NavigationType { screen, bottomSheet }
+enum NavigationType { screen }
 
 class MiraiNavigator {
   const MiraiNavigator._();
@@ -25,9 +25,6 @@ class MiraiNavigator {
     T? result,
     T? arguments,
   }) {
-    if (navigationType == NavigationType.bottomSheet && widget != null) {
-      return _showBottomSheet(context, widget);
-    } else {
       return _navigateToScreen(
         context,
         navigationStyle,
@@ -36,7 +33,6 @@ class MiraiNavigator {
         result,
         arguments,
       );
-    }
   }
 
   static Future<dynamic>? _navigateToScreen<T extends Object?>(
@@ -101,12 +97,5 @@ class MiraiNavigator {
     }
 
     return null;
-  }
-
-  static Future<dynamic> _showBottomSheet(BuildContext context, Widget widget) {
-    return showModalBottomSheet(
-      context: context,
-      builder: (_) => widget,
-    );
   }
 }
