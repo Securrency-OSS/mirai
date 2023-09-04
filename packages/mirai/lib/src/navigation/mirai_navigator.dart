@@ -11,7 +11,7 @@ enum NavigationStyle {
   pushReplacementNamed
 }
 
-enum NavigationType { screen, dialog }
+enum NavigationType { screen }
 
 class MiraiNavigator {
   const MiraiNavigator._();
@@ -25,18 +25,14 @@ class MiraiNavigator {
     T? result,
     T? arguments,
   }) {
-    if (navigationType == NavigationType.dialog && widget != null) {
-      return _showDialog(context, widget);
-    } else {
-      return _navigateToScreen(
-        context,
-        navigationStyle,
-        widget,
-        routeName,
-        result,
-        arguments,
-      );
-    }
+    return _navigateToScreen(
+      context,
+      navigationStyle,
+      widget,
+      routeName,
+      result,
+      arguments,
+    );
   }
 
   static Future<dynamic>? _navigateToScreen<T extends Object?>(
@@ -101,12 +97,5 @@ class MiraiNavigator {
     }
 
     return null;
-  }
-
-  static Future<dynamic> _showDialog(BuildContext context, Widget widget) {
-    return showDialog(
-      context: context,
-      builder: (_) => widget,
-    );
   }
 }

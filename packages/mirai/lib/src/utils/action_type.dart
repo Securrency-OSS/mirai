@@ -3,4 +3,5 @@ enum ActionType {
   none,
   request,
   showModalBottomSheet,
+  showDialog,
 }
