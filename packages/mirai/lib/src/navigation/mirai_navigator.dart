@@ -25,14 +25,14 @@ class MiraiNavigator {
     T? result,
     T? arguments,
   }) {
-      return _navigateToScreen(
-        context,
-        navigationStyle,
-        widget,
-        routeName,
-        result,
-        arguments,
-      );
+    return _navigateToScreen(
+      context,
+      navigationStyle,
+      widget,
+      routeName,
+      result,
+      arguments,
+    );
   }
 
   static Future<dynamic>? _navigateToScreen<T extends Object?>(
