@@ -10,7 +10,7 @@ class MiraiRequestActionParser extends MiraiActionParser<MiraiRequest> {
   const MiraiRequestActionParser();
 
   @override
-  String get type => ActionType.request.name;
+  String get actionType => ActionType.request.name;
 
   @override
   getModel(Map<String, dynamic> json) => MiraiRequest.fromJson(json);

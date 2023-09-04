@@ -8,7 +8,7 @@ class MiraiNoneActionParser extends MiraiActionParser<Map<String, dynamic>> {
   const MiraiNoneActionParser();
 
   @override
-  String get type => ActionType.none.name;
+  String get actionType => ActionType.none.name;
 
   @override
   getModel(Map<String, dynamic> json) => json;

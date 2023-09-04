@@ -90,6 +90,38 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "navigation"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Bottom Sheet",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A Material Design Mirai bottom sheet example",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "navigationType": "screen",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/bottom_sheet_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "wallet_giftcard"
                     },
                     "title": {

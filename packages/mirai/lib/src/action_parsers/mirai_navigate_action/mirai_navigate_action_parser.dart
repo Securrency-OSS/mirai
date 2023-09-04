@@ -9,7 +9,7 @@ class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
   const MiraiNavigateActionParser();
 
   @override
-  String get type => ActionType.navigate.name;
+  String get actionType => ActionType.navigate.name;
 
   @override
   getModel(Map<String, dynamic> json) => MiraiNavigateAction.fromJson(json);
