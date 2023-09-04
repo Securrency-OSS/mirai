@@ -10,7 +10,7 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
   const MiraiDialogActionParser();
 
   @override
-  String get type => ActionType.showDialog.name;
+  String get actionType => ActionType.showDialog.name;
 
   @override
   MiraiDialogAction getModel(Map<String, dynamic> json) =>
