@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/parsers/mirai_border/mirai_border.dart';
 import 'package:mirai/src/parsers/mirai_box_constraints/mirai_box_constraints.dart';
+import 'package:mirai/src/parsers/mirai_size/mirai_size.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_bottom_sheet_theme.freezed.dart';
