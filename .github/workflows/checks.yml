@@ -19,6 +19,7 @@ jobs:
         package_path:
           - examples/mirai_gallery
           - packages/mirai
+          - packages/mirai_webview
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
