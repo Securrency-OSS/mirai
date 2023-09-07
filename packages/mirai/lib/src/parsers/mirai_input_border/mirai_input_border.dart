@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/mirai.dart';
 import 'package:mirai/src/framework/ui/mirai_outline_input_border.dart';
+import 'package:mirai/src/parsers/mirai_border_radius/mirai_border_radius.dart';
+import 'package:mirai/src/parsers/mirai_gradient/mirai_gradient.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_input_border.freezed.dart';

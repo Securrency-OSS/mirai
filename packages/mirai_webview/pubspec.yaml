@@ -1,0 +1,29 @@
+name: mirai_webview
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.2.4
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.1
+  mirai:
+    path: ../mirai
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+  build_runner: ^2.4.5
+  freezed: ^2.3.5
+  json_serializable: ^6.7.0
+
+flutter:
+
