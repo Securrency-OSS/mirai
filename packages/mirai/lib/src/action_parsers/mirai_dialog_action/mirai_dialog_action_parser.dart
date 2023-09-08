@@ -19,19 +19,19 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
   @override
   FutureOr onCall(BuildContext context, MiraiDialogAction model) {
     if (model.widget != null) {
-      _showDialog(
+      return _showDialog(
         context,
         model,
         Mirai.fromJson(model.widget, context) ?? const SizedBox(),
       );
     } else if (model.assetPath?.isNotEmpty ?? false) {
-      _showDialog(
+      return _showDialog(
         context,
         model,
         Mirai.fromAssets(model.assetPath!) ?? const SizedBox(),
       );
     } else if (model.request != null) {
-      _showDialog(
+      return _showDialog(
         context,
         model,
         Mirai.fromNetwork(model.request!),
@@ -39,12 +39,12 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
     }
   }
 
-  void _showDialog(
+  Future _showDialog(
     BuildContext context,
     MiraiDialogAction model,
     Widget widget,
   ) {
-    showDialog(
+    return showDialog(
       context: context,
       builder: (_) => widget,
       barrierDismissible: model.barrierDismissible,
