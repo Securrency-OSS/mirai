@@ -53,29 +53,24 @@ class ExampleScreenParser extends MiraiParser<ExampleScreen> {
               )
             ],
           ),
-          body: FutureBuilder(
-            future: Mirai.fromAssets(model.assetPath, context),
-            builder: (BuildContext context, AsyncSnapshot snapshot) {
-              return Container(
-                margin: const EdgeInsets.fromLTRB(24, 16, 24, 24),
-                clipBehavior: Clip.hardEdge,
-                height: double.infinity,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
+          body: Container(
+            margin: const EdgeInsets.fromLTRB(24, 16, 24, 24),
+            clipBehavior: Clip.hardEdge,
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(12)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: const Offset(0, 3),
                 ),
-                child: snapshot.data ??
-                    const Center(child: CircularProgressIndicator()),
-              );
-            },
+              ],
+            ),
+            child: Mirai.fromAssets(model.assetPath) ??
+                const Center(child: CircularProgressIndicator()),
           ),
         );
       },

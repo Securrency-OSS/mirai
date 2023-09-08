@@ -54,7 +54,7 @@ class MiraiNavigateAction with _$MiraiNavigateAction {
         arguments: arguments,
       );
     } else if (assetPath != null) {
-      widget = await Mirai.fromAssets(assetPath!, context);
+      widget = Mirai.fromAssets(assetPath!);
 
       if (context.mounted && widget != null) {
         return MiraiNavigator.navigate(

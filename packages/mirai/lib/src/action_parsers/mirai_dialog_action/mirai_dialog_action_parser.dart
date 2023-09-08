@@ -25,13 +25,11 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
         Mirai.fromJson(model.widget, context) ?? const SizedBox(),
       );
     } else if (model.assetPath?.isNotEmpty ?? false) {
-      Mirai.fromAssets(model.assetPath!, context).then((widget) {
-        _showDialog(
-          context,
-          model,
-          widget ?? const SizedBox(),
-        );
-      });
+      _showDialog(
+        context,
+        model,
+        Mirai.fromAssets(model.assetPath!) ?? const SizedBox(),
+      );
     } else if (model.request != null) {
       _showDialog(
         context,
