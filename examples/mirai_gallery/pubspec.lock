@@ -390,16 +390,18 @@ packages:
   mirai:
     dependency: "direct main"
     description:
-      path: "../../packages/mirai"
-      relative: true
-    source: path
-    version: "0.4.0"
+      name: mirai
+      sha256: "6b947ccd7e5c25704b96ade9f6805b085825eba1d50d9f434d146274992af74a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
   mirai_webview:
     dependency: "direct main"
     description:
-      path: "../../packages/mirai_webview"
-      relative: true
-    source: path
+      name: mirai_webview
+      sha256: "59af9ac35ef0779667269a5a0e39d5745879c7a2ab9ec802794f9a6dc997beda"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   nested:
     dependency: transitive
