@@ -16,7 +16,7 @@ class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
       MiraiNavigateAction.fromJson(json);
 
   @override
-  FutureOr<dynamic> onCall(BuildContext context, MiraiNavigateAction model) {
+  FutureOr onCall(BuildContext context, MiraiNavigateAction model) {
     Widget? widget;
     if (model.widgetJson != null) {
       widget = Mirai.fromJson(model.widgetJson, context);
