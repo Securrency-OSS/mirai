@@ -24,21 +24,19 @@ class MiraiModalBottomSheetActionParser
   @override
   FutureOr onCall(BuildContext context, model) {
     if (model.widget != null) {
-      _showModalBottomSheet(
+      return _showModalBottomSheet(
         context,
         model,
         Mirai.fromJson(model.widget, context) ?? const SizedBox(),
       );
     } else if (model.assetPath?.isNotEmpty ?? false) {
-      Mirai.fromAssets(model.assetPath!, context).then((widget) {
-        _showModalBottomSheet(
-          context,
-          model,
-          widget ?? const SizedBox(),
-        );
-      });
+      return _showModalBottomSheet(
+        context,
+        model,
+        Mirai.fromAssets(model.assetPath!) ?? const SizedBox(),
+      );
     } else if (model.request != null) {
-      _showModalBottomSheet(
+      return _showModalBottomSheet(
         context,
         model,
         Mirai.fromNetwork(model.request!),
@@ -46,12 +44,12 @@ class MiraiModalBottomSheetActionParser
     }
   }
 
-  void _showModalBottomSheet(
+  Future _showModalBottomSheet(
     BuildContext context,
     MiraiModalBottomSheetAction model,
     Widget widget,
   ) {
-    showModalBottomSheet(
+    return showModalBottomSheet(
       context: context,
       builder: (context) => widget,
       backgroundColor: model.backgroundColor.toColor,
