@@ -24,7 +24,6 @@ mixin _$MiraiNavigateAction {
   Map<String, dynamic>? get widgetJson => throw _privateConstructorUsedError;
   String? get assetPath => throw _privateConstructorUsedError;
   String? get routeName => throw _privateConstructorUsedError;
-  NavigationType? get navigationType => throw _privateConstructorUsedError;
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
   Map<String, dynamic>? get result => throw _privateConstructorUsedError;
   Map<String, dynamic>? get arguments => throw _privateConstructorUsedError;
@@ -46,7 +45,6 @@ abstract class $MiraiNavigateActionCopyWith<$Res> {
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       String? routeName,
-      NavigationType? navigationType,
       NavigationStyle? navigationStyle,
       Map<String, dynamic>? result,
       Map<String, dynamic>? arguments});
@@ -71,7 +69,6 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
     Object? widgetJson = freezed,
     Object? assetPath = freezed,
     Object? routeName = freezed,
-    Object? navigationType = freezed,
     Object? navigationStyle = freezed,
     Object? result = freezed,
     Object? arguments = freezed,
@@ -93,10 +90,6 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
           ? _value.routeName
           : routeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      navigationType: freezed == navigationType
-          ? _value.navigationType
-          : navigationType // ignore: cast_nullable_to_non_nullable
-              as NavigationType?,
       navigationStyle: freezed == navigationStyle
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
@@ -138,7 +131,6 @@ abstract class _$$_MiraiNavigateActionCopyWith<$Res>
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       String? routeName,
-      NavigationType? navigationType,
       NavigationStyle? navigationStyle,
       Map<String, dynamic>? result,
       Map<String, dynamic>? arguments});
@@ -162,7 +154,6 @@ class __$$_MiraiNavigateActionCopyWithImpl<$Res>
     Object? widgetJson = freezed,
     Object? assetPath = freezed,
     Object? routeName = freezed,
-    Object? navigationType = freezed,
     Object? navigationStyle = freezed,
     Object? result = freezed,
     Object? arguments = freezed,
@@ -184,10 +175,6 @@ class __$$_MiraiNavigateActionCopyWithImpl<$Res>
           ? _value.routeName
           : routeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      navigationType: freezed == navigationType
-          ? _value.navigationType
-          : navigationType // ignore: cast_nullable_to_non_nullable
-              as NavigationType?,
       navigationStyle: freezed == navigationStyle
           ? _value.navigationStyle
           : navigationStyle // ignore: cast_nullable_to_non_nullable
@@ -212,7 +199,6 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
       final Map<String, dynamic>? widgetJson,
       this.assetPath,
       this.routeName,
-      this.navigationType,
       this.navigationStyle,
       final Map<String, dynamic>? result,
       final Map<String, dynamic>? arguments})
@@ -241,8 +227,6 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
   @override
   final String? routeName;
   @override
-  final NavigationType? navigationType;
-  @override
   final NavigationStyle? navigationStyle;
   final Map<String, dynamic>? _result;
   @override
@@ -266,7 +250,7 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
 
   @override
   String toString() {
-    return 'MiraiNavigateAction(request: $request, widgetJson: $widgetJson, assetPath: $assetPath, routeName: $routeName, navigationType: $navigationType, navigationStyle: $navigationStyle, result: $result, arguments: $arguments)';
+    return 'MiraiNavigateAction(request: $request, widgetJson: $widgetJson, assetPath: $assetPath, routeName: $routeName, navigationStyle: $navigationStyle, result: $result, arguments: $arguments)';
   }
 
   @override
@@ -281,8 +265,6 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
                 other.assetPath == assetPath) &&
             (identical(other.routeName, routeName) ||
                 other.routeName == routeName) &&
-            (identical(other.navigationType, navigationType) ||
-                other.navigationType == navigationType) &&
             (identical(other.navigationStyle, navigationStyle) ||
                 other.navigationStyle == navigationStyle) &&
             const DeepCollectionEquality().equals(other._result, _result) &&
@@ -298,7 +280,6 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
       const DeepCollectionEquality().hash(_widgetJson),
       assetPath,
       routeName,
-      navigationType,
       navigationStyle,
       const DeepCollectionEquality().hash(_result),
       const DeepCollectionEquality().hash(_arguments));
@@ -324,7 +305,6 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
       final Map<String, dynamic>? widgetJson,
       final String? assetPath,
       final String? routeName,
-      final NavigationType? navigationType,
       final NavigationStyle? navigationStyle,
       final Map<String, dynamic>? result,
       final Map<String, dynamic>? arguments}) = _$_MiraiNavigateAction;
@@ -341,8 +321,6 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
   String? get assetPath;
   @override
   String? get routeName;
-  @override
-  NavigationType? get navigationType;
   @override
   NavigationStyle? get navigationStyle;
   @override
