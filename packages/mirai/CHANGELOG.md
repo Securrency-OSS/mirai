@@ -1,3 +1,19 @@
+## 0.5.0
+
+- feat: Add support for the Custom Action by @RodolfoSilva
+- feat: Add border-radius in Button Styles by @i-asimkhan
+- feat: Add SafeArea widget by @RodolfoSilva
+- feat: Add Flexible widget by @RodolfoSilva
+- feat: Enhance MiraiInputDecoration by @i-asimkhan
+- feat: Add support for the form validation by @i-asimkhan
+- feat: Add support for InputBorder.none by @divyanshub024
+- feat: Add support for gradient in outline border by @divyanshub024
+- BREAKING:feat: Re structure navigation action by @divyanshub024
+- BREAKING:feat: Add modal bottom sheet action by @divyanshub024
+- BREAKING:feat: Add show dialog action by @divyanshub024
+- feat: Add support for webview by @divyanshub024
+- feat: Add tap gesture recognizer to the Mirai text Span by @divyanshub024
+
 ## 0.4.0
 
 - feat: Extending rich text functionality to Mirai Text (#158) by @divyanshub024
