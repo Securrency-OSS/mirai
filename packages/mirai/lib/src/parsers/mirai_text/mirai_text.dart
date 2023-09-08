@@ -33,6 +33,7 @@ class MiraiTextSpan with _$MiraiTextSpan {
   const factory MiraiTextSpan({
     String? data,
     MiraiTextStyle? style,
+    Map<String, dynamic>? onTap,
   }) = _MiraiTextSpan;
 
   factory MiraiTextSpan.fromJson(Map<String, dynamic> json) =>
