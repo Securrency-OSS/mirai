@@ -57,7 +57,6 @@
                             "onTap": {
                                 "actionType": "navigate",
                                 "navigationStyle": "push",
-                                "navigationType": "screen",
                                 "widgetJson": {
                                     "type": "exampleScreen",
                                     "assetPath": "assets/json/web_view_example.json"
