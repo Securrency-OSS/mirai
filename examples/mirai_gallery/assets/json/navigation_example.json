@@ -34,7 +34,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "push",
-                            "navigationType": "screen",
                             "widgetJson": {
                                 "type": "exampleScreen",
                                 "assetPath": "assets/json/navigation_example.json"
@@ -85,7 +84,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "pushReplacement",
-                            "navigationType": "screen",
                             "widgetJson": {
                                 "type": "exampleScreen",
                                 "assetPath": "assets/json/navigation_example.json"
@@ -113,7 +111,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "pushAndRemoveAll",
-                            "navigationType": "screen",
                             "widgetJson": {
                                 "type": "exampleScreen",
                                 "assetPath": "assets/json/navigation_example.json"
@@ -164,7 +161,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "pushReplacementNamed",
-                            "navigationType": "screen",
                             "routeName": "/detailsScreen"
                         }
                     },
@@ -189,7 +185,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "pushNamed",
-                            "navigationType": "screen",
                             "routeName": "/detailsScreen"
                         }
                     },
@@ -214,7 +209,6 @@
                         "onPressed": {
                             "actionType": "navigate",
                             "navigationStyle": "pushNamedAndRemoveAll",
-                            "navigationType": "screen",
                             "routeName": "/homeScreen"
                         }
                     }
