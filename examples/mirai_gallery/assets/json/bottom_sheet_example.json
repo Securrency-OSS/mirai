@@ -1,0 +1,43 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "BottomSheet"
+    }
+  },
+  "body": {
+    "type": "row",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+      {
+        "type": "column",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+          {
+            "type": "elevatedButton",
+            "child": {
+              "type": "text",
+              "data": "Modal Bottom Sheet"
+            },
+            "style": {
+              "padding": {
+                "top": 8,
+                "left": 12,
+                "right": 12,
+                "bottom": 8
+              }
+            },
+            "onPressed": {
+              "actionType": "showModalBottomSheet",
+              "assetPath":"assets/json/list_view_example.json"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

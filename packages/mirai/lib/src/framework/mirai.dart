@@ -71,6 +71,8 @@ class Mirai {
     const MiraiNoneActionParser(),
     const MiraiNavigateActionParser(),
     const MiraiRequestActionParser(),
+    const MiraiModalBottomSheetActionParser(),
+    const MiraiDialogActionParser(),
   ];
 
   static Future<void> initialize({
@@ -156,23 +158,45 @@ class Mirai {
           default:
             break;
         }
-        return Container(color: Colors.white);
+        return const SizedBox();
       },
     );
   }
 
-  static Future<Widget?> fromAssets(
-    String assetPath,
-    BuildContext context,
-  ) async {
-    final String data = await rootBundle.loadString(assetPath);
-    final Map<String, dynamic> jsonData = jsonDecode(data);
-
-    if (context.mounted) {
-      return fromJson(jsonData, context);
-    }
-
-    return null;
+  static Widget? fromAssets(
+    String assetPath, {
+    LoadingWidgetBuilder? loadingWidget,
+    ErrorWidgetBuilder? errorWidget,
+  }) {
+    return FutureBuilder<String>(
+      future: rootBundle.loadString(assetPath),
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.waiting:
+            Widget? widget;
+            if (loadingWidget != null) {
+              widget = loadingWidget(context);
+              return widget;
+            }
+            break;
+          case ConnectionState.done:
+            if (snapshot.hasData) {
+              final json = jsonDecode(snapshot.data.toString());
+              return Mirai.fromJson(json, context) ?? const SizedBox();
+            } else if (snapshot.hasError) {
+              Log.e(snapshot.error);
+              if (errorWidget != null) {
+                final widget = errorWidget(context, snapshot.error);
+                return widget;
+              }
+            }
+            break;
+          default:
+            break;
+        }
+        return const SizedBox();
+      },
+    );
   }
 }
 

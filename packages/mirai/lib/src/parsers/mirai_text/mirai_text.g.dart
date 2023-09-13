@@ -76,10 +76,12 @@ _$_MiraiTextSpan _$$_MiraiTextSpanFromJson(Map<String, dynamic> json) =>
       style: json['style'] == null
           ? null
           : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      onTap: json['onTap'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$_MiraiTextSpanToJson(_$_MiraiTextSpan instance) =>
     <String, dynamic>{
       'data': instance.data,
       'style': instance.style,
+      'onTap': instance.onTap,
     };

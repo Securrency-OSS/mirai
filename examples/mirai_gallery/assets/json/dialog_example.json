@@ -32,10 +32,8 @@
                             }
                         },
                         "onPressed": {
-                            "actionType": "navigate",
-                            "navigationStyle": "push",
-                            "navigationType": "dialog",
-                            "widgetJson": {
+                            "actionType": "showDialog",
+                            "widget": {
                                 "type": "alertDialog",
                                 "content": {
                                     "type": "padding",
@@ -63,7 +61,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -79,7 +76,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -110,10 +106,8 @@
                             }
                         },
                         "onPressed": {
-                            "actionType": "navigate",
-                            "navigationStyle": "push",
-                            "navigationType": "dialog",
-                            "widgetJson": {
+                            "actionType": "showDialog",
+                            "widget": {
                                 "type": "alertDialog",
                                 "title": {
                                     "type": "text",
@@ -149,7 +143,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -165,7 +158,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },

@@ -9,7 +9,7 @@ part of 'mirai_check_box_widget.dart';
 _$_MiraiCheckBoxWidget _$$_MiraiCheckBoxWidgetFromJson(
         Map<String, dynamic> json) =>
     _$_MiraiCheckBoxWidget(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       value: json['value'] as bool?,
       activeColor: json['activeColor'] as String?,
       fillColor: json['fillColor'] == null

@@ -21,9 +21,11 @@ MiraiInputBorder _$MiraiInputBorderFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiInputBorder {
   MiraiInputBorderType get type => throw _privateConstructorUsedError;
-  MiraiBorderSide? get borderSide => throw _privateConstructorUsedError;
   MiraiBorderRadius? get borderRadius => throw _privateConstructorUsedError;
   double get gapPadding => throw _privateConstructorUsedError;
+  double get width => throw _privateConstructorUsedError;
+  String? get color => throw _privateConstructorUsedError;
+  MiraiGradient? get gradient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,12 +41,14 @@ abstract class $MiraiInputBorderCopyWith<$Res> {
   @useResult
   $Res call(
       {MiraiInputBorderType type,
-      MiraiBorderSide? borderSide,
       MiraiBorderRadius? borderRadius,
-      double gapPadding});
+      double gapPadding,
+      double width,
+      String? color,
+      MiraiGradient? gradient});
 
-  $MiraiBorderSideCopyWith<$Res>? get borderSide;
   $MiraiBorderRadiusCopyWith<$Res>? get borderRadius;
+  $MiraiGradientCopyWith<$Res>? get gradient;
 }
 
 /// @nodoc
@@ -61,19 +65,17 @@ class _$MiraiInputBorderCopyWithImpl<$Res, $Val extends MiraiInputBorder>
   @override
   $Res call({
     Object? type = null,
-    Object? borderSide = freezed,
     Object? borderRadius = freezed,
     Object? gapPadding = null,
+    Object? width = null,
+    Object? color = freezed,
+    Object? gradient = freezed,
   }) {
     return _then(_value.copyWith(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as MiraiInputBorderType,
-      borderSide: freezed == borderSide
-          ? _value.borderSide
-          : borderSide // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
       borderRadius: freezed == borderRadius
           ? _value.borderRadius
           : borderRadius // ignore: cast_nullable_to_non_nullable
@@ -82,19 +84,19 @@ class _$MiraiInputBorderCopyWithImpl<$Res, $Val extends MiraiInputBorder>
           ? _value.gapPadding
           : gapPadding // ignore: cast_nullable_to_non_nullable
               as double,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      gradient: freezed == gradient
+          ? _value.gradient
+          : gradient // ignore: cast_nullable_to_non_nullable
+              as MiraiGradient?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiBorderSideCopyWith<$Res>? get borderSide {
-    if (_value.borderSide == null) {
-      return null;
-    }
-
-    return $MiraiBorderSideCopyWith<$Res>(_value.borderSide!, (value) {
-      return _then(_value.copyWith(borderSide: value) as $Val);
-    });
   }
 
   @override
@@ -106,6 +108,18 @@ class _$MiraiInputBorderCopyWithImpl<$Res, $Val extends MiraiInputBorder>
 
     return $MiraiBorderRadiusCopyWith<$Res>(_value.borderRadius!, (value) {
       return _then(_value.copyWith(borderRadius: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiGradientCopyWith<$Res>? get gradient {
+    if (_value.gradient == null) {
+      return null;
+    }
+
+    return $MiraiGradientCopyWith<$Res>(_value.gradient!, (value) {
+      return _then(_value.copyWith(gradient: value) as $Val);
     });
   }
 }
@@ -120,14 +134,16 @@ abstract class _$$_MiraiInputBorderCopyWith<$Res>
   @useResult
   $Res call(
       {MiraiInputBorderType type,
-      MiraiBorderSide? borderSide,
       MiraiBorderRadius? borderRadius,
-      double gapPadding});
+      double gapPadding,
+      double width,
+      String? color,
+      MiraiGradient? gradient});
 
   @override
-  $MiraiBorderSideCopyWith<$Res>? get borderSide;
-  @override
   $MiraiBorderRadiusCopyWith<$Res>? get borderRadius;
+  @override
+  $MiraiGradientCopyWith<$Res>? get gradient;
 }
 
 /// @nodoc
@@ -142,19 +158,17 @@ class __$$_MiraiInputBorderCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
-    Object? borderSide = freezed,
     Object? borderRadius = freezed,
     Object? gapPadding = null,
+    Object? width = null,
+    Object? color = freezed,
+    Object? gradient = freezed,
   }) {
     return _then(_$_MiraiInputBorder(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as MiraiInputBorderType,
-      borderSide: freezed == borderSide
-          ? _value.borderSide
-          : borderSide // ignore: cast_nullable_to_non_nullable
-              as MiraiBorderSide?,
       borderRadius: freezed == borderRadius
           ? _value.borderRadius
           : borderRadius // ignore: cast_nullable_to_non_nullable
@@ -163,6 +177,18 @@ class __$$_MiraiInputBorderCopyWithImpl<$Res>
           ? _value.gapPadding
           : gapPadding // ignore: cast_nullable_to_non_nullable
               as double,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String?,
+      gradient: freezed == gradient
+          ? _value.gradient
+          : gradient // ignore: cast_nullable_to_non_nullable
+              as MiraiGradient?,
     ));
   }
 }
@@ -172,9 +198,11 @@ class __$$_MiraiInputBorderCopyWithImpl<$Res>
 class _$_MiraiInputBorder implements _MiraiInputBorder {
   const _$_MiraiInputBorder(
       {this.type = MiraiInputBorderType.underlineInputBorder,
-      this.borderSide,
       this.borderRadius,
-      this.gapPadding = 4.0});
+      this.gapPadding = 4.0,
+      this.width = 0.0,
+      this.color,
+      this.gradient});
 
   factory _$_MiraiInputBorder.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiInputBorderFromJson(json);
@@ -183,16 +211,21 @@ class _$_MiraiInputBorder implements _MiraiInputBorder {
   @JsonKey()
   final MiraiInputBorderType type;
   @override
-  final MiraiBorderSide? borderSide;
-  @override
   final MiraiBorderRadius? borderRadius;
   @override
   @JsonKey()
   final double gapPadding;
+  @override
+  @JsonKey()
+  final double width;
+  @override
+  final String? color;
+  @override
+  final MiraiGradient? gradient;
 
   @override
   String toString() {
-    return 'MiraiInputBorder(type: $type, borderSide: $borderSide, borderRadius: $borderRadius, gapPadding: $gapPadding)';
+    return 'MiraiInputBorder(type: $type, borderRadius: $borderRadius, gapPadding: $gapPadding, width: $width, color: $color, gradient: $gradient)';
   }
 
   @override
@@ -201,18 +234,20 @@ class _$_MiraiInputBorder implements _MiraiInputBorder {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiInputBorder &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.borderSide, borderSide) ||
-                other.borderSide == borderSide) &&
             (identical(other.borderRadius, borderRadius) ||
                 other.borderRadius == borderRadius) &&
             (identical(other.gapPadding, gapPadding) ||
-                other.gapPadding == gapPadding));
+                other.gapPadding == gapPadding) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.gradient, gradient) ||
+                other.gradient == gradient));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, type, borderSide, borderRadius, gapPadding);
+  int get hashCode => Object.hash(
+      runtimeType, type, borderRadius, gapPadding, width, color, gradient);
 
   @JsonKey(ignore: true)
   @override
@@ -231,9 +266,11 @@ class _$_MiraiInputBorder implements _MiraiInputBorder {
 abstract class _MiraiInputBorder implements MiraiInputBorder {
   const factory _MiraiInputBorder(
       {final MiraiInputBorderType type,
-      final MiraiBorderSide? borderSide,
       final MiraiBorderRadius? borderRadius,
-      final double gapPadding}) = _$_MiraiInputBorder;
+      final double gapPadding,
+      final double width,
+      final String? color,
+      final MiraiGradient? gradient}) = _$_MiraiInputBorder;
 
   factory _MiraiInputBorder.fromJson(Map<String, dynamic> json) =
       _$_MiraiInputBorder.fromJson;
@@ -241,11 +278,15 @@ abstract class _MiraiInputBorder implements MiraiInputBorder {
   @override
   MiraiInputBorderType get type;
   @override
-  MiraiBorderSide? get borderSide;
-  @override
   MiraiBorderRadius? get borderRadius;
   @override
   double get gapPadding;
+  @override
+  double get width;
+  @override
+  String? get color;
+  @override
+  MiraiGradient? get gradient;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiInputBorderCopyWith<_$_MiraiInputBorder> get copyWith =>

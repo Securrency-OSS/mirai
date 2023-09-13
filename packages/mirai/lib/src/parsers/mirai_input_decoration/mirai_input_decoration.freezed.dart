@@ -60,7 +60,7 @@ mixin _$MiraiInputDecoration {
   Map<String, dynamic>? get counter => throw _privateConstructorUsedError;
   String? get counterText => throw _privateConstructorUsedError;
   MiraiTextStyle? get counterStyle => throw _privateConstructorUsedError;
-  bool get filled => throw _privateConstructorUsedError;
+  bool? get filled => throw _privateConstructorUsedError;
   String? get fillColor => throw _privateConstructorUsedError;
   String? get hoverColor => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
@@ -125,7 +125,7 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       Map<String, dynamic>? counter,
       String? counterText,
       MiraiTextStyle? counterStyle,
-      bool filled,
+      bool? filled,
       String? fillColor,
       String? hoverColor,
       String? focusColor,
@@ -210,7 +210,7 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? counter = freezed,
     Object? counterText = freezed,
     Object? counterStyle = freezed,
-    Object? filled = null,
+    Object? filled = freezed,
     Object? fillColor = freezed,
     Object? hoverColor = freezed,
     Object? focusColor = freezed,
@@ -370,10 +370,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
           ? _value.counterStyle
           : counterStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
-      filled: null == filled
+      filled: freezed == filled
           ? _value.filled
           : filled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
@@ -693,7 +693,7 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       Map<String, dynamic>? counter,
       String? counterText,
       MiraiTextStyle? counterStyle,
-      bool filled,
+      bool? filled,
       String? fillColor,
       String? hoverColor,
       String? focusColor,
@@ -793,7 +793,7 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? counter = freezed,
     Object? counterText = freezed,
     Object? counterStyle = freezed,
-    Object? filled = null,
+    Object? filled = freezed,
     Object? fillColor = freezed,
     Object? hoverColor = freezed,
     Object? focusColor = freezed,
@@ -953,10 +953,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value.counterStyle
           : counterStyle // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
-      filled: null == filled
+      filled: freezed == filled
           ? _value.filled
           : filled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       fillColor: freezed == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
@@ -1053,7 +1053,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       final Map<String, dynamic>? counter,
       this.counterText,
       this.counterStyle,
-      this.filled = false,
+      this.filled,
       this.fillColor,
       this.hoverColor,
       this.focusColor,
@@ -1209,8 +1209,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @override
   final MiraiTextStyle? counterStyle;
   @override
-  @JsonKey()
-  final bool filled;
+  final bool? filled;
   @override
   final String? fillColor;
   @override
@@ -1452,7 +1451,7 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final Map<String, dynamic>? counter,
       final String? counterText,
       final MiraiTextStyle? counterStyle,
-      final bool filled,
+      final bool? filled,
       final String? fillColor,
       final String? hoverColor,
       final String? focusColor,
@@ -1543,7 +1542,7 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   @override
   MiraiTextStyle? get counterStyle;
   @override
-  bool get filled;
+  bool? get filled;
   @override
   String? get fillColor;
   @override

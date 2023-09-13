@@ -58,6 +58,14 @@
                             "style": {
                                 "fontWeight": "w800",
                                 "color": "#6750A4"
+                            },
+                            "onTap": {
+                                "actionType": "navigate",
+                                "navigationStyle": "push",
+                                "widgetJson": {
+                                    "type": "exampleScreen",
+                                    "assetPath": "assets/json/web_view_example.json"
+                                }
                             }
                         }
                     ]

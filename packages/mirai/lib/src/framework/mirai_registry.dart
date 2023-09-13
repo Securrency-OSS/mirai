@@ -26,7 +26,7 @@ class MiraiRegistry {
   }
 
   bool registerAction(MiraiActionParser parser) {
-    final String type = parser.type;
+    final String type = parser.actionType;
     if (_miraiActionParsers.containsKey(type)) {
       Log.w('Action $type is already registered');
       return false;

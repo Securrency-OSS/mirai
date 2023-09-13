@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
 part 'mirai_bottom_app_bar_theme.freezed.dart';

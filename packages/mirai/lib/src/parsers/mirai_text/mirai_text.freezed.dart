@@ -427,6 +427,7 @@ MiraiTextSpan _$MiraiTextSpanFromJson(Map<String, dynamic> json) {
 mixin _$MiraiTextSpan {
   String? get data => throw _privateConstructorUsedError;
   MiraiTextStyle? get style => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onTap => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -440,7 +441,7 @@ abstract class $MiraiTextSpanCopyWith<$Res> {
           MiraiTextSpan value, $Res Function(MiraiTextSpan) then) =
       _$MiraiTextSpanCopyWithImpl<$Res, MiraiTextSpan>;
   @useResult
-  $Res call({String? data, MiraiTextStyle? style});
+  $Res call({String? data, MiraiTextStyle? style, Map<String, dynamic>? onTap});
 
   $MiraiTextStyleCopyWith<$Res>? get style;
 }
@@ -460,6 +461,7 @@ class _$MiraiTextSpanCopyWithImpl<$Res, $Val extends MiraiTextSpan>
   $Res call({
     Object? data = freezed,
     Object? style = freezed,
+    Object? onTap = freezed,
   }) {
     return _then(_value.copyWith(
       data: freezed == data
@@ -470,6 +472,10 @@ class _$MiraiTextSpanCopyWithImpl<$Res, $Val extends MiraiTextSpan>
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      onTap: freezed == onTap
+          ? _value.onTap
+          : onTap // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ) as $Val);
   }
 
@@ -494,7 +500,7 @@ abstract class _$$_MiraiTextSpanCopyWith<$Res>
       __$$_MiraiTextSpanCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? data, MiraiTextStyle? style});
+  $Res call({String? data, MiraiTextStyle? style, Map<String, dynamic>? onTap});
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get style;
@@ -513,6 +519,7 @@ class __$$_MiraiTextSpanCopyWithImpl<$Res>
   $Res call({
     Object? data = freezed,
     Object? style = freezed,
+    Object? onTap = freezed,
   }) {
     return _then(_$_MiraiTextSpan(
       data: freezed == data
@@ -523,6 +530,10 @@ class __$$_MiraiTextSpanCopyWithImpl<$Res>
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiTextStyle?,
+      onTap: freezed == onTap
+          ? _value._onTap
+          : onTap // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -530,7 +541,9 @@ class __$$_MiraiTextSpanCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MiraiTextSpan implements _MiraiTextSpan {
-  const _$_MiraiTextSpan({this.data, this.style});
+  const _$_MiraiTextSpan(
+      {this.data, this.style, final Map<String, dynamic>? onTap})
+      : _onTap = onTap;
 
   factory _$_MiraiTextSpan.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextSpanFromJson(json);
@@ -539,10 +552,19 @@ class _$_MiraiTextSpan implements _MiraiTextSpan {
   final String? data;
   @override
   final MiraiTextStyle? style;
+  final Map<String, dynamic>? _onTap;
+  @override
+  Map<String, dynamic>? get onTap {
+    final value = _onTap;
+    if (value == null) return null;
+    if (_onTap is EqualUnmodifiableMapView) return _onTap;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
-    return 'MiraiTextSpan(data: $data, style: $style)';
+    return 'MiraiTextSpan(data: $data, style: $style, onTap: $onTap)';
   }
 
   @override
@@ -551,12 +573,14 @@ class _$_MiraiTextSpan implements _MiraiTextSpan {
         (other.runtimeType == runtimeType &&
             other is _$_MiraiTextSpan &&
             (identical(other.data, data) || other.data == data) &&
-            (identical(other.style, style) || other.style == style));
+            (identical(other.style, style) || other.style == style) &&
+            const DeepCollectionEquality().equals(other._onTap, _onTap));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, data, style);
+  int get hashCode => Object.hash(
+      runtimeType, data, style, const DeepCollectionEquality().hash(_onTap));
 
   @JsonKey(ignore: true)
   @override
@@ -574,7 +598,9 @@ class _$_MiraiTextSpan implements _MiraiTextSpan {
 
 abstract class _MiraiTextSpan implements MiraiTextSpan {
   const factory _MiraiTextSpan(
-      {final String? data, final MiraiTextStyle? style}) = _$_MiraiTextSpan;
+      {final String? data,
+      final MiraiTextStyle? style,
+      final Map<String, dynamic>? onTap}) = _$_MiraiTextSpan;
 
   factory _MiraiTextSpan.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextSpan.fromJson;
@@ -583,6 +609,8 @@ abstract class _MiraiTextSpan implements MiraiTextSpan {
   String? get data;
   @override
   MiraiTextStyle? get style;
+  @override
+  Map<String, dynamic>? get onTap;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTextSpanCopyWith<_$_MiraiTextSpan> get copyWith =>

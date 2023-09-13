@@ -20,7 +20,7 @@ MiraiTextFormField _$MiraiTextFormFieldFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiTextFormField {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String? get compareId => throw _privateConstructorUsedError;
   MiraiInputDecoration? get decoration => throw _privateConstructorUsedError;
   String? get initialValue => throw _privateConstructorUsedError;
@@ -76,7 +76,7 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       _$MiraiTextFormFieldCopyWithImpl<$Res, MiraiTextFormField>;
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String? compareId,
       MiraiInputDecoration? decoration,
       String? initialValue,
@@ -132,7 +132,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? compareId = freezed,
     Object? decoration = freezed,
     Object? initialValue = freezed,
@@ -171,10 +171,10 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? validatorRules = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       compareId: freezed == compareId
           ? _value.compareId
           : compareId // ignore: cast_nullable_to_non_nullable
@@ -364,7 +364,7 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
+      {String? id,
       String? compareId,
       MiraiInputDecoration? decoration,
       String? initialValue,
@@ -421,7 +421,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? compareId = freezed,
     Object? decoration = freezed,
     Object? initialValue = freezed,
@@ -460,10 +460,10 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? validatorRules = null,
   }) {
     return _then(_$_MiraiTextFormField(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       compareId: freezed == compareId
           ? _value.compareId
           : compareId // ignore: cast_nullable_to_non_nullable
@@ -616,7 +616,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiTextFormField implements _MiraiTextFormField {
   const _$_MiraiTextFormField(
-      {required this.id,
+      {this.id,
       this.compareId,
       this.decoration,
       this.initialValue,
@@ -661,7 +661,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       _$$_MiraiTextFormFieldFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String? compareId;
   @override
@@ -903,7 +903,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
-          {required final String id,
+          {final String? id,
           final String? compareId,
           final MiraiInputDecoration? decoration,
           final String? initialValue,
@@ -946,7 +946,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
       _$_MiraiTextFormField.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String? get compareId;
   @override
