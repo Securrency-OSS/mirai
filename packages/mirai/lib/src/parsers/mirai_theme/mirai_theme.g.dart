@@ -41,12 +41,9 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       secondaryHeaderColor: json['secondaryHeaderColor'] as String?,
       shadowColor: json['shadowColor'] as String?,
       splashColor: json['splashColor'] as String?,
-      fontFamily: json['fontFamily'] == null
-          ? null
-          : MiraiFontFamily.fromJson(
-              json['fontFamily'] as Map<String, dynamic>),
+      fontFamily: json['fontFamily'] as String?,
       fontFamilyFallback: (json['fontFamilyFallback'] as List<dynamic>?)
-          ?.map((e) => MiraiFontFamily.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => e as String)
           .toList(),
       textTheme: json['textTheme'] == null
           ? null

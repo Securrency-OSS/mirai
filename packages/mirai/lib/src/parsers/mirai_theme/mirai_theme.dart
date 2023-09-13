@@ -4,7 +4,6 @@ import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_app_bar_theme/mirai_app_bar_theme.dart';
 import 'package:mirai/src/parsers/mirai_bottom_sheet_theme/mirai_bottom_sheet_theme.dart';
 import 'package:mirai/src/parsers/mirai_color_scheme/mirai_color_scheme.dart';
-import 'package:mirai/src/parsers/mirai_font_family/mirai_font_family.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration_theme/mirai_input_decoration_theme.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
@@ -41,8 +40,8 @@ class MiraiTheme with _$MiraiTheme {
     String? secondaryHeaderColor,
     String? shadowColor,
     String? splashColor,
-    MiraiFontFamily? fontFamily,
-    List<MiraiFontFamily>? fontFamilyFallback,
+    String? fontFamily,
+    List<String>? fontFamilyFallback,
     MiraiTextTheme? textTheme,
     MiraiTextTheme? primaryTextTheme,
     String? unselectedWidgetColor,
@@ -93,10 +92,8 @@ extension MiraiThemeParser on MiraiTheme {
       secondaryHeaderColor: secondaryHeaderColor.toColor,
       shadowColor: shadowColor.toColor,
       splashColor: splashColor.toColor,
-      fontFamily: fontFamily?.parse,
-      fontFamilyFallback: fontFamilyFallback
-          ?.map((family) => family.parse ?? "Roboto")
-          .toList(),
+      fontFamily: fontFamily,
+      fontFamilyFallback: fontFamilyFallback,
       textTheme: textTheme?.parse,
       primaryTextTheme: primaryTextTheme?.parse,
       unselectedWidgetColor: unselectedWidgetColor.toColor,

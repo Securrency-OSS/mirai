@@ -6,14 +6,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Mirai.fromAssets('assets/json/home_screen.json', context),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return snapshot.data ?? const SizedBox();
-        }
-        return Container(color: Colors.white);
-      },
-    );
+    return Mirai.fromAssets('assets/json/home_screen.json') ?? const SizedBox();
   }
 }

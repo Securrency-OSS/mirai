@@ -26,9 +26,8 @@ mixin _$MiraiTextStyle {
   double? get fontSize => throw _privateConstructorUsedError;
   MiraiFontWeight? get fontWeight => throw _privateConstructorUsedError;
   FontStyle? get fontStyle => throw _privateConstructorUsedError;
-  MiraiFontFamily? get fontFamily => throw _privateConstructorUsedError;
-  List<MiraiFontFamily>? get fontFamilyFallback =>
-      throw _privateConstructorUsedError;
+  String? get fontFamily => throw _privateConstructorUsedError;
+  List<String>? get fontFamilyFallback => throw _privateConstructorUsedError;
   double? get letterSpacing => throw _privateConstructorUsedError;
   double? get wordSpacing => throw _privateConstructorUsedError;
   TextBaseline? get textBaseline => throw _privateConstructorUsedError;
@@ -53,14 +52,12 @@ abstract class $MiraiTextStyleCopyWith<$Res> {
       double? fontSize,
       MiraiFontWeight? fontWeight,
       FontStyle? fontStyle,
-      MiraiFontFamily? fontFamily,
-      List<MiraiFontFamily>? fontFamilyFallback,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
       double? letterSpacing,
       double? wordSpacing,
       TextBaseline? textBaseline,
       double? height});
-
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
 }
 
 /// @nodoc
@@ -117,11 +114,11 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
       fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as MiraiFontFamily?,
+              as String?,
       fontFamilyFallback: freezed == fontFamilyFallback
           ? _value.fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<MiraiFontFamily>?,
+              as List<String>?,
       letterSpacing: freezed == letterSpacing
           ? _value.letterSpacing
           : letterSpacing // ignore: cast_nullable_to_non_nullable
@@ -140,18 +137,6 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
               as double?,
     ) as $Val);
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily {
-    if (_value.fontFamily == null) {
-      return null;
-    }
-
-    return $MiraiFontFamilyCopyWith<$Res>(_value.fontFamily!, (value) {
-      return _then(_value.copyWith(fontFamily: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -169,15 +154,12 @@ abstract class _$$_MiraiTextStyleCopyWith<$Res>
       double? fontSize,
       MiraiFontWeight? fontWeight,
       FontStyle? fontStyle,
-      MiraiFontFamily? fontFamily,
-      List<MiraiFontFamily>? fontFamilyFallback,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
       double? letterSpacing,
       double? wordSpacing,
       TextBaseline? textBaseline,
       double? height});
-
-  @override
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
 }
 
 /// @nodoc
@@ -232,11 +214,11 @@ class __$$_MiraiTextStyleCopyWithImpl<$Res>
       fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as MiraiFontFamily?,
+              as String?,
       fontFamilyFallback: freezed == fontFamilyFallback
           ? _value._fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<MiraiFontFamily>?,
+              as List<String>?,
       letterSpacing: freezed == letterSpacing
           ? _value.letterSpacing
           : letterSpacing // ignore: cast_nullable_to_non_nullable
@@ -268,7 +250,7 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
       this.fontWeight,
       this.fontStyle,
       this.fontFamily,
-      final List<MiraiFontFamily>? fontFamilyFallback,
+      final List<String>? fontFamilyFallback,
       this.letterSpacing,
       this.wordSpacing,
       this.textBaseline,
@@ -292,10 +274,10 @@ class _$_MiraiTextStyle implements _MiraiTextStyle {
   @override
   final FontStyle? fontStyle;
   @override
-  final MiraiFontFamily? fontFamily;
-  final List<MiraiFontFamily>? _fontFamilyFallback;
+  final String? fontFamily;
+  final List<String>? _fontFamilyFallback;
   @override
-  List<MiraiFontFamily>? get fontFamilyFallback {
+  List<String>? get fontFamilyFallback {
     final value = _fontFamilyFallback;
     if (value == null) return null;
     if (_fontFamilyFallback is EqualUnmodifiableListView)
@@ -385,8 +367,8 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
       final double? fontSize,
       final MiraiFontWeight? fontWeight,
       final FontStyle? fontStyle,
-      final MiraiFontFamily? fontFamily,
-      final List<MiraiFontFamily>? fontFamilyFallback,
+      final String? fontFamily,
+      final List<String>? fontFamilyFallback,
       final double? letterSpacing,
       final double? wordSpacing,
       final TextBaseline? textBaseline,
@@ -408,9 +390,9 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
   @override
   FontStyle? get fontStyle;
   @override
-  MiraiFontFamily? get fontFamily;
+  String? get fontFamily;
   @override
-  List<MiraiFontFamily>? get fontFamilyFallback;
+  List<String>? get fontFamilyFallback;
   @override
   double? get letterSpacing;
   @override

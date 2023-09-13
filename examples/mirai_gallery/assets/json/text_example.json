@@ -30,10 +30,7 @@
                     "style": {
                         "fontSize": 23,
                         "fontWeight": "w600",
-                        "fontFamily": {
-                            "family": "Handjet",
-                            "resource": "asset"
-                        }
+                        "fontFamily": "Handjet"
                     }
                 },
                 {
@@ -44,11 +41,8 @@
                     "type": "text",
                     "data": "This is a normal Text.",
                     "style": {
-                        "fontSize": 14,
-                        "fontFamily": {
-                            "family": "Macondo Swash Caps",
-                            "resource": "gfont"
-                        }
+                        "fontSize": 18,
+                        "fontFamily": "LisuBosa"
                     }
                 },
                 {

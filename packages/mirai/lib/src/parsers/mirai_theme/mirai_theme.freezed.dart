@@ -45,9 +45,8 @@ mixin _$MiraiTheme {
   String? get secondaryHeaderColor => throw _privateConstructorUsedError;
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
-  MiraiFontFamily? get fontFamily => throw _privateConstructorUsedError;
-  List<MiraiFontFamily>? get fontFamilyFallback =>
-      throw _privateConstructorUsedError;
+  String? get fontFamily => throw _privateConstructorUsedError;
+  List<String>? get fontFamilyFallback => throw _privateConstructorUsedError;
   MiraiTextTheme? get textTheme => throw _privateConstructorUsedError;
   MiraiTextTheme? get primaryTextTheme => throw _privateConstructorUsedError;
   String? get unselectedWidgetColor => throw _privateConstructorUsedError;
@@ -114,8 +113,8 @@ abstract class $MiraiThemeCopyWith<$Res> {
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
-      MiraiFontFamily? fontFamily,
-      List<MiraiFontFamily>? fontFamilyFallback,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
       MiraiTextTheme? textTheme,
       MiraiTextTheme? primaryTextTheme,
       String? unselectedWidgetColor,
@@ -139,7 +138,6 @@ abstract class $MiraiThemeCopyWith<$Res> {
   $MiraiInputDecorationThemeCopyWith<$Res>? get inputDecorationTheme;
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
   $MiraiTextThemeCopyWith<$Res>? get textTheme;
   $MiraiTextThemeCopyWith<$Res>? get primaryTextTheme;
   $MiraiAppBarThemeCopyWith<$Res>? get appBarTheme;
@@ -320,11 +318,11 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
       fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as MiraiFontFamily?,
+              as String?,
       fontFamilyFallback: freezed == fontFamilyFallback
           ? _value.fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<MiraiFontFamily>?,
+              as List<String>?,
       textTheme: freezed == textTheme
           ? _value.textTheme
           : textTheme // ignore: cast_nullable_to_non_nullable
@@ -438,18 +436,6 @@ class _$MiraiThemeCopyWithImpl<$Res, $Val extends MiraiTheme>
 
     return $MiraiMaterialColorCopyWith<$Res>(_value.primarySwatch!, (value) {
       return _then(_value.copyWith(primarySwatch: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily {
-    if (_value.fontFamily == null) {
-      return null;
-    }
-
-    return $MiraiFontFamilyCopyWith<$Res>(_value.fontFamily!, (value) {
-      return _then(_value.copyWith(fontFamily: value) as $Val);
     });
   }
 
@@ -712,8 +698,8 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
       String? secondaryHeaderColor,
       String? shadowColor,
       String? splashColor,
-      MiraiFontFamily? fontFamily,
-      List<MiraiFontFamily>? fontFamilyFallback,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
       MiraiTextTheme? textTheme,
       MiraiTextTheme? primaryTextTheme,
       String? unselectedWidgetColor,
@@ -740,8 +726,6 @@ abstract class _$$_MiraiThemeCopyWith<$Res>
   $MiraiColorSchemeCopyWith<$Res>? get colorScheme;
   @override
   $MiraiMaterialColorCopyWith<$Res>? get primarySwatch;
-  @override
-  $MiraiFontFamilyCopyWith<$Res>? get fontFamily;
   @override
   $MiraiTextThemeCopyWith<$Res>? get textTheme;
   @override
@@ -938,11 +922,11 @@ class __$$_MiraiThemeCopyWithImpl<$Res>
       fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as MiraiFontFamily?,
+              as String?,
       fontFamilyFallback: freezed == fontFamilyFallback
           ? _value._fontFamilyFallback
           : fontFamilyFallback // ignore: cast_nullable_to_non_nullable
-              as List<MiraiFontFamily>?,
+              as List<String>?,
       textTheme: freezed == textTheme
           ? _value.textTheme
           : textTheme // ignore: cast_nullable_to_non_nullable
@@ -1052,7 +1036,7 @@ class _$_MiraiTheme implements _MiraiTheme {
       this.shadowColor,
       this.splashColor,
       this.fontFamily,
-      final List<MiraiFontFamily>? fontFamilyFallback,
+      final List<String>? fontFamilyFallback,
       this.textTheme,
       this.primaryTextTheme,
       this.unselectedWidgetColor,
@@ -1126,10 +1110,10 @@ class _$_MiraiTheme implements _MiraiTheme {
   @override
   final String? splashColor;
   @override
-  final MiraiFontFamily? fontFamily;
-  final List<MiraiFontFamily>? _fontFamilyFallback;
+  final String? fontFamily;
+  final List<String>? _fontFamilyFallback;
   @override
-  List<MiraiFontFamily>? get fontFamilyFallback {
+  List<String>? get fontFamilyFallback {
     final value = _fontFamilyFallback;
     if (value == null) return null;
     if (_fontFamilyFallback is EqualUnmodifiableListView)
@@ -1358,8 +1342,8 @@ abstract class _MiraiTheme implements MiraiTheme {
       final String? secondaryHeaderColor,
       final String? shadowColor,
       final String? splashColor,
-      final MiraiFontFamily? fontFamily,
-      final List<MiraiFontFamily>? fontFamilyFallback,
+      final String? fontFamily,
+      final List<String>? fontFamilyFallback,
       final MiraiTextTheme? textTheme,
       final MiraiTextTheme? primaryTextTheme,
       final String? unselectedWidgetColor,
@@ -1432,9 +1416,9 @@ abstract class _MiraiTheme implements MiraiTheme {
   @override
   String? get splashColor;
   @override
-  MiraiFontFamily? get fontFamily;
+  String? get fontFamily;
   @override
-  List<MiraiFontFamily>? get fontFamilyFallback;
+  List<String>? get fontFamilyFallback;
   @override
   MiraiTextTheme? get textTheme;
   @override

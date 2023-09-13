@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/parsers/mirai_font_family/mirai_font_family.dart';
 import 'package:mirai/src/parsers/mirai_font_weight/mirai_font_weight.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 
@@ -16,8 +15,8 @@ class MiraiTextStyle with _$MiraiTextStyle {
     double? fontSize,
     MiraiFontWeight? fontWeight,
     FontStyle? fontStyle,
-    MiraiFontFamily? fontFamily,
-    List<MiraiFontFamily>? fontFamilyFallback,
+    String? fontFamily,
+    List<String>? fontFamilyFallback,
     double? letterSpacing,
     double? wordSpacing,
     TextBaseline? textBaseline,
@@ -37,10 +36,8 @@ extension MiraiTextStyleParser on MiraiTextStyle {
       fontSize: fontSize,
       fontWeight: fontWeight?.value,
       fontStyle: fontStyle,
-      fontFamily: fontFamily?.parse,
-      fontFamilyFallback: fontFamilyFallback
-          ?.map((family) => family.parse ?? "Roboto")
-          .toList(),
+      fontFamily: fontFamily,
+      fontFamilyFallback: fontFamilyFallback,
       letterSpacing: letterSpacing,
       wordSpacing: wordSpacing,
       textBaseline: textBaseline,
