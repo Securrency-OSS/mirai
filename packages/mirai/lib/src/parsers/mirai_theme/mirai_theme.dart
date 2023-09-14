@@ -48,6 +48,8 @@ class MiraiTheme with _$MiraiTheme {
     String? shadowColor,
     String? splashColor,
     String? unselectedWidgetColor,
+    String? fontFamily,
+    List<String>? fontFamilyFallback,
     MiraiAppBarTheme? appBarTheme,
     MiraiButtonStyle? elevatedButtonTheme,
     MiraiButtonStyle? outlinedButtonTheme,
@@ -96,6 +98,8 @@ extension MiraiThemeParser on MiraiTheme {
       shadowColor: shadowColor.toColor,
       splashColor: splashColor.toColor,
       unselectedWidgetColor: unselectedWidgetColor.toColor,
+      fontFamily: fontFamily,
+      fontFamilyFallback: fontFamilyFallback,
       primarySwatch: primarySwatch?.parse,
       appBarTheme: appBarTheme?.parse,
       elevatedButtonTheme:
