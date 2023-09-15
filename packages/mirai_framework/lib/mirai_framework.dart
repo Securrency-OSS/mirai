@@ -1,7 +1,4 @@
 library mirai_framework;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:mirai_framework/src/mirai_action_parser.dart';
+export 'package:mirai_framework/src/mirai_parser.dart';
