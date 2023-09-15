@@ -1,2 +1,4 @@
 .idea
 .history
+/packages/mirai_webview/.flutter-plugins-dependencies
+/packages/mirai_webview/.flutter-plugins
