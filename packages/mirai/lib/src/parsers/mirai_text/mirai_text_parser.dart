@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_text/mirai_text.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiTextParser extends MiraiParser<MiraiText> {
   const MiraiTextParser();

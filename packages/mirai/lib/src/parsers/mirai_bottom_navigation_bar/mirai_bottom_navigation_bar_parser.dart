@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_bottom_navigation_bar/mirai_bottom_navigation_bar.dart';
 import 'package:mirai/src/parsers/mirai_navigation_bar_item/mirai_bottom_navigation_bar_item.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiBottomNavigationBarParser
     extends MiraiParser<MiraiBottomNavigationBar> {
   const MiraiBottomNavigationBarParser();
 
   @override
-  MiraiBottomNavigationBar getModel(Map<String, dynamic> json) =>
-      MiraiBottomNavigationBar.fromJson(json);
+  String get type => WidgetType.bottomNavigationBar.name;
 
   @override
-  String get type => WidgetType.bottomNavigationBar.name;
+  MiraiBottomNavigationBar getModel(Map<String, dynamic> json) =>
+      MiraiBottomNavigationBar.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiBottomNavigationBar model) {

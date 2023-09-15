@@ -1,18 +1,17 @@
 import 'package:flutter/cupertino.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_icon/mirai_icon.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/icon_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiIconParser extends MiraiParser<MiraiIcon> {
   const MiraiIconParser();
+  @override
+  String get type => WidgetType.icon.name;
 
   @override
   MiraiIcon getModel(Map<String, dynamic> json) => MiraiIcon.fromJson(json);
-
-  @override
-  String get type => WidgetType.icon.name;
 
   @override
   Widget parse(BuildContext context, MiraiIcon model) {

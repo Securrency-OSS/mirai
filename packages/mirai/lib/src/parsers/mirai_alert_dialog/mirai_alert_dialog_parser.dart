@@ -5,16 +5,17 @@ import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiAlertDialogParser extends MiraiParser<MiraiAlertDialog> {
   const MiraiAlertDialogParser();
 
   @override
-  MiraiAlertDialog getModel(Map<String, dynamic> json) =>
-      MiraiAlertDialog.fromJson(json);
+  String get type => WidgetType.alertDialog.name;
 
   @override
-  String get type => WidgetType.alertDialog.name;
+  MiraiAlertDialog getModel(Map<String, dynamic> json) =>
+      MiraiAlertDialog.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiAlertDialog model) {

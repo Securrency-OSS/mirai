@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiTextButtonParser extends MiraiParser<MiraiTextButton> {
   const MiraiTextButtonParser();

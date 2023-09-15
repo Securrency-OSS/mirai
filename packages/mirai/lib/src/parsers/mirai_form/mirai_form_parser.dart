@@ -4,6 +4,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiFormParser extends MiraiParser<MiraiForm> {
   const MiraiFormParser();

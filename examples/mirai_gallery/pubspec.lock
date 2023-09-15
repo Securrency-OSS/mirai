@@ -394,6 +394,13 @@ packages:
       relative: true
     source: path
     version: "0.5.0"
+  mirai_framework:
+    dependency: transitive
+    description:
+      path: "../../packages/mirai_framework"
+      relative: true
+    source: path
+    version: "0.0.1"
   nested:
     dependency: transitive
     description:
@@ -600,5 +607,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.1.0-185.0.dev <4.0.0"
+  dart: ">=3.1.0 <4.0.0"
   flutter: ">=1.17.0"
