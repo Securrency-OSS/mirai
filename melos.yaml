@@ -2,6 +2,7 @@ name: mirai
 
 packages:
   - packages/*
+  - examples/*
 
 scripts:
   analyze:
