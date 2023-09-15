@@ -61,23 +61,7 @@ jobs:
       - uses: bluefireteam/melos-action@dd3c344d731938d2ab2567a261f54a19a68b5f6a
         with:
           melos-version: '3.0.1'
-      - uses: Homebrew/actions/setup-homebrew@master
-      - name: 'Install Tools'
+      - name: 'Dart format'
         run: |
-          flutter pub global activate flutter_plugin_tools
-          brew install swiftformat
-          brew install clang-format
-          brew link --overwrite --force clang-format
-      - name: 'Formatter version'
-        run: |
-          clang-format --version
-          swiftformat --version
-      - name: 'Dart, Java and Objective-C '
-        run: |
-          flutter pub global run flutter_plugin_tools format
-          ./.github/workflows/scripts/validate-formatting.sh
-      - name: 'Swift'
-        if: ${{ success() || failure() }}
-        run: |
-          swiftformat .
+          melos run format
           ./.github/workflows/scripts/validate-formatting.sh
