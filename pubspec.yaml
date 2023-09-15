@@ -1,0 +1,7 @@
+name: mirai_workspace
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dev_dependencies:
+  melos: ^3.1.1
