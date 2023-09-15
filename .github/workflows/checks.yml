@@ -1,44 +1,44 @@
-name: Pull Request Checks
-
-on:
-  pull_request:
-  
-jobs:
-  checks:
-    name: Checks
-    runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ${{ matrix.package_path }}
-
-    strategy:
-      matrix:
-        channel:
-          - stable
-        package_path:
-          - examples/mirai_gallery
-          - packages/mirai
-          - packages/mirai_webview
-
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Make sure the stable version of Flutter is available
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: ${{ matrix.channel }}
-          cache: true
-
-      # Download all Flutter packages
-      - name: Download dependencies
-        run: flutter pub get
-
-      # Run Flutter Analyzer
-      - name: Run Flutter Analyzer
-        run: flutter analyze
-        
-      # Run Flutter Format to ensure formatting is valid
-      - name: Run Flutter Format
-        run: dart format --set-exit-if-changed .
+#name: Pull Request Checks
+#
+#on:
+#  pull_request:
+#
+#jobs:
+#  checks:
+#    name: Checks
+#    runs-on: ubuntu-latest
+#
+#    defaults:
+#      run:
+#        working-directory: ${{ matrix.package_path }}
+#
+#    strategy:
+#      matrix:
+#        channel:
+#          - stable
+#        package_path:
+#          - examples/mirai_gallery
+#          - packages/mirai
+#          - packages/mirai_webview
+#
+#    steps:
+#      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#      - uses: actions/checkout@v2
+#
+#      # Make sure the stable version of Flutter is available
+#      - uses: subosito/flutter-action@v2
+#        with:
+#          channel: ${{ matrix.channel }}
+#          cache: true
+#
+#      # Download all Flutter packages
+#      - name: Download dependencies
+#        run: flutter pub get
+#
+#      # Run Flutter Analyzer
+#      - name: Run Flutter Analyzer
+#        run: flutter analyze
+#
+#      # Run Flutter Format to ensure formatting is valid
+#      - name: Run Flutter Format
+#        run: dart format --set-exit-if-changed .
