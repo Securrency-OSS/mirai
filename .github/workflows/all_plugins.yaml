@@ -47,9 +47,7 @@ jobs:
         with:
           melos-version: '3.0.1'
       - name: 'Flutter Pub Get'
-        run: |
-          melos exec -c 1 --scope="*example*" -- \
-            "flutter pub get"
+        run: melos run get
 
   format:
     runs-on: ubuntu-latest
