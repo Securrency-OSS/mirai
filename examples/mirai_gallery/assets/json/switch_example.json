@@ -1,0 +1,49 @@
+{
+    "type": "scaffold",
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Mirai Switch"
+        }
+    },
+    "body": {
+        "type": "row",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+            {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "row",
+                        "mainAxisAlignment": "center",
+                        "crossAxisAlignment": "center",
+                        "children": [
+                            {
+                                "type": "switchButton",
+                                "initialValue": true,
+                                "onChanged": {}
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "switchButton",
+                                "initialValue": false,
+                                "onChanged": {}
+                            }
+                        ]
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 12
+                    }
+                ]
+            }
+        ]
+    }
+}
