@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget.dart';
 import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiCheckBoxWidgetParser extends MiraiParser<MiraiCheckBoxWidget> {
   const MiraiCheckBoxWidgetParser();

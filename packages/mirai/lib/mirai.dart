@@ -5,3 +5,4 @@ export 'package:mirai/src/framework/framework.dart';
 export 'package:mirai/src/network/network.dart';
 export 'package:mirai/src/parsers/parsers.dart';
 export 'package:mirai/src/utils/utils.dart';
+export 'package:mirai_framework/mirai_framework.dart';

@@ -3,6 +3,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_padding/mirai_padding.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiPaddingParser extends MiraiParser<MiraiPadding> {
   const MiraiPaddingParser();

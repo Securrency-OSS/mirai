@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/action_parsers/mirai_navigate_action/mirai_navigate_action.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/utils/action_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
   const MiraiNavigateActionParser();

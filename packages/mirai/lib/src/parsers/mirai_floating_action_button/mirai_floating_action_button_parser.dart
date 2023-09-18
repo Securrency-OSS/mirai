@@ -5,17 +5,18 @@ import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/button_utils.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiFloatingActionButtonParser
     extends MiraiParser<MiraiFloatingActionButton> {
   const MiraiFloatingActionButtonParser();
 
   @override
-  MiraiFloatingActionButton getModel(Map<String, dynamic> json) =>
-      MiraiFloatingActionButton.fromJson(json);
+  String get type => WidgetType.floatingActionButton.name;
 
   @override
-  String get type => WidgetType.floatingActionButton.name;
+  MiraiFloatingActionButton getModel(Map<String, dynamic> json) =>
+      MiraiFloatingActionButton.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiFloatingActionButton model) {

@@ -1,5 +1,5 @@
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/utils/log.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiRegistry {
   MiraiRegistry._internal();

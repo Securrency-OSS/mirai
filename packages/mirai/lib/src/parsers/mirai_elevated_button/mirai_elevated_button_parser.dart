@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiElevatedButtonParser extends MiraiParser<MiraiElevatedButton> {
   const MiraiElevatedButtonParser();
 
   @override
-  MiraiElevatedButton getModel(Map<String, dynamic> json) =>
-      MiraiElevatedButton.fromJson(json);
+  String get type => WidgetType.elevatedButton.name;
 
   @override
-  String get type => WidgetType.elevatedButton.name;
+  MiraiElevatedButton getModel(Map<String, dynamic> json) =>
+      MiraiElevatedButton.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiElevatedButton model) {

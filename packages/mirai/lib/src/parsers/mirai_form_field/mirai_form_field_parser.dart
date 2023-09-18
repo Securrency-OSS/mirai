@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiFormFieldParser extends MiraiParser<MiraiFormField> {
   const MiraiFormFieldParser();

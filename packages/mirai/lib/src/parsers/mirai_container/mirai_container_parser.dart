@@ -5,16 +5,17 @@ import 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiContainerParser extends MiraiParser<MiraiContainer> {
   const MiraiContainerParser();
 
   @override
-  MiraiContainer getModel(Map<String, dynamic> json) =>
-      MiraiContainer.fromJson(json);
+  String get type => WidgetType.container.name;
 
   @override
-  String get type => WidgetType.container.name;
+  MiraiContainer getModel(Map<String, dynamic> json) =>
+      MiraiContainer.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiContainer model) {

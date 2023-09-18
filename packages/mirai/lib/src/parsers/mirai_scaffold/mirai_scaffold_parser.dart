@@ -3,6 +3,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_scaffold/mirai_scaffold.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
   const MiraiScaffoldParser();

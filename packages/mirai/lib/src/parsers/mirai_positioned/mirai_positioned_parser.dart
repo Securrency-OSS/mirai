@@ -3,6 +3,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_positioned/mirai_positioned.dart';
 import 'package:mirai/src/parsers/mirai_rect/mirai_rect.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiPositionedParser extends MiraiParser<MiraiPositioned> {
   const MiraiPositionedParser();
