@@ -38,8 +38,7 @@ dependencies:
   json_annotation: ^4.8.1
   flutter_bloc: ^8.1.3
   mirai:
-    path: ../../packages/mirai
-  # mirai_webview: ^0.0.1
+  mirai_webview:
 
 dev_dependencies:
   flutter_test:

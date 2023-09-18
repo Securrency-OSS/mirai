@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_row/mirai_row.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiRowParser extends MiraiParser<MiraiRow> {
   const MiraiRowParser();

@@ -3,16 +3,17 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
   const MiraiIconButtonParser();
 
   @override
-  MiraiIconButton getModel(Map<String, dynamic> json) =>
-      MiraiIconButton.fromJson(json);
+  String get type => WidgetType.iconButton.name;
 
   @override
-  String get type => WidgetType.iconButton.name;
+  MiraiIconButton getModel(Map<String, dynamic> json) =>
+      MiraiIconButton.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiIconButton model) {

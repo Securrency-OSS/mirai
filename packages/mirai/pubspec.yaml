@@ -15,6 +15,7 @@ dependencies:
   json_annotation: ^4.8.1
   logger: ^1.4.0
   dio: ^5.2.0+1
+  mirai_framework: ^0.0.1
 
 dev_dependencies:
   flutter_test:

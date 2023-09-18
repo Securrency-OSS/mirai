@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/framework/framework.dart';
+import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiTabParser extends MiraiParser<MiraiTab> {
   const MiraiTabParser();

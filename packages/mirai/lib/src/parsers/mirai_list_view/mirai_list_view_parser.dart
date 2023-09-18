@@ -3,6 +3,7 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_list_view/mirai_list_view.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiListViewParser extends MiraiParser<MiraiListView> {
   const MiraiListViewParser({this.controller});
@@ -10,11 +11,11 @@ class MiraiListViewParser extends MiraiParser<MiraiListView> {
   final ScrollController? controller;
 
   @override
-  MiraiListView getModel(Map<String, dynamic> json) =>
-      MiraiListView.fromJson(json);
+  String get type => WidgetType.listView.name;
 
   @override
-  String get type => WidgetType.listView.name;
+  MiraiListView getModel(Map<String, dynamic> json) =>
+      MiraiListView.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiListView model) {
