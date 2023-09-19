@@ -400,7 +400,7 @@ packages:
       path: "../../packages/mirai_framework"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   mirai_webview:
     dependency: "direct main"
     description:
