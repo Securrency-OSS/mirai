@@ -1,3 +1,7 @@
+## 0.5.1
+
+- minor changes
+
 ## 0.5.0
 
 - feat: Add support for the Custom Action by @RodolfoSilva

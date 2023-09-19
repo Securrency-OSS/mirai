@@ -393,7 +393,7 @@ packages:
       path: "../../packages/mirai"
       relative: true
     source: path
-    version: "0.5.0"
+    version: "0.5.1"
   mirai_framework:
     dependency: "direct overridden"
     description:
@@ -407,7 +407,7 @@ packages:
       path: "../../packages/mirai_webview"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   nested:
     dependency: transitive
     description:
