@@ -1,18 +1,4 @@
-# Mirai Framework
-
-A Framework that contains parsers for widgets and actions in `Mirai`.
-
-## Installation 🚀
-
-First, we need to add Mirai Framework to our pubspec.yaml file.
-
-Install the plugin by running the following command from the project root:
-
-```bash
-flutter pub add mirai_framework
-```
-
-## Usage
+## Example
 
 1. Import `mirai_framework.dart` at the top of your parser file.
 
