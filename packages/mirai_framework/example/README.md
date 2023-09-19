@@ -1,25 +1,4 @@
-# Mirai Framework
-
-The Mirai Framework package contains the framework files for (Mirai)[https://github.com/Securrency-OSS/mirai], such as MiraiParser and MiraiActionParser. These classes provide a simple way to create custom parsers for widgets and actions in Mirai. This can be useful for extending the functionality of Mirai or for implementing custom widgets and actions.
-
-Here are some examples of how the Mirai Framework package can be used:
-
-- Create a custom parser for a new widget that is not supported by Mirai out of the box.
-- Create a custom parser for a widget that has additional functionality, such as the ability to handle user input.
-- Create a custom action parser to handle a new type of action, such as sending a message to a remote server.
-- Create a custom action parser to handle an existing action in a different way, such as logging the action before it is executed.
-
-## Installation 🚀
-
-First, we need to add Mirai Framework to our pubspec.yaml file.
-
-Install the plugin by running the following command from the project root:
-
-```bash
-flutter pub add mirai_framework
-```
-
-## Usage
+## Example
 
 1. Import `mirai_framework.dart` at the top of your parser file.
 
@@ -35,8 +14,8 @@ flutter pub add mirai_framework
         @freezed
         class MyCustomWidget with _$MyCustomWidget { ... }
     ```
-   
-    a. Let's say we are initializing a widget parser.
+
+   a. Let's say we are initializing a widget parser.
 
     ```dart
     class MiraiWidgetPraser extends MiraiParser<MyCustomWidget> { 
@@ -44,7 +23,7 @@ flutter pub add mirai_framework
     }
     ```
 
-    b. Let's say we are initializing an action parser.
+   b. Let's say we are initializing an action parser.
 
     ```dart
     class MiraiActionPraser  extends MiraiActionParser<dynamic> {
@@ -54,7 +33,7 @@ flutter pub add mirai_framework
 
 3. Now implement the required methods in your custom parser.
 
-    a. Let's say we are building a widget parser.
+   a. Let's say we are building a widget parser.
 
     ```dart
     class MiraiWidgetParser  extends MiraiParser<MyCustomWidget> {
@@ -78,7 +57,7 @@ flutter pub add mirai_framework
 
     ```
 
-     b. Let's say we are building an action parser.
+   b. Let's say we are building an action parser.
 
     ```dart
     class MiraiActionPraser  extends MiraiActionParser<dynamic> {
