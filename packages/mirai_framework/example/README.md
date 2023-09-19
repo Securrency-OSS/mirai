@@ -8,21 +8,22 @@
 
 2. Initialize your custom parser for a widget or an action and extend it from `MiraiParser` or `MiraiActionParser` like this.
 
-    a. Let's say we are initializing a widget parser.
+    ```dart
+        // define `MyCustomWidget`
+    
+        @freezed
+        class MyCustomWidget with _$MyCustomWidget { ... }
+    ```
 
+   a. Let's say we are initializing a widget parser.
 
     ```dart
     class MiraiWidgetPraser extends MiraiParser<MyCustomWidget> { 
         ... 
     }
-
-    // define `MyCustomWidget`
-
-    @freezed
-    class MyCustomWidget with _$MyCustomWidget { ... }
     ```
 
-    b. Let's say we are initializing an action parser.
+   b. Let's say we are initializing an action parser.
 
     ```dart
     class MiraiActionPraser  extends MiraiActionParser<dynamic> {
@@ -32,10 +33,10 @@
 
 3. Now implement the required methods in your custom parser.
 
-    a. Let's say we are building a widget parser.
+   a. Let's say we are building a widget parser.
 
     ```dart
-    class MiraiWidgetPraser  extends MiraiParser<MyCustomWidget> {
+    class MiraiWidgetParser  extends MiraiParser<MyCustomWidget> {
         @override
         MyCustomWidget getModel(Map<String, dynamic> json) {
             // TODO: implement getModel
@@ -56,7 +57,7 @@
 
     ```
 
-     a. Let's say we are building an action parser.
+   b. Let's say we are building an action parser.
 
     ```dart
     class MiraiActionPraser  extends MiraiActionParser<dynamic> {
@@ -76,5 +77,4 @@
             throw UnimplementedError();
         }
     }
-
     ```
