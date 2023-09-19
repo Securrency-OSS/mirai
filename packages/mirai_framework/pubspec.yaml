@@ -1,6 +1,6 @@
 name: mirai_framework
 description: A local package containing Mirai framework files
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Securrency-OSS/mirai
 
 environment:
