@@ -39,6 +39,7 @@ dependencies:
   flutter_bloc: ^8.1.3
   mirai: ^0.5.1
   mirai_webview: ^0.0.2
+  dio:
 
 dev_dependencies:
   flutter_test:

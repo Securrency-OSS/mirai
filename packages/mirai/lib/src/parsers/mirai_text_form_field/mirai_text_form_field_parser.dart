@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
-import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
+import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
@@ -39,10 +38,10 @@ class _TextFormFieldWidget extends StatefulWidget {
 
   final MiraiTextFormField model;
   @override
-  State<_TextFormFieldWidget> createState() => __TextFormFieldWidgetState();
+  State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
 }
 
-class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
+class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
   TextEditingController controller = TextEditingController();
   FocusNode? focusNode = FocusNode();
   bool obscureText = false;
@@ -50,9 +49,9 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
   @override
   void initState() {
     if (widget.model.id != null) {
-      context
-          .read<MiraiFormCubit>()
-          .registerValue(widget.model.id!, widget.model.initialValue ?? "");
+      // context
+      //     .read<MiraiFormCubit>()
+      //     .registerValue(widget.model.id!, widget.model.initialValue ?? "");
     }
 
     controller = TextEditingController(text: widget.model.initialValue);
@@ -62,15 +61,19 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final formScope = MiraiFormScope.of(context);
     return TextFormField(
       controller: controller,
       focusNode: focusNode,
       onChanged: (value) {
+        Log.d("id: ${widget.model.id}");
         if (widget.model.id != null) {
-          context.read<MiraiFormCubit>().updateValue(
-                widget.model.id!,
-                value,
-              );
+          formScope.formData[widget.model.id!] = value;
+          Log.d(formScope.formData);
+          // context.read<MiraiFormCubit>().updateValue(
+          //       widget.model.id!,
+          //       value,
+          //     );
         }
       },
       initialValue: widget.model.initialValue,
@@ -116,9 +119,9 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
         );
 
         if (widget.model.id != null) {
-          context
-              .read<MiraiFormCubit>()
-              .updateValidation(widget.model.id!, validation == null);
+          // context
+          //     .read<MiraiFormCubit>()
+          //     .updateValidation(widget.model.id!, validation == null);
         }
 
         return validation;
@@ -155,9 +158,9 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           String? compareVal;
           if (widget.model.compareId != null) {
             try {
-              compareVal = context
-                  .read<MiraiFormCubit>()
-                  .getValue(widget.model.compareId!);
+              // compareVal = context
+              //     .read<MiraiFormCubit>()
+              //     .getValue(widget.model.compareId!);
             } catch (e) {
               Log.e(e);
             }

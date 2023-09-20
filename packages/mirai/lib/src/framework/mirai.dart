@@ -5,16 +5,17 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
+import 'package:mirai/src/action_parsers/mirai_form_data/mirai_form_data_parser.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
-import 'package:mirai/src/network/mirai_network.dart';
-import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
-import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
+import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
@@ -59,7 +60,6 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiFormParser(),
-    const MiraiFormFieldParser(),
     const MiraiCheckBoxWidgetParser(),
     const MiraiExpandedParser(),
     const MiraiFlexibleParser(),
@@ -67,11 +67,11 @@ class Mirai {
   ];
 
   static final _actionParsers = <MiraiActionParser>[
-    const MiraiNoneActionParser(),
     const MiraiNavigateActionParser(),
-    const MiraiRequestActionParser(),
+    const MiraiNetworkRequestParser(),
     const MiraiModalBottomSheetActionParser(),
     const MiraiDialogActionParser(),
+    const MiraiFormDataActionParser(),
   ];
 
   static Future<void> initialize({
@@ -83,7 +83,7 @@ class Mirai {
     _actionParsers.addAll(actionParsers);
     MiraiRegistry.instance.registerAll(_parsers);
     MiraiRegistry.instance.registerAllActions(_actionParsers);
-    MiraiNetwork.initialize(dio ?? Dio());
+    MiraiNetworkService.initialize(dio ?? Dio());
   }
 
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
@@ -127,12 +127,13 @@ class Mirai {
   }
 
   static Widget fromNetwork(
-    MiraiRequest request, {
+    MiraiNetworkRequest request,
+    BuildContext context, {
     LoadingWidgetBuilder? loadingWidget,
     ErrorWidgetBuilder? errorWidget,
   }) {
     return FutureBuilder<Response?>(
-      future: MiraiNetwork.request(request),
+      future: MiraiNetworkService.request(request, context),
       builder: (context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:

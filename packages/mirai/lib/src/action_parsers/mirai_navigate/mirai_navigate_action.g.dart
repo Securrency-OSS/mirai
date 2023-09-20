@@ -11,7 +11,8 @@ _$_MiraiNavigateAction _$$_MiraiNavigateActionFromJson(
     _$_MiraiNavigateAction(
       request: json['request'] == null
           ? null
-          : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
+          : MiraiNetworkRequest.fromJson(
+              json['request'] as Map<String, dynamic>),
       widgetJson: json['widgetJson'] as Map<String, dynamic>?,
       assetPath: json['assetPath'] as String?,
       routeName: json['routeName'] as String?,

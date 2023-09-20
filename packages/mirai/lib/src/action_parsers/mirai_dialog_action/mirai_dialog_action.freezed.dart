@@ -21,7 +21,7 @@ MiraiDialogAction _$MiraiDialogActionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiDialogAction {
   Map<String, dynamic>? get widget => throw _privateConstructorUsedError;
-  MiraiRequest? get request => throw _privateConstructorUsedError;
+  MiraiNetworkRequest? get request => throw _privateConstructorUsedError;
   String? get assetPath => throw _privateConstructorUsedError;
   bool get barrierDismissible => throw _privateConstructorUsedError;
   String? get barrierColor => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $MiraiDialogActionCopyWith<$Res> {
   @useResult
   $Res call(
       {Map<String, dynamic>? widget,
-      MiraiRequest? request,
+      MiraiNetworkRequest? request,
       String? assetPath,
       bool barrierDismissible,
       String? barrierColor,
@@ -52,7 +52,7 @@ abstract class $MiraiDialogActionCopyWith<$Res> {
       bool useSafeArea,
       TraversalEdgeBehavior? traversalEdgeBehavior});
 
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
 }
 
 /// @nodoc
@@ -85,7 +85,7 @@ class _$MiraiDialogActionCopyWithImpl<$Res, $Val extends MiraiDialogAction>
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -115,12 +115,12 @@ class _$MiraiDialogActionCopyWithImpl<$Res, $Val extends MiraiDialogAction>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiRequestCopyWith<$Res>? get request {
+  $MiraiNetworkRequestCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
-    return $MiraiRequestCopyWith<$Res>(_value.request!, (value) {
+    return $MiraiNetworkRequestCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value) as $Val);
     });
   }
@@ -136,7 +136,7 @@ abstract class _$$_MiraiDialogActionCopyWith<$Res>
   @useResult
   $Res call(
       {Map<String, dynamic>? widget,
-      MiraiRequest? request,
+      MiraiNetworkRequest? request,
       String? assetPath,
       bool barrierDismissible,
       String? barrierColor,
@@ -145,7 +145,7 @@ abstract class _$$_MiraiDialogActionCopyWith<$Res>
       TraversalEdgeBehavior? traversalEdgeBehavior});
 
   @override
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
 }
 
 /// @nodoc
@@ -176,7 +176,7 @@ class __$$_MiraiDialogActionCopyWithImpl<$Res>
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -233,7 +233,7 @@ class _$_MiraiDialogAction implements _MiraiDialogAction {
   }
 
   @override
-  final MiraiRequest? request;
+  final MiraiNetworkRequest? request;
   @override
   final String? assetPath;
   @override
@@ -306,7 +306,7 @@ class _$_MiraiDialogAction implements _MiraiDialogAction {
 abstract class _MiraiDialogAction implements MiraiDialogAction {
   const factory _MiraiDialogAction(
           {final Map<String, dynamic>? widget,
-          final MiraiRequest? request,
+          final MiraiNetworkRequest? request,
           final String? assetPath,
           final bool barrierDismissible,
           final String? barrierColor,
@@ -321,7 +321,7 @@ abstract class _MiraiDialogAction implements MiraiDialogAction {
   @override
   Map<String, dynamic>? get widget;
   @override
-  MiraiRequest? get request;
+  MiraiNetworkRequest? get request;
   @override
   String? get assetPath;
   @override

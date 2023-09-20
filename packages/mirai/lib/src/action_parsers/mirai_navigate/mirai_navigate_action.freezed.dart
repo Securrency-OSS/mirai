@@ -20,7 +20,7 @@ MiraiNavigateAction _$MiraiNavigateActionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiNavigateAction {
-  MiraiRequest? get request => throw _privateConstructorUsedError;
+  MiraiNetworkRequest? get request => throw _privateConstructorUsedError;
   Map<String, dynamic>? get widgetJson => throw _privateConstructorUsedError;
   String? get assetPath => throw _privateConstructorUsedError;
   String? get routeName => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $MiraiNavigateActionCopyWith<$Res> {
       _$MiraiNavigateActionCopyWithImpl<$Res, MiraiNavigateAction>;
   @useResult
   $Res call(
-      {MiraiRequest? request,
+      {MiraiNetworkRequest? request,
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       String? routeName,
@@ -49,7 +49,7 @@ abstract class $MiraiNavigateActionCopyWith<$Res> {
       Map<String, dynamic>? result,
       Map<String, dynamic>? arguments});
 
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
 }
 
 /// @nodoc
@@ -77,7 +77,7 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       widgetJson: freezed == widgetJson
           ? _value.widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
@@ -107,12 +107,12 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiRequestCopyWith<$Res>? get request {
+  $MiraiNetworkRequestCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
-    return $MiraiRequestCopyWith<$Res>(_value.request!, (value) {
+    return $MiraiNetworkRequestCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value) as $Val);
     });
   }
@@ -127,7 +127,7 @@ abstract class _$$_MiraiNavigateActionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiRequest? request,
+      {MiraiNetworkRequest? request,
       Map<String, dynamic>? widgetJson,
       String? assetPath,
       String? routeName,
@@ -136,7 +136,7 @@ abstract class _$$_MiraiNavigateActionCopyWith<$Res>
       Map<String, dynamic>? arguments});
 
   @override
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
 }
 
 /// @nodoc
@@ -162,7 +162,7 @@ class __$$_MiraiNavigateActionCopyWithImpl<$Res>
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       widgetJson: freezed == widgetJson
           ? _value._widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
@@ -211,7 +211,7 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
       _$$_MiraiNavigateActionFromJson(json);
 
   @override
-  final MiraiRequest? request;
+  final MiraiNetworkRequest? request;
   final Map<String, dynamic>? _widgetJson;
   @override
   Map<String, dynamic>? get widgetJson {
@@ -301,7 +301,7 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
 
 abstract class _MiraiNavigateAction extends MiraiNavigateAction {
   factory _MiraiNavigateAction(
-      {final MiraiRequest? request,
+      {final MiraiNetworkRequest? request,
       final Map<String, dynamic>? widgetJson,
       final String? assetPath,
       final String? routeName,
@@ -314,7 +314,7 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
       _$_MiraiNavigateAction.fromJson;
 
   @override
-  MiraiRequest? get request;
+  MiraiNetworkRequest? get request;
   @override
   Map<String, dynamic>? get widgetJson;
   @override

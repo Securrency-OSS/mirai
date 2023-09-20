@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'mirai_request.dart';
+part of 'mirai_network_request.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-MiraiRequest _$MiraiRequestFromJson(Map<String, dynamic> json) {
-  return _MiraiRequest.fromJson(json);
+MiraiNetworkRequest _$MiraiNetworkRequestFromJson(Map<String, dynamic> json) {
+  return _MiraiNetworkRequest.fromJson(json);
 }
 
 /// @nodoc
-mixin _$MiraiRequest {
+mixin _$MiraiNetworkRequest {
   String get url => throw _privateConstructorUsedError;
   Method get method => throw _privateConstructorUsedError;
   Map<String, dynamic>? get queryParameters =>
@@ -30,15 +30,15 @@ mixin _$MiraiRequest {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MiraiRequestCopyWith<MiraiRequest> get copyWith =>
+  $MiraiNetworkRequestCopyWith<MiraiNetworkRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MiraiRequestCopyWith<$Res> {
-  factory $MiraiRequestCopyWith(
-          MiraiRequest value, $Res Function(MiraiRequest) then) =
-      _$MiraiRequestCopyWithImpl<$Res, MiraiRequest>;
+abstract class $MiraiNetworkRequestCopyWith<$Res> {
+  factory $MiraiNetworkRequestCopyWith(
+          MiraiNetworkRequest value, $Res Function(MiraiNetworkRequest) then) =
+      _$MiraiNetworkRequestCopyWithImpl<$Res, MiraiNetworkRequest>;
   @useResult
   $Res call(
       {String url,
@@ -50,9 +50,9 @@ abstract class $MiraiRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MiraiRequestCopyWithImpl<$Res, $Val extends MiraiRequest>
-    implements $MiraiRequestCopyWith<$Res> {
-  _$MiraiRequestCopyWithImpl(this._value, this._then);
+class _$MiraiNetworkRequestCopyWithImpl<$Res, $Val extends MiraiNetworkRequest>
+    implements $MiraiNetworkRequestCopyWith<$Res> {
+  _$MiraiNetworkRequestCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -99,11 +99,11 @@ class _$MiraiRequestCopyWithImpl<$Res, $Val extends MiraiRequest>
 }
 
 /// @nodoc
-abstract class _$$_MiraiRequestCopyWith<$Res>
-    implements $MiraiRequestCopyWith<$Res> {
-  factory _$$_MiraiRequestCopyWith(
-          _$_MiraiRequest value, $Res Function(_$_MiraiRequest) then) =
-      __$$_MiraiRequestCopyWithImpl<$Res>;
+abstract class _$$_MiraiNetworkRequestCopyWith<$Res>
+    implements $MiraiNetworkRequestCopyWith<$Res> {
+  factory _$$_MiraiNetworkRequestCopyWith(_$_MiraiNetworkRequest value,
+          $Res Function(_$_MiraiNetworkRequest) then) =
+      __$$_MiraiNetworkRequestCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_MiraiRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiRequestCopyWithImpl<$Res>
-    extends _$MiraiRequestCopyWithImpl<$Res, _$_MiraiRequest>
-    implements _$$_MiraiRequestCopyWith<$Res> {
-  __$$_MiraiRequestCopyWithImpl(
-      _$_MiraiRequest _value, $Res Function(_$_MiraiRequest) _then)
+class __$$_MiraiNetworkRequestCopyWithImpl<$Res>
+    extends _$MiraiNetworkRequestCopyWithImpl<$Res, _$_MiraiNetworkRequest>
+    implements _$$_MiraiNetworkRequestCopyWith<$Res> {
+  __$$_MiraiNetworkRequestCopyWithImpl(_$_MiraiNetworkRequest _value,
+      $Res Function(_$_MiraiNetworkRequest) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_MiraiRequestCopyWithImpl<$Res>
     Object? contentType = freezed,
     Object? data = freezed,
   }) {
-    return _then(_$_MiraiRequest(
+    return _then(_$_MiraiNetworkRequest(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -164,10 +164,10 @@ class __$$_MiraiRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiRequest implements _MiraiRequest {
-  const _$_MiraiRequest(
+class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
+  const _$_MiraiNetworkRequest(
       {required this.url,
-      required this.method,
+      this.method = Method.get,
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       this.contentType,
@@ -176,12 +176,13 @@ class _$_MiraiRequest implements _MiraiRequest {
         _headers = headers,
         _data = data;
 
-  factory _$_MiraiRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiRequestFromJson(json);
+  factory _$_MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiNetworkRequestFromJson(json);
 
   @override
   final String url;
   @override
+  @JsonKey()
   final Method method;
   final Map<String, dynamic>? _queryParameters;
   @override
@@ -217,14 +218,14 @@ class _$_MiraiRequest implements _MiraiRequest {
 
   @override
   String toString() {
-    return 'MiraiRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, data: $data)';
+    return 'MiraiNetworkRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, data: $data)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiRequest &&
+            other is _$_MiraiNetworkRequest &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.method, method) || other.method == method) &&
             const DeepCollectionEquality()
@@ -249,28 +250,29 @@ class _$_MiraiRequest implements _MiraiRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiRequestCopyWith<_$_MiraiRequest> get copyWith =>
-      __$$_MiraiRequestCopyWithImpl<_$_MiraiRequest>(this, _$identity);
+  _$$_MiraiNetworkRequestCopyWith<_$_MiraiNetworkRequest> get copyWith =>
+      __$$_MiraiNetworkRequestCopyWithImpl<_$_MiraiNetworkRequest>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiRequestToJson(
+    return _$$_MiraiNetworkRequestToJson(
       this,
     );
   }
 }
 
-abstract class _MiraiRequest implements MiraiRequest {
-  const factory _MiraiRequest(
+abstract class _MiraiNetworkRequest implements MiraiNetworkRequest {
+  const factory _MiraiNetworkRequest(
       {required final String url,
-      required final Method method,
+      final Method method,
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       final String? contentType,
-      final Map<String, dynamic>? data}) = _$_MiraiRequest;
+      final Map<String, dynamic>? data}) = _$_MiraiNetworkRequest;
 
-  factory _MiraiRequest.fromJson(Map<String, dynamic> json) =
-      _$_MiraiRequest.fromJson;
+  factory _MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =
+      _$_MiraiNetworkRequest.fromJson;
 
   @override
   String get url;
@@ -286,6 +288,6 @@ abstract class _MiraiRequest implements MiraiRequest {
   Map<String, dynamic>? get data;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiRequestCopyWith<_$_MiraiRequest> get copyWith =>
+  _$$_MiraiNetworkRequestCopyWith<_$_MiraiNetworkRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }

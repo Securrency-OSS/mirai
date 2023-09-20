@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action_parsers/mirai_navigate_action/mirai_navigate_action.dart';
+import 'package:mirai/src/action_parsers/mirai_navigate/mirai_navigate_action.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/utils/action_type.dart';
 import 'package:mirai_framework/mirai_framework.dart';
@@ -22,7 +22,7 @@ class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
     if (model.widgetJson != null) {
       widget = Mirai.fromJson(model.widgetJson, context);
     } else if (model.request != null) {
-      widget = Mirai.fromNetwork(model.request!);
+      widget = Mirai.fromNetwork(model.request!, context);
     } else if (model.assetPath != null) {
       widget = Mirai.fromAssets(model.assetPath!);
     }

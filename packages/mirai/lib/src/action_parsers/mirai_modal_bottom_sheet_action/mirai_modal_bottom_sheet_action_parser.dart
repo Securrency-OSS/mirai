@@ -40,7 +40,7 @@ class MiraiModalBottomSheetActionParser
       return _showModalBottomSheet(
         context,
         model,
-        Mirai.fromNetwork(model.request!),
+        Mirai.fromNetwork(model.request!, context),
       );
     }
   }

@@ -35,7 +35,7 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
       return _showDialog(
         context,
         model,
-        Mirai.fromNetwork(model.request!),
+        Mirai.fromNetwork(model.request!, context),
       );
     }
   }
