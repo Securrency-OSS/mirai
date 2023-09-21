@@ -99,18 +99,84 @@
             },
             "onPressed": {
               "actionType": "networkRequest",
-              "url": "https://dummyjson.com/auth/login",
+              "url": "https://demo-identity.securrency.com/connect/token",
               "method": "post",
-              "headers": {
-                "Content-Type": "application/json"
-              },
+              "contentType": "application/x-www-form-urlencoded",
               "data": {
                 "username": {
                   "actionType": "getFormDataValue",
                   "id": "email"
                 },
-                "password": "0lelplR"
-              }
+                "password": {
+                  "actionType": "getFormDataValue",
+                  "id": "password"
+                },
+                "client_id": "mobile",
+                "scope": "openid email roles profile identity.public identity.admin entity securrency.finance securrency.exchange securrency.ens",
+                "grant_type": "mobile"
+              },
+              "results": [
+                {
+                  "statusCode": 200,
+                  "action": {
+                    "actionType": "navigate",
+                    "navigationStyle": "pushReplacement",
+                    "assetPath": "assets/json/user_profile_screen.json"
+                  }
+                },
+                {
+                  "statusCode": 400,
+                  "action": {
+                    "actionType": "showDialog",
+                    "widget": {
+                      "type": "alertDialog",
+                      "titlePadding": {
+                        "top": 8,
+                        "left": 12,
+                        "right": 12
+                      },
+                      "contentPadding": {
+                        "top": 8,
+                        "left": 12,
+                        "right": 12
+                      },
+                      "title": {
+                        "type": "text",
+                        "data": "Failed to SignIn",
+                        "align": "center",
+                        "style": {
+                          "fontSize": 21
+                        }
+                      },
+                      "content": {
+                        "type": "text",
+                        "data": "Invalid username or password.",
+                        "align": "center",
+                        "style": {
+                          "fontSize": 14
+                        }
+                      },
+                      "actions": [
+                        {
+                          "type": "textButton",
+                          "child": {
+                            "type": "text",
+                            "data": "OK"
+                          },
+                          "onPressed": {
+                            "actionType": "navigate",
+                            "navigationStyle": "pop"
+                          }
+                        },
+                        {
+                          "type": "sizedBox",
+                          "width": 12
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
             }
           }
         ]
