@@ -101,9 +101,6 @@
               "actionType": "networkRequest",
               "url": "https://demo-identity.securrency.com/connect/token",
               "method": "post",
-              "headers": {
-                "contentType": "application/x-www-form-urlencoded"
-              },
               "contentType": "application/x-www-form-urlencoded",
               "data": {
                 "username": {
