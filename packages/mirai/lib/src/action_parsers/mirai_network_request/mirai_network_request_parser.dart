@@ -1,11 +1,11 @@
 import 'dart:async';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
 import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/action_type.dart';
-import 'package:mirai/src/utils/log.dart';
 
 class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
   const MiraiNetworkRequestParser();
@@ -19,9 +19,17 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
 
   @override
   FutureOr onCall(BuildContext context, MiraiNetworkRequest model) async {
-    Log.d(model);
-    final result = await MiraiNetworkService.request(model, context);
-    Log.d(result);
-    return result;
+    Response<dynamic>? response;
+    try {
+      response = await MiraiNetworkService.request(model, context);
+    } on DioException catch (e) {
+      response = e.response;
+    }
+
+    final expectedResult = model.results
+        .firstWhere((result) => response?.statusCode == result.statusCode);
+
+    return Mirai.onCallFromJson(
+        expectedResult.action, context.mounted ? context : context);
   }
 }

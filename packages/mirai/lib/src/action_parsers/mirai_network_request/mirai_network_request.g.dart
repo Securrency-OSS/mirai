@@ -16,6 +16,11 @@ _$_MiraiNetworkRequest _$$_MiraiNetworkRequestFromJson(
       headers: json['headers'] as Map<String, dynamic>?,
       contentType: json['contentType'] as String?,
       data: json['data'] as Map<String, dynamic>?,
+      results: (json['results'] as List<dynamic>?)
+              ?.map(
+                  (e) => MiraiNetworkResult.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_MiraiNetworkRequestToJson(
@@ -27,6 +32,7 @@ Map<String, dynamic> _$$_MiraiNetworkRequestToJson(
       'headers': instance.headers,
       'contentType': instance.contentType,
       'data': instance.data,
+      'results': instance.results,
     };
 
 const _$MethodEnumMap = {

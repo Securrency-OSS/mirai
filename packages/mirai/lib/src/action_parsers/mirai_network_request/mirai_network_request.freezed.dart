@@ -27,6 +27,7 @@ mixin _$MiraiNetworkRequest {
   Map<String, dynamic>? get headers => throw _privateConstructorUsedError;
   String? get contentType => throw _privateConstructorUsedError;
   Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  List<MiraiNetworkResult> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +47,8 @@ abstract class $MiraiNetworkRequestCopyWith<$Res> {
       Map<String, dynamic>? queryParameters,
       Map<String, dynamic>? headers,
       String? contentType,
-      Map<String, dynamic>? data});
+      Map<String, dynamic>? data,
+      List<MiraiNetworkResult> results});
 }
 
 /// @nodoc
@@ -68,6 +70,7 @@ class _$MiraiNetworkRequestCopyWithImpl<$Res, $Val extends MiraiNetworkRequest>
     Object? headers = freezed,
     Object? contentType = freezed,
     Object? data = freezed,
+    Object? results = null,
   }) {
     return _then(_value.copyWith(
       url: null == url
@@ -94,6 +97,10 @@ class _$MiraiNetworkRequestCopyWithImpl<$Res, $Val extends MiraiNetworkRequest>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<MiraiNetworkResult>,
     ) as $Val);
   }
 }
@@ -112,7 +119,8 @@ abstract class _$$_MiraiNetworkRequestCopyWith<$Res>
       Map<String, dynamic>? queryParameters,
       Map<String, dynamic>? headers,
       String? contentType,
-      Map<String, dynamic>? data});
+      Map<String, dynamic>? data,
+      List<MiraiNetworkResult> results});
 }
 
 /// @nodoc
@@ -132,6 +140,7 @@ class __$$_MiraiNetworkRequestCopyWithImpl<$Res>
     Object? headers = freezed,
     Object? contentType = freezed,
     Object? data = freezed,
+    Object? results = null,
   }) {
     return _then(_$_MiraiNetworkRequest(
       url: null == url
@@ -158,6 +167,10 @@ class __$$_MiraiNetworkRequestCopyWithImpl<$Res>
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<MiraiNetworkResult>,
     ));
   }
 }
@@ -171,10 +184,12 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       this.contentType,
-      final Map<String, dynamic>? data})
+      final Map<String, dynamic>? data,
+      final List<MiraiNetworkResult> results = const []})
       : _queryParameters = queryParameters,
         _headers = headers,
-        _data = data;
+        _data = data,
+        _results = results;
 
   factory _$_MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiNetworkRequestFromJson(json);
@@ -216,9 +231,18 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
     return EqualUnmodifiableMapView(value);
   }
 
+  final List<MiraiNetworkResult> _results;
+  @override
+  @JsonKey()
+  List<MiraiNetworkResult> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
+
   @override
   String toString() {
-    return 'MiraiNetworkRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, data: $data)';
+    return 'MiraiNetworkRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, data: $data, results: $results)';
   }
 
   @override
@@ -233,7 +257,8 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
             const DeepCollectionEquality().equals(other._headers, _headers) &&
             (identical(other.contentType, contentType) ||
                 other.contentType == contentType) &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other._results, _results));
   }
 
   @JsonKey(ignore: true)
@@ -245,7 +270,8 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
       const DeepCollectionEquality().hash(_queryParameters),
       const DeepCollectionEquality().hash(_headers),
       contentType,
-      const DeepCollectionEquality().hash(_data));
+      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(_results));
 
   @JsonKey(ignore: true)
   @override
@@ -269,7 +295,8 @@ abstract class _MiraiNetworkRequest implements MiraiNetworkRequest {
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       final String? contentType,
-      final Map<String, dynamic>? data}) = _$_MiraiNetworkRequest;
+      final Map<String, dynamic>? data,
+      final List<MiraiNetworkResult> results}) = _$_MiraiNetworkRequest;
 
   factory _MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =
       _$_MiraiNetworkRequest.fromJson;
@@ -286,6 +313,8 @@ abstract class _MiraiNetworkRequest implements MiraiNetworkRequest {
   String? get contentType;
   @override
   Map<String, dynamic>? get data;
+  @override
+  List<MiraiNetworkResult> get results;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiNetworkRequestCopyWith<_$_MiraiNetworkRequest> get copyWith =>

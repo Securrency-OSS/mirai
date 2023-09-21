@@ -1,0 +1,43 @@
+{
+    "type": "scaffold",
+    "resizeToAvoidBottomInset": false,
+    "appBar": {
+        "type": "appBar",
+        "title": {
+            "type": "text",
+            "data": "Welcome!"
+        }
+    },
+    "body": {
+        "type": "column",
+        "crossAxisAlignment": "start",
+        "children": [
+            {
+                "type": "expanded",
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "top": 24,
+                        "left": 24,
+                        "right": 24,
+                        "bottom": 24
+                    },
+                    "child": {
+                        "type": "column",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "You will see your profile details here.",
+                                "textAlign": "center",
+                                "style": {
+                                    "fontSize": 16,
+                                    "fontWeight": "w400"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

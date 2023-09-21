@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mirai/src/action_parsers/mirai_network_result/mirai_network_result.dart';
 
 part 'mirai_network_request.freezed.dart';
 part 'mirai_network_request.g.dart';
@@ -19,6 +20,7 @@ class MiraiNetworkRequest with _$MiraiNetworkRequest {
     Map<String, dynamic>? headers,
     String? contentType,
     Map<String, dynamic>? data,
+    @Default([]) List<MiraiNetworkResult> results,
   }) = _MiraiNetworkRequest;
 
   factory MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =>
