@@ -30,7 +30,7 @@ class MiraiNetworkService {
   static Future<Response?> getRequest(MiraiNetworkRequest request) {
     return _dio.get(
       request.url,
-      data: request.data,
+      data: request.body,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
@@ -43,7 +43,7 @@ class MiraiNetworkService {
     MiraiNetworkRequest request,
     BuildContext context,
   ) async {
-    final body = await _getBody(context, request.data);
+    final body = await _getBody(context, request.body);
     return _dio.post(
       request.url,
       data: body,
@@ -58,7 +58,7 @@ class MiraiNetworkService {
   static Future<Response?> putRequest(MiraiNetworkRequest request) async {
     return _dio.put(
       request.url,
-      data: request.data,
+      data: request.body,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
@@ -70,7 +70,7 @@ class MiraiNetworkService {
   static Future<Response?> deleteRequest(MiraiNetworkRequest request) async {
     return _dio.delete(
       request.url,
-      data: request.data,
+      data: request.body,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
@@ -79,28 +79,39 @@ class MiraiNetworkService {
     );
   }
 
-  static Future<Map<String, dynamic>> _getBody(
+  static Future<dynamic> _getBody(
     BuildContext context,
-    Map<String, dynamic>? body,
+    dynamic body,
   ) async {
-    Map<String, dynamic> finalBody = {};
     if (body != null) {
-      body.forEach((key, value) async {
-        if (value is Map && value['actionType'] == "getFormDataValue") {
-          Log.d("This is getFormDataValue");
+      if (body is Map) {
+        Map<String, dynamic> finalBody = {};
 
-          final String formValue = await Future<String>.value(
-            Mirai.onCallFromJson(value as Map<String, dynamic>, context)
-                as String,
-          );
-          Log.d("formValue: $formValue");
-          finalBody[key] = formValue;
-        } else {
-          finalBody[key] = value;
+        body.forEach((key, value) async {
+          if (value is Map && value['actionType'] == "getFormDataValue") {
+            Log.d("This is getFormDataValue");
+
+            final String formValue = await Future<String>.value(
+              Mirai.onCallFromJson(value as Map<String, dynamic>, context)
+                  as String,
+            );
+            Log.d("formValue: $formValue");
+            finalBody[key] = formValue;
+          } else {
+            finalBody[key] = value;
+          }
+        });
+
+        return finalBody;
+      } else if (body is List) {
+        List<dynamic> finalBody = [];
+        for (dynamic value in body) {
+          final result = await _getBody(context, value);
+          finalBody.add(result);
         }
-      });
-    }
 
-    return finalBody;
+        return finalBody;
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@ _$_MiraiNetworkRequest _$$_MiraiNetworkRequestFromJson(
       queryParameters: json['queryParameters'] as Map<String, dynamic>?,
       headers: json['headers'] as Map<String, dynamic>?,
       contentType: json['contentType'] as String?,
-      data: json['data'] as Map<String, dynamic>?,
+      body: json['body'],
       results: (json['results'] as List<dynamic>?)
               ?.map(
                   (e) => MiraiNetworkResult.fromJson(e as Map<String, dynamic>))
@@ -31,7 +31,7 @@ Map<String, dynamic> _$$_MiraiNetworkRequestToJson(
       'queryParameters': instance.queryParameters,
       'headers': instance.headers,
       'contentType': instance.contentType,
-      'data': instance.data,
+      'body': instance.body,
       'results': instance.results,
     };
 

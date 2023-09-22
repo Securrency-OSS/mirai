@@ -102,7 +102,7 @@
               "url": "https://demo-identity.securrency.com/connect/token",
               "method": "post",
               "contentType": "application/x-www-form-urlencoded",
-              "data": {
+              "body": {
                 "username": {
                   "actionType": "getFormDataValue",
                   "id": "email"

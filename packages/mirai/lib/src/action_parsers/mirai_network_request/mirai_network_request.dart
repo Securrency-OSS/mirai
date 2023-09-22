@@ -19,7 +19,7 @@ class MiraiNetworkRequest with _$MiraiNetworkRequest {
     Map<String, dynamic>? queryParameters,
     Map<String, dynamic>? headers,
     String? contentType,
-    Map<String, dynamic>? data,
+    dynamic body,
     @Default([]) List<MiraiNetworkResult> results,
   }) = _MiraiNetworkRequest;
 
