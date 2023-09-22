@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
 
-export 'mirai_dialog_action_parser.dart';
-
 part 'mirai_dialog_action.freezed.dart';
 part 'mirai_dialog_action.g.dart';
 
