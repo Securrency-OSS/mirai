@@ -76,7 +76,6 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           //     );
         }
       },
-      initialValue: widget.model.initialValue,
       keyboardType: widget.model.keyboardType?.value,
       textInputAction: widget.model.textInputAction,
       textCapitalization: widget.model.textCapitalization,
