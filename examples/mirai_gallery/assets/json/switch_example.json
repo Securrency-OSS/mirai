@@ -24,6 +24,7 @@
                         "children": [
                             {
                                 "type": "switchButton",
+                                "switchType" : "cupertino",
                                 "initialValue": true,
                                 "onChanged": {}
                             },
@@ -33,9 +34,21 @@
                             },
                             {
                                 "type": "switchButton",
+                                "switchType" : "adaptive",
                                 "initialValue": false,
                                 "onChanged": {},
-                                "activeColor": "#FF0000"
+                                "inActiveColor": "#FF0000",
+                                "activeColor": "#0000FF"
+                            },
+                            {
+                                "type": "sizedBox",
+                                "width": 20
+                            },
+                            {
+                                "type": "switchButton",
+                                "switchType" : "material",
+                                "initialValue": false,
+                                "onChanged": {}
                             }
                         ]
                     },
