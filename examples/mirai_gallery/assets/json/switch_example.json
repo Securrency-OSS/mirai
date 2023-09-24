@@ -34,7 +34,8 @@
                             {
                                 "type": "switchButton",
                                 "initialValue": false,
-                                "onChanged": {}
+                                "onChanged": {},
+                                "activeColor": "#FF0000"
                             }
                         ]
                     },

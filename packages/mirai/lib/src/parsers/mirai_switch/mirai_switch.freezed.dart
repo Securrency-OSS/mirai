@@ -22,6 +22,16 @@ MiraiSwitch _$MiraiSwitchFromJson(Map<String, dynamic> json) {
 mixin _$MiraiSwitch {
   dynamic get initialValue => throw _privateConstructorUsedError;
   Map<String, dynamic>? get onChanged => throw _privateConstructorUsedError;
+  bool get autofocus => throw _privateConstructorUsedError;
+  bool get disabled => throw _privateConstructorUsedError;
+  String? get activeColor => throw _privateConstructorUsedError;
+  String? get activeTrackColor => throw _privateConstructorUsedError;
+  String? get focusColor => throw _privateConstructorUsedError;
+  String? get hoverColor => throw _privateConstructorUsedError;
+  String? get inactiveThumbColor => throw _privateConstructorUsedError;
+  String? get inactiveTrackColor => throw _privateConstructorUsedError;
+  double? get splashRadius => throw _privateConstructorUsedError;
+  String? get dragStartBehavior => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +45,19 @@ abstract class $MiraiSwitchCopyWith<$Res> {
           MiraiSwitch value, $Res Function(MiraiSwitch) then) =
       _$MiraiSwitchCopyWithImpl<$Res, MiraiSwitch>;
   @useResult
-  $Res call({dynamic initialValue, Map<String, dynamic>? onChanged});
+  $Res call(
+      {dynamic initialValue,
+      Map<String, dynamic>? onChanged,
+      bool autofocus,
+      bool disabled,
+      String? activeColor,
+      String? activeTrackColor,
+      String? focusColor,
+      String? hoverColor,
+      String? inactiveThumbColor,
+      String? inactiveTrackColor,
+      double? splashRadius,
+      String? dragStartBehavior});
 }
 
 /// @nodoc
@@ -53,6 +75,16 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
   $Res call({
     Object? initialValue = freezed,
     Object? onChanged = freezed,
+    Object? autofocus = null,
+    Object? disabled = null,
+    Object? activeColor = freezed,
+    Object? activeTrackColor = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? inactiveThumbColor = freezed,
+    Object? inactiveTrackColor = freezed,
+    Object? splashRadius = freezed,
+    Object? dragStartBehavior = freezed,
   }) {
     return _then(_value.copyWith(
       initialValue: freezed == initialValue
@@ -63,6 +95,46 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
           ? _value.onChanged
           : onChanged // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      disabled: null == disabled
+          ? _value.disabled
+          : disabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      activeColor: freezed == activeColor
+          ? _value.activeColor
+          : activeColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      activeTrackColor: freezed == activeTrackColor
+          ? _value.activeTrackColor
+          : activeTrackColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inactiveThumbColor: freezed == inactiveThumbColor
+          ? _value.inactiveThumbColor
+          : inactiveThumbColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inactiveTrackColor: freezed == inactiveTrackColor
+          ? _value.inactiveTrackColor
+          : inactiveTrackColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      dragStartBehavior: freezed == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -75,7 +147,19 @@ abstract class _$$_MiraiSwitchCopyWith<$Res>
       __$$_MiraiSwitchCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic initialValue, Map<String, dynamic>? onChanged});
+  $Res call(
+      {dynamic initialValue,
+      Map<String, dynamic>? onChanged,
+      bool autofocus,
+      bool disabled,
+      String? activeColor,
+      String? activeTrackColor,
+      String? focusColor,
+      String? hoverColor,
+      String? inactiveThumbColor,
+      String? inactiveTrackColor,
+      double? splashRadius,
+      String? dragStartBehavior});
 }
 
 /// @nodoc
@@ -91,6 +175,16 @@ class __$$_MiraiSwitchCopyWithImpl<$Res>
   $Res call({
     Object? initialValue = freezed,
     Object? onChanged = freezed,
+    Object? autofocus = null,
+    Object? disabled = null,
+    Object? activeColor = freezed,
+    Object? activeTrackColor = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? inactiveThumbColor = freezed,
+    Object? inactiveTrackColor = freezed,
+    Object? splashRadius = freezed,
+    Object? dragStartBehavior = freezed,
   }) {
     return _then(_$_MiraiSwitch(
       initialValue:
@@ -99,16 +193,68 @@ class __$$_MiraiSwitchCopyWithImpl<$Res>
           ? _value._onChanged
           : onChanged // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      disabled: null == disabled
+          ? _value.disabled
+          : disabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      activeColor: freezed == activeColor
+          ? _value.activeColor
+          : activeColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      activeTrackColor: freezed == activeTrackColor
+          ? _value.activeTrackColor
+          : activeTrackColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inactiveThumbColor: freezed == inactiveThumbColor
+          ? _value.inactiveThumbColor
+          : inactiveThumbColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inactiveTrackColor: freezed == inactiveTrackColor
+          ? _value.inactiveTrackColor
+          : inactiveTrackColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      dragStartBehavior: freezed == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiSwitch implements _MiraiSwitch {
+class _$_MiraiSwitch extends _MiraiSwitch {
   const _$_MiraiSwitch(
-      {this.initialValue = false, final Map<String, dynamic>? onChanged})
-      : _onChanged = onChanged;
+      {this.initialValue = false,
+      final Map<String, dynamic>? onChanged,
+      this.autofocus = false,
+      this.disabled = false,
+      this.activeColor,
+      this.activeTrackColor,
+      this.focusColor,
+      this.hoverColor,
+      this.inactiveThumbColor,
+      this.inactiveTrackColor,
+      this.splashRadius,
+      this.dragStartBehavior})
+      : _onChanged = onChanged,
+        super._();
 
   factory _$_MiraiSwitch.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiSwitchFromJson(json);
@@ -127,8 +273,31 @@ class _$_MiraiSwitch implements _MiraiSwitch {
   }
 
   @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  @JsonKey()
+  final bool disabled;
+  @override
+  final String? activeColor;
+  @override
+  final String? activeTrackColor;
+  @override
+  final String? focusColor;
+  @override
+  final String? hoverColor;
+  @override
+  final String? inactiveThumbColor;
+  @override
+  final String? inactiveTrackColor;
+  @override
+  final double? splashRadius;
+  @override
+  final String? dragStartBehavior;
+
+  @override
   String toString() {
-    return 'MiraiSwitch(initialValue: $initialValue, onChanged: $onChanged)';
+    return 'MiraiSwitch(initialValue: $initialValue, onChanged: $onChanged, autofocus: $autofocus, disabled: $disabled, activeColor: $activeColor, activeTrackColor: $activeTrackColor, focusColor: $focusColor, hoverColor: $hoverColor, inactiveThumbColor: $inactiveThumbColor, inactiveTrackColor: $inactiveTrackColor, splashRadius: $splashRadius, dragStartBehavior: $dragStartBehavior)';
   }
 
   @override
@@ -139,7 +308,27 @@ class _$_MiraiSwitch implements _MiraiSwitch {
             const DeepCollectionEquality()
                 .equals(other.initialValue, initialValue) &&
             const DeepCollectionEquality()
-                .equals(other._onChanged, _onChanged));
+                .equals(other._onChanged, _onChanged) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.disabled, disabled) ||
+                other.disabled == disabled) &&
+            (identical(other.activeColor, activeColor) ||
+                other.activeColor == activeColor) &&
+            (identical(other.activeTrackColor, activeTrackColor) ||
+                other.activeTrackColor == activeTrackColor) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
+            (identical(other.inactiveThumbColor, inactiveThumbColor) ||
+                other.inactiveThumbColor == inactiveThumbColor) &&
+            (identical(other.inactiveTrackColor, inactiveTrackColor) ||
+                other.inactiveTrackColor == inactiveTrackColor) &&
+            (identical(other.splashRadius, splashRadius) ||
+                other.splashRadius == splashRadius) &&
+            (identical(other.dragStartBehavior, dragStartBehavior) ||
+                other.dragStartBehavior == dragStartBehavior));
   }
 
   @JsonKey(ignore: true)
@@ -147,7 +336,17 @@ class _$_MiraiSwitch implements _MiraiSwitch {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(initialValue),
-      const DeepCollectionEquality().hash(_onChanged));
+      const DeepCollectionEquality().hash(_onChanged),
+      autofocus,
+      disabled,
+      activeColor,
+      activeTrackColor,
+      focusColor,
+      hoverColor,
+      inactiveThumbColor,
+      inactiveTrackColor,
+      splashRadius,
+      dragStartBehavior);
 
   @JsonKey(ignore: true)
   @override
@@ -163,10 +362,21 @@ class _$_MiraiSwitch implements _MiraiSwitch {
   }
 }
 
-abstract class _MiraiSwitch implements MiraiSwitch {
+abstract class _MiraiSwitch extends MiraiSwitch {
   const factory _MiraiSwitch(
       {final dynamic initialValue,
-      final Map<String, dynamic>? onChanged}) = _$_MiraiSwitch;
+      final Map<String, dynamic>? onChanged,
+      final bool autofocus,
+      final bool disabled,
+      final String? activeColor,
+      final String? activeTrackColor,
+      final String? focusColor,
+      final String? hoverColor,
+      final String? inactiveThumbColor,
+      final String? inactiveTrackColor,
+      final double? splashRadius,
+      final String? dragStartBehavior}) = _$_MiraiSwitch;
+  const _MiraiSwitch._() : super._();
 
   factory _MiraiSwitch.fromJson(Map<String, dynamic> json) =
       _$_MiraiSwitch.fromJson;
@@ -175,6 +385,26 @@ abstract class _MiraiSwitch implements MiraiSwitch {
   dynamic get initialValue;
   @override
   Map<String, dynamic>? get onChanged;
+  @override
+  bool get autofocus;
+  @override
+  bool get disabled;
+  @override
+  String? get activeColor;
+  @override
+  String? get activeTrackColor;
+  @override
+  String? get focusColor;
+  @override
+  String? get hoverColor;
+  @override
+  String? get inactiveThumbColor;
+  @override
+  String? get inactiveTrackColor;
+  @override
+  double? get splashRadius;
+  @override
+  String? get dragStartBehavior;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiSwitchCopyWith<_$_MiraiSwitch> get copyWith =>

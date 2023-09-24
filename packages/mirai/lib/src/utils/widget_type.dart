@@ -36,7 +36,5 @@ enum WidgetType {
   expanded,
   flexible,
   safeArea,
-
-  /// cant use switch here because it is a keyword
   switchButton,
 }
