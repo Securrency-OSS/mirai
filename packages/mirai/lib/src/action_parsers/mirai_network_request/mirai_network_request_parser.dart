@@ -6,6 +6,8 @@ import 'package:mirai/mirai.dart';
 import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/action_type.dart';
 
+export 'mirai_network_request.dart';
+
 class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
   const MiraiNetworkRequestParser();
 

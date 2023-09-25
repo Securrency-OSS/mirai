@@ -4,6 +4,8 @@ import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
+export 'mirai_form_data.dart';
+
 class MiraiFormDataActionParser extends MiraiActionParser<MiraiFormData> {
   const MiraiFormDataActionParser();
 
