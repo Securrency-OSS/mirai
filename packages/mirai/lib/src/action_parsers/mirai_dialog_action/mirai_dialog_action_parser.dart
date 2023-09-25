@@ -7,6 +7,8 @@ import 'package:mirai/src/utils/action_type.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
+export 'mirai_dialog_action.dart';
+
 class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
   const MiraiDialogActionParser();
 

@@ -6,6 +6,8 @@ import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/utils/action_type.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
+export 'mirai_navigate_action.dart';
+
 class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
   const MiraiNavigateActionParser();
 
