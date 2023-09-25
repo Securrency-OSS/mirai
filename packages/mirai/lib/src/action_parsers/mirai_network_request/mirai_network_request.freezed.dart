@@ -26,7 +26,7 @@ mixin _$MiraiNetworkRequest {
       throw _privateConstructorUsedError;
   Map<String, dynamic>? get headers => throw _privateConstructorUsedError;
   String? get contentType => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  dynamic get body => throw _privateConstructorUsedError;
   List<MiraiNetworkResult> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $MiraiNetworkRequestCopyWith<$Res> {
       Map<String, dynamic>? queryParameters,
       Map<String, dynamic>? headers,
       String? contentType,
-      Map<String, dynamic>? data,
+      dynamic body,
       List<MiraiNetworkResult> results});
 }
 
@@ -69,7 +69,7 @@ class _$MiraiNetworkRequestCopyWithImpl<$Res, $Val extends MiraiNetworkRequest>
     Object? queryParameters = freezed,
     Object? headers = freezed,
     Object? contentType = freezed,
-    Object? data = freezed,
+    Object? body = freezed,
     Object? results = null,
   }) {
     return _then(_value.copyWith(
@@ -93,10 +93,10 @@ class _$MiraiNetworkRequestCopyWithImpl<$Res, $Val extends MiraiNetworkRequest>
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
@@ -119,7 +119,7 @@ abstract class _$$_MiraiNetworkRequestCopyWith<$Res>
       Map<String, dynamic>? queryParameters,
       Map<String, dynamic>? headers,
       String? contentType,
-      Map<String, dynamic>? data,
+      dynamic body,
       List<MiraiNetworkResult> results});
 }
 
@@ -139,7 +139,7 @@ class __$$_MiraiNetworkRequestCopyWithImpl<$Res>
     Object? queryParameters = freezed,
     Object? headers = freezed,
     Object? contentType = freezed,
-    Object? data = freezed,
+    Object? body = freezed,
     Object? results = null,
   }) {
     return _then(_$_MiraiNetworkRequest(
@@ -163,10 +163,10 @@ class __$$_MiraiNetworkRequestCopyWithImpl<$Res>
           ? _value.contentType
           : contentType // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: freezed == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
@@ -184,11 +184,10 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       this.contentType,
-      final Map<String, dynamic>? data,
+      this.body,
       final List<MiraiNetworkResult> results = const []})
       : _queryParameters = queryParameters,
         _headers = headers,
-        _data = data,
         _results = results;
 
   factory _$_MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =>
@@ -221,16 +220,8 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
 
   @override
   final String? contentType;
-  final Map<String, dynamic>? _data;
   @override
-  Map<String, dynamic>? get data {
-    final value = _data;
-    if (value == null) return null;
-    if (_data is EqualUnmodifiableMapView) return _data;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
+  final dynamic body;
   final List<MiraiNetworkResult> _results;
   @override
   @JsonKey()
@@ -242,7 +233,7 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
 
   @override
   String toString() {
-    return 'MiraiNetworkRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, data: $data, results: $results)';
+    return 'MiraiNetworkRequest(url: $url, method: $method, queryParameters: $queryParameters, headers: $headers, contentType: $contentType, body: $body, results: $results)';
   }
 
   @override
@@ -257,7 +248,7 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
             const DeepCollectionEquality().equals(other._headers, _headers) &&
             (identical(other.contentType, contentType) ||
                 other.contentType == contentType) &&
-            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other.body, body) &&
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
@@ -270,7 +261,7 @@ class _$_MiraiNetworkRequest implements _MiraiNetworkRequest {
       const DeepCollectionEquality().hash(_queryParameters),
       const DeepCollectionEquality().hash(_headers),
       contentType,
-      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(body),
       const DeepCollectionEquality().hash(_results));
 
   @JsonKey(ignore: true)
@@ -295,7 +286,7 @@ abstract class _MiraiNetworkRequest implements MiraiNetworkRequest {
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       final String? contentType,
-      final Map<String, dynamic>? data,
+      final dynamic body,
       final List<MiraiNetworkResult> results}) = _$_MiraiNetworkRequest;
 
   factory _MiraiNetworkRequest.fromJson(Map<String, dynamic> json) =
@@ -312,7 +303,7 @@ abstract class _MiraiNetworkRequest implements MiraiNetworkRequest {
   @override
   String? get contentType;
   @override
-  Map<String, dynamic>? get data;
+  dynamic get body;
   @override
   List<MiraiNetworkResult> get results;
   @override
