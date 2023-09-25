@@ -1,11 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
-import 'package:mirai/src/utils/icon_utils.dart';
 
 part 'mirai_switch.freezed.dart';
 part 'mirai_switch.g.dart';
@@ -70,44 +67,31 @@ class MiraiSwitch with _$MiraiSwitch {
     );
   }
 
-  Icon? get thumbIconWidget {
+  Icon? thumbIconWidget(BuildContext context) {
     if (thumbIcon == null) return null;
-    switch (thumbIcon!.iconType) {
-      case IconType.material:
-        return Icon(
-          materialIconMap[thumbIcon!.icon],
-          size: thumbIcon!.size,
-          color: thumbIcon!.color.toColor,
-          semanticLabel: thumbIcon!.semanticLabel,
-          textDirection: thumbIcon!.textDirection,
-        );
-      case IconType.cupertino:
-        return Icon(
-          cupertinoIconsMap[thumbIcon!.icon],
-          size: thumbIcon!.size,
-          color: thumbIcon!.color.toColor,
-          semanticLabel: thumbIcon!.semanticLabel,
-          textDirection: thumbIcon!.textDirection,
-        );
+
+    final Widget? widget = Mirai.fromJson(thumbIcon!.toJson(), context);
+    if (widget != null && widget is Icon) {
+      return widget;
     }
+
+    return null;
   }
 
-  ImageProvider? get inactiveThumbImageWidget =>
-      _getImageProvider(inactiveThumbImage);
+  ImageProvider? inactiveThumbImageWidget(BuildContext context) =>
+      _getImageProvider(context, image: inactiveThumbImage);
 
-  ImageProvider? get activeThumbImageWidget =>
-      _getImageProvider(activeThumbImage);
+  ImageProvider? activeThumbImageWidget(BuildContext context) =>
+      _getImageProvider(context, image: activeThumbImage);
 
-  ImageProvider? _getImageProvider(MiraiImage? image) {
+  ImageProvider? _getImageProvider(BuildContext context, {MiraiImage? image}) {
     if (image == null && (image?.src ?? '').isEmpty) return null;
 
-    switch (image!.imageType) {
-      case MiraiImageType.network:
-        return NetworkImage(image.src);
-      case MiraiImageType.file:
-        return FileImage(File(image.src));
-      case MiraiImageType.asset:
-        return AssetImage(image.src);
+    final Widget? widget = Mirai.fromJson(image!.toJson(), context);
+    if (widget != null && widget is Image) {
+      return widget.image;
     }
+
+    return null;
   }
 }

@@ -739,6 +739,37 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "toggle_on"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Switch",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A switch component that can be toggled via dragging or tapping on it.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/switch_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "space_bar"
                     },
                     "title": {
@@ -954,37 +985,6 @@
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/web_view_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "toggle_on"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Switch",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "A switch component that can be toggled via dragging or tapping on it.",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/switch_example.json"
                         }
                     }
                 }
