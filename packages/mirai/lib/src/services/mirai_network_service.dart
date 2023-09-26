@@ -111,6 +111,8 @@ class MiraiNetworkService {
         }
 
         return finalBody;
+      } else {
+        return body;
       }
     }
   }
