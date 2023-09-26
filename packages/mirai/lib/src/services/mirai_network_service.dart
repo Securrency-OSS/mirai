@@ -87,9 +87,10 @@ class MiraiNetworkService {
   ) async {
     if (body != null) {
       if (body is Map) {
-        Map<String, dynamic> finalBody = {};
+        dynamic finalBody = {};
 
-        body.forEach((key, value) async {
+        await Future.forEach(body.keys, (key) async {
+          final value = body[key];
           if (value is Map && value['actionType'] == "getFormDataValue") {
             Log.d("This is getFormDataValue");
 
@@ -98,14 +99,18 @@ class MiraiNetworkService {
                   as String,
             );
             Log.d("formValue: $formValue");
+
             finalBody[key] = formValue;
           } else if (value is File) {
             String fileName = value.path.split('/').last;
+            final multipart =
+                await MultipartFile.fromFile(value.path, filename: fileName);
+
             FormData formData = FormData.fromMap({
-              key: await MultipartFile.fromFile(value.path, filename: fileName),
+              key: multipart,
             });
 
-            finalBody[key] = formData;
+            finalBody = formData;
           } else {
             finalBody[key] = value;
           }

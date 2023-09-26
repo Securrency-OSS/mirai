@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/action_type.dart';
 
 export 'mirai_network_request.dart';
