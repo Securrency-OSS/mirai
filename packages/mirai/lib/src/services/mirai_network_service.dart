@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
@@ -97,6 +99,13 @@ class MiraiNetworkService {
             );
             Log.d("formValue: $formValue");
             finalBody[key] = formValue;
+          } else if (value is File) {
+            String fileName = value.path.split('/').last;
+            FormData formData = FormData.fromMap({
+              key: await MultipartFile.fromFile(value.path, filename: fileName),
+            });
+
+            return Future.value(formData);
           } else {
             finalBody[key] = value;
           }
