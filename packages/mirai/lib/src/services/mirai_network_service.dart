@@ -105,7 +105,7 @@ class MiraiNetworkService {
               key: await MultipartFile.fromFile(value.path, filename: fileName),
             });
 
-            return Future.value(formData);
+            finalBody[key] = formData;
           } else {
             finalBody[key] = value;
           }
