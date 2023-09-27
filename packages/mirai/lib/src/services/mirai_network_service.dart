@@ -94,9 +94,8 @@ class MiraiNetworkService {
           if (value is Map && value.containsKey('actionType')) {
             Log.d("Loading from an action callback");
 
-            final String callbackValue = await Future<String>.value(
-              Mirai.onCallFromJson(value as Map<String, dynamic>, context)
-                  as String,
+            final dynamic callbackValue = await Future<dynamic>.value(
+              Mirai.onCallFromJson(value as Map<String, dynamic>, context),
             );
             Log.d("Loaded value from the callback: $callbackValue");
 
