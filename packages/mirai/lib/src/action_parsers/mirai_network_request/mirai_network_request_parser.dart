@@ -26,10 +26,12 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
       response = e.response;
     }
 
-    final expectedResult = model.results
-        .firstWhere((result) => response?.statusCode == result.statusCode);
+    if (response != null) {
+      final expectedResult = model.results
+          .firstWhere((result) => response?.statusCode == result.statusCode);
 
-    return Mirai.onCallFromJson(
-        expectedResult.action, context.mounted ? context : context);
+      return Mirai.onCallFromJson(
+          expectedResult.action, context.mounted ? context : context);
+    }
   }
 }

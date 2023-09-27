@@ -95,7 +95,7 @@
             "type": "elevatedButton",
             "child": {
               "type": "text",
-              "data": "Sign In 1"
+              "data": "Sign In"
             },
             "onPressed": {
               "actionType": "networkRequest",
@@ -121,7 +121,7 @@
                   "action": {
                     "actionType": "navigate",
                     "navigationStyle": "pushReplacement",
-                    "assetPath": "assets/json/user_profile_screen.json"
+                    "assetPath": "assets/jsons/kyc_intro_screen.json"
                   }
                 },
                 {
