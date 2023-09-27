@@ -87,25 +87,29 @@ class MiraiNetworkService {
   ) async {
     if (body != null) {
       if (body is Map) {
-        Map<String, dynamic> finalBody = {};
+        dynamic finalBody = {};
 
-        body.forEach((key, value) async {
-          if (value is Map && value['actionType'] == "getFormDataValue") {
-            Log.d("This is getFormDataValue");
+        await Future.forEach(body.keys, (key) async {
+          final value = body[key];
+          if (value is Map && value.containsKey('actionType')) {
+            Log.d("Loading from an action callback");
 
-            final String formValue = await Future<String>.value(
-              Mirai.onCallFromJson(value as Map<String, dynamic>, context)
-                  as String,
+            final dynamic callbackValue = await Future<dynamic>.value(
+              Mirai.onCallFromJson(value as Map<String, dynamic>, context),
             );
-            Log.d("formValue: $formValue");
-            finalBody[key] = formValue;
+            Log.d("Loaded value from the callback: $callbackValue");
+
+            finalBody[key] = callbackValue;
           } else if (value is File) {
             String fileName = value.path.split('/').last;
+            final multipart =
+                await MultipartFile.fromFile(value.path, filename: fileName);
+
             FormData formData = FormData.fromMap({
-              key: await MultipartFile.fromFile(value.path, filename: fileName),
+              key: multipart,
             });
 
-            return Future.value(formData);
+            finalBody = formData;
           } else {
             finalBody[key] = value;
           }

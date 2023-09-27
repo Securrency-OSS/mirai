@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/action_type.dart';
 
 export 'mirai_network_request.dart';
@@ -27,10 +26,12 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
       response = e.response;
     }
 
-    final expectedResult = model.results
-        .firstWhere((result) => response?.statusCode == result.statusCode);
+    if (response != null) {
+      final expectedResult = model.results
+          .firstWhere((result) => response?.statusCode == result.statusCode);
 
-    return Mirai.onCallFromJson(
-        expectedResult.action, context.mounted ? context : context);
+      return Mirai.onCallFromJson(
+          expectedResult.action, context.mounted ? context : context);
+    }
   }
 }
