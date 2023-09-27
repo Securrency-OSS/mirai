@@ -91,14 +91,14 @@ class MiraiNetworkService {
 
         await Future.forEach(body.keys, (key) async {
           final value = body[key];
-          if (value is Map && value['actionType'] == "getFormDataValue") {
-            Log.d("This is getFormDataValue");
+          if (value is Map && value.containsKey('actionType')) {
+            Log.d("Loading from an action callback");
 
             final String formValue = await Future<String>.value(
               Mirai.onCallFromJson(value as Map<String, dynamic>, context)
                   as String,
             );
-            Log.d("formValue: $formValue");
+            Log.d("Loaded value from the callback: $formValue");
 
             finalBody[key] = formValue;
           } else if (value is File) {
