@@ -45,10 +45,10 @@ class MiraiNetworkService {
     MiraiNetworkRequest request,
     BuildContext context,
   ) async {
-    await _updateBody(context, request.body);
+    final body = await _updateBody(context, request.body);
     return _dio.post(
       request.url,
-      data: request.body,
+      data: body,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
@@ -85,7 +85,7 @@ class MiraiNetworkService {
     BuildContext context,
     dynamic body,
   ) async {
-    if (body != null) {
+    if (body is Map) {
       for (dynamic mapEntry in body.entries) {
         final key = mapEntry.key;
         final value = mapEntry.value;
@@ -115,7 +115,8 @@ class MiraiNetworkService {
             key: multipart,
           });
 
-          return formData;
+          body = formData;
+          break;
         }
 
         if (mapEntry.value is Map) {
@@ -128,50 +129,16 @@ class MiraiNetworkService {
           }
         }
       }
+    } else if (body is List) {
+      List<dynamic> updatedList = [];
+      for (dynamic value in body) {
+        final updatedValue = await _updateBody(context, value);
+        updatedList.add(updatedValue);
+      }
 
-      // dynamic finalBody = {};
-
-      // await Future.forEach(body.keys, (key) async {
-      //   final value = body[key];
-      //   if (value is Map && value.containsKey('actionType')) {
-      //     Log.d("Loading from an action callback");
-
-      //     final dynamic callbackValue = await Future<dynamic>.value(
-      //       Mirai.onCallFromJson(value as Map<String, dynamic>, context),
-      //     );
-      //     Log.d("Loaded value from the callback: $callbackValue");
-
-      //     finalBody[key] = callbackValue;
-      //   } else if (value is File) {
-      //     String fileName = value.path.split('/').last;
-      //     final multipart =
-      //         await MultipartFile.fromFile(value.path, filename: fileName);
-
-      //     FormData formData = FormData.fromMap({
-      //       key: multipart,
-      //     });
-
-      //     finalBody = formData;
-      //   } else {
-      //     finalBody[key] = value;
-      //   }
-      // });
-
-      // return finalBody;
+      body = updatedList;
     }
 
-    // else if (body is List) {
-    //   // List<dynamic> finalBody = [];
-    //   // for (dynamic value in body) {
-    //   //   final result = await _getBody(context, value);
-    //   //   finalBody.add(result);
-    //   // }
-
-    //   // return finalBody;
-    // }
-
-    else {
-      return body;
-    }
+    return body;
   }
 }
