@@ -94,13 +94,13 @@ class MiraiNetworkService {
           if (value is Map && value.containsKey('actionType')) {
             Log.d("Loading from an action callback");
 
-            final String formValue = await Future<String>.value(
+            final String callbackValue = await Future<String>.value(
               Mirai.onCallFromJson(value as Map<String, dynamic>, context)
                   as String,
             );
-            Log.d("Loaded value from the callback: $formValue");
+            Log.d("Loaded value from the callback: $callbackValue");
 
-            finalBody[key] = formValue;
+            finalBody[key] = callbackValue;
           } else if (value is File) {
             String fileName = value.path.split('/').last;
             final multipart =
