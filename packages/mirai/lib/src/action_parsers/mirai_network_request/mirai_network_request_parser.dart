@@ -37,17 +37,17 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
               "type": "alertDialog",
               "title": {
                 "type": "text",
-                "data": response?.statusMessage,
-                "align": "center",
+                "data": "${response?.statusMessage} - ${response?.statusCode}",
+                "textAlign": "center",
                 "style": {"fontSize": 18}
               },
               "content": {
                 "type": "padding",
-                "padding": {"top": 8, "left": 12, "right": 12, "bottom": 8},
+                "padding": {"top": 8, "left": 12, "right": 12, "bottom": 12},
                 "child": {
                   "type": "text",
-                  "data": response?.data,
-                  "align": "center",
+                  "data": "${response?.data}",
+                  "textAlign": "center",
                   "style": {"fontSize": 12}
                 }
               }
