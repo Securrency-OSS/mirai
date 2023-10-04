@@ -26,9 +26,35 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
       response = e.response;
     }
 
-    if (response != null) {
-      final expectedResult = model.results
-          .firstWhere((result) => response?.statusCode == result.statusCode);
+    if (response != null && response.statusCode != null) {
+      final expectedResult = model.results.firstWhere(
+        (result) => response?.statusCode == result.statusCode,
+        orElse: () => MiraiNetworkResult(
+          statusCode: response?.statusCode ?? 0,
+          action: {
+            "actionType": "showDialog",
+            "widget": {
+              "type": "alertDialog",
+              "title": {
+                "type": "text",
+                "data": "${response?.statusMessage} - ${response?.statusCode}",
+                "textAlign": "center",
+                "style": {"fontSize": 18}
+              },
+              "content": {
+                "type": "padding",
+                "padding": {"top": 8, "left": 12, "right": 12, "bottom": 12},
+                "child": {
+                  "type": "text",
+                  "data": "${response?.data}",
+                  "textAlign": "center",
+                  "style": {"fontSize": 12}
+                }
+              }
+            }
+          },
+        ),
+      );
 
       return Mirai.onCallFromJson(
           expectedResult.action, context.mounted ? context : context);

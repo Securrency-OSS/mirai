@@ -45,7 +45,7 @@ class MiraiNetworkService {
     MiraiNetworkRequest request,
     BuildContext context,
   ) async {
-    final body = await _getBody(context, request.body);
+    final body = await _updateBody(context, request.body);
     return _dio.post(
       request.url,
       data: body,
@@ -81,52 +81,64 @@ class MiraiNetworkService {
     );
   }
 
-  static Future<dynamic> _getBody(
+  static Future<dynamic> _updateBody(
     BuildContext context,
     dynamic body,
   ) async {
-    if (body != null) {
-      if (body is Map) {
-        dynamic finalBody = {};
-
-        await Future.forEach(body.keys, (key) async {
-          final value = body[key];
-          if (value is Map && value.containsKey('actionType')) {
+    if (body is Map) {
+      for (dynamic mapEntry in body.entries) {
+        final key = mapEntry.key;
+        final value = mapEntry.value;
+        if (value is Map && value.containsKey('actionType')) {
+          try {
             Log.d("Loading from an action callback");
 
             final dynamic callbackValue = await Future<dynamic>.value(
               Mirai.onCallFromJson(value as Map<String, dynamic>, context),
             );
-            Log.d("Loaded value from the callback: $callbackValue");
 
-            finalBody[key] = callbackValue;
-          } else if (value is File) {
-            String fileName = value.path.split('/').last;
-            final multipart =
-                await MultipartFile.fromFile(value.path, filename: fileName);
+            body.update(
+              key,
+              (existingValue) => callbackValue,
+            );
 
-            FormData formData = FormData.fromMap({
-              key: multipart,
-            });
-
-            finalBody = formData;
-          } else {
-            finalBody[key] = value;
+            continue;
+          } catch (e) {
+            Log.e(e);
           }
-        });
+        } else if (value is File) {
+          String fileName = value.path.split('/').last;
+          final multipart =
+              await MultipartFile.fromFile(value.path, filename: fileName);
 
-        return finalBody;
-      } else if (body is List) {
-        List<dynamic> finalBody = [];
-        for (dynamic value in body) {
-          final result = await _getBody(context, value);
-          finalBody.add(result);
+          FormData formData = FormData.fromMap({
+            key: multipart,
+          });
+
+          body = formData;
+          break;
         }
 
-        return finalBody;
-      } else {
-        return body;
+        if (mapEntry.value is Map) {
+          _updateBody(context.mounted ? context : context, mapEntry.value);
+        }
+
+        if (mapEntry.value is List) {
+          for (Map<String, dynamic> listItem in mapEntry.value) {
+            _updateBody(context.mounted ? context : context, listItem);
+          }
+        }
       }
+    } else if (body is List) {
+      List<dynamic> updatedList = [];
+      for (dynamic value in body) {
+        final updatedValue = await _updateBody(context, value);
+        updatedList.add(updatedValue);
+      }
+
+      body = updatedList;
     }
+
+    return body;
   }
 }

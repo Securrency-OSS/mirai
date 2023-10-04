@@ -121,7 +121,7 @@
                   "action": {
                     "actionType": "navigate",
                     "navigationStyle": "pushReplacement",
-                    "assetPath": "assets/jsons/kyc_intro_screen.json"
+                    "assetPath": "assets/json/user_profile_screen.json"
                   }
                 },
                 {
