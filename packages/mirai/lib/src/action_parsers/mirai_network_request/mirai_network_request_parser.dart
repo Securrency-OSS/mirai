@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/action_type.dart';
+import 'package:mirai/src/utils/log.dart';
 
 export 'mirai_network_request.dart';
 
@@ -23,8 +23,10 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
     Response<dynamic>? response;
     try {
       response = await MiraiNetworkService.request(model, context);
+      Log.d(response);
     } on DioException catch (e) {
       response = e.response;
+      Log.e(e.response);
     }
 
     final expectedResult = model.results
