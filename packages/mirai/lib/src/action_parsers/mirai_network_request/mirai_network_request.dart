@@ -17,7 +17,7 @@ class MiraiNetworkRequest with _$MiraiNetworkRequest {
     required String url,
     @Default(Method.get) Method method,
     Map<String, dynamic>? queryParameters,
-    dynamic headers,
+    Map<String, dynamic>? headers,
     String? contentType,
     dynamic body,
     @Default([]) List<MiraiNetworkResult> results,

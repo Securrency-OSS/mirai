@@ -13,7 +13,7 @@ _$_MiraiNetworkRequest _$$_MiraiNetworkRequestFromJson(
       method:
           $enumDecodeNullable(_$MethodEnumMap, json['method']) ?? Method.get,
       queryParameters: json['queryParameters'] as Map<String, dynamic>?,
-      headers: json['headers'],
+      headers: json['headers'] as Map<String, dynamic>?,
       contentType: json['contentType'] as String?,
       body: json['body'],
       results: (json['results'] as List<dynamic>?)

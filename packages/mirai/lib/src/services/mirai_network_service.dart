@@ -47,7 +47,8 @@ class MiraiNetworkService {
   ) async {
     final body = await _updateBody(context, request.body);
 
-    Map<String, dynamic> headers = Map<String, dynamic>.from(request.headers);
+    Map<String, dynamic> headers =
+        Map<String, dynamic>.from(request.headers ?? {});
     headers = await _updateBody(context.mounted ? context : context, headers);
     return _dio.post(
       request.url,
