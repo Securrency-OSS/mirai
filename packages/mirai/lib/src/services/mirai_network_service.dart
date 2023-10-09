@@ -46,8 +46,9 @@ class MiraiNetworkService {
     BuildContext context,
   ) async {
     final body = await _updateBody(context, request.body);
-    final headers =
-        await _updateBody(context.mounted ? context : context, request.headers);
+
+    Map<String, dynamic> headers = Map<String, dynamic>.from(request.headers);
+    headers = await _updateBody(context.mounted ? context : context, headers);
     return _dio.post(
       request.url,
       data: body,
