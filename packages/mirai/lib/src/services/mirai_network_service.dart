@@ -46,13 +46,15 @@ class MiraiNetworkService {
     BuildContext context,
   ) async {
     final body = await _updateBody(context, request.body);
+    final headers =
+        await _updateBody(context.mounted ? context : context, request.headers);
     return _dio.post(
       request.url,
       data: body,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
-        headers: request.headers,
+        headers: headers,
       ),
     );
   }
