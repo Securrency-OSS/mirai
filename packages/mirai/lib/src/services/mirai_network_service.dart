@@ -16,12 +16,18 @@ class MiraiNetworkService {
   static Future<Response?> request(
     MiraiNetworkRequest request,
     BuildContext context,
-  ) {
+  ) async {
+    Map<String, dynamic> headers =
+        Map<String, dynamic>.from(request.headers ?? {});
+    headers = await _updateBody(context.mounted ? context : context, headers);
+    _dio.options.headers = headers;
+    _dio.options.contentType = request.contentType;
+
     switch (request.method) {
       case Method.get:
         return getRequest(request);
       case Method.post:
-        return postRequest(request, context);
+        return postRequest(request, context.mounted ? context : context);
       case Method.put:
         return putRequest(request);
       case Method.delete:
@@ -29,15 +35,11 @@ class MiraiNetworkService {
     }
   }
 
-  static Future<Response?> getRequest(MiraiNetworkRequest request) {
+  static Future<Response?> getRequest(MiraiNetworkRequest request) async {
     return _dio.get(
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -54,10 +56,6 @@ class MiraiNetworkService {
       request.url,
       data: body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: headers,
-      ),
     );
   }
 
@@ -66,10 +64,6 @@ class MiraiNetworkService {
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -78,10 +72,6 @@ class MiraiNetworkService {
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
