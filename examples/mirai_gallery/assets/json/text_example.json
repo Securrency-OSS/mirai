@@ -20,6 +20,10 @@
             "crossAxisAlignment": "start",
             "children": [
                 {
+                    "type": "sizedBox",
+                    "height": 12
+                },
+                {
                     "type": "text",
                     "data": "Flutter",
                     "align": "center",
@@ -30,25 +34,36 @@
                 },
                 {
                     "type": "sizedBox",
-                    "height": 10
-                },
-                {
-                    "type": "container",
-                    "height": 1,
-                    "width": 500,
-                    "color": "#D9D9D9"
-                },
-                {
-                    "type": "sizedBox",
-                    "height": 10
+                    "height": 32
                 },
                 {
                     "type": "text",
-                    "data": "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase. First described in 2015, Flutter was released in May 2017.",
-                    "align": "center",
-                    "style": {
-                        "fontSize": 16
-                    }
+                    "data": "This is a normal Text."
+                },
+                {
+                    "type": "sizedBox",
+                    "height": 16
+                },
+                {
+                    "type": "text",
+                    "data": "This is a ",
+                    "children": [
+                        {
+                            "data": "Rich Text.",
+                            "style": {
+                                "fontWeight": "w800",
+                                "color": "#6750A4"
+                            },
+                            "onTap": {
+                                "actionType": "navigate",
+                                "navigationStyle": "push",
+                                "widgetJson": {
+                                    "type": "exampleScreen",
+                                    "assetPath": "assets/json/web_view_example.json"
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         }

@@ -4,15 +4,16 @@ import 'package:mirai/src/parsers/mirai_app_bar/mirai_app_bar.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiAppBarParser extends MiraiParser<MiraiAppBar> {
   const MiraiAppBarParser();
 
   @override
-  MiraiAppBar getModel(Map<String, dynamic> json) => MiraiAppBar.fromJson(json);
+  String get type => WidgetType.appBar.name;
 
   @override
-  String get type => WidgetType.appBar.name;
+  MiraiAppBar getModel(Map<String, dynamic> json) => MiraiAppBar.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiAppBar model) {

@@ -53,6 +53,9 @@ void main() async {
     parsers: const [
       ExampleScreenParser(),
     ],
+    actionParsers: const [
+      ExampleActionParser(),
+    ],
     dio: dio,
   );
 

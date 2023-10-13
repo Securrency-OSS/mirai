@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_stack/mirai_stack.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiStackParser extends MiraiParser<MiraiStack> {
   const MiraiStackParser();

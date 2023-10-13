@@ -11,6 +11,7 @@ part 'mirai_text.g.dart';
 class MiraiText with _$MiraiText {
   const factory MiraiText({
     required String data,
+    @Default([]) List<MiraiTextSpan> children,
     MiraiTextStyle? style,
     TextAlign? textAlign,
     TextDirection? textDirection,
@@ -25,4 +26,16 @@ class MiraiText with _$MiraiText {
 
   factory MiraiText.fromJson(Map<String, dynamic> json) =>
       _$MiraiTextFromJson(json);
+}
+
+@freezed
+class MiraiTextSpan with _$MiraiTextSpan {
+  const factory MiraiTextSpan({
+    String? data,
+    MiraiTextStyle? style,
+    Map<String, dynamic>? onTap,
+  }) = _MiraiTextSpan;
+
+  factory MiraiTextSpan.fromJson(Map<String, dynamic> json) =>
+      _$MiraiTextSpanFromJson(json);
 }

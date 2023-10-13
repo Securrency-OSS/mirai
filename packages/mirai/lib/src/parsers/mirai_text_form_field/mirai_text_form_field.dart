@@ -16,6 +16,8 @@ part 'mirai_text_form_field.g.dart';
 @freezed
 class MiraiTextFormField with _$MiraiTextFormField {
   const factory MiraiTextFormField({
+    String? id,
+    String? compareId,
     MiraiInputDecoration? decoration,
     String? initialValue,
     MiraiTextInputType? keyboardType,
@@ -32,7 +34,7 @@ class MiraiTextFormField with _$MiraiTextFormField {
     int? maxLines,
     int? minLines,
     int? maxLength,
-    @Default(false) bool obscureText,
+    bool? obscureText,
     @Default(true) bool autocorrect,
     SmartDashesType? smartDashesType,
     SmartQuotesType? smartQuotesType,

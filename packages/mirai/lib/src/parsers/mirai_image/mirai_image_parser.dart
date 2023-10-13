@@ -1,19 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiImageParser extends MiraiParser<MiraiImage> {
   const MiraiImageParser();
 
   @override
-  MiraiImage getModel(Map<String, dynamic> json) => MiraiImage.fromJson(json);
+  String get type => WidgetType.image.name;
 
   @override
-  String get type => WidgetType.image.name;
+  MiraiImage getModel(Map<String, dynamic> json) => MiraiImage.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiImage model) {

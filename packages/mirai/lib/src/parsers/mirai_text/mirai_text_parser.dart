@@ -1,9 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_text/mirai_text.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiTextParser extends MiraiParser<MiraiText> {
   const MiraiTextParser();
@@ -16,8 +18,20 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
 
   @override
   Widget parse(BuildContext context, MiraiText model) {
-    return Text(
-      model.data,
+    return Text.rich(
+      TextSpan(
+        text: model.data,
+        children: model.children
+            .map(
+              (child) => TextSpan(
+                text: child.data,
+                style: child.style?.parse,
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () => Mirai.onCallFromJson(child.onTap, context),
+              ),
+            )
+            .toList(),
+      ),
       style: model.style?.parse,
       textAlign: model.textAlign,
       textDirection: model.textDirection,

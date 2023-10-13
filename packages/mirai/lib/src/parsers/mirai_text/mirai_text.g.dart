@@ -8,6 +8,10 @@ part of 'mirai_text.dart';
 
 _$_MiraiText _$$_MiraiTextFromJson(Map<String, dynamic> json) => _$_MiraiText(
       data: json['data'] as String,
+      children: (json['children'] as List<dynamic>?)
+              ?.map((e) => MiraiTextSpan.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       style: json['style'] == null
           ? null
           : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
@@ -27,6 +31,7 @@ _$_MiraiText _$$_MiraiTextFromJson(Map<String, dynamic> json) => _$_MiraiText(
 Map<String, dynamic> _$$_MiraiTextToJson(_$_MiraiText instance) =>
     <String, dynamic>{
       'data': instance.data,
+      'children': instance.children,
       'style': instance.style,
       'textAlign': _$TextAlignEnumMap[instance.textAlign],
       'textDirection': _$TextDirectionEnumMap[instance.textDirection],
@@ -64,3 +69,19 @@ const _$TextWidthBasisEnumMap = {
   TextWidthBasis.parent: 'parent',
   TextWidthBasis.longestLine: 'longestLine',
 };
+
+_$_MiraiTextSpan _$$_MiraiTextSpanFromJson(Map<String, dynamic> json) =>
+    _$_MiraiTextSpan(
+      data: json['data'] as String?,
+      style: json['style'] == null
+          ? null
+          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      onTap: json['onTap'] as Map<String, dynamic>?,
+    );
+
+Map<String, dynamic> _$$_MiraiTextSpanToJson(_$_MiraiTextSpan instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+      'style': instance.style,
+      'onTap': instance.onTap,
+    };

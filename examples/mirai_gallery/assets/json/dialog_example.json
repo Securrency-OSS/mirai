@@ -21,10 +21,7 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "SIMPLE ALERT",
-                            "style": {
-                                "color": "#ffffff"
-                            }
+                            "data": "SIMPLE ALERT"
                         },
                         "style": {
                             "padding": {
@@ -35,10 +32,8 @@
                             }
                         },
                         "onPressed": {
-                            "actionType": "navigate",
-                            "navigationStyle": "push",
-                            "navigationType": "dialog",
-                            "widgetJson": {
+                            "actionType": "showDialog",
+                            "widget": {
                                 "type": "alertDialog",
                                 "content": {
                                     "type": "padding",
@@ -66,7 +61,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -82,7 +76,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -102,10 +95,7 @@
                         "type": "elevatedButton",
                         "child": {
                             "type": "text",
-                            "data": "ALERT WITH TITLE",
-                            "style": {
-                                "color": "#ffffff"
-                            }
+                            "data": "ALERT WITH TITLE"
                         },
                         "style": {
                             "padding": {
@@ -116,10 +106,8 @@
                             }
                         },
                         "onPressed": {
-                            "actionType": "navigate",
-                            "navigationStyle": "push",
-                            "navigationType": "dialog",
-                            "widgetJson": {
+                            "actionType": "showDialog",
+                            "widget": {
                                 "type": "alertDialog",
                                 "title": {
                                     "type": "text",
@@ -155,7 +143,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },
@@ -171,7 +158,6 @@
                                         },
                                         "onPressed": {
                                             "actionType": "navigate",
-                                            "navigationType": "screen",
                                             "navigationStyle": "pop"
                                         }
                                     },

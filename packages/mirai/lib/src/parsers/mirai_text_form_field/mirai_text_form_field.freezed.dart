@@ -20,6 +20,8 @@ MiraiTextFormField _$MiraiTextFormFieldFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiTextFormField {
+  String? get id => throw _privateConstructorUsedError;
+  String? get compareId => throw _privateConstructorUsedError;
   MiraiInputDecoration? get decoration => throw _privateConstructorUsedError;
   String? get initialValue => throw _privateConstructorUsedError;
   MiraiTextInputType? get keyboardType => throw _privateConstructorUsedError;
@@ -38,7 +40,7 @@ mixin _$MiraiTextFormField {
   int? get maxLines => throw _privateConstructorUsedError;
   int? get minLines => throw _privateConstructorUsedError;
   int? get maxLength => throw _privateConstructorUsedError;
-  bool get obscureText => throw _privateConstructorUsedError;
+  bool? get obscureText => throw _privateConstructorUsedError;
   bool get autocorrect => throw _privateConstructorUsedError;
   SmartDashesType? get smartDashesType => throw _privateConstructorUsedError;
   SmartQuotesType? get smartQuotesType => throw _privateConstructorUsedError;
@@ -74,7 +76,9 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       _$MiraiTextFormFieldCopyWithImpl<$Res, MiraiTextFormField>;
   @useResult
   $Res call(
-      {MiraiInputDecoration? decoration,
+      {String? id,
+      String? compareId,
+      MiraiInputDecoration? decoration,
       String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
@@ -90,7 +94,7 @@ abstract class $MiraiTextFormFieldCopyWith<$Res> {
       int? maxLines,
       int? minLines,
       int? maxLength,
-      bool obscureText,
+      bool? obscureText,
       bool autocorrect,
       SmartDashesType? smartDashesType,
       SmartQuotesType? smartQuotesType,
@@ -128,6 +132,8 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
+    Object? compareId = freezed,
     Object? decoration = freezed,
     Object? initialValue = freezed,
     Object? keyboardType = freezed,
@@ -144,7 +150,7 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? maxLines = freezed,
     Object? minLines = freezed,
     Object? maxLength = freezed,
-    Object? obscureText = null,
+    Object? obscureText = freezed,
     Object? autocorrect = null,
     Object? smartDashesType = freezed,
     Object? smartQuotesType = freezed,
@@ -165,6 +171,14 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
     Object? validatorRules = null,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      compareId: freezed == compareId
+          ? _value.compareId
+          : compareId // ignore: cast_nullable_to_non_nullable
+              as String?,
       decoration: freezed == decoration
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
@@ -229,10 +243,10 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as int?,
-      obscureText: null == obscureText
+      obscureText: freezed == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autocorrect: null == autocorrect
           ? _value.autocorrect
           : autocorrect // ignore: cast_nullable_to_non_nullable
@@ -350,7 +364,9 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {MiraiInputDecoration? decoration,
+      {String? id,
+      String? compareId,
+      MiraiInputDecoration? decoration,
       String? initialValue,
       MiraiTextInputType? keyboardType,
       TextInputAction? textInputAction,
@@ -366,7 +382,7 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
       int? maxLines,
       int? minLines,
       int? maxLength,
-      bool obscureText,
+      bool? obscureText,
       bool autocorrect,
       SmartDashesType? smartDashesType,
       SmartQuotesType? smartQuotesType,
@@ -405,6 +421,8 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
+    Object? compareId = freezed,
     Object? decoration = freezed,
     Object? initialValue = freezed,
     Object? keyboardType = freezed,
@@ -421,7 +439,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? maxLines = freezed,
     Object? minLines = freezed,
     Object? maxLength = freezed,
-    Object? obscureText = null,
+    Object? obscureText = freezed,
     Object? autocorrect = null,
     Object? smartDashesType = freezed,
     Object? smartQuotesType = freezed,
@@ -442,6 +460,14 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? validatorRules = null,
   }) {
     return _then(_$_MiraiTextFormField(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      compareId: freezed == compareId
+          ? _value.compareId
+          : compareId // ignore: cast_nullable_to_non_nullable
+              as String?,
       decoration: freezed == decoration
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
@@ -506,10 +532,10 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
               as int?,
-      obscureText: null == obscureText
+      obscureText: freezed == obscureText
           ? _value.obscureText
           : obscureText // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       autocorrect: null == autocorrect
           ? _value.autocorrect
           : autocorrect // ignore: cast_nullable_to_non_nullable
@@ -590,7 +616,9 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MiraiTextFormField implements _MiraiTextFormField {
   const _$_MiraiTextFormField(
-      {this.decoration,
+      {this.id,
+      this.compareId,
+      this.decoration,
       this.initialValue,
       this.keyboardType,
       this.textInputAction,
@@ -606,7 +634,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       this.maxLines,
       this.minLines,
       this.maxLength,
-      this.obscureText = false,
+      this.obscureText,
       this.autocorrect = true,
       this.smartDashesType,
       this.smartQuotesType,
@@ -632,6 +660,10 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   factory _$_MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
       _$$_MiraiTextFormFieldFromJson(json);
 
+  @override
+  final String? id;
+  @override
+  final String? compareId;
   @override
   final MiraiInputDecoration? decoration;
   @override
@@ -670,8 +702,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @override
   final int? maxLength;
   @override
-  @JsonKey()
-  final bool obscureText;
+  final bool? obscureText;
   @override
   @JsonKey()
   final bool autocorrect;
@@ -730,7 +761,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
   @override
   String toString() {
-    return 'MiraiTextFormField(decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText, autovalidateMode: $autovalidateMode, inputFormatters: $inputFormatters, validatorRules: $validatorRules)';
+    return 'MiraiTextFormField(id: $id, compareId: $compareId, decoration: $decoration, initialValue: $initialValue, keyboardType: $keyboardType, textInputAction: $textInputAction, textCapitalization: $textCapitalization, style: $style, textAlign: $textAlign, textAlignVertical: $textAlignVertical, textDirection: $textDirection, readOnly: $readOnly, showCursor: $showCursor, autofocus: $autofocus, obscuringCharacter: $obscuringCharacter, maxLines: $maxLines, minLines: $minLines, maxLength: $maxLength, obscureText: $obscureText, autocorrect: $autocorrect, smartDashesType: $smartDashesType, smartQuotesType: $smartQuotesType, maxLengthEnforcement: $maxLengthEnforcement, expands: $expands, keyboardAppearance: $keyboardAppearance, scrollPadding: $scrollPadding, restorationId: $restorationId, enableIMEPersonalizedLearning: $enableIMEPersonalizedLearning, enableSuggestions: $enableSuggestions, enabled: $enabled, cursorWidth: $cursorWidth, cursorHeight: $cursorHeight, cursorColor: $cursorColor, hintText: $hintText, autovalidateMode: $autovalidateMode, inputFormatters: $inputFormatters, validatorRules: $validatorRules)';
   }
 
   @override
@@ -738,6 +769,9 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MiraiTextFormField &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.compareId, compareId) ||
+                other.compareId == compareId) &&
             (identical(other.decoration, decoration) ||
                 other.decoration == decoration) &&
             (identical(other.initialValue, initialValue) ||
@@ -813,6 +847,8 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        id,
+        compareId,
         decoration,
         initialValue,
         keyboardType,
@@ -867,7 +903,9 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
 
 abstract class _MiraiTextFormField implements MiraiTextFormField {
   const factory _MiraiTextFormField(
-          {final MiraiInputDecoration? decoration,
+          {final String? id,
+          final String? compareId,
+          final MiraiInputDecoration? decoration,
           final String? initialValue,
           final MiraiTextInputType? keyboardType,
           final TextInputAction? textInputAction,
@@ -883,7 +921,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
           final int? maxLines,
           final int? minLines,
           final int? maxLength,
-          final bool obscureText,
+          final bool? obscureText,
           final bool autocorrect,
           final SmartDashesType? smartDashesType,
           final SmartQuotesType? smartQuotesType,
@@ -907,6 +945,10 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   factory _MiraiTextFormField.fromJson(Map<String, dynamic> json) =
       _$_MiraiTextFormField.fromJson;
 
+  @override
+  String? get id;
+  @override
+  String? get compareId;
   @override
   MiraiInputDecoration? get decoration;
   @override
@@ -940,7 +982,7 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   @override
   int? get maxLength;
   @override
-  bool get obscureText;
+  bool? get obscureText;
   @override
   bool get autocorrect;
   @override

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/action/mirai_action_parser.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
   const MiraiIconButtonParser();
+
+  @override
+  String get type => WidgetType.iconButton.name;
 
   @override
   MiraiIconButton getModel(Map<String, dynamic> json) =>
       MiraiIconButton.fromJson(json);
 
   @override
-  String get type => WidgetType.iconButton.name;
-
-  @override
   Widget parse(BuildContext context, MiraiIconButton model) {
     return IconButton(
       onPressed: model.onPressed == null
           ? null
-          : () => model.onPressed.onCall(context),
+          : () => Mirai.onCallFromJson(model.onPressed, context),
       iconSize: model.iconSize,
       padding: model.padding?.parse,
       alignment: model.alignment.value,

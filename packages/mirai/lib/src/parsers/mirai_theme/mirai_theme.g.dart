@@ -9,6 +9,10 @@ part of 'mirai_theme.dart';
 _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
     _$_MiraiTheme(
       applyElevationOverlayColor: json['applyElevationOverlayColor'] as bool?,
+      inputDecorationTheme: json['inputDecorationTheme'] == null
+          ? null
+          : MiraiInputDecorationTheme.fromJson(
+              json['inputDecorationTheme'] as Map<String, dynamic>),
       useMaterial3: json['useMaterial3'] as bool?,
       brightness: $enumDecodeNullable(_$BrightnessEnumMap, json['brightness']),
       canvasColor: json['canvasColor'] as String?,
@@ -38,6 +42,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
       shadowColor: json['shadowColor'] as String?,
       splashColor: json['splashColor'] as String?,
       unselectedWidgetColor: json['unselectedWidgetColor'] as String?,
+      fontFamily: json['fontFamily'] as String?,
+      fontFamilyFallback: (json['fontFamilyFallback'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       appBarTheme: json['appBarTheme'] == null
           ? null
           : MiraiAppBarTheme.fromJson(
@@ -62,6 +70,10 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiIconThemeData.fromJson(
               json['primaryIconTheme'] as Map<String, dynamic>),
+      dialogTheme: json['dialogTheme'] == null
+          ? null
+          : MiraiDialogTheme.fromJson(
+              json['dialogTheme'] as Map<String, dynamic>),
       floatingActionButtonTheme: json['floatingActionButtonTheme'] == null
           ? null
           : MiraiFloatingActionButtonThemeData.fromJson(
@@ -78,11 +90,32 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiBottomNavBarThemeData.fromJson(
               json['bottomNavigationBarTheme'] as Map<String, dynamic>),
+      bottomSheetTheme: json['bottomSheetTheme'] == null
+          ? null
+          : MiraiBottomSheetThemeData.fromJson(
+              json['bottomSheetTheme'] as Map<String, dynamic>),
+      cardTheme: json['cardTheme'] == null
+          ? null
+          : MiraiCardThemeData.fromJson(
+              json['cardTheme'] as Map<String, dynamic>),
+      listTileTheme: json['listTileTheme'] == null
+          ? null
+          : MiraiListTileThemeData.fromJson(
+              json['listTileTheme'] as Map<String, dynamic>),
+      navigationBarTheme: json['navigationBarTheme'] == null
+          ? null
+          : MiraiNavigationBarThemeData.fromJson(
+              json['navigationBarTheme'] as Map<String, dynamic>),
+      tabBarTheme: json['tabBarTheme'] == null
+          ? null
+          : MiraiTabBarThemeData.fromJson(
+              json['tabBarTheme'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
     <String, dynamic>{
       'applyElevationOverlayColor': instance.applyElevationOverlayColor,
+      'inputDecorationTheme': instance.inputDecorationTheme,
       'useMaterial3': instance.useMaterial3,
       'brightness': _$BrightnessEnumMap[instance.brightness],
       'canvasColor': instance.canvasColor,
@@ -106,16 +139,24 @@ Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
       'shadowColor': instance.shadowColor,
       'splashColor': instance.splashColor,
       'unselectedWidgetColor': instance.unselectedWidgetColor,
+      'fontFamily': instance.fontFamily,
+      'fontFamilyFallback': instance.fontFamilyFallback,
       'appBarTheme': instance.appBarTheme,
       'elevatedButtonTheme': instance.elevatedButtonTheme,
       'outlinedButtonTheme': instance.outlinedButtonTheme,
       'iconButtonTheme': instance.iconButtonTheme,
       'iconTheme': instance.iconTheme,
       'primaryIconTheme': instance.primaryIconTheme,
+      'dialogTheme': instance.dialogTheme,
       'floatingActionButtonTheme': instance.floatingActionButtonTheme,
       'textButtonTheme': instance.textButtonTheme,
       'bottomAppBarTheme': instance.bottomAppBarTheme,
       'bottomNavigationBarTheme': instance.bottomNavigationBarTheme,
+      'bottomSheetTheme': instance.bottomSheetTheme,
+      'cardTheme': instance.cardTheme,
+      'listTileTheme': instance.listTileTheme,
+      'navigationBarTheme': instance.navigationBarTheme,
+      'tabBarTheme': instance.tabBarTheme,
     };
 
 const _$BrightnessEnumMap = {

@@ -2,13 +2,9 @@
     "type": "scaffold",
     "appBar": {
         "type": "appBar",
-        "backgroundColor": "#004D00E9",
         "title": {
             "type": "text",
-            "data": "Mirai Gallery",
-            "style": {
-                "color": "#000000"
-            }
+            "data": "Mirai Gallery"
         },
         "elevation": 0
     },
@@ -47,11 +43,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/app_bar_example.json"
@@ -80,14 +74,43 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/bottom_nav_bar_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "navigation"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Bottom Sheet",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A Material Design Mirai bottom sheet example",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/bottom_sheet_example.json"
                         }
                     }
                 },
@@ -113,11 +136,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/card_example.json"
@@ -146,11 +167,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/center_example.json"
@@ -179,14 +198,43 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/column_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "add_alert"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Dialog",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Informs the user about situations that require acknowledgement",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/dialog_example.json"
                         }
                     }
                 },
@@ -215,7 +263,6 @@
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/stack_example.json"
@@ -244,47 +291,12 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/container_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "add_alert"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Dialog",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "Informs the user about situations that require acknowledgement",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "style": "list",
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "navigationType": "screen",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/dialog_example.json"
                         }
                     }
                 },
@@ -310,11 +322,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/elevated_button_example.json"
@@ -343,11 +353,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/floating_action_button_example.json"
@@ -376,11 +384,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/icon_example.json"
@@ -409,11 +415,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/icon_button_example.json"
@@ -442,11 +446,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/image_example.json"
@@ -475,11 +477,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/list_tile_example.json"
@@ -508,14 +508,43 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/list_view_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "navigation"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Navigation",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Shows examples of different types of navigation types and styles in Mirai",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/navigation_example.json"
                         }
                     }
                 },
@@ -541,11 +570,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/outlined_button_example.json"
@@ -574,11 +601,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/padding_example.json"
@@ -607,11 +632,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/row_example.json"
@@ -640,11 +663,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/scaffold_example.json"
@@ -673,11 +694,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/scroll_view_example.json"
@@ -706,14 +725,43 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/sized_box_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "toggle_on"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Switch",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A switch component that can be toggled via dragging or tapping on it.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/switch_example.json"
                         }
                     }
                 },
@@ -739,11 +787,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/fractionally_sized_box_example.json"
@@ -772,11 +818,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/tab_bar_example.json"
@@ -805,11 +849,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/text_example.json"
@@ -838,11 +880,9 @@
                         }
                     },
                     "isThreeLine": true,
-                    "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/text_button_example.json"
@@ -871,14 +911,80 @@
                         }
                     },
                     "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/text_field_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "blur_circular_rounded"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Form",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A Form Widget",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
                     "style": "list",
                     "onTap": {
                         "actionType": "navigate",
                         "navigationStyle": "push",
-                        "navigationType": "screen",
                         "widgetJson": {
                             "type": "exampleScreen",
-                            "assetPath": "assets/json/text_field_example.json"
+                            "assetPath": "assets/json/form_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "language"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai WebView",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A Web View Widget",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/web_view_example.json"
                         }
                     }
                 }

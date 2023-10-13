@@ -41,7 +41,7 @@ You can also specify your custom Parsers in `Mirai.initialize` and `Dio` instanc
 
 ```dart
 void main() async {
-  final dio = Dio()
+  final dio = Dio();
 
   await Mirai.initialize(
     parsers: const [
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-## Eample
+## Example
 
 Here is an example of a basic form screen build with Mirai.
 
@@ -411,4 +411,4 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 [securrency_link]: https://securrency.com
 [form_screen]: https://github.com/Securrency-OSS/mirai/blob/main/assets/form_screen_image.png
 [divyanshu_github]: https://github.com/divyanshub024
-[aasim_github]: https://github.com/iamasimkhan
+[aasim_github]: https://github.com/i-asimkhan
