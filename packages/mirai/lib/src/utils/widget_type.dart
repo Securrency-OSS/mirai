@@ -37,4 +37,5 @@ enum WidgetType {
   flexible,
   safeArea,
   switchButton,
+  align
 }
