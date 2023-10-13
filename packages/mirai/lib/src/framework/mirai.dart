@@ -10,6 +10,7 @@ import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
+import 'package:mirai/src/parsers/mirai_switch/mirai_switch_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/services/mirai_network_service.dart';
@@ -61,6 +62,7 @@ class Mirai {
     const MiraiExpandedParser(),
     const MiraiFlexibleParser(),
     const MiraiSafeAreaParser(),
+    const MiraiSwitchParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
