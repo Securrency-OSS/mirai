@@ -181,6 +181,37 @@
                     "leading": {
                         "type": "icon",
                         "iconType": "material",
+                        "icon": "format_align_center"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Mirai Align",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "widget that is used to align its child within itself and optionally sizes itself based on the child’s size",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/align_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
                         "icon": "table_rows"
                     },
                     "title": {
