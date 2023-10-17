@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
+import 'package:mirai/src/network/mirai_network.dart';
+import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/parsers/mirai_align/mirai_align_parser.dart';
 import 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
@@ -63,6 +66,7 @@ class Mirai {
     const MiraiFlexibleParser(),
     const MiraiSafeAreaParser(),
     const MiraiSwitchParser(),
+    const MiraiAlignParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
