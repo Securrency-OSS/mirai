@@ -16,12 +16,18 @@ class MiraiNetworkService {
   static Future<Response?> request(
     MiraiNetworkRequest request,
     BuildContext context,
-  ) {
+  ) async {
+    Map<String, dynamic> headers =
+        Map<String, dynamic>.from(request.headers ?? {});
+    headers = await _updateBody(context.mounted ? context : context, headers);
+    _dio.options.headers = headers;
+    _dio.options.contentType = request.contentType;
+
     switch (request.method) {
       case Method.get:
         return getRequest(request);
       case Method.post:
-        return postRequest(request, context);
+        return postRequest(request, context.mounted ? context : context);
       case Method.put:
         return putRequest(request);
       case Method.delete:
@@ -29,15 +35,11 @@ class MiraiNetworkService {
     }
   }
 
-  static Future<Response?> getRequest(MiraiNetworkRequest request) {
+  static Future<Response?> getRequest(MiraiNetworkRequest request) async {
     return _dio.get(
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -46,14 +48,14 @@ class MiraiNetworkService {
     BuildContext context,
   ) async {
     final body = await _updateBody(context, request.body);
+
+    Map<String, dynamic> headers =
+        Map<String, dynamic>.from(request.headers ?? {});
+    headers = await _updateBody(context.mounted ? context : context, headers);
     return _dio.post(
       request.url,
       data: body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -62,10 +64,6 @@ class MiraiNetworkService {
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -74,10 +72,6 @@ class MiraiNetworkService {
       request.url,
       data: request.body,
       queryParameters: request.queryParameters,
-      options: Options(
-        contentType: request.contentType,
-        headers: request.headers,
-      ),
     );
   }
 
@@ -90,22 +84,14 @@ class MiraiNetworkService {
         final key = mapEntry.key;
         final value = mapEntry.value;
         if (value is Map && value.containsKey('actionType')) {
-          try {
-            Log.d("Loading from an action callback");
+          Log.d("Loading from an action callback");
 
-            final dynamic callbackValue = await Future<dynamic>.value(
-              Mirai.onCallFromJson(value as Map<String, dynamic>, context),
-            );
+          final dynamic callbackValue = await Future<dynamic>.value(
+            Mirai.onCallFromJson(value as Map<String, dynamic>, context),
+          );
 
-            body.update(
-              key,
-              (existingValue) => callbackValue,
-            );
-
-            continue;
-          } catch (e) {
-            Log.e(e);
-          }
+          body[key] = callbackValue;
+          continue;
         } else if (value is File) {
           String fileName = value.path.split('/').last;
           final multipart =
