@@ -43,6 +43,7 @@ class MiraiInputDecoration with _$MiraiInputDecoration {
     String? prefixIconColor,
     Map<String, dynamic>? suffix,
     Map<String, dynamic>? suffixIcon,
+    Map<String, dynamic>? visibilityIcon,
     MiraiBoxConstraints? suffixIconConstraints,
     String? suffixText,
     MiraiTextStyle? suffixStyle,

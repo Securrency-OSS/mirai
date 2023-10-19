@@ -193,6 +193,12 @@
                                 "icon": "eye",
                                 "size": 24
                             },
+                            "visibilityIcon": {
+                                "type": "icon",
+                                "iconType": "cupertino",
+                                "icon": "eye_slash",
+                                "size": 24
+                            },
                             "labelText": "Password*"
                         },
                         "autovalidateMode": "onUserInteraction",
@@ -219,6 +225,12 @@
                                 "type": "icon",
                                 "iconType": "cupertino",
                                 "icon": "eye",
+                                "size": 24
+                            },
+                            "visibilityIcon": {
+                                "type": "icon",
+                                "iconType": "cupertino",
+                                "icon": "eye_slash",
                                 "size": 24
                             },
                             "labelText": "Re-type password*"
@@ -254,7 +266,8 @@
                                 },
                                 "gradient": {
                                     "colors": [
-                                        "#FF0000", "#0000FF"
+                                        "#FF0000",
+                                        "#0000FF"
                                     ]
                                 }
                             }

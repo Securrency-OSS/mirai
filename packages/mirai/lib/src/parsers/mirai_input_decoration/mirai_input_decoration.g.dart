@@ -62,6 +62,7 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
       prefixIconColor: json['prefixIconColor'] as String?,
       suffix: json['suffix'] as Map<String, dynamic>?,
       suffixIcon: json['suffixIcon'] as Map<String, dynamic>?,
+      visibilityIcon: json['visibilityIcon'] as Map<String, dynamic>?,
       suffixIconConstraints: json['suffixIconConstraints'] == null
           ? null
           : MiraiBoxConstraints.fromJson(
@@ -148,6 +149,7 @@ Map<String, dynamic> _$$_MiraiInputDecorationToJson(
       'prefixIconColor': instance.prefixIconColor,
       'suffix': instance.suffix,
       'suffixIcon': instance.suffixIcon,
+      'visibilityIcon': instance.visibilityIcon,
       'suffixIconConstraints': instance.suffixIconConstraints,
       'suffixText': instance.suffixText,
       'suffixStyle': instance.suffixStyle,

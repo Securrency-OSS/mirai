@@ -52,6 +52,8 @@ mixin _$MiraiInputDecoration {
   String? get prefixIconColor => throw _privateConstructorUsedError;
   Map<String, dynamic>? get suffix => throw _privateConstructorUsedError;
   Map<String, dynamic>? get suffixIcon => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get visibilityIcon =>
+      throw _privateConstructorUsedError;
   MiraiBoxConstraints? get suffixIconConstraints =>
       throw _privateConstructorUsedError;
   String? get suffixText => throw _privateConstructorUsedError;
@@ -118,6 +120,7 @@ abstract class $MiraiInputDecorationCopyWith<$Res> {
       String? prefixIconColor,
       Map<String, dynamic>? suffix,
       Map<String, dynamic>? suffixIcon,
+      Map<String, dynamic>? visibilityIcon,
       MiraiBoxConstraints? suffixIconConstraints,
       String? suffixText,
       MiraiTextStyle? suffixStyle,
@@ -203,6 +206,7 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
     Object? prefixIconColor = freezed,
     Object? suffix = freezed,
     Object? suffixIcon = freezed,
+    Object? visibilityIcon = freezed,
     Object? suffixIconConstraints = freezed,
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
@@ -341,6 +345,10 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
       suffixIcon: freezed == suffixIcon
           ? _value.suffixIcon
           : suffixIcon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      visibilityIcon: freezed == visibilityIcon
+          ? _value.visibilityIcon
+          : visibilityIcon // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
       suffixIconConstraints: freezed == suffixIconConstraints
           ? _value.suffixIconConstraints
@@ -686,6 +694,7 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
       String? prefixIconColor,
       Map<String, dynamic>? suffix,
       Map<String, dynamic>? suffixIcon,
+      Map<String, dynamic>? visibilityIcon,
       MiraiBoxConstraints? suffixIconConstraints,
       String? suffixText,
       MiraiTextStyle? suffixStyle,
@@ -786,6 +795,7 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? prefixIconColor = freezed,
     Object? suffix = freezed,
     Object? suffixIcon = freezed,
+    Object? visibilityIcon = freezed,
     Object? suffixIconConstraints = freezed,
     Object? suffixText = freezed,
     Object? suffixStyle = freezed,
@@ -925,6 +935,10 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
           ? _value._suffixIcon
           : suffixIcon // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      visibilityIcon: freezed == visibilityIcon
+          ? _value._visibilityIcon
+          : visibilityIcon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       suffixIconConstraints: freezed == suffixIconConstraints
           ? _value.suffixIconConstraints
           : suffixIconConstraints // ignore: cast_nullable_to_non_nullable
@@ -1046,6 +1060,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
       this.prefixIconColor,
       final Map<String, dynamic>? suffix,
       final Map<String, dynamic>? suffixIcon,
+      final Map<String, dynamic>? visibilityIcon,
       this.suffixIconConstraints,
       this.suffixText,
       this.suffixStyle,
@@ -1073,6 +1088,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         _prefix = prefix,
         _suffix = suffix,
         _suffixIcon = suffixIcon,
+        _visibilityIcon = visibilityIcon,
         _counter = counter;
 
   factory _$_MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
@@ -1186,6 +1202,16 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
     return EqualUnmodifiableMapView(value);
   }
 
+  final Map<String, dynamic>? _visibilityIcon;
+  @override
+  Map<String, dynamic>? get visibilityIcon {
+    final value = _visibilityIcon;
+    if (value == null) return null;
+    if (_visibilityIcon is EqualUnmodifiableMapView) return _visibilityIcon;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final MiraiBoxConstraints? suffixIconConstraints;
   @override
@@ -1241,7 +1267,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
 
   @override
   String toString() {
-    return 'MiraiInputDecoration(icon: $icon, iconColor: $iconColor, label: $label, labelText: $labelText, labelStyle: $labelStyle, floatingLabelStyle: $floatingLabelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, helperMaxLines: $helperMaxLines, hintTextDirection: $hintTextDirection, hintMaxLines: $hintMaxLines, errorText: $errorText, errorStyle: $errorStyle, errorMaxLines: $errorMaxLines, floatingLabelBehavior: $floatingLabelBehavior, floatingLabelAlignment: $floatingLabelAlignment, isCollapsed: $isCollapsed, isDense: $isDense, contentPadding: $contentPadding, prefixIcon: $prefixIcon, prefixIconConstraints: $prefixIconConstraints, prefix: $prefix, prefixText: $prefixText, prefixStyle: $prefixStyle, prefixIconColor: $prefixIconColor, suffix: $suffix, suffixIcon: $suffixIcon, suffixIconConstraints: $suffixIconConstraints, suffixText: $suffixText, suffixStyle: $suffixStyle, suffixIconColor: $suffixIconColor, counter: $counter, counterText: $counterText, counterStyle: $counterStyle, filled: $filled, fillColor: $fillColor, hoverColor: $hoverColor, focusColor: $focusColor, errorBorder: $errorBorder, focusedBorder: $focusedBorder, focusedErrorBorder: $focusedErrorBorder, disabledBorder: $disabledBorder, enabledBorder: $enabledBorder, border: $border, enabled: $enabled, semanticCounterText: $semanticCounterText, alignLabelWithHint: $alignLabelWithHint, constraints: $constraints)';
+    return 'MiraiInputDecoration(icon: $icon, iconColor: $iconColor, label: $label, labelText: $labelText, labelStyle: $labelStyle, floatingLabelStyle: $floatingLabelStyle, helperText: $helperText, helperStyle: $helperStyle, hintText: $hintText, hintStyle: $hintStyle, helperMaxLines: $helperMaxLines, hintTextDirection: $hintTextDirection, hintMaxLines: $hintMaxLines, errorText: $errorText, errorStyle: $errorStyle, errorMaxLines: $errorMaxLines, floatingLabelBehavior: $floatingLabelBehavior, floatingLabelAlignment: $floatingLabelAlignment, isCollapsed: $isCollapsed, isDense: $isDense, contentPadding: $contentPadding, prefixIcon: $prefixIcon, prefixIconConstraints: $prefixIconConstraints, prefix: $prefix, prefixText: $prefixText, prefixStyle: $prefixStyle, prefixIconColor: $prefixIconColor, suffix: $suffix, suffixIcon: $suffixIcon, visibilityIcon: $visibilityIcon, suffixIconConstraints: $suffixIconConstraints, suffixText: $suffixText, suffixStyle: $suffixStyle, suffixIconColor: $suffixIconColor, counter: $counter, counterText: $counterText, counterStyle: $counterStyle, filled: $filled, fillColor: $fillColor, hoverColor: $hoverColor, focusColor: $focusColor, errorBorder: $errorBorder, focusedBorder: $focusedBorder, focusedErrorBorder: $focusedErrorBorder, disabledBorder: $disabledBorder, enabledBorder: $enabledBorder, border: $border, enabled: $enabled, semanticCounterText: $semanticCounterText, alignLabelWithHint: $alignLabelWithHint, constraints: $constraints)';
   }
 
   @override
@@ -1302,6 +1328,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
             const DeepCollectionEquality().equals(other._suffix, _suffix) &&
             const DeepCollectionEquality()
                 .equals(other._suffixIcon, _suffixIcon) &&
+            const DeepCollectionEquality()
+                .equals(other._visibilityIcon, _visibilityIcon) &&
             (identical(other.suffixIconConstraints, suffixIconConstraints) ||
                 other.suffixIconConstraints == suffixIconConstraints) &&
             (identical(other.suffixText, suffixText) ||
@@ -1375,6 +1403,7 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         prefixIconColor,
         const DeepCollectionEquality().hash(_suffix),
         const DeepCollectionEquality().hash(_suffixIcon),
+        const DeepCollectionEquality().hash(_visibilityIcon),
         suffixIconConstraints,
         suffixText,
         suffixStyle,
@@ -1444,6 +1473,7 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final String? prefixIconColor,
       final Map<String, dynamic>? suffix,
       final Map<String, dynamic>? suffixIcon,
+      final Map<String, dynamic>? visibilityIcon,
       final MiraiBoxConstraints? suffixIconConstraints,
       final String? suffixText,
       final MiraiTextStyle? suffixStyle,
@@ -1527,6 +1557,8 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   Map<String, dynamic>? get suffix;
   @override
   Map<String, dynamic>? get suffixIcon;
+  @override
+  Map<String, dynamic>? get visibilityIcon;
   @override
   MiraiBoxConstraints? get suffixIconConstraints;
   @override

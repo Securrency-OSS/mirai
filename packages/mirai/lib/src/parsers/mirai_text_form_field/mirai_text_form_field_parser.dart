@@ -135,7 +135,11 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
                 });
               },
               child: Mirai.fromJson(
-                      widget.model.decoration?.suffixIcon, context) ??
+                      (!obscureText &&
+                              widget.model.decoration?.visibilityIcon != null)
+                          ? widget.model.decoration?.visibilityIcon
+                          : widget.model.decoration?.suffixIcon,
+                      context) ??
                   const SizedBox(),
             ),
           );
