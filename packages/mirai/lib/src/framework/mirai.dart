@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
@@ -154,6 +155,21 @@ class Mirai {
             break;
           default:
             break;
+        }
+        return const SizedBox();
+      },
+    );
+  }
+
+  static Widget fromRealtimeDatabase(String path) {
+    DatabaseReference ref = FirebaseDatabase.instance.ref(path);
+    return StreamBuilder<DatabaseEvent>(
+      stream: ref.onValue,
+      builder: (BuildContext context, AsyncSnapshot<DatabaseEvent> snapshot) {
+        if (snapshot.hasData) {
+          final obj = jsonEncode(snapshot.data!.snapshot.value!);
+          final json = jsonDecode(obj);
+          return Mirai.fromJson(json, context) ?? const SizedBox();
         }
         return const SizedBox();
       },
