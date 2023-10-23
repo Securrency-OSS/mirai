@@ -22,6 +22,7 @@ class MiraiNavigateAction with _$MiraiNavigateAction {
   factory MiraiNavigateAction({
     MiraiNetworkRequest? request,
     Map<String, dynamic>? widgetJson,
+    String? firebaseDbPath,
     String? assetPath,
     String? routeName,
     NavigationStyle? navigationStyle,

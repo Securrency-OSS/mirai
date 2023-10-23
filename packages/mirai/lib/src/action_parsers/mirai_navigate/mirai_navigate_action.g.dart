@@ -14,6 +14,7 @@ _$_MiraiNavigateAction _$$_MiraiNavigateActionFromJson(
           : MiraiNetworkRequest.fromJson(
               json['request'] as Map<String, dynamic>),
       widgetJson: json['widgetJson'] as Map<String, dynamic>?,
+      firebaseDbPath: json['firebaseDbPath'] as String?,
       assetPath: json['assetPath'] as String?,
       routeName: json['routeName'] as String?,
       navigationStyle: $enumDecodeNullable(
@@ -27,6 +28,7 @@ Map<String, dynamic> _$$_MiraiNavigateActionToJson(
     <String, dynamic>{
       'request': instance.request,
       'widgetJson': instance.widgetJson,
+      'firebaseDbPath': instance.firebaseDbPath,
       'assetPath': instance.assetPath,
       'routeName': instance.routeName,
       'navigationStyle': _$NavigationStyleEnumMap[instance.navigationStyle],

@@ -21,7 +21,10 @@ class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
   @override
   FutureOr onCall(BuildContext context, MiraiNavigateAction model) {
     Widget? widget;
-    if (model.widgetJson != null) {
+
+    if (model.firebaseDbPath != null) {
+      widget = Mirai.fromRealtimeDatabase(model.firebaseDbPath!);
+    } else if (model.widgetJson != null) {
       widget = Mirai.fromJson(model.widgetJson, context);
     } else if (model.request != null) {
       widget = Mirai.fromNetwork(model.request!, context);
