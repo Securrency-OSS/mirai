@@ -14,7 +14,13 @@ import 'package:mirai/src/utils/widget_type.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
-  const MiraiTextFormFieldParser();
+  const MiraiTextFormFieldParser({
+    this.controler,
+    this.onChange,
+  });
+
+  final TextEditingController? controler;
+  final Function(String value)? onChange;
 
   @override
   MiraiTextFormField getModel(Map<String, dynamic> json) =>
@@ -27,6 +33,8 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
   Widget parse(BuildContext context, MiraiTextFormField model) {
     return _TextFormFieldWidget(
       model: model,
+      controler: controler,
+      onChange: onChange,
     );
   }
 }
@@ -34,9 +42,14 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
 class _TextFormFieldWidget extends StatefulWidget {
   const _TextFormFieldWidget({
     required this.model,
+    this.controler,
+    this.onChange,
   });
 
   final MiraiTextFormField model;
+  final TextEditingController? controler;
+  final Function(String value)? onChange;
+
   @override
   State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
 }
@@ -48,13 +61,8 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
   @override
   void initState() {
-    if (widget.model.id != null) {
-      // context
-      //     .read<MiraiFormCubit>()
-      //     .registerValue(widget.model.id!, widget.model.initialValue ?? "");
-    }
-
-    controller = TextEditingController(text: widget.model.initialValue);
+    controller = widget.controler ??
+        TextEditingController(text: widget.model.initialValue);
     obscureText = widget.model.obscureText ?? false;
     super.initState();
   }
@@ -70,11 +78,9 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
         if (widget.model.id != null) {
           formScope.formData[widget.model.id!] = value;
           Log.d(formScope.formData);
-          // context.read<MiraiFormCubit>().updateValue(
-          //       widget.model.id!,
-          //       value,
-          //     );
         }
+
+        widget.onChange?.call(value);
       },
       keyboardType: widget.model.keyboardType?.value,
       textInputAction: widget.model.textInputAction,
