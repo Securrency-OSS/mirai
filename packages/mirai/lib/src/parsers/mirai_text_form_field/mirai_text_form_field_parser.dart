@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
@@ -62,13 +61,11 @@ class _TextFormFieldWidget extends StatefulWidget {
 class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
   TextEditingController controller = TextEditingController();
   FocusNode? focusNode = FocusNode();
-  bool obscureText = false;
 
   @override
   void initState() {
     controller = widget.controler ??
         TextEditingController(text: widget.model.initialValue);
-    obscureText = widget.model.obscureText ?? false;
     super.initState();
   }
 
@@ -101,7 +98,7 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       maxLines: widget.model.maxLines,
       minLines: widget.model.minLines,
       maxLength: widget.model.maxLength,
-      obscureText: obscureText,
+      obscureText: widget.model.obscureText,
       autocorrect: widget.model.autocorrect,
       smartDashesType: widget.model.smartDashesType,
       smartQuotesType: widget.model.smartQuotesType,
@@ -117,7 +114,7 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       cursorHeight: widget.model.cursorHeight,
       cursorColor: widget.model.cursorColor?.toColor,
       style: widget.model.style?.parse,
-      decoration: _inputDecoration(widget.model),
+      decoration: widget.model.decoration?.parse(context),
       inputFormatters: widget.model.inputFormatters
           .map((MiraiInputFormatter formatter) =>
               formatter.type.format(formatter.rule ?? ""))
@@ -134,25 +131,6 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
     );
   }
 
-  InputDecoration? _inputDecoration(MiraiTextFormField model) {
-    if (model.obscureText != null) {
-      return model.decoration?.parse(context).copyWith(
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  obscureText = !obscureText;
-                });
-              },
-              child: Mirai.fromJson(
-                      widget.model.decoration?.suffixIcon, context) ??
-                  const SizedBox(),
-            ),
-          );
-    }
-
-    return model.decoration?.parse(context);
-  }
-
   String? _validate(String? value, MiraiTextFormField model) {
     if (value != null && widget.model.validatorRules.isNotEmpty) {
       for (MiraiFormFieldValidator validator in widget.model.validatorRules) {
@@ -160,18 +138,7 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           InputValidationType? validationType = InputValidationType.values
               .firstWhere((e) => e.name == validator.rule);
 
-          String? compareVal;
-          if (widget.model.compareId != null) {
-            try {
-              // compareVal = context
-              //     .read<MiraiFormCubit>()
-              //     .getValue(widget.model.compareId!);
-            } catch (e) {
-              Log.e(e);
-            }
-          }
-          if (!validationType.validate(value, validator.rule,
-              compareValue: compareVal)) {
+          if (!validationType.validate(value, validator.rule)) {
             return validator.message;
           }
         } catch (_) {
