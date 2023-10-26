@@ -17,10 +17,12 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
   const MiraiTextFormFieldParser({
     this.controler,
     this.onChange,
+    this.validator,
   });
 
   final TextEditingController? controler;
   final Function(String value)? onChange;
+  final String? Function(String?)? validator;
 
   @override
   MiraiTextFormField getModel(Map<String, dynamic> json) =>
@@ -35,6 +37,7 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
       model: model,
       controler: controler,
       onChange: onChange,
+      validator: validator,
     );
   }
 }
@@ -44,11 +47,13 @@ class _TextFormFieldWidget extends StatefulWidget {
     required this.model,
     this.controler,
     this.onChange,
+    this.validator,
   });
 
   final MiraiTextFormField model;
   final TextEditingController? controler;
   final Function(String value)? onChange;
+  final String? Function(String?)? validator;
 
   @override
   State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
@@ -117,20 +122,15 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
           .map((MiraiInputFormatter formatter) =>
               formatter.type.format(formatter.rule ?? ""))
           .toList(),
-      validator: (value) {
-        final validation = _validate(
-          value,
-          widget.model,
-        );
+      validator: widget.validator ??
+          (value) {
+            final validation = _validate(
+              value,
+              widget.model,
+            );
 
-        if (widget.model.id != null) {
-          // context
-          //     .read<MiraiFormCubit>()
-          //     .updateValidation(widget.model.id!, validation == null);
-        }
-
-        return validation;
-      },
+            return validation;
+          },
     );
   }
 
