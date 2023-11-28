@@ -6,8 +6,8 @@ part of 'mirai_webview.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiWebView _$$_MiraiWebViewFromJson(Map<String, dynamic> json) =>
-    _$_MiraiWebView(
+_$MiraiWebViewImpl _$$MiraiWebViewImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiWebViewImpl(
       url: json['url'] as String,
       javaScriptMode: $enumDecodeNullable(
               _$JavaScriptModeEnumMap, json['javaScriptMode']) ??
@@ -17,7 +17,7 @@ _$_MiraiWebView _$$_MiraiWebViewFromJson(Map<String, dynamic> json) =>
       enableZoom: json['enableZoom'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiWebViewToJson(_$_MiraiWebView instance) =>
+Map<String, dynamic> _$$MiraiWebViewImplToJson(_$MiraiWebViewImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'javaScriptMode': _$JavaScriptModeEnumMap[instance.javaScriptMode]!,

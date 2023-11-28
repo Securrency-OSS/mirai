@@ -91,11 +91,11 @@ class _$MiraiWebViewCopyWithImpl<$Res, $Val extends MiraiWebView>
 }
 
 /// @nodoc
-abstract class _$$_MiraiWebViewCopyWith<$Res>
+abstract class _$$MiraiWebViewImplCopyWith<$Res>
     implements $MiraiWebViewCopyWith<$Res> {
-  factory _$$_MiraiWebViewCopyWith(
-          _$_MiraiWebView value, $Res Function(_$_MiraiWebView) then) =
-      __$$_MiraiWebViewCopyWithImpl<$Res>;
+  factory _$$MiraiWebViewImplCopyWith(
+          _$MiraiWebViewImpl value, $Res Function(_$MiraiWebViewImpl) then) =
+      __$$MiraiWebViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_MiraiWebViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiWebViewCopyWithImpl<$Res>
-    extends _$MiraiWebViewCopyWithImpl<$Res, _$_MiraiWebView>
-    implements _$$_MiraiWebViewCopyWith<$Res> {
-  __$$_MiraiWebViewCopyWithImpl(
-      _$_MiraiWebView _value, $Res Function(_$_MiraiWebView) _then)
+class __$$MiraiWebViewImplCopyWithImpl<$Res>
+    extends _$MiraiWebViewCopyWithImpl<$Res, _$MiraiWebViewImpl>
+    implements _$$MiraiWebViewImplCopyWith<$Res> {
+  __$$MiraiWebViewImplCopyWithImpl(
+      _$MiraiWebViewImpl _value, $Res Function(_$MiraiWebViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_MiraiWebViewCopyWithImpl<$Res>
     Object? userAgent = freezed,
     Object? enableZoom = null,
   }) {
-    return _then(_$_MiraiWebView(
+    return _then(_$MiraiWebViewImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -150,16 +150,16 @@ class __$$_MiraiWebViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiWebView implements _MiraiWebView {
-  const _$_MiraiWebView(
+class _$MiraiWebViewImpl implements _MiraiWebView {
+  const _$MiraiWebViewImpl(
       {required this.url,
       this.javaScriptMode = JavaScriptMode.unrestricted,
       this.backgroundColor = "#000000",
       this.userAgent,
       this.enableZoom = false});
 
-  factory _$_MiraiWebView.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiWebViewFromJson(json);
+  factory _$MiraiWebViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiWebViewImplFromJson(json);
 
   @override
   final String url;
@@ -184,7 +184,7 @@ class _$_MiraiWebView implements _MiraiWebView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiWebView &&
+            other is _$MiraiWebViewImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.javaScriptMode, javaScriptMode) ||
                 other.javaScriptMode == javaScriptMode) &&
@@ -204,12 +204,12 @@ class _$_MiraiWebView implements _MiraiWebView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiWebViewCopyWith<_$_MiraiWebView> get copyWith =>
-      __$$_MiraiWebViewCopyWithImpl<_$_MiraiWebView>(this, _$identity);
+  _$$MiraiWebViewImplCopyWith<_$MiraiWebViewImpl> get copyWith =>
+      __$$MiraiWebViewImplCopyWithImpl<_$MiraiWebViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiWebViewToJson(
+    return _$$MiraiWebViewImplToJson(
       this,
     );
   }
@@ -221,10 +221,10 @@ abstract class _MiraiWebView implements MiraiWebView {
       final JavaScriptMode javaScriptMode,
       final String backgroundColor,
       final String? userAgent,
-      final bool enableZoom}) = _$_MiraiWebView;
+      final bool enableZoom}) = _$MiraiWebViewImpl;
 
   factory _MiraiWebView.fromJson(Map<String, dynamic> json) =
-      _$_MiraiWebView.fromJson;
+      _$MiraiWebViewImpl.fromJson;
 
   @override
   String get url;
@@ -238,6 +238,6 @@ abstract class _MiraiWebView implements MiraiWebView {
   bool get enableZoom;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiWebViewCopyWith<_$_MiraiWebView> get copyWith =>
+  _$$MiraiWebViewImplCopyWith<_$MiraiWebViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
