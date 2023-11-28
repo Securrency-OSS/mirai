@@ -30,6 +30,7 @@ class MiraiTabBar with _$MiraiTabBar {
     @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
     bool? enableFeedback,
     MiraiScrollPhysics? physics,
+    TabAlignment? tabAlignment,
   }) = _MiraiTabBar;
 
   factory MiraiTabBar.fromJson(Map<String, dynamic> json) =>
