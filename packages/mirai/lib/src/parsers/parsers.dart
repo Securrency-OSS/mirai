@@ -59,3 +59,4 @@ export 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.da
 export 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 export 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 export 'package:mirai/src/parsers/mirai_align/mirai_align.dart';
+export 'package:mirai/src/utils/mirai_scroll_physics.dart';

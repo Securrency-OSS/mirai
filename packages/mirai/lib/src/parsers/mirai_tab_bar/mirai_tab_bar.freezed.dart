@@ -39,6 +39,7 @@ mixin _$MiraiTabBar {
   DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
   bool? get enableFeedback => throw _privateConstructorUsedError;
   MiraiScrollPhysics? get physics => throw _privateConstructorUsedError;
+  TabAlignment? get tabAlignment => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,7 +70,8 @@ abstract class $MiraiTabBarCopyWith<$Res> {
       MiraiTextStyle? unselectedLabelStyle,
       DragStartBehavior dragStartBehavior,
       bool? enableFeedback,
-      MiraiScrollPhysics? physics});
+      MiraiScrollPhysics? physics,
+      TabAlignment? tabAlignment});
 
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
   $MiraiEdgeInsetsCopyWith<$Res>? get indicatorPadding;
@@ -108,6 +110,7 @@ class _$MiraiTabBarCopyWithImpl<$Res, $Val extends MiraiTabBar>
     Object? dragStartBehavior = null,
     Object? enableFeedback = freezed,
     Object? physics = freezed,
+    Object? tabAlignment = freezed,
   }) {
     return _then(_value.copyWith(
       tabs: null == tabs
@@ -179,6 +182,10 @@ class _$MiraiTabBarCopyWithImpl<$Res, $Val extends MiraiTabBar>
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
               as MiraiScrollPhysics?,
+      tabAlignment: freezed == tabAlignment
+          ? _value.tabAlignment
+          : tabAlignment // ignore: cast_nullable_to_non_nullable
+              as TabAlignment?,
     ) as $Val);
   }
 
@@ -268,7 +275,8 @@ abstract class _$$_MiraiTabBarCopyWith<$Res>
       MiraiTextStyle? unselectedLabelStyle,
       DragStartBehavior dragStartBehavior,
       bool? enableFeedback,
-      MiraiScrollPhysics? physics});
+      MiraiScrollPhysics? physics,
+      TabAlignment? tabAlignment});
 
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
@@ -310,6 +318,7 @@ class __$$_MiraiTabBarCopyWithImpl<$Res>
     Object? dragStartBehavior = null,
     Object? enableFeedback = freezed,
     Object? physics = freezed,
+    Object? tabAlignment = freezed,
   }) {
     return _then(_$_MiraiTabBar(
       tabs: null == tabs
@@ -381,6 +390,10 @@ class __$$_MiraiTabBarCopyWithImpl<$Res>
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
               as MiraiScrollPhysics?,
+      tabAlignment: freezed == tabAlignment
+          ? _value.tabAlignment
+          : tabAlignment // ignore: cast_nullable_to_non_nullable
+              as TabAlignment?,
     ));
   }
 }
@@ -405,7 +418,8 @@ class _$_MiraiTabBar implements _MiraiTabBar {
       this.unselectedLabelStyle,
       this.dragStartBehavior = DragStartBehavior.start,
       this.enableFeedback,
-      this.physics})
+      this.physics,
+      this.tabAlignment})
       : _tabs = tabs;
 
   factory _$_MiraiTabBar.fromJson(Map<String, dynamic> json) =>
@@ -456,10 +470,12 @@ class _$_MiraiTabBar implements _MiraiTabBar {
   final bool? enableFeedback;
   @override
   final MiraiScrollPhysics? physics;
+  @override
+  final TabAlignment? tabAlignment;
 
   @override
   String toString() {
-    return 'MiraiTabBar(tabs: $tabs, initialIndex: $initialIndex, isScrollable: $isScrollable, padding: $padding, indicatorColor: $indicatorColor, automaticIndicatorColorAdjustment: $automaticIndicatorColorAdjustment, indicatorWeight: $indicatorWeight, indicatorPadding: $indicatorPadding, indicatorSize: $indicatorSize, labelColor: $labelColor, labelStyle: $labelStyle, labelPadding: $labelPadding, unselectedLabelColor: $unselectedLabelColor, unselectedLabelStyle: $unselectedLabelStyle, dragStartBehavior: $dragStartBehavior, enableFeedback: $enableFeedback, physics: $physics)';
+    return 'MiraiTabBar(tabs: $tabs, initialIndex: $initialIndex, isScrollable: $isScrollable, padding: $padding, indicatorColor: $indicatorColor, automaticIndicatorColorAdjustment: $automaticIndicatorColorAdjustment, indicatorWeight: $indicatorWeight, indicatorPadding: $indicatorPadding, indicatorSize: $indicatorSize, labelColor: $labelColor, labelStyle: $labelStyle, labelPadding: $labelPadding, unselectedLabelColor: $unselectedLabelColor, unselectedLabelStyle: $unselectedLabelStyle, dragStartBehavior: $dragStartBehavior, enableFeedback: $enableFeedback, physics: $physics, tabAlignment: $tabAlignment)';
   }
 
   @override
@@ -499,7 +515,9 @@ class _$_MiraiTabBar implements _MiraiTabBar {
                 other.dragStartBehavior == dragStartBehavior) &&
             (identical(other.enableFeedback, enableFeedback) ||
                 other.enableFeedback == enableFeedback) &&
-            (identical(other.physics, physics) || other.physics == physics));
+            (identical(other.physics, physics) || other.physics == physics) &&
+            (identical(other.tabAlignment, tabAlignment) ||
+                other.tabAlignment == tabAlignment));
   }
 
   @JsonKey(ignore: true)
@@ -522,7 +540,8 @@ class _$_MiraiTabBar implements _MiraiTabBar {
       unselectedLabelStyle,
       dragStartBehavior,
       enableFeedback,
-      physics);
+      physics,
+      tabAlignment);
 
   @JsonKey(ignore: true)
   @override
@@ -556,7 +575,8 @@ abstract class _MiraiTabBar implements MiraiTabBar {
       final MiraiTextStyle? unselectedLabelStyle,
       final DragStartBehavior dragStartBehavior,
       final bool? enableFeedback,
-      final MiraiScrollPhysics? physics}) = _$_MiraiTabBar;
+      final MiraiScrollPhysics? physics,
+      final TabAlignment? tabAlignment}) = _$_MiraiTabBar;
 
   factory _MiraiTabBar.fromJson(Map<String, dynamic> json) =
       _$_MiraiTabBar.fromJson;
@@ -595,6 +615,8 @@ abstract class _MiraiTabBar implements MiraiTabBar {
   bool? get enableFeedback;
   @override
   MiraiScrollPhysics? get physics;
+  @override
+  TabAlignment? get tabAlignment;
   @override
   @JsonKey(ignore: true)
   _$$_MiraiTabBarCopyWith<_$_MiraiTabBar> get copyWith =>
