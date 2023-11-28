@@ -42,6 +42,7 @@ class MiraiTabBarParser extends MiraiParser<MiraiTabBar> {
       enableFeedback: model.enableFeedback,
       onTap: (_) {},
       physics: model.physics?.parse,
+      tabAlignment: model.tabAlignment,
     );
   }
 }

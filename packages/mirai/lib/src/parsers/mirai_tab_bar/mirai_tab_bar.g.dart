@@ -6,8 +6,8 @@ part of 'mirai_tab_bar.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTabBar _$$_MiraiTabBarFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTabBar(
+_$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiTabBarImpl(
       tabs: (json['tabs'] as List<dynamic>)
           .map((e) => e as Map<String, dynamic>)
           .toList(),
@@ -45,9 +45,11 @@ _$_MiraiTabBar _$$_MiraiTabBarFromJson(Map<String, dynamic> json) =>
       enableFeedback: json['enableFeedback'] as bool?,
       physics:
           $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
+      tabAlignment:
+          $enumDecodeNullable(_$TabAlignmentEnumMap, json['tabAlignment']),
     );
 
-Map<String, dynamic> _$$_MiraiTabBarToJson(_$_MiraiTabBar instance) =>
+Map<String, dynamic> _$$MiraiTabBarImplToJson(_$MiraiTabBarImpl instance) =>
     <String, dynamic>{
       'tabs': instance.tabs,
       'initialIndex': instance.initialIndex,
@@ -68,6 +70,7 @@ Map<String, dynamic> _$$_MiraiTabBarToJson(_$_MiraiTabBar instance) =>
           _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
       'enableFeedback': instance.enableFeedback,
       'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
+      'tabAlignment': _$TabAlignmentEnumMap[instance.tabAlignment],
     };
 
 const _$TabBarIndicatorSizeEnumMap = {
@@ -86,4 +89,11 @@ const _$MiraiScrollPhysicsEnumMap = {
   MiraiScrollPhysics.clamping: 'clamping',
   MiraiScrollPhysics.fixed: 'fixed',
   MiraiScrollPhysics.page: 'page',
+};
+
+const _$TabAlignmentEnumMap = {
+  TabAlignment.start: 'start',
+  TabAlignment.startOffset: 'startOffset',
+  TabAlignment.fill: 'fill',
+  TabAlignment.center: 'center',
 };
