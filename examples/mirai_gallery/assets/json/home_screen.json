@@ -836,6 +836,37 @@
                     },
                     "title": {
                         "type": "text",
+                        "data": "Mirai PageView",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A Material Design widget that displays a horizontal row of pages",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/page_view_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "table_chart"
+                    },
+                    "title": {
+                        "type": "text",
                         "data": "Mirai Tabbar",
                         "style": {
                             "fontSize": 21
