@@ -20,12 +20,25 @@ class MiraiFormParser extends MiraiParser<MiraiForm> {
     return BlocProvider(
       create: (_) => MiraiFormCubit(),
       child: Form(
-          autovalidateMode: model.autovalidateMode,
-          child: BlocBuilder<MiraiFormCubit, MiraiFormState>(
-            builder: (context, state) {
-              return Mirai.fromJson(model.child, context) ?? const SizedBox();
-            },
-          )),
+        autovalidateMode: model.autovalidateMode,
+        child: GestureDetector(
+          onTap: () {
+            FocusScopeNode currentFocus = FocusScope.of(context);
+
+            if (!currentFocus.hasPrimaryFocus) {
+              currentFocus.unfocus();
+            }
+          },
+          child: Container(
+            color: Colors.transparent,
+            child: BlocBuilder<MiraiFormCubit, MiraiFormState>(
+              builder: (context, state) {
+                return Mirai.fromJson(model.child, context) ?? const SizedBox();
+              },
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
