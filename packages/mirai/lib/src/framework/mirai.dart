@@ -68,6 +68,7 @@ class Mirai {
     const MiraiSafeAreaParser(),
     const MiraiSwitchParser(),
     const MiraiAlignParser(),
+    const MiraiPageViewParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
