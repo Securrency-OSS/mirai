@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
@@ -29,13 +31,13 @@ class _RefreshIndicatorWidget extends StatefulWidget {
 }
 
 class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
-  dynamic childWidget;
+  Map<String, dynamic>? childWidgetJson;
 
   @override
   void initState() {
     super.initState();
 
-    childWidget = widget.model.child;
+    childWidgetJson = widget.model.child;
   }
 
   @override
@@ -47,24 +49,20 @@ class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
             await Mirai.onCallFromJson(widget.model.onRefresh, context);
 
         if (context.mounted) {
-          if (result.data != null && result.data is Map<String, dynamic>) {
-            setState(() {
-              childWidget = Mirai.fromJson(result.data, context);
-            });
+          if (result.data != null) {
+            if (result.data is Map<String, dynamic>) {
+              setState(() {
+                childWidgetJson = result.data;
+              });
+            } else if (result.data is String) {
+              setState(() {
+                childWidgetJson = jsonDecode(result.data);
+              });
+            }
           }
         }
       },
-      child: Mirai.fromJson(childWidget, context) ?? const SizedBox(),
-      // child: ListView.builder(
-      //   itemCount: 4,
-      //   itemBuilder: (c, d) {
-      //     return Text('data');
-      //   },
-      // ),
-      // child: SingleChildScrollView(
-      //   physics: AlwaysScrollableScrollPhysics(),
-      //   child: Mirai.fromJson(model.child, context),
-      // ),
+      child: Mirai.fromJson(childWidgetJson, context) ?? const SizedBox(),
     );
   }
 }

@@ -4,20 +4,16 @@
         "type": "appBar",
         "title": {
             "type": "text",
-            "data": "Align"
+            "data": "Refresh Indicator"
         }
     },
     "body": {
         "type": "refreshIndicator",
         "onRefresh": {
             "actionType": "request",
-            "url": "https://active-money-mirai-default-rtdb.firebaseio.com/screens/create_account.json",
+            "url": "https://raw.githubusercontent.com/Securrency-OSS/mirai/main/examples/mirai_gallery/assets/json/list_view_example.json",
             "method": "get",
-            "contentType": "application/json",
-            "data": {
-                "alt": "media",
-                "token": "9168291d-596a-4b6e-b337-3609781d9728"
-            }
+            "contentType": "application/json"
         },
         "child": {
             "type": "listView",

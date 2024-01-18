@@ -650,6 +650,37 @@
                     },
                     "title": {
                         "type": "text",
+                        "data": "Mirai Refresh Indicator",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "A widget that supports the Material \"swipe to refresh\" idiom.",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/refresh_indicator_example.json"
+                        }
+                    }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "table_rows"
+                    },
+                    "title": {
+                        "type": "text",
                         "data": "Mirai Row",
                         "style": {
                             "fontSize": 21
@@ -669,37 +700,6 @@
                         "widgetJson": {
                             "type": "exampleScreen",
                             "assetPath": "assets/json/row_example.json"
-                        }
-                    }
-                },
-                {
-                    "type": "listTile",
-                    "leading": {
-                        "type": "icon",
-                        "iconType": "material",
-                        "icon": "table_rows"
-                    },
-                    "title": {
-                        "type": "text",
-                        "data": "Mirai Refresh Indicator",
-                        "style": {
-                            "fontSize": 21
-                        }
-                    },
-                    "subtitle": {
-                        "type": "text",
-                        "data": "Refresh Indicator",
-                        "style": {
-                            "fontSize": 12
-                        }
-                    },
-                    "isThreeLine": true,
-                    "onTap": {
-                        "actionType": "navigate",
-                        "navigationStyle": "push",
-                        "widgetJson": {
-                            "type": "exampleScreen",
-                            "assetPath": "assets/json/refresh_indicator_example.json"
                         }
                     }
                 },
