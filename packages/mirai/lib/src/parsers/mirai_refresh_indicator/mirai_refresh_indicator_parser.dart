@@ -43,7 +43,8 @@ class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      // onRefresh: () async {},
+      displacement: widget.model.displacement,
+      edgeOffset: widget.model.edgeOffset,
       onRefresh: () async {
         Response result =
             await Mirai.onCallFromJson(widget.model.onRefresh, context);
@@ -62,6 +63,12 @@ class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
           }
         }
       },
+      color: widget.model.color.toColor,
+      backgroundColor: widget.model.backgroundColor.toColor,
+      semanticsLabel: widget.model.semanticsLabel,
+      semanticsValue: widget.model.semanticsValue,
+      strokeWidth: widget.model.strokeWidth,
+      triggerMode: widget.model.triggerMode,
       child: Mirai.fromJson(childWidgetJson, context) ?? const SizedBox(),
     );
   }
