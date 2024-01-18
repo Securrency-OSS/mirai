@@ -11,17 +11,18 @@ part 'mirai_page_view.g.dart';
 @freezed
 class MiraiPageView with _$MiraiPageView {
   const factory MiraiPageView({
-    @Default(false) bool allowImplicitScrolling,
-    @Default(Clip.hardEdge) Clip clipBehavior,
-    @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
-    @Default(0) int initialPage,
-    @Default(true) keepPage,
-    String? restorationId,
+    @Default(Axis.horizontal) Axis scrollDirection,
+    @Default(false) bool reverse,
     MiraiScrollPhysics? physics,
     @Default(true) bool pageSnapping,
+    Map<String, dynamic>? onPageChanged,
+    @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
+    @Default(false) bool allowImplicitScrolling,
+    String? restorationId,
+    @Default(Clip.hardEdge) Clip clipBehavior,
     @Default(true) bool padEnds,
-    @Default(false) bool reverse,
-    @Default(Axis.horizontal) Axis scrollDirection,
+    @Default(0) int initialPage,
+    @Default(true) keepPage,
     @Default(1.0) double viewportFraction,
     @Default([]) List<Map<String, dynamic>> children,
   }) = _MiraiPageView;

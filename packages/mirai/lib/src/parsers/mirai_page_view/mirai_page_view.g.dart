@@ -16,11 +16,12 @@ _$MiraiPageViewImpl _$$MiraiPageViewImplFromJson(Map<String, dynamic> json) =>
           DragStartBehavior.start,
       initialPage: json['initialPage'] as int? ?? 0,
       keepPage: json['keepPage'] ?? true,
-      restorationId: json['restorationId'] as String?,
+      onPageChanged: json['onPageChanged'] as Map<String, dynamic>?,
       physics:
           $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
       pageSnapping: json['pageSnapping'] as bool? ?? true,
       padEnds: json['padEnds'] as bool? ?? true,
+      restorationId: json['restorationId'] as String?,
       reverse: json['reverse'] as bool? ?? false,
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
@@ -40,10 +41,11 @@ Map<String, dynamic> _$$MiraiPageViewImplToJson(_$MiraiPageViewImpl instance) =>
           _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
       'initialPage': instance.initialPage,
       'keepPage': instance.keepPage,
-      'restorationId': instance.restorationId,
+      'onPageChanged': instance.onPageChanged,
       'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
       'pageSnapping': instance.pageSnapping,
       'padEnds': instance.padEnds,
+      'restorationId': instance.restorationId,
       'reverse': instance.reverse,
       'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
       'viewportFraction': instance.viewportFraction,

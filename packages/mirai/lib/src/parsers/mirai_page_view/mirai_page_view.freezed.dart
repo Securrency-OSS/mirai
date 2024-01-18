@@ -25,10 +25,11 @@ mixin _$MiraiPageView {
   DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
   int get initialPage => throw _privateConstructorUsedError;
   dynamic get keepPage => throw _privateConstructorUsedError;
-  String? get restorationId => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onPageChanged => throw _privateConstructorUsedError;
   MiraiScrollPhysics? get physics => throw _privateConstructorUsedError;
   bool get pageSnapping => throw _privateConstructorUsedError;
   bool get padEnds => throw _privateConstructorUsedError;
+  String? get restorationId => throw _privateConstructorUsedError;
   bool get reverse => throw _privateConstructorUsedError;
   Axis get scrollDirection => throw _privateConstructorUsedError;
   double get viewportFraction => throw _privateConstructorUsedError;
@@ -52,10 +53,11 @@ abstract class $MiraiPageViewCopyWith<$Res> {
       DragStartBehavior dragStartBehavior,
       int initialPage,
       dynamic keepPage,
-      String? restorationId,
+      Map<String, dynamic>? onPageChanged,
       MiraiScrollPhysics? physics,
       bool pageSnapping,
       bool padEnds,
+      String? restorationId,
       bool reverse,
       Axis scrollDirection,
       double viewportFraction,
@@ -80,10 +82,11 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
     Object? dragStartBehavior = null,
     Object? initialPage = null,
     Object? keepPage = freezed,
-    Object? restorationId = freezed,
+    Object? onPageChanged = freezed,
     Object? physics = freezed,
     Object? pageSnapping = null,
     Object? padEnds = null,
+    Object? restorationId = freezed,
     Object? reverse = null,
     Object? scrollDirection = null,
     Object? viewportFraction = null,
@@ -110,10 +113,10 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
           ? _value.keepPage
           : keepPage // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      restorationId: freezed == restorationId
-          ? _value.restorationId
-          : restorationId // ignore: cast_nullable_to_non_nullable
-              as String?,
+      onPageChanged: freezed == onPageChanged
+          ? _value.onPageChanged
+          : onPageChanged // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
@@ -126,6 +129,10 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
           ? _value.padEnds
           : padEnds // ignore: cast_nullable_to_non_nullable
               as bool,
+      restorationId: freezed == restorationId
+          ? _value.restorationId
+          : restorationId // ignore: cast_nullable_to_non_nullable
+              as String?,
       reverse: null == reverse
           ? _value.reverse
           : reverse // ignore: cast_nullable_to_non_nullable
@@ -160,10 +167,11 @@ abstract class _$$MiraiPageViewImplCopyWith<$Res>
       DragStartBehavior dragStartBehavior,
       int initialPage,
       dynamic keepPage,
-      String? restorationId,
+      Map<String, dynamic>? onPageChanged,
       MiraiScrollPhysics? physics,
       bool pageSnapping,
       bool padEnds,
+      String? restorationId,
       bool reverse,
       Axis scrollDirection,
       double viewportFraction,
@@ -186,10 +194,11 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
     Object? dragStartBehavior = null,
     Object? initialPage = null,
     Object? keepPage = freezed,
-    Object? restorationId = freezed,
+    Object? onPageChanged = freezed,
     Object? physics = freezed,
     Object? pageSnapping = null,
     Object? padEnds = null,
+    Object? restorationId = freezed,
     Object? reverse = null,
     Object? scrollDirection = null,
     Object? viewportFraction = null,
@@ -213,10 +222,10 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
           : initialPage // ignore: cast_nullable_to_non_nullable
               as int,
       keepPage: freezed == keepPage ? _value.keepPage! : keepPage,
-      restorationId: freezed == restorationId
-          ? _value.restorationId
-          : restorationId // ignore: cast_nullable_to_non_nullable
-              as String?,
+      onPageChanged: freezed == onPageChanged
+          ? _value._onPageChanged
+          : onPageChanged // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
@@ -229,6 +238,10 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
           ? _value.padEnds
           : padEnds // ignore: cast_nullable_to_non_nullable
               as bool,
+      restorationId: freezed == restorationId
+          ? _value.restorationId
+          : restorationId // ignore: cast_nullable_to_non_nullable
+              as String?,
       reverse: null == reverse
           ? _value.reverse
           : reverse // ignore: cast_nullable_to_non_nullable
@@ -258,15 +271,17 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
       this.dragStartBehavior = DragStartBehavior.start,
       this.initialPage = 0,
       this.keepPage = true,
-      this.restorationId,
+      final Map<String, dynamic>? onPageChanged,
       this.physics,
       this.pageSnapping = true,
       this.padEnds = true,
+      this.restorationId,
       this.reverse = false,
       this.scrollDirection = Axis.horizontal,
       this.viewportFraction = 1.0,
       final List<Map<String, dynamic>> children = const []})
-      : _children = children;
+      : _onPageChanged = onPageChanged,
+        _children = children;
 
   factory _$MiraiPageViewImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiPageViewImplFromJson(json);
@@ -286,8 +301,16 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
   @override
   @JsonKey()
   final dynamic keepPage;
+  final Map<String, dynamic>? _onPageChanged;
   @override
-  final String? restorationId;
+  Map<String, dynamic>? get onPageChanged {
+    final value = _onPageChanged;
+    if (value == null) return null;
+    if (_onPageChanged is EqualUnmodifiableMapView) return _onPageChanged;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   final MiraiScrollPhysics? physics;
   @override
@@ -296,6 +319,8 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
   @override
   @JsonKey()
   final bool padEnds;
+  @override
+  final String? restorationId;
   @override
   @JsonKey()
   final bool reverse;
@@ -316,7 +341,7 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
 
   @override
   String toString() {
-    return 'MiraiPageView(allowImplicitScrolling: $allowImplicitScrolling, clipBehavior: $clipBehavior, dragStartBehavior: $dragStartBehavior, initialPage: $initialPage, keepPage: $keepPage, restorationId: $restorationId, physics: $physics, pageSnapping: $pageSnapping, padEnds: $padEnds, reverse: $reverse, scrollDirection: $scrollDirection, viewportFraction: $viewportFraction, children: $children)';
+    return 'MiraiPageView(allowImplicitScrolling: $allowImplicitScrolling, clipBehavior: $clipBehavior, dragStartBehavior: $dragStartBehavior, initialPage: $initialPage, keepPage: $keepPage, onPageChanged: $onPageChanged, physics: $physics, pageSnapping: $pageSnapping, padEnds: $padEnds, restorationId: $restorationId, reverse: $reverse, scrollDirection: $scrollDirection, viewportFraction: $viewportFraction, children: $children)';
   }
 
   @override
@@ -333,12 +358,14 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
             (identical(other.initialPage, initialPage) ||
                 other.initialPage == initialPage) &&
             const DeepCollectionEquality().equals(other.keepPage, keepPage) &&
-            (identical(other.restorationId, restorationId) ||
-                other.restorationId == restorationId) &&
+            const DeepCollectionEquality()
+                .equals(other._onPageChanged, _onPageChanged) &&
             (identical(other.physics, physics) || other.physics == physics) &&
             (identical(other.pageSnapping, pageSnapping) ||
                 other.pageSnapping == pageSnapping) &&
             (identical(other.padEnds, padEnds) || other.padEnds == padEnds) &&
+            (identical(other.restorationId, restorationId) ||
+                other.restorationId == restorationId) &&
             (identical(other.reverse, reverse) || other.reverse == reverse) &&
             (identical(other.scrollDirection, scrollDirection) ||
                 other.scrollDirection == scrollDirection) &&
@@ -356,10 +383,11 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
       dragStartBehavior,
       initialPage,
       const DeepCollectionEquality().hash(keepPage),
-      restorationId,
+      const DeepCollectionEquality().hash(_onPageChanged),
       physics,
       pageSnapping,
       padEnds,
+      restorationId,
       reverse,
       scrollDirection,
       viewportFraction,
@@ -386,10 +414,11 @@ abstract class _MiraiPageView implements MiraiPageView {
       final DragStartBehavior dragStartBehavior,
       final int initialPage,
       final dynamic keepPage,
-      final String? restorationId,
+      final Map<String, dynamic>? onPageChanged,
       final MiraiScrollPhysics? physics,
       final bool pageSnapping,
       final bool padEnds,
+      final String? restorationId,
       final bool reverse,
       final Axis scrollDirection,
       final double viewportFraction,
@@ -409,13 +438,15 @@ abstract class _MiraiPageView implements MiraiPageView {
   @override
   dynamic get keepPage;
   @override
-  String? get restorationId;
+  Map<String, dynamic>? get onPageChanged;
   @override
   MiraiScrollPhysics? get physics;
   @override
   bool get pageSnapping;
   @override
   bool get padEnds;
+  @override
+  String? get restorationId;
   @override
   bool get reverse;
   @override
