@@ -8,6 +8,7 @@ part 'mirai_expanded.g.dart';
 @freezed
 class MiraiExpanded with _$MiraiExpanded {
   const factory MiraiExpanded({
+    @Default(1) int flex,
     Map<String, dynamic>? child,
   }) = _MiraiExpanded;
 

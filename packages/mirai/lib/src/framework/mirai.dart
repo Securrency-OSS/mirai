@@ -69,6 +69,7 @@ class Mirai {
     const MiraiSafeAreaParser(),
     const MiraiSwitchParser(),
     const MiraiAlignParser(),
+    const MiraiPageViewParser(),
     const MiraiRefreshIndicatorParser(),
   ];
 
