@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_text/mirai_text.dart';
+import 'package:mirai/src/parsers/mirai_text_scaler/mirai_text_scaler.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
@@ -37,7 +38,7 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
       textDirection: model.textDirection,
       softWrap: model.softWrap,
       overflow: model.overflow,
-      textScaleFactor: model.textScaleFactor,
+      textScaler: model.textScaler?.parse,
       maxLines: model.maxLines,
       semanticsLabel: model.semanticsLabel,
       textWidthBasis: model.textWidthBasis,
