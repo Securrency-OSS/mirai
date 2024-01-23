@@ -20,7 +20,7 @@ class MiraiIconParser extends MiraiParser<MiraiIcon> {
         return Icon(
           materialIconMap[model.icon],
           size: model.size,
-          color: model.color.toColor,
+          color: model.color.toColor(context),
           semanticLabel: model.semanticLabel,
           textDirection: model.textDirection,
         );
@@ -28,7 +28,7 @@ class MiraiIconParser extends MiraiParser<MiraiIcon> {
         return Icon(
           cupertinoIconsMap[model.icon],
           size: model.size,
-          color: model.color.toColor,
+          color: model.color.toColor(context),
           semanticLabel: model.semanticLabel,
           textDirection: model.textDirection,
         );

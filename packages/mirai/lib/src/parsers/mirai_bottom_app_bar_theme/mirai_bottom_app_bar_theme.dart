@@ -22,13 +22,13 @@ class MiraiBottomAppBarTheme with _$MiraiBottomAppBarTheme {
 }
 
 extension MiraiBottomAppBarThemeParser on MiraiBottomAppBarTheme {
-  BottomAppBarTheme? get parse {
+  BottomAppBarTheme? parse(BuildContext context) {
     return BottomAppBarTheme(
-      color: color?.toColor,
+      color: color?.toColor(context),
       elevation: elevation,
       height: height,
-      surfaceTintColor: surfaceTintColor.toColor,
-      shadowColor: shadowColor.toColor,
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
       padding: padding?.parse,
     );
   }

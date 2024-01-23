@@ -24,7 +24,7 @@ class MiraiScaffoldParser extends MiraiParser<MiraiScaffold> {
       floatingActionButtonLocation: model.floatingActionButtonLocation?.value,
       bottomNavigationBar: Mirai.fromJson(model.bottomNavigationBar, context),
       bottomSheet: Mirai.fromJson(model.bottomSheet, context),
-      backgroundColor: model.backgroundColor.toColor,
+      backgroundColor: model.backgroundColor.toColor(context),
       resizeToAvoidBottomInset: model.resizeToAvoidBottomInset,
       primary: model.primary,
       extendBody: model.extendBody,

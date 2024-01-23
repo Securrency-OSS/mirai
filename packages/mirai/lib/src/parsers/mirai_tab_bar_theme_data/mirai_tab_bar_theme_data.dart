@@ -28,18 +28,18 @@ class MiraiTabBarThemeData with _$MiraiTabBarThemeData {
 }
 
 extension MiraiTabBarThemeDataParser on MiraiTabBarThemeData {
-  TabBarTheme? get parse {
+  TabBarTheme? parse(BuildContext context) {
     return TabBarTheme(
-      indicator: indicator.parse,
-      indicatorColor: indicatorColor.toColor,
+      indicator: indicator.parse(context),
+      indicatorColor: indicatorColor.toColor(context),
       indicatorSize: indicatorSize,
-      dividerColor: dividerColor.toColor,
-      labelColor: labelColor.toColor,
+      dividerColor: dividerColor.toColor(context),
+      labelColor: labelColor.toColor(context),
       labelPadding: labelPadding.parse,
-      labelStyle: labelStyle?.parse,
-      unselectedLabelColor: unselectedLabelColor.toColor,
-      unselectedLabelStyle: unselectedLabelStyle?.parse,
-      overlayColor: MaterialStateProperty.all(overlayColor.toColor),
+      labelStyle: labelStyle?.parse(context),
+      unselectedLabelColor: unselectedLabelColor.toColor(context),
+      unselectedLabelStyle: unselectedLabelStyle?.parse(context),
+      overlayColor: MaterialStateProperty.all(overlayColor.toColor(context)),
     );
   }
 }

@@ -17,9 +17,9 @@ class MiraiRoundedRectangleBorder with _$MiraiRoundedRectangleBorder {
 }
 
 extension MiraiRoundedRectangleBorderParser on MiraiRoundedRectangleBorder? {
-  RoundedRectangleBorder get parse {
+  RoundedRectangleBorder parse(BuildContext context) {
     return RoundedRectangleBorder(
-      side: this?.side.parse ?? BorderSide.none,
+      side: this?.side.parse(context) ?? BorderSide.none,
       borderRadius: this?.borderRadius.parse ?? BorderRadius.zero,
     );
   }

@@ -18,9 +18,9 @@ class MiraiCardParser extends MiraiParser<MiraiCard> {
   @override
   Widget parse(BuildContext context, MiraiCard model) {
     return Card(
-      color: model.color?.toColor,
-      shadowColor: model.shadowColor?.toColor,
-      surfaceTintColor: model.surfaceTintColor?.toColor,
+      color: model.color?.toColor(context),
+      shadowColor: model.shadowColor?.toColor(context),
+      surfaceTintColor: model.surfaceTintColor?.toColor(context),
       elevation: model.elevation,
       borderOnForeground: model.borderOnForeground,
       clipBehavior: model.clipBehavior,

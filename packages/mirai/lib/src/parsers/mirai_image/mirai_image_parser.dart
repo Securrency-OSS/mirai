@@ -19,21 +19,21 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
   Widget parse(BuildContext context, MiraiImage model) {
     switch (model.imageType) {
       case MiraiImageType.network:
-        return _networkImage(model);
+        return _networkImage(model, context);
       case MiraiImageType.file:
-        return _fileImage(model);
+        return _fileImage(model, context);
       case MiraiImageType.asset:
-        return _assetImage(model);
+        return _assetImage(model, context);
 
       default:
-        return _networkImage(model);
+        return _networkImage(model, context);
     }
   }
 
-  Widget _networkImage(MiraiImage model) => Image.network(
+  Widget _networkImage(MiraiImage model, BuildContext context) => Image.network(
         model.src,
         alignment: model.alignment.value,
-        color: model.color?.toColor,
+        color: model.color?.toColor(context),
         width: model.width,
         height: model.height,
         fit: model.fit,
@@ -41,10 +41,10 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
           return const SizedBox();
         },
       );
-  Widget _fileImage(MiraiImage model) => Image.file(
+  Widget _fileImage(MiraiImage model, BuildContext context) => Image.file(
         File(model.src),
         alignment: model.alignment.value,
-        color: model.color?.toColor,
+        color: model.color?.toColor(context),
         width: model.width,
         height: model.height,
         fit: model.fit,
@@ -53,10 +53,10 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
         },
       );
 
-  Widget _assetImage(MiraiImage model) => Image.asset(
+  Widget _assetImage(MiraiImage model, BuildContext context) => Image.asset(
         model.src,
         alignment: model.alignment.value,
-        color: model.color?.toColor,
+        color: model.color?.toColor(context),
         width: model.width,
         height: model.height,
         fit: model.fit,

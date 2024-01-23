@@ -28,11 +28,11 @@ class MiraiTextStyle with _$MiraiTextStyle {
 }
 
 extension MiraiTextStyleParser on MiraiTextStyle {
-  TextStyle? get parse {
+  TextStyle? parse(BuildContext context) {
     return TextStyle(
       inherit: inherit,
-      color: color?.toColor,
-      backgroundColor: backgroundColor.toColor,
+      color: color?.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
       fontSize: fontSize,
       fontWeight: fontWeight?.value,
       fontStyle: fontStyle,

@@ -24,16 +24,16 @@ class MiraiIconThemeData with _$MiraiIconThemeData {
 }
 
 extension MiraiIconThemeDataParser on MiraiIconThemeData {
-  IconThemeData? get parse {
+  IconThemeData? parse(BuildContext context) {
     return IconThemeData(
       size: size,
       fill: fill,
       weight: weight,
       grade: grade,
       opticalSize: opticalSize,
-      color: color.toColor,
+      color: color.toColor(context),
       opacity: opacity,
-      shadows: shadows?.map((shadow) => shadow.parse).toList(),
+      shadows: shadows?.map((shadow) => shadow.parse(context)).toList(),
     );
   }
 }

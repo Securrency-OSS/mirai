@@ -22,13 +22,13 @@ class MiraiAlertDialogParser extends MiraiParser<MiraiAlertDialog> {
     return AlertDialog(
       icon: Mirai.fromJson(model.icon, context),
       iconPadding: model.iconPadding?.parse,
-      iconColor: model.iconColor?.toColor,
+      iconColor: model.iconColor?.toColor(context),
       title: Mirai.fromJson(model.title, context),
       titlePadding: model.titlePadding?.parse,
-      titleTextStyle: model.titleTextStyle?.parse,
+      titleTextStyle: model.titleTextStyle?.parse(context),
       content: Mirai.fromJson(model.content, context),
       contentPadding: model.contentPadding.parse,
-      contentTextStyle: model.contentTextStyle?.parse,
+      contentTextStyle: model.contentTextStyle?.parse(context),
       actions: model.actions
           ?.map((action) => Mirai.fromJson(action, context) ?? const SizedBox())
           .toList(),
@@ -38,7 +38,7 @@ class MiraiAlertDialogParser extends MiraiParser<MiraiAlertDialog> {
       actionsOverflowDirection: model.actionsOverflowDirection,
       actionsOverflowButtonSpacing: model.actionsOverflowButtonSpacing,
       buttonPadding: model.buttonPadding.parse,
-      backgroundColor: model.backgroundColor.toColor,
+      backgroundColor: model.backgroundColor.toColor(context),
       elevation: model.elevation,
       semanticLabel: model.semanticLabel,
       insetPadding: model.insetPadding.parse,

@@ -38,80 +38,80 @@ class MiraiButtonStyle with _$MiraiButtonStyle {
 }
 
 extension MiraiButtonStyleParser on MiraiButtonStyle {
-  ButtonStyle get parseElevated {
+  ButtonStyle parseElevated(BuildContext context) {
     return ElevatedButton.styleFrom(
-      foregroundColor: foregroundColor?.toColor,
-      backgroundColor: backgroundColor.toColor,
-      disabledForegroundColor: disabledForegroundColor.toColor,
-      disabledBackgroundColor: disabledBackgroundColor.toColor,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
+      foregroundColor: foregroundColor?.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      disabledForegroundColor: disabledForegroundColor.toColor(context),
+      disabledBackgroundColor: disabledBackgroundColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
       elevation: elevation,
-      textStyle: textStyle?.parse,
+      textStyle: textStyle?.parse(context),
       enableFeedback: enableFeedback,
       minimumSize: minimumSize?.parse,
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
-      shape: shape.parse,
+      shape: shape.parse(context),
       padding: padding.parse,
     );
   }
 
-  ButtonStyle get parseText {
+  ButtonStyle parseText(BuildContext context) {
     return TextButton.styleFrom(
-      foregroundColor: foregroundColor.toColor,
-      backgroundColor: backgroundColor.toColor,
-      disabledForegroundColor: disabledForegroundColor.toColor,
-      disabledBackgroundColor: disabledBackgroundColor.toColor,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
-      iconColor: iconColor.toColor,
-      disabledIconColor: disabledIconColor.toColor,
+      foregroundColor: foregroundColor.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      disabledForegroundColor: disabledForegroundColor.toColor(context),
+      disabledBackgroundColor: disabledBackgroundColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      iconColor: iconColor.toColor(context),
+      disabledIconColor: disabledIconColor.toColor(context),
       elevation: elevation,
-      textStyle: textStyle?.parse,
+      textStyle: textStyle?.parse(context),
       enableFeedback: enableFeedback,
       minimumSize: minimumSize?.parse,
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
-      shape: shape.parse,
+      shape: shape.parse(context),
       padding: padding.parse,
     );
   }
 
-  ButtonStyle get parseOutlined {
+  ButtonStyle parseOutlined(BuildContext context) {
     return OutlinedButton.styleFrom(
-      foregroundColor: foregroundColor.toColor,
-      backgroundColor: backgroundColor.toColor,
-      disabledForegroundColor: disabledForegroundColor.toColor,
-      disabledBackgroundColor: disabledBackgroundColor.toColor,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
+      foregroundColor: foregroundColor.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      disabledForegroundColor: disabledForegroundColor.toColor(context),
+      disabledBackgroundColor: disabledBackgroundColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
       elevation: elevation,
-      textStyle: textStyle?.parse,
+      textStyle: textStyle?.parse(context),
       enableFeedback: enableFeedback,
       minimumSize: minimumSize?.parse,
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
-      side: side.parse,
-      shape: shape.parse,
+      side: side.parse(context),
+      shape: shape.parse(context),
       padding: padding.parse,
     );
   }
 
-  ButtonStyle get parseIcon {
+  ButtonStyle parseIcon(BuildContext context) {
     return IconButton.styleFrom(
-      foregroundColor: foregroundColor.toColor,
-      backgroundColor: backgroundColor.toColor,
-      disabledForegroundColor: disabledForegroundColor.toColor,
-      disabledBackgroundColor: disabledBackgroundColor.toColor,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
+      foregroundColor: foregroundColor.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      disabledForegroundColor: disabledForegroundColor.toColor(context),
+      disabledBackgroundColor: disabledBackgroundColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
       elevation: elevation,
       enableFeedback: enableFeedback,
       minimumSize: minimumSize?.parse,
       fixedSize: fixedSize?.parse,
       maximumSize: maximumSize?.parse,
-      shape: shape.parse,
+      shape: shape.parse(context),
       padding: padding.parse,
       iconSize: iconSize,
     );

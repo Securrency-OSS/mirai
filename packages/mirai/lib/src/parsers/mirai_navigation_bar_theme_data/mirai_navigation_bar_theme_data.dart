@@ -28,17 +28,17 @@ class MiraiNavigationBarThemeData with _$MiraiNavigationBarThemeData {
 }
 
 extension MiraiNavigationBarThemeDataParser on MiraiNavigationBarThemeData {
-  NavigationBarThemeData? get parse {
+  NavigationBarThemeData? parse(BuildContext context) {
     return NavigationBarThemeData(
       height: height,
-      backgroundColor: backgroundColor.toColor,
+      backgroundColor: backgroundColor.toColor(context),
       elevation: elevation,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
-      indicatorColor: indicatorColor.toColor,
-      indicatorShape: indicatorShape?.parse,
-      labelTextStyle: MaterialStateProperty.all(labelTextStyle?.parse),
-      iconTheme: MaterialStateProperty.all(iconTheme?.parse),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      indicatorColor: indicatorColor.toColor(context),
+      indicatorShape: indicatorShape?.parse(context),
+      labelTextStyle: MaterialStateProperty.all(labelTextStyle?.parse(context)),
+      iconTheme: MaterialStateProperty.all(iconTheme?.parse(context)),
       labelBehavior: labelBehavior,
     );
   }

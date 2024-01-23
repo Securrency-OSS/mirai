@@ -27,7 +27,7 @@ extension MiraiBottomNavigationBarItemParser on MiraiBottomNavigationBarItem {
       activeIcon:
           activeIcon == null ? null : Mirai.fromJson(activeIcon, context),
       label: label,
-      backgroundColor: backgroundColor?.toColor,
+      backgroundColor: backgroundColor?.toColor(context),
       tooltip: tooltip,
     );
   }

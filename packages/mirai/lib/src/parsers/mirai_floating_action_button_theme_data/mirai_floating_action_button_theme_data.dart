@@ -34,13 +34,13 @@ class MiraiFloatingActionButtonThemeData
 }
 
 extension MiraiFloatingActionThemeParser on MiraiFloatingActionButtonThemeData {
-  FloatingActionButtonThemeData get parse {
+  FloatingActionButtonThemeData parse(BuildContext context) {
     return FloatingActionButtonThemeData(
-      foregroundColor: foregroundColor.toColor,
-      backgroundColor: backgroundColor.toColor,
-      focusColor: focusColor.toColor,
-      hoverColor: hoverColor.toColor,
-      splashColor: splashColor.toColor,
+      foregroundColor: foregroundColor.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      focusColor: focusColor.toColor(context),
+      hoverColor: hoverColor.toColor(context),
+      splashColor: splashColor.toColor(context),
       elevation: elevation,
       focusElevation: focusElevation,
       hoverElevation: hoverElevation,
@@ -50,7 +50,7 @@ extension MiraiFloatingActionThemeParser on MiraiFloatingActionButtonThemeData {
       iconSize: iconSize,
       extendedIconLabelSpacing: extendedIconLabelSpacing,
       extendedPadding: extendedPadding.parse,
-      extendedTextStyle: extendedTextStyle?.parse,
+      extendedTextStyle: extendedTextStyle?.parse(context),
     );
   }
 }
