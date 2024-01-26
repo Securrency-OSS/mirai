@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/parsers/mirai_text_scaler/mirai_text_scaler.dart';
 import 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 
 export 'package:mirai/src/parsers/mirai_text/mirai_text_parser.dart';
@@ -18,7 +17,7 @@ class MiraiText with _$MiraiText {
     TextDirection? textDirection,
     bool? softWrap,
     TextOverflow? overflow,
-    MiraiTextScaler? textScaler,
+    double? textScaleFactor,
     int? maxLines,
     String? semanticsLabel,
     TextWidthBasis? textWidthBasis,

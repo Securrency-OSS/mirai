@@ -21,10 +21,7 @@ _$MiraiTextImpl _$$MiraiTextImplFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
       softWrap: json['softWrap'] as bool?,
       overflow: $enumDecodeNullable(_$TextOverflowEnumMap, json['overflow']),
-      textScaler: json['textScaler'] == null
-          ? null
-          : MiraiTextScaler.fromJson(
-              json['textScaler'] as Map<String, dynamic>),
+      textScaleFactor: (json['textScaleFactor'] as num?)?.toDouble(),
       maxLines: json['maxLines'] as int?,
       semanticsLabel: json['semanticsLabel'] as String?,
       textWidthBasis:
@@ -41,7 +38,7 @@ Map<String, dynamic> _$$MiraiTextImplToJson(_$MiraiTextImpl instance) =>
       'textDirection': _$TextDirectionEnumMap[instance.textDirection],
       'softWrap': instance.softWrap,
       'overflow': _$TextOverflowEnumMap[instance.overflow],
-      'textScaler': instance.textScaler,
+      'textScaleFactor': instance.textScaleFactor,
       'maxLines': instance.maxLines,
       'semanticsLabel': instance.semanticsLabel,
       'textWidthBasis': _$TextWidthBasisEnumMap[instance.textWidthBasis],

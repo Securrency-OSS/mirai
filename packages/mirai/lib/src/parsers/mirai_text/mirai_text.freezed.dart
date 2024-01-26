@@ -27,7 +27,7 @@ mixin _$MiraiText {
   TextDirection? get textDirection => throw _privateConstructorUsedError;
   bool? get softWrap => throw _privateConstructorUsedError;
   TextOverflow? get overflow => throw _privateConstructorUsedError;
-  MiraiTextScaler? get textScaler => throw _privateConstructorUsedError;
+  double? get textScaleFactor => throw _privateConstructorUsedError;
   int? get maxLines => throw _privateConstructorUsedError;
   String? get semanticsLabel => throw _privateConstructorUsedError;
   TextWidthBasis? get textWidthBasis => throw _privateConstructorUsedError;
@@ -52,14 +52,13 @@ abstract class $MiraiTextCopyWith<$Res> {
       TextDirection? textDirection,
       bool? softWrap,
       TextOverflow? overflow,
-      MiraiTextScaler? textScaler,
+      double? textScaleFactor,
       int? maxLines,
       String? semanticsLabel,
       TextWidthBasis? textWidthBasis,
       String? selectionColor});
 
   $MiraiTextStyleCopyWith<$Res>? get style;
-  $MiraiTextScalerCopyWith<$Res>? get textScaler;
 }
 
 /// @nodoc
@@ -82,7 +81,7 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
     Object? textDirection = freezed,
     Object? softWrap = freezed,
     Object? overflow = freezed,
-    Object? textScaler = freezed,
+    Object? textScaleFactor = freezed,
     Object? maxLines = freezed,
     Object? semanticsLabel = freezed,
     Object? textWidthBasis = freezed,
@@ -117,10 +116,10 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
               as TextOverflow?,
-      textScaler: freezed == textScaler
-          ? _value.textScaler
-          : textScaler // ignore: cast_nullable_to_non_nullable
-              as MiraiTextScaler?,
+      textScaleFactor: freezed == textScaleFactor
+          ? _value.textScaleFactor
+          : textScaleFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
       maxLines: freezed == maxLines
           ? _value.maxLines
           : maxLines // ignore: cast_nullable_to_non_nullable
@@ -151,18 +150,6 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
       return _then(_value.copyWith(style: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiTextScalerCopyWith<$Res>? get textScaler {
-    if (_value.textScaler == null) {
-      return null;
-    }
-
-    return $MiraiTextScalerCopyWith<$Res>(_value.textScaler!, (value) {
-      return _then(_value.copyWith(textScaler: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -181,7 +168,7 @@ abstract class _$$MiraiTextImplCopyWith<$Res>
       TextDirection? textDirection,
       bool? softWrap,
       TextOverflow? overflow,
-      MiraiTextScaler? textScaler,
+      double? textScaleFactor,
       int? maxLines,
       String? semanticsLabel,
       TextWidthBasis? textWidthBasis,
@@ -189,8 +176,6 @@ abstract class _$$MiraiTextImplCopyWith<$Res>
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get style;
-  @override
-  $MiraiTextScalerCopyWith<$Res>? get textScaler;
 }
 
 /// @nodoc
@@ -211,7 +196,7 @@ class __$$MiraiTextImplCopyWithImpl<$Res>
     Object? textDirection = freezed,
     Object? softWrap = freezed,
     Object? overflow = freezed,
-    Object? textScaler = freezed,
+    Object? textScaleFactor = freezed,
     Object? maxLines = freezed,
     Object? semanticsLabel = freezed,
     Object? textWidthBasis = freezed,
@@ -246,10 +231,10 @@ class __$$MiraiTextImplCopyWithImpl<$Res>
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
               as TextOverflow?,
-      textScaler: freezed == textScaler
-          ? _value.textScaler
-          : textScaler // ignore: cast_nullable_to_non_nullable
-              as MiraiTextScaler?,
+      textScaleFactor: freezed == textScaleFactor
+          ? _value.textScaleFactor
+          : textScaleFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
       maxLines: freezed == maxLines
           ? _value.maxLines
           : maxLines // ignore: cast_nullable_to_non_nullable
@@ -281,7 +266,7 @@ class _$MiraiTextImpl implements _MiraiText {
       this.textDirection,
       this.softWrap,
       this.overflow,
-      this.textScaler,
+      this.textScaleFactor,
       this.maxLines,
       this.semanticsLabel,
       this.textWidthBasis,
@@ -313,7 +298,7 @@ class _$MiraiTextImpl implements _MiraiText {
   @override
   final TextOverflow? overflow;
   @override
-  final MiraiTextScaler? textScaler;
+  final double? textScaleFactor;
   @override
   final int? maxLines;
   @override
@@ -325,7 +310,7 @@ class _$MiraiTextImpl implements _MiraiText {
 
   @override
   String toString() {
-    return 'MiraiText(data: $data, children: $children, style: $style, textAlign: $textAlign, textDirection: $textDirection, softWrap: $softWrap, overflow: $overflow, textScaler: $textScaler, maxLines: $maxLines, semanticsLabel: $semanticsLabel, textWidthBasis: $textWidthBasis, selectionColor: $selectionColor)';
+    return 'MiraiText(data: $data, children: $children, style: $style, textAlign: $textAlign, textDirection: $textDirection, softWrap: $softWrap, overflow: $overflow, textScaleFactor: $textScaleFactor, maxLines: $maxLines, semanticsLabel: $semanticsLabel, textWidthBasis: $textWidthBasis, selectionColor: $selectionColor)';
   }
 
   @override
@@ -344,8 +329,8 @@ class _$MiraiTextImpl implements _MiraiText {
                 other.softWrap == softWrap) &&
             (identical(other.overflow, overflow) ||
                 other.overflow == overflow) &&
-            (identical(other.textScaler, textScaler) ||
-                other.textScaler == textScaler) &&
+            (identical(other.textScaleFactor, textScaleFactor) ||
+                other.textScaleFactor == textScaleFactor) &&
             (identical(other.maxLines, maxLines) ||
                 other.maxLines == maxLines) &&
             (identical(other.semanticsLabel, semanticsLabel) ||
@@ -367,7 +352,7 @@ class _$MiraiTextImpl implements _MiraiText {
       textDirection,
       softWrap,
       overflow,
-      textScaler,
+      textScaleFactor,
       maxLines,
       semanticsLabel,
       textWidthBasis,
@@ -396,7 +381,7 @@ abstract class _MiraiText implements MiraiText {
       final TextDirection? textDirection,
       final bool? softWrap,
       final TextOverflow? overflow,
-      final MiraiTextScaler? textScaler,
+      final double? textScaleFactor,
       final int? maxLines,
       final String? semanticsLabel,
       final TextWidthBasis? textWidthBasis,
@@ -420,7 +405,7 @@ abstract class _MiraiText implements MiraiText {
   @override
   TextOverflow? get overflow;
   @override
-  MiraiTextScaler? get textScaler;
+  double? get textScaleFactor;
   @override
   int? get maxLines;
   @override
