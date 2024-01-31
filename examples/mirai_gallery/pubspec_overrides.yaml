@@ -1,8 +1,10 @@
-# melos_managed_dependency_overrides: mirai,mirai_framework,mirai_webview
+# melos_managed_dependency_overrides: mirai,mirai_framework,mirai_webview,mirai_web3_signer
 dependency_overrides:
   mirai:
     path: ../../packages/mirai
   mirai_framework:
     path: ../../packages/mirai_framework
+  mirai_web3_signer:
+    path: ../../packages/mirai_web3_signer
   mirai_webview:
     path: ../../packages/mirai_webview

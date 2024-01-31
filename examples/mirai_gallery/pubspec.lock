@@ -401,6 +401,13 @@ packages:
       relative: true
     source: path
     version: "0.0.2"
+  mirai_web3_signer:
+    dependency: "direct main"
+    description:
+      path: "../../packages/mirai_web3_signer"
+      relative: true
+    source: path
+    version: "0.0.1"
   mirai_webview:
     dependency: "direct main"
     description:

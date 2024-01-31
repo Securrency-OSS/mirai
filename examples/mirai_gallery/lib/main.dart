@@ -6,12 +6,14 @@ import 'package:mirai_gallery/app/example/example_screen_parser.dart';
 import 'package:mirai_gallery/app/home/home_screen.dart';
 import 'package:mirai_gallery/app_theme/app_theme_cubit.dart';
 import 'package:mirai_webview/mirai_webview.dart';
+import 'package:mirai_web3_signer/mirai_web3_signer.dart';
 
 void main() async {
   await Mirai.initialize(
     parsers: const [
       ExampleScreenParser(),
       MiraiWebViewParser(),
+      MiraiWeb3SignerParser(),
     ],
   );
 
