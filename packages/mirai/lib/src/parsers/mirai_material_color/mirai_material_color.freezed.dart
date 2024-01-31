@@ -133,11 +133,11 @@ class _$MiraiMaterialColorCopyWithImpl<$Res, $Val extends MiraiMaterialColor>
 }
 
 /// @nodoc
-abstract class _$$_MiraiMaterialColorCopyWith<$Res>
+abstract class _$$MiraiMaterialColorImplCopyWith<$Res>
     implements $MiraiMaterialColorCopyWith<$Res> {
-  factory _$$_MiraiMaterialColorCopyWith(_$_MiraiMaterialColor value,
-          $Res Function(_$_MiraiMaterialColor) then) =
-      __$$_MiraiMaterialColorCopyWithImpl<$Res>;
+  factory _$$MiraiMaterialColorImplCopyWith(_$MiraiMaterialColorImpl value,
+          $Res Function(_$MiraiMaterialColorImpl) then) =
+      __$$MiraiMaterialColorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -155,11 +155,11 @@ abstract class _$$_MiraiMaterialColorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiMaterialColorCopyWithImpl<$Res>
-    extends _$MiraiMaterialColorCopyWithImpl<$Res, _$_MiraiMaterialColor>
-    implements _$$_MiraiMaterialColorCopyWith<$Res> {
-  __$$_MiraiMaterialColorCopyWithImpl(
-      _$_MiraiMaterialColor _value, $Res Function(_$_MiraiMaterialColor) _then)
+class __$$MiraiMaterialColorImplCopyWithImpl<$Res>
+    extends _$MiraiMaterialColorCopyWithImpl<$Res, _$MiraiMaterialColorImpl>
+    implements _$$MiraiMaterialColorImplCopyWith<$Res> {
+  __$$MiraiMaterialColorImplCopyWithImpl(_$MiraiMaterialColorImpl _value,
+      $Res Function(_$MiraiMaterialColorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -177,7 +177,7 @@ class __$$_MiraiMaterialColorCopyWithImpl<$Res>
     Object? shade800 = null,
     Object? shade900 = null,
   }) {
-    return _then(_$_MiraiMaterialColor(
+    return _then(_$MiraiMaterialColorImpl(
       primary: null == primary
           ? _value.primary
           : primary // ignore: cast_nullable_to_non_nullable
@@ -228,8 +228,8 @@ class __$$_MiraiMaterialColorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiMaterialColor implements _MiraiMaterialColor {
-  const _$_MiraiMaterialColor(
+class _$MiraiMaterialColorImpl implements _MiraiMaterialColor {
+  const _$MiraiMaterialColorImpl(
       {required this.primary,
       required this.shade50,
       required this.shade100,
@@ -242,8 +242,8 @@ class _$_MiraiMaterialColor implements _MiraiMaterialColor {
       required this.shade800,
       required this.shade900});
 
-  factory _$_MiraiMaterialColor.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiMaterialColorFromJson(json);
+  factory _$MiraiMaterialColorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiMaterialColorImplFromJson(json);
 
   @override
   final String primary;
@@ -277,7 +277,7 @@ class _$_MiraiMaterialColor implements _MiraiMaterialColor {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiMaterialColor &&
+            other is _$MiraiMaterialColorImpl &&
             (identical(other.primary, primary) || other.primary == primary) &&
             (identical(other.shade50, shade50) || other.shade50 == shade50) &&
             (identical(other.shade100, shade100) ||
@@ -319,13 +319,13 @@ class _$_MiraiMaterialColor implements _MiraiMaterialColor {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiMaterialColorCopyWith<_$_MiraiMaterialColor> get copyWith =>
-      __$$_MiraiMaterialColorCopyWithImpl<_$_MiraiMaterialColor>(
+  _$$MiraiMaterialColorImplCopyWith<_$MiraiMaterialColorImpl> get copyWith =>
+      __$$MiraiMaterialColorImplCopyWithImpl<_$MiraiMaterialColorImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiMaterialColorToJson(
+    return _$$MiraiMaterialColorImplToJson(
       this,
     );
   }
@@ -343,10 +343,10 @@ abstract class _MiraiMaterialColor implements MiraiMaterialColor {
       required final String shade600,
       required final String shade700,
       required final String shade800,
-      required final String shade900}) = _$_MiraiMaterialColor;
+      required final String shade900}) = _$MiraiMaterialColorImpl;
 
   factory _MiraiMaterialColor.fromJson(Map<String, dynamic> json) =
-      _$_MiraiMaterialColor.fromJson;
+      _$MiraiMaterialColorImpl.fromJson;
 
   @override
   String get primary;
@@ -372,6 +372,6 @@ abstract class _MiraiMaterialColor implements MiraiMaterialColor {
   String get shade900;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiMaterialColorCopyWith<_$_MiraiMaterialColor> get copyWith =>
+  _$$MiraiMaterialColorImplCopyWith<_$MiraiMaterialColorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

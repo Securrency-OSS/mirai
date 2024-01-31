@@ -95,12 +95,12 @@ class _$MiraiBottomNavigationBarItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiBottomNavigationBarItemCopyWith<$Res>
+abstract class _$$MiraiBottomNavigationBarItemImplCopyWith<$Res>
     implements $MiraiBottomNavigationBarItemCopyWith<$Res> {
-  factory _$$_MiraiBottomNavigationBarItemCopyWith(
-          _$_MiraiBottomNavigationBarItem value,
-          $Res Function(_$_MiraiBottomNavigationBarItem) then) =
-      __$$_MiraiBottomNavigationBarItemCopyWithImpl<$Res>;
+  factory _$$MiraiBottomNavigationBarItemImplCopyWith(
+          _$MiraiBottomNavigationBarItemImpl value,
+          $Res Function(_$MiraiBottomNavigationBarItemImpl) then) =
+      __$$MiraiBottomNavigationBarItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,13 +112,13 @@ abstract class _$$_MiraiBottomNavigationBarItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBottomNavigationBarItemCopyWithImpl<$Res>
+class __$$MiraiBottomNavigationBarItemImplCopyWithImpl<$Res>
     extends _$MiraiBottomNavigationBarItemCopyWithImpl<$Res,
-        _$_MiraiBottomNavigationBarItem>
-    implements _$$_MiraiBottomNavigationBarItemCopyWith<$Res> {
-  __$$_MiraiBottomNavigationBarItemCopyWithImpl(
-      _$_MiraiBottomNavigationBarItem _value,
-      $Res Function(_$_MiraiBottomNavigationBarItem) _then)
+        _$MiraiBottomNavigationBarItemImpl>
+    implements _$$MiraiBottomNavigationBarItemImplCopyWith<$Res> {
+  __$$MiraiBottomNavigationBarItemImplCopyWithImpl(
+      _$MiraiBottomNavigationBarItemImpl _value,
+      $Res Function(_$MiraiBottomNavigationBarItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +130,7 @@ class __$$_MiraiBottomNavigationBarItemCopyWithImpl<$Res>
     Object? backgroundColor = freezed,
     Object? tooltip = freezed,
   }) {
-    return _then(_$_MiraiBottomNavigationBarItem(
+    return _then(_$MiraiBottomNavigationBarItemImpl(
       icon: null == icon
           ? _value._icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -157,8 +157,9 @@ class __$$_MiraiBottomNavigationBarItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBottomNavigationBarItem implements _MiraiBottomNavigationBarItem {
-  const _$_MiraiBottomNavigationBarItem(
+class _$MiraiBottomNavigationBarItemImpl
+    implements _MiraiBottomNavigationBarItem {
+  const _$MiraiBottomNavigationBarItemImpl(
       {required final Map<String, dynamic> icon,
       required this.label,
       final Map<String, dynamic>? activeIcon,
@@ -167,8 +168,9 @@ class _$_MiraiBottomNavigationBarItem implements _MiraiBottomNavigationBarItem {
       : _icon = icon,
         _activeIcon = activeIcon;
 
-  factory _$_MiraiBottomNavigationBarItem.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBottomNavigationBarItemFromJson(json);
+  factory _$MiraiBottomNavigationBarItemImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MiraiBottomNavigationBarItemImplFromJson(json);
 
   final Map<String, dynamic> _icon;
   @override
@@ -204,7 +206,7 @@ class _$_MiraiBottomNavigationBarItem implements _MiraiBottomNavigationBarItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBottomNavigationBarItem &&
+            other is _$MiraiBottomNavigationBarItemImpl &&
             const DeepCollectionEquality().equals(other._icon, _icon) &&
             (identical(other.label, label) || other.label == label) &&
             const DeepCollectionEquality()
@@ -227,13 +229,14 @@ class _$_MiraiBottomNavigationBarItem implements _MiraiBottomNavigationBarItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBottomNavigationBarItemCopyWith<_$_MiraiBottomNavigationBarItem>
-      get copyWith => __$$_MiraiBottomNavigationBarItemCopyWithImpl<
-          _$_MiraiBottomNavigationBarItem>(this, _$identity);
+  _$$MiraiBottomNavigationBarItemImplCopyWith<
+          _$MiraiBottomNavigationBarItemImpl>
+      get copyWith => __$$MiraiBottomNavigationBarItemImplCopyWithImpl<
+          _$MiraiBottomNavigationBarItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBottomNavigationBarItemToJson(
+    return _$$MiraiBottomNavigationBarItemImplToJson(
       this,
     );
   }
@@ -246,10 +249,10 @@ abstract class _MiraiBottomNavigationBarItem
       required final String label,
       final Map<String, dynamic>? activeIcon,
       final String? backgroundColor,
-      final String? tooltip}) = _$_MiraiBottomNavigationBarItem;
+      final String? tooltip}) = _$MiraiBottomNavigationBarItemImpl;
 
   factory _MiraiBottomNavigationBarItem.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBottomNavigationBarItem.fromJson;
+      _$MiraiBottomNavigationBarItemImpl.fromJson;
 
   @override
   Map<String, dynamic> get icon;
@@ -263,6 +266,7 @@ abstract class _MiraiBottomNavigationBarItem
   String? get tooltip;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBottomNavigationBarItemCopyWith<_$_MiraiBottomNavigationBarItem>
+  _$$MiraiBottomNavigationBarItemImplCopyWith<
+          _$MiraiBottomNavigationBarItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

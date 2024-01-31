@@ -6,9 +6,9 @@ part of 'mirai_system_ui_overlay_style.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiSystemUIOverlayStyle _$$_MiraiSystemUIOverlayStyleFromJson(
+_$MiraiSystemUIOverlayStyleImpl _$$MiraiSystemUIOverlayStyleImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiSystemUIOverlayStyle(
+    _$MiraiSystemUIOverlayStyleImpl(
       systemNavigationBarColor: json['systemNavigationBarColor'] as String?,
       systemNavigationBarDividerColor:
           json['systemNavigationBarDividerColor'] as String?,
@@ -25,8 +25,8 @@ _$_MiraiSystemUIOverlayStyle _$$_MiraiSystemUIOverlayStyleFromJson(
           json['systemStatusBarContrastEnforced'] as bool?,
     );
 
-Map<String, dynamic> _$$_MiraiSystemUIOverlayStyleToJson(
-        _$_MiraiSystemUIOverlayStyle instance) =>
+Map<String, dynamic> _$$MiraiSystemUIOverlayStyleImplToJson(
+        _$MiraiSystemUIOverlayStyleImpl instance) =>
     <String, dynamic>{
       'systemNavigationBarColor': instance.systemNavigationBarColor,
       'systemNavigationBarDividerColor':

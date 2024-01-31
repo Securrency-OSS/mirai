@@ -273,11 +273,11 @@ class _$MiraiColorSchemeCopyWithImpl<$Res, $Val extends MiraiColorScheme>
 }
 
 /// @nodoc
-abstract class _$$_MiraiColorSchemeCopyWith<$Res>
+abstract class _$$MiraiColorSchemeImplCopyWith<$Res>
     implements $MiraiColorSchemeCopyWith<$Res> {
-  factory _$$_MiraiColorSchemeCopyWith(
-          _$_MiraiColorScheme value, $Res Function(_$_MiraiColorScheme) then) =
-      __$$_MiraiColorSchemeCopyWithImpl<$Res>;
+  factory _$$MiraiColorSchemeImplCopyWith(_$MiraiColorSchemeImpl value,
+          $Res Function(_$MiraiColorSchemeImpl) then) =
+      __$$MiraiColorSchemeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -315,11 +315,11 @@ abstract class _$$_MiraiColorSchemeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiColorSchemeCopyWithImpl<$Res>
-    extends _$MiraiColorSchemeCopyWithImpl<$Res, _$_MiraiColorScheme>
-    implements _$$_MiraiColorSchemeCopyWith<$Res> {
-  __$$_MiraiColorSchemeCopyWithImpl(
-      _$_MiraiColorScheme _value, $Res Function(_$_MiraiColorScheme) _then)
+class __$$MiraiColorSchemeImplCopyWithImpl<$Res>
+    extends _$MiraiColorSchemeCopyWithImpl<$Res, _$MiraiColorSchemeImpl>
+    implements _$$MiraiColorSchemeImplCopyWith<$Res> {
+  __$$MiraiColorSchemeImplCopyWithImpl(_$MiraiColorSchemeImpl _value,
+      $Res Function(_$MiraiColorSchemeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -357,7 +357,7 @@ class __$$_MiraiColorSchemeCopyWithImpl<$Res>
     Object? inversePrimary = freezed,
     Object? surfaceTint = freezed,
   }) {
-    return _then(_$_MiraiColorScheme(
+    return _then(_$MiraiColorSchemeImpl(
       brightness: null == brightness
           ? _value.brightness
           : brightness // ignore: cast_nullable_to_non_nullable
@@ -488,8 +488,8 @@ class __$$_MiraiColorSchemeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiColorScheme implements _MiraiColorScheme {
-  const _$_MiraiColorScheme(
+class _$MiraiColorSchemeImpl implements _MiraiColorScheme {
+  const _$MiraiColorSchemeImpl(
       {required this.brightness,
       required this.primary,
       required this.onPrimary,
@@ -522,8 +522,8 @@ class _$_MiraiColorScheme implements _MiraiColorScheme {
       this.inversePrimary,
       this.surfaceTint});
 
-  factory _$_MiraiColorScheme.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiColorSchemeFromJson(json);
+  factory _$MiraiColorSchemeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiColorSchemeImplFromJson(json);
 
   @override
   final Brightness brightness;
@@ -597,7 +597,7 @@ class _$_MiraiColorScheme implements _MiraiColorScheme {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiColorScheme &&
+            other is _$MiraiColorSchemeImpl &&
             (identical(other.brightness, brightness) ||
                 other.brightness == brightness) &&
             (identical(other.primary, primary) || other.primary == primary) &&
@@ -695,12 +695,13 @@ class _$_MiraiColorScheme implements _MiraiColorScheme {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiColorSchemeCopyWith<_$_MiraiColorScheme> get copyWith =>
-      __$$_MiraiColorSchemeCopyWithImpl<_$_MiraiColorScheme>(this, _$identity);
+  _$$MiraiColorSchemeImplCopyWith<_$MiraiColorSchemeImpl> get copyWith =>
+      __$$MiraiColorSchemeImplCopyWithImpl<_$MiraiColorSchemeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiColorSchemeToJson(
+    return _$$MiraiColorSchemeImplToJson(
       this,
     );
   }
@@ -738,10 +739,10 @@ abstract class _MiraiColorScheme implements MiraiColorScheme {
       final String? inverseSurface,
       final String? onInverseSurface,
       final String? inversePrimary,
-      final String? surfaceTint}) = _$_MiraiColorScheme;
+      final String? surfaceTint}) = _$MiraiColorSchemeImpl;
 
   factory _MiraiColorScheme.fromJson(Map<String, dynamic> json) =
-      _$_MiraiColorScheme.fromJson;
+      _$MiraiColorSchemeImpl.fromJson;
 
   @override
   Brightness get brightness;
@@ -807,6 +808,6 @@ abstract class _MiraiColorScheme implements MiraiColorScheme {
   String? get surfaceTint;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiColorSchemeCopyWith<_$_MiraiColorScheme> get copyWith =>
+  _$$MiraiColorSchemeImplCopyWith<_$MiraiColorSchemeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

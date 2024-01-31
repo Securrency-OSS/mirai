@@ -6,8 +6,9 @@ part of 'mirai_icon_button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiIconButton _$$_MiraiIconButtonFromJson(Map<String, dynamic> json) =>
-    _$_MiraiIconButton(
+_$MiraiIconButtonImpl _$$MiraiIconButtonImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiIconButtonImpl(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       iconSize: (json['iconSize'] as num?)?.toDouble(),
       padding: json['padding'] == null
@@ -32,7 +33,8 @@ _$_MiraiIconButton _$$_MiraiIconButtonFromJson(Map<String, dynamic> json) =>
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiIconButtonToJson(_$_MiraiIconButton instance) =>
+Map<String, dynamic> _$$MiraiIconButtonImplToJson(
+        _$MiraiIconButtonImpl instance) =>
     <String, dynamic>{
       'onPressed': instance.onPressed,
       'iconSize': instance.iconSize,

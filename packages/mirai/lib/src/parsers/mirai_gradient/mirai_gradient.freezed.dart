@@ -154,11 +154,11 @@ class _$MiraiGradientCopyWithImpl<$Res, $Val extends MiraiGradient>
 }
 
 /// @nodoc
-abstract class _$$_MiraiGradientCopyWith<$Res>
+abstract class _$$MiraiGradientImplCopyWith<$Res>
     implements $MiraiGradientCopyWith<$Res> {
-  factory _$$_MiraiGradientCopyWith(
-          _$_MiraiGradient value, $Res Function(_$_MiraiGradient) then) =
-      __$$_MiraiGradientCopyWithImpl<$Res>;
+  factory _$$MiraiGradientImplCopyWith(
+          _$MiraiGradientImpl value, $Res Function(_$MiraiGradientImpl) then) =
+      __$$MiraiGradientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -180,11 +180,11 @@ abstract class _$$_MiraiGradientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiGradientCopyWithImpl<$Res>
-    extends _$MiraiGradientCopyWithImpl<$Res, _$_MiraiGradient>
-    implements _$$_MiraiGradientCopyWith<$Res> {
-  __$$_MiraiGradientCopyWithImpl(
-      _$_MiraiGradient _value, $Res Function(_$_MiraiGradient) _then)
+class __$$MiraiGradientImplCopyWithImpl<$Res>
+    extends _$MiraiGradientCopyWithImpl<$Res, _$MiraiGradientImpl>
+    implements _$$MiraiGradientImplCopyWith<$Res> {
+  __$$MiraiGradientImplCopyWithImpl(
+      _$MiraiGradientImpl _value, $Res Function(_$MiraiGradientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -203,7 +203,7 @@ class __$$_MiraiGradientCopyWithImpl<$Res>
     Object? startAngle = null,
     Object? endAngle = null,
   }) {
-    return _then(_$_MiraiGradient(
+    return _then(_$MiraiGradientImpl(
       colors: null == colors
           ? _value._colors
           : colors // ignore: cast_nullable_to_non_nullable
@@ -258,8 +258,8 @@ class __$$_MiraiGradientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiGradient implements _MiraiGradient {
-  const _$_MiraiGradient(
+class _$MiraiGradientImpl implements _MiraiGradient {
+  const _$MiraiGradientImpl(
       {required final List<String> colors,
       final List<double>? stops,
       this.begin = MiraiAlignment.centerLeft,
@@ -275,8 +275,8 @@ class _$_MiraiGradient implements _MiraiGradient {
       : _colors = colors,
         _stops = stops;
 
-  factory _$_MiraiGradient.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiGradientFromJson(json);
+  factory _$MiraiGradientImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiGradientImplFromJson(json);
 
   final List<String> _colors;
   @override
@@ -335,7 +335,7 @@ class _$_MiraiGradient implements _MiraiGradient {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiGradient &&
+            other is _$MiraiGradientImpl &&
             const DeepCollectionEquality().equals(other._colors, _colors) &&
             const DeepCollectionEquality().equals(other._stops, _stops) &&
             (identical(other.begin, begin) || other.begin == begin) &&
@@ -375,12 +375,12 @@ class _$_MiraiGradient implements _MiraiGradient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiGradientCopyWith<_$_MiraiGradient> get copyWith =>
-      __$$_MiraiGradientCopyWithImpl<_$_MiraiGradient>(this, _$identity);
+  _$$MiraiGradientImplCopyWith<_$MiraiGradientImpl> get copyWith =>
+      __$$MiraiGradientImplCopyWithImpl<_$MiraiGradientImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiGradientToJson(
+    return _$$MiraiGradientImplToJson(
       this,
     );
   }
@@ -399,10 +399,10 @@ abstract class _MiraiGradient implements MiraiGradient {
       final double focalRadius,
       final double radius,
       final double startAngle,
-      final double endAngle}) = _$_MiraiGradient;
+      final double endAngle}) = _$MiraiGradientImpl;
 
   factory _MiraiGradient.fromJson(Map<String, dynamic> json) =
-      _$_MiraiGradient.fromJson;
+      _$MiraiGradientImpl.fromJson;
 
   @override
   List<String> get colors;
@@ -430,6 +430,6 @@ abstract class _MiraiGradient implements MiraiGradient {
   double get endAngle;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiGradientCopyWith<_$_MiraiGradient> get copyWith =>
+  _$$MiraiGradientImplCopyWith<_$MiraiGradientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

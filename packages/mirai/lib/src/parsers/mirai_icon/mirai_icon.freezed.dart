@@ -97,10 +97,11 @@ class _$MiraiIconCopyWithImpl<$Res, $Val extends MiraiIcon>
 }
 
 /// @nodoc
-abstract class _$$_MiraiIconCopyWith<$Res> implements $MiraiIconCopyWith<$Res> {
-  factory _$$_MiraiIconCopyWith(
-          _$_MiraiIcon value, $Res Function(_$_MiraiIcon) then) =
-      __$$_MiraiIconCopyWithImpl<$Res>;
+abstract class _$$MiraiIconImplCopyWith<$Res>
+    implements $MiraiIconCopyWith<$Res> {
+  factory _$$MiraiIconImplCopyWith(
+          _$MiraiIconImpl value, $Res Function(_$MiraiIconImpl) then) =
+      __$$MiraiIconImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,11 +114,11 @@ abstract class _$$_MiraiIconCopyWith<$Res> implements $MiraiIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiraiIconCopyWithImpl<$Res>
-    extends _$MiraiIconCopyWithImpl<$Res, _$_MiraiIcon>
-    implements _$$_MiraiIconCopyWith<$Res> {
-  __$$_MiraiIconCopyWithImpl(
-      _$_MiraiIcon _value, $Res Function(_$_MiraiIcon) _then)
+class __$$MiraiIconImplCopyWithImpl<$Res>
+    extends _$MiraiIconCopyWithImpl<$Res, _$MiraiIconImpl>
+    implements _$$MiraiIconImplCopyWith<$Res> {
+  __$$MiraiIconImplCopyWithImpl(
+      _$MiraiIconImpl _value, $Res Function(_$MiraiIconImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +131,7 @@ class __$$_MiraiIconCopyWithImpl<$Res>
     Object? semanticLabel = freezed,
     Object? textDirection = freezed,
   }) {
-    return _then(_$_MiraiIcon(
+    return _then(_$MiraiIconImpl(
       icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -161,8 +162,8 @@ class __$$_MiraiIconCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiIcon implements _MiraiIcon {
-  const _$_MiraiIcon(
+class _$MiraiIconImpl implements _MiraiIcon {
+  const _$MiraiIconImpl(
       {required this.icon,
       required this.iconType,
       this.size,
@@ -170,8 +171,8 @@ class _$_MiraiIcon implements _MiraiIcon {
       this.semanticLabel,
       this.textDirection});
 
-  factory _$_MiraiIcon.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiIconFromJson(json);
+  factory _$MiraiIconImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiIconImplFromJson(json);
 
   @override
   final String icon;
@@ -195,7 +196,7 @@ class _$_MiraiIcon implements _MiraiIcon {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiIcon &&
+            other is _$MiraiIconImpl &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.iconType, iconType) ||
                 other.iconType == iconType) &&
@@ -215,12 +216,12 @@ class _$_MiraiIcon implements _MiraiIcon {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiIconCopyWith<_$_MiraiIcon> get copyWith =>
-      __$$_MiraiIconCopyWithImpl<_$_MiraiIcon>(this, _$identity);
+  _$$MiraiIconImplCopyWith<_$MiraiIconImpl> get copyWith =>
+      __$$MiraiIconImplCopyWithImpl<_$MiraiIconImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiIconToJson(
+    return _$$MiraiIconImplToJson(
       this,
     );
   }
@@ -233,10 +234,10 @@ abstract class _MiraiIcon implements MiraiIcon {
       final double? size,
       final String? color,
       final String? semanticLabel,
-      final TextDirection? textDirection}) = _$_MiraiIcon;
+      final TextDirection? textDirection}) = _$MiraiIconImpl;
 
   factory _MiraiIcon.fromJson(Map<String, dynamic> json) =
-      _$_MiraiIcon.fromJson;
+      _$MiraiIconImpl.fromJson;
 
   @override
   String get icon;
@@ -252,6 +253,6 @@ abstract class _MiraiIcon implements MiraiIcon {
   TextDirection? get textDirection;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiIconCopyWith<_$_MiraiIcon> get copyWith =>
+  _$$MiraiIconImplCopyWith<_$MiraiIconImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

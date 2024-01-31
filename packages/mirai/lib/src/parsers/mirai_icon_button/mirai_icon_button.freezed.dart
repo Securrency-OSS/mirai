@@ -195,11 +195,11 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
 }
 
 /// @nodoc
-abstract class _$$_MiraiIconButtonCopyWith<$Res>
+abstract class _$$MiraiIconButtonImplCopyWith<$Res>
     implements $MiraiIconButtonCopyWith<$Res> {
-  factory _$$_MiraiIconButtonCopyWith(
-          _$_MiraiIconButton value, $Res Function(_$_MiraiIconButton) then) =
-      __$$_MiraiIconButtonCopyWithImpl<$Res>;
+  factory _$$MiraiIconButtonImplCopyWith(_$MiraiIconButtonImpl value,
+          $Res Function(_$MiraiIconButtonImpl) then) =
+      __$$MiraiIconButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -227,11 +227,11 @@ abstract class _$$_MiraiIconButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiIconButtonCopyWithImpl<$Res>
-    extends _$MiraiIconButtonCopyWithImpl<$Res, _$_MiraiIconButton>
-    implements _$$_MiraiIconButtonCopyWith<$Res> {
-  __$$_MiraiIconButtonCopyWithImpl(
-      _$_MiraiIconButton _value, $Res Function(_$_MiraiIconButton) _then)
+class __$$MiraiIconButtonImplCopyWithImpl<$Res>
+    extends _$MiraiIconButtonCopyWithImpl<$Res, _$MiraiIconButtonImpl>
+    implements _$$MiraiIconButtonImplCopyWith<$Res> {
+  __$$MiraiIconButtonImplCopyWithImpl(
+      _$MiraiIconButtonImpl _value, $Res Function(_$MiraiIconButtonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -254,7 +254,7 @@ class __$$_MiraiIconButtonCopyWithImpl<$Res>
     Object? selectedIcon = freezed,
     Object? child = null,
   }) {
-    return _then(_$_MiraiIconButton(
+    return _then(_$MiraiIconButtonImpl(
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
@@ -322,8 +322,8 @@ class __$$_MiraiIconButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiIconButton implements _MiraiIconButton {
-  const _$_MiraiIconButton(
+class _$MiraiIconButtonImpl implements _MiraiIconButton {
+  const _$MiraiIconButtonImpl(
       {final Map<String, dynamic>? onPressed,
       this.iconSize,
       this.padding,
@@ -344,8 +344,8 @@ class _$_MiraiIconButton implements _MiraiIconButton {
         _selectedIcon = selectedIcon,
         _child = child;
 
-  factory _$_MiraiIconButton.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiIconButtonFromJson(json);
+  factory _$MiraiIconButtonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiIconButtonImplFromJson(json);
 
   final Map<String, dynamic>? _onPressed;
   @override
@@ -412,7 +412,7 @@ class _$_MiraiIconButton implements _MiraiIconButton {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiIconButton &&
+            other is _$MiraiIconButtonImpl &&
             const DeepCollectionEquality()
                 .equals(other._onPressed, _onPressed) &&
             (identical(other.iconSize, iconSize) ||
@@ -466,12 +466,13 @@ class _$_MiraiIconButton implements _MiraiIconButton {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiIconButtonCopyWith<_$_MiraiIconButton> get copyWith =>
-      __$$_MiraiIconButtonCopyWithImpl<_$_MiraiIconButton>(this, _$identity);
+  _$$MiraiIconButtonImplCopyWith<_$MiraiIconButtonImpl> get copyWith =>
+      __$$MiraiIconButtonImplCopyWithImpl<_$MiraiIconButtonImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiIconButtonToJson(
+    return _$$MiraiIconButtonImplToJson(
       this,
     );
   }
@@ -494,10 +495,10 @@ abstract class _MiraiIconButton implements MiraiIconButton {
       final dynamic autofocus,
       final bool? isSelected,
       final Map<String, dynamic>? selectedIcon,
-      required final Map<String, dynamic> child}) = _$_MiraiIconButton;
+      required final Map<String, dynamic> child}) = _$MiraiIconButtonImpl;
 
   factory _MiraiIconButton.fromJson(Map<String, dynamic> json) =
-      _$_MiraiIconButton.fromJson;
+      _$MiraiIconButtonImpl.fromJson;
 
   @override
   Map<String, dynamic>? get onPressed;
@@ -533,6 +534,6 @@ abstract class _MiraiIconButton implements MiraiIconButton {
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiIconButtonCopyWith<_$_MiraiIconButton> get copyWith =>
+  _$$MiraiIconButtonImplCopyWith<_$MiraiIconButtonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -356,11 +356,11 @@ class _$MiraiTextFormFieldCopyWithImpl<$Res, $Val extends MiraiTextFormField>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
+abstract class _$$MiraiTextFormFieldImplCopyWith<$Res>
     implements $MiraiTextFormFieldCopyWith<$Res> {
-  factory _$$_MiraiTextFormFieldCopyWith(_$_MiraiTextFormField value,
-          $Res Function(_$_MiraiTextFormField) then) =
-      __$$_MiraiTextFormFieldCopyWithImpl<$Res>;
+  factory _$$MiraiTextFormFieldImplCopyWith(_$MiraiTextFormFieldImpl value,
+          $Res Function(_$MiraiTextFormFieldImpl) then) =
+      __$$MiraiTextFormFieldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -411,11 +411,11 @@ abstract class _$$_MiraiTextFormFieldCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
-    extends _$MiraiTextFormFieldCopyWithImpl<$Res, _$_MiraiTextFormField>
-    implements _$$_MiraiTextFormFieldCopyWith<$Res> {
-  __$$_MiraiTextFormFieldCopyWithImpl(
-      _$_MiraiTextFormField _value, $Res Function(_$_MiraiTextFormField) _then)
+class __$$MiraiTextFormFieldImplCopyWithImpl<$Res>
+    extends _$MiraiTextFormFieldCopyWithImpl<$Res, _$MiraiTextFormFieldImpl>
+    implements _$$MiraiTextFormFieldImplCopyWith<$Res> {
+  __$$MiraiTextFormFieldImplCopyWithImpl(_$MiraiTextFormFieldImpl _value,
+      $Res Function(_$MiraiTextFormFieldImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -459,7 +459,7 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
     Object? inputFormatters = null,
     Object? validatorRules = null,
   }) {
-    return _then(_$_MiraiTextFormField(
+    return _then(_$MiraiTextFormFieldImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -614,8 +614,8 @@ class __$$_MiraiTextFormFieldCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTextFormField implements _MiraiTextFormField {
-  const _$_MiraiTextFormField(
+class _$MiraiTextFormFieldImpl implements _MiraiTextFormField {
+  const _$MiraiTextFormFieldImpl(
       {this.id,
       this.compareId,
       this.decoration,
@@ -657,8 +657,8 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
       : _inputFormatters = inputFormatters,
         _validatorRules = validatorRules;
 
-  factory _$_MiraiTextFormField.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTextFormFieldFromJson(json);
+  factory _$MiraiTextFormFieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTextFormFieldImplFromJson(json);
 
   @override
   final String? id;
@@ -768,7 +768,7 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTextFormField &&
+            other is _$MiraiTextFormFieldImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.compareId, compareId) ||
                 other.compareId == compareId) &&
@@ -889,13 +889,13 @@ class _$_MiraiTextFormField implements _MiraiTextFormField {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTextFormFieldCopyWith<_$_MiraiTextFormField> get copyWith =>
-      __$$_MiraiTextFormFieldCopyWithImpl<_$_MiraiTextFormField>(
+  _$$MiraiTextFormFieldImplCopyWith<_$MiraiTextFormFieldImpl> get copyWith =>
+      __$$MiraiTextFormFieldImplCopyWithImpl<_$MiraiTextFormFieldImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTextFormFieldToJson(
+    return _$$MiraiTextFormFieldImplToJson(
       this,
     );
   }
@@ -940,10 +940,10 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
           final AutovalidateMode? autovalidateMode,
           final List<MiraiInputFormatter> inputFormatters,
           final List<MiraiFormFieldValidator> validatorRules}) =
-      _$_MiraiTextFormField;
+      _$MiraiTextFormFieldImpl;
 
   factory _MiraiTextFormField.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTextFormField.fromJson;
+      _$MiraiTextFormFieldImpl.fromJson;
 
   @override
   String? get id;
@@ -1021,6 +1021,6 @@ abstract class _MiraiTextFormField implements MiraiTextFormField {
   List<MiraiFormFieldValidator> get validatorRules;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTextFormFieldCopyWith<_$_MiraiTextFormField> get copyWith =>
+  _$$MiraiTextFormFieldImplCopyWith<_$MiraiTextFormFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

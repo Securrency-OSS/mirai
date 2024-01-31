@@ -67,21 +67,22 @@ class _$MiraiFormCopyWithImpl<$Res, $Val extends MiraiForm>
 }
 
 /// @nodoc
-abstract class _$$_MiraiFormCopyWith<$Res> implements $MiraiFormCopyWith<$Res> {
-  factory _$$_MiraiFormCopyWith(
-          _$_MiraiForm value, $Res Function(_$_MiraiForm) then) =
-      __$$_MiraiFormCopyWithImpl<$Res>;
+abstract class _$$MiraiFormImplCopyWith<$Res>
+    implements $MiraiFormCopyWith<$Res> {
+  factory _$$MiraiFormImplCopyWith(
+          _$MiraiFormImpl value, $Res Function(_$MiraiFormImpl) then) =
+      __$$MiraiFormImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AutovalidateMode? autovalidateMode, Map<String, dynamic> child});
 }
 
 /// @nodoc
-class __$$_MiraiFormCopyWithImpl<$Res>
-    extends _$MiraiFormCopyWithImpl<$Res, _$_MiraiForm>
-    implements _$$_MiraiFormCopyWith<$Res> {
-  __$$_MiraiFormCopyWithImpl(
-      _$_MiraiForm _value, $Res Function(_$_MiraiForm) _then)
+class __$$MiraiFormImplCopyWithImpl<$Res>
+    extends _$MiraiFormCopyWithImpl<$Res, _$MiraiFormImpl>
+    implements _$$MiraiFormImplCopyWith<$Res> {
+  __$$MiraiFormImplCopyWithImpl(
+      _$MiraiFormImpl _value, $Res Function(_$MiraiFormImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_MiraiFormCopyWithImpl<$Res>
     Object? autovalidateMode = freezed,
     Object? child = null,
   }) {
-    return _then(_$_MiraiForm(
+    return _then(_$MiraiFormImpl(
       autovalidateMode: freezed == autovalidateMode
           ? _value.autovalidateMode
           : autovalidateMode // ignore: cast_nullable_to_non_nullable
@@ -105,13 +106,13 @@ class __$$_MiraiFormCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiForm implements _MiraiForm {
-  const _$_MiraiForm(
+class _$MiraiFormImpl implements _MiraiForm {
+  const _$MiraiFormImpl(
       {this.autovalidateMode, required final Map<String, dynamic> child})
       : _child = child;
 
-  factory _$_MiraiForm.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFormFromJson(json);
+  factory _$MiraiFormImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFormImplFromJson(json);
 
   @override
   final AutovalidateMode? autovalidateMode;
@@ -132,7 +133,7 @@ class _$_MiraiForm implements _MiraiForm {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiForm &&
+            other is _$MiraiFormImpl &&
             (identical(other.autovalidateMode, autovalidateMode) ||
                 other.autovalidateMode == autovalidateMode) &&
             const DeepCollectionEquality().equals(other._child, _child));
@@ -146,12 +147,12 @@ class _$_MiraiForm implements _MiraiForm {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFormCopyWith<_$_MiraiForm> get copyWith =>
-      __$$_MiraiFormCopyWithImpl<_$_MiraiForm>(this, _$identity);
+  _$$MiraiFormImplCopyWith<_$MiraiFormImpl> get copyWith =>
+      __$$MiraiFormImplCopyWithImpl<_$MiraiFormImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFormToJson(
+    return _$$MiraiFormImplToJson(
       this,
     );
   }
@@ -160,10 +161,10 @@ class _$_MiraiForm implements _MiraiForm {
 abstract class _MiraiForm implements MiraiForm {
   const factory _MiraiForm(
       {final AutovalidateMode? autovalidateMode,
-      required final Map<String, dynamic> child}) = _$_MiraiForm;
+      required final Map<String, dynamic> child}) = _$MiraiFormImpl;
 
   factory _MiraiForm.fromJson(Map<String, dynamic> json) =
-      _$_MiraiForm.fromJson;
+      _$MiraiFormImpl.fromJson;
 
   @override
   AutovalidateMode? get autovalidateMode;
@@ -171,6 +172,6 @@ abstract class _MiraiForm implements MiraiForm {
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFormCopyWith<_$_MiraiForm> get copyWith =>
+  _$$MiraiFormImplCopyWith<_$MiraiFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

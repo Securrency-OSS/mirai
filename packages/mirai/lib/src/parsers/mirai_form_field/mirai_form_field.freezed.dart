@@ -62,22 +62,22 @@ class _$MiraiFormFieldCopyWithImpl<$Res, $Val extends MiraiFormField>
 }
 
 /// @nodoc
-abstract class _$$_MiraiFormFieldCopyWith<$Res>
+abstract class _$$MiraiFormFieldImplCopyWith<$Res>
     implements $MiraiFormFieldCopyWith<$Res> {
-  factory _$$_MiraiFormFieldCopyWith(
-          _$_MiraiFormField value, $Res Function(_$_MiraiFormField) then) =
-      __$$_MiraiFormFieldCopyWithImpl<$Res>;
+  factory _$$MiraiFormFieldImplCopyWith(_$MiraiFormFieldImpl value,
+          $Res Function(_$MiraiFormFieldImpl) then) =
+      __$$MiraiFormFieldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, dynamic>? child});
 }
 
 /// @nodoc
-class __$$_MiraiFormFieldCopyWithImpl<$Res>
-    extends _$MiraiFormFieldCopyWithImpl<$Res, _$_MiraiFormField>
-    implements _$$_MiraiFormFieldCopyWith<$Res> {
-  __$$_MiraiFormFieldCopyWithImpl(
-      _$_MiraiFormField _value, $Res Function(_$_MiraiFormField) _then)
+class __$$MiraiFormFieldImplCopyWithImpl<$Res>
+    extends _$MiraiFormFieldCopyWithImpl<$Res, _$MiraiFormFieldImpl>
+    implements _$$MiraiFormFieldImplCopyWith<$Res> {
+  __$$MiraiFormFieldImplCopyWithImpl(
+      _$MiraiFormFieldImpl _value, $Res Function(_$MiraiFormFieldImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_MiraiFormFieldCopyWithImpl<$Res>
   $Res call({
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiFormField(
+    return _then(_$MiraiFormFieldImpl(
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -96,11 +96,12 @@ class __$$_MiraiFormFieldCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFormField implements _MiraiFormField {
-  const _$_MiraiFormField({final Map<String, dynamic>? child}) : _child = child;
+class _$MiraiFormFieldImpl implements _MiraiFormField {
+  const _$MiraiFormFieldImpl({final Map<String, dynamic>? child})
+      : _child = child;
 
-  factory _$_MiraiFormField.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFormFieldFromJson(json);
+  factory _$MiraiFormFieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFormFieldImplFromJson(json);
 
   final Map<String, dynamic>? _child;
   @override
@@ -121,7 +122,7 @@ class _$_MiraiFormField implements _MiraiFormField {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFormField &&
+            other is _$MiraiFormFieldImpl &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
 
@@ -133,12 +134,13 @@ class _$_MiraiFormField implements _MiraiFormField {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFormFieldCopyWith<_$_MiraiFormField> get copyWith =>
-      __$$_MiraiFormFieldCopyWithImpl<_$_MiraiFormField>(this, _$identity);
+  _$$MiraiFormFieldImplCopyWith<_$MiraiFormFieldImpl> get copyWith =>
+      __$$MiraiFormFieldImplCopyWithImpl<_$MiraiFormFieldImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFormFieldToJson(
+    return _$$MiraiFormFieldImplToJson(
       this,
     );
   }
@@ -146,15 +148,15 @@ class _$_MiraiFormField implements _MiraiFormField {
 
 abstract class _MiraiFormField implements MiraiFormField {
   const factory _MiraiFormField({final Map<String, dynamic>? child}) =
-      _$_MiraiFormField;
+      _$MiraiFormFieldImpl;
 
   factory _MiraiFormField.fromJson(Map<String, dynamic> json) =
-      _$_MiraiFormField.fromJson;
+      _$MiraiFormFieldImpl.fromJson;
 
   @override
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFormFieldCopyWith<_$_MiraiFormField> get copyWith =>
+  _$$MiraiFormFieldImplCopyWith<_$MiraiFormFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

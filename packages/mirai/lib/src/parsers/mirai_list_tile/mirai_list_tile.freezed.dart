@@ -238,11 +238,11 @@ class _$MiraiListTileCopyWithImpl<$Res, $Val extends MiraiListTile>
 }
 
 /// @nodoc
-abstract class _$$_MiraiListTileCopyWith<$Res>
+abstract class _$$MiraiListTileImplCopyWith<$Res>
     implements $MiraiListTileCopyWith<$Res> {
-  factory _$$_MiraiListTileCopyWith(
-          _$_MiraiListTile value, $Res Function(_$_MiraiListTile) then) =
-      __$$_MiraiListTileCopyWithImpl<$Res>;
+  factory _$$MiraiListTileImplCopyWith(
+          _$MiraiListTileImpl value, $Res Function(_$MiraiListTileImpl) then) =
+      __$$MiraiListTileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -276,11 +276,11 @@ abstract class _$$_MiraiListTileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiListTileCopyWithImpl<$Res>
-    extends _$MiraiListTileCopyWithImpl<$Res, _$_MiraiListTile>
-    implements _$$_MiraiListTileCopyWith<$Res> {
-  __$$_MiraiListTileCopyWithImpl(
-      _$_MiraiListTile _value, $Res Function(_$_MiraiListTile) _then)
+class __$$MiraiListTileImplCopyWithImpl<$Res>
+    extends _$MiraiListTileCopyWithImpl<$Res, _$MiraiListTileImpl>
+    implements _$$MiraiListTileImplCopyWith<$Res> {
+  __$$MiraiListTileImplCopyWithImpl(
+      _$MiraiListTileImpl _value, $Res Function(_$MiraiListTileImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -311,7 +311,7 @@ class __$$_MiraiListTileCopyWithImpl<$Res>
     Object? minVerticalPadding = freezed,
     Object? minLeadingWidth = freezed,
   }) {
-    return _then(_$_MiraiListTile(
+    return _then(_$MiraiListTileImpl(
       onTap: freezed == onTap
           ? _value._onTap
           : onTap // ignore: cast_nullable_to_non_nullable
@@ -414,8 +414,8 @@ class __$$_MiraiListTileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiListTile implements _MiraiListTile {
-  const _$_MiraiListTile(
+class _$MiraiListTileImpl implements _MiraiListTile {
+  const _$MiraiListTileImpl(
       {final Map<String, dynamic>? onTap,
       final Map<String, dynamic>? onLongPress,
       final Map<String, dynamic>? leading,
@@ -447,8 +447,8 @@ class _$_MiraiListTile implements _MiraiListTile {
         _subtitle = subtitle,
         _trailing = trailing;
 
-  factory _$_MiraiListTile.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiListTileFromJson(json);
+  factory _$MiraiListTileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiListTileImplFromJson(json);
 
   final Map<String, dynamic>? _onTap;
   @override
@@ -560,7 +560,7 @@ class _$_MiraiListTile implements _MiraiListTile {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiListTile &&
+            other is _$MiraiListTileImpl &&
             const DeepCollectionEquality().equals(other._onTap, _onTap) &&
             const DeepCollectionEquality()
                 .equals(other._onLongPress, _onLongPress) &&
@@ -636,12 +636,12 @@ class _$_MiraiListTile implements _MiraiListTile {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiListTileCopyWith<_$_MiraiListTile> get copyWith =>
-      __$$_MiraiListTileCopyWithImpl<_$_MiraiListTile>(this, _$identity);
+  _$$MiraiListTileImplCopyWith<_$MiraiListTileImpl> get copyWith =>
+      __$$MiraiListTileImplCopyWithImpl<_$MiraiListTileImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiListTileToJson(
+    return _$$MiraiListTileImplToJson(
       this,
     );
   }
@@ -672,10 +672,10 @@ abstract class _MiraiListTile implements MiraiListTile {
       final bool? enableFeedback,
       final double? horizontalTitleGap,
       final double? minVerticalPadding,
-      final double? minLeadingWidth}) = _$_MiraiListTile;
+      final double? minLeadingWidth}) = _$MiraiListTileImpl;
 
   factory _MiraiListTile.fromJson(Map<String, dynamic> json) =
-      _$_MiraiListTile.fromJson;
+      _$MiraiListTileImpl.fromJson;
 
   @override
   Map<String, dynamic>? get onTap;
@@ -727,6 +727,6 @@ abstract class _MiraiListTile implements MiraiListTile {
   double? get minLeadingWidth;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiListTileCopyWith<_$_MiraiListTile> get copyWith =>
+  _$$MiraiListTileImplCopyWith<_$MiraiListTileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

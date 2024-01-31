@@ -6,8 +6,8 @@ part of 'mirai_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiRequest _$$_MiraiRequestFromJson(Map<String, dynamic> json) =>
-    _$_MiraiRequest(
+_$MiraiRequestImpl _$$MiraiRequestImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiRequestImpl(
       url: json['url'] as String,
       method: $enumDecode(_$MethodEnumMap, json['method']),
       queryParameters: json['queryParameters'] as Map<String, dynamic>?,
@@ -16,7 +16,7 @@ _$_MiraiRequest _$$_MiraiRequestFromJson(Map<String, dynamic> json) =>
       data: json['data'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiRequestToJson(_$_MiraiRequest instance) =>
+Map<String, dynamic> _$$MiraiRequestImplToJson(_$MiraiRequestImpl instance) =>
     <String, dynamic>{
       'url': instance.url,
       'method': _$MethodEnumMap[instance.method]!,

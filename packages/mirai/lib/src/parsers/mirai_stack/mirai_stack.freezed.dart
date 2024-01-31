@@ -91,11 +91,11 @@ class _$MiraiStackCopyWithImpl<$Res, $Val extends MiraiStack>
 }
 
 /// @nodoc
-abstract class _$$_MiraiStackCopyWith<$Res>
+abstract class _$$MiraiStackImplCopyWith<$Res>
     implements $MiraiStackCopyWith<$Res> {
-  factory _$$_MiraiStackCopyWith(
-          _$_MiraiStack value, $Res Function(_$_MiraiStack) then) =
-      __$$_MiraiStackCopyWithImpl<$Res>;
+  factory _$$MiraiStackImplCopyWith(
+          _$MiraiStackImpl value, $Res Function(_$MiraiStackImpl) then) =
+      __$$MiraiStackImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_MiraiStackCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiStackCopyWithImpl<$Res>
-    extends _$MiraiStackCopyWithImpl<$Res, _$_MiraiStack>
-    implements _$$_MiraiStackCopyWith<$Res> {
-  __$$_MiraiStackCopyWithImpl(
-      _$_MiraiStack _value, $Res Function(_$_MiraiStack) _then)
+class __$$MiraiStackImplCopyWithImpl<$Res>
+    extends _$MiraiStackCopyWithImpl<$Res, _$MiraiStackImpl>
+    implements _$$MiraiStackImplCopyWith<$Res> {
+  __$$MiraiStackImplCopyWithImpl(
+      _$MiraiStackImpl _value, $Res Function(_$MiraiStackImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_MiraiStackCopyWithImpl<$Res>
     Object? textDirection = freezed,
     Object? children = null,
   }) {
-    return _then(_$_MiraiStack(
+    return _then(_$MiraiStackImpl(
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -150,8 +150,8 @@ class __$$_MiraiStackCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiStack implements _MiraiStack {
-  const _$_MiraiStack(
+class _$MiraiStackImpl implements _MiraiStack {
+  const _$MiraiStackImpl(
       {this.alignment = MiraiAlignmentDirectional.topStart,
       this.clipBehavior = Clip.hardEdge,
       this.fit = StackFit.loose,
@@ -159,8 +159,8 @@ class _$_MiraiStack implements _MiraiStack {
       final List<Map<String, dynamic>> children = const []})
       : _children = children;
 
-  factory _$_MiraiStack.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiStackFromJson(json);
+  factory _$MiraiStackImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiStackImplFromJson(json);
 
   @override
   @JsonKey()
@@ -191,7 +191,7 @@ class _$_MiraiStack implements _MiraiStack {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiStack &&
+            other is _$MiraiStackImpl &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.clipBehavior, clipBehavior) ||
@@ -210,12 +210,12 @@ class _$_MiraiStack implements _MiraiStack {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiStackCopyWith<_$_MiraiStack> get copyWith =>
-      __$$_MiraiStackCopyWithImpl<_$_MiraiStack>(this, _$identity);
+  _$$MiraiStackImplCopyWith<_$MiraiStackImpl> get copyWith =>
+      __$$MiraiStackImplCopyWithImpl<_$MiraiStackImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiStackToJson(
+    return _$$MiraiStackImplToJson(
       this,
     );
   }
@@ -227,10 +227,10 @@ abstract class _MiraiStack implements MiraiStack {
       final Clip clipBehavior,
       final StackFit fit,
       final TextDirection? textDirection,
-      final List<Map<String, dynamic>> children}) = _$_MiraiStack;
+      final List<Map<String, dynamic>> children}) = _$MiraiStackImpl;
 
   factory _MiraiStack.fromJson(Map<String, dynamic> json) =
-      _$_MiraiStack.fromJson;
+      _$MiraiStackImpl.fromJson;
 
   @override
   MiraiAlignmentDirectional get alignment;
@@ -244,6 +244,6 @@ abstract class _MiraiStack implements MiraiStack {
   List<Map<String, dynamic>> get children;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiStackCopyWith<_$_MiraiStack> get copyWith =>
+  _$$MiraiStackImplCopyWith<_$MiraiStackImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

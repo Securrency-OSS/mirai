@@ -209,12 +209,12 @@ class _$MiraiBottomNavBarThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiBottomNavBarThemeDataCopyWith<$Res>
+abstract class _$$MiraiBottomNavBarThemeDataImplCopyWith<$Res>
     implements $MiraiBottomNavBarThemeDataCopyWith<$Res> {
-  factory _$$_MiraiBottomNavBarThemeDataCopyWith(
-          _$_MiraiBottomNavBarThemeData value,
-          $Res Function(_$_MiraiBottomNavBarThemeData) then) =
-      __$$_MiraiBottomNavBarThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiBottomNavBarThemeDataImplCopyWith(
+          _$MiraiBottomNavBarThemeDataImpl value,
+          $Res Function(_$MiraiBottomNavBarThemeDataImpl) then) =
+      __$$MiraiBottomNavBarThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -243,13 +243,13 @@ abstract class _$$_MiraiBottomNavBarThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBottomNavBarThemeDataCopyWithImpl<$Res>
+class __$$MiraiBottomNavBarThemeDataImplCopyWithImpl<$Res>
     extends _$MiraiBottomNavBarThemeDataCopyWithImpl<$Res,
-        _$_MiraiBottomNavBarThemeData>
-    implements _$$_MiraiBottomNavBarThemeDataCopyWith<$Res> {
-  __$$_MiraiBottomNavBarThemeDataCopyWithImpl(
-      _$_MiraiBottomNavBarThemeData _value,
-      $Res Function(_$_MiraiBottomNavBarThemeData) _then)
+        _$MiraiBottomNavBarThemeDataImpl>
+    implements _$$MiraiBottomNavBarThemeDataImplCopyWith<$Res> {
+  __$$MiraiBottomNavBarThemeDataImplCopyWithImpl(
+      _$MiraiBottomNavBarThemeDataImpl _value,
+      $Res Function(_$MiraiBottomNavBarThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -269,7 +269,7 @@ class __$$_MiraiBottomNavBarThemeDataCopyWithImpl<$Res>
     Object? enableFeedback = freezed,
     Object? landscapeLayout = freezed,
   }) {
-    return _then(_$_MiraiBottomNavBarThemeData(
+    return _then(_$MiraiBottomNavBarThemeDataImpl(
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -328,8 +328,8 @@ class __$$_MiraiBottomNavBarThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBottomNavBarThemeData implements _MiraiBottomNavBarThemeData {
-  const _$_MiraiBottomNavBarThemeData(
+class _$MiraiBottomNavBarThemeDataImpl implements _MiraiBottomNavBarThemeData {
+  const _$MiraiBottomNavBarThemeDataImpl(
       {this.backgroundColor,
       this.elevation,
       this.selectedIconTheme,
@@ -344,8 +344,9 @@ class _$_MiraiBottomNavBarThemeData implements _MiraiBottomNavBarThemeData {
       this.enableFeedback,
       this.landscapeLayout});
 
-  factory _$_MiraiBottomNavBarThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBottomNavBarThemeDataFromJson(json);
+  factory _$MiraiBottomNavBarThemeDataImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MiraiBottomNavBarThemeDataImplFromJson(json);
 
   @override
   final String? backgroundColor;
@@ -383,7 +384,7 @@ class _$_MiraiBottomNavBarThemeData implements _MiraiBottomNavBarThemeData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBottomNavBarThemeData &&
+            other is _$MiraiBottomNavBarThemeDataImpl &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
             (identical(other.elevation, elevation) ||
@@ -432,13 +433,13 @@ class _$_MiraiBottomNavBarThemeData implements _MiraiBottomNavBarThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBottomNavBarThemeDataCopyWith<_$_MiraiBottomNavBarThemeData>
-      get copyWith => __$$_MiraiBottomNavBarThemeDataCopyWithImpl<
-          _$_MiraiBottomNavBarThemeData>(this, _$identity);
+  _$$MiraiBottomNavBarThemeDataImplCopyWith<_$MiraiBottomNavBarThemeDataImpl>
+      get copyWith => __$$MiraiBottomNavBarThemeDataImplCopyWithImpl<
+          _$MiraiBottomNavBarThemeDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBottomNavBarThemeDataToJson(
+    return _$$MiraiBottomNavBarThemeDataImplToJson(
       this,
     );
   }
@@ -460,10 +461,10 @@ abstract class _MiraiBottomNavBarThemeData
           final BottomNavigationBarType? type,
           final bool? enableFeedback,
           final BottomNavigationBarLandscapeLayout? landscapeLayout}) =
-      _$_MiraiBottomNavBarThemeData;
+      _$MiraiBottomNavBarThemeDataImpl;
 
   factory _MiraiBottomNavBarThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBottomNavBarThemeData.fromJson;
+      _$MiraiBottomNavBarThemeDataImpl.fromJson;
 
   @override
   String? get backgroundColor;
@@ -493,6 +494,6 @@ abstract class _MiraiBottomNavBarThemeData
   BottomNavigationBarLandscapeLayout? get landscapeLayout;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBottomNavBarThemeDataCopyWith<_$_MiraiBottomNavBarThemeData>
+  _$$MiraiBottomNavBarThemeDataImplCopyWith<_$MiraiBottomNavBarThemeDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

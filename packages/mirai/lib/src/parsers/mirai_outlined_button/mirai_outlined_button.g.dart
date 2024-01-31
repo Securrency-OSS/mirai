@@ -6,9 +6,9 @@ part of 'mirai_outlined_button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiOutlinedButton _$$_MiraiOutlinedButtonFromJson(
+_$MiraiOutlinedButtonImpl _$$MiraiOutlinedButtonImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiOutlinedButton(
+    _$MiraiOutlinedButtonImpl(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       style: json['style'] == null
           ? null
@@ -19,8 +19,8 @@ _$_MiraiOutlinedButton _$$_MiraiOutlinedButtonFromJson(
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiOutlinedButtonToJson(
-        _$_MiraiOutlinedButton instance) =>
+Map<String, dynamic> _$$MiraiOutlinedButtonImplToJson(
+        _$MiraiOutlinedButtonImpl instance) =>
     <String, dynamic>{
       'onPressed': instance.onPressed,
       'style': instance.style,

@@ -84,11 +84,11 @@ class _$MiraiContainerImageCopyWithImpl<$Res, $Val extends MiraiContainerImage>
 }
 
 /// @nodoc
-abstract class _$$_MiraiContainerImageCopyWith<$Res>
+abstract class _$$MiraiContainerImageImplCopyWith<$Res>
     implements $MiraiContainerImageCopyWith<$Res> {
-  factory _$$_MiraiContainerImageCopyWith(_$_MiraiContainerImage value,
-          $Res Function(_$_MiraiContainerImage) then) =
-      __$$_MiraiContainerImageCopyWithImpl<$Res>;
+  factory _$$MiraiContainerImageImplCopyWith(_$MiraiContainerImageImpl value,
+          $Res Function(_$MiraiContainerImageImpl) then) =
+      __$$MiraiContainerImageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_MiraiContainerImageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiContainerImageCopyWithImpl<$Res>
-    extends _$MiraiContainerImageCopyWithImpl<$Res, _$_MiraiContainerImage>
-    implements _$$_MiraiContainerImageCopyWith<$Res> {
-  __$$_MiraiContainerImageCopyWithImpl(_$_MiraiContainerImage _value,
-      $Res Function(_$_MiraiContainerImage) _then)
+class __$$MiraiContainerImageImplCopyWithImpl<$Res>
+    extends _$MiraiContainerImageCopyWithImpl<$Res, _$MiraiContainerImageImpl>
+    implements _$$MiraiContainerImageImplCopyWith<$Res> {
+  __$$MiraiContainerImageImplCopyWithImpl(_$MiraiContainerImageImpl _value,
+      $Res Function(_$MiraiContainerImageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +114,7 @@ class __$$_MiraiContainerImageCopyWithImpl<$Res>
     Object? imageType = null,
     Object? fit = freezed,
   }) {
-    return _then(_$_MiraiContainerImage(
+    return _then(_$MiraiContainerImageImpl(
       src: null == src
           ? _value.src
           : src // ignore: cast_nullable_to_non_nullable
@@ -137,15 +137,15 @@ class __$$_MiraiContainerImageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiContainerImage implements _MiraiContainerImage {
-  const _$_MiraiContainerImage(
+class _$MiraiContainerImageImpl implements _MiraiContainerImage {
+  const _$MiraiContainerImageImpl(
       {required this.src,
       this.alignment = MiraiAlignment.center,
       this.imageType = MiraiContainerImageType.network,
       this.fit});
 
-  factory _$_MiraiContainerImage.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiContainerImageFromJson(json);
+  factory _$MiraiContainerImageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiContainerImageImplFromJson(json);
 
   @override
   final String src;
@@ -167,7 +167,7 @@ class _$_MiraiContainerImage implements _MiraiContainerImage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiContainerImage &&
+            other is _$MiraiContainerImageImpl &&
             (identical(other.src, src) || other.src == src) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
@@ -183,13 +183,13 @@ class _$_MiraiContainerImage implements _MiraiContainerImage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiContainerImageCopyWith<_$_MiraiContainerImage> get copyWith =>
-      __$$_MiraiContainerImageCopyWithImpl<_$_MiraiContainerImage>(
+  _$$MiraiContainerImageImplCopyWith<_$MiraiContainerImageImpl> get copyWith =>
+      __$$MiraiContainerImageImplCopyWithImpl<_$MiraiContainerImageImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiContainerImageToJson(
+    return _$$MiraiContainerImageImplToJson(
       this,
     );
   }
@@ -200,10 +200,10 @@ abstract class _MiraiContainerImage implements MiraiContainerImage {
       {required final String src,
       final MiraiAlignment alignment,
       final MiraiContainerImageType imageType,
-      final BoxFit? fit}) = _$_MiraiContainerImage;
+      final BoxFit? fit}) = _$MiraiContainerImageImpl;
 
   factory _MiraiContainerImage.fromJson(Map<String, dynamic> json) =
-      _$_MiraiContainerImage.fromJson;
+      _$MiraiContainerImageImpl.fromJson;
 
   @override
   String get src;
@@ -215,6 +215,6 @@ abstract class _MiraiContainerImage implements MiraiContainerImage {
   BoxFit? get fit;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiContainerImageCopyWith<_$_MiraiContainerImage> get copyWith =>
+  _$$MiraiContainerImageImplCopyWith<_$MiraiContainerImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

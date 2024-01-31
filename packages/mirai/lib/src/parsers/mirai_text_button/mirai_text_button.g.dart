@@ -6,8 +6,9 @@ part of 'mirai_text_button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTextButton _$$_MiraiTextButtonFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTextButton(
+_$MiraiTextButtonImpl _$$MiraiTextButtonImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiTextButtonImpl(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       style: json['style'] == null
           ? null
@@ -18,7 +19,8 @@ _$_MiraiTextButton _$$_MiraiTextButtonFromJson(Map<String, dynamic> json) =>
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiTextButtonToJson(_$_MiraiTextButton instance) =>
+Map<String, dynamic> _$$MiraiTextButtonImplToJson(
+        _$MiraiTextButtonImpl instance) =>
     <String, dynamic>{
       'onPressed': instance.onPressed,
       'style': instance.style,

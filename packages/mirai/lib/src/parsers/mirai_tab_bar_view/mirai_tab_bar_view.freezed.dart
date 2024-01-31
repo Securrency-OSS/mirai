@@ -98,11 +98,11 @@ class _$MiraiTabBarViewCopyWithImpl<$Res, $Val extends MiraiTabBarView>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTabBarViewCopyWith<$Res>
+abstract class _$$MiraiTabBarViewImplCopyWith<$Res>
     implements $MiraiTabBarViewCopyWith<$Res> {
-  factory _$$_MiraiTabBarViewCopyWith(
-          _$_MiraiTabBarView value, $Res Function(_$_MiraiTabBarView) then) =
-      __$$_MiraiTabBarViewCopyWithImpl<$Res>;
+  factory _$$MiraiTabBarViewImplCopyWith(_$MiraiTabBarViewImpl value,
+          $Res Function(_$MiraiTabBarViewImpl) then) =
+      __$$MiraiTabBarViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,11 +115,11 @@ abstract class _$$_MiraiTabBarViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTabBarViewCopyWithImpl<$Res>
-    extends _$MiraiTabBarViewCopyWithImpl<$Res, _$_MiraiTabBarView>
-    implements _$$_MiraiTabBarViewCopyWith<$Res> {
-  __$$_MiraiTabBarViewCopyWithImpl(
-      _$_MiraiTabBarView _value, $Res Function(_$_MiraiTabBarView) _then)
+class __$$MiraiTabBarViewImplCopyWithImpl<$Res>
+    extends _$MiraiTabBarViewCopyWithImpl<$Res, _$MiraiTabBarViewImpl>
+    implements _$$MiraiTabBarViewImplCopyWith<$Res> {
+  __$$MiraiTabBarViewImplCopyWithImpl(
+      _$MiraiTabBarViewImpl _value, $Res Function(_$MiraiTabBarViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -132,7 +132,7 @@ class __$$_MiraiTabBarViewCopyWithImpl<$Res>
     Object? viewportFraction = null,
     Object? clipBehavior = null,
   }) {
-    return _then(_$_MiraiTabBarView(
+    return _then(_$MiraiTabBarViewImpl(
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -163,8 +163,8 @@ class __$$_MiraiTabBarViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTabBarView implements _MiraiTabBarView {
-  const _$_MiraiTabBarView(
+class _$MiraiTabBarViewImpl implements _MiraiTabBarView {
+  const _$MiraiTabBarViewImpl(
       {required final List<Map<String, dynamic>> children,
       this.initialIndex = 0,
       this.dragStartBehavior = DragStartBehavior.start,
@@ -173,8 +173,8 @@ class _$_MiraiTabBarView implements _MiraiTabBarView {
       this.clipBehavior = Clip.hardEdge})
       : _children = children;
 
-  factory _$_MiraiTabBarView.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTabBarViewFromJson(json);
+  factory _$MiraiTabBarViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTabBarViewImplFromJson(json);
 
   final List<Map<String, dynamic>> _children;
   @override
@@ -208,7 +208,7 @@ class _$_MiraiTabBarView implements _MiraiTabBarView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTabBarView &&
+            other is _$MiraiTabBarViewImpl &&
             const DeepCollectionEquality().equals(other._children, _children) &&
             (identical(other.initialIndex, initialIndex) ||
                 other.initialIndex == initialIndex) &&
@@ -235,12 +235,13 @@ class _$_MiraiTabBarView implements _MiraiTabBarView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTabBarViewCopyWith<_$_MiraiTabBarView> get copyWith =>
-      __$$_MiraiTabBarViewCopyWithImpl<_$_MiraiTabBarView>(this, _$identity);
+  _$$MiraiTabBarViewImplCopyWith<_$MiraiTabBarViewImpl> get copyWith =>
+      __$$MiraiTabBarViewImplCopyWithImpl<_$MiraiTabBarViewImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTabBarViewToJson(
+    return _$$MiraiTabBarViewImplToJson(
       this,
     );
   }
@@ -253,10 +254,10 @@ abstract class _MiraiTabBarView implements MiraiTabBarView {
       final DragStartBehavior dragStartBehavior,
       final MiraiScrollPhysics? physics,
       final double viewportFraction,
-      final Clip clipBehavior}) = _$_MiraiTabBarView;
+      final Clip clipBehavior}) = _$MiraiTabBarViewImpl;
 
   factory _MiraiTabBarView.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTabBarView.fromJson;
+      _$MiraiTabBarViewImpl.fromJson;
 
   @override
   List<Map<String, dynamic>> get children;
@@ -272,6 +273,6 @@ abstract class _MiraiTabBarView implements MiraiTabBarView {
   Clip get clipBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTabBarViewCopyWith<_$_MiraiTabBarView> get copyWith =>
+  _$$MiraiTabBarViewImplCopyWith<_$MiraiTabBarViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

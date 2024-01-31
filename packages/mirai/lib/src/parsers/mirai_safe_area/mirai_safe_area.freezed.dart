@@ -115,11 +115,11 @@ class _$MiraiSafeAreaCopyWithImpl<$Res, $Val extends MiraiSafeArea>
 }
 
 /// @nodoc
-abstract class _$$_MiraiSafeAreaCopyWith<$Res>
+abstract class _$$MiraiSafeAreaImplCopyWith<$Res>
     implements $MiraiSafeAreaCopyWith<$Res> {
-  factory _$$_MiraiSafeAreaCopyWith(
-          _$_MiraiSafeArea value, $Res Function(_$_MiraiSafeArea) then) =
-      __$$_MiraiSafeAreaCopyWithImpl<$Res>;
+  factory _$$MiraiSafeAreaImplCopyWith(
+          _$MiraiSafeAreaImpl value, $Res Function(_$MiraiSafeAreaImpl) then) =
+      __$$MiraiSafeAreaImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -136,11 +136,11 @@ abstract class _$$_MiraiSafeAreaCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiSafeAreaCopyWithImpl<$Res>
-    extends _$MiraiSafeAreaCopyWithImpl<$Res, _$_MiraiSafeArea>
-    implements _$$_MiraiSafeAreaCopyWith<$Res> {
-  __$$_MiraiSafeAreaCopyWithImpl(
-      _$_MiraiSafeArea _value, $Res Function(_$_MiraiSafeArea) _then)
+class __$$MiraiSafeAreaImplCopyWithImpl<$Res>
+    extends _$MiraiSafeAreaCopyWithImpl<$Res, _$MiraiSafeAreaImpl>
+    implements _$$MiraiSafeAreaImplCopyWith<$Res> {
+  __$$MiraiSafeAreaImplCopyWithImpl(
+      _$MiraiSafeAreaImpl _value, $Res Function(_$MiraiSafeAreaImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -154,7 +154,7 @@ class __$$_MiraiSafeAreaCopyWithImpl<$Res>
     Object? minimum = null,
     Object? maintainBottomViewPadding = null,
   }) {
-    return _then(_$_MiraiSafeArea(
+    return _then(_$MiraiSafeAreaImpl(
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_MiraiSafeAreaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiSafeArea implements _MiraiSafeArea {
-  const _$_MiraiSafeArea(
+class _$MiraiSafeAreaImpl implements _MiraiSafeArea {
+  const _$MiraiSafeAreaImpl(
       {final Map<String, dynamic>? child,
       this.left = true,
       this.top = true,
@@ -200,8 +200,8 @@ class _$_MiraiSafeArea implements _MiraiSafeArea {
       this.maintainBottomViewPadding = false})
       : _child = child;
 
-  factory _$_MiraiSafeArea.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiSafeAreaFromJson(json);
+  factory _$MiraiSafeAreaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiSafeAreaImplFromJson(json);
 
   final Map<String, dynamic>? _child;
   @override
@@ -241,7 +241,7 @@ class _$_MiraiSafeArea implements _MiraiSafeArea {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiSafeArea &&
+            other is _$MiraiSafeAreaImpl &&
             const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.left, left) || other.left == left) &&
             (identical(other.top, top) || other.top == top) &&
@@ -268,12 +268,12 @@ class _$_MiraiSafeArea implements _MiraiSafeArea {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiSafeAreaCopyWith<_$_MiraiSafeArea> get copyWith =>
-      __$$_MiraiSafeAreaCopyWithImpl<_$_MiraiSafeArea>(this, _$identity);
+  _$$MiraiSafeAreaImplCopyWith<_$MiraiSafeAreaImpl> get copyWith =>
+      __$$MiraiSafeAreaImplCopyWithImpl<_$MiraiSafeAreaImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiSafeAreaToJson(
+    return _$$MiraiSafeAreaImplToJson(
       this,
     );
   }
@@ -287,10 +287,10 @@ abstract class _MiraiSafeArea implements MiraiSafeArea {
       final bool right,
       final bool bottom,
       final MiraiEdgeInsets minimum,
-      final bool maintainBottomViewPadding}) = _$_MiraiSafeArea;
+      final bool maintainBottomViewPadding}) = _$MiraiSafeAreaImpl;
 
   factory _MiraiSafeArea.fromJson(Map<String, dynamic> json) =
-      _$_MiraiSafeArea.fromJson;
+      _$MiraiSafeAreaImpl.fromJson;
 
   @override
   Map<String, dynamic>? get child;
@@ -308,6 +308,6 @@ abstract class _MiraiSafeArea implements MiraiSafeArea {
   bool get maintainBottomViewPadding;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiSafeAreaCopyWith<_$_MiraiSafeArea> get copyWith =>
+  _$$MiraiSafeAreaImplCopyWith<_$MiraiSafeAreaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

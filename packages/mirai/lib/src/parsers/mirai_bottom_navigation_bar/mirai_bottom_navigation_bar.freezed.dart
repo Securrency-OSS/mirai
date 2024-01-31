@@ -208,12 +208,12 @@ class _$MiraiBottomNavigationBarCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiBottomNavigationBarCopyWith<$Res>
+abstract class _$$MiraiBottomNavigationBarImplCopyWith<$Res>
     implements $MiraiBottomNavigationBarCopyWith<$Res> {
-  factory _$$_MiraiBottomNavigationBarCopyWith(
-          _$_MiraiBottomNavigationBar value,
-          $Res Function(_$_MiraiBottomNavigationBar) then) =
-      __$$_MiraiBottomNavigationBarCopyWithImpl<$Res>;
+  factory _$$MiraiBottomNavigationBarImplCopyWith(
+          _$MiraiBottomNavigationBarImpl value,
+          $Res Function(_$MiraiBottomNavigationBarImpl) then) =
+      __$$MiraiBottomNavigationBarImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -242,12 +242,13 @@ abstract class _$$_MiraiBottomNavigationBarCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBottomNavigationBarCopyWithImpl<$Res>
+class __$$MiraiBottomNavigationBarImplCopyWithImpl<$Res>
     extends _$MiraiBottomNavigationBarCopyWithImpl<$Res,
-        _$_MiraiBottomNavigationBar>
-    implements _$$_MiraiBottomNavigationBarCopyWith<$Res> {
-  __$$_MiraiBottomNavigationBarCopyWithImpl(_$_MiraiBottomNavigationBar _value,
-      $Res Function(_$_MiraiBottomNavigationBar) _then)
+        _$MiraiBottomNavigationBarImpl>
+    implements _$$MiraiBottomNavigationBarImplCopyWith<$Res> {
+  __$$MiraiBottomNavigationBarImplCopyWithImpl(
+      _$MiraiBottomNavigationBarImpl _value,
+      $Res Function(_$MiraiBottomNavigationBarImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -271,7 +272,7 @@ class __$$_MiraiBottomNavigationBarCopyWithImpl<$Res>
     Object? enableFeedback = freezed,
     Object? landscapeLayout = freezed,
   }) {
-    return _then(_$_MiraiBottomNavigationBar(
+    return _then(_$MiraiBottomNavigationBarImpl(
       items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
@@ -346,8 +347,8 @@ class __$$_MiraiBottomNavigationBarCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
-  const _$_MiraiBottomNavigationBar(
+class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
+  const _$MiraiBottomNavigationBarImpl(
       {required final List<MiraiBottomNavigationBarItem> items,
       this.currentIndex = 0,
       this.elevation,
@@ -367,8 +368,8 @@ class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
       this.landscapeLayout})
       : _items = items;
 
-  factory _$_MiraiBottomNavigationBar.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBottomNavigationBarFromJson(json);
+  factory _$MiraiBottomNavigationBarImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBottomNavigationBarImplFromJson(json);
 
 //Todo: onTap,
   final List<MiraiBottomNavigationBarItem> _items;
@@ -426,7 +427,7 @@ class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBottomNavigationBar &&
+            other is _$MiraiBottomNavigationBarImpl &&
             const DeepCollectionEquality().equals(other._items, _items) &&
             (identical(other.currentIndex, currentIndex) ||
                 other.currentIndex == currentIndex) &&
@@ -487,13 +488,13 @@ class _$_MiraiBottomNavigationBar implements _MiraiBottomNavigationBar {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBottomNavigationBarCopyWith<_$_MiraiBottomNavigationBar>
-      get copyWith => __$$_MiraiBottomNavigationBarCopyWithImpl<
-          _$_MiraiBottomNavigationBar>(this, _$identity);
+  _$$MiraiBottomNavigationBarImplCopyWith<_$MiraiBottomNavigationBarImpl>
+      get copyWith => __$$MiraiBottomNavigationBarImplCopyWithImpl<
+          _$MiraiBottomNavigationBarImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBottomNavigationBarToJson(
+    return _$$MiraiBottomNavigationBarImplToJson(
       this,
     );
   }
@@ -518,10 +519,10 @@ abstract class _MiraiBottomNavigationBar implements MiraiBottomNavigationBar {
           final bool? showUnselectedLabels,
           final bool? enableFeedback,
           final BottomNavigationBarLandscapeLayout? landscapeLayout}) =
-      _$_MiraiBottomNavigationBar;
+      _$MiraiBottomNavigationBarImpl;
 
   factory _MiraiBottomNavigationBar.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBottomNavigationBar.fromJson;
+      _$MiraiBottomNavigationBarImpl.fromJson;
 
   @override //Todo: onTap,
   List<MiraiBottomNavigationBarItem> get items;
@@ -559,6 +560,6 @@ abstract class _MiraiBottomNavigationBar implements MiraiBottomNavigationBar {
   BottomNavigationBarLandscapeLayout? get landscapeLayout;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBottomNavigationBarCopyWith<_$_MiraiBottomNavigationBar>
+  _$$MiraiBottomNavigationBarImplCopyWith<_$MiraiBottomNavigationBarImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,9 @@ part of 'mirai_border_side.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBorderSide _$$_MiraiBorderSideFromJson(Map<String, dynamic> json) =>
-    _$_MiraiBorderSide(
+_$MiraiBorderSideImpl _$$MiraiBorderSideImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiBorderSideImpl(
       color: json['color'] as String?,
       width: (json['width'] as num?)?.toDouble() ?? 0.0,
       strokeAlign: (json['strokeAlign'] as num?)?.toDouble() ?? 0.0,
@@ -16,7 +17,8 @@ _$_MiraiBorderSide _$$_MiraiBorderSideFromJson(Map<String, dynamic> json) =>
               BorderStyle.solid,
     );
 
-Map<String, dynamic> _$$_MiraiBorderSideToJson(_$_MiraiBorderSide instance) =>
+Map<String, dynamic> _$$MiraiBorderSideImplToJson(
+        _$MiraiBorderSideImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'width': instance.width,

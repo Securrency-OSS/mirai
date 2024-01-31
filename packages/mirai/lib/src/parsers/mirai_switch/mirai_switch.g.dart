@@ -6,8 +6,8 @@ part of 'mirai_switch.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiSwitch _$$_MiraiSwitchFromJson(Map<String, dynamic> json) =>
-    _$_MiraiSwitch(
+_$MiraiSwitchImpl _$$MiraiSwitchImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiSwitchImpl(
       switchType:
           $enumDecodeNullable(_$MiraiSwitchTypeEnumMap, json['switchType']) ??
               MiraiSwitchType.material,
@@ -54,7 +54,7 @@ _$_MiraiSwitch _$$_MiraiSwitchFromJson(Map<String, dynamic> json) =>
               json['activeThumbImage'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiSwitchToJson(_$_MiraiSwitch instance) =>
+Map<String, dynamic> _$$MiraiSwitchImplToJson(_$MiraiSwitchImpl instance) =>
     <String, dynamic>{
       'switchType': _$MiraiSwitchTypeEnumMap[instance.switchType]!,
       'initialValue': instance.initialValue,

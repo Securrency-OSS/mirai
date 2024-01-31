@@ -119,11 +119,11 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
 }
 
 /// @nodoc
-abstract class _$$_MiraiNavigateActionCopyWith<$Res>
+abstract class _$$MiraiNavigateActionImplCopyWith<$Res>
     implements $MiraiNavigateActionCopyWith<$Res> {
-  factory _$$_MiraiNavigateActionCopyWith(_$_MiraiNavigateAction value,
-          $Res Function(_$_MiraiNavigateAction) then) =
-      __$$_MiraiNavigateActionCopyWithImpl<$Res>;
+  factory _$$MiraiNavigateActionImplCopyWith(_$MiraiNavigateActionImpl value,
+          $Res Function(_$MiraiNavigateActionImpl) then) =
+      __$$MiraiNavigateActionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -140,11 +140,11 @@ abstract class _$$_MiraiNavigateActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiNavigateActionCopyWithImpl<$Res>
-    extends _$MiraiNavigateActionCopyWithImpl<$Res, _$_MiraiNavigateAction>
-    implements _$$_MiraiNavigateActionCopyWith<$Res> {
-  __$$_MiraiNavigateActionCopyWithImpl(_$_MiraiNavigateAction _value,
-      $Res Function(_$_MiraiNavigateAction) _then)
+class __$$MiraiNavigateActionImplCopyWithImpl<$Res>
+    extends _$MiraiNavigateActionCopyWithImpl<$Res, _$MiraiNavigateActionImpl>
+    implements _$$MiraiNavigateActionImplCopyWith<$Res> {
+  __$$MiraiNavigateActionImplCopyWithImpl(_$MiraiNavigateActionImpl _value,
+      $Res Function(_$MiraiNavigateActionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -158,7 +158,7 @@ class __$$_MiraiNavigateActionCopyWithImpl<$Res>
     Object? result = freezed,
     Object? arguments = freezed,
   }) {
-    return _then(_$_MiraiNavigateAction(
+    return _then(_$MiraiNavigateActionImpl(
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
@@ -193,8 +193,8 @@ class __$$_MiraiNavigateActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiNavigateAction extends _MiraiNavigateAction {
-  _$_MiraiNavigateAction(
+class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
+  _$MiraiNavigateActionImpl(
       {this.request,
       final Map<String, dynamic>? widgetJson,
       this.assetPath,
@@ -207,8 +207,8 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
         _arguments = arguments,
         super._();
 
-  factory _$_MiraiNavigateAction.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiNavigateActionFromJson(json);
+  factory _$MiraiNavigateActionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiNavigateActionImplFromJson(json);
 
   @override
   final MiraiRequest? request;
@@ -257,7 +257,7 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiNavigateAction &&
+            other is _$MiraiNavigateActionImpl &&
             (identical(other.request, request) || other.request == request) &&
             const DeepCollectionEquality()
                 .equals(other._widgetJson, _widgetJson) &&
@@ -287,13 +287,13 @@ class _$_MiraiNavigateAction extends _MiraiNavigateAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiNavigateActionCopyWith<_$_MiraiNavigateAction> get copyWith =>
-      __$$_MiraiNavigateActionCopyWithImpl<_$_MiraiNavigateAction>(
+  _$$MiraiNavigateActionImplCopyWith<_$MiraiNavigateActionImpl> get copyWith =>
+      __$$MiraiNavigateActionImplCopyWithImpl<_$MiraiNavigateActionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiNavigateActionToJson(
+    return _$$MiraiNavigateActionImplToJson(
       this,
     );
   }
@@ -307,11 +307,11 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
       final String? routeName,
       final NavigationStyle? navigationStyle,
       final Map<String, dynamic>? result,
-      final Map<String, dynamic>? arguments}) = _$_MiraiNavigateAction;
+      final Map<String, dynamic>? arguments}) = _$MiraiNavigateActionImpl;
   _MiraiNavigateAction._() : super._();
 
   factory _MiraiNavigateAction.fromJson(Map<String, dynamic> json) =
-      _$_MiraiNavigateAction.fromJson;
+      _$MiraiNavigateActionImpl.fromJson;
 
   @override
   MiraiRequest? get request;
@@ -329,6 +329,6 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
   Map<String, dynamic>? get arguments;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiNavigateActionCopyWith<_$_MiraiNavigateAction> get copyWith =>
+  _$$MiraiNavigateActionImplCopyWith<_$MiraiNavigateActionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

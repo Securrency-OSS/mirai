@@ -6,8 +6,8 @@ part of 'mirai_safe_area.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiSafeArea _$$_MiraiSafeAreaFromJson(Map<String, dynamic> json) =>
-    _$_MiraiSafeArea(
+_$MiraiSafeAreaImpl _$$MiraiSafeAreaImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiSafeAreaImpl(
       child: json['child'] as Map<String, dynamic>?,
       left: json['left'] as bool? ?? true,
       top: json['top'] as bool? ?? true,
@@ -20,7 +20,7 @@ _$_MiraiSafeArea _$$_MiraiSafeAreaFromJson(Map<String, dynamic> json) =>
           json['maintainBottomViewPadding'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiSafeAreaToJson(_$_MiraiSafeArea instance) =>
+Map<String, dynamic> _$$MiraiSafeAreaImplToJson(_$MiraiSafeAreaImpl instance) =>
     <String, dynamic>{
       'child': instance.child,
       'left': instance.left,

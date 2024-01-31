@@ -6,9 +6,9 @@ part of 'mirai_elevated_button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiElevatedButton _$$_MiraiElevatedButtonFromJson(
+_$MiraiElevatedButtonImpl _$$MiraiElevatedButtonImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiElevatedButton(
+    _$MiraiElevatedButtonImpl(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       style: json['style'] == null
           ? null
@@ -19,8 +19,8 @@ _$_MiraiElevatedButton _$$_MiraiElevatedButtonFromJson(
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiElevatedButtonToJson(
-        _$_MiraiElevatedButton instance) =>
+Map<String, dynamic> _$$MiraiElevatedButtonImplToJson(
+        _$MiraiElevatedButtonImpl instance) =>
     <String, dynamic>{
       'onPressed': instance.onPressed,
       'style': instance.style,

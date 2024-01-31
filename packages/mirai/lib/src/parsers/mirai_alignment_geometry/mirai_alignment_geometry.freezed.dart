@@ -70,23 +70,25 @@ class _$MiraiAlignmentGeometryCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiAlignmentGeometryCopyWith<$Res>
+abstract class _$$MiraiAlignmentGeometryImplCopyWith<$Res>
     implements $MiraiAlignmentGeometryCopyWith<$Res> {
-  factory _$$_MiraiAlignmentGeometryCopyWith(_$_MiraiAlignmentGeometry value,
-          $Res Function(_$_MiraiAlignmentGeometry) then) =
-      __$$_MiraiAlignmentGeometryCopyWithImpl<$Res>;
+  factory _$$MiraiAlignmentGeometryImplCopyWith(
+          _$MiraiAlignmentGeometryImpl value,
+          $Res Function(_$MiraiAlignmentGeometryImpl) then) =
+      __$$MiraiAlignmentGeometryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double dx, double dy});
 }
 
 /// @nodoc
-class __$$_MiraiAlignmentGeometryCopyWithImpl<$Res>
+class __$$MiraiAlignmentGeometryImplCopyWithImpl<$Res>
     extends _$MiraiAlignmentGeometryCopyWithImpl<$Res,
-        _$_MiraiAlignmentGeometry>
-    implements _$$_MiraiAlignmentGeometryCopyWith<$Res> {
-  __$$_MiraiAlignmentGeometryCopyWithImpl(_$_MiraiAlignmentGeometry _value,
-      $Res Function(_$_MiraiAlignmentGeometry) _then)
+        _$MiraiAlignmentGeometryImpl>
+    implements _$$MiraiAlignmentGeometryImplCopyWith<$Res> {
+  __$$MiraiAlignmentGeometryImplCopyWithImpl(
+      _$MiraiAlignmentGeometryImpl _value,
+      $Res Function(_$MiraiAlignmentGeometryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +97,7 @@ class __$$_MiraiAlignmentGeometryCopyWithImpl<$Res>
     Object? dx = null,
     Object? dy = null,
   }) {
-    return _then(_$_MiraiAlignmentGeometry(
+    return _then(_$MiraiAlignmentGeometryImpl(
       dx: null == dx
           ? _value.dx
           : dx // ignore: cast_nullable_to_non_nullable
@@ -110,11 +112,11 @@ class __$$_MiraiAlignmentGeometryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAlignmentGeometry implements _MiraiAlignmentGeometry {
-  const _$_MiraiAlignmentGeometry({required this.dx, required this.dy});
+class _$MiraiAlignmentGeometryImpl implements _MiraiAlignmentGeometry {
+  const _$MiraiAlignmentGeometryImpl({required this.dx, required this.dy});
 
-  factory _$_MiraiAlignmentGeometry.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiAlignmentGeometryFromJson(json);
+  factory _$MiraiAlignmentGeometryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiAlignmentGeometryImplFromJson(json);
 
   @override
   final double dx;
@@ -130,7 +132,7 @@ class _$_MiraiAlignmentGeometry implements _MiraiAlignmentGeometry {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiAlignmentGeometry &&
+            other is _$MiraiAlignmentGeometryImpl &&
             (identical(other.dx, dx) || other.dx == dx) &&
             (identical(other.dy, dy) || other.dy == dy));
   }
@@ -142,13 +144,13 @@ class _$_MiraiAlignmentGeometry implements _MiraiAlignmentGeometry {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiAlignmentGeometryCopyWith<_$_MiraiAlignmentGeometry> get copyWith =>
-      __$$_MiraiAlignmentGeometryCopyWithImpl<_$_MiraiAlignmentGeometry>(
-          this, _$identity);
+  _$$MiraiAlignmentGeometryImplCopyWith<_$MiraiAlignmentGeometryImpl>
+      get copyWith => __$$MiraiAlignmentGeometryImplCopyWithImpl<
+          _$MiraiAlignmentGeometryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiAlignmentGeometryToJson(
+    return _$$MiraiAlignmentGeometryImplToJson(
       this,
     );
   }
@@ -157,10 +159,10 @@ class _$_MiraiAlignmentGeometry implements _MiraiAlignmentGeometry {
 abstract class _MiraiAlignmentGeometry implements MiraiAlignmentGeometry {
   const factory _MiraiAlignmentGeometry(
       {required final double dx,
-      required final double dy}) = _$_MiraiAlignmentGeometry;
+      required final double dy}) = _$MiraiAlignmentGeometryImpl;
 
   factory _MiraiAlignmentGeometry.fromJson(Map<String, dynamic> json) =
-      _$_MiraiAlignmentGeometry.fromJson;
+      _$MiraiAlignmentGeometryImpl.fromJson;
 
   @override
   double get dx;
@@ -168,6 +170,6 @@ abstract class _MiraiAlignmentGeometry implements MiraiAlignmentGeometry {
   double get dy;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiAlignmentGeometryCopyWith<_$_MiraiAlignmentGeometry> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MiraiAlignmentGeometryImplCopyWith<_$MiraiAlignmentGeometryImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

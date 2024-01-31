@@ -6,8 +6,8 @@ part of 'mirai_box_shadow.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBoxShadow _$$_MiraiBoxShadowFromJson(Map<String, dynamic> json) =>
-    _$_MiraiBoxShadow(
+_$MiraiBoxShadowImpl _$$MiraiBoxShadowImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiBoxShadowImpl(
       color: json['color'] as String?,
       blurRadius: (json['blurRadius'] as num?)?.toDouble() ?? 0.0,
       offset: json['offset'] == null
@@ -18,7 +18,8 @@ _$_MiraiBoxShadow _$$_MiraiBoxShadowFromJson(Map<String, dynamic> json) =>
           BlurStyle.normal,
     );
 
-Map<String, dynamic> _$$_MiraiBoxShadowToJson(_$_MiraiBoxShadow instance) =>
+Map<String, dynamic> _$$MiraiBoxShadowImplToJson(
+        _$MiraiBoxShadowImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'blurRadius': instance.blurRadius,

@@ -6,8 +6,9 @@ part of 'mirai_dialog_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiDialogAction _$$_MiraiDialogActionFromJson(Map<String, dynamic> json) =>
-    _$_MiraiDialogAction(
+_$MiraiDialogActionImpl _$$MiraiDialogActionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiDialogActionImpl(
       widget: json['widget'] as Map<String, dynamic>?,
       request: json['request'] == null
           ? null
@@ -21,8 +22,8 @@ _$_MiraiDialogAction _$$_MiraiDialogActionFromJson(Map<String, dynamic> json) =>
           _$TraversalEdgeBehaviorEnumMap, json['traversalEdgeBehavior']),
     );
 
-Map<String, dynamic> _$$_MiraiDialogActionToJson(
-        _$_MiraiDialogAction instance) =>
+Map<String, dynamic> _$$MiraiDialogActionImplToJson(
+        _$MiraiDialogActionImpl instance) =>
     <String, dynamic>{
       'widget': instance.widget,
       'request': instance.request,

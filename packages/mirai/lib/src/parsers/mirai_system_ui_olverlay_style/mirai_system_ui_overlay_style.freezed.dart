@@ -122,12 +122,12 @@ class _$MiraiSystemUIOverlayStyleCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiSystemUIOverlayStyleCopyWith<$Res>
+abstract class _$$MiraiSystemUIOverlayStyleImplCopyWith<$Res>
     implements $MiraiSystemUIOverlayStyleCopyWith<$Res> {
-  factory _$$_MiraiSystemUIOverlayStyleCopyWith(
-          _$_MiraiSystemUIOverlayStyle value,
-          $Res Function(_$_MiraiSystemUIOverlayStyle) then) =
-      __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>;
+  factory _$$MiraiSystemUIOverlayStyleImplCopyWith(
+          _$MiraiSystemUIOverlayStyleImpl value,
+          $Res Function(_$MiraiSystemUIOverlayStyleImpl) then) =
+      __$$MiraiSystemUIOverlayStyleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -142,13 +142,13 @@ abstract class _$$_MiraiSystemUIOverlayStyleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>
+class __$$MiraiSystemUIOverlayStyleImplCopyWithImpl<$Res>
     extends _$MiraiSystemUIOverlayStyleCopyWithImpl<$Res,
-        _$_MiraiSystemUIOverlayStyle>
-    implements _$$_MiraiSystemUIOverlayStyleCopyWith<$Res> {
-  __$$_MiraiSystemUIOverlayStyleCopyWithImpl(
-      _$_MiraiSystemUIOverlayStyle _value,
-      $Res Function(_$_MiraiSystemUIOverlayStyle) _then)
+        _$MiraiSystemUIOverlayStyleImpl>
+    implements _$$MiraiSystemUIOverlayStyleImplCopyWith<$Res> {
+  __$$MiraiSystemUIOverlayStyleImplCopyWithImpl(
+      _$MiraiSystemUIOverlayStyleImpl _value,
+      $Res Function(_$MiraiSystemUIOverlayStyleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -163,7 +163,7 @@ class __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>
     Object? statusBarIconBrightness = freezed,
     Object? systemStatusBarContrastEnforced = freezed,
   }) {
-    return _then(_$_MiraiSystemUIOverlayStyle(
+    return _then(_$MiraiSystemUIOverlayStyleImpl(
       systemNavigationBarColor: freezed == systemNavigationBarColor
           ? _value.systemNavigationBarColor
           : systemNavigationBarColor // ignore: cast_nullable_to_non_nullable
@@ -206,8 +206,8 @@ class __$$_MiraiSystemUIOverlayStyleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiSystemUIOverlayStyle implements _MiraiSystemUIOverlayStyle {
-  const _$_MiraiSystemUIOverlayStyle(
+class _$MiraiSystemUIOverlayStyleImpl implements _MiraiSystemUIOverlayStyle {
+  const _$MiraiSystemUIOverlayStyleImpl(
       {this.systemNavigationBarColor,
       this.systemNavigationBarDividerColor,
       this.systemNavigationBarIconBrightness,
@@ -217,8 +217,8 @@ class _$_MiraiSystemUIOverlayStyle implements _MiraiSystemUIOverlayStyle {
       this.statusBarIconBrightness,
       this.systemStatusBarContrastEnforced});
 
-  factory _$_MiraiSystemUIOverlayStyle.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiSystemUIOverlayStyleFromJson(json);
+  factory _$MiraiSystemUIOverlayStyleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiSystemUIOverlayStyleImplFromJson(json);
 
   @override
   final String? systemNavigationBarColor;
@@ -246,7 +246,7 @@ class _$_MiraiSystemUIOverlayStyle implements _MiraiSystemUIOverlayStyle {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiSystemUIOverlayStyle &&
+            other is _$MiraiSystemUIOverlayStyleImpl &&
             (identical(other.systemNavigationBarColor, systemNavigationBarColor) ||
                 other.systemNavigationBarColor == systemNavigationBarColor) &&
             (identical(other.systemNavigationBarDividerColor,
@@ -289,13 +289,13 @@ class _$_MiraiSystemUIOverlayStyle implements _MiraiSystemUIOverlayStyle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiSystemUIOverlayStyleCopyWith<_$_MiraiSystemUIOverlayStyle>
-      get copyWith => __$$_MiraiSystemUIOverlayStyleCopyWithImpl<
-          _$_MiraiSystemUIOverlayStyle>(this, _$identity);
+  _$$MiraiSystemUIOverlayStyleImplCopyWith<_$MiraiSystemUIOverlayStyleImpl>
+      get copyWith => __$$MiraiSystemUIOverlayStyleImplCopyWithImpl<
+          _$MiraiSystemUIOverlayStyleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiSystemUIOverlayStyleToJson(
+    return _$$MiraiSystemUIOverlayStyleImplToJson(
       this,
     );
   }
@@ -311,10 +311,10 @@ abstract class _MiraiSystemUIOverlayStyle implements MiraiSystemUIOverlayStyle {
           final Brightness? statusBarBrightness,
           final Brightness? statusBarIconBrightness,
           final bool? systemStatusBarContrastEnforced}) =
-      _$_MiraiSystemUIOverlayStyle;
+      _$MiraiSystemUIOverlayStyleImpl;
 
   factory _MiraiSystemUIOverlayStyle.fromJson(Map<String, dynamic> json) =
-      _$_MiraiSystemUIOverlayStyle.fromJson;
+      _$MiraiSystemUIOverlayStyleImpl.fromJson;
 
   @override
   String? get systemNavigationBarColor;
@@ -334,6 +334,6 @@ abstract class _MiraiSystemUIOverlayStyle implements MiraiSystemUIOverlayStyle {
   bool? get systemStatusBarContrastEnforced;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiSystemUIOverlayStyleCopyWith<_$_MiraiSystemUIOverlayStyle>
+  _$$MiraiSystemUIOverlayStyleImplCopyWith<_$MiraiSystemUIOverlayStyleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

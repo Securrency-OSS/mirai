@@ -105,11 +105,11 @@ class _$MiraiImageCopyWithImpl<$Res, $Val extends MiraiImage>
 }
 
 /// @nodoc
-abstract class _$$_MiraiImageCopyWith<$Res>
+abstract class _$$MiraiImageImplCopyWith<$Res>
     implements $MiraiImageCopyWith<$Res> {
-  factory _$$_MiraiImageCopyWith(
-          _$_MiraiImage value, $Res Function(_$_MiraiImage) then) =
-      __$$_MiraiImageCopyWithImpl<$Res>;
+  factory _$$MiraiImageImplCopyWith(
+          _$MiraiImageImpl value, $Res Function(_$MiraiImageImpl) then) =
+      __$$MiraiImageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +123,11 @@ abstract class _$$_MiraiImageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiImageCopyWithImpl<$Res>
-    extends _$MiraiImageCopyWithImpl<$Res, _$_MiraiImage>
-    implements _$$_MiraiImageCopyWith<$Res> {
-  __$$_MiraiImageCopyWithImpl(
-      _$_MiraiImage _value, $Res Function(_$_MiraiImage) _then)
+class __$$MiraiImageImplCopyWithImpl<$Res>
+    extends _$MiraiImageCopyWithImpl<$Res, _$MiraiImageImpl>
+    implements _$$MiraiImageImplCopyWith<$Res> {
+  __$$MiraiImageImplCopyWithImpl(
+      _$MiraiImageImpl _value, $Res Function(_$MiraiImageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +141,7 @@ class __$$_MiraiImageCopyWithImpl<$Res>
     Object? height = freezed,
     Object? fit = freezed,
   }) {
-    return _then(_$_MiraiImage(
+    return _then(_$MiraiImageImpl(
       src: null == src
           ? _value.src
           : src // ignore: cast_nullable_to_non_nullable
@@ -176,8 +176,8 @@ class __$$_MiraiImageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiImage implements _MiraiImage {
-  const _$_MiraiImage(
+class _$MiraiImageImpl implements _MiraiImage {
+  const _$MiraiImageImpl(
       {required this.src,
       this.alignment = MiraiAlignment.center,
       this.imageType = MiraiImageType.network,
@@ -186,8 +186,8 @@ class _$_MiraiImage implements _MiraiImage {
       this.height,
       this.fit});
 
-  factory _$_MiraiImage.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiImageFromJson(json);
+  factory _$MiraiImageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiImageImplFromJson(json);
 
   @override
   final String src;
@@ -215,7 +215,7 @@ class _$_MiraiImage implements _MiraiImage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiImage &&
+            other is _$MiraiImageImpl &&
             (identical(other.src, src) || other.src == src) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
@@ -235,12 +235,12 @@ class _$_MiraiImage implements _MiraiImage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiImageCopyWith<_$_MiraiImage> get copyWith =>
-      __$$_MiraiImageCopyWithImpl<_$_MiraiImage>(this, _$identity);
+  _$$MiraiImageImplCopyWith<_$MiraiImageImpl> get copyWith =>
+      __$$MiraiImageImplCopyWithImpl<_$MiraiImageImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiImageToJson(
+    return _$$MiraiImageImplToJson(
       this,
     );
   }
@@ -254,10 +254,10 @@ abstract class _MiraiImage implements MiraiImage {
       final String? color,
       final double? width,
       final double? height,
-      final BoxFit? fit}) = _$_MiraiImage;
+      final BoxFit? fit}) = _$MiraiImageImpl;
 
   factory _MiraiImage.fromJson(Map<String, dynamic> json) =
-      _$_MiraiImage.fromJson;
+      _$MiraiImageImpl.fromJson;
 
   @override
   String get src;
@@ -275,6 +275,6 @@ abstract class _MiraiImage implements MiraiImage {
   BoxFit? get fit;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiImageCopyWith<_$_MiraiImage> get copyWith =>
+  _$$MiraiImageImplCopyWith<_$MiraiImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

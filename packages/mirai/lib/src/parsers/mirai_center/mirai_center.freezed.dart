@@ -75,11 +75,11 @@ class _$MiraiCenterCopyWithImpl<$Res, $Val extends MiraiCenter>
 }
 
 /// @nodoc
-abstract class _$$_MiraiCenterCopyWith<$Res>
+abstract class _$$MiraiCenterImplCopyWith<$Res>
     implements $MiraiCenterCopyWith<$Res> {
-  factory _$$_MiraiCenterCopyWith(
-          _$_MiraiCenter value, $Res Function(_$_MiraiCenter) then) =
-      __$$_MiraiCenterCopyWithImpl<$Res>;
+  factory _$$MiraiCenterImplCopyWith(
+          _$MiraiCenterImpl value, $Res Function(_$MiraiCenterImpl) then) =
+      __$$MiraiCenterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -87,11 +87,11 @@ abstract class _$$_MiraiCenterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiCenterCopyWithImpl<$Res>
-    extends _$MiraiCenterCopyWithImpl<$Res, _$_MiraiCenter>
-    implements _$$_MiraiCenterCopyWith<$Res> {
-  __$$_MiraiCenterCopyWithImpl(
-      _$_MiraiCenter _value, $Res Function(_$_MiraiCenter) _then)
+class __$$MiraiCenterImplCopyWithImpl<$Res>
+    extends _$MiraiCenterCopyWithImpl<$Res, _$MiraiCenterImpl>
+    implements _$$MiraiCenterImplCopyWith<$Res> {
+  __$$MiraiCenterImplCopyWithImpl(
+      _$MiraiCenterImpl _value, $Res Function(_$MiraiCenterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_MiraiCenterCopyWithImpl<$Res>
     Object? heightFactor = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiCenter(
+    return _then(_$MiraiCenterImpl(
       widthFactor: freezed == widthFactor
           ? _value.widthFactor
           : widthFactor // ignore: cast_nullable_to_non_nullable
@@ -120,13 +120,13 @@ class __$$_MiraiCenterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiCenter implements _MiraiCenter {
-  const _$_MiraiCenter(
+class _$MiraiCenterImpl implements _MiraiCenter {
+  const _$MiraiCenterImpl(
       {this.widthFactor, this.heightFactor, final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiCenter.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiCenterFromJson(json);
+  factory _$MiraiCenterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiCenterImplFromJson(json);
 
   @override
   final double? widthFactor;
@@ -151,7 +151,7 @@ class _$_MiraiCenter implements _MiraiCenter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiCenter &&
+            other is _$MiraiCenterImpl &&
             (identical(other.widthFactor, widthFactor) ||
                 other.widthFactor == widthFactor) &&
             (identical(other.heightFactor, heightFactor) ||
@@ -167,12 +167,12 @@ class _$_MiraiCenter implements _MiraiCenter {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiCenterCopyWith<_$_MiraiCenter> get copyWith =>
-      __$$_MiraiCenterCopyWithImpl<_$_MiraiCenter>(this, _$identity);
+  _$$MiraiCenterImplCopyWith<_$MiraiCenterImpl> get copyWith =>
+      __$$MiraiCenterImplCopyWithImpl<_$MiraiCenterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiCenterToJson(
+    return _$$MiraiCenterImplToJson(
       this,
     );
   }
@@ -182,10 +182,10 @@ abstract class _MiraiCenter implements MiraiCenter {
   const factory _MiraiCenter(
       {final double? widthFactor,
       final double? heightFactor,
-      final Map<String, dynamic>? child}) = _$_MiraiCenter;
+      final Map<String, dynamic>? child}) = _$MiraiCenterImpl;
 
   factory _MiraiCenter.fromJson(Map<String, dynamic> json) =
-      _$_MiraiCenter.fromJson;
+      _$MiraiCenterImpl.fromJson;
 
   @override
   double? get widthFactor;
@@ -195,6 +195,6 @@ abstract class _MiraiCenter implements MiraiCenter {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiCenterCopyWith<_$_MiraiCenter> get copyWith =>
+  _$$MiraiCenterImplCopyWith<_$MiraiCenterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

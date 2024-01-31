@@ -6,9 +6,9 @@ part of 'mirai_tab_bar_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTabBarThemeData _$$_MiraiTabBarThemeDataFromJson(
+_$MiraiTabBarThemeDataImpl _$$MiraiTabBarThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiTabBarThemeData(
+    _$MiraiTabBarThemeDataImpl(
       indicator: json['indicator'] == null
           ? null
           : MiraiBoxDecoration.fromJson(
@@ -33,8 +33,8 @@ _$_MiraiTabBarThemeData _$$_MiraiTabBarThemeDataFromJson(
       overlayColor: json['overlayColor'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiTabBarThemeDataToJson(
-        _$_MiraiTabBarThemeData instance) =>
+Map<String, dynamic> _$$MiraiTabBarThemeDataImplToJson(
+        _$MiraiTabBarThemeDataImpl instance) =>
     <String, dynamic>{
       'indicator': instance.indicator,
       'indicatorColor': instance.indicatorColor,

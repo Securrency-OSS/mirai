@@ -6,8 +6,8 @@ part of 'mirai_app_bar.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiAppBar _$$_MiraiAppBarFromJson(Map<String, dynamic> json) =>
-    _$_MiraiAppBar(
+_$MiraiAppBarImpl _$$MiraiAppBarImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiAppBarImpl(
       leading: json['leading'] as Map<String, dynamic>?,
       title: json['title'] as Map<String, dynamic>?,
       titleTextStyle: json['titleTextStyle'] == null
@@ -39,7 +39,7 @@ _$_MiraiAppBar _$$_MiraiAppBarFromJson(Map<String, dynamic> json) =>
           (json['scrolledUnderElevation'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiAppBarToJson(_$_MiraiAppBar instance) =>
+Map<String, dynamic> _$$MiraiAppBarImplToJson(_$MiraiAppBarImpl instance) =>
     <String, dynamic>{
       'leading': instance.leading,
       'title': instance.title,

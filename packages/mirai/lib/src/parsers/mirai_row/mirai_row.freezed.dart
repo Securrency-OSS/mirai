@@ -98,10 +98,11 @@ class _$MiraiRowCopyWithImpl<$Res, $Val extends MiraiRow>
 }
 
 /// @nodoc
-abstract class _$$_MiraiRowCopyWith<$Res> implements $MiraiRowCopyWith<$Res> {
-  factory _$$_MiraiRowCopyWith(
-          _$_MiraiRow value, $Res Function(_$_MiraiRow) then) =
-      __$$_MiraiRowCopyWithImpl<$Res>;
+abstract class _$$MiraiRowImplCopyWith<$Res>
+    implements $MiraiRowCopyWith<$Res> {
+  factory _$$MiraiRowImplCopyWith(
+          _$MiraiRowImpl value, $Res Function(_$MiraiRowImpl) then) =
+      __$$MiraiRowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -114,11 +115,11 @@ abstract class _$$_MiraiRowCopyWith<$Res> implements $MiraiRowCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiraiRowCopyWithImpl<$Res>
-    extends _$MiraiRowCopyWithImpl<$Res, _$_MiraiRow>
-    implements _$$_MiraiRowCopyWith<$Res> {
-  __$$_MiraiRowCopyWithImpl(
-      _$_MiraiRow _value, $Res Function(_$_MiraiRow) _then)
+class __$$MiraiRowImplCopyWithImpl<$Res>
+    extends _$MiraiRowCopyWithImpl<$Res, _$MiraiRowImpl>
+    implements _$$MiraiRowImplCopyWith<$Res> {
+  __$$MiraiRowImplCopyWithImpl(
+      _$MiraiRowImpl _value, $Res Function(_$MiraiRowImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,7 +132,7 @@ class __$$_MiraiRowCopyWithImpl<$Res>
     Object? verticalDirection = null,
     Object? children = null,
   }) {
-    return _then(_$_MiraiRow(
+    return _then(_$MiraiRowImpl(
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
@@ -162,8 +163,8 @@ class __$$_MiraiRowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiRow implements _MiraiRow {
-  const _$_MiraiRow(
+class _$MiraiRowImpl implements _MiraiRow {
+  const _$MiraiRowImpl(
       {this.mainAxisAlignment = MainAxisAlignment.start,
       this.crossAxisAlignment = CrossAxisAlignment.center,
       this.mainAxisSize = MainAxisSize.max,
@@ -172,8 +173,8 @@ class _$_MiraiRow implements _MiraiRow {
       final List<Map<String, dynamic>> children = const []})
       : _children = children;
 
-  factory _$_MiraiRow.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiRowFromJson(json);
+  factory _$MiraiRowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiRowImplFromJson(json);
 
   @override
   @JsonKey()
@@ -207,7 +208,7 @@ class _$_MiraiRow implements _MiraiRow {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiRow &&
+            other is _$MiraiRowImpl &&
             (identical(other.mainAxisAlignment, mainAxisAlignment) ||
                 other.mainAxisAlignment == mainAxisAlignment) &&
             (identical(other.crossAxisAlignment, crossAxisAlignment) ||
@@ -235,12 +236,12 @@ class _$_MiraiRow implements _MiraiRow {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiRowCopyWith<_$_MiraiRow> get copyWith =>
-      __$$_MiraiRowCopyWithImpl<_$_MiraiRow>(this, _$identity);
+  _$$MiraiRowImplCopyWith<_$MiraiRowImpl> get copyWith =>
+      __$$MiraiRowImplCopyWithImpl<_$MiraiRowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiRowToJson(
+    return _$$MiraiRowImplToJson(
       this,
     );
   }
@@ -253,9 +254,10 @@ abstract class _MiraiRow implements MiraiRow {
       final MainAxisSize mainAxisSize,
       final TextDirection? textDirection,
       final VerticalDirection verticalDirection,
-      final List<Map<String, dynamic>> children}) = _$_MiraiRow;
+      final List<Map<String, dynamic>> children}) = _$MiraiRowImpl;
 
-  factory _MiraiRow.fromJson(Map<String, dynamic> json) = _$_MiraiRow.fromJson;
+  factory _MiraiRow.fromJson(Map<String, dynamic> json) =
+      _$MiraiRowImpl.fromJson;
 
   @override
   MainAxisAlignment get mainAxisAlignment;
@@ -271,6 +273,6 @@ abstract class _MiraiRow implements MiraiRow {
   List<Map<String, dynamic>> get children;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiRowCopyWith<_$_MiraiRow> get copyWith =>
+  _$$MiraiRowImplCopyWith<_$MiraiRowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

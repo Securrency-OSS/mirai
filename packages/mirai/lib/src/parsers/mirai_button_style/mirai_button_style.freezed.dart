@@ -274,11 +274,11 @@ class _$MiraiButtonStyleCopyWithImpl<$Res, $Val extends MiraiButtonStyle>
 }
 
 /// @nodoc
-abstract class _$$_MiraiButtonStyleCopyWith<$Res>
+abstract class _$$MiraiButtonStyleImplCopyWith<$Res>
     implements $MiraiButtonStyleCopyWith<$Res> {
-  factory _$$_MiraiButtonStyleCopyWith(
-          _$_MiraiButtonStyle value, $Res Function(_$_MiraiButtonStyle) then) =
-      __$$_MiraiButtonStyleCopyWithImpl<$Res>;
+  factory _$$MiraiButtonStyleImplCopyWith(_$MiraiButtonStyleImpl value,
+          $Res Function(_$MiraiButtonStyleImpl) then) =
+      __$$MiraiButtonStyleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -318,11 +318,11 @@ abstract class _$$_MiraiButtonStyleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiButtonStyleCopyWithImpl<$Res>
-    extends _$MiraiButtonStyleCopyWithImpl<$Res, _$_MiraiButtonStyle>
-    implements _$$_MiraiButtonStyleCopyWith<$Res> {
-  __$$_MiraiButtonStyleCopyWithImpl(
-      _$_MiraiButtonStyle _value, $Res Function(_$_MiraiButtonStyle) _then)
+class __$$MiraiButtonStyleImplCopyWithImpl<$Res>
+    extends _$MiraiButtonStyleCopyWithImpl<$Res, _$MiraiButtonStyleImpl>
+    implements _$$MiraiButtonStyleImplCopyWith<$Res> {
+  __$$MiraiButtonStyleImplCopyWithImpl(_$MiraiButtonStyleImpl _value,
+      $Res Function(_$MiraiButtonStyleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -347,7 +347,7 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
     Object? enableFeedback = freezed,
     Object? iconSize = freezed,
   }) {
-    return _then(_$_MiraiButtonStyle(
+    return _then(_$MiraiButtonStyleImpl(
       foregroundColor: freezed == foregroundColor
           ? _value.foregroundColor
           : foregroundColor // ignore: cast_nullable_to_non_nullable
@@ -426,8 +426,8 @@ class __$$_MiraiButtonStyleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiButtonStyle implements _MiraiButtonStyle {
-  const _$_MiraiButtonStyle(
+class _$MiraiButtonStyleImpl implements _MiraiButtonStyle {
+  const _$MiraiButtonStyleImpl(
       {this.foregroundColor,
       this.backgroundColor,
       this.disabledForegroundColor,
@@ -447,8 +447,8 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
       this.enableFeedback,
       this.iconSize});
 
-  factory _$_MiraiButtonStyle.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiButtonStyleFromJson(json);
+  factory _$MiraiButtonStyleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiButtonStyleImplFromJson(json);
 
   @override
   final String? foregroundColor;
@@ -496,7 +496,7 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiButtonStyle &&
+            other is _$MiraiButtonStyleImpl &&
             (identical(other.foregroundColor, foregroundColor) ||
                 other.foregroundColor == foregroundColor) &&
             (identical(other.backgroundColor, backgroundColor) ||
@@ -560,12 +560,13 @@ class _$_MiraiButtonStyle implements _MiraiButtonStyle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiButtonStyleCopyWith<_$_MiraiButtonStyle> get copyWith =>
-      __$$_MiraiButtonStyleCopyWithImpl<_$_MiraiButtonStyle>(this, _$identity);
+  _$$MiraiButtonStyleImplCopyWith<_$MiraiButtonStyleImpl> get copyWith =>
+      __$$MiraiButtonStyleImplCopyWithImpl<_$MiraiButtonStyleImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiButtonStyleToJson(
+    return _$$MiraiButtonStyleImplToJson(
       this,
     );
   }
@@ -590,10 +591,10 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
       final MiraiBorderSide? side,
       final MiraiRoundedRectangleBorder? shape,
       final bool? enableFeedback,
-      final double? iconSize}) = _$_MiraiButtonStyle;
+      final double? iconSize}) = _$MiraiButtonStyleImpl;
 
   factory _MiraiButtonStyle.fromJson(Map<String, dynamic> json) =
-      _$_MiraiButtonStyle.fromJson;
+      _$MiraiButtonStyleImpl.fromJson;
 
   @override
   String? get foregroundColor;
@@ -633,6 +634,6 @@ abstract class _MiraiButtonStyle implements MiraiButtonStyle {
   double? get iconSize;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiButtonStyleCopyWith<_$_MiraiButtonStyle> get copyWith =>
+  _$$MiraiButtonStyleImplCopyWith<_$MiraiButtonStyleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

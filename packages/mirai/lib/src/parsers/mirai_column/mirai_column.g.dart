@@ -6,8 +6,8 @@ part of 'mirai_column.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiColumn _$$_MiraiColumnFromJson(Map<String, dynamic> json) =>
-    _$_MiraiColumn(
+_$MiraiColumnImpl _$$MiraiColumnImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiColumnImpl(
       mainAxisAlignment: $enumDecodeNullable(
               _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
           MainAxisAlignment.start,
@@ -28,7 +28,7 @@ _$_MiraiColumn _$$_MiraiColumnFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$$_MiraiColumnToJson(_$_MiraiColumn instance) =>
+Map<String, dynamic> _$$MiraiColumnImplToJson(_$MiraiColumnImpl instance) =>
     <String, dynamic>{
       'mainAxisAlignment':
           _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,

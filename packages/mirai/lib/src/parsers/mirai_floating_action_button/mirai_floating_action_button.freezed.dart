@@ -229,12 +229,12 @@ class _$MiraiFloatingActionButtonCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiFloatingActionButtonCopyWith<$Res>
+abstract class _$$MiraiFloatingActionButtonImplCopyWith<$Res>
     implements $MiraiFloatingActionButtonCopyWith<$Res> {
-  factory _$$_MiraiFloatingActionButtonCopyWith(
-          _$_MiraiFloatingActionButton value,
-          $Res Function(_$_MiraiFloatingActionButton) then) =
-      __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>;
+  factory _$$MiraiFloatingActionButtonImplCopyWith(
+          _$MiraiFloatingActionButtonImpl value,
+          $Res Function(_$MiraiFloatingActionButtonImpl) then) =
+      __$$MiraiFloatingActionButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -267,13 +267,13 @@ abstract class _$$_MiraiFloatingActionButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
+class __$$MiraiFloatingActionButtonImplCopyWithImpl<$Res>
     extends _$MiraiFloatingActionButtonCopyWithImpl<$Res,
-        _$_MiraiFloatingActionButton>
-    implements _$$_MiraiFloatingActionButtonCopyWith<$Res> {
-  __$$_MiraiFloatingActionButtonCopyWithImpl(
-      _$_MiraiFloatingActionButton _value,
-      $Res Function(_$_MiraiFloatingActionButton) _then)
+        _$MiraiFloatingActionButtonImpl>
+    implements _$$MiraiFloatingActionButtonImplCopyWith<$Res> {
+  __$$MiraiFloatingActionButtonImplCopyWithImpl(
+      _$MiraiFloatingActionButtonImpl _value,
+      $Res Function(_$MiraiFloatingActionButtonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -301,7 +301,7 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
     Object? heroTag = freezed,
     Object? child = null,
   }) {
-    return _then(_$_MiraiFloatingActionButton(
+    return _then(_$MiraiFloatingActionButtonImpl(
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
@@ -389,8 +389,8 @@ class __$$_MiraiFloatingActionButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
-  const _$_MiraiFloatingActionButton(
+class _$MiraiFloatingActionButtonImpl implements _MiraiFloatingActionButton {
+  const _$MiraiFloatingActionButtonImpl(
       {final Map<String, dynamic>? onPressed,
       this.textStyle,
       this.buttonType = FloatingActionButtonType.small,
@@ -416,8 +416,8 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
         _icon = icon,
         _child = child;
 
-  factory _$_MiraiFloatingActionButton.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFloatingActionButtonFromJson(json);
+  factory _$MiraiFloatingActionButtonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFloatingActionButtonImplFromJson(json);
 
   final Map<String, dynamic>? _onPressed;
   @override
@@ -494,7 +494,7 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFloatingActionButton &&
+            other is _$MiraiFloatingActionButtonImpl &&
             const DeepCollectionEquality()
                 .equals(other._onPressed, _onPressed) &&
             (identical(other.textStyle, textStyle) ||
@@ -566,13 +566,13 @@ class _$_MiraiFloatingActionButton implements _MiraiFloatingActionButton {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFloatingActionButtonCopyWith<_$_MiraiFloatingActionButton>
-      get copyWith => __$$_MiraiFloatingActionButtonCopyWithImpl<
-          _$_MiraiFloatingActionButton>(this, _$identity);
+  _$$MiraiFloatingActionButtonImplCopyWith<_$MiraiFloatingActionButtonImpl>
+      get copyWith => __$$MiraiFloatingActionButtonImplCopyWithImpl<
+          _$MiraiFloatingActionButtonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFloatingActionButtonToJson(
+    return _$$MiraiFloatingActionButtonImplToJson(
       this,
     );
   }
@@ -601,10 +601,10 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
           final String? tooltip,
           final Object? heroTag,
           required final Map<String, dynamic> child}) =
-      _$_MiraiFloatingActionButton;
+      _$MiraiFloatingActionButtonImpl;
 
   factory _MiraiFloatingActionButton.fromJson(Map<String, dynamic> json) =
-      _$_MiraiFloatingActionButton.fromJson;
+      _$MiraiFloatingActionButtonImpl.fromJson;
 
   @override
   Map<String, dynamic>? get onPressed;
@@ -650,6 +650,6 @@ abstract class _MiraiFloatingActionButton implements MiraiFloatingActionButton {
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFloatingActionButtonCopyWith<_$_MiraiFloatingActionButton>
+  _$$MiraiFloatingActionButtonImplCopyWith<_$MiraiFloatingActionButtonImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

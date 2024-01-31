@@ -192,11 +192,11 @@ class _$MiraiDialogThemeCopyWithImpl<$Res, $Val extends MiraiDialogTheme>
 }
 
 /// @nodoc
-abstract class _$$_MiraiDialogThemeCopyWith<$Res>
+abstract class _$$MiraiDialogThemeImplCopyWith<$Res>
     implements $MiraiDialogThemeCopyWith<$Res> {
-  factory _$$_MiraiDialogThemeCopyWith(
-          _$_MiraiDialogTheme value, $Res Function(_$_MiraiDialogTheme) then) =
-      __$$_MiraiDialogThemeCopyWithImpl<$Res>;
+  factory _$$MiraiDialogThemeImplCopyWith(_$MiraiDialogThemeImpl value,
+          $Res Function(_$MiraiDialogThemeImpl) then) =
+      __$$MiraiDialogThemeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -224,11 +224,11 @@ abstract class _$$_MiraiDialogThemeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiDialogThemeCopyWithImpl<$Res>
-    extends _$MiraiDialogThemeCopyWithImpl<$Res, _$_MiraiDialogTheme>
-    implements _$$_MiraiDialogThemeCopyWith<$Res> {
-  __$$_MiraiDialogThemeCopyWithImpl(
-      _$_MiraiDialogTheme _value, $Res Function(_$_MiraiDialogTheme) _then)
+class __$$MiraiDialogThemeImplCopyWithImpl<$Res>
+    extends _$MiraiDialogThemeCopyWithImpl<$Res, _$MiraiDialogThemeImpl>
+    implements _$$MiraiDialogThemeImplCopyWith<$Res> {
+  __$$MiraiDialogThemeImplCopyWithImpl(_$MiraiDialogThemeImpl _value,
+      $Res Function(_$MiraiDialogThemeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -245,7 +245,7 @@ class __$$_MiraiDialogThemeCopyWithImpl<$Res>
     Object? actionsPadding = freezed,
     Object? iconColor = freezed,
   }) {
-    return _then(_$_MiraiDialogTheme(
+    return _then(_$MiraiDialogThemeImpl(
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -292,8 +292,8 @@ class __$$_MiraiDialogThemeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiDialogTheme implements _MiraiDialogTheme {
-  const _$_MiraiDialogTheme(
+class _$MiraiDialogThemeImpl implements _MiraiDialogTheme {
+  const _$MiraiDialogThemeImpl(
       {this.backgroundColor,
       this.elevation,
       this.shadowColor,
@@ -305,8 +305,8 @@ class _$_MiraiDialogTheme implements _MiraiDialogTheme {
       this.actionsPadding,
       this.iconColor});
 
-  factory _$_MiraiDialogTheme.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiDialogThemeFromJson(json);
+  factory _$MiraiDialogThemeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiDialogThemeImplFromJson(json);
 
   @override
   final String? backgroundColor;
@@ -338,7 +338,7 @@ class _$_MiraiDialogTheme implements _MiraiDialogTheme {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiDialogTheme &&
+            other is _$MiraiDialogThemeImpl &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
             (identical(other.elevation, elevation) ||
@@ -378,12 +378,13 @@ class _$_MiraiDialogTheme implements _MiraiDialogTheme {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiDialogThemeCopyWith<_$_MiraiDialogTheme> get copyWith =>
-      __$$_MiraiDialogThemeCopyWithImpl<_$_MiraiDialogTheme>(this, _$identity);
+  _$$MiraiDialogThemeImplCopyWith<_$MiraiDialogThemeImpl> get copyWith =>
+      __$$MiraiDialogThemeImplCopyWithImpl<_$MiraiDialogThemeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiDialogThemeToJson(
+    return _$$MiraiDialogThemeImplToJson(
       this,
     );
   }
@@ -400,10 +401,10 @@ abstract class _MiraiDialogTheme implements MiraiDialogTheme {
       final MiraiTextStyle? titleTextStyle,
       final MiraiTextStyle? contentTextStyle,
       final MiraiEdgeInsets? actionsPadding,
-      final String? iconColor}) = _$_MiraiDialogTheme;
+      final String? iconColor}) = _$MiraiDialogThemeImpl;
 
   factory _MiraiDialogTheme.fromJson(Map<String, dynamic> json) =
-      _$_MiraiDialogTheme.fromJson;
+      _$MiraiDialogThemeImpl.fromJson;
 
   @override
   String? get backgroundColor;
@@ -427,6 +428,6 @@ abstract class _MiraiDialogTheme implements MiraiDialogTheme {
   String? get iconColor;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiDialogThemeCopyWith<_$_MiraiDialogTheme> get copyWith =>
+  _$$MiraiDialogThemeImplCopyWith<_$MiraiDialogThemeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

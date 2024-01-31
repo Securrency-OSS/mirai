@@ -172,11 +172,11 @@ class _$MiraiBoxDecorationCopyWithImpl<$Res, $Val extends MiraiBoxDecoration>
 }
 
 /// @nodoc
-abstract class _$$_MiraiBoxDecorationCopyWith<$Res>
+abstract class _$$MiraiBoxDecorationImplCopyWith<$Res>
     implements $MiraiBoxDecorationCopyWith<$Res> {
-  factory _$$_MiraiBoxDecorationCopyWith(_$_MiraiBoxDecoration value,
-          $Res Function(_$_MiraiBoxDecoration) then) =
-      __$$_MiraiBoxDecorationCopyWithImpl<$Res>;
+  factory _$$MiraiBoxDecorationImplCopyWith(_$MiraiBoxDecorationImpl value,
+          $Res Function(_$MiraiBoxDecorationImpl) then) =
+      __$$MiraiBoxDecorationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -201,11 +201,11 @@ abstract class _$$_MiraiBoxDecorationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBoxDecorationCopyWithImpl<$Res>
-    extends _$MiraiBoxDecorationCopyWithImpl<$Res, _$_MiraiBoxDecoration>
-    implements _$$_MiraiBoxDecorationCopyWith<$Res> {
-  __$$_MiraiBoxDecorationCopyWithImpl(
-      _$_MiraiBoxDecoration _value, $Res Function(_$_MiraiBoxDecoration) _then)
+class __$$MiraiBoxDecorationImplCopyWithImpl<$Res>
+    extends _$MiraiBoxDecorationCopyWithImpl<$Res, _$MiraiBoxDecorationImpl>
+    implements _$$MiraiBoxDecorationImplCopyWith<$Res> {
+  __$$MiraiBoxDecorationImplCopyWithImpl(_$MiraiBoxDecorationImpl _value,
+      $Res Function(_$MiraiBoxDecorationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -221,7 +221,7 @@ class __$$_MiraiBoxDecorationCopyWithImpl<$Res>
     Object? image = freezed,
     Object? gradient = freezed,
   }) {
-    return _then(_$_MiraiBoxDecoration(
+    return _then(_$MiraiBoxDecorationImpl(
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -264,8 +264,8 @@ class __$$_MiraiBoxDecorationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBoxDecoration implements _MiraiBoxDecoration {
-  const _$_MiraiBoxDecoration(
+class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
+  const _$MiraiBoxDecorationImpl(
       {this.color,
       this.borderStyle = BorderStyle.none,
       this.blendMode,
@@ -277,8 +277,8 @@ class _$_MiraiBoxDecoration implements _MiraiBoxDecoration {
       this.gradient})
       : _boxShadow = boxShadow;
 
-  factory _$_MiraiBoxDecoration.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBoxDecorationFromJson(json);
+  factory _$MiraiBoxDecorationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBoxDecorationImplFromJson(json);
 
   @override
   final String? color;
@@ -318,7 +318,7 @@ class _$_MiraiBoxDecoration implements _MiraiBoxDecoration {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBoxDecoration &&
+            other is _$MiraiBoxDecorationImpl &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.borderStyle, borderStyle) ||
                 other.borderStyle == borderStyle) &&
@@ -352,13 +352,13 @@ class _$_MiraiBoxDecoration implements _MiraiBoxDecoration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBoxDecorationCopyWith<_$_MiraiBoxDecoration> get copyWith =>
-      __$$_MiraiBoxDecorationCopyWithImpl<_$_MiraiBoxDecoration>(
+  _$$MiraiBoxDecorationImplCopyWith<_$MiraiBoxDecorationImpl> get copyWith =>
+      __$$MiraiBoxDecorationImplCopyWithImpl<_$MiraiBoxDecorationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBoxDecorationToJson(
+    return _$$MiraiBoxDecorationImplToJson(
       this,
     );
   }
@@ -374,10 +374,10 @@ abstract class _MiraiBoxDecoration implements MiraiBoxDecoration {
       final MiraiBorder? border,
       final MiraiBorderRadius? borderRadius,
       final MiraiContainerImage? image,
-      final MiraiGradient? gradient}) = _$_MiraiBoxDecoration;
+      final MiraiGradient? gradient}) = _$MiraiBoxDecorationImpl;
 
   factory _MiraiBoxDecoration.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBoxDecoration.fromJson;
+      _$MiraiBoxDecorationImpl.fromJson;
 
   @override
   String? get color;
@@ -399,6 +399,6 @@ abstract class _MiraiBoxDecoration implements MiraiBoxDecoration {
   MiraiGradient? get gradient;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBoxDecorationCopyWith<_$_MiraiBoxDecoration> get copyWith =>
+  _$$MiraiBoxDecorationImplCopyWith<_$MiraiBoxDecorationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

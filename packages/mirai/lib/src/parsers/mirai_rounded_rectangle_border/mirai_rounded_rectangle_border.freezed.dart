@@ -99,12 +99,12 @@ class _$MiraiRoundedRectangleBorderCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiRoundedRectangleBorderCopyWith<$Res>
+abstract class _$$MiraiRoundedRectangleBorderImplCopyWith<$Res>
     implements $MiraiRoundedRectangleBorderCopyWith<$Res> {
-  factory _$$_MiraiRoundedRectangleBorderCopyWith(
-          _$_MiraiRoundedRectangleBorder value,
-          $Res Function(_$_MiraiRoundedRectangleBorder) then) =
-      __$$_MiraiRoundedRectangleBorderCopyWithImpl<$Res>;
+  factory _$$MiraiRoundedRectangleBorderImplCopyWith(
+          _$MiraiRoundedRectangleBorderImpl value,
+          $Res Function(_$MiraiRoundedRectangleBorderImpl) then) =
+      __$$MiraiRoundedRectangleBorderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({MiraiBorderSide? side, MiraiBorderRadius? borderRadius});
@@ -116,13 +116,13 @@ abstract class _$$_MiraiRoundedRectangleBorderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiRoundedRectangleBorderCopyWithImpl<$Res>
+class __$$MiraiRoundedRectangleBorderImplCopyWithImpl<$Res>
     extends _$MiraiRoundedRectangleBorderCopyWithImpl<$Res,
-        _$_MiraiRoundedRectangleBorder>
-    implements _$$_MiraiRoundedRectangleBorderCopyWith<$Res> {
-  __$$_MiraiRoundedRectangleBorderCopyWithImpl(
-      _$_MiraiRoundedRectangleBorder _value,
-      $Res Function(_$_MiraiRoundedRectangleBorder) _then)
+        _$MiraiRoundedRectangleBorderImpl>
+    implements _$$MiraiRoundedRectangleBorderImplCopyWith<$Res> {
+  __$$MiraiRoundedRectangleBorderImplCopyWithImpl(
+      _$MiraiRoundedRectangleBorderImpl _value,
+      $Res Function(_$MiraiRoundedRectangleBorderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,7 +131,7 @@ class __$$_MiraiRoundedRectangleBorderCopyWithImpl<$Res>
     Object? side = freezed,
     Object? borderRadius = freezed,
   }) {
-    return _then(_$_MiraiRoundedRectangleBorder(
+    return _then(_$MiraiRoundedRectangleBorderImpl(
       side: freezed == side
           ? _value.side
           : side // ignore: cast_nullable_to_non_nullable
@@ -146,11 +146,13 @@ class __$$_MiraiRoundedRectangleBorderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiRoundedRectangleBorder implements _MiraiRoundedRectangleBorder {
-  const _$_MiraiRoundedRectangleBorder({this.side, this.borderRadius});
+class _$MiraiRoundedRectangleBorderImpl
+    implements _MiraiRoundedRectangleBorder {
+  const _$MiraiRoundedRectangleBorderImpl({this.side, this.borderRadius});
 
-  factory _$_MiraiRoundedRectangleBorder.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiRoundedRectangleBorderFromJson(json);
+  factory _$MiraiRoundedRectangleBorderImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MiraiRoundedRectangleBorderImplFromJson(json);
 
   @override
   final MiraiBorderSide? side;
@@ -166,7 +168,7 @@ class _$_MiraiRoundedRectangleBorder implements _MiraiRoundedRectangleBorder {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiRoundedRectangleBorder &&
+            other is _$MiraiRoundedRectangleBorderImpl &&
             (identical(other.side, side) || other.side == side) &&
             (identical(other.borderRadius, borderRadius) ||
                 other.borderRadius == borderRadius));
@@ -179,13 +181,13 @@ class _$_MiraiRoundedRectangleBorder implements _MiraiRoundedRectangleBorder {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiRoundedRectangleBorderCopyWith<_$_MiraiRoundedRectangleBorder>
-      get copyWith => __$$_MiraiRoundedRectangleBorderCopyWithImpl<
-          _$_MiraiRoundedRectangleBorder>(this, _$identity);
+  _$$MiraiRoundedRectangleBorderImplCopyWith<_$MiraiRoundedRectangleBorderImpl>
+      get copyWith => __$$MiraiRoundedRectangleBorderImplCopyWithImpl<
+          _$MiraiRoundedRectangleBorderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiRoundedRectangleBorderToJson(
+    return _$$MiraiRoundedRectangleBorderImplToJson(
       this,
     );
   }
@@ -194,11 +196,12 @@ class _$_MiraiRoundedRectangleBorder implements _MiraiRoundedRectangleBorder {
 abstract class _MiraiRoundedRectangleBorder
     implements MiraiRoundedRectangleBorder {
   const factory _MiraiRoundedRectangleBorder(
-      {final MiraiBorderSide? side,
-      final MiraiBorderRadius? borderRadius}) = _$_MiraiRoundedRectangleBorder;
+          {final MiraiBorderSide? side,
+          final MiraiBorderRadius? borderRadius}) =
+      _$MiraiRoundedRectangleBorderImpl;
 
   factory _MiraiRoundedRectangleBorder.fromJson(Map<String, dynamic> json) =
-      _$_MiraiRoundedRectangleBorder.fromJson;
+      _$MiraiRoundedRectangleBorderImpl.fromJson;
 
   @override
   MiraiBorderSide? get side;
@@ -206,6 +209,6 @@ abstract class _MiraiRoundedRectangleBorder
   MiraiBorderRadius? get borderRadius;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiRoundedRectangleBorderCopyWith<_$_MiraiRoundedRectangleBorder>
+  _$$MiraiRoundedRectangleBorderImplCopyWith<_$MiraiRoundedRectangleBorderImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

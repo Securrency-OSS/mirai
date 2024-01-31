@@ -6,8 +6,9 @@ part of 'mirai_input_border.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiInputBorder _$$_MiraiInputBorderFromJson(Map<String, dynamic> json) =>
-    _$_MiraiInputBorder(
+_$MiraiInputBorderImpl _$$MiraiInputBorderImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiInputBorderImpl(
       type: $enumDecodeNullable(_$MiraiInputBorderTypeEnumMap, json['type']) ??
           MiraiInputBorderType.underlineInputBorder,
       borderRadius: json['borderRadius'] == null
@@ -22,7 +23,8 @@ _$_MiraiInputBorder _$$_MiraiInputBorderFromJson(Map<String, dynamic> json) =>
           : MiraiGradient.fromJson(json['gradient'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiInputBorderToJson(_$_MiraiInputBorder instance) =>
+Map<String, dynamic> _$$MiraiInputBorderImplToJson(
+        _$MiraiInputBorderImpl instance) =>
     <String, dynamic>{
       'type': _$MiraiInputBorderTypeEnumMap[instance.type]!,
       'borderRadius': instance.borderRadius,

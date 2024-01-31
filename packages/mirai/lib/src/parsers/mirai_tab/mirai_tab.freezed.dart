@@ -104,10 +104,11 @@ class _$MiraiTabCopyWithImpl<$Res, $Val extends MiraiTab>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTabCopyWith<$Res> implements $MiraiTabCopyWith<$Res> {
-  factory _$$_MiraiTabCopyWith(
-          _$_MiraiTab value, $Res Function(_$_MiraiTab) then) =
-      __$$_MiraiTabCopyWithImpl<$Res>;
+abstract class _$$MiraiTabImplCopyWith<$Res>
+    implements $MiraiTabCopyWith<$Res> {
+  factory _$$MiraiTabImplCopyWith(
+          _$MiraiTabImpl value, $Res Function(_$MiraiTabImpl) then) =
+      __$$MiraiTabImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,11 +123,11 @@ abstract class _$$_MiraiTabCopyWith<$Res> implements $MiraiTabCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiraiTabCopyWithImpl<$Res>
-    extends _$MiraiTabCopyWithImpl<$Res, _$_MiraiTab>
-    implements _$$_MiraiTabCopyWith<$Res> {
-  __$$_MiraiTabCopyWithImpl(
-      _$_MiraiTab _value, $Res Function(_$_MiraiTab) _then)
+class __$$MiraiTabImplCopyWithImpl<$Res>
+    extends _$MiraiTabCopyWithImpl<$Res, _$MiraiTabImpl>
+    implements _$$MiraiTabImplCopyWith<$Res> {
+  __$$MiraiTabImplCopyWithImpl(
+      _$MiraiTabImpl _value, $Res Function(_$MiraiTabImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +139,7 @@ class __$$_MiraiTabCopyWithImpl<$Res>
     Object? height = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiTab(
+    return _then(_$MiraiTabImpl(
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -165,8 +166,8 @@ class __$$_MiraiTabCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTab implements _MiraiTab {
-  const _$_MiraiTab(
+class _$MiraiTabImpl implements _MiraiTab {
+  const _$MiraiTabImpl(
       {this.text,
       final Map<String, dynamic>? icon,
       this.iconMargin,
@@ -175,8 +176,8 @@ class _$_MiraiTab implements _MiraiTab {
       : _icon = icon,
         _child = child;
 
-  factory _$_MiraiTab.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTabFromJson(json);
+  factory _$MiraiTabImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTabImplFromJson(json);
 
   @override
   final String? text;
@@ -213,7 +214,7 @@ class _$_MiraiTab implements _MiraiTab {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTab &&
+            other is _$MiraiTabImpl &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality().equals(other._icon, _icon) &&
             (identical(other.iconMargin, iconMargin) ||
@@ -235,12 +236,12 @@ class _$_MiraiTab implements _MiraiTab {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTabCopyWith<_$_MiraiTab> get copyWith =>
-      __$$_MiraiTabCopyWithImpl<_$_MiraiTab>(this, _$identity);
+  _$$MiraiTabImplCopyWith<_$MiraiTabImpl> get copyWith =>
+      __$$MiraiTabImplCopyWithImpl<_$MiraiTabImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTabToJson(
+    return _$$MiraiTabImplToJson(
       this,
     );
   }
@@ -252,9 +253,10 @@ abstract class _MiraiTab implements MiraiTab {
       final Map<String, dynamic>? icon,
       final MiraiEdgeInsets? iconMargin,
       final double? height,
-      final Map<String, dynamic>? child}) = _$_MiraiTab;
+      final Map<String, dynamic>? child}) = _$MiraiTabImpl;
 
-  factory _MiraiTab.fromJson(Map<String, dynamic> json) = _$_MiraiTab.fromJson;
+  factory _MiraiTab.fromJson(Map<String, dynamic> json) =
+      _$MiraiTabImpl.fromJson;
 
   @override
   String? get text;
@@ -268,6 +270,6 @@ abstract class _MiraiTab implements MiraiTab {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTabCopyWith<_$_MiraiTab> get copyWith =>
+  _$$MiraiTabImplCopyWith<_$MiraiTabImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

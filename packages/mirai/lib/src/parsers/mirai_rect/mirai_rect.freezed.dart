@@ -172,10 +172,11 @@ class _$MiraiRectCopyWithImpl<$Res, $Val extends MiraiRect>
 }
 
 /// @nodoc
-abstract class _$$_MiraiRectCopyWith<$Res> implements $MiraiRectCopyWith<$Res> {
-  factory _$$_MiraiRectCopyWith(
-          _$_MiraiRect value, $Res Function(_$_MiraiRect) then) =
-      __$$_MiraiRectCopyWithImpl<$Res>;
+abstract class _$$MiraiRectImplCopyWith<$Res>
+    implements $MiraiRectCopyWith<$Res> {
+  factory _$$MiraiRectImplCopyWith(
+          _$MiraiRectImpl value, $Res Function(_$MiraiRectImpl) then) =
+      __$$MiraiRectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -200,11 +201,11 @@ abstract class _$$_MiraiRectCopyWith<$Res> implements $MiraiRectCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiraiRectCopyWithImpl<$Res>
-    extends _$MiraiRectCopyWithImpl<$Res, _$_MiraiRect>
-    implements _$$_MiraiRectCopyWith<$Res> {
-  __$$_MiraiRectCopyWithImpl(
-      _$_MiraiRect _value, $Res Function(_$_MiraiRect) _then)
+class __$$MiraiRectImplCopyWithImpl<$Res>
+    extends _$MiraiRectCopyWithImpl<$Res, _$MiraiRectImpl>
+    implements _$$MiraiRectImplCopyWith<$Res> {
+  __$$MiraiRectImplCopyWithImpl(
+      _$MiraiRectImpl _value, $Res Function(_$MiraiRectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -222,7 +223,7 @@ class __$$_MiraiRectCopyWithImpl<$Res>
     Object? bottom = freezed,
     Object? radius = freezed,
   }) {
-    return _then(_$_MiraiRect(
+    return _then(_$MiraiRectImpl(
       rectType: null == rectType
           ? _value.rectType
           : rectType // ignore: cast_nullable_to_non_nullable
@@ -273,8 +274,8 @@ class __$$_MiraiRectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiRect implements _MiraiRect {
-  const _$_MiraiRect(
+class _$MiraiRectImpl implements _MiraiRect {
+  const _$MiraiRectImpl(
       {required this.rectType,
       this.center,
       this.a,
@@ -287,8 +288,8 @@ class _$_MiraiRect implements _MiraiRect {
       this.bottom,
       this.radius});
 
-  factory _$_MiraiRect.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiRectFromJson(json);
+  factory _$MiraiRectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiRectImplFromJson(json);
 
   @override
   final MiraiRectType rectType;
@@ -322,7 +323,7 @@ class _$_MiraiRect implements _MiraiRect {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiRect &&
+            other is _$MiraiRectImpl &&
             (identical(other.rectType, rectType) ||
                 other.rectType == rectType) &&
             (identical(other.center, center) || other.center == center) &&
@@ -345,12 +346,12 @@ class _$_MiraiRect implements _MiraiRect {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiRectCopyWith<_$_MiraiRect> get copyWith =>
-      __$$_MiraiRectCopyWithImpl<_$_MiraiRect>(this, _$identity);
+  _$$MiraiRectImplCopyWith<_$MiraiRectImpl> get copyWith =>
+      __$$MiraiRectImplCopyWithImpl<_$MiraiRectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiRectToJson(
+    return _$$MiraiRectImplToJson(
       this,
     );
   }
@@ -368,10 +369,10 @@ abstract class _MiraiRect implements MiraiRect {
       final double? top,
       final double? right,
       final double? bottom,
-      final double? radius}) = _$_MiraiRect;
+      final double? radius}) = _$MiraiRectImpl;
 
   factory _MiraiRect.fromJson(Map<String, dynamic> json) =
-      _$_MiraiRect.fromJson;
+      _$MiraiRectImpl.fromJson;
 
   @override
   MiraiRectType get rectType;
@@ -397,6 +398,6 @@ abstract class _MiraiRect implements MiraiRect {
   double? get radius;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiRectCopyWith<_$_MiraiRect> get copyWith =>
+  _$$MiraiRectImplCopyWith<_$MiraiRectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

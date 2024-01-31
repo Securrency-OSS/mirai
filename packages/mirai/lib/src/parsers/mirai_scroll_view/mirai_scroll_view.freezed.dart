@@ -141,11 +141,11 @@ class _$MiraiScrollViewCopyWithImpl<$Res, $Val extends MiraiScrollView>
 }
 
 /// @nodoc
-abstract class _$$_MiraiScrollViewCopyWith<$Res>
+abstract class _$$MiraiScrollViewImplCopyWith<$Res>
     implements $MiraiScrollViewCopyWith<$Res> {
-  factory _$$_MiraiScrollViewCopyWith(
-          _$_MiraiScrollView value, $Res Function(_$_MiraiScrollView) then) =
-      __$$_MiraiScrollViewCopyWithImpl<$Res>;
+  factory _$$MiraiScrollViewImplCopyWith(_$MiraiScrollViewImpl value,
+          $Res Function(_$MiraiScrollViewImpl) then) =
+      __$$MiraiScrollViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -165,11 +165,11 @@ abstract class _$$_MiraiScrollViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiScrollViewCopyWithImpl<$Res>
-    extends _$MiraiScrollViewCopyWithImpl<$Res, _$_MiraiScrollView>
-    implements _$$_MiraiScrollViewCopyWith<$Res> {
-  __$$_MiraiScrollViewCopyWithImpl(
-      _$_MiraiScrollView _value, $Res Function(_$_MiraiScrollView) _then)
+class __$$MiraiScrollViewImplCopyWithImpl<$Res>
+    extends _$MiraiScrollViewCopyWithImpl<$Res, _$MiraiScrollViewImpl>
+    implements _$$MiraiScrollViewImplCopyWith<$Res> {
+  __$$MiraiScrollViewImplCopyWithImpl(
+      _$MiraiScrollViewImpl _value, $Res Function(_$MiraiScrollViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -186,7 +186,7 @@ class __$$_MiraiScrollViewCopyWithImpl<$Res>
     Object? restorationId = freezed,
     Object? keyboardDismissBehavior = null,
   }) {
-    return _then(_$_MiraiScrollView(
+    return _then(_$MiraiScrollViewImpl(
       scrollDirection: null == scrollDirection
           ? _value.scrollDirection
           : scrollDirection // ignore: cast_nullable_to_non_nullable
@@ -233,8 +233,8 @@ class __$$_MiraiScrollViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiScrollView implements _MiraiScrollView {
-  const _$_MiraiScrollView(
+class _$MiraiScrollViewImpl implements _MiraiScrollView {
+  const _$MiraiScrollViewImpl(
       {this.scrollDirection = Axis.vertical,
       this.reverse = false,
       this.padding,
@@ -247,8 +247,8 @@ class _$_MiraiScrollView implements _MiraiScrollView {
       this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual})
       : _child = child;
 
-  factory _$_MiraiScrollView.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiScrollViewFromJson(json);
+  factory _$MiraiScrollViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiScrollViewImplFromJson(json);
 
   @override
   @JsonKey()
@@ -293,7 +293,7 @@ class _$_MiraiScrollView implements _MiraiScrollView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiScrollView &&
+            other is _$MiraiScrollViewImpl &&
             (identical(other.scrollDirection, scrollDirection) ||
                 other.scrollDirection == scrollDirection) &&
             (identical(other.reverse, reverse) || other.reverse == reverse) &&
@@ -330,12 +330,13 @@ class _$_MiraiScrollView implements _MiraiScrollView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiScrollViewCopyWith<_$_MiraiScrollView> get copyWith =>
-      __$$_MiraiScrollViewCopyWithImpl<_$_MiraiScrollView>(this, _$identity);
+  _$$MiraiScrollViewImplCopyWith<_$MiraiScrollViewImpl> get copyWith =>
+      __$$MiraiScrollViewImplCopyWithImpl<_$MiraiScrollViewImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiScrollViewToJson(
+    return _$$MiraiScrollViewImplToJson(
       this,
     );
   }
@@ -353,10 +354,10 @@ abstract class _MiraiScrollView implements MiraiScrollView {
           final Clip clipBehavior,
           final String? restorationId,
           final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior}) =
-      _$_MiraiScrollView;
+      _$MiraiScrollViewImpl;
 
   factory _MiraiScrollView.fromJson(Map<String, dynamic> json) =
-      _$_MiraiScrollView.fromJson;
+      _$MiraiScrollViewImpl.fromJson;
 
   @override
   Axis get scrollDirection;
@@ -380,6 +381,6 @@ abstract class _MiraiScrollView implements MiraiScrollView {
   ScrollViewKeyboardDismissBehavior get keyboardDismissBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiScrollViewCopyWith<_$_MiraiScrollView> get copyWith =>
+  _$$MiraiScrollViewImplCopyWith<_$MiraiScrollViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

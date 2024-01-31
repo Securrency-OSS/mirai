@@ -6,9 +6,9 @@ part of 'mirai_navigation_bar_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiNavigationBarThemeData _$$_MiraiNavigationBarThemeDataFromJson(
+_$MiraiNavigationBarThemeDataImpl _$$MiraiNavigationBarThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiNavigationBarThemeData(
+    _$MiraiNavigationBarThemeDataImpl(
       height: (json['height'] as num?)?.toDouble(),
       backgroundColor: json['backgroundColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
@@ -31,8 +31,8 @@ _$_MiraiNavigationBarThemeData _$$_MiraiNavigationBarThemeDataFromJson(
           _$NavigationDestinationLabelBehaviorEnumMap, json['labelBehavior']),
     );
 
-Map<String, dynamic> _$$_MiraiNavigationBarThemeDataToJson(
-        _$_MiraiNavigationBarThemeData instance) =>
+Map<String, dynamic> _$$MiraiNavigationBarThemeDataImplToJson(
+        _$MiraiNavigationBarThemeDataImpl instance) =>
     <String, dynamic>{
       'height': instance.height,
       'backgroundColor': instance.backgroundColor,

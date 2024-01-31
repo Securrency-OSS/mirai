@@ -20,18 +20,18 @@ MiraiPageView _$MiraiPageViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiPageView {
-  bool get allowImplicitScrolling => throw _privateConstructorUsedError;
-  Clip get clipBehavior => throw _privateConstructorUsedError;
-  DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
-  int get initialPage => throw _privateConstructorUsedError;
-  dynamic get keepPage => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get onPageChanged => throw _privateConstructorUsedError;
+  Axis get scrollDirection => throw _privateConstructorUsedError;
+  bool get reverse => throw _privateConstructorUsedError;
   MiraiScrollPhysics? get physics => throw _privateConstructorUsedError;
   bool get pageSnapping => throw _privateConstructorUsedError;
-  bool get padEnds => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onPageChanged => throw _privateConstructorUsedError;
+  DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
+  bool get allowImplicitScrolling => throw _privateConstructorUsedError;
   String? get restorationId => throw _privateConstructorUsedError;
-  bool get reverse => throw _privateConstructorUsedError;
-  Axis get scrollDirection => throw _privateConstructorUsedError;
+  Clip get clipBehavior => throw _privateConstructorUsedError;
+  bool get padEnds => throw _privateConstructorUsedError;
+  int get initialPage => throw _privateConstructorUsedError;
+  dynamic get keepPage => throw _privateConstructorUsedError;
   double get viewportFraction => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get children => throw _privateConstructorUsedError;
 
@@ -48,18 +48,18 @@ abstract class $MiraiPageViewCopyWith<$Res> {
       _$MiraiPageViewCopyWithImpl<$Res, MiraiPageView>;
   @useResult
   $Res call(
-      {bool allowImplicitScrolling,
-      Clip clipBehavior,
-      DragStartBehavior dragStartBehavior,
-      int initialPage,
-      dynamic keepPage,
-      Map<String, dynamic>? onPageChanged,
+      {Axis scrollDirection,
+      bool reverse,
       MiraiScrollPhysics? physics,
       bool pageSnapping,
-      bool padEnds,
+      Map<String, dynamic>? onPageChanged,
+      DragStartBehavior dragStartBehavior,
+      bool allowImplicitScrolling,
       String? restorationId,
-      bool reverse,
-      Axis scrollDirection,
+      Clip clipBehavior,
+      bool padEnds,
+      int initialPage,
+      dynamic keepPage,
       double viewportFraction,
       List<Map<String, dynamic>> children});
 }
@@ -77,46 +77,30 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? allowImplicitScrolling = null,
-    Object? clipBehavior = null,
-    Object? dragStartBehavior = null,
-    Object? initialPage = null,
-    Object? keepPage = freezed,
-    Object? onPageChanged = freezed,
+    Object? scrollDirection = null,
+    Object? reverse = null,
     Object? physics = freezed,
     Object? pageSnapping = null,
-    Object? padEnds = null,
+    Object? onPageChanged = freezed,
+    Object? dragStartBehavior = null,
+    Object? allowImplicitScrolling = null,
     Object? restorationId = freezed,
-    Object? reverse = null,
-    Object? scrollDirection = null,
+    Object? clipBehavior = null,
+    Object? padEnds = null,
+    Object? initialPage = null,
+    Object? keepPage = freezed,
     Object? viewportFraction = null,
     Object? children = null,
   }) {
     return _then(_value.copyWith(
-      allowImplicitScrolling: null == allowImplicitScrolling
-          ? _value.allowImplicitScrolling
-          : allowImplicitScrolling // ignore: cast_nullable_to_non_nullable
+      scrollDirection: null == scrollDirection
+          ? _value.scrollDirection
+          : scrollDirection // ignore: cast_nullable_to_non_nullable
+              as Axis,
+      reverse: null == reverse
+          ? _value.reverse
+          : reverse // ignore: cast_nullable_to_non_nullable
               as bool,
-      clipBehavior: null == clipBehavior
-          ? _value.clipBehavior
-          : clipBehavior // ignore: cast_nullable_to_non_nullable
-              as Clip,
-      dragStartBehavior: null == dragStartBehavior
-          ? _value.dragStartBehavior
-          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
-              as DragStartBehavior,
-      initialPage: null == initialPage
-          ? _value.initialPage
-          : initialPage // ignore: cast_nullable_to_non_nullable
-              as int,
-      keepPage: freezed == keepPage
-          ? _value.keepPage
-          : keepPage // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      onPageChanged: freezed == onPageChanged
-          ? _value.onPageChanged
-          : onPageChanged // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
@@ -125,22 +109,38 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
           ? _value.pageSnapping
           : pageSnapping // ignore: cast_nullable_to_non_nullable
               as bool,
-      padEnds: null == padEnds
-          ? _value.padEnds
-          : padEnds // ignore: cast_nullable_to_non_nullable
+      onPageChanged: freezed == onPageChanged
+          ? _value.onPageChanged
+          : onPageChanged // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      dragStartBehavior: null == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as DragStartBehavior,
+      allowImplicitScrolling: null == allowImplicitScrolling
+          ? _value.allowImplicitScrolling
+          : allowImplicitScrolling // ignore: cast_nullable_to_non_nullable
               as bool,
       restorationId: freezed == restorationId
           ? _value.restorationId
           : restorationId // ignore: cast_nullable_to_non_nullable
               as String?,
-      reverse: null == reverse
-          ? _value.reverse
-          : reverse // ignore: cast_nullable_to_non_nullable
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      padEnds: null == padEnds
+          ? _value.padEnds
+          : padEnds // ignore: cast_nullable_to_non_nullable
               as bool,
-      scrollDirection: null == scrollDirection
-          ? _value.scrollDirection
-          : scrollDirection // ignore: cast_nullable_to_non_nullable
-              as Axis,
+      initialPage: null == initialPage
+          ? _value.initialPage
+          : initialPage // ignore: cast_nullable_to_non_nullable
+              as int,
+      keepPage: freezed == keepPage
+          ? _value.keepPage
+          : keepPage // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       viewportFraction: null == viewportFraction
           ? _value.viewportFraction
           : viewportFraction // ignore: cast_nullable_to_non_nullable
@@ -162,18 +162,18 @@ abstract class _$$MiraiPageViewImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool allowImplicitScrolling,
-      Clip clipBehavior,
-      DragStartBehavior dragStartBehavior,
-      int initialPage,
-      dynamic keepPage,
-      Map<String, dynamic>? onPageChanged,
+      {Axis scrollDirection,
+      bool reverse,
       MiraiScrollPhysics? physics,
       bool pageSnapping,
-      bool padEnds,
+      Map<String, dynamic>? onPageChanged,
+      DragStartBehavior dragStartBehavior,
+      bool allowImplicitScrolling,
       String? restorationId,
-      bool reverse,
-      Axis scrollDirection,
+      Clip clipBehavior,
+      bool padEnds,
+      int initialPage,
+      dynamic keepPage,
       double viewportFraction,
       List<Map<String, dynamic>> children});
 }
@@ -189,43 +189,30 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? allowImplicitScrolling = null,
-    Object? clipBehavior = null,
-    Object? dragStartBehavior = null,
-    Object? initialPage = null,
-    Object? keepPage = freezed,
-    Object? onPageChanged = freezed,
+    Object? scrollDirection = null,
+    Object? reverse = null,
     Object? physics = freezed,
     Object? pageSnapping = null,
-    Object? padEnds = null,
+    Object? onPageChanged = freezed,
+    Object? dragStartBehavior = null,
+    Object? allowImplicitScrolling = null,
     Object? restorationId = freezed,
-    Object? reverse = null,
-    Object? scrollDirection = null,
+    Object? clipBehavior = null,
+    Object? padEnds = null,
+    Object? initialPage = null,
+    Object? keepPage = freezed,
     Object? viewportFraction = null,
     Object? children = null,
   }) {
     return _then(_$MiraiPageViewImpl(
-      allowImplicitScrolling: null == allowImplicitScrolling
-          ? _value.allowImplicitScrolling
-          : allowImplicitScrolling // ignore: cast_nullable_to_non_nullable
+      scrollDirection: null == scrollDirection
+          ? _value.scrollDirection
+          : scrollDirection // ignore: cast_nullable_to_non_nullable
+              as Axis,
+      reverse: null == reverse
+          ? _value.reverse
+          : reverse // ignore: cast_nullable_to_non_nullable
               as bool,
-      clipBehavior: null == clipBehavior
-          ? _value.clipBehavior
-          : clipBehavior // ignore: cast_nullable_to_non_nullable
-              as Clip,
-      dragStartBehavior: null == dragStartBehavior
-          ? _value.dragStartBehavior
-          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
-              as DragStartBehavior,
-      initialPage: null == initialPage
-          ? _value.initialPage
-          : initialPage // ignore: cast_nullable_to_non_nullable
-              as int,
-      keepPage: freezed == keepPage ? _value.keepPage! : keepPage,
-      onPageChanged: freezed == onPageChanged
-          ? _value._onPageChanged
-          : onPageChanged // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       physics: freezed == physics
           ? _value.physics
           : physics // ignore: cast_nullable_to_non_nullable
@@ -234,22 +221,35 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
           ? _value.pageSnapping
           : pageSnapping // ignore: cast_nullable_to_non_nullable
               as bool,
-      padEnds: null == padEnds
-          ? _value.padEnds
-          : padEnds // ignore: cast_nullable_to_non_nullable
+      onPageChanged: freezed == onPageChanged
+          ? _value._onPageChanged
+          : onPageChanged // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      dragStartBehavior: null == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as DragStartBehavior,
+      allowImplicitScrolling: null == allowImplicitScrolling
+          ? _value.allowImplicitScrolling
+          : allowImplicitScrolling // ignore: cast_nullable_to_non_nullable
               as bool,
       restorationId: freezed == restorationId
           ? _value.restorationId
           : restorationId // ignore: cast_nullable_to_non_nullable
               as String?,
-      reverse: null == reverse
-          ? _value.reverse
-          : reverse // ignore: cast_nullable_to_non_nullable
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      padEnds: null == padEnds
+          ? _value.padEnds
+          : padEnds // ignore: cast_nullable_to_non_nullable
               as bool,
-      scrollDirection: null == scrollDirection
-          ? _value.scrollDirection
-          : scrollDirection // ignore: cast_nullable_to_non_nullable
-              as Axis,
+      initialPage: null == initialPage
+          ? _value.initialPage
+          : initialPage // ignore: cast_nullable_to_non_nullable
+              as int,
+      keepPage: freezed == keepPage ? _value.keepPage! : keepPage,
       viewportFraction: null == viewportFraction
           ? _value.viewportFraction
           : viewportFraction // ignore: cast_nullable_to_non_nullable
@@ -266,18 +266,18 @@ class __$$MiraiPageViewImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MiraiPageViewImpl implements _MiraiPageView {
   const _$MiraiPageViewImpl(
-      {this.allowImplicitScrolling = false,
-      this.clipBehavior = Clip.hardEdge,
-      this.dragStartBehavior = DragStartBehavior.start,
-      this.initialPage = 0,
-      this.keepPage = true,
-      final Map<String, dynamic>? onPageChanged,
+      {this.scrollDirection = Axis.horizontal,
+      this.reverse = false,
       this.physics,
       this.pageSnapping = true,
-      this.padEnds = true,
+      final Map<String, dynamic>? onPageChanged,
+      this.dragStartBehavior = DragStartBehavior.start,
+      this.allowImplicitScrolling = false,
       this.restorationId,
-      this.reverse = false,
-      this.scrollDirection = Axis.horizontal,
+      this.clipBehavior = Clip.hardEdge,
+      this.padEnds = true,
+      this.initialPage = 0,
+      this.keepPage = true,
       this.viewportFraction = 1.0,
       final List<Map<String, dynamic>> children = const []})
       : _onPageChanged = onPageChanged,
@@ -288,19 +288,15 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
 
   @override
   @JsonKey()
-  final bool allowImplicitScrolling;
+  final Axis scrollDirection;
   @override
   @JsonKey()
-  final Clip clipBehavior;
+  final bool reverse;
+  @override
+  final MiraiScrollPhysics? physics;
   @override
   @JsonKey()
-  final DragStartBehavior dragStartBehavior;
-  @override
-  @JsonKey()
-  final int initialPage;
-  @override
-  @JsonKey()
-  final dynamic keepPage;
+  final bool pageSnapping;
   final Map<String, dynamic>? _onPageChanged;
   @override
   Map<String, dynamic>? get onPageChanged {
@@ -312,21 +308,25 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
   }
 
   @override
-  final MiraiScrollPhysics? physics;
+  @JsonKey()
+  final DragStartBehavior dragStartBehavior;
   @override
   @JsonKey()
-  final bool pageSnapping;
-  @override
-  @JsonKey()
-  final bool padEnds;
+  final bool allowImplicitScrolling;
   @override
   final String? restorationId;
   @override
   @JsonKey()
-  final bool reverse;
+  final Clip clipBehavior;
   @override
   @JsonKey()
-  final Axis scrollDirection;
+  final bool padEnds;
+  @override
+  @JsonKey()
+  final int initialPage;
+  @override
+  @JsonKey()
+  final dynamic keepPage;
   @override
   @JsonKey()
   final double viewportFraction;
@@ -341,7 +341,7 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
 
   @override
   String toString() {
-    return 'MiraiPageView(allowImplicitScrolling: $allowImplicitScrolling, clipBehavior: $clipBehavior, dragStartBehavior: $dragStartBehavior, initialPage: $initialPage, keepPage: $keepPage, onPageChanged: $onPageChanged, physics: $physics, pageSnapping: $pageSnapping, padEnds: $padEnds, restorationId: $restorationId, reverse: $reverse, scrollDirection: $scrollDirection, viewportFraction: $viewportFraction, children: $children)';
+    return 'MiraiPageView(scrollDirection: $scrollDirection, reverse: $reverse, physics: $physics, pageSnapping: $pageSnapping, onPageChanged: $onPageChanged, dragStartBehavior: $dragStartBehavior, allowImplicitScrolling: $allowImplicitScrolling, restorationId: $restorationId, clipBehavior: $clipBehavior, padEnds: $padEnds, initialPage: $initialPage, keepPage: $keepPage, viewportFraction: $viewportFraction, children: $children)';
   }
 
   @override
@@ -349,26 +349,26 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiPageViewImpl &&
-            (identical(other.allowImplicitScrolling, allowImplicitScrolling) ||
-                other.allowImplicitScrolling == allowImplicitScrolling) &&
-            (identical(other.clipBehavior, clipBehavior) ||
-                other.clipBehavior == clipBehavior) &&
-            (identical(other.dragStartBehavior, dragStartBehavior) ||
-                other.dragStartBehavior == dragStartBehavior) &&
-            (identical(other.initialPage, initialPage) ||
-                other.initialPage == initialPage) &&
-            const DeepCollectionEquality().equals(other.keepPage, keepPage) &&
-            const DeepCollectionEquality()
-                .equals(other._onPageChanged, _onPageChanged) &&
+            (identical(other.scrollDirection, scrollDirection) ||
+                other.scrollDirection == scrollDirection) &&
+            (identical(other.reverse, reverse) || other.reverse == reverse) &&
             (identical(other.physics, physics) || other.physics == physics) &&
             (identical(other.pageSnapping, pageSnapping) ||
                 other.pageSnapping == pageSnapping) &&
-            (identical(other.padEnds, padEnds) || other.padEnds == padEnds) &&
+            const DeepCollectionEquality()
+                .equals(other._onPageChanged, _onPageChanged) &&
+            (identical(other.dragStartBehavior, dragStartBehavior) ||
+                other.dragStartBehavior == dragStartBehavior) &&
+            (identical(other.allowImplicitScrolling, allowImplicitScrolling) ||
+                other.allowImplicitScrolling == allowImplicitScrolling) &&
             (identical(other.restorationId, restorationId) ||
                 other.restorationId == restorationId) &&
-            (identical(other.reverse, reverse) || other.reverse == reverse) &&
-            (identical(other.scrollDirection, scrollDirection) ||
-                other.scrollDirection == scrollDirection) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
+            (identical(other.padEnds, padEnds) || other.padEnds == padEnds) &&
+            (identical(other.initialPage, initialPage) ||
+                other.initialPage == initialPage) &&
+            const DeepCollectionEquality().equals(other.keepPage, keepPage) &&
             (identical(other.viewportFraction, viewportFraction) ||
                 other.viewportFraction == viewportFraction) &&
             const DeepCollectionEquality().equals(other._children, _children));
@@ -378,18 +378,18 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      allowImplicitScrolling,
-      clipBehavior,
-      dragStartBehavior,
-      initialPage,
-      const DeepCollectionEquality().hash(keepPage),
-      const DeepCollectionEquality().hash(_onPageChanged),
+      scrollDirection,
+      reverse,
       physics,
       pageSnapping,
-      padEnds,
+      const DeepCollectionEquality().hash(_onPageChanged),
+      dragStartBehavior,
+      allowImplicitScrolling,
       restorationId,
-      reverse,
-      scrollDirection,
+      clipBehavior,
+      padEnds,
+      initialPage,
+      const DeepCollectionEquality().hash(keepPage),
       viewportFraction,
       const DeepCollectionEquality().hash(_children));
 
@@ -409,18 +409,18 @@ class _$MiraiPageViewImpl implements _MiraiPageView {
 
 abstract class _MiraiPageView implements MiraiPageView {
   const factory _MiraiPageView(
-      {final bool allowImplicitScrolling,
-      final Clip clipBehavior,
-      final DragStartBehavior dragStartBehavior,
-      final int initialPage,
-      final dynamic keepPage,
-      final Map<String, dynamic>? onPageChanged,
+      {final Axis scrollDirection,
+      final bool reverse,
       final MiraiScrollPhysics? physics,
       final bool pageSnapping,
-      final bool padEnds,
+      final Map<String, dynamic>? onPageChanged,
+      final DragStartBehavior dragStartBehavior,
+      final bool allowImplicitScrolling,
       final String? restorationId,
-      final bool reverse,
-      final Axis scrollDirection,
+      final Clip clipBehavior,
+      final bool padEnds,
+      final int initialPage,
+      final dynamic keepPage,
       final double viewportFraction,
       final List<Map<String, dynamic>> children}) = _$MiraiPageViewImpl;
 
@@ -428,29 +428,29 @@ abstract class _MiraiPageView implements MiraiPageView {
       _$MiraiPageViewImpl.fromJson;
 
   @override
-  bool get allowImplicitScrolling;
+  Axis get scrollDirection;
   @override
-  Clip get clipBehavior;
-  @override
-  DragStartBehavior get dragStartBehavior;
-  @override
-  int get initialPage;
-  @override
-  dynamic get keepPage;
-  @override
-  Map<String, dynamic>? get onPageChanged;
+  bool get reverse;
   @override
   MiraiScrollPhysics? get physics;
   @override
   bool get pageSnapping;
   @override
-  bool get padEnds;
+  Map<String, dynamic>? get onPageChanged;
+  @override
+  DragStartBehavior get dragStartBehavior;
+  @override
+  bool get allowImplicitScrolling;
   @override
   String? get restorationId;
   @override
-  bool get reverse;
+  Clip get clipBehavior;
   @override
-  Axis get scrollDirection;
+  bool get padEnds;
+  @override
+  int get initialPage;
+  @override
+  dynamic get keepPage;
   @override
   double get viewportFraction;
   @override

@@ -78,11 +78,11 @@ class _$MiraiPaddingCopyWithImpl<$Res, $Val extends MiraiPadding>
 }
 
 /// @nodoc
-abstract class _$$_MiraiPaddingCopyWith<$Res>
+abstract class _$$MiraiPaddingImplCopyWith<$Res>
     implements $MiraiPaddingCopyWith<$Res> {
-  factory _$$_MiraiPaddingCopyWith(
-          _$_MiraiPadding value, $Res Function(_$_MiraiPadding) then) =
-      __$$_MiraiPaddingCopyWithImpl<$Res>;
+  factory _$$MiraiPaddingImplCopyWith(
+          _$MiraiPaddingImpl value, $Res Function(_$MiraiPaddingImpl) then) =
+      __$$MiraiPaddingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({MiraiEdgeInsets padding, Map<String, dynamic>? child});
@@ -92,11 +92,11 @@ abstract class _$$_MiraiPaddingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiPaddingCopyWithImpl<$Res>
-    extends _$MiraiPaddingCopyWithImpl<$Res, _$_MiraiPadding>
-    implements _$$_MiraiPaddingCopyWith<$Res> {
-  __$$_MiraiPaddingCopyWithImpl(
-      _$_MiraiPadding _value, $Res Function(_$_MiraiPadding) _then)
+class __$$MiraiPaddingImplCopyWithImpl<$Res>
+    extends _$MiraiPaddingCopyWithImpl<$Res, _$MiraiPaddingImpl>
+    implements _$$MiraiPaddingImplCopyWith<$Res> {
+  __$$MiraiPaddingImplCopyWithImpl(
+      _$MiraiPaddingImpl _value, $Res Function(_$MiraiPaddingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_MiraiPaddingCopyWithImpl<$Res>
     Object? padding = null,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiPadding(
+    return _then(_$MiraiPaddingImpl(
       padding: null == padding
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
@@ -120,13 +120,13 @@ class __$$_MiraiPaddingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiPadding implements _MiraiPadding {
-  const _$_MiraiPadding(
+class _$MiraiPaddingImpl implements _MiraiPadding {
+  const _$MiraiPaddingImpl(
       {required this.padding, final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiPadding.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiPaddingFromJson(json);
+  factory _$MiraiPaddingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiPaddingImplFromJson(json);
 
   @override
   final MiraiEdgeInsets padding;
@@ -149,7 +149,7 @@ class _$_MiraiPadding implements _MiraiPadding {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiPadding &&
+            other is _$MiraiPaddingImpl &&
             (identical(other.padding, padding) || other.padding == padding) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
@@ -162,12 +162,12 @@ class _$_MiraiPadding implements _MiraiPadding {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiPaddingCopyWith<_$_MiraiPadding> get copyWith =>
-      __$$_MiraiPaddingCopyWithImpl<_$_MiraiPadding>(this, _$identity);
+  _$$MiraiPaddingImplCopyWith<_$MiraiPaddingImpl> get copyWith =>
+      __$$MiraiPaddingImplCopyWithImpl<_$MiraiPaddingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiPaddingToJson(
+    return _$$MiraiPaddingImplToJson(
       this,
     );
   }
@@ -176,10 +176,10 @@ class _$_MiraiPadding implements _MiraiPadding {
 abstract class _MiraiPadding implements MiraiPadding {
   const factory _MiraiPadding(
       {required final MiraiEdgeInsets padding,
-      final Map<String, dynamic>? child}) = _$_MiraiPadding;
+      final Map<String, dynamic>? child}) = _$MiraiPaddingImpl;
 
   factory _MiraiPadding.fromJson(Map<String, dynamic> json) =
-      _$_MiraiPadding.fromJson;
+      _$MiraiPaddingImpl.fromJson;
 
   @override
   MiraiEdgeInsets get padding;
@@ -187,6 +187,6 @@ abstract class _MiraiPadding implements MiraiPadding {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiPaddingCopyWith<_$_MiraiPadding> get copyWith =>
+  _$$MiraiPaddingImplCopyWith<_$MiraiPaddingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

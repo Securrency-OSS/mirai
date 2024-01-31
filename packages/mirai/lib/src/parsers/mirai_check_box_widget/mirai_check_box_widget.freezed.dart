@@ -167,11 +167,11 @@ class _$MiraiCheckBoxWidgetCopyWithImpl<$Res, $Val extends MiraiCheckBoxWidget>
 }
 
 /// @nodoc
-abstract class _$$_MiraiCheckBoxWidgetCopyWith<$Res>
+abstract class _$$MiraiCheckBoxWidgetImplCopyWith<$Res>
     implements $MiraiCheckBoxWidgetCopyWith<$Res> {
-  factory _$$_MiraiCheckBoxWidgetCopyWith(_$_MiraiCheckBoxWidget value,
-          $Res Function(_$_MiraiCheckBoxWidget) then) =
-      __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>;
+  factory _$$MiraiCheckBoxWidgetImplCopyWith(_$MiraiCheckBoxWidgetImpl value,
+          $Res Function(_$MiraiCheckBoxWidgetImpl) then) =
+      __$$MiraiCheckBoxWidgetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -195,11 +195,11 @@ abstract class _$$_MiraiCheckBoxWidgetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
-    extends _$MiraiCheckBoxWidgetCopyWithImpl<$Res, _$_MiraiCheckBoxWidget>
-    implements _$$_MiraiCheckBoxWidgetCopyWith<$Res> {
-  __$$_MiraiCheckBoxWidgetCopyWithImpl(_$_MiraiCheckBoxWidget _value,
-      $Res Function(_$_MiraiCheckBoxWidget) _then)
+class __$$MiraiCheckBoxWidgetImplCopyWithImpl<$Res>
+    extends _$MiraiCheckBoxWidgetCopyWithImpl<$Res, _$MiraiCheckBoxWidgetImpl>
+    implements _$$MiraiCheckBoxWidgetImplCopyWith<$Res> {
+  __$$MiraiCheckBoxWidgetImplCopyWithImpl(_$MiraiCheckBoxWidgetImpl _value,
+      $Res Function(_$MiraiCheckBoxWidgetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -218,7 +218,7 @@ class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
     Object? autofocus = null,
     Object? isError = null,
   }) {
-    return _then(_$_MiraiCheckBoxWidget(
+    return _then(_$MiraiCheckBoxWidgetImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -273,8 +273,8 @@ class __$$_MiraiCheckBoxWidgetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
-  const _$_MiraiCheckBoxWidget(
+class _$MiraiCheckBoxWidgetImpl implements _MiraiCheckBoxWidget {
+  const _$MiraiCheckBoxWidgetImpl(
       {this.id,
       this.value,
       this.activeColor,
@@ -288,8 +288,8 @@ class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
       this.autofocus = false,
       this.isError = false});
 
-  factory _$_MiraiCheckBoxWidget.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiCheckBoxWidgetFromJson(json);
+  factory _$MiraiCheckBoxWidgetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiCheckBoxWidgetImplFromJson(json);
 
   @override
   final String? id;
@@ -328,7 +328,7 @@ class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiCheckBoxWidget &&
+            other is _$MiraiCheckBoxWidgetImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.activeColor, activeColor) ||
@@ -372,13 +372,13 @@ class _$_MiraiCheckBoxWidget implements _MiraiCheckBoxWidget {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiCheckBoxWidgetCopyWith<_$_MiraiCheckBoxWidget> get copyWith =>
-      __$$_MiraiCheckBoxWidgetCopyWithImpl<_$_MiraiCheckBoxWidget>(
+  _$$MiraiCheckBoxWidgetImplCopyWith<_$MiraiCheckBoxWidgetImpl> get copyWith =>
+      __$$MiraiCheckBoxWidgetImplCopyWithImpl<_$MiraiCheckBoxWidgetImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiCheckBoxWidgetToJson(
+    return _$$MiraiCheckBoxWidgetImplToJson(
       this,
     );
   }
@@ -397,10 +397,10 @@ abstract class _MiraiCheckBoxWidget implements MiraiCheckBoxWidget {
       final MiraiMaterialColor? overlayColor,
       final double? splashRadius,
       final bool autofocus,
-      final bool isError}) = _$_MiraiCheckBoxWidget;
+      final bool isError}) = _$MiraiCheckBoxWidgetImpl;
 
   factory _MiraiCheckBoxWidget.fromJson(Map<String, dynamic> json) =
-      _$_MiraiCheckBoxWidget.fromJson;
+      _$MiraiCheckBoxWidgetImpl.fromJson;
 
   @override
   String? get id;
@@ -428,6 +428,6 @@ abstract class _MiraiCheckBoxWidget implements MiraiCheckBoxWidget {
   bool get isError;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiCheckBoxWidgetCopyWith<_$_MiraiCheckBoxWidget> get copyWith =>
+  _$$MiraiCheckBoxWidgetImplCopyWith<_$MiraiCheckBoxWidgetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

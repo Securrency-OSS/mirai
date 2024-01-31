@@ -74,22 +74,22 @@ class _$MiraiFlexibleCopyWithImpl<$Res, $Val extends MiraiFlexible>
 }
 
 /// @nodoc
-abstract class _$$_MiraiFlexibleCopyWith<$Res>
+abstract class _$$MiraiFlexibleImplCopyWith<$Res>
     implements $MiraiFlexibleCopyWith<$Res> {
-  factory _$$_MiraiFlexibleCopyWith(
-          _$_MiraiFlexible value, $Res Function(_$_MiraiFlexible) then) =
-      __$$_MiraiFlexibleCopyWithImpl<$Res>;
+  factory _$$MiraiFlexibleImplCopyWith(
+          _$MiraiFlexibleImpl value, $Res Function(_$MiraiFlexibleImpl) then) =
+      __$$MiraiFlexibleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, dynamic>? child, int flex, FlexFit fit});
 }
 
 /// @nodoc
-class __$$_MiraiFlexibleCopyWithImpl<$Res>
-    extends _$MiraiFlexibleCopyWithImpl<$Res, _$_MiraiFlexible>
-    implements _$$_MiraiFlexibleCopyWith<$Res> {
-  __$$_MiraiFlexibleCopyWithImpl(
-      _$_MiraiFlexible _value, $Res Function(_$_MiraiFlexible) _then)
+class __$$MiraiFlexibleImplCopyWithImpl<$Res>
+    extends _$MiraiFlexibleCopyWithImpl<$Res, _$MiraiFlexibleImpl>
+    implements _$$MiraiFlexibleImplCopyWith<$Res> {
+  __$$MiraiFlexibleImplCopyWithImpl(
+      _$MiraiFlexibleImpl _value, $Res Function(_$MiraiFlexibleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_MiraiFlexibleCopyWithImpl<$Res>
     Object? flex = null,
     Object? fit = null,
   }) {
-    return _then(_$_MiraiFlexible(
+    return _then(_$MiraiFlexibleImpl(
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -118,15 +118,15 @@ class __$$_MiraiFlexibleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFlexible implements _MiraiFlexible {
-  const _$_MiraiFlexible(
+class _$MiraiFlexibleImpl implements _MiraiFlexible {
+  const _$MiraiFlexibleImpl(
       {final Map<String, dynamic>? child,
       this.flex = 1,
       this.fit = FlexFit.loose})
       : _child = child;
 
-  factory _$_MiraiFlexible.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFlexibleFromJson(json);
+  factory _$MiraiFlexibleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFlexibleImplFromJson(json);
 
   final Map<String, dynamic>? _child;
   @override
@@ -154,7 +154,7 @@ class _$_MiraiFlexible implements _MiraiFlexible {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFlexible &&
+            other is _$MiraiFlexibleImpl &&
             const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.flex, flex) || other.flex == flex) &&
             (identical(other.fit, fit) || other.fit == fit));
@@ -168,12 +168,12 @@ class _$_MiraiFlexible implements _MiraiFlexible {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFlexibleCopyWith<_$_MiraiFlexible> get copyWith =>
-      __$$_MiraiFlexibleCopyWithImpl<_$_MiraiFlexible>(this, _$identity);
+  _$$MiraiFlexibleImplCopyWith<_$MiraiFlexibleImpl> get copyWith =>
+      __$$MiraiFlexibleImplCopyWithImpl<_$MiraiFlexibleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFlexibleToJson(
+    return _$$MiraiFlexibleImplToJson(
       this,
     );
   }
@@ -183,10 +183,10 @@ abstract class _MiraiFlexible implements MiraiFlexible {
   const factory _MiraiFlexible(
       {final Map<String, dynamic>? child,
       final int flex,
-      final FlexFit fit}) = _$_MiraiFlexible;
+      final FlexFit fit}) = _$MiraiFlexibleImpl;
 
   factory _MiraiFlexible.fromJson(Map<String, dynamic> json) =
-      _$_MiraiFlexible.fromJson;
+      _$MiraiFlexibleImpl.fromJson;
 
   @override
   Map<String, dynamic>? get child;
@@ -196,6 +196,6 @@ abstract class _MiraiFlexible implements MiraiFlexible {
   FlexFit get fit;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFlexibleCopyWith<_$_MiraiFlexible> get copyWith =>
+  _$$MiraiFlexibleImplCopyWith<_$MiraiFlexibleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

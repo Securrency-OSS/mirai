@@ -6,8 +6,8 @@ part of 'mirai_gradient.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiGradient _$$_MiraiGradientFromJson(Map<String, dynamic> json) =>
-    _$_MiraiGradient(
+_$MiraiGradientImpl _$$MiraiGradientImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiGradientImpl(
       colors:
           (json['colors'] as List<dynamic>).map((e) => e as String).toList(),
       stops: (json['stops'] as List<dynamic>?)
@@ -34,7 +34,7 @@ _$_MiraiGradient _$$_MiraiGradientFromJson(Map<String, dynamic> json) =>
       endAngle: (json['endAngle'] as num?)?.toDouble() ?? math.pi * 2,
     );
 
-Map<String, dynamic> _$$_MiraiGradientToJson(_$_MiraiGradient instance) =>
+Map<String, dynamic> _$$MiraiGradientImplToJson(_$MiraiGradientImpl instance) =>
     <String, dynamic>{
       'colors': instance.colors,
       'stops': instance.stops,

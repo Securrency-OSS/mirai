@@ -112,11 +112,11 @@ class _$MiraiIconThemeDataCopyWithImpl<$Res, $Val extends MiraiIconThemeData>
 }
 
 /// @nodoc
-abstract class _$$_MiraiIconThemeDataCopyWith<$Res>
+abstract class _$$MiraiIconThemeDataImplCopyWith<$Res>
     implements $MiraiIconThemeDataCopyWith<$Res> {
-  factory _$$_MiraiIconThemeDataCopyWith(_$_MiraiIconThemeData value,
-          $Res Function(_$_MiraiIconThemeData) then) =
-      __$$_MiraiIconThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiIconThemeDataImplCopyWith(_$MiraiIconThemeDataImpl value,
+          $Res Function(_$MiraiIconThemeDataImpl) then) =
+      __$$MiraiIconThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_MiraiIconThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiIconThemeDataCopyWithImpl<$Res>
-    extends _$MiraiIconThemeDataCopyWithImpl<$Res, _$_MiraiIconThemeData>
-    implements _$$_MiraiIconThemeDataCopyWith<$Res> {
-  __$$_MiraiIconThemeDataCopyWithImpl(
-      _$_MiraiIconThemeData _value, $Res Function(_$_MiraiIconThemeData) _then)
+class __$$MiraiIconThemeDataImplCopyWithImpl<$Res>
+    extends _$MiraiIconThemeDataCopyWithImpl<$Res, _$MiraiIconThemeDataImpl>
+    implements _$$MiraiIconThemeDataImplCopyWith<$Res> {
+  __$$MiraiIconThemeDataImplCopyWithImpl(_$MiraiIconThemeDataImpl _value,
+      $Res Function(_$MiraiIconThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_MiraiIconThemeDataCopyWithImpl<$Res>
     Object? opacity = freezed,
     Object? shadows = freezed,
   }) {
-    return _then(_$_MiraiIconThemeData(
+    return _then(_$MiraiIconThemeDataImpl(
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_MiraiIconThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiIconThemeData implements _MiraiIconThemeData {
-  const _$_MiraiIconThemeData(
+class _$MiraiIconThemeDataImpl implements _MiraiIconThemeData {
+  const _$MiraiIconThemeDataImpl(
       {this.size,
       this.fill,
       this.weight,
@@ -201,8 +201,8 @@ class _$_MiraiIconThemeData implements _MiraiIconThemeData {
       final List<MiraiShadow>? shadows})
       : _shadows = shadows;
 
-  factory _$_MiraiIconThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiIconThemeDataFromJson(json);
+  factory _$MiraiIconThemeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiIconThemeDataImplFromJson(json);
 
   @override
   final double? size;
@@ -237,7 +237,7 @@ class _$_MiraiIconThemeData implements _MiraiIconThemeData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiIconThemeData &&
+            other is _$MiraiIconThemeDataImpl &&
             (identical(other.size, size) || other.size == size) &&
             (identical(other.fill, fill) || other.fill == fill) &&
             (identical(other.weight, weight) || other.weight == weight) &&
@@ -265,13 +265,13 @@ class _$_MiraiIconThemeData implements _MiraiIconThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiIconThemeDataCopyWith<_$_MiraiIconThemeData> get copyWith =>
-      __$$_MiraiIconThemeDataCopyWithImpl<_$_MiraiIconThemeData>(
+  _$$MiraiIconThemeDataImplCopyWith<_$MiraiIconThemeDataImpl> get copyWith =>
+      __$$MiraiIconThemeDataImplCopyWithImpl<_$MiraiIconThemeDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiIconThemeDataToJson(
+    return _$$MiraiIconThemeDataImplToJson(
       this,
     );
   }
@@ -286,10 +286,10 @@ abstract class _MiraiIconThemeData implements MiraiIconThemeData {
       final double? opticalSize,
       final String? color,
       final double? opacity,
-      final List<MiraiShadow>? shadows}) = _$_MiraiIconThemeData;
+      final List<MiraiShadow>? shadows}) = _$MiraiIconThemeDataImpl;
 
   factory _MiraiIconThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiIconThemeData.fromJson;
+      _$MiraiIconThemeDataImpl.fromJson;
 
   @override
   double? get size;
@@ -309,6 +309,6 @@ abstract class _MiraiIconThemeData implements MiraiIconThemeData {
   List<MiraiShadow>? get shadows;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiIconThemeDataCopyWith<_$_MiraiIconThemeData> get copyWith =>
+  _$$MiraiIconThemeDataImplCopyWith<_$MiraiIconThemeDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
