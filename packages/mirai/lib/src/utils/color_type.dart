@@ -30,4 +30,5 @@ enum ColorType {
   inversePrimary,
   surfaceTint,
   scaffoldBackgroundColor,
+  none,
 }
