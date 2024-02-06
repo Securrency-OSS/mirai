@@ -21,9 +21,9 @@ class MiraiBoxShadow with _$MiraiBoxShadow {
 }
 
 extension MiraiBoxShadowParser on MiraiBoxShadow? {
-  BoxShadow get parse {
+  BoxShadow parse(BuildContext context) {
     return BoxShadow(
-      color: this?.color.toColor ?? const Color(0xFF000000),
+      color: this?.color.toColor(context) ?? const Color(0xFF000000),
       blurRadius: this?.blurRadius ?? 0.0,
       offset: this?.offset.parse ?? Offset.zero,
       spreadRadius: this?.spreadRadius ?? 0.0,

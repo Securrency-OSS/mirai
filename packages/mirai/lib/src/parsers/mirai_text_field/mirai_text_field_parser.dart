@@ -49,8 +49,8 @@ class MiraiTextFieldParser extends MiraiParser<MiraiTextField> {
       expands: model.expands,
       cursorWidth: model.cursorWidth,
       cursorHeight: model.cursorHeight,
-      cursorColor: model.cursorColor?.toColor,
-      style: model.style?.parse,
+      cursorColor: model.cursorColor?.toColor(context),
+      style: model.style?.parse(context),
       decoration: model.decoration?.parse(context),
       inputFormatters: model.inputFormatters
           .map((MiraiInputFormatter formatter) =>

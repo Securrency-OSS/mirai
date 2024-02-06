@@ -48,17 +48,21 @@ class MiraiSwitch with _$MiraiSwitch {
     );
   }
 
-  Color? get activeColorValue => activeColor?.toColor;
+  Color? activeColorValue(BuildContext context) =>
+      activeColor?.toColor(context);
 
-  Color? get activeTrackColorValue => activeTrackColor?.toColor;
+  Color? activeTrackColorValue(BuildContext context) =>
+      activeTrackColor?.toColor(context);
 
-  Color? get focusColorValue => focusColor?.toColor;
+  Color? focusColorValue(BuildContext context) => focusColor?.toColor(context);
 
-  Color? get hoverColorValue => hoverColor?.toColor;
+  Color? hoverColorValue(BuildContext context) => hoverColor?.toColor(context);
 
-  Color? get inactiveThumbColorValue => inactiveThumbColor?.toColor;
+  Color? inactiveThumbColorValue(BuildContext context) =>
+      inactiveThumbColor?.toColor(context);
 
-  Color? get inactiveTrackColorValue => inactiveTrackColor?.toColor;
+  Color? inactiveTrackColorValue(BuildContext context) =>
+      inactiveTrackColor?.toColor(context);
 
   MaterialTapTargetSize? get materialTapTargetSizeValue {
     return MaterialTapTargetSize.values.firstWhere(

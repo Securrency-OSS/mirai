@@ -38,7 +38,7 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
       maxLines: model.maxLines,
       semanticsLabel: model.semanticsLabel,
       textWidthBasis: model.textWidthBasis,
-      selectionColor: model.selectionColor.toColor,
+      selectionColor: model.selectionColor.toColor(context),
     );
   }
 }

@@ -24,15 +24,15 @@ class MiraiCardThemeData with _$MiraiCardThemeData {
 }
 
 extension MiraiCardThemeDataParser on MiraiCardThemeData {
-  CardTheme? get parse {
+  CardTheme? parse(BuildContext context) {
     return CardTheme(
       clipBehavior: clipBehavior,
-      color: color.toColor,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
+      color: color.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
       elevation: elevation,
       margin: margin.parse,
-      shape: shape?.parse,
+      shape: shape?.parse(context),
     );
   }
 }

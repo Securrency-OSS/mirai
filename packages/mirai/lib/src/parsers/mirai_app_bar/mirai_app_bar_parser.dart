@@ -20,12 +20,12 @@ class MiraiAppBarParser extends MiraiParser<MiraiAppBar> {
     return AppBar(
       leading: Mirai.fromJson(model.leading, context),
       title: Mirai.fromJson(model.title, context),
-      titleTextStyle: model.titleTextStyle?.parse,
-      toolbarTextStyle: model.toolbarTextStyle?.parse,
-      shadowColor: model.shadowColor?.toColor,
-      backgroundColor: model.backgroundColor?.toColor,
-      foregroundColor: model.foregroundColor?.toColor,
-      surfaceTintColor: model.surfaceTintColor?.toColor,
+      titleTextStyle: model.titleTextStyle?.parse(context),
+      toolbarTextStyle: model.toolbarTextStyle?.parse(context),
+      shadowColor: model.shadowColor?.toColor(context),
+      backgroundColor: model.backgroundColor?.toColor(context),
+      foregroundColor: model.foregroundColor?.toColor(context),
+      surfaceTintColor: model.surfaceTintColor?.toColor(context),
       actions: model.actions
           .map((action) => Mirai.fromJson(action, context) ?? const SizedBox())
           .toList(),

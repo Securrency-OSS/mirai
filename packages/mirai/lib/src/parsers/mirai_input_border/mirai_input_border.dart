@@ -27,14 +27,14 @@ class MiraiInputBorder with _$MiraiInputBorder {
 }
 
 extension MiraiInputBorderParser on MiraiInputBorder {
-  InputBorder get parse {
+  InputBorder parse(BuildContext context) {
     switch (type) {
       case MiraiInputBorderType.none:
         return InputBorder.none;
       case MiraiInputBorderType.underlineInputBorder:
         return UnderlineInputBorder(
           borderSide: BorderSide(
-            color: color?.toColor ?? Colors.black,
+            color: color?.toColor(context) ?? Colors.black,
             width: width,
           ),
           borderRadius: borderRadius.parse,
@@ -44,8 +44,8 @@ extension MiraiInputBorderParser on MiraiInputBorder {
           width: width,
           borderRadius: borderRadius.parse,
           gapPadding: gapPadding,
-          color: color?.toColor ?? Colors.black,
-          gradient: gradient?.parse,
+          color: color?.toColor(context) ?? Colors.black,
+          gradient: gradient?.parse(context),
         );
     }
   }

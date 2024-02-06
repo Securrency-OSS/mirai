@@ -26,22 +26,22 @@ class MiraiMaterialColor with _$MiraiMaterialColor {
 }
 
 extension MiraiThemeParser on MiraiMaterialColor {
-  MaterialColor get parse {
+  MaterialColor parse(BuildContext context) {
     Map<int, Color> color = {
-      50: shade50.toColor!,
-      100: shade100.toColor!,
-      200: shade200.toColor!,
-      300: shade300.toColor!,
-      400: shade400.toColor!,
-      500: shade500.toColor!,
-      600: shade600.toColor!,
-      700: shade700.toColor!,
-      800: shade800.toColor!,
-      900: shade900.toColor!,
+      50: shade50.toColor(context)!,
+      100: shade100.toColor(context)!,
+      200: shade200.toColor(context)!,
+      300: shade300.toColor(context)!,
+      400: shade400.toColor(context)!,
+      500: shade500.toColor(context)!,
+      600: shade600.toColor(context)!,
+      700: shade700.toColor(context)!,
+      800: shade800.toColor(context)!,
+      900: shade900.toColor(context)!,
     };
 
     return MaterialColor(
-      (primary.toColor)!.value,
+      (primary.toColor(context))!.value,
       color,
     );
   }

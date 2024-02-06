@@ -25,14 +25,14 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
             .map(
               (child) => TextSpan(
                 text: child.data,
-                style: child.style?.parse,
+                style: child.style?.parse(context),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () => Mirai.onCallFromJson(child.onTap, context),
               ),
             )
             .toList(),
       ),
-      style: model.style?.parse,
+      style: model.style?.parse(context),
       textAlign: model.textAlign,
       textDirection: model.textDirection,
       softWrap: model.softWrap,
@@ -41,7 +41,7 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
       maxLines: model.maxLines,
       semanticsLabel: model.semanticsLabel,
       textWidthBasis: model.textWidthBasis,
-      selectionColor: model.selectionColor.toColor,
+      selectionColor: model.selectionColor.toColor(context),
     );
   }
 }

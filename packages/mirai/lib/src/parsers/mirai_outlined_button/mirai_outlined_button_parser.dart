@@ -20,7 +20,7 @@ class MiraiOutlinedButtonParser extends MiraiParser<MiraiOutlinedButton> {
       onPressed: model.onPressed == null
           ? null
           : () => Mirai.onCallFromJson(model.onPressed, context),
-      style: model.style?.parseOutlined,
+      style: model.style?.parseOutlined(context),
       autofocus: model.autofocus,
       clipBehavior: model.clipBehavior,
       child: Mirai.fromJson(model.child, context),

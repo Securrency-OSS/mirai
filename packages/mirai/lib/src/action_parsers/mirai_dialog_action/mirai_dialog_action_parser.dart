@@ -49,7 +49,7 @@ class MiraiDialogActionParser extends MiraiActionParser<MiraiDialogAction> {
       context: context,
       builder: (_) => widget,
       barrierDismissible: model.barrierDismissible,
-      barrierColor: model.barrierColor.toColor,
+      barrierColor: model.barrierColor.toColor(context),
       barrierLabel: model.barrierLabel,
       useSafeArea: model.useSafeArea,
       traversalEdgeBehavior: model.traversalEdgeBehavior,
