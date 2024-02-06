@@ -37,7 +37,9 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
       textDirection: model.textDirection,
       softWrap: model.softWrap,
       overflow: model.overflow,
-      textScaleFactor: model.textScaleFactor,
+      textScaler: model.textScaleFactor != null
+          ? TextScaler.linear(model.textScaleFactor!)
+          : TextScaler.noScaling,
       maxLines: model.maxLines,
       semanticsLabel: model.semanticsLabel,
       textWidthBasis: model.textWidthBasis,
