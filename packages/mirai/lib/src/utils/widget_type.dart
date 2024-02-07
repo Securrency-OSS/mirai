@@ -39,4 +39,5 @@ enum WidgetType {
   switchButton,
   align,
   pageView,
+  networkWidget
 }
