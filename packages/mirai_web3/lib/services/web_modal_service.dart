@@ -41,6 +41,8 @@ class Web3ModalService {
   }
 
   static Future<String?> signMessage(String message) async {
+    if (!isConnected) return null;
+
     await _service.launchConnectedWallet();
 
     final signature = await _service.web3App!.request(
