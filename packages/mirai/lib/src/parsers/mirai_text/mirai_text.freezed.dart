@@ -153,11 +153,10 @@ class _$MiraiTextCopyWithImpl<$Res, $Val extends MiraiText>
 }
 
 /// @nodoc
-abstract class _$$MiraiTextImplCopyWith<$Res>
-    implements $MiraiTextCopyWith<$Res> {
-  factory _$$MiraiTextImplCopyWith(
-          _$MiraiTextImpl value, $Res Function(_$MiraiTextImpl) then) =
-      __$$MiraiTextImplCopyWithImpl<$Res>;
+abstract class _$$_MiraiTextCopyWith<$Res> implements $MiraiTextCopyWith<$Res> {
+  factory _$$_MiraiTextCopyWith(
+          _$_MiraiText value, $Res Function(_$_MiraiText) then) =
+      __$$_MiraiTextCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -179,11 +178,11 @@ abstract class _$$MiraiTextImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MiraiTextImplCopyWithImpl<$Res>
-    extends _$MiraiTextCopyWithImpl<$Res, _$MiraiTextImpl>
-    implements _$$MiraiTextImplCopyWith<$Res> {
-  __$$MiraiTextImplCopyWithImpl(
-      _$MiraiTextImpl _value, $Res Function(_$MiraiTextImpl) _then)
+class __$$_MiraiTextCopyWithImpl<$Res>
+    extends _$MiraiTextCopyWithImpl<$Res, _$_MiraiText>
+    implements _$$_MiraiTextCopyWith<$Res> {
+  __$$_MiraiTextCopyWithImpl(
+      _$_MiraiText _value, $Res Function(_$_MiraiText) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -202,7 +201,7 @@ class __$$MiraiTextImplCopyWithImpl<$Res>
     Object? textWidthBasis = freezed,
     Object? selectionColor = freezed,
   }) {
-    return _then(_$MiraiTextImpl(
+    return _then(_$_MiraiText(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -257,8 +256,8 @@ class __$$MiraiTextImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MiraiTextImpl implements _MiraiText {
-  const _$MiraiTextImpl(
+class _$_MiraiText implements _MiraiText {
+  const _$_MiraiText(
       {required this.data,
       final List<MiraiTextSpan> children = const [],
       this.style,
@@ -273,8 +272,8 @@ class _$MiraiTextImpl implements _MiraiText {
       this.selectionColor})
       : _children = children;
 
-  factory _$MiraiTextImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MiraiTextImplFromJson(json);
+  factory _$_MiraiText.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiTextFromJson(json);
 
   @override
   final String data;
@@ -317,7 +316,7 @@ class _$MiraiTextImpl implements _MiraiText {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MiraiTextImpl &&
+            other is _$_MiraiText &&
             (identical(other.data, data) || other.data == data) &&
             const DeepCollectionEquality().equals(other._children, _children) &&
             (identical(other.style, style) || other.style == style) &&
@@ -361,12 +360,12 @@ class _$MiraiTextImpl implements _MiraiText {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MiraiTextImplCopyWith<_$MiraiTextImpl> get copyWith =>
-      __$$MiraiTextImplCopyWithImpl<_$MiraiTextImpl>(this, _$identity);
+  _$$_MiraiTextCopyWith<_$_MiraiText> get copyWith =>
+      __$$_MiraiTextCopyWithImpl<_$_MiraiText>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MiraiTextImplToJson(
+    return _$$_MiraiTextToJson(
       this,
     );
   }
@@ -385,10 +384,10 @@ abstract class _MiraiText implements MiraiText {
       final int? maxLines,
       final String? semanticsLabel,
       final TextWidthBasis? textWidthBasis,
-      final String? selectionColor}) = _$MiraiTextImpl;
+      final String? selectionColor}) = _$_MiraiText;
 
   factory _MiraiText.fromJson(Map<String, dynamic> json) =
-      _$MiraiTextImpl.fromJson;
+      _$_MiraiText.fromJson;
 
   @override
   String get data;
@@ -416,7 +415,7 @@ abstract class _MiraiText implements MiraiText {
   String? get selectionColor;
   @override
   @JsonKey(ignore: true)
-  _$$MiraiTextImplCopyWith<_$MiraiTextImpl> get copyWith =>
+  _$$_MiraiTextCopyWith<_$_MiraiText> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -494,11 +493,11 @@ class _$MiraiTextSpanCopyWithImpl<$Res, $Val extends MiraiTextSpan>
 }
 
 /// @nodoc
-abstract class _$$MiraiTextSpanImplCopyWith<$Res>
+abstract class _$$_MiraiTextSpanCopyWith<$Res>
     implements $MiraiTextSpanCopyWith<$Res> {
-  factory _$$MiraiTextSpanImplCopyWith(
-          _$MiraiTextSpanImpl value, $Res Function(_$MiraiTextSpanImpl) then) =
-      __$$MiraiTextSpanImplCopyWithImpl<$Res>;
+  factory _$$_MiraiTextSpanCopyWith(
+          _$_MiraiTextSpan value, $Res Function(_$_MiraiTextSpan) then) =
+      __$$_MiraiTextSpanCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? data, MiraiTextStyle? style, Map<String, dynamic>? onTap});
@@ -508,11 +507,11 @@ abstract class _$$MiraiTextSpanImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MiraiTextSpanImplCopyWithImpl<$Res>
-    extends _$MiraiTextSpanCopyWithImpl<$Res, _$MiraiTextSpanImpl>
-    implements _$$MiraiTextSpanImplCopyWith<$Res> {
-  __$$MiraiTextSpanImplCopyWithImpl(
-      _$MiraiTextSpanImpl _value, $Res Function(_$MiraiTextSpanImpl) _then)
+class __$$_MiraiTextSpanCopyWithImpl<$Res>
+    extends _$MiraiTextSpanCopyWithImpl<$Res, _$_MiraiTextSpan>
+    implements _$$_MiraiTextSpanCopyWith<$Res> {
+  __$$_MiraiTextSpanCopyWithImpl(
+      _$_MiraiTextSpan _value, $Res Function(_$_MiraiTextSpan) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -522,7 +521,7 @@ class __$$MiraiTextSpanImplCopyWithImpl<$Res>
     Object? style = freezed,
     Object? onTap = freezed,
   }) {
-    return _then(_$MiraiTextSpanImpl(
+    return _then(_$_MiraiTextSpan(
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -541,13 +540,13 @@ class __$$MiraiTextSpanImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MiraiTextSpanImpl implements _MiraiTextSpan {
-  const _$MiraiTextSpanImpl(
+class _$_MiraiTextSpan implements _MiraiTextSpan {
+  const _$_MiraiTextSpan(
       {this.data, this.style, final Map<String, dynamic>? onTap})
       : _onTap = onTap;
 
-  factory _$MiraiTextSpanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MiraiTextSpanImplFromJson(json);
+  factory _$_MiraiTextSpan.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiTextSpanFromJson(json);
 
   @override
   final String? data;
@@ -572,7 +571,7 @@ class _$MiraiTextSpanImpl implements _MiraiTextSpan {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MiraiTextSpanImpl &&
+            other is _$_MiraiTextSpan &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.style, style) || other.style == style) &&
             const DeepCollectionEquality().equals(other._onTap, _onTap));
@@ -586,12 +585,12 @@ class _$MiraiTextSpanImpl implements _MiraiTextSpan {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MiraiTextSpanImplCopyWith<_$MiraiTextSpanImpl> get copyWith =>
-      __$$MiraiTextSpanImplCopyWithImpl<_$MiraiTextSpanImpl>(this, _$identity);
+  _$$_MiraiTextSpanCopyWith<_$_MiraiTextSpan> get copyWith =>
+      __$$_MiraiTextSpanCopyWithImpl<_$_MiraiTextSpan>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MiraiTextSpanImplToJson(
+    return _$$_MiraiTextSpanToJson(
       this,
     );
   }
@@ -601,10 +600,10 @@ abstract class _MiraiTextSpan implements MiraiTextSpan {
   const factory _MiraiTextSpan(
       {final String? data,
       final MiraiTextStyle? style,
-      final Map<String, dynamic>? onTap}) = _$MiraiTextSpanImpl;
+      final Map<String, dynamic>? onTap}) = _$_MiraiTextSpan;
 
   factory _MiraiTextSpan.fromJson(Map<String, dynamic> json) =
-      _$MiraiTextSpanImpl.fromJson;
+      _$_MiraiTextSpan.fromJson;
 
   @override
   String? get data;
@@ -614,6 +613,6 @@ abstract class _MiraiTextSpan implements MiraiTextSpan {
   Map<String, dynamic>? get onTap;
   @override
   @JsonKey(ignore: true)
-  _$$MiraiTextSpanImplCopyWith<_$MiraiTextSpanImpl> get copyWith =>
+  _$$_MiraiTextSpanCopyWith<_$_MiraiTextSpan> get copyWith =>
       throw _privateConstructorUsedError;
 }

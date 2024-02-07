@@ -6,8 +6,8 @@ part of 'mirai_tab_bar.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
-    _$MiraiTabBarImpl(
+_$_MiraiTabBar _$$_MiraiTabBarFromJson(Map<String, dynamic> json) =>
+    _$_MiraiTabBar(
       tabs: (json['tabs'] as List<dynamic>)
           .map((e) => e as Map<String, dynamic>)
           .toList(),
@@ -49,7 +49,7 @@ _$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$TabAlignmentEnumMap, json['tabAlignment']),
     );
 
-Map<String, dynamic> _$$MiraiTabBarImplToJson(_$MiraiTabBarImpl instance) =>
+Map<String, dynamic> _$$_MiraiTabBarToJson(_$_MiraiTabBar instance) =>
     <String, dynamic>{
       'tabs': instance.tabs,
       'initialIndex': instance.initialIndex,

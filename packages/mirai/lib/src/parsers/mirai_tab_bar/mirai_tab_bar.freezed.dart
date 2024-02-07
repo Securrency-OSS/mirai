@@ -251,11 +251,11 @@ class _$MiraiTabBarCopyWithImpl<$Res, $Val extends MiraiTabBar>
 }
 
 /// @nodoc
-abstract class _$$MiraiTabBarImplCopyWith<$Res>
+abstract class _$$_MiraiTabBarCopyWith<$Res>
     implements $MiraiTabBarCopyWith<$Res> {
-  factory _$$MiraiTabBarImplCopyWith(
-          _$MiraiTabBarImpl value, $Res Function(_$MiraiTabBarImpl) then) =
-      __$$MiraiTabBarImplCopyWithImpl<$Res>;
+  factory _$$_MiraiTabBarCopyWith(
+          _$_MiraiTabBar value, $Res Function(_$_MiraiTabBar) then) =
+      __$$_MiraiTabBarCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -291,11 +291,11 @@ abstract class _$$MiraiTabBarImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MiraiTabBarImplCopyWithImpl<$Res>
-    extends _$MiraiTabBarCopyWithImpl<$Res, _$MiraiTabBarImpl>
-    implements _$$MiraiTabBarImplCopyWith<$Res> {
-  __$$MiraiTabBarImplCopyWithImpl(
-      _$MiraiTabBarImpl _value, $Res Function(_$MiraiTabBarImpl) _then)
+class __$$_MiraiTabBarCopyWithImpl<$Res>
+    extends _$MiraiTabBarCopyWithImpl<$Res, _$_MiraiTabBar>
+    implements _$$_MiraiTabBarCopyWith<$Res> {
+  __$$_MiraiTabBarCopyWithImpl(
+      _$_MiraiTabBar _value, $Res Function(_$_MiraiTabBar) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -320,7 +320,7 @@ class __$$MiraiTabBarImplCopyWithImpl<$Res>
     Object? physics = freezed,
     Object? tabAlignment = freezed,
   }) {
-    return _then(_$MiraiTabBarImpl(
+    return _then(_$_MiraiTabBar(
       tabs: null == tabs
           ? _value._tabs
           : tabs // ignore: cast_nullable_to_non_nullable
@@ -400,8 +400,8 @@ class __$$MiraiTabBarImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MiraiTabBarImpl implements _MiraiTabBar {
-  const _$MiraiTabBarImpl(
+class _$_MiraiTabBar implements _MiraiTabBar {
+  const _$_MiraiTabBar(
       {required final List<Map<String, dynamic>> tabs,
       this.initialIndex = 0,
       this.isScrollable = false,
@@ -422,8 +422,8 @@ class _$MiraiTabBarImpl implements _MiraiTabBar {
       this.tabAlignment})
       : _tabs = tabs;
 
-  factory _$MiraiTabBarImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MiraiTabBarImplFromJson(json);
+  factory _$_MiraiTabBar.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiTabBarFromJson(json);
 
   final List<Map<String, dynamic>> _tabs;
   @override
@@ -482,7 +482,7 @@ class _$MiraiTabBarImpl implements _MiraiTabBar {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MiraiTabBarImpl &&
+            other is _$_MiraiTabBar &&
             const DeepCollectionEquality().equals(other._tabs, _tabs) &&
             (identical(other.initialIndex, initialIndex) ||
                 other.initialIndex == initialIndex) &&
@@ -546,12 +546,12 @@ class _$MiraiTabBarImpl implements _MiraiTabBar {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MiraiTabBarImplCopyWith<_$MiraiTabBarImpl> get copyWith =>
-      __$$MiraiTabBarImplCopyWithImpl<_$MiraiTabBarImpl>(this, _$identity);
+  _$$_MiraiTabBarCopyWith<_$_MiraiTabBar> get copyWith =>
+      __$$_MiraiTabBarCopyWithImpl<_$_MiraiTabBar>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MiraiTabBarImplToJson(
+    return _$$_MiraiTabBarToJson(
       this,
     );
   }
@@ -576,10 +576,10 @@ abstract class _MiraiTabBar implements MiraiTabBar {
       final DragStartBehavior dragStartBehavior,
       final bool? enableFeedback,
       final MiraiScrollPhysics? physics,
-      final TabAlignment? tabAlignment}) = _$MiraiTabBarImpl;
+      final TabAlignment? tabAlignment}) = _$_MiraiTabBar;
 
   factory _MiraiTabBar.fromJson(Map<String, dynamic> json) =
-      _$MiraiTabBarImpl.fromJson;
+      _$_MiraiTabBar.fromJson;
 
   @override
   List<Map<String, dynamic>> get tabs;
@@ -619,6 +619,6 @@ abstract class _MiraiTabBar implements MiraiTabBar {
   TabAlignment? get tabAlignment;
   @override
   @JsonKey(ignore: true)
-  _$$MiraiTabBarImplCopyWith<_$MiraiTabBarImpl> get copyWith =>
+  _$$_MiraiTabBarCopyWith<_$_MiraiTabBar> get copyWith =>
       throw _privateConstructorUsedError;
 }
