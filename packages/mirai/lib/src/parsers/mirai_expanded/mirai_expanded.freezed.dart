@@ -68,22 +68,22 @@ class _$MiraiExpandedCopyWithImpl<$Res, $Val extends MiraiExpanded>
 }
 
 /// @nodoc
-abstract class _$$MiraiExpandedImplCopyWith<$Res>
+abstract class _$$_MiraiExpandedCopyWith<$Res>
     implements $MiraiExpandedCopyWith<$Res> {
-  factory _$$MiraiExpandedImplCopyWith(
-          _$MiraiExpandedImpl value, $Res Function(_$MiraiExpandedImpl) then) =
-      __$$MiraiExpandedImplCopyWithImpl<$Res>;
+  factory _$$_MiraiExpandedCopyWith(
+          _$_MiraiExpanded value, $Res Function(_$_MiraiExpanded) then) =
+      __$$_MiraiExpandedCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int flex, Map<String, dynamic>? child});
 }
 
 /// @nodoc
-class __$$MiraiExpandedImplCopyWithImpl<$Res>
-    extends _$MiraiExpandedCopyWithImpl<$Res, _$MiraiExpandedImpl>
-    implements _$$MiraiExpandedImplCopyWith<$Res> {
-  __$$MiraiExpandedImplCopyWithImpl(
-      _$MiraiExpandedImpl _value, $Res Function(_$MiraiExpandedImpl) _then)
+class __$$_MiraiExpandedCopyWithImpl<$Res>
+    extends _$MiraiExpandedCopyWithImpl<$Res, _$_MiraiExpanded>
+    implements _$$_MiraiExpandedCopyWith<$Res> {
+  __$$_MiraiExpandedCopyWithImpl(
+      _$_MiraiExpanded _value, $Res Function(_$_MiraiExpanded) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$MiraiExpandedImplCopyWithImpl<$Res>
     Object? flex = null,
     Object? child = freezed,
   }) {
-    return _then(_$MiraiExpandedImpl(
+    return _then(_$_MiraiExpanded(
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
@@ -107,12 +107,12 @@ class __$$MiraiExpandedImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MiraiExpandedImpl implements _MiraiExpanded {
-  const _$MiraiExpandedImpl({this.flex = 1, final Map<String, dynamic>? child})
+class _$_MiraiExpanded implements _MiraiExpanded {
+  const _$_MiraiExpanded({this.flex = 1, final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$MiraiExpandedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MiraiExpandedImplFromJson(json);
+  factory _$_MiraiExpanded.fromJson(Map<String, dynamic> json) =>
+      _$$_MiraiExpandedFromJson(json);
 
   @override
   @JsonKey()
@@ -136,7 +136,7 @@ class _$MiraiExpandedImpl implements _MiraiExpanded {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MiraiExpandedImpl &&
+            other is _$_MiraiExpanded &&
             (identical(other.flex, flex) || other.flex == flex) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
@@ -149,12 +149,12 @@ class _$MiraiExpandedImpl implements _MiraiExpanded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MiraiExpandedImplCopyWith<_$MiraiExpandedImpl> get copyWith =>
-      __$$MiraiExpandedImplCopyWithImpl<_$MiraiExpandedImpl>(this, _$identity);
+  _$$_MiraiExpandedCopyWith<_$_MiraiExpanded> get copyWith =>
+      __$$_MiraiExpandedCopyWithImpl<_$_MiraiExpanded>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MiraiExpandedImplToJson(
+    return _$$_MiraiExpandedToJson(
       this,
     );
   }
@@ -162,11 +162,10 @@ class _$MiraiExpandedImpl implements _MiraiExpanded {
 
 abstract class _MiraiExpanded implements MiraiExpanded {
   const factory _MiraiExpanded(
-      {final int flex,
-      final Map<String, dynamic>? child}) = _$MiraiExpandedImpl;
+      {final int flex, final Map<String, dynamic>? child}) = _$_MiraiExpanded;
 
   factory _MiraiExpanded.fromJson(Map<String, dynamic> json) =
-      _$MiraiExpandedImpl.fromJson;
+      _$_MiraiExpanded.fromJson;
 
   @override
   int get flex;
@@ -174,6 +173,6 @@ abstract class _MiraiExpanded implements MiraiExpanded {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$MiraiExpandedImplCopyWith<_$MiraiExpandedImpl> get copyWith =>
+  _$$_MiraiExpandedCopyWith<_$_MiraiExpanded> get copyWith =>
       throw _privateConstructorUsedError;
 }

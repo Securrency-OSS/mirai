@@ -6,26 +6,26 @@ part of 'mirai_page_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MiraiPageViewImpl _$$MiraiPageViewImplFromJson(Map<String, dynamic> json) =>
-    _$MiraiPageViewImpl(
-      allowImplicitScrolling: json['allowImplicitScrolling'] as bool? ?? false,
-      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
-          Clip.hardEdge,
-      dragStartBehavior: $enumDecodeNullable(
-              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
-          DragStartBehavior.start,
-      initialPage: json['initialPage'] as int? ?? 0,
-      keepPage: json['keepPage'] ?? true,
-      onPageChanged: json['onPageChanged'] as Map<String, dynamic>?,
-      physics:
-          $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
-      pageSnapping: json['pageSnapping'] as bool? ?? true,
-      padEnds: json['padEnds'] as bool? ?? true,
-      restorationId: json['restorationId'] as String?,
-      reverse: json['reverse'] as bool? ?? false,
+_$_MiraiPageView _$$_MiraiPageViewFromJson(Map<String, dynamic> json) =>
+    _$_MiraiPageView(
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
               Axis.horizontal,
+      reverse: json['reverse'] as bool? ?? false,
+      physics:
+          $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),
+      pageSnapping: json['pageSnapping'] as bool? ?? true,
+      onPageChanged: json['onPageChanged'] as Map<String, dynamic>?,
+      dragStartBehavior: $enumDecodeNullable(
+              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
+          DragStartBehavior.start,
+      allowImplicitScrolling: json['allowImplicitScrolling'] as bool? ?? false,
+      restorationId: json['restorationId'] as String?,
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      padEnds: json['padEnds'] as bool? ?? true,
+      initialPage: json['initialPage'] as int? ?? 0,
+      keepPage: json['keepPage'] ?? true,
       viewportFraction: (json['viewportFraction'] as num?)?.toDouble() ?? 1.0,
       children: (json['children'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
@@ -33,35 +33,28 @@ _$MiraiPageViewImpl _$$MiraiPageViewImplFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$$MiraiPageViewImplToJson(_$MiraiPageViewImpl instance) =>
+Map<String, dynamic> _$$_MiraiPageViewToJson(_$_MiraiPageView instance) =>
     <String, dynamic>{
-      'allowImplicitScrolling': instance.allowImplicitScrolling,
-      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
-      'dragStartBehavior':
-          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
-      'initialPage': instance.initialPage,
-      'keepPage': instance.keepPage,
-      'onPageChanged': instance.onPageChanged,
+      'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
+      'reverse': instance.reverse,
       'physics': _$MiraiScrollPhysicsEnumMap[instance.physics],
       'pageSnapping': instance.pageSnapping,
-      'padEnds': instance.padEnds,
+      'onPageChanged': instance.onPageChanged,
+      'dragStartBehavior':
+          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
+      'allowImplicitScrolling': instance.allowImplicitScrolling,
       'restorationId': instance.restorationId,
-      'reverse': instance.reverse,
-      'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'padEnds': instance.padEnds,
+      'initialPage': instance.initialPage,
+      'keepPage': instance.keepPage,
       'viewportFraction': instance.viewportFraction,
       'children': instance.children,
     };
 
-const _$ClipEnumMap = {
-  Clip.none: 'none',
-  Clip.hardEdge: 'hardEdge',
-  Clip.antiAlias: 'antiAlias',
-  Clip.antiAliasWithSaveLayer: 'antiAliasWithSaveLayer',
-};
-
-const _$DragStartBehaviorEnumMap = {
-  DragStartBehavior.down: 'down',
-  DragStartBehavior.start: 'start',
+const _$AxisEnumMap = {
+  Axis.horizontal: 'horizontal',
+  Axis.vertical: 'vertical',
 };
 
 const _$MiraiScrollPhysicsEnumMap = {
@@ -72,7 +65,14 @@ const _$MiraiScrollPhysicsEnumMap = {
   MiraiScrollPhysics.page: 'page',
 };
 
-const _$AxisEnumMap = {
-  Axis.horizontal: 'horizontal',
-  Axis.vertical: 'vertical',
+const _$DragStartBehaviorEnumMap = {
+  DragStartBehavior.down: 'down',
+  DragStartBehavior.start: 'start',
+};
+
+const _$ClipEnumMap = {
+  Clip.none: 'none',
+  Clip.hardEdge: 'hardEdge',
+  Clip.antiAlias: 'antiAlias',
+  Clip.antiAliasWithSaveLayer: 'antiAliasWithSaveLayer',
 };

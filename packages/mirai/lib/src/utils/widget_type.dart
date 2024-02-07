@@ -40,4 +40,5 @@ enum WidgetType {
   align,
   pageView,
   refreshIndicator,
+  networkWidget,
 }

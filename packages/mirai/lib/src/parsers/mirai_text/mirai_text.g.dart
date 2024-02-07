@@ -6,8 +6,7 @@ part of 'mirai_text.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MiraiTextImpl _$$MiraiTextImplFromJson(Map<String, dynamic> json) =>
-    _$MiraiTextImpl(
+_$_MiraiText _$$_MiraiTextFromJson(Map<String, dynamic> json) => _$_MiraiText(
       data: json['data'] as String,
       children: (json['children'] as List<dynamic>?)
               ?.map((e) => MiraiTextSpan.fromJson(e as Map<String, dynamic>))
@@ -29,7 +28,7 @@ _$MiraiTextImpl _$$MiraiTextImplFromJson(Map<String, dynamic> json) =>
       selectionColor: json['selectionColor'] as String?,
     );
 
-Map<String, dynamic> _$$MiraiTextImplToJson(_$MiraiTextImpl instance) =>
+Map<String, dynamic> _$$_MiraiTextToJson(_$_MiraiText instance) =>
     <String, dynamic>{
       'data': instance.data,
       'children': instance.children,
@@ -71,8 +70,8 @@ const _$TextWidthBasisEnumMap = {
   TextWidthBasis.longestLine: 'longestLine',
 };
 
-_$MiraiTextSpanImpl _$$MiraiTextSpanImplFromJson(Map<String, dynamic> json) =>
-    _$MiraiTextSpanImpl(
+_$_MiraiTextSpan _$$_MiraiTextSpanFromJson(Map<String, dynamic> json) =>
+    _$_MiraiTextSpan(
       data: json['data'] as String?,
       style: json['style'] == null
           ? null
@@ -80,7 +79,7 @@ _$MiraiTextSpanImpl _$$MiraiTextSpanImplFromJson(Map<String, dynamic> json) =>
       onTap: json['onTap'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$MiraiTextSpanImplToJson(_$MiraiTextSpanImpl instance) =>
+Map<String, dynamic> _$$_MiraiTextSpanToJson(_$_MiraiTextSpan instance) =>
     <String, dynamic>{
       'data': instance.data,
       'style': instance.style,
