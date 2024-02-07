@@ -37,7 +37,13 @@ class Web3ModalService {
   }
 
   static Future<void> connectWallet(BuildContext context) async {
-    await _service.openModal(context);
+    if (isConnected) {
+      await disconnect();
+    }
+
+    if (context.mounted) {
+      await _service.openModal(context);
+    }
   }
 
   static Future<String?> signMessage(String message) async {
