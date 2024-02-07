@@ -17,7 +17,7 @@ class MiraiWeb3AccountButtonParser extends MiraiParser<MiraiWeb3AccountButton> {
   @override
   Widget parse(BuildContext context, MiraiWeb3AccountButton model) {
     return Web3ModalTheme(
-      isDarkMode: model.isDarkMode,
+      isDarkMode: Theme.of(context).brightness == Brightness.dark,
       child: W3MAccountButton(
         service: Web3ModalService.service,
         size: model.size,

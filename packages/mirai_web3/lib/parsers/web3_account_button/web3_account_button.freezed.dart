@@ -23,7 +23,6 @@ MiraiWeb3AccountButton _$MiraiWeb3AccountButtonFromJson(
 mixin _$MiraiWeb3AccountButton {
   BaseButtonSize get size => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
-  bool get isDarkMode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +36,7 @@ abstract class $MiraiWeb3AccountButtonCopyWith<$Res> {
           $Res Function(MiraiWeb3AccountButton) then) =
       _$MiraiWeb3AccountButtonCopyWithImpl<$Res, MiraiWeb3AccountButton>;
   @useResult
-  $Res call({BaseButtonSize size, String? avatar, bool isDarkMode});
+  $Res call({BaseButtonSize size, String? avatar});
 }
 
 /// @nodoc
@@ -56,7 +55,6 @@ class _$MiraiWeb3AccountButtonCopyWithImpl<$Res,
   $Res call({
     Object? size = null,
     Object? avatar = freezed,
-    Object? isDarkMode = null,
   }) {
     return _then(_value.copyWith(
       size: null == size
@@ -67,10 +65,6 @@ class _$MiraiWeb3AccountButtonCopyWithImpl<$Res,
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      isDarkMode: null == isDarkMode
-          ? _value.isDarkMode
-          : isDarkMode // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 }
@@ -84,7 +78,7 @@ abstract class _$$MiraiWeb3AccountButtonImplCopyWith<$Res>
       __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({BaseButtonSize size, String? avatar, bool isDarkMode});
+  $Res call({BaseButtonSize size, String? avatar});
 }
 
 /// @nodoc
@@ -102,7 +96,6 @@ class __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>
   $Res call({
     Object? size = null,
     Object? avatar = freezed,
-    Object? isDarkMode = null,
   }) {
     return _then(_$MiraiWeb3AccountButtonImpl(
       size: null == size
@@ -113,10 +106,6 @@ class __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      isDarkMode: null == isDarkMode
-          ? _value.isDarkMode
-          : isDarkMode // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -125,9 +114,7 @@ class __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
   const _$MiraiWeb3AccountButtonImpl(
-      {this.size = BaseButtonSize.regular,
-      this.avatar,
-      this.isDarkMode = false});
+      {this.size = BaseButtonSize.regular, this.avatar});
 
   factory _$MiraiWeb3AccountButtonImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiWeb3AccountButtonImplFromJson(json);
@@ -137,13 +124,10 @@ class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
   final BaseButtonSize size;
   @override
   final String? avatar;
-  @override
-  @JsonKey()
-  final bool isDarkMode;
 
   @override
   String toString() {
-    return 'MiraiWeb3AccountButton(size: $size, avatar: $avatar, isDarkMode: $isDarkMode)';
+    return 'MiraiWeb3AccountButton(size: $size, avatar: $avatar)';
   }
 
   @override
@@ -152,14 +136,12 @@ class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
         (other.runtimeType == runtimeType &&
             other is _$MiraiWeb3AccountButtonImpl &&
             (identical(other.size, size) || other.size == size) &&
-            (identical(other.avatar, avatar) || other.avatar == avatar) &&
-            (identical(other.isDarkMode, isDarkMode) ||
-                other.isDarkMode == isDarkMode));
+            (identical(other.avatar, avatar) || other.avatar == avatar));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, size, avatar, isDarkMode);
+  int get hashCode => Object.hash(runtimeType, size, avatar);
 
   @JsonKey(ignore: true)
   @override
@@ -179,8 +161,7 @@ class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
 abstract class _MiraiWeb3AccountButton implements MiraiWeb3AccountButton {
   const factory _MiraiWeb3AccountButton(
       {final BaseButtonSize size,
-      final String? avatar,
-      final bool isDarkMode}) = _$MiraiWeb3AccountButtonImpl;
+      final String? avatar}) = _$MiraiWeb3AccountButtonImpl;
 
   factory _MiraiWeb3AccountButton.fromJson(Map<String, dynamic> json) =
       _$MiraiWeb3AccountButtonImpl.fromJson;
@@ -189,8 +170,6 @@ abstract class _MiraiWeb3AccountButton implements MiraiWeb3AccountButton {
   BaseButtonSize get size;
   @override
   String? get avatar;
-  @override
-  bool get isDarkMode;
   @override
   @JsonKey(ignore: true)
   _$$MiraiWeb3AccountButtonImplCopyWith<_$MiraiWeb3AccountButtonImpl>

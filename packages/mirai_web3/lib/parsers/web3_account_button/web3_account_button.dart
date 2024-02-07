@@ -11,7 +11,6 @@ class MiraiWeb3AccountButton with _$MiraiWeb3AccountButton {
   const factory MiraiWeb3AccountButton({
     @Default(BaseButtonSize.regular) BaseButtonSize size,
     String? avatar,
-    @Default(false) bool isDarkMode,
   }) = _MiraiWeb3AccountButton;
 
   factory MiraiWeb3AccountButton.fromJson(Map<String, dynamic> json) =>
