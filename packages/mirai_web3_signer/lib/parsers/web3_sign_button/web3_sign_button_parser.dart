@@ -3,6 +3,9 @@ import 'package:mirai_web3_signer/action_parsers/web3_sign_message/web3_sign_mes
 import 'package:mirai_web3_signer/parsers/web3_sign_button/web3_sign_button.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 import 'package:mirai_web3_signer/services/web_modal_service.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
+import 'package:web3modal_flutter/widgets/avatars/w3m_account_avatar.dart';
+import 'package:web3modal_flutter/widgets/avatars/w3m_account_orb.dart';
 
 class MiraiWeb3SignButtonParser extends MiraiParser<MiraiWeb3SignButton> {
   const MiraiWeb3SignButtonParser();
@@ -39,6 +42,13 @@ class _Web3SignButtonState extends State<_Web3SignButton> {
 
   @override
   Widget build(BuildContext context) {
+    return Web3ModalTheme(
+      isDarkMode: true,
+      child: W3MAccountButton(
+        service: Web3ModalService.service,
+        size: BaseButtonSize.small,
+      ),
+    );
     return _messageSignature != null
         ? Text(_messageSignature!)
         : ElevatedButton(
