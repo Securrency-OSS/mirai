@@ -165,7 +165,7 @@ class _$MiraiBorderImpl implements _MiraiBorder {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiBorderImpl &&

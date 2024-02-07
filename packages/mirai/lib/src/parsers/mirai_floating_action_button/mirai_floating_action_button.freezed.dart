@@ -491,7 +491,7 @@ class _$MiraiFloatingActionButtonImpl implements _MiraiFloatingActionButton {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiFloatingActionButtonImpl &&

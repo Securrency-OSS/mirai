@@ -269,7 +269,7 @@ class _$MiraiCardImpl implements _MiraiCard {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiCardImpl &&

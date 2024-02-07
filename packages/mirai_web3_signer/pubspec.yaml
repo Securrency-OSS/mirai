@@ -14,11 +14,18 @@ dependencies:
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
   mirai_framework: ^0.0.1
+  web3modal_flutter: ^3.1.0
+  # flutter_web3: ^2.1.9
+  # web3dart: ^2.7.1
+  # walletconnect_dart: ^0.0.11
+  # url_launcher: ^6.2.4
+  # walletconnect_flutter_v2:
+  # web3modal_flutter:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^3.0.1
   build_runner: ^2.4.5
   freezed: ^2.3.5
   json_serializable: ^6.7.0

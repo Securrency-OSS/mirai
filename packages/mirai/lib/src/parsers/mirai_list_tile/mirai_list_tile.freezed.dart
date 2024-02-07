@@ -557,7 +557,7 @@ class _$MiraiListTileImpl implements _MiraiListTile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiListTileImpl &&

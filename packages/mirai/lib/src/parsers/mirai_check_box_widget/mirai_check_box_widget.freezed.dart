@@ -325,7 +325,7 @@ class _$MiraiCheckBoxWidgetImpl implements _MiraiCheckBoxWidget {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiCheckBoxWidgetImpl &&

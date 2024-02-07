@@ -1,0 +1,25 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Web3 Signer"
+    }
+  },
+  "body": {
+    "type": "column",
+    "children": [
+      {
+        "type": "web3ConnectButton"
+      },
+      {
+        "type": "sizedBox",
+        "height": 24
+      },
+      {
+        "type": "web3SignButton"
+      }
+    ]
+  }
+}

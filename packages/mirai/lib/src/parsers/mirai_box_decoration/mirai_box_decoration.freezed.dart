@@ -315,7 +315,7 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiBoxDecorationImpl &&

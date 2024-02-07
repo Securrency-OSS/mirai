@@ -314,7 +314,7 @@ class _$MiraiTextImpl implements _MiraiText {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiTextImpl &&
@@ -569,7 +569,7 @@ class _$MiraiTextSpanImpl implements _MiraiTextSpan {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiTextSpanImpl &&

@@ -148,7 +148,7 @@ class _$MiraiCenterImpl implements _MiraiCenter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiCenterImpl &&

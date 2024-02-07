@@ -765,7 +765,7 @@ class _$MiraiTextFormFieldImpl implements _MiraiTextFormField {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiTextFormFieldImpl &&

@@ -1245,7 +1245,7 @@ class _$MiraiInputDecorationImpl implements _MiraiInputDecoration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiInputDecorationImpl &&

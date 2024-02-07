@@ -45,5 +45,13 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+	<string>metamask</string>
+	<string>trust</string>
+	<string>safe</string>
+	<string>rainbow</string>
+	<string>cbwallet</string>
+	</array>
 </dict>
 </plist>

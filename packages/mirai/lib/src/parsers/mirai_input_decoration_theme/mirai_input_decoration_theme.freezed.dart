@@ -896,7 +896,7 @@ class _$MiraiInputDecorationThemeImpl implements _MiraiInputDecorationTheme {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiInputDecorationThemeImpl &&
