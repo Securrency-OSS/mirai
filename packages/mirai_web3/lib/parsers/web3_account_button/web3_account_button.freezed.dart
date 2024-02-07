@@ -21,7 +21,13 @@ MiraiWeb3AccountButton _$MiraiWeb3AccountButtonFromJson(
 
 /// @nodoc
 mixin _$MiraiWeb3AccountButton {
+  BaseButtonSize get size => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MiraiWeb3AccountButtonCopyWith<MiraiWeb3AccountButton> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29,6 +35,8 @@ abstract class $MiraiWeb3AccountButtonCopyWith<$Res> {
   factory $MiraiWeb3AccountButtonCopyWith(MiraiWeb3AccountButton value,
           $Res Function(MiraiWeb3AccountButton) then) =
       _$MiraiWeb3AccountButtonCopyWithImpl<$Res, MiraiWeb3AccountButton>;
+  @useResult
+  $Res call({BaseButtonSize size, String? avatar});
 }
 
 /// @nodoc
@@ -41,14 +49,36 @@ class _$MiraiWeb3AccountButtonCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? size = null,
+    Object? avatar = freezed,
+  }) {
+    return _then(_value.copyWith(
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as BaseButtonSize,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$MiraiWeb3AccountButtonImplCopyWith<$Res> {
+abstract class _$$MiraiWeb3AccountButtonImplCopyWith<$Res>
+    implements $MiraiWeb3AccountButtonCopyWith<$Res> {
   factory _$$MiraiWeb3AccountButtonImplCopyWith(
           _$MiraiWeb3AccountButtonImpl value,
           $Res Function(_$MiraiWeb3AccountButtonImpl) then) =
       __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({BaseButtonSize size, String? avatar});
 }
 
 /// @nodoc
@@ -60,31 +90,65 @@ class __$$MiraiWeb3AccountButtonImplCopyWithImpl<$Res>
       _$MiraiWeb3AccountButtonImpl _value,
       $Res Function(_$MiraiWeb3AccountButtonImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? size = null,
+    Object? avatar = freezed,
+  }) {
+    return _then(_$MiraiWeb3AccountButtonImpl(
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as BaseButtonSize,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
-  const _$MiraiWeb3AccountButtonImpl();
+  const _$MiraiWeb3AccountButtonImpl(
+      {this.size = BaseButtonSize.small, this.avatar});
 
   factory _$MiraiWeb3AccountButtonImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiWeb3AccountButtonImplFromJson(json);
 
   @override
+  @JsonKey()
+  final BaseButtonSize size;
+  @override
+  final String? avatar;
+
+  @override
   String toString() {
-    return 'MiraiWeb3AccountButton()';
+    return 'MiraiWeb3AccountButton(size: $size, avatar: $avatar)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MiraiWeb3AccountButtonImpl);
+            other is _$MiraiWeb3AccountButtonImpl &&
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, size, avatar);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MiraiWeb3AccountButtonImplCopyWith<_$MiraiWeb3AccountButtonImpl>
+      get copyWith => __$$MiraiWeb3AccountButtonImplCopyWithImpl<
+          _$MiraiWeb3AccountButtonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -95,8 +159,19 @@ class _$MiraiWeb3AccountButtonImpl implements _MiraiWeb3AccountButton {
 }
 
 abstract class _MiraiWeb3AccountButton implements MiraiWeb3AccountButton {
-  const factory _MiraiWeb3AccountButton() = _$MiraiWeb3AccountButtonImpl;
+  const factory _MiraiWeb3AccountButton(
+      {final BaseButtonSize size,
+      final String? avatar}) = _$MiraiWeb3AccountButtonImpl;
 
   factory _MiraiWeb3AccountButton.fromJson(Map<String, dynamic> json) =
       _$MiraiWeb3AccountButtonImpl.fromJson;
+
+  @override
+  BaseButtonSize get size;
+  @override
+  String? get avatar;
+  @override
+  @JsonKey(ignore: true)
+  _$$MiraiWeb3AccountButtonImplCopyWith<_$MiraiWeb3AccountButtonImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
