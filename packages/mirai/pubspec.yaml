@@ -13,7 +13,7 @@ dependencies:
   freezed_annotation: ^2.2.0
   flutter_bloc: ^8.1.2
   json_annotation: ^4.8.1
-  logger: ^1.4.0
+  logger: ^2.0.2+1
   dio: ^5.2.0+1
   mirai_framework: ^0.0.1
 
