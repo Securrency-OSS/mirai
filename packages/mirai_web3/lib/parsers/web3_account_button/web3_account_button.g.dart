@@ -10,8 +10,9 @@ _$MiraiWeb3AccountButtonImpl _$$MiraiWeb3AccountButtonImplFromJson(
         Map<String, dynamic> json) =>
     _$MiraiWeb3AccountButtonImpl(
       size: $enumDecodeNullable(_$BaseButtonSizeEnumMap, json['size']) ??
-          BaseButtonSize.small,
+          BaseButtonSize.regular,
       avatar: json['avatar'] as String?,
+      isDarkMode: json['isDarkMode'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$MiraiWeb3AccountButtonImplToJson(
@@ -19,6 +20,7 @@ Map<String, dynamic> _$$MiraiWeb3AccountButtonImplToJson(
     <String, dynamic>{
       'size': _$BaseButtonSizeEnumMap[instance.size]!,
       'avatar': instance.avatar,
+      'isDarkMode': instance.isDarkMode,
     };
 
 const _$BaseButtonSizeEnumMap = {

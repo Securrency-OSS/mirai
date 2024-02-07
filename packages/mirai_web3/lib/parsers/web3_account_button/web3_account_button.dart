@@ -9,8 +9,9 @@ part 'web3_account_button.g.dart';
 @freezed
 class MiraiWeb3AccountButton with _$MiraiWeb3AccountButton {
   const factory MiraiWeb3AccountButton({
-    @Default(BaseButtonSize.small) BaseButtonSize size,
+    @Default(BaseButtonSize.regular) BaseButtonSize size,
     String? avatar,
+    @Default(false) bool isDarkMode,
   }) = _MiraiWeb3AccountButton;
 
   factory MiraiWeb3AccountButton.fromJson(Map<String, dynamic> json) =>

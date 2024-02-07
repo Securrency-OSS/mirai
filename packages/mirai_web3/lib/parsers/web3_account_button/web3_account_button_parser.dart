@@ -16,10 +16,13 @@ class MiraiWeb3AccountButtonParser extends MiraiParser<MiraiWeb3AccountButton> {
 
   @override
   Widget parse(BuildContext context, MiraiWeb3AccountButton model) {
-    return W3MAccountButton(
-      service: Web3ModalService.service,
-      size: model.size,
-      avatar: model.avatar,
+    return Web3ModalTheme(
+      isDarkMode: model.isDarkMode,
+      child: W3MAccountButton(
+        service: Web3ModalService.service,
+        size: model.size,
+        avatar: model.avatar,
+      ),
     );
   }
 }
