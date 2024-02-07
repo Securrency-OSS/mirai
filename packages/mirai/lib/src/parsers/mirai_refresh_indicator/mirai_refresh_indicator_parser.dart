@@ -63,8 +63,8 @@ class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
           }
         }
       },
-      color: widget.model.color.toColor,
-      backgroundColor: widget.model.backgroundColor.toColor,
+      color: widget.model.color.toColor(context),
+      backgroundColor: widget.model.backgroundColor.toColor(context),
       semanticsLabel: widget.model.semanticsLabel,
       semanticsValue: widget.model.semanticsValue,
       strokeWidth: widget.model.strokeWidth,
