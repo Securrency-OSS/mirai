@@ -42,6 +42,7 @@ class _MiraiSwitchUiWidget extends State<MiraiSwitchWidget> {
     switch (model.switchType) {
       case MiraiSwitchType.cupertino:
         return _buildCupertinoSwitch(
+          context,
           model,
           isSelected: isSelected,
           onChanged: _changeValue,
@@ -66,6 +67,7 @@ class _MiraiSwitchUiWidget extends State<MiraiSwitchWidget> {
 }
 
 Widget _buildCupertinoSwitch(
+  BuildContext context,
   MiraiSwitch model, {
   required bool isSelected,
   required void Function(bool value) onChanged,
@@ -73,12 +75,12 @@ Widget _buildCupertinoSwitch(
   return CupertinoSwitch(
     value: isSelected,
     onChanged: !model.disabled ? onChanged : null,
-    thumbColor: model.thumbColor?.parse,
+    thumbColor: model.thumbColor?.parse(context),
     dragStartBehavior: model.dragStateBehaviorValue,
-    trackColor: model.trackColor?.parse,
-    activeColor: model.activeColorValue,
+    trackColor: model.trackColor?.parse(context),
+    activeColor: model.activeColorValue(context),
     autofocus: model.autofocus,
-    focusColor: model.focusColorValue,
+    focusColor: model.focusColorValue(context),
   );
 }
 
@@ -91,21 +93,21 @@ Widget _buildAdaptiveSwitch(
   return Switch.adaptive(
     value: isSelected,
     onChanged: !model.disabled ? onChanged : null,
-    activeColor: model.activeColorValue,
-    activeTrackColor: model.activeTrackColorValue,
+    activeColor: model.activeColorValue(context),
+    activeTrackColor: model.activeTrackColorValue(context),
     autofocus: model.autofocus,
-    focusColor: model.focusColorValue,
-    hoverColor: model.hoverColorValue,
-    inactiveThumbColor: model.inactiveThumbColorValue,
-    inactiveTrackColor: model.inactiveTrackColorValue,
+    focusColor: model.focusColorValue(context),
+    hoverColor: model.hoverColorValue(context),
+    inactiveThumbColor: model.inactiveThumbColorValue(context),
+    inactiveTrackColor: model.inactiveTrackColorValue(context),
     splashRadius: model.splashRadius,
     dragStartBehavior: model.dragStateBehaviorValue,
     materialTapTargetSize: model.materialTapTargetSizeValue,
-    overlayColor: MaterialStateProperty.all(model.overlayColor?.parse),
-    thumbColor: MaterialStateProperty.all(model.thumbColor?.parse),
-    trackColor: MaterialStateProperty.all(model.trackColor?.parse),
+    overlayColor: MaterialStateProperty.all(model.overlayColor?.parse(context)),
+    thumbColor: MaterialStateProperty.all(model.thumbColor?.parse(context)),
+    trackColor: MaterialStateProperty.all(model.trackColor?.parse(context)),
     trackOutlineColor:
-        MaterialStateProperty.all(model.trackOutlineColor?.parse),
+        MaterialStateProperty.all(model.trackOutlineColor?.parse(context)),
     trackOutlineWidth: MaterialStateProperty.all(model.trackOutlineWidth),
     thumbIcon: MaterialStateProperty.all(model.thumbIconWidget(context)),
     inactiveThumbImage: model.inactiveThumbImageWidget(context),
@@ -122,21 +124,21 @@ Widget _buildMaterialSwitch(
   return Switch(
     value: isSelected,
     onChanged: !model.disabled ? onChanged : null,
-    activeColor: model.activeColorValue,
-    activeTrackColor: model.activeTrackColorValue,
+    activeColor: model.activeColorValue(context),
+    activeTrackColor: model.activeTrackColorValue(context),
     autofocus: model.autofocus,
-    focusColor: model.focusColorValue,
-    hoverColor: model.hoverColorValue,
-    inactiveThumbColor: model.inactiveThumbColorValue,
-    inactiveTrackColor: model.inactiveTrackColorValue,
+    focusColor: model.focusColorValue(context),
+    hoverColor: model.hoverColorValue(context),
+    inactiveThumbColor: model.inactiveThumbColorValue(context),
+    inactiveTrackColor: model.inactiveTrackColorValue(context),
     splashRadius: model.splashRadius,
     dragStartBehavior: model.dragStateBehaviorValue,
     materialTapTargetSize: model.materialTapTargetSizeValue,
-    overlayColor: MaterialStateProperty.all(model.overlayColor?.parse),
-    thumbColor: MaterialStateProperty.all(model.thumbColor?.parse),
-    trackColor: MaterialStateProperty.all(model.trackColor?.parse),
+    overlayColor: MaterialStateProperty.all(model.overlayColor?.parse(context)),
+    thumbColor: MaterialStateProperty.all(model.thumbColor?.parse(context)),
+    trackColor: MaterialStateProperty.all(model.trackColor?.parse(context)),
     trackOutlineColor:
-        MaterialStateProperty.all(model.trackOutlineColor?.parse),
+        MaterialStateProperty.all(model.trackOutlineColor?.parse(context)),
     trackOutlineWidth: MaterialStateProperty.all(model.trackOutlineWidth),
     thumbIcon: MaterialStateProperty.all(model.thumbIconWidget(context)),
     inactiveThumbImage: model.inactiveThumbImageWidget(context),

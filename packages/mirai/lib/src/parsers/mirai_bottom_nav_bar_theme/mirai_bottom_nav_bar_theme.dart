@@ -30,16 +30,16 @@ class MiraiBottomNavBarThemeData with _$MiraiBottomNavBarThemeData {
 }
 
 extension MiraiBottomNavBarThemeDataParser on MiraiBottomNavBarThemeData {
-  BottomNavigationBarThemeData? get parse {
+  BottomNavigationBarThemeData? parse(BuildContext context) {
     return BottomNavigationBarThemeData(
-      backgroundColor: backgroundColor.toColor,
+      backgroundColor: backgroundColor.toColor(context),
       elevation: elevation,
-      selectedIconTheme: selectedIconTheme?.parse,
-      unselectedIconTheme: unselectedIconTheme?.parse,
-      selectedItemColor: selectedItemColor.toColor,
-      unselectedItemColor: unselectedItemColor.toColor,
-      selectedLabelStyle: selectedLabelStyle?.parse,
-      unselectedLabelStyle: unselectedLabelStyle?.parse,
+      selectedIconTheme: selectedIconTheme?.parse(context),
+      unselectedIconTheme: unselectedIconTheme?.parse(context),
+      selectedItemColor: selectedItemColor.toColor(context),
+      unselectedItemColor: unselectedItemColor.toColor(context),
+      selectedLabelStyle: selectedLabelStyle?.parse(context),
+      unselectedLabelStyle: unselectedLabelStyle?.parse(context),
       showSelectedLabels: showSelectedLabels,
       showUnselectedLabels: showUnselectedLabels,
       type: type,

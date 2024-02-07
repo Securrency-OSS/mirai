@@ -101,8 +101,8 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       enabled: widget.model.enabled,
       cursorWidth: widget.model.cursorWidth,
       cursorHeight: widget.model.cursorHeight,
-      cursorColor: widget.model.cursorColor?.toColor,
-      style: widget.model.style?.parse,
+      cursorColor: widget.model.cursorColor?.toColor(context),
+      style: widget.model.style?.parse(context),
       decoration: _inputDecoration(widget.model),
       inputFormatters: widget.model.inputFormatters
           .map((MiraiInputFormatter formatter) =>

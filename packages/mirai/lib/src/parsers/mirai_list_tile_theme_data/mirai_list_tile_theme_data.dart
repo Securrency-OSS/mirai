@@ -41,20 +41,20 @@ class MiraiListTileThemeData with _$MiraiListTileThemeData {
 }
 
 extension MiraiListTileThemeDataParser on MiraiListTileThemeData {
-  ListTileThemeData get parse {
+  ListTileThemeData parse(BuildContext context) {
     return ListTileThemeData(
       dense: dense,
-      shape: shape?.parse,
+      shape: shape?.parse(context),
       style: style,
-      selectedColor: selectedColor.toColor,
-      iconColor: iconColor.toColor,
-      textColor: textColor.toColor,
-      titleTextStyle: titleTextStyle?.parse,
-      subtitleTextStyle: subtitleTextStyle?.parse,
-      leadingAndTrailingTextStyle: leadingAndTrailingTextStyle?.parse,
+      selectedColor: selectedColor.toColor(context),
+      iconColor: iconColor.toColor(context),
+      textColor: textColor.toColor(context),
+      titleTextStyle: titleTextStyle?.parse(context),
+      subtitleTextStyle: subtitleTextStyle?.parse(context),
+      leadingAndTrailingTextStyle: leadingAndTrailingTextStyle?.parse(context),
       contentPadding: contentPadding.parse,
-      tileColor: tileColor.toColor,
-      selectedTileColor: selectedTileColor.toColor,
+      tileColor: tileColor.toColor(context),
+      selectedTileColor: selectedTileColor.toColor(context),
       horizontalTitleGap: horizontalTitleGap,
       minVerticalPadding: minVerticalPadding,
       minLeadingWidth: minLeadingWidth,

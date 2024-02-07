@@ -136,12 +136,12 @@ class MiraiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (routerDelegate != null || routerConfig != null) {
-      return _materialRouterApp;
+      return _materialRouterApp(context);
     }
-    return _materialApp;
+    return _materialApp(context);
   }
 
-  Widget get _materialApp {
+  Widget _materialApp(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
@@ -162,8 +162,8 @@ class MiraiApp extends StatelessWidget {
       builder: builder,
       title: title,
       onGenerateTitle: onGenerateTitle,
-      theme: theme?.parse,
-      darkTheme: darkTheme?.parse,
+      theme: theme?.parse(context),
+      darkTheme: darkTheme?.parse(context),
       highContrastTheme: highContrastTheme,
       highContrastDarkTheme: highContrastDarkTheme,
       themeMode: themeMode,
@@ -188,7 +188,7 @@ class MiraiApp extends StatelessWidget {
     );
   }
 
-  Widget get _materialRouterApp {
+  Widget _materialRouterApp(BuildContext context) {
     return MaterialApp.router(
       scaffoldMessengerKey: scaffoldMessengerKey,
       routeInformationProvider: routeInformationProvider,
@@ -200,8 +200,8 @@ class MiraiApp extends StatelessWidget {
       title: title,
       onGenerateTitle: onGenerateTitle,
       color: color,
-      theme: theme?.parse,
-      darkTheme: darkTheme?.parse,
+      theme: theme?.parse(context),
+      darkTheme: darkTheme?.parse(context),
       highContrastTheme: highContrastTheme,
       highContrastDarkTheme: highContrastDarkTheme,
       themeMode: themeMode,

@@ -29,18 +29,18 @@ class MiraiDialogTheme with _$MiraiDialogTheme {
 }
 
 extension MiraiDialogThemeParser on MiraiDialogTheme {
-  DialogTheme? get parse {
+  DialogTheme? parse(BuildContext context) {
     return DialogTheme(
-      backgroundColor: backgroundColor.toColor,
+      backgroundColor: backgroundColor.toColor(context),
       elevation: elevation,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
-      shape: shape?.parse,
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      shape: shape?.parse(context),
       alignment: alignment?.parse,
-      titleTextStyle: titleTextStyle?.parse,
-      contentTextStyle: contentTextStyle?.parse,
+      titleTextStyle: titleTextStyle?.parse(context),
+      contentTextStyle: contentTextStyle?.parse(context),
       actionsPadding: actionsPadding.parse,
-      iconColor: iconColor.toColor,
+      iconColor: iconColor.toColor(context),
     );
   }
 }

@@ -34,11 +34,11 @@ class MiraiTextParser extends MiraiParser<MiraiText> {
       textDirection: model.textDirection,
       softWrap: model.softWrap,
       overflow: model.overflow,
-      textScaleFactor: model.textScaleFactor,
+      textScaler: MiraiTextScalerParser.parse(model.textScaler),
       maxLines: model.maxLines,
       semanticsLabel: model.semanticsLabel,
       textWidthBasis: model.textWidthBasis,
-      selectionColor: model.selectionColor.toColor,
+      selectionColor: model.selectionColor.toColor(context),
     );
   }
 }

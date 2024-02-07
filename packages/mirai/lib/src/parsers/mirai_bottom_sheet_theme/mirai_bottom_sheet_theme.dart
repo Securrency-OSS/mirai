@@ -31,18 +31,18 @@ class MiraiBottomSheetThemeData with _$MiraiBottomSheetThemeData {
 }
 
 extension MiraiBottomSheetThemeDataParser on MiraiBottomSheetThemeData {
-  BottomSheetThemeData get parse {
+  BottomSheetThemeData parse(BuildContext context) {
     return BottomSheetThemeData(
-      backgroundColor: backgroundColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
+      backgroundColor: backgroundColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
       elevation: elevation,
-      modalBackgroundColor: modalBackgroundColor.toColor,
-      modalBarrierColor: modalBarrierColor.toColor,
-      shadowColor: shadowColor.toColor,
+      modalBackgroundColor: modalBackgroundColor.toColor(context),
+      modalBarrierColor: modalBarrierColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
       modalElevation: modalElevation,
-      shape: shape?.parse,
+      shape: shape?.parse(context),
       showDragHandle: showDragHandle,
-      dragHandleColor: dragHandleColor.toColor,
+      dragHandleColor: dragHandleColor.toColor(context),
       dragHandleSize: dragHandleSize.parse,
       clipBehavior: clipBehavior,
       constraints: constraints?.parse,

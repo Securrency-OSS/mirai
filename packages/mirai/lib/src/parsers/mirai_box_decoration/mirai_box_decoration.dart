@@ -29,16 +29,16 @@ class MiraiBoxDecoration with _$MiraiBoxDecoration {
 }
 
 extension MiraiBoxDecorationParser on MiraiBoxDecoration? {
-  BoxDecoration? get parse {
+  BoxDecoration? parse(BuildContext context) {
     return BoxDecoration(
-      color: this?.color.toColor,
+      color: this?.color.toColor(context),
       backgroundBlendMode: this?.blendMode,
-      boxShadow: this?.boxShadow?.map((elem) => elem.parse).toList(),
+      boxShadow: this?.boxShadow?.map((elem) => elem.parse(context)).toList(),
       shape: this?.shape ?? BoxShape.rectangle,
-      border: this?.border?.parse,
+      border: this?.border?.parse(context),
       borderRadius: this?.borderRadius.parse,
       image: this?.image.parse,
-      gradient: this?.gradient?.parse,
+      gradient: this?.gradient?.parse(context),
     );
   }
 }

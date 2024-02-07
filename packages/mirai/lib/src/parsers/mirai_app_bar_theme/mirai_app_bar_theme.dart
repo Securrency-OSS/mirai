@@ -32,22 +32,22 @@ class MiraiAppBarTheme with _$MiraiAppBarTheme {
 }
 
 extension MiraiAppBarThemeParser on MiraiAppBarTheme {
-  AppBarTheme? get parse {
+  AppBarTheme? parse(BuildContext context) {
     return AppBarTheme(
-      backgroundColor: backgroundColor.toColor,
-      foregroundColor: foregroundColor.toColor,
+      backgroundColor: backgroundColor.toColor(context),
+      foregroundColor: foregroundColor.toColor(context),
       elevation: elevation,
       scrolledUnderElevation: scrolledUnderElevation,
-      shadowColor: shadowColor.toColor,
-      surfaceTintColor: surfaceTintColor.toColor,
-      iconTheme: iconTheme?.parse,
-      actionsIconTheme: actionsIconTheme?.parse,
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      iconTheme: iconTheme?.parse(context),
+      actionsIconTheme: actionsIconTheme?.parse(context),
       centerTitle: centerTitle,
       titleSpacing: titleSpacing,
       toolbarHeight: toolbarHeight,
-      toolbarTextStyle: toolbarTextStyle?.parse,
-      titleTextStyle: titleTextStyle?.parse,
-      systemOverlayStyle: systemOverlayStyle?.parse,
+      toolbarTextStyle: toolbarTextStyle?.parse(context),
+      titleTextStyle: titleTextStyle?.parse(context),
+      systemOverlayStyle: systemOverlayStyle?.parse(context),
     );
   }
 }

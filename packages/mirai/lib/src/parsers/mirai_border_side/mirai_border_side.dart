@@ -19,9 +19,9 @@ class MiraiBorderSide with _$MiraiBorderSide {
 }
 
 extension MiraiBorderSideParser on MiraiBorderSide? {
-  BorderSide get parse {
+  BorderSide parse(BuildContext context) {
     return BorderSide(
-      color: this?.color.toColor ?? const Color(0xFF000000),
+      color: this?.color.toColor(context) ?? const Color(0xFF000000),
       width: this?.width ?? 0.0,
       style: this?.borderStyle ?? BorderStyle.solid,
       strokeAlign: this?.strokeAlign ?? 0.0,

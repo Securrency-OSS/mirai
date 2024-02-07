@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/utils/color_utils.dart';
@@ -23,13 +24,14 @@ class MiraiSystemUIOverlayStyle with _$MiraiSystemUIOverlayStyle {
 }
 
 extension MiraiSystemUIOverlayStyleParser on MiraiSystemUIOverlayStyle {
-  SystemUiOverlayStyle get parse {
+  SystemUiOverlayStyle parse(BuildContext context) {
     return SystemUiOverlayStyle(
-      systemNavigationBarColor: systemNavigationBarColor.toColor,
-      systemNavigationBarDividerColor: systemNavigationBarDividerColor.toColor,
+      systemNavigationBarColor: systemNavigationBarColor.toColor(context),
+      systemNavigationBarDividerColor:
+          systemNavigationBarDividerColor.toColor(context),
       systemNavigationBarIconBrightness: systemNavigationBarIconBrightness,
       systemNavigationBarContrastEnforced: systemNavigationBarContrastEnforced,
-      statusBarColor: statusBarColor.toColor,
+      statusBarColor: statusBarColor.toColor(context),
       statusBarBrightness: statusBarBrightness,
       statusBarIconBrightness: statusBarIconBrightness,
       systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,

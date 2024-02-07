@@ -32,9 +32,9 @@ class MiraiGradient with _$MiraiGradient {
 }
 
 extension MiraiGradientParser on MiraiGradient {
-  Gradient? get parse {
+  Gradient? parse(BuildContext context) {
     Gradient linearGradient() => LinearGradient(
-          colors: colors.map((e) => e.toColor!).toList(),
+          colors: colors.map((e) => e.toColor(context)!).toList(),
           begin: begin.value,
           end: end.value,
           stops: stops,
@@ -42,7 +42,7 @@ extension MiraiGradientParser on MiraiGradient {
         );
 
     Gradient radialGradient() => RadialGradient(
-          colors: colors.map((e) => e.toColor!).toList(),
+          colors: colors.map((e) => e.toColor(context)!).toList(),
           stops: stops,
           tileMode: tileMode,
           focal: focal?.parse,
@@ -52,7 +52,7 @@ extension MiraiGradientParser on MiraiGradient {
         );
 
     Gradient sweepGradient() => SweepGradient(
-          colors: colors.map((e) => e.toColor!).toList(),
+          colors: colors.map((e) => e.toColor(context)!).toList(),
           stops: stops,
           center: center.value,
           startAngle: startAngle,

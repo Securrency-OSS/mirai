@@ -19,9 +19,9 @@ class MiraiShadow with _$MiraiShadow {
 }
 
 extension MiraiShadowParser on MiraiShadow {
-  Shadow get parse {
+  Shadow parse(BuildContext context) {
     return Shadow(
-      color: color.toColor!,
+      color: color.toColor(context)!,
       offset: offset.parse,
       blurRadius: blurRadius,
     );
