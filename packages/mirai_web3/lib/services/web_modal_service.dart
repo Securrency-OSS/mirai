@@ -67,7 +67,7 @@ class Web3ModalService {
 
     final signature = await _service.web3App!.request(
       topic: _service.session!.topic!,
-      chainId: _service.selectedChain?.chainId ?? "eip155:1",
+      chainId: _service.selectedChain?.namespace ?? "eip155:1",
       request: SessionRequestParams(
         method: 'personal_sign',
         params: [message, connectedWalletAddress],
