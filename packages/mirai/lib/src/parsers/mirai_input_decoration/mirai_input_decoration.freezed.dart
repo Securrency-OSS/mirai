@@ -12,7 +12,7 @@ part of 'mirai_input_decoration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiInputDecoration _$MiraiInputDecorationFromJson(Map<String, dynamic> json) {
   return _MiraiInputDecoration.fromJson(json);
@@ -649,11 +649,11 @@ class _$MiraiInputDecorationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiInputDecorationCopyWith<$Res>
+abstract class _$$MiraiInputDecorationImplCopyWith<$Res>
     implements $MiraiInputDecorationCopyWith<$Res> {
-  factory _$$_MiraiInputDecorationCopyWith(_$_MiraiInputDecoration value,
-          $Res Function(_$_MiraiInputDecoration) then) =
-      __$$_MiraiInputDecorationCopyWithImpl<$Res>;
+  factory _$$MiraiInputDecorationImplCopyWith(_$MiraiInputDecorationImpl value,
+          $Res Function(_$MiraiInputDecorationImpl) then) =
+      __$$MiraiInputDecorationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -747,11 +747,11 @@ abstract class _$$_MiraiInputDecorationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiInputDecorationCopyWithImpl<$Res>
-    extends _$MiraiInputDecorationCopyWithImpl<$Res, _$_MiraiInputDecoration>
-    implements _$$_MiraiInputDecorationCopyWith<$Res> {
-  __$$_MiraiInputDecorationCopyWithImpl(_$_MiraiInputDecoration _value,
-      $Res Function(_$_MiraiInputDecoration) _then)
+class __$$MiraiInputDecorationImplCopyWithImpl<$Res>
+    extends _$MiraiInputDecorationCopyWithImpl<$Res, _$MiraiInputDecorationImpl>
+    implements _$$MiraiInputDecorationImplCopyWith<$Res> {
+  __$$MiraiInputDecorationImplCopyWithImpl(_$MiraiInputDecorationImpl _value,
+      $Res Function(_$MiraiInputDecorationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -808,7 +808,7 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
     Object? alignLabelWithHint = null,
     Object? constraints = freezed,
   }) {
-    return _then(_$_MiraiInputDecoration(
+    return _then(_$MiraiInputDecorationImpl(
       icon: freezed == icon
           ? _value._icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -1015,8 +1015,8 @@ class __$$_MiraiInputDecorationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiInputDecoration implements _MiraiInputDecoration {
-  const _$_MiraiInputDecoration(
+class _$MiraiInputDecorationImpl implements _MiraiInputDecoration {
+  const _$MiraiInputDecorationImpl(
       {final Map<String, dynamic>? icon,
       this.iconColor,
       final Map<String, dynamic>? label,
@@ -1075,8 +1075,8 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
         _suffixIcon = suffixIcon,
         _counter = counter;
 
-  factory _$_MiraiInputDecoration.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiInputDecorationFromJson(json);
+  factory _$MiraiInputDecorationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiInputDecorationImplFromJson(json);
 
   final Map<String, dynamic>? _icon;
   @override
@@ -1245,10 +1245,10 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiInputDecoration &&
+            other is _$MiraiInputDecorationImpl &&
             const DeepCollectionEquality().equals(other._icon, _icon) &&
             (identical(other.iconColor, iconColor) ||
                 other.iconColor == iconColor) &&
@@ -1401,13 +1401,14 @@ class _$_MiraiInputDecoration implements _MiraiInputDecoration {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiInputDecorationCopyWith<_$_MiraiInputDecoration> get copyWith =>
-      __$$_MiraiInputDecorationCopyWithImpl<_$_MiraiInputDecoration>(
-          this, _$identity);
+  _$$MiraiInputDecorationImplCopyWith<_$MiraiInputDecorationImpl>
+      get copyWith =>
+          __$$MiraiInputDecorationImplCopyWithImpl<_$MiraiInputDecorationImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiInputDecorationToJson(
+    return _$$MiraiInputDecorationImplToJson(
       this,
     );
   }
@@ -1464,10 +1465,10 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
       final bool enabled,
       final String? semanticCounterText,
       final bool alignLabelWithHint,
-      final MiraiBoxConstraints? constraints}) = _$_MiraiInputDecoration;
+      final MiraiBoxConstraints? constraints}) = _$MiraiInputDecorationImpl;
 
   factory _MiraiInputDecoration.fromJson(Map<String, dynamic> json) =
-      _$_MiraiInputDecoration.fromJson;
+      _$MiraiInputDecorationImpl.fromJson;
 
   @override
   Map<String, dynamic>? get icon;
@@ -1571,6 +1572,6 @@ abstract class _MiraiInputDecoration implements MiraiInputDecoration {
   MiraiBoxConstraints? get constraints;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiInputDecorationCopyWith<_$_MiraiInputDecoration> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MiraiInputDecorationImplCopyWith<_$MiraiInputDecorationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

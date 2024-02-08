@@ -12,7 +12,7 @@ part of 'mirai_list_tile_theme_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiListTileThemeData _$MiraiListTileThemeDataFromJson(
     Map<String, dynamic> json) {
@@ -273,11 +273,12 @@ class _$MiraiListTileThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiListTileThemeDataCopyWith<$Res>
+abstract class _$$MiraiListTileThemeDataImplCopyWith<$Res>
     implements $MiraiListTileThemeDataCopyWith<$Res> {
-  factory _$$_MiraiListTileThemeDataCopyWith(_$_MiraiListTileThemeData value,
-          $Res Function(_$_MiraiListTileThemeData) then) =
-      __$$_MiraiListTileThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiListTileThemeDataImplCopyWith(
+          _$MiraiListTileThemeDataImpl value,
+          $Res Function(_$MiraiListTileThemeDataImpl) then) =
+      __$$MiraiListTileThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -316,12 +317,13 @@ abstract class _$$_MiraiListTileThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiListTileThemeDataCopyWithImpl<$Res>
+class __$$MiraiListTileThemeDataImplCopyWithImpl<$Res>
     extends _$MiraiListTileThemeDataCopyWithImpl<$Res,
-        _$_MiraiListTileThemeData>
-    implements _$$_MiraiListTileThemeDataCopyWith<$Res> {
-  __$$_MiraiListTileThemeDataCopyWithImpl(_$_MiraiListTileThemeData _value,
-      $Res Function(_$_MiraiListTileThemeData) _then)
+        _$MiraiListTileThemeDataImpl>
+    implements _$$MiraiListTileThemeDataImplCopyWith<$Res> {
+  __$$MiraiListTileThemeDataImplCopyWithImpl(
+      _$MiraiListTileThemeDataImpl _value,
+      $Res Function(_$MiraiListTileThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -347,7 +349,7 @@ class __$$_MiraiListTileThemeDataCopyWithImpl<$Res>
     Object? titleAlignment = freezed,
     Object? shadows = freezed,
   }) {
-    return _then(_$_MiraiListTileThemeData(
+    return _then(_$MiraiListTileThemeDataImpl(
       dense: freezed == dense
           ? _value.dense
           : dense // ignore: cast_nullable_to_non_nullable
@@ -430,8 +432,8 @@ class __$$_MiraiListTileThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiListTileThemeData implements _MiraiListTileThemeData {
-  const _$_MiraiListTileThemeData(
+class _$MiraiListTileThemeDataImpl implements _MiraiListTileThemeData {
+  const _$MiraiListTileThemeDataImpl(
       {this.dense,
       this.shape,
       this.style,
@@ -453,8 +455,8 @@ class _$_MiraiListTileThemeData implements _MiraiListTileThemeData {
       final List<MiraiShadow>? shadows})
       : _shadows = shadows;
 
-  factory _$_MiraiListTileThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiListTileThemeDataFromJson(json);
+  factory _$MiraiListTileThemeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiListTileThemeDataImplFromJson(json);
 
   @override
   final bool? dense;
@@ -508,10 +510,10 @@ class _$_MiraiListTileThemeData implements _MiraiListTileThemeData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiListTileThemeData &&
+            other is _$MiraiListTileThemeDataImpl &&
             (identical(other.dense, dense) || other.dense == dense) &&
             (identical(other.shape, shape) || other.shape == shape) &&
             (identical(other.style, style) || other.style == style) &&
@@ -578,13 +580,13 @@ class _$_MiraiListTileThemeData implements _MiraiListTileThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiListTileThemeDataCopyWith<_$_MiraiListTileThemeData> get copyWith =>
-      __$$_MiraiListTileThemeDataCopyWithImpl<_$_MiraiListTileThemeData>(
-          this, _$identity);
+  _$$MiraiListTileThemeDataImplCopyWith<_$MiraiListTileThemeDataImpl>
+      get copyWith => __$$MiraiListTileThemeDataImplCopyWithImpl<
+          _$MiraiListTileThemeDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiListTileThemeDataToJson(
+    return _$$MiraiListTileThemeDataImplToJson(
       this,
     );
   }
@@ -610,10 +612,10 @@ abstract class _MiraiListTileThemeData implements MiraiListTileThemeData {
       final bool? enableFeedback,
       final MiraiVisualDensity? visualDensity,
       final ListTileTitleAlignment? titleAlignment,
-      final List<MiraiShadow>? shadows}) = _$_MiraiListTileThemeData;
+      final List<MiraiShadow>? shadows}) = _$MiraiListTileThemeDataImpl;
 
   factory _MiraiListTileThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiListTileThemeData.fromJson;
+      _$MiraiListTileThemeDataImpl.fromJson;
 
   @override
   bool? get dense;
@@ -655,6 +657,6 @@ abstract class _MiraiListTileThemeData implements MiraiListTileThemeData {
   List<MiraiShadow>? get shadows;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiListTileThemeDataCopyWith<_$_MiraiListTileThemeData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MiraiListTileThemeDataImplCopyWith<_$MiraiListTileThemeDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

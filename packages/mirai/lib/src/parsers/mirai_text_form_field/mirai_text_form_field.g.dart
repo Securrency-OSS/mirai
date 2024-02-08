@@ -6,9 +6,9 @@ part of 'mirai_text_form_field.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
+_$MiraiTextFormFieldImpl _$$MiraiTextFormFieldImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiTextFormField(
+    _$MiraiTextFormFieldImpl(
       id: json['id'] as String?,
       compareId: json['compareId'] as String?,
       decoration: json['decoration'] == null
@@ -77,8 +77,8 @@ _$_MiraiTextFormField _$$_MiraiTextFormFieldFromJson(
           const [],
     );
 
-Map<String, dynamic> _$$_MiraiTextFormFieldToJson(
-        _$_MiraiTextFormField instance) =>
+Map<String, dynamic> _$$MiraiTextFormFieldImplToJson(
+        _$MiraiTextFormFieldImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'compareId': instance.compareId,

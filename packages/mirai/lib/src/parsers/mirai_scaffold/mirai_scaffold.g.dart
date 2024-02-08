@@ -6,8 +6,8 @@ part of 'mirai_scaffold.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiScaffold _$$_MiraiScaffoldFromJson(Map<String, dynamic> json) =>
-    _$_MiraiScaffold(
+_$MiraiScaffoldImpl _$$MiraiScaffoldImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiScaffoldImpl(
       appBar: json['appBar'] as Map<String, dynamic>?,
       body: json['body'] as Map<String, dynamic>?,
       floatingActionButton:
@@ -24,7 +24,7 @@ _$_MiraiScaffold _$$_MiraiScaffoldFromJson(Map<String, dynamic> json) =>
       extendBodyBehindAppBar: json['extendBodyBehindAppBar'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiScaffoldToJson(_$_MiraiScaffold instance) =>
+Map<String, dynamic> _$$MiraiScaffoldImplToJson(_$MiraiScaffoldImpl instance) =>
     <String, dynamic>{
       'appBar': instance.appBar,
       'body': instance.body,

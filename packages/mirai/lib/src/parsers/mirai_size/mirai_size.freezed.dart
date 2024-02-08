@@ -12,7 +12,7 @@ part of 'mirai_size.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiSize _$MiraiSizeFromJson(Map<String, dynamic> json) {
   return _MiraiSize.fromJson(json);
@@ -67,21 +67,22 @@ class _$MiraiSizeCopyWithImpl<$Res, $Val extends MiraiSize>
 }
 
 /// @nodoc
-abstract class _$$_MiraiSizeCopyWith<$Res> implements $MiraiSizeCopyWith<$Res> {
-  factory _$$_MiraiSizeCopyWith(
-          _$_MiraiSize value, $Res Function(_$_MiraiSize) then) =
-      __$$_MiraiSizeCopyWithImpl<$Res>;
+abstract class _$$MiraiSizeImplCopyWith<$Res>
+    implements $MiraiSizeCopyWith<$Res> {
+  factory _$$MiraiSizeImplCopyWith(
+          _$MiraiSizeImpl value, $Res Function(_$MiraiSizeImpl) then) =
+      __$$MiraiSizeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double width, double height});
 }
 
 /// @nodoc
-class __$$_MiraiSizeCopyWithImpl<$Res>
-    extends _$MiraiSizeCopyWithImpl<$Res, _$_MiraiSize>
-    implements _$$_MiraiSizeCopyWith<$Res> {
-  __$$_MiraiSizeCopyWithImpl(
-      _$_MiraiSize _value, $Res Function(_$_MiraiSize) _then)
+class __$$MiraiSizeImplCopyWithImpl<$Res>
+    extends _$MiraiSizeCopyWithImpl<$Res, _$MiraiSizeImpl>
+    implements _$$MiraiSizeImplCopyWith<$Res> {
+  __$$MiraiSizeImplCopyWithImpl(
+      _$MiraiSizeImpl _value, $Res Function(_$MiraiSizeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_MiraiSizeCopyWithImpl<$Res>
     Object? width = null,
     Object? height = null,
   }) {
-    return _then(_$_MiraiSize(
+    return _then(_$MiraiSizeImpl(
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -105,11 +106,11 @@ class __$$_MiraiSizeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiSize implements _MiraiSize {
-  const _$_MiraiSize({required this.width, required this.height});
+class _$MiraiSizeImpl implements _MiraiSize {
+  const _$MiraiSizeImpl({required this.width, required this.height});
 
-  factory _$_MiraiSize.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiSizeFromJson(json);
+  factory _$MiraiSizeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiSizeImplFromJson(json);
 
   @override
   final double width;
@@ -122,10 +123,10 @@ class _$_MiraiSize implements _MiraiSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiSize &&
+            other is _$MiraiSizeImpl &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height));
   }
@@ -137,12 +138,12 @@ class _$_MiraiSize implements _MiraiSize {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiSizeCopyWith<_$_MiraiSize> get copyWith =>
-      __$$_MiraiSizeCopyWithImpl<_$_MiraiSize>(this, _$identity);
+  _$$MiraiSizeImplCopyWith<_$MiraiSizeImpl> get copyWith =>
+      __$$MiraiSizeImplCopyWithImpl<_$MiraiSizeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiSizeToJson(
+    return _$$MiraiSizeImplToJson(
       this,
     );
   }
@@ -151,10 +152,10 @@ class _$_MiraiSize implements _MiraiSize {
 abstract class _MiraiSize implements MiraiSize {
   const factory _MiraiSize(
       {required final double width,
-      required final double height}) = _$_MiraiSize;
+      required final double height}) = _$MiraiSizeImpl;
 
   factory _MiraiSize.fromJson(Map<String, dynamic> json) =
-      _$_MiraiSize.fromJson;
+      _$MiraiSizeImpl.fromJson;
 
   @override
   double get width;
@@ -162,6 +163,6 @@ abstract class _MiraiSize implements MiraiSize {
   double get height;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiSizeCopyWith<_$_MiraiSize> get copyWith =>
+  _$$MiraiSizeImplCopyWith<_$MiraiSizeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,9 +6,9 @@ part of 'mirai_bottom_nav_bar_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBottomNavBarThemeData _$$_MiraiBottomNavBarThemeDataFromJson(
+_$MiraiBottomNavBarThemeDataImpl _$$MiraiBottomNavBarThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBottomNavBarThemeData(
+    _$MiraiBottomNavBarThemeDataImpl(
       backgroundColor: json['backgroundColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       selectedIconTheme: json['selectedIconTheme'] == null
@@ -37,8 +37,8 @@ _$_MiraiBottomNavBarThemeData _$$_MiraiBottomNavBarThemeDataFromJson(
           _$BottomNavigationBarLandscapeLayoutEnumMap, json['landscapeLayout']),
     );
 
-Map<String, dynamic> _$$_MiraiBottomNavBarThemeDataToJson(
-        _$_MiraiBottomNavBarThemeData instance) =>
+Map<String, dynamic> _$$MiraiBottomNavBarThemeDataImplToJson(
+        _$MiraiBottomNavBarThemeDataImpl instance) =>
     <String, dynamic>{
       'backgroundColor': instance.backgroundColor,
       'elevation': instance.elevation,

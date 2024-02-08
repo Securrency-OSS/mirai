@@ -6,8 +6,8 @@ part of 'mirai_list_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiListView _$$_MiraiListViewFromJson(Map<String, dynamic> json) =>
-    _$_MiraiListView(
+_$MiraiListViewImpl _$$MiraiListViewImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiListViewImpl(
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
               Axis.vertical,
@@ -41,7 +41,7 @@ _$_MiraiListView _$$_MiraiListViewFromJson(Map<String, dynamic> json) =>
           Clip.hardEdge,
     );
 
-Map<String, dynamic> _$$_MiraiListViewToJson(_$_MiraiListView instance) =>
+Map<String, dynamic> _$$MiraiListViewImplToJson(_$MiraiListViewImpl instance) =>
     <String, dynamic>{
       'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
       'reverse': instance.reverse,

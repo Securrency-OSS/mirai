@@ -6,8 +6,9 @@ part of 'mirai_tab_bar_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTabBarView _$$_MiraiTabBarViewFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTabBarView(
+_$MiraiTabBarViewImpl _$$MiraiTabBarViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiTabBarViewImpl(
       children: (json['children'] as List<dynamic>)
           .map((e) => e as Map<String, dynamic>)
           .toList(),
@@ -22,7 +23,8 @@ _$_MiraiTabBarView _$$_MiraiTabBarViewFromJson(Map<String, dynamic> json) =>
           Clip.hardEdge,
     );
 
-Map<String, dynamic> _$$_MiraiTabBarViewToJson(_$_MiraiTabBarView instance) =>
+Map<String, dynamic> _$$MiraiTabBarViewImplToJson(
+        _$MiraiTabBarViewImpl instance) =>
     <String, dynamic>{
       'children': instance.children,
       'initialIndex': instance.initialIndex,

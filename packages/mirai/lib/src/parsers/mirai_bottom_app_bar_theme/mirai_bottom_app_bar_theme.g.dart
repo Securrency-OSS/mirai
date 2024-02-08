@@ -6,9 +6,9 @@ part of 'mirai_bottom_app_bar_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBottomAppBarTheme _$$_MiraiBottomAppBarThemeFromJson(
+_$MiraiBottomAppBarThemeImpl _$$MiraiBottomAppBarThemeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBottomAppBarTheme(
+    _$MiraiBottomAppBarThemeImpl(
       color: json['color'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
@@ -19,8 +19,8 @@ _$_MiraiBottomAppBarTheme _$$_MiraiBottomAppBarThemeFromJson(
           : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiBottomAppBarThemeToJson(
-        _$_MiraiBottomAppBarTheme instance) =>
+Map<String, dynamic> _$$MiraiBottomAppBarThemeImplToJson(
+        _$MiraiBottomAppBarThemeImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'elevation': instance.elevation,

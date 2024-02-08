@@ -12,7 +12,7 @@ part of 'mirai_default_tab_controller.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiDefaultTabController _$MiraiDefaultTabControllerFromJson(
     Map<String, dynamic> json) {
@@ -70,25 +70,25 @@ class _$MiraiDefaultTabControllerCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiDefaultTabControllerCopyWith<$Res>
+abstract class _$$MiraiDefaultTabControllerImplCopyWith<$Res>
     implements $MiraiDefaultTabControllerCopyWith<$Res> {
-  factory _$$_MiraiDefaultTabControllerCopyWith(
-          _$_MiraiDefaultTabController value,
-          $Res Function(_$_MiraiDefaultTabController) then) =
-      __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>;
+  factory _$$MiraiDefaultTabControllerImplCopyWith(
+          _$MiraiDefaultTabControllerImpl value,
+          $Res Function(_$MiraiDefaultTabControllerImpl) then) =
+      __$$MiraiDefaultTabControllerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, dynamic> child, int length});
 }
 
 /// @nodoc
-class __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>
+class __$$MiraiDefaultTabControllerImplCopyWithImpl<$Res>
     extends _$MiraiDefaultTabControllerCopyWithImpl<$Res,
-        _$_MiraiDefaultTabController>
-    implements _$$_MiraiDefaultTabControllerCopyWith<$Res> {
-  __$$_MiraiDefaultTabControllerCopyWithImpl(
-      _$_MiraiDefaultTabController _value,
-      $Res Function(_$_MiraiDefaultTabController) _then)
+        _$MiraiDefaultTabControllerImpl>
+    implements _$$MiraiDefaultTabControllerImplCopyWith<$Res> {
+  __$$MiraiDefaultTabControllerImplCopyWithImpl(
+      _$MiraiDefaultTabControllerImpl _value,
+      $Res Function(_$MiraiDefaultTabControllerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +97,7 @@ class __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>
     Object? child = null,
     Object? length = null,
   }) {
-    return _then(_$_MiraiDefaultTabController(
+    return _then(_$MiraiDefaultTabControllerImpl(
       child: null == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -112,13 +112,13 @@ class __$$_MiraiDefaultTabControllerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
-  const _$_MiraiDefaultTabController(
+class _$MiraiDefaultTabControllerImpl implements _MiraiDefaultTabController {
+  const _$MiraiDefaultTabControllerImpl(
       {required final Map<String, dynamic> child, required this.length})
       : _child = child;
 
-  factory _$_MiraiDefaultTabController.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiDefaultTabControllerFromJson(json);
+  factory _$MiraiDefaultTabControllerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiDefaultTabControllerImplFromJson(json);
 
   final Map<String, dynamic> _child;
   @override
@@ -137,10 +137,10 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiDefaultTabController &&
+            other is _$MiraiDefaultTabControllerImpl &&
             const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.length, length) || other.length == length));
   }
@@ -153,13 +153,13 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiDefaultTabControllerCopyWith<_$_MiraiDefaultTabController>
-      get copyWith => __$$_MiraiDefaultTabControllerCopyWithImpl<
-          _$_MiraiDefaultTabController>(this, _$identity);
+  _$$MiraiDefaultTabControllerImplCopyWith<_$MiraiDefaultTabControllerImpl>
+      get copyWith => __$$MiraiDefaultTabControllerImplCopyWithImpl<
+          _$MiraiDefaultTabControllerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiDefaultTabControllerToJson(
+    return _$$MiraiDefaultTabControllerImplToJson(
       this,
     );
   }
@@ -168,10 +168,10 @@ class _$_MiraiDefaultTabController implements _MiraiDefaultTabController {
 abstract class _MiraiDefaultTabController implements MiraiDefaultTabController {
   const factory _MiraiDefaultTabController(
       {required final Map<String, dynamic> child,
-      required final int length}) = _$_MiraiDefaultTabController;
+      required final int length}) = _$MiraiDefaultTabControllerImpl;
 
   factory _MiraiDefaultTabController.fromJson(Map<String, dynamic> json) =
-      _$_MiraiDefaultTabController.fromJson;
+      _$MiraiDefaultTabControllerImpl.fromJson;
 
   @override
   Map<String, dynamic> get child;
@@ -179,6 +179,6 @@ abstract class _MiraiDefaultTabController implements MiraiDefaultTabController {
   int get length;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiDefaultTabControllerCopyWith<_$_MiraiDefaultTabController>
+  _$$MiraiDefaultTabControllerImplCopyWith<_$MiraiDefaultTabControllerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

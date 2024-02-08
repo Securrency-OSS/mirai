@@ -6,15 +6,15 @@ part of 'mirai_input_formatter.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiInputFormatter _$$_MiraiInputFormatterFromJson(
+_$MiraiInputFormatterImpl _$$MiraiInputFormatterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiInputFormatter(
+    _$MiraiInputFormatterImpl(
       type: $enumDecode(_$InputFormatterTypeEnumMap, json['type']),
       rule: json['rule'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiInputFormatterToJson(
-        _$_MiraiInputFormatter instance) =>
+Map<String, dynamic> _$$MiraiInputFormatterImplToJson(
+        _$MiraiInputFormatterImpl instance) =>
     <String, dynamic>{
       'type': _$InputFormatterTypeEnumMap[instance.type]!,
       'rule': instance.rule,

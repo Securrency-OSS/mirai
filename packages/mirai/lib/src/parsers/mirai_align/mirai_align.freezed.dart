@@ -12,7 +12,7 @@ part of 'mirai_align.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiAlign _$MiraiAlignFromJson(Map<String, dynamic> json) {
   return _MiraiAlign.fromJson(json);
@@ -84,11 +84,11 @@ class _$MiraiAlignCopyWithImpl<$Res, $Val extends MiraiAlign>
 }
 
 /// @nodoc
-abstract class _$$_MiraiAlignCopyWith<$Res>
+abstract class _$$MiraiAlignImplCopyWith<$Res>
     implements $MiraiAlignCopyWith<$Res> {
-  factory _$$_MiraiAlignCopyWith(
-          _$_MiraiAlign value, $Res Function(_$_MiraiAlign) then) =
-      __$$_MiraiAlignCopyWithImpl<$Res>;
+  factory _$$MiraiAlignImplCopyWith(
+          _$MiraiAlignImpl value, $Res Function(_$MiraiAlignImpl) then) =
+      __$$MiraiAlignImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_MiraiAlignCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiAlignCopyWithImpl<$Res>
-    extends _$MiraiAlignCopyWithImpl<$Res, _$_MiraiAlign>
-    implements _$$_MiraiAlignCopyWith<$Res> {
-  __$$_MiraiAlignCopyWithImpl(
-      _$_MiraiAlign _value, $Res Function(_$_MiraiAlign) _then)
+class __$$MiraiAlignImplCopyWithImpl<$Res>
+    extends _$MiraiAlignCopyWithImpl<$Res, _$MiraiAlignImpl>
+    implements _$$MiraiAlignImplCopyWith<$Res> {
+  __$$MiraiAlignImplCopyWithImpl(
+      _$MiraiAlignImpl _value, $Res Function(_$MiraiAlignImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +114,7 @@ class __$$_MiraiAlignCopyWithImpl<$Res>
     Object? heightFactor = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiAlign(
+    return _then(_$MiraiAlignImpl(
       alignment: null == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -137,16 +137,16 @@ class __$$_MiraiAlignCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAlign implements _MiraiAlign {
-  const _$_MiraiAlign(
+class _$MiraiAlignImpl implements _MiraiAlign {
+  const _$MiraiAlignImpl(
       {this.alignment = MiraiAlignmentDirectional.center,
       this.widthFactor,
       this.heightFactor,
       final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiAlign.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiAlignFromJson(json);
+  factory _$MiraiAlignImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiAlignImplFromJson(json);
 
   @override
   @JsonKey()
@@ -171,10 +171,10 @@ class _$_MiraiAlign implements _MiraiAlign {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiAlign &&
+            other is _$MiraiAlignImpl &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.widthFactor, widthFactor) ||
@@ -192,12 +192,12 @@ class _$_MiraiAlign implements _MiraiAlign {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiAlignCopyWith<_$_MiraiAlign> get copyWith =>
-      __$$_MiraiAlignCopyWithImpl<_$_MiraiAlign>(this, _$identity);
+  _$$MiraiAlignImplCopyWith<_$MiraiAlignImpl> get copyWith =>
+      __$$MiraiAlignImplCopyWithImpl<_$MiraiAlignImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiAlignToJson(
+    return _$$MiraiAlignImplToJson(
       this,
     );
   }
@@ -208,10 +208,10 @@ abstract class _MiraiAlign implements MiraiAlign {
       {final MiraiAlignmentDirectional alignment,
       final double? widthFactor,
       final double? heightFactor,
-      final Map<String, dynamic>? child}) = _$_MiraiAlign;
+      final Map<String, dynamic>? child}) = _$MiraiAlignImpl;
 
   factory _MiraiAlign.fromJson(Map<String, dynamic> json) =
-      _$_MiraiAlign.fromJson;
+      _$MiraiAlignImpl.fromJson;
 
   @override
   MiraiAlignmentDirectional get alignment;
@@ -223,6 +223,6 @@ abstract class _MiraiAlign implements MiraiAlign {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiAlignCopyWith<_$_MiraiAlign> get copyWith =>
+  _$$MiraiAlignImplCopyWith<_$MiraiAlignImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

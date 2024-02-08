@@ -6,15 +6,15 @@ part of 'mirai_form_validator.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiFormFieldValidator _$$_MiraiFormFieldValidatorFromJson(
+_$MiraiFormFieldValidatorImpl _$$MiraiFormFieldValidatorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiFormFieldValidator(
+    _$MiraiFormFieldValidatorImpl(
       rule: json['rule'] as String,
       message: json['message'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiFormFieldValidatorToJson(
-        _$_MiraiFormFieldValidator instance) =>
+Map<String, dynamic> _$$MiraiFormFieldValidatorImplToJson(
+        _$MiraiFormFieldValidatorImpl instance) =>
     <String, dynamic>{
       'rule': instance.rule,
       'message': instance.message,

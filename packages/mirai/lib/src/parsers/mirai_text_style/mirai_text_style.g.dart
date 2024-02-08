@@ -6,8 +6,8 @@ part of 'mirai_text_style.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTextStyle _$$_MiraiTextStyleFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTextStyle(
+_$MiraiTextStyleImpl _$$MiraiTextStyleImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiTextStyleImpl(
       inherit: json['inherit'] as bool? ?? true,
       color: json['color'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
@@ -26,7 +26,8 @@ _$_MiraiTextStyle _$$_MiraiTextStyleFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiTextStyleToJson(_$_MiraiTextStyle instance) =>
+Map<String, dynamic> _$$MiraiTextStyleImplToJson(
+        _$MiraiTextStyleImpl instance) =>
     <String, dynamic>{
       'inherit': instance.inherit,
       'color': instance.color,

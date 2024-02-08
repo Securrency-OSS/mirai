@@ -6,9 +6,9 @@ part of 'mirai_floating_action_button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiFloatingActionButton _$$_MiraiFloatingActionButtonFromJson(
+_$MiraiFloatingActionButtonImpl _$$MiraiFloatingActionButtonImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiFloatingActionButton(
+    _$MiraiFloatingActionButtonImpl(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       textStyle: json['textStyle'] == null
           ? null
@@ -40,8 +40,8 @@ _$_MiraiFloatingActionButton _$$_MiraiFloatingActionButtonFromJson(
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiFloatingActionButtonToJson(
-        _$_MiraiFloatingActionButton instance) =>
+Map<String, dynamic> _$$MiraiFloatingActionButtonImplToJson(
+        _$MiraiFloatingActionButtonImpl instance) =>
     <String, dynamic>{
       'onPressed': instance.onPressed,
       'textStyle': instance.textStyle,

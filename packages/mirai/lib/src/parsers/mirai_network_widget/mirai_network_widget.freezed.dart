@@ -12,7 +12,7 @@ part of 'mirai_network_widget.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiNetworkWidget _$MiraiNetworkWidgetFromJson(Map<String, dynamic> json) {
   return _MiraiNetworkWidget.fromJson(json);
@@ -72,11 +72,11 @@ class _$MiraiNetworkWidgetCopyWithImpl<$Res, $Val extends MiraiNetworkWidget>
 }
 
 /// @nodoc
-abstract class _$$_MiraiNetworkWidgetCopyWith<$Res>
+abstract class _$$MiraiNetworkWidgetImplCopyWith<$Res>
     implements $MiraiNetworkWidgetCopyWith<$Res> {
-  factory _$$_MiraiNetworkWidgetCopyWith(_$_MiraiNetworkWidget value,
-          $Res Function(_$_MiraiNetworkWidget) then) =
-      __$$_MiraiNetworkWidgetCopyWithImpl<$Res>;
+  factory _$$MiraiNetworkWidgetImplCopyWith(_$MiraiNetworkWidgetImpl value,
+          $Res Function(_$MiraiNetworkWidgetImpl) then) =
+      __$$MiraiNetworkWidgetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({MiraiRequest request});
@@ -86,11 +86,11 @@ abstract class _$$_MiraiNetworkWidgetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiNetworkWidgetCopyWithImpl<$Res>
-    extends _$MiraiNetworkWidgetCopyWithImpl<$Res, _$_MiraiNetworkWidget>
-    implements _$$_MiraiNetworkWidgetCopyWith<$Res> {
-  __$$_MiraiNetworkWidgetCopyWithImpl(
-      _$_MiraiNetworkWidget _value, $Res Function(_$_MiraiNetworkWidget) _then)
+class __$$MiraiNetworkWidgetImplCopyWithImpl<$Res>
+    extends _$MiraiNetworkWidgetCopyWithImpl<$Res, _$MiraiNetworkWidgetImpl>
+    implements _$$MiraiNetworkWidgetImplCopyWith<$Res> {
+  __$$MiraiNetworkWidgetImplCopyWithImpl(_$MiraiNetworkWidgetImpl _value,
+      $Res Function(_$MiraiNetworkWidgetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_MiraiNetworkWidgetCopyWithImpl<$Res>
   $Res call({
     Object? request = null,
   }) {
-    return _then(_$_MiraiNetworkWidget(
+    return _then(_$MiraiNetworkWidgetImpl(
       request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
@@ -109,11 +109,11 @@ class __$$_MiraiNetworkWidgetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiNetworkWidget implements _MiraiNetworkWidget {
-  const _$_MiraiNetworkWidget({required this.request});
+class _$MiraiNetworkWidgetImpl implements _MiraiNetworkWidget {
+  const _$MiraiNetworkWidgetImpl({required this.request});
 
-  factory _$_MiraiNetworkWidget.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiNetworkWidgetFromJson(json);
+  factory _$MiraiNetworkWidgetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiNetworkWidgetImplFromJson(json);
 
   @override
   final MiraiRequest request;
@@ -124,10 +124,10 @@ class _$_MiraiNetworkWidget implements _MiraiNetworkWidget {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiNetworkWidget &&
+            other is _$MiraiNetworkWidgetImpl &&
             (identical(other.request, request) || other.request == request));
   }
 
@@ -138,13 +138,13 @@ class _$_MiraiNetworkWidget implements _MiraiNetworkWidget {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiNetworkWidgetCopyWith<_$_MiraiNetworkWidget> get copyWith =>
-      __$$_MiraiNetworkWidgetCopyWithImpl<_$_MiraiNetworkWidget>(
+  _$$MiraiNetworkWidgetImplCopyWith<_$MiraiNetworkWidgetImpl> get copyWith =>
+      __$$MiraiNetworkWidgetImplCopyWithImpl<_$MiraiNetworkWidgetImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiNetworkWidgetToJson(
+    return _$$MiraiNetworkWidgetImplToJson(
       this,
     );
   }
@@ -152,15 +152,15 @@ class _$_MiraiNetworkWidget implements _MiraiNetworkWidget {
 
 abstract class _MiraiNetworkWidget implements MiraiNetworkWidget {
   const factory _MiraiNetworkWidget({required final MiraiRequest request}) =
-      _$_MiraiNetworkWidget;
+      _$MiraiNetworkWidgetImpl;
 
   factory _MiraiNetworkWidget.fromJson(Map<String, dynamic> json) =
-      _$_MiraiNetworkWidget.fromJson;
+      _$MiraiNetworkWidgetImpl.fromJson;
 
   @override
   MiraiRequest get request;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiNetworkWidgetCopyWith<_$_MiraiNetworkWidget> get copyWith =>
+  _$$MiraiNetworkWidgetImplCopyWith<_$MiraiNetworkWidgetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

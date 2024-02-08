@@ -6,9 +6,9 @@ part of 'mirai_check_box_widget.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiCheckBoxWidget _$$_MiraiCheckBoxWidgetFromJson(
+_$MiraiCheckBoxWidgetImpl _$$MiraiCheckBoxWidgetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiCheckBoxWidget(
+    _$MiraiCheckBoxWidgetImpl(
       id: json['id'] as String?,
       value: json['value'] as bool?,
       activeColor: json['activeColor'] as String?,
@@ -29,8 +29,8 @@ _$_MiraiCheckBoxWidget _$$_MiraiCheckBoxWidgetFromJson(
       isError: json['isError'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiCheckBoxWidgetToJson(
-        _$_MiraiCheckBoxWidget instance) =>
+Map<String, dynamic> _$$MiraiCheckBoxWidgetImplToJson(
+        _$MiraiCheckBoxWidgetImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'value': instance.value,

@@ -12,7 +12,7 @@ part of 'mirai_bottom_app_bar_theme.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiBottomAppBarTheme _$MiraiBottomAppBarThemeFromJson(
     Map<String, dynamic> json) {
@@ -114,11 +114,12 @@ class _$MiraiBottomAppBarThemeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiBottomAppBarThemeCopyWith<$Res>
+abstract class _$$MiraiBottomAppBarThemeImplCopyWith<$Res>
     implements $MiraiBottomAppBarThemeCopyWith<$Res> {
-  factory _$$_MiraiBottomAppBarThemeCopyWith(_$_MiraiBottomAppBarTheme value,
-          $Res Function(_$_MiraiBottomAppBarTheme) then) =
-      __$$_MiraiBottomAppBarThemeCopyWithImpl<$Res>;
+  factory _$$MiraiBottomAppBarThemeImplCopyWith(
+          _$MiraiBottomAppBarThemeImpl value,
+          $Res Function(_$MiraiBottomAppBarThemeImpl) then) =
+      __$$MiraiBottomAppBarThemeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -134,12 +135,13 @@ abstract class _$$_MiraiBottomAppBarThemeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBottomAppBarThemeCopyWithImpl<$Res>
+class __$$MiraiBottomAppBarThemeImplCopyWithImpl<$Res>
     extends _$MiraiBottomAppBarThemeCopyWithImpl<$Res,
-        _$_MiraiBottomAppBarTheme>
-    implements _$$_MiraiBottomAppBarThemeCopyWith<$Res> {
-  __$$_MiraiBottomAppBarThemeCopyWithImpl(_$_MiraiBottomAppBarTheme _value,
-      $Res Function(_$_MiraiBottomAppBarTheme) _then)
+        _$MiraiBottomAppBarThemeImpl>
+    implements _$$MiraiBottomAppBarThemeImplCopyWith<$Res> {
+  __$$MiraiBottomAppBarThemeImplCopyWithImpl(
+      _$MiraiBottomAppBarThemeImpl _value,
+      $Res Function(_$MiraiBottomAppBarThemeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -152,7 +154,7 @@ class __$$_MiraiBottomAppBarThemeCopyWithImpl<$Res>
     Object? shadowColor = freezed,
     Object? padding = freezed,
   }) {
-    return _then(_$_MiraiBottomAppBarTheme(
+    return _then(_$MiraiBottomAppBarThemeImpl(
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -183,8 +185,8 @@ class __$$_MiraiBottomAppBarThemeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBottomAppBarTheme implements _MiraiBottomAppBarTheme {
-  const _$_MiraiBottomAppBarTheme(
+class _$MiraiBottomAppBarThemeImpl implements _MiraiBottomAppBarTheme {
+  const _$MiraiBottomAppBarThemeImpl(
       {this.color,
       this.elevation,
       this.height,
@@ -192,8 +194,8 @@ class _$_MiraiBottomAppBarTheme implements _MiraiBottomAppBarTheme {
       this.shadowColor,
       this.padding});
 
-  factory _$_MiraiBottomAppBarTheme.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBottomAppBarThemeFromJson(json);
+  factory _$MiraiBottomAppBarThemeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBottomAppBarThemeImplFromJson(json);
 
   @override
   final String? color;
@@ -214,10 +216,10 @@ class _$_MiraiBottomAppBarTheme implements _MiraiBottomAppBarTheme {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBottomAppBarTheme &&
+            other is _$MiraiBottomAppBarThemeImpl &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
@@ -237,13 +239,13 @@ class _$_MiraiBottomAppBarTheme implements _MiraiBottomAppBarTheme {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBottomAppBarThemeCopyWith<_$_MiraiBottomAppBarTheme> get copyWith =>
-      __$$_MiraiBottomAppBarThemeCopyWithImpl<_$_MiraiBottomAppBarTheme>(
-          this, _$identity);
+  _$$MiraiBottomAppBarThemeImplCopyWith<_$MiraiBottomAppBarThemeImpl>
+      get copyWith => __$$MiraiBottomAppBarThemeImplCopyWithImpl<
+          _$MiraiBottomAppBarThemeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBottomAppBarThemeToJson(
+    return _$$MiraiBottomAppBarThemeImplToJson(
       this,
     );
   }
@@ -256,10 +258,10 @@ abstract class _MiraiBottomAppBarTheme implements MiraiBottomAppBarTheme {
       final double? height,
       final String? surfaceTintColor,
       final String? shadowColor,
-      final MiraiEdgeInsets? padding}) = _$_MiraiBottomAppBarTheme;
+      final MiraiEdgeInsets? padding}) = _$MiraiBottomAppBarThemeImpl;
 
   factory _MiraiBottomAppBarTheme.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBottomAppBarTheme.fromJson;
+      _$MiraiBottomAppBarThemeImpl.fromJson;
 
   @override
   String? get color;
@@ -275,6 +277,6 @@ abstract class _MiraiBottomAppBarTheme implements MiraiBottomAppBarTheme {
   MiraiEdgeInsets? get padding;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBottomAppBarThemeCopyWith<_$_MiraiBottomAppBarTheme> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MiraiBottomAppBarThemeImplCopyWith<_$MiraiBottomAppBarThemeImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

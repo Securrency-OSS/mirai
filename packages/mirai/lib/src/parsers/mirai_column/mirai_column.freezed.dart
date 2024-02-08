@@ -12,7 +12,7 @@ part of 'mirai_column.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiColumn _$MiraiColumnFromJson(Map<String, dynamic> json) {
   return _MiraiColumn.fromJson(json);
@@ -99,11 +99,11 @@ class _$MiraiColumnCopyWithImpl<$Res, $Val extends MiraiColumn>
 }
 
 /// @nodoc
-abstract class _$$_MiraiColumnCopyWith<$Res>
+abstract class _$$MiraiColumnImplCopyWith<$Res>
     implements $MiraiColumnCopyWith<$Res> {
-  factory _$$_MiraiColumnCopyWith(
-          _$_MiraiColumn value, $Res Function(_$_MiraiColumn) then) =
-      __$$_MiraiColumnCopyWithImpl<$Res>;
+  factory _$$MiraiColumnImplCopyWith(
+          _$MiraiColumnImpl value, $Res Function(_$MiraiColumnImpl) then) =
+      __$$MiraiColumnImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_MiraiColumnCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiColumnCopyWithImpl<$Res>
-    extends _$MiraiColumnCopyWithImpl<$Res, _$_MiraiColumn>
-    implements _$$_MiraiColumnCopyWith<$Res> {
-  __$$_MiraiColumnCopyWithImpl(
-      _$_MiraiColumn _value, $Res Function(_$_MiraiColumn) _then)
+class __$$MiraiColumnImplCopyWithImpl<$Res>
+    extends _$MiraiColumnCopyWithImpl<$Res, _$MiraiColumnImpl>
+    implements _$$MiraiColumnImplCopyWith<$Res> {
+  __$$MiraiColumnImplCopyWithImpl(
+      _$MiraiColumnImpl _value, $Res Function(_$MiraiColumnImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_MiraiColumnCopyWithImpl<$Res>
     Object? verticalDirection = null,
     Object? children = null,
   }) {
-    return _then(_$_MiraiColumn(
+    return _then(_$MiraiColumnImpl(
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_MiraiColumnCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiColumn implements _MiraiColumn {
-  const _$_MiraiColumn(
+class _$MiraiColumnImpl implements _MiraiColumn {
+  const _$MiraiColumnImpl(
       {this.mainAxisAlignment = MainAxisAlignment.start,
       this.crossAxisAlignment = CrossAxisAlignment.center,
       this.mainAxisSize = MainAxisSize.max,
@@ -174,8 +174,8 @@ class _$_MiraiColumn implements _MiraiColumn {
       final List<Map<String, dynamic>> children = const []})
       : _children = children;
 
-  factory _$_MiraiColumn.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiColumnFromJson(json);
+  factory _$MiraiColumnImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiColumnImplFromJson(json);
 
   @override
   @JsonKey()
@@ -206,10 +206,10 @@ class _$_MiraiColumn implements _MiraiColumn {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiColumn &&
+            other is _$MiraiColumnImpl &&
             (identical(other.mainAxisAlignment, mainAxisAlignment) ||
                 other.mainAxisAlignment == mainAxisAlignment) &&
             (identical(other.crossAxisAlignment, crossAxisAlignment) ||
@@ -237,12 +237,12 @@ class _$_MiraiColumn implements _MiraiColumn {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiColumnCopyWith<_$_MiraiColumn> get copyWith =>
-      __$$_MiraiColumnCopyWithImpl<_$_MiraiColumn>(this, _$identity);
+  _$$MiraiColumnImplCopyWith<_$MiraiColumnImpl> get copyWith =>
+      __$$MiraiColumnImplCopyWithImpl<_$MiraiColumnImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiColumnToJson(
+    return _$$MiraiColumnImplToJson(
       this,
     );
   }
@@ -255,10 +255,10 @@ abstract class _MiraiColumn implements MiraiColumn {
       final MainAxisSize mainAxisSize,
       final TextDirection? textDirection,
       final VerticalDirection verticalDirection,
-      final List<Map<String, dynamic>> children}) = _$_MiraiColumn;
+      final List<Map<String, dynamic>> children}) = _$MiraiColumnImpl;
 
   factory _MiraiColumn.fromJson(Map<String, dynamic> json) =
-      _$_MiraiColumn.fromJson;
+      _$MiraiColumnImpl.fromJson;
 
   @override
   MainAxisAlignment get mainAxisAlignment;
@@ -274,6 +274,6 @@ abstract class _MiraiColumn implements MiraiColumn {
   List<Map<String, dynamic>> get children;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiColumnCopyWith<_$_MiraiColumn> get copyWith =>
+  _$$MiraiColumnImplCopyWith<_$MiraiColumnImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

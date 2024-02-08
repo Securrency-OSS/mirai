@@ -6,9 +6,9 @@ part of 'mirai_bottom_sheet_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBottomSheetThemeData _$$_MiraiBottomSheetThemeDataFromJson(
+_$MiraiBottomSheetThemeDataImpl _$$MiraiBottomSheetThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBottomSheetThemeData(
+    _$MiraiBottomSheetThemeDataImpl(
       backgroundColor: json['backgroundColor'] as String?,
       surfaceTintColor: json['surfaceTintColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
@@ -31,8 +31,8 @@ _$_MiraiBottomSheetThemeData _$$_MiraiBottomSheetThemeDataFromJson(
               json['constraints'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiBottomSheetThemeDataToJson(
-        _$_MiraiBottomSheetThemeData instance) =>
+Map<String, dynamic> _$$MiraiBottomSheetThemeDataImplToJson(
+        _$MiraiBottomSheetThemeDataImpl instance) =>
     <String, dynamic>{
       'backgroundColor': instance.backgroundColor,
       'surfaceTintColor': instance.surfaceTintColor,

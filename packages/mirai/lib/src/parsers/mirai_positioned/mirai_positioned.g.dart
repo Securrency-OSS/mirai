@@ -6,8 +6,9 @@ part of 'mirai_positioned.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
-    _$_MiraiPositioned(
+_$MiraiPositionedImpl _$$MiraiPositionedImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiPositionedImpl(
       positionedType: $enumDecodeNullable(
           _$MiraiPositionedTypeEnumMap, json['positionedType']),
       left: (json['left'] as num?)?.toDouble(),
@@ -27,7 +28,8 @@ _$_MiraiPositioned _$$_MiraiPositionedFromJson(Map<String, dynamic> json) =>
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiPositionedToJson(_$_MiraiPositioned instance) =>
+Map<String, dynamic> _$$MiraiPositionedImplToJson(
+        _$MiraiPositionedImpl instance) =>
     <String, dynamic>{
       'positionedType': _$MiraiPositionedTypeEnumMap[instance.positionedType],
       'left': instance.left,

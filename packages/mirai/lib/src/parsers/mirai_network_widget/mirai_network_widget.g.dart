@@ -6,14 +6,14 @@ part of 'mirai_network_widget.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiNetworkWidget _$$_MiraiNetworkWidgetFromJson(
+_$MiraiNetworkWidgetImpl _$$MiraiNetworkWidgetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiNetworkWidget(
+    _$MiraiNetworkWidgetImpl(
       request: MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiNetworkWidgetToJson(
-        _$_MiraiNetworkWidget instance) =>
+Map<String, dynamic> _$$MiraiNetworkWidgetImplToJson(
+        _$MiraiNetworkWidgetImpl instance) =>
     <String, dynamic>{
       'request': instance.request,
     };

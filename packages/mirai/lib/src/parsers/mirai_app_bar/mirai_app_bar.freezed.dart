@@ -12,7 +12,7 @@ part of 'mirai_app_bar.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiAppBar _$MiraiAppBarFromJson(Map<String, dynamic> json) {
   return _MiraiAppBar.fromJson(json);
@@ -216,11 +216,11 @@ class _$MiraiAppBarCopyWithImpl<$Res, $Val extends MiraiAppBar>
 }
 
 /// @nodoc
-abstract class _$$_MiraiAppBarCopyWith<$Res>
+abstract class _$$MiraiAppBarImplCopyWith<$Res>
     implements $MiraiAppBarCopyWith<$Res> {
-  factory _$$_MiraiAppBarCopyWith(
-          _$_MiraiAppBar value, $Res Function(_$_MiraiAppBar) then) =
-      __$$_MiraiAppBarCopyWithImpl<$Res>;
+  factory _$$MiraiAppBarImplCopyWith(
+          _$MiraiAppBarImpl value, $Res Function(_$MiraiAppBarImpl) then) =
+      __$$MiraiAppBarImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -251,11 +251,11 @@ abstract class _$$_MiraiAppBarCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiAppBarCopyWithImpl<$Res>
-    extends _$MiraiAppBarCopyWithImpl<$Res, _$_MiraiAppBar>
-    implements _$$_MiraiAppBarCopyWith<$Res> {
-  __$$_MiraiAppBarCopyWithImpl(
-      _$_MiraiAppBar _value, $Res Function(_$_MiraiAppBar) _then)
+class __$$MiraiAppBarImplCopyWithImpl<$Res>
+    extends _$MiraiAppBarCopyWithImpl<$Res, _$MiraiAppBarImpl>
+    implements _$$MiraiAppBarImplCopyWith<$Res> {
+  __$$MiraiAppBarImplCopyWithImpl(
+      _$MiraiAppBarImpl _value, $Res Function(_$MiraiAppBarImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -281,7 +281,7 @@ class __$$_MiraiAppBarCopyWithImpl<$Res>
     Object? elevation = freezed,
     Object? scrolledUnderElevation = freezed,
   }) {
-    return _then(_$_MiraiAppBar(
+    return _then(_$MiraiAppBarImpl(
       leading: freezed == leading
           ? _value._leading
           : leading // ignore: cast_nullable_to_non_nullable
@@ -364,8 +364,8 @@ class __$$_MiraiAppBarCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAppBar implements _MiraiAppBar {
-  const _$_MiraiAppBar(
+class _$MiraiAppBarImpl implements _MiraiAppBar {
+  const _$MiraiAppBarImpl(
       {final Map<String, dynamic>? leading,
       final Map<String, dynamic>? title,
       this.titleTextStyle,
@@ -390,8 +390,8 @@ class _$_MiraiAppBar implements _MiraiAppBar {
         _actions = actions,
         _bottom = bottom;
 
-  factory _$_MiraiAppBar.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiAppBarFromJson(json);
+  factory _$MiraiAppBarImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiAppBarImplFromJson(json);
 
   final Map<String, dynamic>? _leading;
   @override
@@ -472,10 +472,10 @@ class _$_MiraiAppBar implements _MiraiAppBar {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiAppBar &&
+            other is _$MiraiAppBarImpl &&
             const DeepCollectionEquality().equals(other._leading, _leading) &&
             const DeepCollectionEquality().equals(other._title, _title) &&
             (identical(other.titleTextStyle, titleTextStyle) ||
@@ -539,12 +539,12 @@ class _$_MiraiAppBar implements _MiraiAppBar {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiAppBarCopyWith<_$_MiraiAppBar> get copyWith =>
-      __$$_MiraiAppBarCopyWithImpl<_$_MiraiAppBar>(this, _$identity);
+  _$$MiraiAppBarImplCopyWith<_$MiraiAppBarImpl> get copyWith =>
+      __$$MiraiAppBarImplCopyWithImpl<_$MiraiAppBarImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiAppBarToJson(
+    return _$$MiraiAppBarImplToJson(
       this,
     );
   }
@@ -570,10 +570,10 @@ abstract class _MiraiAppBar implements MiraiAppBar {
       final bool primary,
       final bool? centerTitle,
       final double? elevation,
-      final double? scrolledUnderElevation}) = _$_MiraiAppBar;
+      final double? scrolledUnderElevation}) = _$MiraiAppBarImpl;
 
   factory _MiraiAppBar.fromJson(Map<String, dynamic> json) =
-      _$_MiraiAppBar.fromJson;
+      _$MiraiAppBarImpl.fromJson;
 
   @override
   Map<String, dynamic>? get leading;
@@ -615,6 +615,6 @@ abstract class _MiraiAppBar implements MiraiAppBar {
   double? get scrolledUnderElevation;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiAppBarCopyWith<_$_MiraiAppBar> get copyWith =>
+  _$$MiraiAppBarImplCopyWith<_$MiraiAppBarImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'mirai_visual_density.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiVisualDensity _$MiraiVisualDensityFromJson(Map<String, dynamic> json) {
   return _MiraiVisualDensity.fromJson(json);
@@ -68,22 +68,22 @@ class _$MiraiVisualDensityCopyWithImpl<$Res, $Val extends MiraiVisualDensity>
 }
 
 /// @nodoc
-abstract class _$$_MiraiVisualDensityCopyWith<$Res>
+abstract class _$$MiraiVisualDensityImplCopyWith<$Res>
     implements $MiraiVisualDensityCopyWith<$Res> {
-  factory _$$_MiraiVisualDensityCopyWith(_$_MiraiVisualDensity value,
-          $Res Function(_$_MiraiVisualDensity) then) =
-      __$$_MiraiVisualDensityCopyWithImpl<$Res>;
+  factory _$$MiraiVisualDensityImplCopyWith(_$MiraiVisualDensityImpl value,
+          $Res Function(_$MiraiVisualDensityImpl) then) =
+      __$$MiraiVisualDensityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double horizontal, double vertical});
 }
 
 /// @nodoc
-class __$$_MiraiVisualDensityCopyWithImpl<$Res>
-    extends _$MiraiVisualDensityCopyWithImpl<$Res, _$_MiraiVisualDensity>
-    implements _$$_MiraiVisualDensityCopyWith<$Res> {
-  __$$_MiraiVisualDensityCopyWithImpl(
-      _$_MiraiVisualDensity _value, $Res Function(_$_MiraiVisualDensity) _then)
+class __$$MiraiVisualDensityImplCopyWithImpl<$Res>
+    extends _$MiraiVisualDensityCopyWithImpl<$Res, _$MiraiVisualDensityImpl>
+    implements _$$MiraiVisualDensityImplCopyWith<$Res> {
+  __$$MiraiVisualDensityImplCopyWithImpl(_$MiraiVisualDensityImpl _value,
+      $Res Function(_$MiraiVisualDensityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_MiraiVisualDensityCopyWithImpl<$Res>
     Object? horizontal = null,
     Object? vertical = null,
   }) {
-    return _then(_$_MiraiVisualDensity(
+    return _then(_$MiraiVisualDensityImpl(
       horizontal: null == horizontal
           ? _value.horizontal
           : horizontal // ignore: cast_nullable_to_non_nullable
@@ -107,12 +107,12 @@ class __$$_MiraiVisualDensityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiVisualDensity implements _MiraiVisualDensity {
-  const _$_MiraiVisualDensity(
+class _$MiraiVisualDensityImpl implements _MiraiVisualDensity {
+  const _$MiraiVisualDensityImpl(
       {required this.horizontal, required this.vertical});
 
-  factory _$_MiraiVisualDensity.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiVisualDensityFromJson(json);
+  factory _$MiraiVisualDensityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiVisualDensityImplFromJson(json);
 
   @override
   final double horizontal;
@@ -125,10 +125,10 @@ class _$_MiraiVisualDensity implements _MiraiVisualDensity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiVisualDensity &&
+            other is _$MiraiVisualDensityImpl &&
             (identical(other.horizontal, horizontal) ||
                 other.horizontal == horizontal) &&
             (identical(other.vertical, vertical) ||
@@ -142,13 +142,13 @@ class _$_MiraiVisualDensity implements _MiraiVisualDensity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiVisualDensityCopyWith<_$_MiraiVisualDensity> get copyWith =>
-      __$$_MiraiVisualDensityCopyWithImpl<_$_MiraiVisualDensity>(
+  _$$MiraiVisualDensityImplCopyWith<_$MiraiVisualDensityImpl> get copyWith =>
+      __$$MiraiVisualDensityImplCopyWithImpl<_$MiraiVisualDensityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiVisualDensityToJson(
+    return _$$MiraiVisualDensityImplToJson(
       this,
     );
   }
@@ -157,10 +157,10 @@ class _$_MiraiVisualDensity implements _MiraiVisualDensity {
 abstract class _MiraiVisualDensity implements MiraiVisualDensity {
   const factory _MiraiVisualDensity(
       {required final double horizontal,
-      required final double vertical}) = _$_MiraiVisualDensity;
+      required final double vertical}) = _$MiraiVisualDensityImpl;
 
   factory _MiraiVisualDensity.fromJson(Map<String, dynamic> json) =
-      _$_MiraiVisualDensity.fromJson;
+      _$MiraiVisualDensityImpl.fromJson;
 
   @override
   double get horizontal;
@@ -168,6 +168,6 @@ abstract class _MiraiVisualDensity implements MiraiVisualDensity {
   double get vertical;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiVisualDensityCopyWith<_$_MiraiVisualDensity> get copyWith =>
+  _$$MiraiVisualDensityImplCopyWith<_$MiraiVisualDensityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

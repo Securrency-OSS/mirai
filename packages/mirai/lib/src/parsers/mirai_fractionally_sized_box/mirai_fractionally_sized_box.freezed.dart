@@ -12,7 +12,7 @@ part of 'mirai_fractionally_sized_box.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiFractionallySizedBox _$MiraiFractionallySizedBoxFromJson(
     Map<String, dynamic> json) {
@@ -86,12 +86,12 @@ class _$MiraiFractionallySizedBoxCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiFractionallySizedBoxCopyWith<$Res>
+abstract class _$$MiraiFractionallySizedBoxImplCopyWith<$Res>
     implements $MiraiFractionallySizedBoxCopyWith<$Res> {
-  factory _$$_MiraiFractionallySizedBoxCopyWith(
-          _$_MiraiFractionallySizedBox value,
-          $Res Function(_$_MiraiFractionallySizedBox) then) =
-      __$$_MiraiFractionallySizedBoxCopyWithImpl<$Res>;
+  factory _$$MiraiFractionallySizedBoxImplCopyWith(
+          _$MiraiFractionallySizedBoxImpl value,
+          $Res Function(_$MiraiFractionallySizedBoxImpl) then) =
+      __$$MiraiFractionallySizedBoxImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,13 +102,13 @@ abstract class _$$_MiraiFractionallySizedBoxCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiFractionallySizedBoxCopyWithImpl<$Res>
+class __$$MiraiFractionallySizedBoxImplCopyWithImpl<$Res>
     extends _$MiraiFractionallySizedBoxCopyWithImpl<$Res,
-        _$_MiraiFractionallySizedBox>
-    implements _$$_MiraiFractionallySizedBoxCopyWith<$Res> {
-  __$$_MiraiFractionallySizedBoxCopyWithImpl(
-      _$_MiraiFractionallySizedBox _value,
-      $Res Function(_$_MiraiFractionallySizedBox) _then)
+        _$MiraiFractionallySizedBoxImpl>
+    implements _$$MiraiFractionallySizedBoxImplCopyWith<$Res> {
+  __$$MiraiFractionallySizedBoxImplCopyWithImpl(
+      _$MiraiFractionallySizedBoxImpl _value,
+      $Res Function(_$MiraiFractionallySizedBoxImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +119,7 @@ class __$$_MiraiFractionallySizedBoxCopyWithImpl<$Res>
     Object? heightFactor = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiFractionallySizedBox(
+    return _then(_$MiraiFractionallySizedBoxImpl(
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -142,16 +142,16 @@ class __$$_MiraiFractionallySizedBoxCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFractionallySizedBox implements _MiraiFractionallySizedBox {
-  const _$_MiraiFractionallySizedBox(
+class _$MiraiFractionallySizedBoxImpl implements _MiraiFractionallySizedBox {
+  const _$MiraiFractionallySizedBoxImpl(
       {this.alignment,
       this.widthFactor,
       this.heightFactor,
       final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiFractionallySizedBox.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFractionallySizedBoxFromJson(json);
+  factory _$MiraiFractionallySizedBoxImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFractionallySizedBoxImplFromJson(json);
 
   @override
   final MiraiAlignment? alignment;
@@ -175,10 +175,10 @@ class _$_MiraiFractionallySizedBox implements _MiraiFractionallySizedBox {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFractionallySizedBox &&
+            other is _$MiraiFractionallySizedBoxImpl &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.widthFactor, widthFactor) ||
@@ -196,13 +196,13 @@ class _$_MiraiFractionallySizedBox implements _MiraiFractionallySizedBox {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFractionallySizedBoxCopyWith<_$_MiraiFractionallySizedBox>
-      get copyWith => __$$_MiraiFractionallySizedBoxCopyWithImpl<
-          _$_MiraiFractionallySizedBox>(this, _$identity);
+  _$$MiraiFractionallySizedBoxImplCopyWith<_$MiraiFractionallySizedBoxImpl>
+      get copyWith => __$$MiraiFractionallySizedBoxImplCopyWithImpl<
+          _$MiraiFractionallySizedBoxImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFractionallySizedBoxToJson(
+    return _$$MiraiFractionallySizedBoxImplToJson(
       this,
     );
   }
@@ -213,10 +213,10 @@ abstract class _MiraiFractionallySizedBox implements MiraiFractionallySizedBox {
       {final MiraiAlignment? alignment,
       final double? widthFactor,
       final double? heightFactor,
-      final Map<String, dynamic>? child}) = _$_MiraiFractionallySizedBox;
+      final Map<String, dynamic>? child}) = _$MiraiFractionallySizedBoxImpl;
 
   factory _MiraiFractionallySizedBox.fromJson(Map<String, dynamic> json) =
-      _$_MiraiFractionallySizedBox.fromJson;
+      _$MiraiFractionallySizedBoxImpl.fromJson;
 
   @override
   MiraiAlignment? get alignment;
@@ -228,6 +228,6 @@ abstract class _MiraiFractionallySizedBox implements MiraiFractionallySizedBox {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFractionallySizedBoxCopyWith<_$_MiraiFractionallySizedBox>
+  _$$MiraiFractionallySizedBoxImplCopyWith<_$MiraiFractionallySizedBoxImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

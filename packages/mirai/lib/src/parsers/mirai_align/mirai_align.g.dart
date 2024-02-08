@@ -6,8 +6,8 @@ part of 'mirai_align.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiAlign _$$_MiraiAlignFromJson(Map<String, dynamic> json) =>
-    _$_MiraiAlign(
+_$MiraiAlignImpl _$$MiraiAlignImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiAlignImpl(
       alignment: $enumDecodeNullable(
               _$MiraiAlignmentDirectionalEnumMap, json['alignment']) ??
           MiraiAlignmentDirectional.center,
@@ -16,7 +16,7 @@ _$_MiraiAlign _$$_MiraiAlignFromJson(Map<String, dynamic> json) =>
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiAlignToJson(_$_MiraiAlign instance) =>
+Map<String, dynamic> _$$MiraiAlignImplToJson(_$MiraiAlignImpl instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentDirectionalEnumMap[instance.alignment]!,
       'widthFactor': instance.widthFactor,

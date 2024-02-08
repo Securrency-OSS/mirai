@@ -6,8 +6,8 @@ part of 'mirai_shadow.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiShadow _$$_MiraiShadowFromJson(Map<String, dynamic> json) =>
-    _$_MiraiShadow(
+_$MiraiShadowImpl _$$MiraiShadowImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiShadowImpl(
       color: json['color'] as String? ?? '#000000',
       offset: json['offset'] == null
           ? const MiraiOffset(dx: 0, dy: 0)
@@ -15,7 +15,7 @@ _$_MiraiShadow _$$_MiraiShadowFromJson(Map<String, dynamic> json) =>
       blurRadius: (json['blurRadius'] as num?)?.toDouble() ?? 0.0,
     );
 
-Map<String, dynamic> _$$_MiraiShadowToJson(_$_MiraiShadow instance) =>
+Map<String, dynamic> _$$MiraiShadowImplToJson(_$MiraiShadowImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'offset': instance.offset,

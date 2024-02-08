@@ -6,8 +6,9 @@ part of 'mirai_dialog_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiDialogTheme _$$_MiraiDialogThemeFromJson(Map<String, dynamic> json) =>
-    _$_MiraiDialogTheme(
+_$MiraiDialogThemeImpl _$$MiraiDialogThemeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiDialogThemeImpl(
       backgroundColor: json['backgroundColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       shadowColor: json['shadowColor'] as String?,
@@ -34,7 +35,8 @@ _$_MiraiDialogTheme _$$_MiraiDialogThemeFromJson(Map<String, dynamic> json) =>
       iconColor: json['iconColor'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiDialogThemeToJson(_$_MiraiDialogTheme instance) =>
+Map<String, dynamic> _$$MiraiDialogThemeImplToJson(
+        _$MiraiDialogThemeImpl instance) =>
     <String, dynamic>{
       'backgroundColor': instance.backgroundColor,
       'elevation': instance.elevation,

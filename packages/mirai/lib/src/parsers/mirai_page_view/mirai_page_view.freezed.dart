@@ -12,7 +12,7 @@ part of 'mirai_page_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiPageView _$MiraiPageViewFromJson(Map<String, dynamic> json) {
   return _MiraiPageView.fromJson(json);
@@ -154,11 +154,11 @@ class _$MiraiPageViewCopyWithImpl<$Res, $Val extends MiraiPageView>
 }
 
 /// @nodoc
-abstract class _$$_MiraiPageViewCopyWith<$Res>
+abstract class _$$MiraiPageViewImplCopyWith<$Res>
     implements $MiraiPageViewCopyWith<$Res> {
-  factory _$$_MiraiPageViewCopyWith(
-          _$_MiraiPageView value, $Res Function(_$_MiraiPageView) then) =
-      __$$_MiraiPageViewCopyWithImpl<$Res>;
+  factory _$$MiraiPageViewImplCopyWith(
+          _$MiraiPageViewImpl value, $Res Function(_$MiraiPageViewImpl) then) =
+      __$$MiraiPageViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -179,11 +179,11 @@ abstract class _$$_MiraiPageViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiPageViewCopyWithImpl<$Res>
-    extends _$MiraiPageViewCopyWithImpl<$Res, _$_MiraiPageView>
-    implements _$$_MiraiPageViewCopyWith<$Res> {
-  __$$_MiraiPageViewCopyWithImpl(
-      _$_MiraiPageView _value, $Res Function(_$_MiraiPageView) _then)
+class __$$MiraiPageViewImplCopyWithImpl<$Res>
+    extends _$MiraiPageViewCopyWithImpl<$Res, _$MiraiPageViewImpl>
+    implements _$$MiraiPageViewImplCopyWith<$Res> {
+  __$$MiraiPageViewImplCopyWithImpl(
+      _$MiraiPageViewImpl _value, $Res Function(_$MiraiPageViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -204,7 +204,7 @@ class __$$_MiraiPageViewCopyWithImpl<$Res>
     Object? viewportFraction = null,
     Object? children = null,
   }) {
-    return _then(_$_MiraiPageView(
+    return _then(_$MiraiPageViewImpl(
       scrollDirection: null == scrollDirection
           ? _value.scrollDirection
           : scrollDirection // ignore: cast_nullable_to_non_nullable
@@ -264,8 +264,8 @@ class __$$_MiraiPageViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiPageView implements _MiraiPageView {
-  const _$_MiraiPageView(
+class _$MiraiPageViewImpl implements _MiraiPageView {
+  const _$MiraiPageViewImpl(
       {this.scrollDirection = Axis.horizontal,
       this.reverse = false,
       this.physics,
@@ -283,8 +283,8 @@ class _$_MiraiPageView implements _MiraiPageView {
       : _onPageChanged = onPageChanged,
         _children = children;
 
-  factory _$_MiraiPageView.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiPageViewFromJson(json);
+  factory _$MiraiPageViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiPageViewImplFromJson(json);
 
   @override
   @JsonKey()
@@ -345,10 +345,10 @@ class _$_MiraiPageView implements _MiraiPageView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiPageView &&
+            other is _$MiraiPageViewImpl &&
             (identical(other.scrollDirection, scrollDirection) ||
                 other.scrollDirection == scrollDirection) &&
             (identical(other.reverse, reverse) || other.reverse == reverse) &&
@@ -396,12 +396,12 @@ class _$_MiraiPageView implements _MiraiPageView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiPageViewCopyWith<_$_MiraiPageView> get copyWith =>
-      __$$_MiraiPageViewCopyWithImpl<_$_MiraiPageView>(this, _$identity);
+  _$$MiraiPageViewImplCopyWith<_$MiraiPageViewImpl> get copyWith =>
+      __$$MiraiPageViewImplCopyWithImpl<_$MiraiPageViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiPageViewToJson(
+    return _$$MiraiPageViewImplToJson(
       this,
     );
   }
@@ -422,10 +422,10 @@ abstract class _MiraiPageView implements MiraiPageView {
       final int initialPage,
       final dynamic keepPage,
       final double viewportFraction,
-      final List<Map<String, dynamic>> children}) = _$_MiraiPageView;
+      final List<Map<String, dynamic>> children}) = _$MiraiPageViewImpl;
 
   factory _MiraiPageView.fromJson(Map<String, dynamic> json) =
-      _$_MiraiPageView.fromJson;
+      _$MiraiPageViewImpl.fromJson;
 
   @override
   Axis get scrollDirection;
@@ -457,6 +457,6 @@ abstract class _MiraiPageView implements MiraiPageView {
   List<Map<String, dynamic>> get children;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiPageViewCopyWith<_$_MiraiPageView> get copyWith =>
+  _$$MiraiPageViewImplCopyWith<_$MiraiPageViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

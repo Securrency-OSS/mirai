@@ -6,8 +6,9 @@ part of 'mirai_button_style.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiButtonStyle _$$_MiraiButtonStyleFromJson(Map<String, dynamic> json) =>
-    _$_MiraiButtonStyle(
+_$MiraiButtonStyleImpl _$$MiraiButtonStyleImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiButtonStyleImpl(
       foregroundColor: json['foregroundColor'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
       disabledForegroundColor: json['disabledForegroundColor'] as String?,
@@ -43,7 +44,8 @@ _$_MiraiButtonStyle _$$_MiraiButtonStyleFromJson(Map<String, dynamic> json) =>
       iconSize: (json['iconSize'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiButtonStyleToJson(_$_MiraiButtonStyle instance) =>
+Map<String, dynamic> _$$MiraiButtonStyleImplToJson(
+        _$MiraiButtonStyleImpl instance) =>
     <String, dynamic>{
       'foregroundColor': instance.foregroundColor,
       'backgroundColor': instance.backgroundColor,

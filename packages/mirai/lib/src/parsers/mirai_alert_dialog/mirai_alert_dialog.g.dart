@@ -6,8 +6,9 @@ part of 'mirai_alert_dialog.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiAlertDialog _$$_MiraiAlertDialogFromJson(Map<String, dynamic> json) =>
-    _$_MiraiAlertDialog(
+_$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiAlertDialogImpl(
       icon: json['icon'] as Map<String, dynamic>?,
       iconPadding: json['iconPadding'] == null
           ? null
@@ -63,7 +64,8 @@ _$_MiraiAlertDialog _$$_MiraiAlertDialogFromJson(Map<String, dynamic> json) =>
       scrollable: json['scrollable'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiAlertDialogToJson(_$_MiraiAlertDialog instance) =>
+Map<String, dynamic> _$$MiraiAlertDialogImplToJson(
+        _$MiraiAlertDialogImpl instance) =>
     <String, dynamic>{
       'icon': instance.icon,
       'iconPadding': instance.iconPadding,

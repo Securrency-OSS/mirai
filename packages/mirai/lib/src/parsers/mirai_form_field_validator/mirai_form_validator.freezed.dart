@@ -12,7 +12,7 @@ part of 'mirai_form_validator.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiFormFieldValidator _$MiraiFormFieldValidatorFromJson(
     Map<String, dynamic> json) {
@@ -70,23 +70,25 @@ class _$MiraiFormFieldValidatorCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiFormFieldValidatorCopyWith<$Res>
+abstract class _$$MiraiFormFieldValidatorImplCopyWith<$Res>
     implements $MiraiFormFieldValidatorCopyWith<$Res> {
-  factory _$$_MiraiFormFieldValidatorCopyWith(_$_MiraiFormFieldValidator value,
-          $Res Function(_$_MiraiFormFieldValidator) then) =
-      __$$_MiraiFormFieldValidatorCopyWithImpl<$Res>;
+  factory _$$MiraiFormFieldValidatorImplCopyWith(
+          _$MiraiFormFieldValidatorImpl value,
+          $Res Function(_$MiraiFormFieldValidatorImpl) then) =
+      __$$MiraiFormFieldValidatorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String rule, String? message});
 }
 
 /// @nodoc
-class __$$_MiraiFormFieldValidatorCopyWithImpl<$Res>
+class __$$MiraiFormFieldValidatorImplCopyWithImpl<$Res>
     extends _$MiraiFormFieldValidatorCopyWithImpl<$Res,
-        _$_MiraiFormFieldValidator>
-    implements _$$_MiraiFormFieldValidatorCopyWith<$Res> {
-  __$$_MiraiFormFieldValidatorCopyWithImpl(_$_MiraiFormFieldValidator _value,
-      $Res Function(_$_MiraiFormFieldValidator) _then)
+        _$MiraiFormFieldValidatorImpl>
+    implements _$$MiraiFormFieldValidatorImplCopyWith<$Res> {
+  __$$MiraiFormFieldValidatorImplCopyWithImpl(
+      _$MiraiFormFieldValidatorImpl _value,
+      $Res Function(_$MiraiFormFieldValidatorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +97,7 @@ class __$$_MiraiFormFieldValidatorCopyWithImpl<$Res>
     Object? rule = null,
     Object? message = freezed,
   }) {
-    return _then(_$_MiraiFormFieldValidator(
+    return _then(_$MiraiFormFieldValidatorImpl(
       rule: null == rule
           ? _value.rule
           : rule // ignore: cast_nullable_to_non_nullable
@@ -110,11 +112,11 @@ class __$$_MiraiFormFieldValidatorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFormFieldValidator implements _MiraiFormFieldValidator {
-  const _$_MiraiFormFieldValidator({required this.rule, this.message});
+class _$MiraiFormFieldValidatorImpl implements _MiraiFormFieldValidator {
+  const _$MiraiFormFieldValidatorImpl({required this.rule, this.message});
 
-  factory _$_MiraiFormFieldValidator.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiFormFieldValidatorFromJson(json);
+  factory _$MiraiFormFieldValidatorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiFormFieldValidatorImplFromJson(json);
 
   @override
   final String rule;
@@ -127,10 +129,10 @@ class _$_MiraiFormFieldValidator implements _MiraiFormFieldValidator {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFormFieldValidator &&
+            other is _$MiraiFormFieldValidatorImpl &&
             (identical(other.rule, rule) || other.rule == rule) &&
             (identical(other.message, message) || other.message == message));
   }
@@ -142,14 +144,13 @@ class _$_MiraiFormFieldValidator implements _MiraiFormFieldValidator {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFormFieldValidatorCopyWith<_$_MiraiFormFieldValidator>
-      get copyWith =>
-          __$$_MiraiFormFieldValidatorCopyWithImpl<_$_MiraiFormFieldValidator>(
-              this, _$identity);
+  _$$MiraiFormFieldValidatorImplCopyWith<_$MiraiFormFieldValidatorImpl>
+      get copyWith => __$$MiraiFormFieldValidatorImplCopyWithImpl<
+          _$MiraiFormFieldValidatorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFormFieldValidatorToJson(
+    return _$$MiraiFormFieldValidatorImplToJson(
       this,
     );
   }
@@ -158,10 +159,10 @@ class _$_MiraiFormFieldValidator implements _MiraiFormFieldValidator {
 abstract class _MiraiFormFieldValidator implements MiraiFormFieldValidator {
   const factory _MiraiFormFieldValidator(
       {required final String rule,
-      final String? message}) = _$_MiraiFormFieldValidator;
+      final String? message}) = _$MiraiFormFieldValidatorImpl;
 
   factory _MiraiFormFieldValidator.fromJson(Map<String, dynamic> json) =
-      _$_MiraiFormFieldValidator.fromJson;
+      _$MiraiFormFieldValidatorImpl.fromJson;
 
   @override
   String get rule;
@@ -169,6 +170,6 @@ abstract class _MiraiFormFieldValidator implements MiraiFormFieldValidator {
   String? get message;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFormFieldValidatorCopyWith<_$_MiraiFormFieldValidator>
+  _$$MiraiFormFieldValidatorImplCopyWith<_$MiraiFormFieldValidatorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
