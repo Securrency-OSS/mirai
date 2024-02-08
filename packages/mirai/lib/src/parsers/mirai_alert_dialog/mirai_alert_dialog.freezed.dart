@@ -12,7 +12,7 @@ part of 'mirai_alert_dialog.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiAlertDialog _$MiraiAlertDialogFromJson(Map<String, dynamic> json) {
   return _MiraiAlertDialog.fromJson(json);
@@ -314,11 +314,11 @@ class _$MiraiAlertDialogCopyWithImpl<$Res, $Val extends MiraiAlertDialog>
 }
 
 /// @nodoc
-abstract class _$$_MiraiAlertDialogCopyWith<$Res>
+abstract class _$$MiraiAlertDialogImplCopyWith<$Res>
     implements $MiraiAlertDialogCopyWith<$Res> {
-  factory _$$_MiraiAlertDialogCopyWith(
-          _$_MiraiAlertDialog value, $Res Function(_$_MiraiAlertDialog) then) =
-      __$$_MiraiAlertDialogCopyWithImpl<$Res>;
+  factory _$$MiraiAlertDialogImplCopyWith(_$MiraiAlertDialogImpl value,
+          $Res Function(_$MiraiAlertDialogImpl) then) =
+      __$$MiraiAlertDialogImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -364,11 +364,11 @@ abstract class _$$_MiraiAlertDialogCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiAlertDialogCopyWithImpl<$Res>
-    extends _$MiraiAlertDialogCopyWithImpl<$Res, _$_MiraiAlertDialog>
-    implements _$$_MiraiAlertDialogCopyWith<$Res> {
-  __$$_MiraiAlertDialogCopyWithImpl(
-      _$_MiraiAlertDialog _value, $Res Function(_$_MiraiAlertDialog) _then)
+class __$$MiraiAlertDialogImplCopyWithImpl<$Res>
+    extends _$MiraiAlertDialogCopyWithImpl<$Res, _$MiraiAlertDialogImpl>
+    implements _$$MiraiAlertDialogImplCopyWith<$Res> {
+  __$$MiraiAlertDialogImplCopyWithImpl(_$MiraiAlertDialogImpl _value,
+      $Res Function(_$MiraiAlertDialogImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -397,7 +397,7 @@ class __$$_MiraiAlertDialogCopyWithImpl<$Res>
     Object? clipBehavior = null,
     Object? scrollable = null,
   }) {
-    return _then(_$_MiraiAlertDialog(
+    return _then(_$MiraiAlertDialogImpl(
       icon: freezed == icon
           ? _value._icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -492,8 +492,8 @@ class __$$_MiraiAlertDialogCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAlertDialog implements _MiraiAlertDialog {
-  const _$_MiraiAlertDialog(
+class _$MiraiAlertDialogImpl implements _MiraiAlertDialog {
+  const _$MiraiAlertDialogImpl(
       {final Map<String, dynamic>? icon,
       this.iconPadding,
       this.iconColor,
@@ -522,8 +522,8 @@ class _$_MiraiAlertDialog implements _MiraiAlertDialog {
         _content = content,
         _actions = actions;
 
-  factory _$_MiraiAlertDialog.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiAlertDialogFromJson(json);
+  factory _$MiraiAlertDialogImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiAlertDialogImplFromJson(json);
 
   final Map<String, dynamic>? _icon;
   @override
@@ -611,10 +611,10 @@ class _$_MiraiAlertDialog implements _MiraiAlertDialog {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiAlertDialog &&
+            other is _$MiraiAlertDialogImpl &&
             const DeepCollectionEquality().equals(other._icon, _icon) &&
             (identical(other.iconPadding, iconPadding) ||
                 other.iconPadding == iconPadding) &&
@@ -692,12 +692,13 @@ class _$_MiraiAlertDialog implements _MiraiAlertDialog {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiAlertDialogCopyWith<_$_MiraiAlertDialog> get copyWith =>
-      __$$_MiraiAlertDialogCopyWithImpl<_$_MiraiAlertDialog>(this, _$identity);
+  _$$MiraiAlertDialogImplCopyWith<_$MiraiAlertDialogImpl> get copyWith =>
+      __$$MiraiAlertDialogImplCopyWithImpl<_$MiraiAlertDialogImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiAlertDialogToJson(
+    return _$$MiraiAlertDialogImplToJson(
       this,
     );
   }
@@ -726,10 +727,10 @@ abstract class _MiraiAlertDialog implements MiraiAlertDialog {
       final String? semanticLabel,
       final MiraiEdgeInsets insetPadding,
       final Clip clipBehavior,
-      final bool scrollable}) = _$_MiraiAlertDialog;
+      final bool scrollable}) = _$MiraiAlertDialogImpl;
 
   factory _MiraiAlertDialog.fromJson(Map<String, dynamic> json) =
-      _$_MiraiAlertDialog.fromJson;
+      _$MiraiAlertDialogImpl.fromJson;
 
   @override
   Map<String, dynamic>? get icon;
@@ -777,6 +778,6 @@ abstract class _MiraiAlertDialog implements MiraiAlertDialog {
   bool get scrollable;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiAlertDialogCopyWith<_$_MiraiAlertDialog> get copyWith =>
+  _$$MiraiAlertDialogImplCopyWith<_$MiraiAlertDialogImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

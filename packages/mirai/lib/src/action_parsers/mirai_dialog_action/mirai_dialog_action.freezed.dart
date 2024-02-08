@@ -12,7 +12,7 @@ part of 'mirai_dialog_action.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiDialogAction _$MiraiDialogActionFromJson(Map<String, dynamic> json) {
   return _MiraiDialogAction.fromJson(json);
@@ -127,11 +127,11 @@ class _$MiraiDialogActionCopyWithImpl<$Res, $Val extends MiraiDialogAction>
 }
 
 /// @nodoc
-abstract class _$$_MiraiDialogActionCopyWith<$Res>
+abstract class _$$MiraiDialogActionImplCopyWith<$Res>
     implements $MiraiDialogActionCopyWith<$Res> {
-  factory _$$_MiraiDialogActionCopyWith(_$_MiraiDialogAction value,
-          $Res Function(_$_MiraiDialogAction) then) =
-      __$$_MiraiDialogActionCopyWithImpl<$Res>;
+  factory _$$MiraiDialogActionImplCopyWith(_$MiraiDialogActionImpl value,
+          $Res Function(_$MiraiDialogActionImpl) then) =
+      __$$MiraiDialogActionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,11 +149,11 @@ abstract class _$$_MiraiDialogActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiDialogActionCopyWithImpl<$Res>
-    extends _$MiraiDialogActionCopyWithImpl<$Res, _$_MiraiDialogAction>
-    implements _$$_MiraiDialogActionCopyWith<$Res> {
-  __$$_MiraiDialogActionCopyWithImpl(
-      _$_MiraiDialogAction _value, $Res Function(_$_MiraiDialogAction) _then)
+class __$$MiraiDialogActionImplCopyWithImpl<$Res>
+    extends _$MiraiDialogActionCopyWithImpl<$Res, _$MiraiDialogActionImpl>
+    implements _$$MiraiDialogActionImplCopyWith<$Res> {
+  __$$MiraiDialogActionImplCopyWithImpl(_$MiraiDialogActionImpl _value,
+      $Res Function(_$MiraiDialogActionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -168,7 +168,7 @@ class __$$_MiraiDialogActionCopyWithImpl<$Res>
     Object? useSafeArea = null,
     Object? traversalEdgeBehavior = freezed,
   }) {
-    return _then(_$_MiraiDialogAction(
+    return _then(_$MiraiDialogActionImpl(
       widget: freezed == widget
           ? _value._widget
           : widget // ignore: cast_nullable_to_non_nullable
@@ -207,8 +207,8 @@ class __$$_MiraiDialogActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiDialogAction implements _MiraiDialogAction {
-  const _$_MiraiDialogAction(
+class _$MiraiDialogActionImpl implements _MiraiDialogAction {
+  const _$MiraiDialogActionImpl(
       {final Map<String, dynamic>? widget,
       this.request,
       this.assetPath,
@@ -219,8 +219,8 @@ class _$_MiraiDialogAction implements _MiraiDialogAction {
       this.traversalEdgeBehavior})
       : _widget = widget;
 
-  factory _$_MiraiDialogAction.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiDialogActionFromJson(json);
+  factory _$MiraiDialogActionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiDialogActionImplFromJson(json);
 
   final Map<String, dynamic>? _widget;
   @override
@@ -255,10 +255,10 @@ class _$_MiraiDialogAction implements _MiraiDialogAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiDialogAction &&
+            other is _$MiraiDialogActionImpl &&
             const DeepCollectionEquality().equals(other._widget, _widget) &&
             (identical(other.request, request) || other.request == request) &&
             (identical(other.assetPath, assetPath) ||
@@ -291,13 +291,13 @@ class _$_MiraiDialogAction implements _MiraiDialogAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiDialogActionCopyWith<_$_MiraiDialogAction> get copyWith =>
-      __$$_MiraiDialogActionCopyWithImpl<_$_MiraiDialogAction>(
+  _$$MiraiDialogActionImplCopyWith<_$MiraiDialogActionImpl> get copyWith =>
+      __$$MiraiDialogActionImplCopyWithImpl<_$MiraiDialogActionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiDialogActionToJson(
+    return _$$MiraiDialogActionImplToJson(
       this,
     );
   }
@@ -313,10 +313,10 @@ abstract class _MiraiDialogAction implements MiraiDialogAction {
           final String? barrierLabel,
           final bool useSafeArea,
           final TraversalEdgeBehavior? traversalEdgeBehavior}) =
-      _$_MiraiDialogAction;
+      _$MiraiDialogActionImpl;
 
   factory _MiraiDialogAction.fromJson(Map<String, dynamic> json) =
-      _$_MiraiDialogAction.fromJson;
+      _$MiraiDialogActionImpl.fromJson;
 
   @override
   Map<String, dynamic>? get widget;
@@ -336,6 +336,6 @@ abstract class _MiraiDialogAction implements MiraiDialogAction {
   TraversalEdgeBehavior? get traversalEdgeBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiDialogActionCopyWith<_$_MiraiDialogAction> get copyWith =>
+  _$$MiraiDialogActionImplCopyWith<_$MiraiDialogActionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'mirai_box_constraints.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiBoxConstraints _$MiraiBoxConstraintsFromJson(Map<String, dynamic> json) {
   return _MiraiBoxConstraints.fromJson(json);
@@ -81,11 +81,11 @@ class _$MiraiBoxConstraintsCopyWithImpl<$Res, $Val extends MiraiBoxConstraints>
 }
 
 /// @nodoc
-abstract class _$$_MiraiBoxConstraintsCopyWith<$Res>
+abstract class _$$MiraiBoxConstraintsImplCopyWith<$Res>
     implements $MiraiBoxConstraintsCopyWith<$Res> {
-  factory _$$_MiraiBoxConstraintsCopyWith(_$_MiraiBoxConstraints value,
-          $Res Function(_$_MiraiBoxConstraints) then) =
-      __$$_MiraiBoxConstraintsCopyWithImpl<$Res>;
+  factory _$$MiraiBoxConstraintsImplCopyWith(_$MiraiBoxConstraintsImpl value,
+          $Res Function(_$MiraiBoxConstraintsImpl) then) =
+      __$$MiraiBoxConstraintsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_MiraiBoxConstraintsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
-    extends _$MiraiBoxConstraintsCopyWithImpl<$Res, _$_MiraiBoxConstraints>
-    implements _$$_MiraiBoxConstraintsCopyWith<$Res> {
-  __$$_MiraiBoxConstraintsCopyWithImpl(_$_MiraiBoxConstraints _value,
-      $Res Function(_$_MiraiBoxConstraints) _then)
+class __$$MiraiBoxConstraintsImplCopyWithImpl<$Res>
+    extends _$MiraiBoxConstraintsCopyWithImpl<$Res, _$MiraiBoxConstraintsImpl>
+    implements _$$MiraiBoxConstraintsImplCopyWith<$Res> {
+  __$$MiraiBoxConstraintsImplCopyWithImpl(_$MiraiBoxConstraintsImpl _value,
+      $Res Function(_$MiraiBoxConstraintsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
     Object? minHeight = null,
     Object? maxHeight = null,
   }) {
-    return _then(_$_MiraiBoxConstraints(
+    return _then(_$MiraiBoxConstraintsImpl(
       minWidth: null == minWidth
           ? _value.minWidth
           : minWidth // ignore: cast_nullable_to_non_nullable
@@ -131,15 +131,15 @@ class __$$_MiraiBoxConstraintsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
-  const _$_MiraiBoxConstraints(
+class _$MiraiBoxConstraintsImpl implements _MiraiBoxConstraints {
+  const _$MiraiBoxConstraintsImpl(
       {required this.minWidth,
       required this.maxWidth,
       required this.minHeight,
       required this.maxHeight});
 
-  factory _$_MiraiBoxConstraints.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBoxConstraintsFromJson(json);
+  factory _$MiraiBoxConstraintsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBoxConstraintsImplFromJson(json);
 
   @override
   final double minWidth;
@@ -156,10 +156,10 @@ class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBoxConstraints &&
+            other is _$MiraiBoxConstraintsImpl &&
             (identical(other.minWidth, minWidth) ||
                 other.minWidth == minWidth) &&
             (identical(other.maxWidth, maxWidth) ||
@@ -178,13 +178,13 @@ class _$_MiraiBoxConstraints implements _MiraiBoxConstraints {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBoxConstraintsCopyWith<_$_MiraiBoxConstraints> get copyWith =>
-      __$$_MiraiBoxConstraintsCopyWithImpl<_$_MiraiBoxConstraints>(
+  _$$MiraiBoxConstraintsImplCopyWith<_$MiraiBoxConstraintsImpl> get copyWith =>
+      __$$MiraiBoxConstraintsImplCopyWithImpl<_$MiraiBoxConstraintsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBoxConstraintsToJson(
+    return _$$MiraiBoxConstraintsImplToJson(
       this,
     );
   }
@@ -195,10 +195,10 @@ abstract class _MiraiBoxConstraints implements MiraiBoxConstraints {
       {required final double minWidth,
       required final double maxWidth,
       required final double minHeight,
-      required final double maxHeight}) = _$_MiraiBoxConstraints;
+      required final double maxHeight}) = _$MiraiBoxConstraintsImpl;
 
   factory _MiraiBoxConstraints.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBoxConstraints.fromJson;
+      _$MiraiBoxConstraintsImpl.fromJson;
 
   @override
   double get minWidth;
@@ -210,6 +210,6 @@ abstract class _MiraiBoxConstraints implements MiraiBoxConstraints {
   double get maxHeight;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBoxConstraintsCopyWith<_$_MiraiBoxConstraints> get copyWith =>
+  _$$MiraiBoxConstraintsImplCopyWith<_$MiraiBoxConstraintsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

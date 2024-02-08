@@ -12,7 +12,7 @@ part of 'mirai_bottom_sheet_theme.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiBottomSheetThemeData _$MiraiBottomSheetThemeDataFromJson(
     Map<String, dynamic> json) {
@@ -189,12 +189,12 @@ class _$MiraiBottomSheetThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiBottomSheetThemeDataCopyWith<$Res>
+abstract class _$$MiraiBottomSheetThemeDataImplCopyWith<$Res>
     implements $MiraiBottomSheetThemeDataCopyWith<$Res> {
-  factory _$$_MiraiBottomSheetThemeDataCopyWith(
-          _$_MiraiBottomSheetThemeData value,
-          $Res Function(_$_MiraiBottomSheetThemeData) then) =
-      __$$_MiraiBottomSheetThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiBottomSheetThemeDataImplCopyWith(
+          _$MiraiBottomSheetThemeDataImpl value,
+          $Res Function(_$MiraiBottomSheetThemeDataImpl) then) =
+      __$$MiraiBottomSheetThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -221,13 +221,13 @@ abstract class _$$_MiraiBottomSheetThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBottomSheetThemeDataCopyWithImpl<$Res>
+class __$$MiraiBottomSheetThemeDataImplCopyWithImpl<$Res>
     extends _$MiraiBottomSheetThemeDataCopyWithImpl<$Res,
-        _$_MiraiBottomSheetThemeData>
-    implements _$$_MiraiBottomSheetThemeDataCopyWith<$Res> {
-  __$$_MiraiBottomSheetThemeDataCopyWithImpl(
-      _$_MiraiBottomSheetThemeData _value,
-      $Res Function(_$_MiraiBottomSheetThemeData) _then)
+        _$MiraiBottomSheetThemeDataImpl>
+    implements _$$MiraiBottomSheetThemeDataImplCopyWith<$Res> {
+  __$$MiraiBottomSheetThemeDataImplCopyWithImpl(
+      _$MiraiBottomSheetThemeDataImpl _value,
+      $Res Function(_$MiraiBottomSheetThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -247,7 +247,7 @@ class __$$_MiraiBottomSheetThemeDataCopyWithImpl<$Res>
     Object? clipBehavior = freezed,
     Object? constraints = freezed,
   }) {
-    return _then(_$_MiraiBottomSheetThemeData(
+    return _then(_$MiraiBottomSheetThemeDataImpl(
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -306,8 +306,8 @@ class __$$_MiraiBottomSheetThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBottomSheetThemeData implements _MiraiBottomSheetThemeData {
-  const _$_MiraiBottomSheetThemeData(
+class _$MiraiBottomSheetThemeDataImpl implements _MiraiBottomSheetThemeData {
+  const _$MiraiBottomSheetThemeDataImpl(
       {this.backgroundColor,
       this.surfaceTintColor,
       this.elevation,
@@ -322,8 +322,8 @@ class _$_MiraiBottomSheetThemeData implements _MiraiBottomSheetThemeData {
       this.clipBehavior,
       this.constraints});
 
-  factory _$_MiraiBottomSheetThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBottomSheetThemeDataFromJson(json);
+  factory _$MiraiBottomSheetThemeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBottomSheetThemeDataImplFromJson(json);
 
   @override
   final String? backgroundColor;
@@ -358,10 +358,10 @@ class _$_MiraiBottomSheetThemeData implements _MiraiBottomSheetThemeData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBottomSheetThemeData &&
+            other is _$MiraiBottomSheetThemeDataImpl &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
             (identical(other.surfaceTintColor, surfaceTintColor) ||
@@ -410,13 +410,13 @@ class _$_MiraiBottomSheetThemeData implements _MiraiBottomSheetThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBottomSheetThemeDataCopyWith<_$_MiraiBottomSheetThemeData>
-      get copyWith => __$$_MiraiBottomSheetThemeDataCopyWithImpl<
-          _$_MiraiBottomSheetThemeData>(this, _$identity);
+  _$$MiraiBottomSheetThemeDataImplCopyWith<_$MiraiBottomSheetThemeDataImpl>
+      get copyWith => __$$MiraiBottomSheetThemeDataImplCopyWithImpl<
+          _$MiraiBottomSheetThemeDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBottomSheetThemeDataToJson(
+    return _$$MiraiBottomSheetThemeDataImplToJson(
       this,
     );
   }
@@ -424,22 +424,23 @@ class _$_MiraiBottomSheetThemeData implements _MiraiBottomSheetThemeData {
 
 abstract class _MiraiBottomSheetThemeData implements MiraiBottomSheetThemeData {
   const factory _MiraiBottomSheetThemeData(
-      {final String? backgroundColor,
-      final String? surfaceTintColor,
-      final double? elevation,
-      final String? modalBackgroundColor,
-      final String? modalBarrierColor,
-      final String? shadowColor,
-      final double? modalElevation,
-      final MiraiBorder? shape,
-      final bool? showDragHandle,
-      final String? dragHandleColor,
-      final MiraiSize? dragHandleSize,
-      final Clip? clipBehavior,
-      final MiraiBoxConstraints? constraints}) = _$_MiraiBottomSheetThemeData;
+          {final String? backgroundColor,
+          final String? surfaceTintColor,
+          final double? elevation,
+          final String? modalBackgroundColor,
+          final String? modalBarrierColor,
+          final String? shadowColor,
+          final double? modalElevation,
+          final MiraiBorder? shape,
+          final bool? showDragHandle,
+          final String? dragHandleColor,
+          final MiraiSize? dragHandleSize,
+          final Clip? clipBehavior,
+          final MiraiBoxConstraints? constraints}) =
+      _$MiraiBottomSheetThemeDataImpl;
 
   factory _MiraiBottomSheetThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBottomSheetThemeData.fromJson;
+      _$MiraiBottomSheetThemeDataImpl.fromJson;
 
   @override
   String? get backgroundColor;
@@ -469,6 +470,6 @@ abstract class _MiraiBottomSheetThemeData implements MiraiBottomSheetThemeData {
   MiraiBoxConstraints? get constraints;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBottomSheetThemeDataCopyWith<_$_MiraiBottomSheetThemeData>
+  _$$MiraiBottomSheetThemeDataImplCopyWith<_$MiraiBottomSheetThemeDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

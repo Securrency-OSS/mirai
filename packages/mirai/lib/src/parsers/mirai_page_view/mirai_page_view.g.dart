@@ -6,8 +6,8 @@ part of 'mirai_page_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiPageView _$$_MiraiPageViewFromJson(Map<String, dynamic> json) =>
-    _$_MiraiPageView(
+_$MiraiPageViewImpl _$$MiraiPageViewImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiPageViewImpl(
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
               Axis.horizontal,
@@ -33,7 +33,7 @@ _$_MiraiPageView _$$_MiraiPageViewFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$$_MiraiPageViewToJson(_$_MiraiPageView instance) =>
+Map<String, dynamic> _$$MiraiPageViewImplToJson(_$MiraiPageViewImpl instance) =>
     <String, dynamic>{
       'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
       'reverse': instance.reverse,

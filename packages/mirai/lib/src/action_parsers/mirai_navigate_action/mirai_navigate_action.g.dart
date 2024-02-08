@@ -6,9 +6,9 @@ part of 'mirai_navigate_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiNavigateAction _$$_MiraiNavigateActionFromJson(
+_$MiraiNavigateActionImpl _$$MiraiNavigateActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiNavigateAction(
+    _$MiraiNavigateActionImpl(
       request: json['request'] == null
           ? null
           : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
@@ -21,8 +21,8 @@ _$_MiraiNavigateAction _$$_MiraiNavigateActionFromJson(
       arguments: json['arguments'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiNavigateActionToJson(
-        _$_MiraiNavigateAction instance) =>
+Map<String, dynamic> _$$MiraiNavigateActionImplToJson(
+        _$MiraiNavigateActionImpl instance) =>
     <String, dynamic>{
       'request': instance.request,
       'widgetJson': instance.widgetJson,

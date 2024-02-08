@@ -6,9 +6,9 @@ part of 'mirai_bottom_navigation_bar.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBottomNavigationBar _$$_MiraiBottomNavigationBarFromJson(
+_$MiraiBottomNavigationBarImpl _$$MiraiBottomNavigationBarImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBottomNavigationBar(
+    _$MiraiBottomNavigationBarImpl(
       items: (json['items'] as List<dynamic>)
           .map((e) =>
               MiraiBottomNavigationBarItem.fromJson(e as Map<String, dynamic>))
@@ -40,8 +40,8 @@ _$_MiraiBottomNavigationBar _$$_MiraiBottomNavigationBarFromJson(
           _$BottomNavigationBarLandscapeLayoutEnumMap, json['landscapeLayout']),
     );
 
-Map<String, dynamic> _$$_MiraiBottomNavigationBarToJson(
-        _$_MiraiBottomNavigationBar instance) =>
+Map<String, dynamic> _$$MiraiBottomNavigationBarImplToJson(
+        _$MiraiBottomNavigationBarImpl instance) =>
     <String, dynamic>{
       'items': instance.items,
       'currentIndex': instance.currentIndex,

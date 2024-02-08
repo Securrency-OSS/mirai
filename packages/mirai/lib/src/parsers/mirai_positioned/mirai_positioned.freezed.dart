@@ -12,7 +12,7 @@ part of 'mirai_positioned.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiPositioned _$MiraiPositionedFromJson(Map<String, dynamic> json) {
   return _MiraiPositioned.fromJson(json);
@@ -154,11 +154,11 @@ class _$MiraiPositionedCopyWithImpl<$Res, $Val extends MiraiPositioned>
 }
 
 /// @nodoc
-abstract class _$$_MiraiPositionedCopyWith<$Res>
+abstract class _$$MiraiPositionedImplCopyWith<$Res>
     implements $MiraiPositionedCopyWith<$Res> {
-  factory _$$_MiraiPositionedCopyWith(
-          _$_MiraiPositioned value, $Res Function(_$_MiraiPositioned) then) =
-      __$$_MiraiPositionedCopyWithImpl<$Res>;
+  factory _$$MiraiPositionedImplCopyWith(_$MiraiPositionedImpl value,
+          $Res Function(_$MiraiPositionedImpl) then) =
+      __$$MiraiPositionedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -180,11 +180,11 @@ abstract class _$$_MiraiPositionedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiPositionedCopyWithImpl<$Res>
-    extends _$MiraiPositionedCopyWithImpl<$Res, _$_MiraiPositioned>
-    implements _$$_MiraiPositionedCopyWith<$Res> {
-  __$$_MiraiPositionedCopyWithImpl(
-      _$_MiraiPositioned _value, $Res Function(_$_MiraiPositioned) _then)
+class __$$MiraiPositionedImplCopyWithImpl<$Res>
+    extends _$MiraiPositionedCopyWithImpl<$Res, _$MiraiPositionedImpl>
+    implements _$$MiraiPositionedImplCopyWith<$Res> {
+  __$$MiraiPositionedImplCopyWithImpl(
+      _$MiraiPositionedImpl _value, $Res Function(_$MiraiPositionedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -203,7 +203,7 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
     Object? rect = freezed,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiPositioned(
+    return _then(_$MiraiPositionedImpl(
       positionedType: freezed == positionedType
           ? _value.positionedType
           : positionedType // ignore: cast_nullable_to_non_nullable
@@ -258,8 +258,8 @@ class __$$_MiraiPositionedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiPositioned implements _MiraiPositioned {
-  const _$_MiraiPositioned(
+class _$MiraiPositionedImpl implements _MiraiPositioned {
+  const _$MiraiPositionedImpl(
       {this.positionedType,
       this.left,
       this.top,
@@ -274,8 +274,8 @@ class _$_MiraiPositioned implements _MiraiPositioned {
       final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiPositioned.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiPositionedFromJson(json);
+  factory _$MiraiPositionedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiPositionedImplFromJson(json);
 
   @override
   final MiraiPositionedType? positionedType;
@@ -316,10 +316,10 @@ class _$_MiraiPositioned implements _MiraiPositioned {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiPositioned &&
+            other is _$MiraiPositionedImpl &&
             (identical(other.positionedType, positionedType) ||
                 other.positionedType == positionedType) &&
             (identical(other.left, left) || other.left == left) &&
@@ -356,12 +356,13 @@ class _$_MiraiPositioned implements _MiraiPositioned {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
-      __$$_MiraiPositionedCopyWithImpl<_$_MiraiPositioned>(this, _$identity);
+  _$$MiraiPositionedImplCopyWith<_$MiraiPositionedImpl> get copyWith =>
+      __$$MiraiPositionedImplCopyWithImpl<_$MiraiPositionedImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiPositionedToJson(
+    return _$$MiraiPositionedImplToJson(
       this,
     );
   }
@@ -380,10 +381,10 @@ abstract class _MiraiPositioned implements MiraiPositioned {
       final double? end,
       final TextDirection textDirection,
       final MiraiRect? rect,
-      final Map<String, dynamic>? child}) = _$_MiraiPositioned;
+      final Map<String, dynamic>? child}) = _$MiraiPositionedImpl;
 
   factory _MiraiPositioned.fromJson(Map<String, dynamic> json) =
-      _$_MiraiPositioned.fromJson;
+      _$MiraiPositionedImpl.fromJson;
 
   @override
   MiraiPositionedType? get positionedType;
@@ -411,6 +412,6 @@ abstract class _MiraiPositioned implements MiraiPositioned {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiPositionedCopyWith<_$_MiraiPositioned> get copyWith =>
+  _$$MiraiPositionedImplCopyWith<_$MiraiPositionedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

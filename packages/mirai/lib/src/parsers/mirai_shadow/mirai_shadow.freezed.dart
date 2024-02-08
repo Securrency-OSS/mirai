@@ -12,7 +12,7 @@ part of 'mirai_shadow.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiShadow _$MiraiShadowFromJson(Map<String, dynamic> json) {
   return _MiraiShadow.fromJson(json);
@@ -84,11 +84,11 @@ class _$MiraiShadowCopyWithImpl<$Res, $Val extends MiraiShadow>
 }
 
 /// @nodoc
-abstract class _$$_MiraiShadowCopyWith<$Res>
+abstract class _$$MiraiShadowImplCopyWith<$Res>
     implements $MiraiShadowCopyWith<$Res> {
-  factory _$$_MiraiShadowCopyWith(
-          _$_MiraiShadow value, $Res Function(_$_MiraiShadow) then) =
-      __$$_MiraiShadowCopyWithImpl<$Res>;
+  factory _$$MiraiShadowImplCopyWith(
+          _$MiraiShadowImpl value, $Res Function(_$MiraiShadowImpl) then) =
+      __$$MiraiShadowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String color, MiraiOffset offset, double blurRadius});
@@ -98,11 +98,11 @@ abstract class _$$_MiraiShadowCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiShadowCopyWithImpl<$Res>
-    extends _$MiraiShadowCopyWithImpl<$Res, _$_MiraiShadow>
-    implements _$$_MiraiShadowCopyWith<$Res> {
-  __$$_MiraiShadowCopyWithImpl(
-      _$_MiraiShadow _value, $Res Function(_$_MiraiShadow) _then)
+class __$$MiraiShadowImplCopyWithImpl<$Res>
+    extends _$MiraiShadowCopyWithImpl<$Res, _$MiraiShadowImpl>
+    implements _$$MiraiShadowImplCopyWith<$Res> {
+  __$$MiraiShadowImplCopyWithImpl(
+      _$MiraiShadowImpl _value, $Res Function(_$MiraiShadowImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,7 +112,7 @@ class __$$_MiraiShadowCopyWithImpl<$Res>
     Object? offset = null,
     Object? blurRadius = null,
   }) {
-    return _then(_$_MiraiShadow(
+    return _then(_$MiraiShadowImpl(
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -131,14 +131,14 @@ class __$$_MiraiShadowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiShadow implements _MiraiShadow {
-  const _$_MiraiShadow(
+class _$MiraiShadowImpl implements _MiraiShadow {
+  const _$MiraiShadowImpl(
       {this.color = '#000000',
       this.offset = const MiraiOffset(dx: 0, dy: 0),
       this.blurRadius = 0.0});
 
-  factory _$_MiraiShadow.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiShadowFromJson(json);
+  factory _$MiraiShadowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiShadowImplFromJson(json);
 
   @override
   @JsonKey()
@@ -156,10 +156,10 @@ class _$_MiraiShadow implements _MiraiShadow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiShadow &&
+            other is _$MiraiShadowImpl &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.offset, offset) || other.offset == offset) &&
             (identical(other.blurRadius, blurRadius) ||
@@ -173,12 +173,12 @@ class _$_MiraiShadow implements _MiraiShadow {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiShadowCopyWith<_$_MiraiShadow> get copyWith =>
-      __$$_MiraiShadowCopyWithImpl<_$_MiraiShadow>(this, _$identity);
+  _$$MiraiShadowImplCopyWith<_$MiraiShadowImpl> get copyWith =>
+      __$$MiraiShadowImplCopyWithImpl<_$MiraiShadowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiShadowToJson(
+    return _$$MiraiShadowImplToJson(
       this,
     );
   }
@@ -188,10 +188,10 @@ abstract class _MiraiShadow implements MiraiShadow {
   const factory _MiraiShadow(
       {final String color,
       final MiraiOffset offset,
-      final double blurRadius}) = _$_MiraiShadow;
+      final double blurRadius}) = _$MiraiShadowImpl;
 
   factory _MiraiShadow.fromJson(Map<String, dynamic> json) =
-      _$_MiraiShadow.fromJson;
+      _$MiraiShadowImpl.fromJson;
 
   @override
   String get color;
@@ -201,6 +201,6 @@ abstract class _MiraiShadow implements MiraiShadow {
   double get blurRadius;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiShadowCopyWith<_$_MiraiShadow> get copyWith =>
+  _$$MiraiShadowImplCopyWith<_$MiraiShadowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

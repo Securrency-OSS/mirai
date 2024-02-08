@@ -6,9 +6,9 @@ part of 'mirai_rounded_rectangle_border.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiRoundedRectangleBorder _$$_MiraiRoundedRectangleBorderFromJson(
+_$MiraiRoundedRectangleBorderImpl _$$MiraiRoundedRectangleBorderImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiRoundedRectangleBorder(
+    _$MiraiRoundedRectangleBorderImpl(
       side: json['side'] == null
           ? null
           : MiraiBorderSide.fromJson(json['side'] as Map<String, dynamic>),
@@ -18,8 +18,8 @@ _$_MiraiRoundedRectangleBorder _$$_MiraiRoundedRectangleBorderFromJson(
               json['borderRadius'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiRoundedRectangleBorderToJson(
-        _$_MiraiRoundedRectangleBorder instance) =>
+Map<String, dynamic> _$$MiraiRoundedRectangleBorderImplToJson(
+        _$MiraiRoundedRectangleBorderImpl instance) =>
     <String, dynamic>{
       'side': instance.side,
       'borderRadius': instance.borderRadius,

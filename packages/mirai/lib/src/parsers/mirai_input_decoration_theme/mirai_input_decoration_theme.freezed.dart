@@ -12,7 +12,7 @@ part of 'mirai_input_decoration_theme.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiInputDecorationTheme _$MiraiInputDecorationThemeFromJson(
     Map<String, dynamic> json) {
@@ -522,12 +522,12 @@ class _$MiraiInputDecorationThemeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiInputDecorationThemeCopyWith<$Res>
+abstract class _$$MiraiInputDecorationThemeImplCopyWith<$Res>
     implements $MiraiInputDecorationThemeCopyWith<$Res> {
-  factory _$$_MiraiInputDecorationThemeCopyWith(
-          _$_MiraiInputDecorationTheme value,
-          $Res Function(_$_MiraiInputDecorationTheme) then) =
-      __$$_MiraiInputDecorationThemeCopyWithImpl<$Res>;
+  factory _$$MiraiInputDecorationThemeImplCopyWith(
+          _$MiraiInputDecorationThemeImpl value,
+          $Res Function(_$MiraiInputDecorationThemeImpl) then) =
+      __$$MiraiInputDecorationThemeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -603,13 +603,13 @@ abstract class _$$_MiraiInputDecorationThemeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiInputDecorationThemeCopyWithImpl<$Res>
+class __$$MiraiInputDecorationThemeImplCopyWithImpl<$Res>
     extends _$MiraiInputDecorationThemeCopyWithImpl<$Res,
-        _$_MiraiInputDecorationTheme>
-    implements _$$_MiraiInputDecorationThemeCopyWith<$Res> {
-  __$$_MiraiInputDecorationThemeCopyWithImpl(
-      _$_MiraiInputDecorationTheme _value,
-      $Res Function(_$_MiraiInputDecorationTheme) _then)
+        _$MiraiInputDecorationThemeImpl>
+    implements _$$MiraiInputDecorationThemeImplCopyWith<$Res> {
+  __$$MiraiInputDecorationThemeImplCopyWithImpl(
+      _$MiraiInputDecorationThemeImpl _value,
+      $Res Function(_$MiraiInputDecorationThemeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -648,7 +648,7 @@ class __$$_MiraiInputDecorationThemeCopyWithImpl<$Res>
     Object? alignLabelWithHint = null,
     Object? constraints = freezed,
   }) {
-    return _then(_$_MiraiInputDecorationTheme(
+    return _then(_$MiraiInputDecorationThemeImpl(
       labelStyle: freezed == labelStyle
           ? _value.labelStyle
           : labelStyle // ignore: cast_nullable_to_non_nullable
@@ -783,8 +783,8 @@ class __$$_MiraiInputDecorationThemeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
-  const _$_MiraiInputDecorationTheme(
+class _$MiraiInputDecorationThemeImpl implements _MiraiInputDecorationTheme {
+  const _$MiraiInputDecorationThemeImpl(
       {this.labelStyle,
       this.floatingLabelStyle,
       this.helperStyle,
@@ -818,8 +818,8 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
       this.alignLabelWithHint = false,
       this.constraints});
 
-  factory _$_MiraiInputDecorationTheme.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiInputDecorationThemeFromJson(json);
+  factory _$MiraiInputDecorationThemeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiInputDecorationThemeImplFromJson(json);
 
   @override
   final MiraiTextStyle? labelStyle;
@@ -896,10 +896,10 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiInputDecorationTheme &&
+            other is _$MiraiInputDecorationThemeImpl &&
             (identical(other.labelStyle, labelStyle) ||
                 other.labelStyle == labelStyle) &&
             (identical(other.floatingLabelStyle, floatingLabelStyle) ||
@@ -1004,13 +1004,13 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiInputDecorationThemeCopyWith<_$_MiraiInputDecorationTheme>
-      get copyWith => __$$_MiraiInputDecorationThemeCopyWithImpl<
-          _$_MiraiInputDecorationTheme>(this, _$identity);
+  _$$MiraiInputDecorationThemeImplCopyWith<_$MiraiInputDecorationThemeImpl>
+      get copyWith => __$$MiraiInputDecorationThemeImplCopyWithImpl<
+          _$MiraiInputDecorationThemeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiInputDecorationThemeToJson(
+    return _$$MiraiInputDecorationThemeImplToJson(
       this,
     );
   }
@@ -1018,41 +1018,42 @@ class _$_MiraiInputDecorationTheme implements _MiraiInputDecorationTheme {
 
 abstract class _MiraiInputDecorationTheme implements MiraiInputDecorationTheme {
   const factory _MiraiInputDecorationTheme(
-      {final MiraiTextStyle? labelStyle,
-      final MiraiTextStyle? floatingLabelStyle,
-      final MiraiTextStyle? helperStyle,
-      final int? helperMaxLines,
-      final MiraiTextStyle? hintStyle,
-      final MiraiTextStyle? errorStyle,
-      final int? errorMaxLines,
-      final FloatingLabelBehavior? floatingLabelBehavior,
-      final MiraiFloatingLabelAlignment? floatingLabelAlignment,
-      final bool isDense,
-      final MiraiEdgeInsets? contentPadding,
-      final bool isCollapsed,
-      final String? iconColor,
-      final MiraiTextStyle? prefixStyle,
-      final String? prefixIconColor,
-      final MiraiTextStyle? suffixStyle,
-      final String? suffixIconColor,
-      final MiraiTextStyle? counterStyle,
-      final bool filled,
-      final String? fillColor,
-      final MiraiBorderSide? activeIndicatorBorder,
-      final MiraiBorderSide? outlineBorder,
-      final String? focusColor,
-      final String? hoverColor,
-      final MiraiInputBorder? errorBorder,
-      final MiraiInputBorder? focusedBorder,
-      final MiraiInputBorder? focusedErrorBorder,
-      final MiraiInputBorder? disabledBorder,
-      final MiraiInputBorder? enabledBorder,
-      final MiraiInputBorder? border,
-      final bool alignLabelWithHint,
-      final MiraiBoxConstraints? constraints}) = _$_MiraiInputDecorationTheme;
+          {final MiraiTextStyle? labelStyle,
+          final MiraiTextStyle? floatingLabelStyle,
+          final MiraiTextStyle? helperStyle,
+          final int? helperMaxLines,
+          final MiraiTextStyle? hintStyle,
+          final MiraiTextStyle? errorStyle,
+          final int? errorMaxLines,
+          final FloatingLabelBehavior? floatingLabelBehavior,
+          final MiraiFloatingLabelAlignment? floatingLabelAlignment,
+          final bool isDense,
+          final MiraiEdgeInsets? contentPadding,
+          final bool isCollapsed,
+          final String? iconColor,
+          final MiraiTextStyle? prefixStyle,
+          final String? prefixIconColor,
+          final MiraiTextStyle? suffixStyle,
+          final String? suffixIconColor,
+          final MiraiTextStyle? counterStyle,
+          final bool filled,
+          final String? fillColor,
+          final MiraiBorderSide? activeIndicatorBorder,
+          final MiraiBorderSide? outlineBorder,
+          final String? focusColor,
+          final String? hoverColor,
+          final MiraiInputBorder? errorBorder,
+          final MiraiInputBorder? focusedBorder,
+          final MiraiInputBorder? focusedErrorBorder,
+          final MiraiInputBorder? disabledBorder,
+          final MiraiInputBorder? enabledBorder,
+          final MiraiInputBorder? border,
+          final bool alignLabelWithHint,
+          final MiraiBoxConstraints? constraints}) =
+      _$MiraiInputDecorationThemeImpl;
 
   factory _MiraiInputDecorationTheme.fromJson(Map<String, dynamic> json) =
-      _$_MiraiInputDecorationTheme.fromJson;
+      _$MiraiInputDecorationThemeImpl.fromJson;
 
   @override
   MiraiTextStyle? get labelStyle;
@@ -1120,6 +1121,6 @@ abstract class _MiraiInputDecorationTheme implements MiraiInputDecorationTheme {
   MiraiBoxConstraints? get constraints;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiInputDecorationThemeCopyWith<_$_MiraiInputDecorationTheme>
+  _$$MiraiInputDecorationThemeImplCopyWith<_$MiraiInputDecorationThemeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

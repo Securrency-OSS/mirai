@@ -6,9 +6,9 @@ part of 'mirai_list_tile_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiListTileThemeData _$$_MiraiListTileThemeDataFromJson(
+_$MiraiListTileThemeDataImpl _$$MiraiListTileThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiListTileThemeData(
+    _$MiraiListTileThemeDataImpl(
       dense: json['dense'] as bool?,
       shape: json['shape'] == null
           ? null
@@ -50,8 +50,8 @@ _$_MiraiListTileThemeData _$$_MiraiListTileThemeDataFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MiraiListTileThemeDataToJson(
-        _$_MiraiListTileThemeData instance) =>
+Map<String, dynamic> _$$MiraiListTileThemeDataImplToJson(
+        _$MiraiListTileThemeDataImpl instance) =>
     <String, dynamic>{
       'dense': instance.dense,
       'shape': instance.shape,

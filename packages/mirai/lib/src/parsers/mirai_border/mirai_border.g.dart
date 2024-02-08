@@ -6,8 +6,8 @@ part of 'mirai_border.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBorder _$$_MiraiBorderFromJson(Map<String, dynamic> json) =>
-    _$_MiraiBorder(
+_$MiraiBorderImpl _$$MiraiBorderImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiBorderImpl(
       color: json['color'] as String?,
       borderStyle:
           $enumDecodeNullable(_$BorderStyleEnumMap, json['borderStyle']) ??
@@ -17,7 +17,7 @@ _$_MiraiBorder _$$_MiraiBorderFromJson(Map<String, dynamic> json) =>
           BorderSide.strokeAlignInside,
     );
 
-Map<String, dynamic> _$$_MiraiBorderToJson(_$_MiraiBorder instance) =>
+Map<String, dynamic> _$$MiraiBorderImplToJson(_$MiraiBorderImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'borderStyle': _$BorderStyleEnumMap[instance.borderStyle]!,

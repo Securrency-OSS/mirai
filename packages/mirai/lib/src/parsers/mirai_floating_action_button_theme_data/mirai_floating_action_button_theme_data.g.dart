@@ -6,9 +6,10 @@ part of 'mirai_floating_action_button_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiFloatingActionButtonThemeData
-    _$$_MiraiFloatingActionButtonThemeDataFromJson(Map<String, dynamic> json) =>
-        _$_MiraiFloatingActionButtonThemeData(
+_$MiraiFloatingActionButtonThemeDataImpl
+    _$$MiraiFloatingActionButtonThemeDataImplFromJson(
+            Map<String, dynamic> json) =>
+        _$MiraiFloatingActionButtonThemeDataImpl(
           foregroundColor: json['foregroundColor'] as String?,
           backgroundColor: json['backgroundColor'] as String?,
           focusColor: json['focusColor'] as String?,
@@ -33,8 +34,8 @@ _$_MiraiFloatingActionButtonThemeData
                   json['extendedTextStyle'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_MiraiFloatingActionButtonThemeDataToJson(
-        _$_MiraiFloatingActionButtonThemeData instance) =>
+Map<String, dynamic> _$$MiraiFloatingActionButtonThemeDataImplToJson(
+        _$MiraiFloatingActionButtonThemeDataImpl instance) =>
     <String, dynamic>{
       'foregroundColor': instance.foregroundColor,
       'backgroundColor': instance.backgroundColor,

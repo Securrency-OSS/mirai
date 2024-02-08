@@ -12,7 +12,7 @@ part of 'mirai_expanded.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiExpanded _$MiraiExpandedFromJson(Map<String, dynamic> json) {
   return _MiraiExpanded.fromJson(json);
@@ -68,22 +68,22 @@ class _$MiraiExpandedCopyWithImpl<$Res, $Val extends MiraiExpanded>
 }
 
 /// @nodoc
-abstract class _$$_MiraiExpandedCopyWith<$Res>
+abstract class _$$MiraiExpandedImplCopyWith<$Res>
     implements $MiraiExpandedCopyWith<$Res> {
-  factory _$$_MiraiExpandedCopyWith(
-          _$_MiraiExpanded value, $Res Function(_$_MiraiExpanded) then) =
-      __$$_MiraiExpandedCopyWithImpl<$Res>;
+  factory _$$MiraiExpandedImplCopyWith(
+          _$MiraiExpandedImpl value, $Res Function(_$MiraiExpandedImpl) then) =
+      __$$MiraiExpandedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int flex, Map<String, dynamic>? child});
 }
 
 /// @nodoc
-class __$$_MiraiExpandedCopyWithImpl<$Res>
-    extends _$MiraiExpandedCopyWithImpl<$Res, _$_MiraiExpanded>
-    implements _$$_MiraiExpandedCopyWith<$Res> {
-  __$$_MiraiExpandedCopyWithImpl(
-      _$_MiraiExpanded _value, $Res Function(_$_MiraiExpanded) _then)
+class __$$MiraiExpandedImplCopyWithImpl<$Res>
+    extends _$MiraiExpandedCopyWithImpl<$Res, _$MiraiExpandedImpl>
+    implements _$$MiraiExpandedImplCopyWith<$Res> {
+  __$$MiraiExpandedImplCopyWithImpl(
+      _$MiraiExpandedImpl _value, $Res Function(_$MiraiExpandedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_MiraiExpandedCopyWithImpl<$Res>
     Object? flex = null,
     Object? child = freezed,
   }) {
-    return _then(_$_MiraiExpanded(
+    return _then(_$MiraiExpandedImpl(
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
@@ -107,12 +107,12 @@ class __$$_MiraiExpandedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiExpanded implements _MiraiExpanded {
-  const _$_MiraiExpanded({this.flex = 1, final Map<String, dynamic>? child})
+class _$MiraiExpandedImpl implements _MiraiExpanded {
+  const _$MiraiExpandedImpl({this.flex = 1, final Map<String, dynamic>? child})
       : _child = child;
 
-  factory _$_MiraiExpanded.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiExpandedFromJson(json);
+  factory _$MiraiExpandedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiExpandedImplFromJson(json);
 
   @override
   @JsonKey()
@@ -133,10 +133,10 @@ class _$_MiraiExpanded implements _MiraiExpanded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiExpanded &&
+            other is _$MiraiExpandedImpl &&
             (identical(other.flex, flex) || other.flex == flex) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
@@ -149,12 +149,12 @@ class _$_MiraiExpanded implements _MiraiExpanded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiExpandedCopyWith<_$_MiraiExpanded> get copyWith =>
-      __$$_MiraiExpandedCopyWithImpl<_$_MiraiExpanded>(this, _$identity);
+  _$$MiraiExpandedImplCopyWith<_$MiraiExpandedImpl> get copyWith =>
+      __$$MiraiExpandedImplCopyWithImpl<_$MiraiExpandedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiExpandedToJson(
+    return _$$MiraiExpandedImplToJson(
       this,
     );
   }
@@ -162,10 +162,11 @@ class _$_MiraiExpanded implements _MiraiExpanded {
 
 abstract class _MiraiExpanded implements MiraiExpanded {
   const factory _MiraiExpanded(
-      {final int flex, final Map<String, dynamic>? child}) = _$_MiraiExpanded;
+      {final int flex,
+      final Map<String, dynamic>? child}) = _$MiraiExpandedImpl;
 
   factory _MiraiExpanded.fromJson(Map<String, dynamic> json) =
-      _$_MiraiExpanded.fromJson;
+      _$MiraiExpandedImpl.fromJson;
 
   @override
   int get flex;
@@ -173,6 +174,6 @@ abstract class _MiraiExpanded implements MiraiExpanded {
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiExpandedCopyWith<_$_MiraiExpanded> get copyWith =>
+  _$$MiraiExpandedImplCopyWith<_$MiraiExpandedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

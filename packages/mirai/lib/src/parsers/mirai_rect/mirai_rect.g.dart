@@ -6,7 +6,8 @@ part of 'mirai_rect.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiRect _$$_MiraiRectFromJson(Map<String, dynamic> json) => _$_MiraiRect(
+_$MiraiRectImpl _$$MiraiRectImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiRectImpl(
       rectType: $enumDecode(_$MiraiRectTypeEnumMap, json['rectType']),
       center: json['center'] == null
           ? null
@@ -26,7 +27,7 @@ _$_MiraiRect _$$_MiraiRectFromJson(Map<String, dynamic> json) => _$_MiraiRect(
       radius: (json['radius'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiRectToJson(_$_MiraiRect instance) =>
+Map<String, dynamic> _$$MiraiRectImplToJson(_$MiraiRectImpl instance) =>
     <String, dynamic>{
       'rectType': _$MiraiRectTypeEnumMap[instance.rectType]!,
       'center': instance.center,

@@ -12,7 +12,7 @@ part of 'mirai_app_bar_theme.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiAppBarTheme _$MiraiAppBarThemeFromJson(Map<String, dynamic> json) {
   return _MiraiAppBarTheme.fromJson(json);
@@ -223,11 +223,11 @@ class _$MiraiAppBarThemeCopyWithImpl<$Res, $Val extends MiraiAppBarTheme>
 }
 
 /// @nodoc
-abstract class _$$_MiraiAppBarThemeCopyWith<$Res>
+abstract class _$$MiraiAppBarThemeImplCopyWith<$Res>
     implements $MiraiAppBarThemeCopyWith<$Res> {
-  factory _$$_MiraiAppBarThemeCopyWith(
-          _$_MiraiAppBarTheme value, $Res Function(_$_MiraiAppBarTheme) then) =
-      __$$_MiraiAppBarThemeCopyWithImpl<$Res>;
+  factory _$$MiraiAppBarThemeImplCopyWith(_$MiraiAppBarThemeImpl value,
+          $Res Function(_$MiraiAppBarThemeImpl) then) =
+      __$$MiraiAppBarThemeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -259,11 +259,11 @@ abstract class _$$_MiraiAppBarThemeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
-    extends _$MiraiAppBarThemeCopyWithImpl<$Res, _$_MiraiAppBarTheme>
-    implements _$$_MiraiAppBarThemeCopyWith<$Res> {
-  __$$_MiraiAppBarThemeCopyWithImpl(
-      _$_MiraiAppBarTheme _value, $Res Function(_$_MiraiAppBarTheme) _then)
+class __$$MiraiAppBarThemeImplCopyWithImpl<$Res>
+    extends _$MiraiAppBarThemeCopyWithImpl<$Res, _$MiraiAppBarThemeImpl>
+    implements _$$MiraiAppBarThemeImplCopyWith<$Res> {
+  __$$MiraiAppBarThemeImplCopyWithImpl(_$MiraiAppBarThemeImpl _value,
+      $Res Function(_$MiraiAppBarThemeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -284,7 +284,7 @@ class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
     Object? titleTextStyle = freezed,
     Object? systemOverlayStyle = freezed,
   }) {
-    return _then(_$_MiraiAppBarTheme(
+    return _then(_$MiraiAppBarThemeImpl(
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
@@ -347,8 +347,8 @@ class __$$_MiraiAppBarThemeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
-  const _$_MiraiAppBarTheme(
+class _$MiraiAppBarThemeImpl implements _MiraiAppBarTheme {
+  const _$MiraiAppBarThemeImpl(
       {this.backgroundColor,
       this.foregroundColor,
       this.elevation,
@@ -364,8 +364,8 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
       this.titleTextStyle,
       this.systemOverlayStyle});
 
-  factory _$_MiraiAppBarTheme.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiAppBarThemeFromJson(json);
+  factory _$MiraiAppBarThemeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiAppBarThemeImplFromJson(json);
 
   @override
   final String? backgroundColor;
@@ -402,10 +402,10 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiAppBarTheme &&
+            other is _$MiraiAppBarThemeImpl &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
             (identical(other.foregroundColor, foregroundColor) ||
@@ -458,12 +458,13 @@ class _$_MiraiAppBarTheme implements _MiraiAppBarTheme {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiAppBarThemeCopyWith<_$_MiraiAppBarTheme> get copyWith =>
-      __$$_MiraiAppBarThemeCopyWithImpl<_$_MiraiAppBarTheme>(this, _$identity);
+  _$$MiraiAppBarThemeImplCopyWith<_$MiraiAppBarThemeImpl> get copyWith =>
+      __$$MiraiAppBarThemeImplCopyWithImpl<_$MiraiAppBarThemeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiAppBarThemeToJson(
+    return _$$MiraiAppBarThemeImplToJson(
       this,
     );
   }
@@ -485,10 +486,10 @@ abstract class _MiraiAppBarTheme implements MiraiAppBarTheme {
           final MiraiTextStyle? toolbarTextStyle,
           final MiraiTextStyle? titleTextStyle,
           final MiraiSystemUIOverlayStyle? systemOverlayStyle}) =
-      _$_MiraiAppBarTheme;
+      _$MiraiAppBarThemeImpl;
 
   factory _MiraiAppBarTheme.fromJson(Map<String, dynamic> json) =
-      _$_MiraiAppBarTheme.fromJson;
+      _$MiraiAppBarThemeImpl.fromJson;
 
   @override
   String? get backgroundColor;
@@ -520,6 +521,6 @@ abstract class _MiraiAppBarTheme implements MiraiAppBarTheme {
   MiraiSystemUIOverlayStyle? get systemOverlayStyle;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiAppBarThemeCopyWith<_$_MiraiAppBarTheme> get copyWith =>
+  _$$MiraiAppBarThemeImplCopyWith<_$MiraiAppBarThemeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

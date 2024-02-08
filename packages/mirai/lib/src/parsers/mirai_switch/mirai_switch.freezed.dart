@@ -12,7 +12,7 @@ part of 'mirai_switch.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiSwitch _$MiraiSwitchFromJson(Map<String, dynamic> json) {
   return _MiraiSwitch.fromJson(json);
@@ -304,11 +304,11 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
 }
 
 /// @nodoc
-abstract class _$$_MiraiSwitchCopyWith<$Res>
+abstract class _$$MiraiSwitchImplCopyWith<$Res>
     implements $MiraiSwitchCopyWith<$Res> {
-  factory _$$_MiraiSwitchCopyWith(
-          _$_MiraiSwitch value, $Res Function(_$_MiraiSwitch) then) =
-      __$$_MiraiSwitchCopyWithImpl<$Res>;
+  factory _$$MiraiSwitchImplCopyWith(
+          _$MiraiSwitchImpl value, $Res Function(_$MiraiSwitchImpl) then) =
+      __$$MiraiSwitchImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -352,11 +352,11 @@ abstract class _$$_MiraiSwitchCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiSwitchCopyWithImpl<$Res>
-    extends _$MiraiSwitchCopyWithImpl<$Res, _$_MiraiSwitch>
-    implements _$$_MiraiSwitchCopyWith<$Res> {
-  __$$_MiraiSwitchCopyWithImpl(
-      _$_MiraiSwitch _value, $Res Function(_$_MiraiSwitch) _then)
+class __$$MiraiSwitchImplCopyWithImpl<$Res>
+    extends _$MiraiSwitchCopyWithImpl<$Res, _$MiraiSwitchImpl>
+    implements _$$MiraiSwitchImplCopyWith<$Res> {
+  __$$MiraiSwitchImplCopyWithImpl(
+      _$MiraiSwitchImpl _value, $Res Function(_$MiraiSwitchImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -385,7 +385,7 @@ class __$$_MiraiSwitchCopyWithImpl<$Res>
     Object? inactiveThumbImage = freezed,
     Object? activeThumbImage = freezed,
   }) {
-    return _then(_$_MiraiSwitch(
+    return _then(_$MiraiSwitchImpl(
       switchType: null == switchType
           ? _value.switchType
           : switchType // ignore: cast_nullable_to_non_nullable
@@ -478,8 +478,8 @@ class __$$_MiraiSwitchCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiSwitch extends _MiraiSwitch {
-  const _$_MiraiSwitch(
+class _$MiraiSwitchImpl extends _MiraiSwitch {
+  const _$MiraiSwitchImpl(
       {this.switchType = MiraiSwitchType.material,
       this.initialValue = false,
       final Map<String, dynamic>? onChanged,
@@ -505,8 +505,8 @@ class _$_MiraiSwitch extends _MiraiSwitch {
       : _onChanged = onChanged,
         super._();
 
-  factory _$_MiraiSwitch.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiSwitchFromJson(json);
+  factory _$MiraiSwitchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiSwitchImplFromJson(json);
 
   @override
   @JsonKey()
@@ -571,10 +571,10 @@ class _$_MiraiSwitch extends _MiraiSwitch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiSwitch &&
+            other is _$MiraiSwitchImpl &&
             (identical(other.switchType, switchType) ||
                 other.switchType == switchType) &&
             const DeepCollectionEquality()
@@ -652,12 +652,12 @@ class _$_MiraiSwitch extends _MiraiSwitch {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiSwitchCopyWith<_$_MiraiSwitch> get copyWith =>
-      __$$_MiraiSwitchCopyWithImpl<_$_MiraiSwitch>(this, _$identity);
+  _$$MiraiSwitchImplCopyWith<_$MiraiSwitchImpl> get copyWith =>
+      __$$MiraiSwitchImplCopyWithImpl<_$MiraiSwitchImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiSwitchToJson(
+    return _$$MiraiSwitchImplToJson(
       this,
     );
   }
@@ -686,11 +686,11 @@ abstract class _MiraiSwitch extends MiraiSwitch {
       final double? trackOutlineWidth,
       final MiraiIcon? thumbIcon,
       final MiraiImage? inactiveThumbImage,
-      final MiraiImage? activeThumbImage}) = _$_MiraiSwitch;
+      final MiraiImage? activeThumbImage}) = _$MiraiSwitchImpl;
   const _MiraiSwitch._() : super._();
 
   factory _MiraiSwitch.fromJson(Map<String, dynamic> json) =
-      _$_MiraiSwitch.fromJson;
+      _$MiraiSwitchImpl.fromJson;
 
   @override
   MiraiSwitchType get switchType;
@@ -738,6 +738,6 @@ abstract class _MiraiSwitch extends MiraiSwitch {
   MiraiImage? get activeThumbImage;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiSwitchCopyWith<_$_MiraiSwitch> get copyWith =>
+  _$$MiraiSwitchImplCopyWith<_$MiraiSwitchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,13 +6,13 @@ part of 'mirai_expanded.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiExpanded _$$_MiraiExpandedFromJson(Map<String, dynamic> json) =>
-    _$_MiraiExpanded(
+_$MiraiExpandedImpl _$$MiraiExpandedImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiExpandedImpl(
       flex: json['flex'] as int? ?? 1,
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiExpandedToJson(_$_MiraiExpanded instance) =>
+Map<String, dynamic> _$$MiraiExpandedImplToJson(_$MiraiExpandedImpl instance) =>
     <String, dynamic>{
       'flex': instance.flex,
       'child': instance.child,

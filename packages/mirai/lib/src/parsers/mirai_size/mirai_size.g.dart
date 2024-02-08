@@ -6,12 +6,13 @@ part of 'mirai_size.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiSize _$$_MiraiSizeFromJson(Map<String, dynamic> json) => _$_MiraiSize(
+_$MiraiSizeImpl _$$MiraiSizeImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiSizeImpl(
       width: (json['width'] as num).toDouble(),
       height: (json['height'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiSizeToJson(_$_MiraiSize instance) =>
+Map<String, dynamic> _$$MiraiSizeImplToJson(_$MiraiSizeImpl instance) =>
     <String, dynamic>{
       'width': instance.width,
       'height': instance.height,

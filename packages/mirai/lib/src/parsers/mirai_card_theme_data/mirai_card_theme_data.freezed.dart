@@ -12,7 +12,7 @@ part of 'mirai_card_theme_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiCardThemeData _$MiraiCardThemeDataFromJson(Map<String, dynamic> json) {
   return _MiraiCardThemeData.fromJson(json);
@@ -132,11 +132,11 @@ class _$MiraiCardThemeDataCopyWithImpl<$Res, $Val extends MiraiCardThemeData>
 }
 
 /// @nodoc
-abstract class _$$_MiraiCardThemeDataCopyWith<$Res>
+abstract class _$$MiraiCardThemeDataImplCopyWith<$Res>
     implements $MiraiCardThemeDataCopyWith<$Res> {
-  factory _$$_MiraiCardThemeDataCopyWith(_$_MiraiCardThemeData value,
-          $Res Function(_$_MiraiCardThemeData) then) =
-      __$$_MiraiCardThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiCardThemeDataImplCopyWith(_$MiraiCardThemeDataImpl value,
+          $Res Function(_$MiraiCardThemeDataImpl) then) =
+      __$$MiraiCardThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -155,11 +155,11 @@ abstract class _$$_MiraiCardThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiCardThemeDataCopyWithImpl<$Res>
-    extends _$MiraiCardThemeDataCopyWithImpl<$Res, _$_MiraiCardThemeData>
-    implements _$$_MiraiCardThemeDataCopyWith<$Res> {
-  __$$_MiraiCardThemeDataCopyWithImpl(
-      _$_MiraiCardThemeData _value, $Res Function(_$_MiraiCardThemeData) _then)
+class __$$MiraiCardThemeDataImplCopyWithImpl<$Res>
+    extends _$MiraiCardThemeDataCopyWithImpl<$Res, _$MiraiCardThemeDataImpl>
+    implements _$$MiraiCardThemeDataImplCopyWith<$Res> {
+  __$$MiraiCardThemeDataImplCopyWithImpl(_$MiraiCardThemeDataImpl _value,
+      $Res Function(_$MiraiCardThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -173,7 +173,7 @@ class __$$_MiraiCardThemeDataCopyWithImpl<$Res>
     Object? margin = freezed,
     Object? shape = freezed,
   }) {
-    return _then(_$_MiraiCardThemeData(
+    return _then(_$MiraiCardThemeDataImpl(
       clipBehavior: freezed == clipBehavior
           ? _value.clipBehavior
           : clipBehavior // ignore: cast_nullable_to_non_nullable
@@ -208,8 +208,8 @@ class __$$_MiraiCardThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiCardThemeData implements _MiraiCardThemeData {
-  const _$_MiraiCardThemeData(
+class _$MiraiCardThemeDataImpl implements _MiraiCardThemeData {
+  const _$MiraiCardThemeDataImpl(
       {this.clipBehavior,
       this.color,
       this.shadowColor,
@@ -218,8 +218,8 @@ class _$_MiraiCardThemeData implements _MiraiCardThemeData {
       this.margin,
       this.shape});
 
-  factory _$_MiraiCardThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiCardThemeDataFromJson(json);
+  factory _$MiraiCardThemeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiCardThemeDataImplFromJson(json);
 
   @override
   final Clip? clipBehavior;
@@ -242,10 +242,10 @@ class _$_MiraiCardThemeData implements _MiraiCardThemeData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiCardThemeData &&
+            other is _$MiraiCardThemeDataImpl &&
             (identical(other.clipBehavior, clipBehavior) ||
                 other.clipBehavior == clipBehavior) &&
             (identical(other.color, color) || other.color == color) &&
@@ -267,13 +267,13 @@ class _$_MiraiCardThemeData implements _MiraiCardThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiCardThemeDataCopyWith<_$_MiraiCardThemeData> get copyWith =>
-      __$$_MiraiCardThemeDataCopyWithImpl<_$_MiraiCardThemeData>(
+  _$$MiraiCardThemeDataImplCopyWith<_$MiraiCardThemeDataImpl> get copyWith =>
+      __$$MiraiCardThemeDataImplCopyWithImpl<_$MiraiCardThemeDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiCardThemeDataToJson(
+    return _$$MiraiCardThemeDataImplToJson(
       this,
     );
   }
@@ -287,10 +287,10 @@ abstract class _MiraiCardThemeData implements MiraiCardThemeData {
       final String? surfaceTintColor,
       final double? elevation,
       final MiraiEdgeInsets? margin,
-      final MiraiBorder? shape}) = _$_MiraiCardThemeData;
+      final MiraiBorder? shape}) = _$MiraiCardThemeDataImpl;
 
   factory _MiraiCardThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiCardThemeData.fromJson;
+      _$MiraiCardThemeDataImpl.fromJson;
 
   @override
   Clip? get clipBehavior;
@@ -308,6 +308,6 @@ abstract class _MiraiCardThemeData implements MiraiCardThemeData {
   MiraiBorder? get shape;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiCardThemeDataCopyWith<_$_MiraiCardThemeData> get copyWith =>
+  _$$MiraiCardThemeDataImplCopyWith<_$MiraiCardThemeDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

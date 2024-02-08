@@ -12,7 +12,7 @@ part of 'mirai_border_radius.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiBorderRadius _$MiraiBorderRadiusFromJson(Map<String, dynamic> json) {
   return _MiraiBorder.fromJson(json);
@@ -81,11 +81,11 @@ class _$MiraiBorderRadiusCopyWithImpl<$Res, $Val extends MiraiBorderRadius>
 }
 
 /// @nodoc
-abstract class _$$_MiraiBorderCopyWith<$Res>
+abstract class _$$MiraiBorderImplCopyWith<$Res>
     implements $MiraiBorderRadiusCopyWith<$Res> {
-  factory _$$_MiraiBorderCopyWith(
-          _$_MiraiBorder value, $Res Function(_$_MiraiBorder) then) =
-      __$$_MiraiBorderCopyWithImpl<$Res>;
+  factory _$$MiraiBorderImplCopyWith(
+          _$MiraiBorderImpl value, $Res Function(_$MiraiBorderImpl) then) =
+      __$$MiraiBorderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_MiraiBorderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBorderCopyWithImpl<$Res>
-    extends _$MiraiBorderRadiusCopyWithImpl<$Res, _$_MiraiBorder>
-    implements _$$_MiraiBorderCopyWith<$Res> {
-  __$$_MiraiBorderCopyWithImpl(
-      _$_MiraiBorder _value, $Res Function(_$_MiraiBorder) _then)
+class __$$MiraiBorderImplCopyWithImpl<$Res>
+    extends _$MiraiBorderRadiusCopyWithImpl<$Res, _$MiraiBorderImpl>
+    implements _$$MiraiBorderImplCopyWith<$Res> {
+  __$$MiraiBorderImplCopyWithImpl(
+      _$MiraiBorderImpl _value, $Res Function(_$MiraiBorderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$_MiraiBorderCopyWithImpl<$Res>
     Object? bottomLeft = null,
     Object? bottomRight = null,
   }) {
-    return _then(_$_MiraiBorder(
+    return _then(_$MiraiBorderImpl(
       topLeft: null == topLeft
           ? _value.topLeft
           : topLeft // ignore: cast_nullable_to_non_nullable
@@ -131,15 +131,15 @@ class __$$_MiraiBorderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBorder implements _MiraiBorder {
-  const _$_MiraiBorder(
+class _$MiraiBorderImpl implements _MiraiBorder {
+  const _$MiraiBorderImpl(
       {this.topLeft = 0.0,
       this.topRight = 0.0,
       this.bottomLeft = 0.0,
       this.bottomRight = 0.0});
 
-  factory _$_MiraiBorder.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBorderFromJson(json);
+  factory _$MiraiBorderImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBorderImplFromJson(json);
 
   @override
   @JsonKey()
@@ -160,10 +160,10 @@ class _$_MiraiBorder implements _MiraiBorder {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBorder &&
+            other is _$MiraiBorderImpl &&
             (identical(other.topLeft, topLeft) || other.topLeft == topLeft) &&
             (identical(other.topRight, topRight) ||
                 other.topRight == topRight) &&
@@ -181,12 +181,12 @@ class _$_MiraiBorder implements _MiraiBorder {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBorderCopyWith<_$_MiraiBorder> get copyWith =>
-      __$$_MiraiBorderCopyWithImpl<_$_MiraiBorder>(this, _$identity);
+  _$$MiraiBorderImplCopyWith<_$MiraiBorderImpl> get copyWith =>
+      __$$MiraiBorderImplCopyWithImpl<_$MiraiBorderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBorderToJson(
+    return _$$MiraiBorderImplToJson(
       this,
     );
   }
@@ -197,10 +197,10 @@ abstract class _MiraiBorder implements MiraiBorderRadius {
       {final double topLeft,
       final double topRight,
       final double bottomLeft,
-      final double bottomRight}) = _$_MiraiBorder;
+      final double bottomRight}) = _$MiraiBorderImpl;
 
   factory _MiraiBorder.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBorder.fromJson;
+      _$MiraiBorderImpl.fromJson;
 
   @override
   double get topLeft;
@@ -212,6 +212,6 @@ abstract class _MiraiBorder implements MiraiBorderRadius {
   double get bottomRight;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBorderCopyWith<_$_MiraiBorder> get copyWith =>
+  _$$MiraiBorderImplCopyWith<_$MiraiBorderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

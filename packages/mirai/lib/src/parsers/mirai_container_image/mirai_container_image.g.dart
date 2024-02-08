@@ -6,9 +6,9 @@ part of 'mirai_container_image.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiContainerImage _$$_MiraiContainerImageFromJson(
+_$MiraiContainerImageImpl _$$MiraiContainerImageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiContainerImage(
+    _$MiraiContainerImageImpl(
       src: json['src'] as String,
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']) ??
@@ -19,8 +19,8 @@ _$_MiraiContainerImage _$$_MiraiContainerImageFromJson(
       fit: $enumDecodeNullable(_$BoxFitEnumMap, json['fit']),
     );
 
-Map<String, dynamic> _$$_MiraiContainerImageToJson(
-        _$_MiraiContainerImage instance) =>
+Map<String, dynamic> _$$MiraiContainerImageImplToJson(
+        _$MiraiContainerImageImpl instance) =>
     <String, dynamic>{
       'src': instance.src,
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment]!,

@@ -12,7 +12,7 @@ part of 'mirai_card.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiCard _$MiraiCardFromJson(Map<String, dynamic> json) {
   return _MiraiCard.fromJson(json);
@@ -132,10 +132,11 @@ class _$MiraiCardCopyWithImpl<$Res, $Val extends MiraiCard>
 }
 
 /// @nodoc
-abstract class _$$_MiraiCardCopyWith<$Res> implements $MiraiCardCopyWith<$Res> {
-  factory _$$_MiraiCardCopyWith(
-          _$_MiraiCard value, $Res Function(_$_MiraiCard) then) =
-      __$$_MiraiCardCopyWithImpl<$Res>;
+abstract class _$$MiraiCardImplCopyWith<$Res>
+    implements $MiraiCardCopyWith<$Res> {
+  factory _$$MiraiCardImplCopyWith(
+          _$MiraiCardImpl value, $Res Function(_$MiraiCardImpl) then) =
+      __$$MiraiCardImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -154,11 +155,11 @@ abstract class _$$_MiraiCardCopyWith<$Res> implements $MiraiCardCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MiraiCardCopyWithImpl<$Res>
-    extends _$MiraiCardCopyWithImpl<$Res, _$_MiraiCard>
-    implements _$$_MiraiCardCopyWith<$Res> {
-  __$$_MiraiCardCopyWithImpl(
-      _$_MiraiCard _value, $Res Function(_$_MiraiCard) _then)
+class __$$MiraiCardImplCopyWithImpl<$Res>
+    extends _$MiraiCardCopyWithImpl<$Res, _$MiraiCardImpl>
+    implements _$$MiraiCardImplCopyWith<$Res> {
+  __$$MiraiCardImplCopyWithImpl(
+      _$MiraiCardImpl _value, $Res Function(_$MiraiCardImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -174,7 +175,7 @@ class __$$_MiraiCardCopyWithImpl<$Res>
     Object? child = freezed,
     Object? semanticContainer = null,
   }) {
-    return _then(_$_MiraiCard(
+    return _then(_$MiraiCardImpl(
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -217,8 +218,8 @@ class __$$_MiraiCardCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiCard implements _MiraiCard {
-  const _$_MiraiCard(
+class _$MiraiCardImpl implements _MiraiCard {
+  const _$MiraiCardImpl(
       {this.color,
       this.shadowColor,
       this.surfaceTintColor,
@@ -230,8 +231,8 @@ class _$_MiraiCard implements _MiraiCard {
       this.semanticContainer = true})
       : _child = child;
 
-  factory _$_MiraiCard.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiCardFromJson(json);
+  factory _$MiraiCardImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiCardImplFromJson(json);
 
   @override
   final String? color;
@@ -268,10 +269,10 @@ class _$_MiraiCard implements _MiraiCard {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiCard &&
+            other is _$MiraiCardImpl &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.shadowColor, shadowColor) ||
                 other.shadowColor == shadowColor) &&
@@ -306,12 +307,12 @@ class _$_MiraiCard implements _MiraiCard {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiCardCopyWith<_$_MiraiCard> get copyWith =>
-      __$$_MiraiCardCopyWithImpl<_$_MiraiCard>(this, _$identity);
+  _$$MiraiCardImplCopyWith<_$MiraiCardImpl> get copyWith =>
+      __$$MiraiCardImplCopyWithImpl<_$MiraiCardImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiCardToJson(
+    return _$$MiraiCardImplToJson(
       this,
     );
   }
@@ -327,10 +328,10 @@ abstract class _MiraiCard implements MiraiCard {
       final MiraiEdgeInsets? margin,
       final Clip? clipBehavior,
       final Map<String, dynamic>? child,
-      final bool semanticContainer}) = _$_MiraiCard;
+      final bool semanticContainer}) = _$MiraiCardImpl;
 
   factory _MiraiCard.fromJson(Map<String, dynamic> json) =
-      _$_MiraiCard.fromJson;
+      _$MiraiCardImpl.fromJson;
 
   @override
   String? get color;
@@ -352,6 +353,6 @@ abstract class _MiraiCard implements MiraiCard {
   bool get semanticContainer;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiCardCopyWith<_$_MiraiCard> get copyWith =>
+  _$$MiraiCardImplCopyWith<_$MiraiCardImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

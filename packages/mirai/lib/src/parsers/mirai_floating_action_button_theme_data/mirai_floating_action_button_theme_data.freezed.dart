@@ -12,7 +12,7 @@ part of 'mirai_floating_action_button_theme_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiFloatingActionButtonThemeData _$MiraiFloatingActionButtonThemeDataFromJson(
     Map<String, dynamic> json) {
@@ -193,12 +193,12 @@ class _$MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiFloatingActionButtonThemeDataCopyWith<$Res>
+abstract class _$$MiraiFloatingActionButtonThemeDataImplCopyWith<$Res>
     implements $MiraiFloatingActionButtonThemeDataCopyWith<$Res> {
-  factory _$$_MiraiFloatingActionButtonThemeDataCopyWith(
-          _$_MiraiFloatingActionButtonThemeData value,
-          $Res Function(_$_MiraiFloatingActionButtonThemeData) then) =
-      __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiFloatingActionButtonThemeDataImplCopyWith(
+          _$MiraiFloatingActionButtonThemeDataImpl value,
+          $Res Function(_$MiraiFloatingActionButtonThemeDataImpl) then) =
+      __$$MiraiFloatingActionButtonThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -225,13 +225,13 @@ abstract class _$$_MiraiFloatingActionButtonThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res>
+class __$$MiraiFloatingActionButtonThemeDataImplCopyWithImpl<$Res>
     extends _$MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res,
-        _$_MiraiFloatingActionButtonThemeData>
-    implements _$$_MiraiFloatingActionButtonThemeDataCopyWith<$Res> {
-  __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl(
-      _$_MiraiFloatingActionButtonThemeData _value,
-      $Res Function(_$_MiraiFloatingActionButtonThemeData) _then)
+        _$MiraiFloatingActionButtonThemeDataImpl>
+    implements _$$MiraiFloatingActionButtonThemeDataImplCopyWith<$Res> {
+  __$$MiraiFloatingActionButtonThemeDataImplCopyWithImpl(
+      _$MiraiFloatingActionButtonThemeDataImpl _value,
+      $Res Function(_$MiraiFloatingActionButtonThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -253,7 +253,7 @@ class __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res>
     Object? extendedPadding = freezed,
     Object? extendedTextStyle = freezed,
   }) {
-    return _then(_$_MiraiFloatingActionButtonThemeData(
+    return _then(_$MiraiFloatingActionButtonThemeDataImpl(
       foregroundColor: freezed == foregroundColor
           ? _value.foregroundColor
           : foregroundColor // ignore: cast_nullable_to_non_nullable
@@ -320,9 +320,9 @@ class __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiFloatingActionButtonThemeData
+class _$MiraiFloatingActionButtonThemeDataImpl
     implements _MiraiFloatingActionButtonThemeData {
-  const _$_MiraiFloatingActionButtonThemeData(
+  const _$MiraiFloatingActionButtonThemeDataImpl(
       {this.foregroundColor,
       this.backgroundColor,
       this.focusColor,
@@ -339,9 +339,9 @@ class _$_MiraiFloatingActionButtonThemeData
       this.extendedPadding,
       this.extendedTextStyle});
 
-  factory _$_MiraiFloatingActionButtonThemeData.fromJson(
+  factory _$MiraiFloatingActionButtonThemeDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_MiraiFloatingActionButtonThemeDataFromJson(json);
+      _$$MiraiFloatingActionButtonThemeDataImplFromJson(json);
 
   @override
   final String? foregroundColor;
@@ -380,10 +380,10 @@ class _$_MiraiFloatingActionButtonThemeData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiFloatingActionButtonThemeData &&
+            other is _$MiraiFloatingActionButtonThemeDataImpl &&
             (identical(other.foregroundColor, foregroundColor) ||
                 other.foregroundColor == foregroundColor) &&
             (identical(other.backgroundColor, backgroundColor) ||
@@ -440,14 +440,14 @@ class _$_MiraiFloatingActionButtonThemeData
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiFloatingActionButtonThemeDataCopyWith<
-          _$_MiraiFloatingActionButtonThemeData>
-      get copyWith => __$$_MiraiFloatingActionButtonThemeDataCopyWithImpl<
-          _$_MiraiFloatingActionButtonThemeData>(this, _$identity);
+  _$$MiraiFloatingActionButtonThemeDataImplCopyWith<
+          _$MiraiFloatingActionButtonThemeDataImpl>
+      get copyWith => __$$MiraiFloatingActionButtonThemeDataImplCopyWithImpl<
+          _$MiraiFloatingActionButtonThemeDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiFloatingActionButtonThemeDataToJson(
+    return _$$MiraiFloatingActionButtonThemeDataImplToJson(
       this,
     );
   }
@@ -471,11 +471,11 @@ abstract class _MiraiFloatingActionButtonThemeData
           final double? extendedIconLabelSpacing,
           final MiraiEdgeInsets? extendedPadding,
           final MiraiTextStyle? extendedTextStyle}) =
-      _$_MiraiFloatingActionButtonThemeData;
+      _$MiraiFloatingActionButtonThemeDataImpl;
 
   factory _MiraiFloatingActionButtonThemeData.fromJson(
           Map<String, dynamic> json) =
-      _$_MiraiFloatingActionButtonThemeData.fromJson;
+      _$MiraiFloatingActionButtonThemeDataImpl.fromJson;
 
   @override
   String? get foregroundColor;
@@ -509,7 +509,7 @@ abstract class _MiraiFloatingActionButtonThemeData
   MiraiTextStyle? get extendedTextStyle;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiFloatingActionButtonThemeDataCopyWith<
-          _$_MiraiFloatingActionButtonThemeData>
+  _$$MiraiFloatingActionButtonThemeDataImplCopyWith<
+          _$MiraiFloatingActionButtonThemeDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

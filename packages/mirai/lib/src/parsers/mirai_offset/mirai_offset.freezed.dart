@@ -12,7 +12,7 @@ part of 'mirai_offset.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiOffset _$MiraiOffsetFromJson(Map<String, dynamic> json) {
   return _MiraiOffset.fromJson(json);
@@ -68,22 +68,22 @@ class _$MiraiOffsetCopyWithImpl<$Res, $Val extends MiraiOffset>
 }
 
 /// @nodoc
-abstract class _$$_MiraiOffsetCopyWith<$Res>
+abstract class _$$MiraiOffsetImplCopyWith<$Res>
     implements $MiraiOffsetCopyWith<$Res> {
-  factory _$$_MiraiOffsetCopyWith(
-          _$_MiraiOffset value, $Res Function(_$_MiraiOffset) then) =
-      __$$_MiraiOffsetCopyWithImpl<$Res>;
+  factory _$$MiraiOffsetImplCopyWith(
+          _$MiraiOffsetImpl value, $Res Function(_$MiraiOffsetImpl) then) =
+      __$$MiraiOffsetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double dx, double dy});
 }
 
 /// @nodoc
-class __$$_MiraiOffsetCopyWithImpl<$Res>
-    extends _$MiraiOffsetCopyWithImpl<$Res, _$_MiraiOffset>
-    implements _$$_MiraiOffsetCopyWith<$Res> {
-  __$$_MiraiOffsetCopyWithImpl(
-      _$_MiraiOffset _value, $Res Function(_$_MiraiOffset) _then)
+class __$$MiraiOffsetImplCopyWithImpl<$Res>
+    extends _$MiraiOffsetCopyWithImpl<$Res, _$MiraiOffsetImpl>
+    implements _$$MiraiOffsetImplCopyWith<$Res> {
+  __$$MiraiOffsetImplCopyWithImpl(
+      _$MiraiOffsetImpl _value, $Res Function(_$MiraiOffsetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_MiraiOffsetCopyWithImpl<$Res>
     Object? dx = null,
     Object? dy = null,
   }) {
-    return _then(_$_MiraiOffset(
+    return _then(_$MiraiOffsetImpl(
       dx: null == dx
           ? _value.dx
           : dx // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_MiraiOffsetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiOffset implements _MiraiOffset {
-  const _$_MiraiOffset({required this.dx, required this.dy});
+class _$MiraiOffsetImpl implements _MiraiOffset {
+  const _$MiraiOffsetImpl({required this.dx, required this.dy});
 
-  factory _$_MiraiOffset.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiOffsetFromJson(json);
+  factory _$MiraiOffsetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiOffsetImplFromJson(json);
 
   @override
   final double dx;
@@ -124,10 +124,10 @@ class _$_MiraiOffset implements _MiraiOffset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiOffset &&
+            other is _$MiraiOffsetImpl &&
             (identical(other.dx, dx) || other.dx == dx) &&
             (identical(other.dy, dy) || other.dy == dy));
   }
@@ -139,12 +139,12 @@ class _$_MiraiOffset implements _MiraiOffset {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiOffsetCopyWith<_$_MiraiOffset> get copyWith =>
-      __$$_MiraiOffsetCopyWithImpl<_$_MiraiOffset>(this, _$identity);
+  _$$MiraiOffsetImplCopyWith<_$MiraiOffsetImpl> get copyWith =>
+      __$$MiraiOffsetImplCopyWithImpl<_$MiraiOffsetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiOffsetToJson(
+    return _$$MiraiOffsetImplToJson(
       this,
     );
   }
@@ -152,10 +152,10 @@ class _$_MiraiOffset implements _MiraiOffset {
 
 abstract class _MiraiOffset implements MiraiOffset {
   const factory _MiraiOffset(
-      {required final double dx, required final double dy}) = _$_MiraiOffset;
+      {required final double dx, required final double dy}) = _$MiraiOffsetImpl;
 
   factory _MiraiOffset.fromJson(Map<String, dynamic> json) =
-      _$_MiraiOffset.fromJson;
+      _$MiraiOffsetImpl.fromJson;
 
   @override
   double get dx;
@@ -163,6 +163,6 @@ abstract class _MiraiOffset implements MiraiOffset {
   double get dy;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiOffsetCopyWith<_$_MiraiOffset> get copyWith =>
+  _$$MiraiOffsetImplCopyWith<_$MiraiOffsetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

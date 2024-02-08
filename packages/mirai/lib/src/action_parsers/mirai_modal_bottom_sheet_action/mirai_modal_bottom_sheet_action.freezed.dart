@@ -12,7 +12,7 @@ part of 'mirai_modal_bottom_sheet_action.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiModalBottomSheetAction _$MiraiModalBottomSheetActionFromJson(
     Map<String, dynamic> json) {
@@ -205,12 +205,12 @@ class _$MiraiModalBottomSheetActionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiModalBottomSheetActionCopyWith<$Res>
+abstract class _$$MiraiModalBottomSheetActionImplCopyWith<$Res>
     implements $MiraiModalBottomSheetActionCopyWith<$Res> {
-  factory _$$_MiraiModalBottomSheetActionCopyWith(
-          _$_MiraiModalBottomSheetAction value,
-          $Res Function(_$_MiraiModalBottomSheetAction) then) =
-      __$$_MiraiModalBottomSheetActionCopyWithImpl<$Res>;
+  factory _$$MiraiModalBottomSheetActionImplCopyWith(
+          _$MiraiModalBottomSheetActionImpl value,
+          $Res Function(_$MiraiModalBottomSheetActionImpl) then) =
+      __$$MiraiModalBottomSheetActionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -239,13 +239,13 @@ abstract class _$$_MiraiModalBottomSheetActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiModalBottomSheetActionCopyWithImpl<$Res>
+class __$$MiraiModalBottomSheetActionImplCopyWithImpl<$Res>
     extends _$MiraiModalBottomSheetActionCopyWithImpl<$Res,
-        _$_MiraiModalBottomSheetAction>
-    implements _$$_MiraiModalBottomSheetActionCopyWith<$Res> {
-  __$$_MiraiModalBottomSheetActionCopyWithImpl(
-      _$_MiraiModalBottomSheetAction _value,
-      $Res Function(_$_MiraiModalBottomSheetAction) _then)
+        _$MiraiModalBottomSheetActionImpl>
+    implements _$$MiraiModalBottomSheetActionImplCopyWith<$Res> {
+  __$$MiraiModalBottomSheetActionImplCopyWithImpl(
+      _$MiraiModalBottomSheetActionImpl _value,
+      $Res Function(_$MiraiModalBottomSheetActionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -267,7 +267,7 @@ class __$$_MiraiModalBottomSheetActionCopyWithImpl<$Res>
     Object? showDragHandle = freezed,
     Object? useSafeArea = null,
   }) {
-    return _then(_$_MiraiModalBottomSheetAction(
+    return _then(_$MiraiModalBottomSheetActionImpl(
       widget: freezed == widget
           ? _value._widget
           : widget // ignore: cast_nullable_to_non_nullable
@@ -334,8 +334,9 @@ class __$$_MiraiModalBottomSheetActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiModalBottomSheetAction implements _MiraiModalBottomSheetAction {
-  const _$_MiraiModalBottomSheetAction(
+class _$MiraiModalBottomSheetActionImpl
+    implements _MiraiModalBottomSheetAction {
+  const _$MiraiModalBottomSheetActionImpl(
       {final Map<String, dynamic>? widget,
       this.request,
       this.assetPath,
@@ -353,8 +354,9 @@ class _$_MiraiModalBottomSheetAction implements _MiraiModalBottomSheetAction {
       this.useSafeArea = false})
       : _widget = widget;
 
-  factory _$_MiraiModalBottomSheetAction.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiModalBottomSheetActionFromJson(json);
+  factory _$MiraiModalBottomSheetActionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MiraiModalBottomSheetActionImplFromJson(json);
 
   final Map<String, dynamic>? _widget;
   @override
@@ -406,10 +408,10 @@ class _$_MiraiModalBottomSheetAction implements _MiraiModalBottomSheetAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiModalBottomSheetAction &&
+            other is _$MiraiModalBottomSheetActionImpl &&
             const DeepCollectionEquality().equals(other._widget, _widget) &&
             (identical(other.request, request) || other.request == request) &&
             (identical(other.assetPath, assetPath) ||
@@ -462,13 +464,13 @@ class _$_MiraiModalBottomSheetAction implements _MiraiModalBottomSheetAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiModalBottomSheetActionCopyWith<_$_MiraiModalBottomSheetAction>
-      get copyWith => __$$_MiraiModalBottomSheetActionCopyWithImpl<
-          _$_MiraiModalBottomSheetAction>(this, _$identity);
+  _$$MiraiModalBottomSheetActionImplCopyWith<_$MiraiModalBottomSheetActionImpl>
+      get copyWith => __$$MiraiModalBottomSheetActionImplCopyWithImpl<
+          _$MiraiModalBottomSheetActionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiModalBottomSheetActionToJson(
+    return _$$MiraiModalBottomSheetActionImplToJson(
       this,
     );
   }
@@ -491,10 +493,10 @@ abstract class _MiraiModalBottomSheetAction
       final bool isDismissible,
       final bool enableDrag,
       final bool? showDragHandle,
-      final bool useSafeArea}) = _$_MiraiModalBottomSheetAction;
+      final bool useSafeArea}) = _$MiraiModalBottomSheetActionImpl;
 
   factory _MiraiModalBottomSheetAction.fromJson(Map<String, dynamic> json) =
-      _$_MiraiModalBottomSheetAction.fromJson;
+      _$MiraiModalBottomSheetActionImpl.fromJson;
 
   @override
   Map<String, dynamic>? get widget;
@@ -528,6 +530,6 @@ abstract class _MiraiModalBottomSheetAction
   bool get useSafeArea;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiModalBottomSheetActionCopyWith<_$_MiraiModalBottomSheetAction>
+  _$$MiraiModalBottomSheetActionImplCopyWith<_$MiraiModalBottomSheetActionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -15,7 +15,6 @@ import 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 import 'package:mirai/src/parsers/mirai_form_field/mirai_form_field_parser.dart';
 import 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box_parser.dart';
 import 'package:mirai/src/parsers/mirai_refresh_indicator/mirai_refresh_indicator_parser.dart';
-import 'package:mirai/src/parsers/mirai_network_widget/mirai_network_widget_parser.dart';
 import 'package:mirai/src/parsers/mirai_switch/mirai_switch_parser.dart';
 import 'package:mirai/src/parsers/mirai_tab/mirai_tab_parser.dart';
 import 'package:mirai/src/parsers/parsers.dart';

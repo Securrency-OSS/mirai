@@ -6,7 +6,8 @@ part of 'mirai_tab.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTab _$$_MiraiTabFromJson(Map<String, dynamic> json) => _$_MiraiTab(
+_$MiraiTabImpl _$$MiraiTabImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiTabImpl(
       text: json['text'] as String?,
       icon: json['icon'] as Map<String, dynamic>?,
       iconMargin: json['iconMargin'] == null
@@ -17,7 +18,7 @@ _$_MiraiTab _$$_MiraiTabFromJson(Map<String, dynamic> json) => _$_MiraiTab(
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiTabToJson(_$_MiraiTab instance) =>
+Map<String, dynamic> _$$MiraiTabImplToJson(_$MiraiTabImpl instance) =>
     <String, dynamic>{
       'text': instance.text,
       'icon': instance.icon,

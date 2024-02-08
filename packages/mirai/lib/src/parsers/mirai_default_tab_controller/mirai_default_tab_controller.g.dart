@@ -6,15 +6,15 @@ part of 'mirai_default_tab_controller.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiDefaultTabController _$$_MiraiDefaultTabControllerFromJson(
+_$MiraiDefaultTabControllerImpl _$$MiraiDefaultTabControllerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiDefaultTabController(
+    _$MiraiDefaultTabControllerImpl(
       child: json['child'] as Map<String, dynamic>,
       length: json['length'] as int,
     );
 
-Map<String, dynamic> _$$_MiraiDefaultTabControllerToJson(
-        _$_MiraiDefaultTabController instance) =>
+Map<String, dynamic> _$$MiraiDefaultTabControllerImplToJson(
+        _$MiraiDefaultTabControllerImpl instance) =>
     <String, dynamic>{
       'child': instance.child,
       'length': instance.length,

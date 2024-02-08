@@ -6,9 +6,9 @@ part of 'mirai_material_color.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiMaterialColor _$$_MiraiMaterialColorFromJson(
+_$MiraiMaterialColorImpl _$$MiraiMaterialColorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiMaterialColor(
+    _$MiraiMaterialColorImpl(
       primary: json['primary'] as String,
       shade50: json['shade50'] as String,
       shade100: json['shade100'] as String,
@@ -22,8 +22,8 @@ _$_MiraiMaterialColor _$$_MiraiMaterialColorFromJson(
       shade900: json['shade900'] as String,
     );
 
-Map<String, dynamic> _$$_MiraiMaterialColorToJson(
-        _$_MiraiMaterialColor instance) =>
+Map<String, dynamic> _$$MiraiMaterialColorImplToJson(
+        _$MiraiMaterialColorImpl instance) =>
     <String, dynamic>{
       'primary': instance.primary,
       'shade50': instance.shade50,

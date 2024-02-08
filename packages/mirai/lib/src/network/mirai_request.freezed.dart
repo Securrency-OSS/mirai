@@ -12,7 +12,7 @@ part of 'mirai_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiRequest _$MiraiRequestFromJson(Map<String, dynamic> json) {
   return _MiraiRequest.fromJson(json);
@@ -99,11 +99,11 @@ class _$MiraiRequestCopyWithImpl<$Res, $Val extends MiraiRequest>
 }
 
 /// @nodoc
-abstract class _$$_MiraiRequestCopyWith<$Res>
+abstract class _$$MiraiRequestImplCopyWith<$Res>
     implements $MiraiRequestCopyWith<$Res> {
-  factory _$$_MiraiRequestCopyWith(
-          _$_MiraiRequest value, $Res Function(_$_MiraiRequest) then) =
-      __$$_MiraiRequestCopyWithImpl<$Res>;
+  factory _$$MiraiRequestImplCopyWith(
+          _$MiraiRequestImpl value, $Res Function(_$MiraiRequestImpl) then) =
+      __$$MiraiRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_MiraiRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiRequestCopyWithImpl<$Res>
-    extends _$MiraiRequestCopyWithImpl<$Res, _$_MiraiRequest>
-    implements _$$_MiraiRequestCopyWith<$Res> {
-  __$$_MiraiRequestCopyWithImpl(
-      _$_MiraiRequest _value, $Res Function(_$_MiraiRequest) _then)
+class __$$MiraiRequestImplCopyWithImpl<$Res>
+    extends _$MiraiRequestCopyWithImpl<$Res, _$MiraiRequestImpl>
+    implements _$$MiraiRequestImplCopyWith<$Res> {
+  __$$MiraiRequestImplCopyWithImpl(
+      _$MiraiRequestImpl _value, $Res Function(_$MiraiRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_MiraiRequestCopyWithImpl<$Res>
     Object? contentType = freezed,
     Object? data = freezed,
   }) {
-    return _then(_$_MiraiRequest(
+    return _then(_$MiraiRequestImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_MiraiRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiRequest implements _MiraiRequest {
-  const _$_MiraiRequest(
+class _$MiraiRequestImpl implements _MiraiRequest {
+  const _$MiraiRequestImpl(
       {required this.url,
       required this.method,
       final Map<String, dynamic>? queryParameters,
@@ -176,8 +176,8 @@ class _$_MiraiRequest implements _MiraiRequest {
         _headers = headers,
         _data = data;
 
-  factory _$_MiraiRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiRequestFromJson(json);
+  factory _$MiraiRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiRequestImplFromJson(json);
 
   @override
   final String url;
@@ -221,10 +221,10 @@ class _$_MiraiRequest implements _MiraiRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiRequest &&
+            other is _$MiraiRequestImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.method, method) || other.method == method) &&
             const DeepCollectionEquality()
@@ -249,12 +249,12 @@ class _$_MiraiRequest implements _MiraiRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiRequestCopyWith<_$_MiraiRequest> get copyWith =>
-      __$$_MiraiRequestCopyWithImpl<_$_MiraiRequest>(this, _$identity);
+  _$$MiraiRequestImplCopyWith<_$MiraiRequestImpl> get copyWith =>
+      __$$MiraiRequestImplCopyWithImpl<_$MiraiRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiRequestToJson(
+    return _$$MiraiRequestImplToJson(
       this,
     );
   }
@@ -267,10 +267,10 @@ abstract class _MiraiRequest implements MiraiRequest {
       final Map<String, dynamic>? queryParameters,
       final Map<String, dynamic>? headers,
       final String? contentType,
-      final Map<String, dynamic>? data}) = _$_MiraiRequest;
+      final Map<String, dynamic>? data}) = _$MiraiRequestImpl;
 
   factory _MiraiRequest.fromJson(Map<String, dynamic> json) =
-      _$_MiraiRequest.fromJson;
+      _$MiraiRequestImpl.fromJson;
 
   @override
   String get url;
@@ -286,6 +286,6 @@ abstract class _MiraiRequest implements MiraiRequest {
   Map<String, dynamic>? get data;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiRequestCopyWith<_$_MiraiRequest> get copyWith =>
+  _$$MiraiRequestImplCopyWith<_$MiraiRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

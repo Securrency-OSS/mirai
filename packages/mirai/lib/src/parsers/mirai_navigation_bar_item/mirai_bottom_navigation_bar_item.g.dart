@@ -6,9 +6,9 @@ part of 'mirai_bottom_navigation_bar_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBottomNavigationBarItem _$$_MiraiBottomNavigationBarItemFromJson(
+_$MiraiBottomNavigationBarItemImpl _$$MiraiBottomNavigationBarItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBottomNavigationBarItem(
+    _$MiraiBottomNavigationBarItemImpl(
       icon: json['icon'] as Map<String, dynamic>,
       label: json['label'] as String,
       activeIcon: json['activeIcon'] as Map<String, dynamic>?,
@@ -16,8 +16,8 @@ _$_MiraiBottomNavigationBarItem _$$_MiraiBottomNavigationBarItemFromJson(
       tooltip: json['tooltip'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiBottomNavigationBarItemToJson(
-        _$_MiraiBottomNavigationBarItem instance) =>
+Map<String, dynamic> _$$MiraiBottomNavigationBarItemImplToJson(
+        _$MiraiBottomNavigationBarItemImpl instance) =>
     <String, dynamic>{
       'icon': instance.icon,
       'label': instance.label,

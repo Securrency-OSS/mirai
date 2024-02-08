@@ -6,9 +6,9 @@ part of 'mirai_input_decoration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
+_$MiraiInputDecorationImpl _$$MiraiInputDecorationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiInputDecoration(
+    _$MiraiInputDecorationImpl(
       icon: json['icon'] as Map<String, dynamic>?,
       iconColor: json['iconColor'] as String?,
       label: json['label'] as Map<String, dynamic>?,
@@ -114,8 +114,8 @@ _$_MiraiInputDecoration _$$_MiraiInputDecorationFromJson(
               json['constraints'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiInputDecorationToJson(
-        _$_MiraiInputDecoration instance) =>
+Map<String, dynamic> _$$MiraiInputDecorationImplToJson(
+        _$MiraiInputDecorationImpl instance) =>
     <String, dynamic>{
       'icon': instance.icon,
       'iconColor': instance.iconColor,
