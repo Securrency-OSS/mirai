@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class Web3ModalService {
@@ -13,19 +14,30 @@ class Web3ModalService {
   static String? _signature;
   static String get signature => _signature ?? '';
 
-  static Future<bool> initialize() async {
+  static late ChainMetadata chainMetadata;
+
+  static Future<bool> initialize({ChainMetadata? metadata}) async {
+    chainMetadata = metadata ??
+        const ChainMetadata(
+          projectId: "68ccdce69aec001e3cd0b33aec530b81",
+          name: 'Mirai Gallery',
+          description: "Web3 mobile app in Mirai",
+          url: "https://www.walletconnect.com/",
+          icons: ['https://walletconnect.com/walletconnect-logo.png'],
+        );
+
     bool isInitialize = false;
     try {
       _service = W3MService(
-        projectId: "68ccdce69aec001e3cd0b33aec530b81",
-        metadata: const PairingMetadata(
-          name: 'Web3Modal Flutter Example',
-          description: 'Web3Modal Flutter Example',
-          url: 'https://www.walletconnect.com/',
-          icons: ['https://walletconnect.com/walletconnect-logo.png'],
+        projectId: chainMetadata.projectId,
+        metadata: PairingMetadata(
+          name: chainMetadata.name,
+          description: chainMetadata.description,
+          url: chainMetadata.url,
+          icons: chainMetadata.icons,
           redirect: Redirect(
             native: 'w3m://',
-            universal: 'https://www.walletconnect.com',
+            universal: chainMetadata.url,
           ),
         ),
       );
@@ -55,7 +67,7 @@ class Web3ModalService {
 
     final signature = await _service.web3App!.request(
       topic: _service.session!.topic!,
-      chainId: 'eip155:1',
+      chainId: _service.selectedChain?.chainId ?? "eip155:1",
       request: SessionRequestParams(
         method: 'personal_sign',
         params: [message, connectedWalletAddress],

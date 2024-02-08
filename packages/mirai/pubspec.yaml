@@ -14,7 +14,7 @@ dependencies:
   flutter_bloc: ^8.1.2
   json_annotation: ^4.8.1
   logger: ^2.0.2+1
-  dio: ^5.2.0+1
+  dio: ^5.4.0
   mirai_framework: ^0.0.1
 
 dev_dependencies:
