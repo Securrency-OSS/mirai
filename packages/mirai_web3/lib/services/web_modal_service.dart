@@ -10,6 +10,8 @@ class Web3ModalService {
   static bool get isConnected => _service.isConnected;
   static String get connectedWalletAddress =>
       isConnected ? _service.session?.address ?? '' : '';
+  static String? _signature;
+  static String get signature => _signature ?? '';
 
   static Future<bool> initialize() async {
     bool isInitialize = false;
@@ -60,6 +62,7 @@ class Web3ModalService {
       ),
     );
 
+    _signature = signature;
     return signature;
   }
 
