@@ -15,6 +15,29 @@ class MiraiWeb3SignatureTextParser extends MiraiParser<MiraiWeb3SignatureText> {
 
   @override
   Widget parse(BuildContext context, MiraiWeb3SignatureText model) {
+    return const _Web3SignatureText();
+  }
+}
+
+class _Web3SignatureText extends StatefulWidget {
+  const _Web3SignatureText();
+
+  @override
+  State<_Web3SignatureText> createState() => _Web3SignatureTextState();
+}
+
+class _Web3SignatureTextState extends State<_Web3SignatureText> {
+  @override
+  void initState() {
+    super.initState();
+
+    Web3ModalService.service.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Text(Web3ModalService.signature);
   }
 }
