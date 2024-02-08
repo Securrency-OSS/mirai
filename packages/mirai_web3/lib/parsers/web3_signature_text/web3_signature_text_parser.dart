@@ -38,6 +38,10 @@ class _Web3SignatureTextState extends State<_Web3SignatureText> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(Web3ModalService.signature);
+    return Text(
+      Web3ModalService.signature,
+      maxLines: 2,
+      overflow: TextOverflow.clip,
+    );
   }
 }
