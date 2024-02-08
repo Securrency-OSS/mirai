@@ -6,8 +6,9 @@ part of 'mirai_scroll_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiScrollView _$$_MiraiScrollViewFromJson(Map<String, dynamic> json) =>
-    _$_MiraiScrollView(
+_$MiraiScrollViewImpl _$$MiraiScrollViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiScrollViewImpl(
       scrollDirection:
           $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
               Axis.vertical,
@@ -31,7 +32,8 @@ _$_MiraiScrollView _$$_MiraiScrollViewFromJson(Map<String, dynamic> json) =>
           ScrollViewKeyboardDismissBehavior.manual,
     );
 
-Map<String, dynamic> _$$_MiraiScrollViewToJson(_$_MiraiScrollView instance) =>
+Map<String, dynamic> _$$MiraiScrollViewImplToJson(
+        _$MiraiScrollViewImpl instance) =>
     <String, dynamic>{
       'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
       'reverse': instance.reverse,

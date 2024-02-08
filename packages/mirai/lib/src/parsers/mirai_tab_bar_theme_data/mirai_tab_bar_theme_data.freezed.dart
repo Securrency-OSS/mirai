@@ -12,7 +12,7 @@ part of 'mirai_tab_bar_theme_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiTabBarThemeData _$MiraiTabBarThemeDataFromJson(Map<String, dynamic> json) {
   return _MiraiTabBarThemeData.fromJson(json);
@@ -181,11 +181,11 @@ class _$MiraiTabBarThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiTabBarThemeDataCopyWith<$Res>
+abstract class _$$MiraiTabBarThemeDataImplCopyWith<$Res>
     implements $MiraiTabBarThemeDataCopyWith<$Res> {
-  factory _$$_MiraiTabBarThemeDataCopyWith(_$_MiraiTabBarThemeData value,
-          $Res Function(_$_MiraiTabBarThemeData) then) =
-      __$$_MiraiTabBarThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiTabBarThemeDataImplCopyWith(_$MiraiTabBarThemeDataImpl value,
+          $Res Function(_$MiraiTabBarThemeDataImpl) then) =
+      __$$MiraiTabBarThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -211,11 +211,11 @@ abstract class _$$_MiraiTabBarThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTabBarThemeDataCopyWithImpl<$Res>
-    extends _$MiraiTabBarThemeDataCopyWithImpl<$Res, _$_MiraiTabBarThemeData>
-    implements _$$_MiraiTabBarThemeDataCopyWith<$Res> {
-  __$$_MiraiTabBarThemeDataCopyWithImpl(_$_MiraiTabBarThemeData _value,
-      $Res Function(_$_MiraiTabBarThemeData) _then)
+class __$$MiraiTabBarThemeDataImplCopyWithImpl<$Res>
+    extends _$MiraiTabBarThemeDataCopyWithImpl<$Res, _$MiraiTabBarThemeDataImpl>
+    implements _$$MiraiTabBarThemeDataImplCopyWith<$Res> {
+  __$$MiraiTabBarThemeDataImplCopyWithImpl(_$MiraiTabBarThemeDataImpl _value,
+      $Res Function(_$MiraiTabBarThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -232,7 +232,7 @@ class __$$_MiraiTabBarThemeDataCopyWithImpl<$Res>
     Object? unselectedLabelStyle = freezed,
     Object? overlayColor = freezed,
   }) {
-    return _then(_$_MiraiTabBarThemeData(
+    return _then(_$MiraiTabBarThemeDataImpl(
       indicator: freezed == indicator
           ? _value.indicator
           : indicator // ignore: cast_nullable_to_non_nullable
@@ -279,8 +279,8 @@ class __$$_MiraiTabBarThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTabBarThemeData implements _MiraiTabBarThemeData {
-  const _$_MiraiTabBarThemeData(
+class _$MiraiTabBarThemeDataImpl implements _MiraiTabBarThemeData {
+  const _$MiraiTabBarThemeDataImpl(
       {this.indicator,
       this.indicatorColor,
       this.indicatorSize,
@@ -292,8 +292,8 @@ class _$_MiraiTabBarThemeData implements _MiraiTabBarThemeData {
       this.unselectedLabelStyle,
       this.overlayColor});
 
-  factory _$_MiraiTabBarThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTabBarThemeDataFromJson(json);
+  factory _$MiraiTabBarThemeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTabBarThemeDataImplFromJson(json);
 
   @override
   final MiraiBoxDecoration? indicator;
@@ -322,10 +322,10 @@ class _$_MiraiTabBarThemeData implements _MiraiTabBarThemeData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTabBarThemeData &&
+            other is _$MiraiTabBarThemeDataImpl &&
             (identical(other.indicator, indicator) ||
                 other.indicator == indicator) &&
             (identical(other.indicatorColor, indicatorColor) ||
@@ -366,13 +366,14 @@ class _$_MiraiTabBarThemeData implements _MiraiTabBarThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTabBarThemeDataCopyWith<_$_MiraiTabBarThemeData> get copyWith =>
-      __$$_MiraiTabBarThemeDataCopyWithImpl<_$_MiraiTabBarThemeData>(
-          this, _$identity);
+  _$$MiraiTabBarThemeDataImplCopyWith<_$MiraiTabBarThemeDataImpl>
+      get copyWith =>
+          __$$MiraiTabBarThemeDataImplCopyWithImpl<_$MiraiTabBarThemeDataImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTabBarThemeDataToJson(
+    return _$$MiraiTabBarThemeDataImplToJson(
       this,
     );
   }
@@ -389,10 +390,10 @@ abstract class _MiraiTabBarThemeData implements MiraiTabBarThemeData {
       final MiraiTextStyle? labelStyle,
       final String? unselectedLabelColor,
       final MiraiTextStyle? unselectedLabelStyle,
-      final String? overlayColor}) = _$_MiraiTabBarThemeData;
+      final String? overlayColor}) = _$MiraiTabBarThemeDataImpl;
 
   factory _MiraiTabBarThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTabBarThemeData.fromJson;
+      _$MiraiTabBarThemeDataImpl.fromJson;
 
   @override
   MiraiBoxDecoration? get indicator;
@@ -416,6 +417,6 @@ abstract class _MiraiTabBarThemeData implements MiraiTabBarThemeData {
   String? get overlayColor;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTabBarThemeDataCopyWith<_$_MiraiTabBarThemeData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MiraiTabBarThemeDataImplCopyWith<_$MiraiTabBarThemeDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

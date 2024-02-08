@@ -12,7 +12,7 @@ part of 'mirai_scaffold.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiScaffold _$MiraiScaffoldFromJson(Map<String, dynamic> json) {
   return _MiraiScaffold.fromJson(json);
@@ -136,11 +136,11 @@ class _$MiraiScaffoldCopyWithImpl<$Res, $Val extends MiraiScaffold>
 }
 
 /// @nodoc
-abstract class _$$_MiraiScaffoldCopyWith<$Res>
+abstract class _$$MiraiScaffoldImplCopyWith<$Res>
     implements $MiraiScaffoldCopyWith<$Res> {
-  factory _$$_MiraiScaffoldCopyWith(
-          _$_MiraiScaffold value, $Res Function(_$_MiraiScaffold) then) =
-      __$$_MiraiScaffoldCopyWithImpl<$Res>;
+  factory _$$MiraiScaffoldImplCopyWith(
+          _$MiraiScaffoldImpl value, $Res Function(_$MiraiScaffoldImpl) then) =
+      __$$MiraiScaffoldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -158,11 +158,11 @@ abstract class _$$_MiraiScaffoldCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiScaffoldCopyWithImpl<$Res>
-    extends _$MiraiScaffoldCopyWithImpl<$Res, _$_MiraiScaffold>
-    implements _$$_MiraiScaffoldCopyWith<$Res> {
-  __$$_MiraiScaffoldCopyWithImpl(
-      _$_MiraiScaffold _value, $Res Function(_$_MiraiScaffold) _then)
+class __$$MiraiScaffoldImplCopyWithImpl<$Res>
+    extends _$MiraiScaffoldCopyWithImpl<$Res, _$MiraiScaffoldImpl>
+    implements _$$MiraiScaffoldImplCopyWith<$Res> {
+  __$$MiraiScaffoldImplCopyWithImpl(
+      _$MiraiScaffoldImpl _value, $Res Function(_$MiraiScaffoldImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -180,7 +180,7 @@ class __$$_MiraiScaffoldCopyWithImpl<$Res>
     Object? extendBody = null,
     Object? extendBodyBehindAppBar = null,
   }) {
-    return _then(_$_MiraiScaffold(
+    return _then(_$MiraiScaffoldImpl(
       appBar: freezed == appBar
           ? _value._appBar
           : appBar // ignore: cast_nullable_to_non_nullable
@@ -231,8 +231,8 @@ class __$$_MiraiScaffoldCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiScaffold implements _MiraiScaffold {
-  const _$_MiraiScaffold(
+class _$MiraiScaffoldImpl implements _MiraiScaffold {
+  const _$MiraiScaffoldImpl(
       {final Map<String, dynamic>? appBar,
       final Map<String, dynamic>? body,
       final Map<String, dynamic>? floatingActionButton,
@@ -250,8 +250,8 @@ class _$_MiraiScaffold implements _MiraiScaffold {
         _bottomNavigationBar = bottomNavigationBar,
         _bottomSheet = bottomSheet;
 
-  factory _$_MiraiScaffold.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiScaffoldFromJson(json);
+  factory _$MiraiScaffoldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiScaffoldImplFromJson(json);
 
   final Map<String, dynamic>? _appBar;
   @override
@@ -327,10 +327,10 @@ class _$_MiraiScaffold implements _MiraiScaffold {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiScaffold &&
+            other is _$MiraiScaffoldImpl &&
             const DeepCollectionEquality().equals(other._appBar, _appBar) &&
             const DeepCollectionEquality().equals(other._body, _body) &&
             const DeepCollectionEquality()
@@ -374,12 +374,12 @@ class _$_MiraiScaffold implements _MiraiScaffold {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiScaffoldCopyWith<_$_MiraiScaffold> get copyWith =>
-      __$$_MiraiScaffoldCopyWithImpl<_$_MiraiScaffold>(this, _$identity);
+  _$$MiraiScaffoldImplCopyWith<_$MiraiScaffoldImpl> get copyWith =>
+      __$$MiraiScaffoldImplCopyWithImpl<_$MiraiScaffoldImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiScaffoldToJson(
+    return _$$MiraiScaffoldImplToJson(
       this,
     );
   }
@@ -397,10 +397,10 @@ abstract class _MiraiScaffold implements MiraiScaffold {
       final bool? resizeToAvoidBottomInset,
       final bool primary,
       final bool extendBody,
-      final bool extendBodyBehindAppBar}) = _$_MiraiScaffold;
+      final bool extendBodyBehindAppBar}) = _$MiraiScaffoldImpl;
 
   factory _MiraiScaffold.fromJson(Map<String, dynamic> json) =
-      _$_MiraiScaffold.fromJson;
+      _$MiraiScaffoldImpl.fromJson;
 
   @override
   Map<String, dynamic>? get appBar;
@@ -426,6 +426,6 @@ abstract class _MiraiScaffold implements MiraiScaffold {
   bool get extendBodyBehindAppBar;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiScaffoldCopyWith<_$_MiraiScaffold> get copyWith =>
+  _$$MiraiScaffoldImplCopyWith<_$MiraiScaffoldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

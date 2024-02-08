@@ -6,8 +6,8 @@ part of 'mirai_stack.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiStack _$$_MiraiStackFromJson(Map<String, dynamic> json) =>
-    _$_MiraiStack(
+_$MiraiStackImpl _$$MiraiStackImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiStackImpl(
       alignment: $enumDecodeNullable(
               _$MiraiAlignmentDirectionalEnumMap, json['alignment']) ??
           MiraiAlignmentDirectional.topStart,
@@ -23,7 +23,7 @@ _$_MiraiStack _$$_MiraiStackFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$$_MiraiStackToJson(_$_MiraiStack instance) =>
+Map<String, dynamic> _$$MiraiStackImplToJson(_$MiraiStackImpl instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentDirectionalEnumMap[instance.alignment]!,
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,

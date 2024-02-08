@@ -6,9 +6,9 @@ part of 'mirai_card_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiCardThemeData _$$_MiraiCardThemeDataFromJson(
+_$MiraiCardThemeDataImpl _$$MiraiCardThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiCardThemeData(
+    _$MiraiCardThemeDataImpl(
       clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']),
       color: json['color'] as String?,
       shadowColor: json['shadowColor'] as String?,
@@ -22,8 +22,8 @@ _$_MiraiCardThemeData _$$_MiraiCardThemeDataFromJson(
           : MiraiBorder.fromJson(json['shape'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiCardThemeDataToJson(
-        _$_MiraiCardThemeData instance) =>
+Map<String, dynamic> _$$MiraiCardThemeDataImplToJson(
+        _$MiraiCardThemeDataImpl instance) =>
     <String, dynamic>{
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior],
       'color': instance.color,

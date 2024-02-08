@@ -6,8 +6,9 @@ part of 'mirai_color_scheme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiColorScheme _$$_MiraiColorSchemeFromJson(Map<String, dynamic> json) =>
-    _$_MiraiColorScheme(
+_$MiraiColorSchemeImpl _$$MiraiColorSchemeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiColorSchemeImpl(
       brightness: $enumDecode(_$BrightnessEnumMap, json['brightness']),
       primary: json['primary'] as String,
       onPrimary: json['onPrimary'] as String,
@@ -41,7 +42,8 @@ _$_MiraiColorScheme _$$_MiraiColorSchemeFromJson(Map<String, dynamic> json) =>
       surfaceTint: json['surfaceTint'] as String?,
     );
 
-Map<String, dynamic> _$$_MiraiColorSchemeToJson(_$_MiraiColorScheme instance) =>
+Map<String, dynamic> _$$MiraiColorSchemeImplToJson(
+        _$MiraiColorSchemeImpl instance) =>
     <String, dynamic>{
       'brightness': _$BrightnessEnumMap[instance.brightness]!,
       'primary': instance.primary,

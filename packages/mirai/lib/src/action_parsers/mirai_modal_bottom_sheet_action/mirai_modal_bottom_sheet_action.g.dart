@@ -6,9 +6,9 @@ part of 'mirai_modal_bottom_sheet_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiModalBottomSheetAction _$$_MiraiModalBottomSheetActionFromJson(
+_$MiraiModalBottomSheetActionImpl _$$MiraiModalBottomSheetActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiModalBottomSheetAction(
+    _$MiraiModalBottomSheetActionImpl(
       widget: json['widget'] as Map<String, dynamic>?,
       request: json['request'] == null
           ? null
@@ -33,8 +33,8 @@ _$_MiraiModalBottomSheetAction _$$_MiraiModalBottomSheetActionFromJson(
       useSafeArea: json['useSafeArea'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_MiraiModalBottomSheetActionToJson(
-        _$_MiraiModalBottomSheetAction instance) =>
+Map<String, dynamic> _$$MiraiModalBottomSheetActionImplToJson(
+        _$MiraiModalBottomSheetActionImpl instance) =>
     <String, dynamic>{
       'widget': instance.widget,
       'request': instance.request,

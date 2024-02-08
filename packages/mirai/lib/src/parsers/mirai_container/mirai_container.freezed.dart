@@ -12,7 +12,7 @@ part of 'mirai_container.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiContainer _$MiraiContainerFromJson(Map<String, dynamic> json) {
   return _MiraiContainer.fromJson(json);
@@ -159,11 +159,11 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
 }
 
 /// @nodoc
-abstract class _$$_MiraiContainerCopyWith<$Res>
+abstract class _$$MiraiContainerImplCopyWith<$Res>
     implements $MiraiContainerCopyWith<$Res> {
-  factory _$$_MiraiContainerCopyWith(
-          _$_MiraiContainer value, $Res Function(_$_MiraiContainer) then) =
-      __$$_MiraiContainerCopyWithImpl<$Res>;
+  factory _$$MiraiContainerImplCopyWith(_$MiraiContainerImpl value,
+          $Res Function(_$MiraiContainerImpl) then) =
+      __$$MiraiContainerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -186,11 +186,11 @@ abstract class _$$_MiraiContainerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiContainerCopyWithImpl<$Res>
-    extends _$MiraiContainerCopyWithImpl<$Res, _$_MiraiContainer>
-    implements _$$_MiraiContainerCopyWith<$Res> {
-  __$$_MiraiContainerCopyWithImpl(
-      _$_MiraiContainer _value, $Res Function(_$_MiraiContainer) _then)
+class __$$MiraiContainerImplCopyWithImpl<$Res>
+    extends _$MiraiContainerCopyWithImpl<$Res, _$MiraiContainerImpl>
+    implements _$$MiraiContainerImplCopyWith<$Res> {
+  __$$MiraiContainerImplCopyWithImpl(
+      _$MiraiContainerImpl _value, $Res Function(_$MiraiContainerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -206,7 +206,7 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
     Object? child = freezed,
     Object? clipBehavior = null,
   }) {
-    return _then(_$_MiraiContainer(
+    return _then(_$MiraiContainerImpl(
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -249,8 +249,8 @@ class __$$_MiraiContainerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiContainer implements _MiraiContainer {
-  const _$_MiraiContainer(
+class _$MiraiContainerImpl implements _MiraiContainer {
+  const _$MiraiContainerImpl(
       {this.alignment,
       this.padding,
       this.decoration,
@@ -262,8 +262,8 @@ class _$_MiraiContainer implements _MiraiContainer {
       this.clipBehavior = Clip.none})
       : _child = child;
 
-  factory _$_MiraiContainer.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiContainerFromJson(json);
+  factory _$MiraiContainerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiContainerImplFromJson(json);
 
   @override
   final MiraiAlignment? alignment;
@@ -299,10 +299,10 @@ class _$_MiraiContainer implements _MiraiContainer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiContainer &&
+            other is _$MiraiContainerImpl &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
             (identical(other.padding, padding) || other.padding == padding) &&
@@ -334,12 +334,13 @@ class _$_MiraiContainer implements _MiraiContainer {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiContainerCopyWith<_$_MiraiContainer> get copyWith =>
-      __$$_MiraiContainerCopyWithImpl<_$_MiraiContainer>(this, _$identity);
+  _$$MiraiContainerImplCopyWith<_$MiraiContainerImpl> get copyWith =>
+      __$$MiraiContainerImplCopyWithImpl<_$MiraiContainerImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiContainerToJson(
+    return _$$MiraiContainerImplToJson(
       this,
     );
   }
@@ -355,10 +356,10 @@ abstract class _MiraiContainer implements MiraiContainer {
       final double? height,
       final MiraiEdgeInsets? margin,
       final Map<String, dynamic>? child,
-      final Clip clipBehavior}) = _$_MiraiContainer;
+      final Clip clipBehavior}) = _$MiraiContainerImpl;
 
   factory _MiraiContainer.fromJson(Map<String, dynamic> json) =
-      _$_MiraiContainer.fromJson;
+      _$MiraiContainerImpl.fromJson;
 
   @override
   MiraiAlignment? get alignment;
@@ -380,6 +381,6 @@ abstract class _MiraiContainer implements MiraiContainer {
   Clip get clipBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiContainerCopyWith<_$_MiraiContainer> get copyWith =>
+  _$$MiraiContainerImplCopyWith<_$MiraiContainerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

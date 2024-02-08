@@ -6,8 +6,8 @@ part of 'mirai_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
-    _$_MiraiTheme(
+_$MiraiThemeImpl _$$MiraiThemeImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiThemeImpl(
       applyElevationOverlayColor: json['applyElevationOverlayColor'] as bool?,
       inputDecorationTheme: json['inputDecorationTheme'] == null
           ? null
@@ -112,7 +112,7 @@ _$_MiraiTheme _$$_MiraiThemeFromJson(Map<String, dynamic> json) =>
               json['tabBarTheme'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiThemeToJson(_$_MiraiTheme instance) =>
+Map<String, dynamic> _$$MiraiThemeImplToJson(_$MiraiThemeImpl instance) =>
     <String, dynamic>{
       'applyElevationOverlayColor': instance.applyElevationOverlayColor,
       'inputDecorationTheme': instance.inputDecorationTheme,

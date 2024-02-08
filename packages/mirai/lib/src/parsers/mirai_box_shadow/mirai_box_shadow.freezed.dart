@@ -12,7 +12,7 @@ part of 'mirai_box_shadow.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiBoxShadow _$MiraiBoxShadowFromJson(Map<String, dynamic> json) {
   return _MiraiBoxShadow.fromJson(json);
@@ -101,11 +101,11 @@ class _$MiraiBoxShadowCopyWithImpl<$Res, $Val extends MiraiBoxShadow>
 }
 
 /// @nodoc
-abstract class _$$_MiraiBoxShadowCopyWith<$Res>
+abstract class _$$MiraiBoxShadowImplCopyWith<$Res>
     implements $MiraiBoxShadowCopyWith<$Res> {
-  factory _$$_MiraiBoxShadowCopyWith(
-          _$_MiraiBoxShadow value, $Res Function(_$_MiraiBoxShadow) then) =
-      __$$_MiraiBoxShadowCopyWithImpl<$Res>;
+  factory _$$MiraiBoxShadowImplCopyWith(_$MiraiBoxShadowImpl value,
+          $Res Function(_$MiraiBoxShadowImpl) then) =
+      __$$MiraiBoxShadowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,11 +120,11 @@ abstract class _$$_MiraiBoxShadowCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiBoxShadowCopyWithImpl<$Res>
-    extends _$MiraiBoxShadowCopyWithImpl<$Res, _$_MiraiBoxShadow>
-    implements _$$_MiraiBoxShadowCopyWith<$Res> {
-  __$$_MiraiBoxShadowCopyWithImpl(
-      _$_MiraiBoxShadow _value, $Res Function(_$_MiraiBoxShadow) _then)
+class __$$MiraiBoxShadowImplCopyWithImpl<$Res>
+    extends _$MiraiBoxShadowCopyWithImpl<$Res, _$MiraiBoxShadowImpl>
+    implements _$$MiraiBoxShadowImplCopyWith<$Res> {
+  __$$MiraiBoxShadowImplCopyWithImpl(
+      _$MiraiBoxShadowImpl _value, $Res Function(_$MiraiBoxShadowImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +136,7 @@ class __$$_MiraiBoxShadowCopyWithImpl<$Res>
     Object? spreadRadius = freezed,
     Object? blurStyle = freezed,
   }) {
-    return _then(_$_MiraiBoxShadow(
+    return _then(_$MiraiBoxShadowImpl(
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -163,16 +163,16 @@ class __$$_MiraiBoxShadowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiBoxShadow implements _MiraiBoxShadow {
-  const _$_MiraiBoxShadow(
+class _$MiraiBoxShadowImpl implements _MiraiBoxShadow {
+  const _$MiraiBoxShadowImpl(
       {this.color,
       this.blurRadius = 0.0,
       this.offset = const MiraiOffset(dx: 0, dy: 0),
       this.spreadRadius = 0.0,
       this.blurStyle = BlurStyle.normal});
 
-  factory _$_MiraiBoxShadow.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiBoxShadowFromJson(json);
+  factory _$MiraiBoxShadowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiBoxShadowImplFromJson(json);
 
   @override
   final String? color;
@@ -195,10 +195,10 @@ class _$_MiraiBoxShadow implements _MiraiBoxShadow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiBoxShadow &&
+            other is _$MiraiBoxShadowImpl &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.blurRadius, blurRadius) ||
                 other.blurRadius == blurRadius) &&
@@ -217,12 +217,13 @@ class _$_MiraiBoxShadow implements _MiraiBoxShadow {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiBoxShadowCopyWith<_$_MiraiBoxShadow> get copyWith =>
-      __$$_MiraiBoxShadowCopyWithImpl<_$_MiraiBoxShadow>(this, _$identity);
+  _$$MiraiBoxShadowImplCopyWith<_$MiraiBoxShadowImpl> get copyWith =>
+      __$$MiraiBoxShadowImplCopyWithImpl<_$MiraiBoxShadowImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiBoxShadowToJson(
+    return _$$MiraiBoxShadowImplToJson(
       this,
     );
   }
@@ -234,10 +235,10 @@ abstract class _MiraiBoxShadow implements MiraiBoxShadow {
       final double? blurRadius,
       final MiraiOffset offset,
       final double? spreadRadius,
-      final BlurStyle? blurStyle}) = _$_MiraiBoxShadow;
+      final BlurStyle? blurStyle}) = _$MiraiBoxShadowImpl;
 
   factory _MiraiBoxShadow.fromJson(Map<String, dynamic> json) =
-      _$_MiraiBoxShadow.fromJson;
+      _$MiraiBoxShadowImpl.fromJson;
 
   @override
   String? get color;
@@ -251,6 +252,6 @@ abstract class _MiraiBoxShadow implements MiraiBoxShadow {
   BlurStyle? get blurStyle;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiBoxShadowCopyWith<_$_MiraiBoxShadow> get copyWith =>
+  _$$MiraiBoxShadowImplCopyWith<_$MiraiBoxShadowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

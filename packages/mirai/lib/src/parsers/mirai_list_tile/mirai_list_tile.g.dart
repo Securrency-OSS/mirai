@@ -6,8 +6,8 @@ part of 'mirai_list_tile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiListTile _$$_MiraiListTileFromJson(Map<String, dynamic> json) =>
-    _$_MiraiListTile(
+_$MiraiListTileImpl _$$MiraiListTileImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiListTileImpl(
       onTap: json['onTap'] as Map<String, dynamic>?,
       onLongPress: json['onLongPress'] as Map<String, dynamic>?,
       leading: json['leading'] as Map<String, dynamic>?,
@@ -37,7 +37,7 @@ _$_MiraiListTile _$$_MiraiListTileFromJson(Map<String, dynamic> json) =>
       minLeadingWidth: (json['minLeadingWidth'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiListTileToJson(_$_MiraiListTile instance) =>
+Map<String, dynamic> _$$MiraiListTileImplToJson(_$MiraiListTileImpl instance) =>
     <String, dynamic>{
       'onTap': instance.onTap,
       'onLongPress': instance.onLongPress,

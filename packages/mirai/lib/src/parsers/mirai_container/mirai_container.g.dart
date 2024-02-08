@@ -6,8 +6,8 @@ part of 'mirai_container.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
-    _$_MiraiContainer(
+_$MiraiContainerImpl _$$MiraiContainerImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiContainerImpl(
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']),
       padding: json['padding'] == null
@@ -28,7 +28,8 @@ _$_MiraiContainer _$$_MiraiContainerFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
     );
 
-Map<String, dynamic> _$$_MiraiContainerToJson(_$_MiraiContainer instance) =>
+Map<String, dynamic> _$$MiraiContainerImplToJson(
+        _$MiraiContainerImpl instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment],
       'padding': instance.padding,

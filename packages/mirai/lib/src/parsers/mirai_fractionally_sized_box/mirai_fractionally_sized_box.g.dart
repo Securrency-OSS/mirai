@@ -6,9 +6,9 @@ part of 'mirai_fractionally_sized_box.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiFractionallySizedBox _$$_MiraiFractionallySizedBoxFromJson(
+_$MiraiFractionallySizedBoxImpl _$$MiraiFractionallySizedBoxImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiFractionallySizedBox(
+    _$MiraiFractionallySizedBoxImpl(
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']),
       widthFactor: (json['widthFactor'] as num?)?.toDouble(),
@@ -16,8 +16,8 @@ _$_MiraiFractionallySizedBox _$$_MiraiFractionallySizedBoxFromJson(
       child: json['child'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_MiraiFractionallySizedBoxToJson(
-        _$_MiraiFractionallySizedBox instance) =>
+Map<String, dynamic> _$$MiraiFractionallySizedBoxImplToJson(
+        _$MiraiFractionallySizedBoxImpl instance) =>
     <String, dynamic>{
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment],
       'widthFactor': instance.widthFactor,

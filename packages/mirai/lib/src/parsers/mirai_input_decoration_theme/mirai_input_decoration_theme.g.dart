@@ -6,9 +6,9 @@ part of 'mirai_input_decoration_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiInputDecorationTheme _$$_MiraiInputDecorationThemeFromJson(
+_$MiraiInputDecorationThemeImpl _$$MiraiInputDecorationThemeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiInputDecorationTheme(
+    _$MiraiInputDecorationThemeImpl(
       labelStyle: json['labelStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
@@ -95,8 +95,8 @@ _$_MiraiInputDecorationTheme _$$_MiraiInputDecorationThemeFromJson(
               json['constraints'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiInputDecorationThemeToJson(
-        _$_MiraiInputDecorationTheme instance) =>
+Map<String, dynamic> _$$MiraiInputDecorationThemeImplToJson(
+        _$MiraiInputDecorationThemeImpl instance) =>
     <String, dynamic>{
       'labelStyle': instance.labelStyle,
       'floatingLabelStyle': instance.floatingLabelStyle,

@@ -12,7 +12,7 @@ part of 'mirai_navigation_bar_theme_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiNavigationBarThemeData _$MiraiNavigationBarThemeDataFromJson(
     Map<String, dynamic> json) {
@@ -171,12 +171,12 @@ class _$MiraiNavigationBarThemeDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MiraiNavigationBarThemeDataCopyWith<$Res>
+abstract class _$$MiraiNavigationBarThemeDataImplCopyWith<$Res>
     implements $MiraiNavigationBarThemeDataCopyWith<$Res> {
-  factory _$$_MiraiNavigationBarThemeDataCopyWith(
-          _$_MiraiNavigationBarThemeData value,
-          $Res Function(_$_MiraiNavigationBarThemeData) then) =
-      __$$_MiraiNavigationBarThemeDataCopyWithImpl<$Res>;
+  factory _$$MiraiNavigationBarThemeDataImplCopyWith(
+          _$MiraiNavigationBarThemeDataImpl value,
+          $Res Function(_$MiraiNavigationBarThemeDataImpl) then) =
+      __$$MiraiNavigationBarThemeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -200,13 +200,13 @@ abstract class _$$_MiraiNavigationBarThemeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiNavigationBarThemeDataCopyWithImpl<$Res>
+class __$$MiraiNavigationBarThemeDataImplCopyWithImpl<$Res>
     extends _$MiraiNavigationBarThemeDataCopyWithImpl<$Res,
-        _$_MiraiNavigationBarThemeData>
-    implements _$$_MiraiNavigationBarThemeDataCopyWith<$Res> {
-  __$$_MiraiNavigationBarThemeDataCopyWithImpl(
-      _$_MiraiNavigationBarThemeData _value,
-      $Res Function(_$_MiraiNavigationBarThemeData) _then)
+        _$MiraiNavigationBarThemeDataImpl>
+    implements _$$MiraiNavigationBarThemeDataImplCopyWith<$Res> {
+  __$$MiraiNavigationBarThemeDataImplCopyWithImpl(
+      _$MiraiNavigationBarThemeDataImpl _value,
+      $Res Function(_$MiraiNavigationBarThemeDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -223,7 +223,7 @@ class __$$_MiraiNavigationBarThemeDataCopyWithImpl<$Res>
     Object? iconTheme = freezed,
     Object? labelBehavior = freezed,
   }) {
-    return _then(_$_MiraiNavigationBarThemeData(
+    return _then(_$MiraiNavigationBarThemeDataImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -270,8 +270,9 @@ class __$$_MiraiNavigationBarThemeDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiNavigationBarThemeData implements _MiraiNavigationBarThemeData {
-  const _$_MiraiNavigationBarThemeData(
+class _$MiraiNavigationBarThemeDataImpl
+    implements _MiraiNavigationBarThemeData {
+  const _$MiraiNavigationBarThemeDataImpl(
       {this.height,
       this.backgroundColor,
       this.elevation,
@@ -283,8 +284,9 @@ class _$_MiraiNavigationBarThemeData implements _MiraiNavigationBarThemeData {
       this.iconTheme,
       this.labelBehavior});
 
-  factory _$_MiraiNavigationBarThemeData.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiNavigationBarThemeDataFromJson(json);
+  factory _$MiraiNavigationBarThemeDataImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MiraiNavigationBarThemeDataImplFromJson(json);
 
   @override
   final double? height;
@@ -313,10 +315,10 @@ class _$_MiraiNavigationBarThemeData implements _MiraiNavigationBarThemeData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiNavigationBarThemeData &&
+            other is _$MiraiNavigationBarThemeDataImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
@@ -356,13 +358,13 @@ class _$_MiraiNavigationBarThemeData implements _MiraiNavigationBarThemeData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiNavigationBarThemeDataCopyWith<_$_MiraiNavigationBarThemeData>
-      get copyWith => __$$_MiraiNavigationBarThemeDataCopyWithImpl<
-          _$_MiraiNavigationBarThemeData>(this, _$identity);
+  _$$MiraiNavigationBarThemeDataImplCopyWith<_$MiraiNavigationBarThemeDataImpl>
+      get copyWith => __$$MiraiNavigationBarThemeDataImplCopyWithImpl<
+          _$MiraiNavigationBarThemeDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiNavigationBarThemeDataToJson(
+    return _$$MiraiNavigationBarThemeDataImplToJson(
       this,
     );
   }
@@ -381,10 +383,10 @@ abstract class _MiraiNavigationBarThemeData
           final MiraiTextStyle? labelTextStyle,
           final MiraiIconThemeData? iconTheme,
           final NavigationDestinationLabelBehavior? labelBehavior}) =
-      _$_MiraiNavigationBarThemeData;
+      _$MiraiNavigationBarThemeDataImpl;
 
   factory _MiraiNavigationBarThemeData.fromJson(Map<String, dynamic> json) =
-      _$_MiraiNavigationBarThemeData.fromJson;
+      _$MiraiNavigationBarThemeDataImpl.fromJson;
 
   @override
   double? get height;
@@ -408,6 +410,6 @@ abstract class _MiraiNavigationBarThemeData
   NavigationDestinationLabelBehavior? get labelBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiNavigationBarThemeDataCopyWith<_$_MiraiNavigationBarThemeData>
+  _$$MiraiNavigationBarThemeDataImplCopyWith<_$MiraiNavigationBarThemeDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

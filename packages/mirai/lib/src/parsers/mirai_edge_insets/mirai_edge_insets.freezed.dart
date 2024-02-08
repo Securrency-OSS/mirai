@@ -12,7 +12,7 @@ part of 'mirai_edge_insets.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiEdgeInsets _$MiraiEdgeInsetsFromJson(Map<String, dynamic> json) {
   return _MiraiEdgeInsets.fromJson(json);
@@ -80,22 +80,22 @@ class _$MiraiEdgeInsetsCopyWithImpl<$Res, $Val extends MiraiEdgeInsets>
 }
 
 /// @nodoc
-abstract class _$$_MiraiEdgeInsetsCopyWith<$Res>
+abstract class _$$MiraiEdgeInsetsImplCopyWith<$Res>
     implements $MiraiEdgeInsetsCopyWith<$Res> {
-  factory _$$_MiraiEdgeInsetsCopyWith(
-          _$_MiraiEdgeInsets value, $Res Function(_$_MiraiEdgeInsets) then) =
-      __$$_MiraiEdgeInsetsCopyWithImpl<$Res>;
+  factory _$$MiraiEdgeInsetsImplCopyWith(_$MiraiEdgeInsetsImpl value,
+          $Res Function(_$MiraiEdgeInsetsImpl) then) =
+      __$$MiraiEdgeInsetsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double? left, double? top, double? right, double? bottom});
 }
 
 /// @nodoc
-class __$$_MiraiEdgeInsetsCopyWithImpl<$Res>
-    extends _$MiraiEdgeInsetsCopyWithImpl<$Res, _$_MiraiEdgeInsets>
-    implements _$$_MiraiEdgeInsetsCopyWith<$Res> {
-  __$$_MiraiEdgeInsetsCopyWithImpl(
-      _$_MiraiEdgeInsets _value, $Res Function(_$_MiraiEdgeInsets) _then)
+class __$$MiraiEdgeInsetsImplCopyWithImpl<$Res>
+    extends _$MiraiEdgeInsetsCopyWithImpl<$Res, _$MiraiEdgeInsetsImpl>
+    implements _$$MiraiEdgeInsetsImplCopyWith<$Res> {
+  __$$MiraiEdgeInsetsImplCopyWithImpl(
+      _$MiraiEdgeInsetsImpl _value, $Res Function(_$MiraiEdgeInsetsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_MiraiEdgeInsetsCopyWithImpl<$Res>
     Object? right = freezed,
     Object? bottom = freezed,
   }) {
-    return _then(_$_MiraiEdgeInsets(
+    return _then(_$MiraiEdgeInsetsImpl(
       left: freezed == left
           ? _value.left
           : left // ignore: cast_nullable_to_non_nullable
@@ -129,11 +129,11 @@ class __$$_MiraiEdgeInsetsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiEdgeInsets implements _MiraiEdgeInsets {
-  const _$_MiraiEdgeInsets({this.left, this.top, this.right, this.bottom});
+class _$MiraiEdgeInsetsImpl implements _MiraiEdgeInsets {
+  const _$MiraiEdgeInsetsImpl({this.left, this.top, this.right, this.bottom});
 
-  factory _$_MiraiEdgeInsets.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiEdgeInsetsFromJson(json);
+  factory _$MiraiEdgeInsetsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiEdgeInsetsImplFromJson(json);
 
   @override
   final double? left;
@@ -150,10 +150,10 @@ class _$_MiraiEdgeInsets implements _MiraiEdgeInsets {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiEdgeInsets &&
+            other is _$MiraiEdgeInsetsImpl &&
             (identical(other.left, left) || other.left == left) &&
             (identical(other.top, top) || other.top == top) &&
             (identical(other.right, right) || other.right == right) &&
@@ -167,12 +167,13 @@ class _$_MiraiEdgeInsets implements _MiraiEdgeInsets {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiEdgeInsetsCopyWith<_$_MiraiEdgeInsets> get copyWith =>
-      __$$_MiraiEdgeInsetsCopyWithImpl<_$_MiraiEdgeInsets>(this, _$identity);
+  _$$MiraiEdgeInsetsImplCopyWith<_$MiraiEdgeInsetsImpl> get copyWith =>
+      __$$MiraiEdgeInsetsImplCopyWithImpl<_$MiraiEdgeInsetsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiEdgeInsetsToJson(
+    return _$$MiraiEdgeInsetsImplToJson(
       this,
     );
   }
@@ -183,10 +184,10 @@ abstract class _MiraiEdgeInsets implements MiraiEdgeInsets {
       {final double? left,
       final double? top,
       final double? right,
-      final double? bottom}) = _$_MiraiEdgeInsets;
+      final double? bottom}) = _$MiraiEdgeInsetsImpl;
 
   factory _MiraiEdgeInsets.fromJson(Map<String, dynamic> json) =
-      _$_MiraiEdgeInsets.fromJson;
+      _$MiraiEdgeInsetsImpl.fromJson;
 
   @override
   double? get left;
@@ -198,6 +199,6 @@ abstract class _MiraiEdgeInsets implements MiraiEdgeInsets {
   double? get bottom;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiEdgeInsetsCopyWith<_$_MiraiEdgeInsets> get copyWith =>
+  _$$MiraiEdgeInsetsImplCopyWith<_$MiraiEdgeInsetsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

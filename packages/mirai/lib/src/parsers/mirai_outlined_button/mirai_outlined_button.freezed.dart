@@ -12,7 +12,7 @@ part of 'mirai_outlined_button.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiOutlinedButton _$MiraiOutlinedButtonFromJson(Map<String, dynamic> json) {
   return _MiraiOutlinedButton.fromJson(json);
@@ -105,11 +105,11 @@ class _$MiraiOutlinedButtonCopyWithImpl<$Res, $Val extends MiraiOutlinedButton>
 }
 
 /// @nodoc
-abstract class _$$_MiraiOutlinedButtonCopyWith<$Res>
+abstract class _$$MiraiOutlinedButtonImplCopyWith<$Res>
     implements $MiraiOutlinedButtonCopyWith<$Res> {
-  factory _$$_MiraiOutlinedButtonCopyWith(_$_MiraiOutlinedButton value,
-          $Res Function(_$_MiraiOutlinedButton) then) =
-      __$$_MiraiOutlinedButtonCopyWithImpl<$Res>;
+  factory _$$MiraiOutlinedButtonImplCopyWith(_$MiraiOutlinedButtonImpl value,
+          $Res Function(_$MiraiOutlinedButtonImpl) then) =
+      __$$MiraiOutlinedButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$_MiraiOutlinedButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
-    extends _$MiraiOutlinedButtonCopyWithImpl<$Res, _$_MiraiOutlinedButton>
-    implements _$$_MiraiOutlinedButtonCopyWith<$Res> {
-  __$$_MiraiOutlinedButtonCopyWithImpl(_$_MiraiOutlinedButton _value,
-      $Res Function(_$_MiraiOutlinedButton) _then)
+class __$$MiraiOutlinedButtonImplCopyWithImpl<$Res>
+    extends _$MiraiOutlinedButtonCopyWithImpl<$Res, _$MiraiOutlinedButtonImpl>
+    implements _$$MiraiOutlinedButtonImplCopyWith<$Res> {
+  __$$MiraiOutlinedButtonImplCopyWithImpl(_$MiraiOutlinedButtonImpl _value,
+      $Res Function(_$MiraiOutlinedButtonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +140,7 @@ class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
     Object? clipBehavior = null,
     Object? child = null,
   }) {
-    return _then(_$_MiraiOutlinedButton(
+    return _then(_$MiraiOutlinedButtonImpl(
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_MiraiOutlinedButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
-  const _$_MiraiOutlinedButton(
+class _$MiraiOutlinedButtonImpl implements _MiraiOutlinedButton {
+  const _$MiraiOutlinedButtonImpl(
       {final Map<String, dynamic>? onPressed,
       this.style,
       this.autofocus = false,
@@ -174,8 +174,8 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
       : _onPressed = onPressed,
         _child = child;
 
-  factory _$_MiraiOutlinedButton.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiOutlinedButtonFromJson(json);
+  factory _$MiraiOutlinedButtonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiOutlinedButtonImplFromJson(json);
 
   final Map<String, dynamic>? _onPressed;
   @override
@@ -209,10 +209,10 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiOutlinedButton &&
+            other is _$MiraiOutlinedButtonImpl &&
             const DeepCollectionEquality()
                 .equals(other._onPressed, _onPressed) &&
             (identical(other.style, style) || other.style == style) &&
@@ -235,13 +235,13 @@ class _$_MiraiOutlinedButton implements _MiraiOutlinedButton {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiOutlinedButtonCopyWith<_$_MiraiOutlinedButton> get copyWith =>
-      __$$_MiraiOutlinedButtonCopyWithImpl<_$_MiraiOutlinedButton>(
+  _$$MiraiOutlinedButtonImplCopyWith<_$MiraiOutlinedButtonImpl> get copyWith =>
+      __$$MiraiOutlinedButtonImplCopyWithImpl<_$MiraiOutlinedButtonImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiOutlinedButtonToJson(
+    return _$$MiraiOutlinedButtonImplToJson(
       this,
     );
   }
@@ -253,10 +253,10 @@ abstract class _MiraiOutlinedButton implements MiraiOutlinedButton {
       final MiraiButtonStyle? style,
       final dynamic autofocus,
       final Clip clipBehavior,
-      required final Map<String, dynamic> child}) = _$_MiraiOutlinedButton;
+      required final Map<String, dynamic> child}) = _$MiraiOutlinedButtonImpl;
 
   factory _MiraiOutlinedButton.fromJson(Map<String, dynamic> json) =
-      _$_MiraiOutlinedButton.fromJson;
+      _$MiraiOutlinedButtonImpl.fromJson;
 
   @override
   Map<String, dynamic>? get onPressed;
@@ -270,6 +270,6 @@ abstract class _MiraiOutlinedButton implements MiraiOutlinedButton {
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiOutlinedButtonCopyWith<_$_MiraiOutlinedButton> get copyWith =>
+  _$$MiraiOutlinedButtonImplCopyWith<_$MiraiOutlinedButtonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

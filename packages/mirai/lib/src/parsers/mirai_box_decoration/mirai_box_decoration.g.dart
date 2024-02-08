@@ -6,9 +6,9 @@ part of 'mirai_box_decoration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiBoxDecoration _$$_MiraiBoxDecorationFromJson(
+_$MiraiBoxDecorationImpl _$$MiraiBoxDecorationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiBoxDecoration(
+    _$MiraiBoxDecorationImpl(
       color: json['color'] as String?,
       borderStyle:
           $enumDecodeNullable(_$BorderStyleEnumMap, json['borderStyle']) ??
@@ -36,8 +36,8 @@ _$_MiraiBoxDecoration _$$_MiraiBoxDecorationFromJson(
           : MiraiGradient.fromJson(json['gradient'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiBoxDecorationToJson(
-        _$_MiraiBoxDecoration instance) =>
+Map<String, dynamic> _$$MiraiBoxDecorationImplToJson(
+        _$MiraiBoxDecorationImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
       'borderStyle': _$BorderStyleEnumMap[instance.borderStyle]!,

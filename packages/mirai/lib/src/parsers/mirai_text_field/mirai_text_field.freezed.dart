@@ -12,7 +12,7 @@ part of 'mirai_text_field.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiTextField _$MiraiTextFieldFromJson(Map<String, dynamic> json) {
   return _MiraiTextField.fromJson(json);
@@ -261,11 +261,11 @@ class _$MiraiTextFieldCopyWithImpl<$Res, $Val extends MiraiTextField>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTextFieldCopyWith<$Res>
+abstract class _$$MiraiTextFieldImplCopyWith<$Res>
     implements $MiraiTextFieldCopyWith<$Res> {
-  factory _$$_MiraiTextFieldCopyWith(
-          _$_MiraiTextField value, $Res Function(_$_MiraiTextField) then) =
-      __$$_MiraiTextFieldCopyWithImpl<$Res>;
+  factory _$$MiraiTextFieldImplCopyWith(_$MiraiTextFieldImpl value,
+          $Res Function(_$MiraiTextFieldImpl) then) =
+      __$$MiraiTextFieldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -302,11 +302,11 @@ abstract class _$$_MiraiTextFieldCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTextFieldCopyWithImpl<$Res>
-    extends _$MiraiTextFieldCopyWithImpl<$Res, _$_MiraiTextField>
-    implements _$$_MiraiTextFieldCopyWith<$Res> {
-  __$$_MiraiTextFieldCopyWithImpl(
-      _$_MiraiTextField _value, $Res Function(_$_MiraiTextField) _then)
+class __$$MiraiTextFieldImplCopyWithImpl<$Res>
+    extends _$MiraiTextFieldCopyWithImpl<$Res, _$MiraiTextFieldImpl>
+    implements _$$MiraiTextFieldImplCopyWith<$Res> {
+  __$$MiraiTextFieldImplCopyWithImpl(
+      _$MiraiTextFieldImpl _value, $Res Function(_$MiraiTextFieldImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -338,7 +338,7 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
     Object? hintText = freezed,
     Object? inputFormatters = null,
   }) {
-    return _then(_$_MiraiTextField(
+    return _then(_$MiraiTextFieldImpl(
       decoration: freezed == decoration
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
@@ -442,8 +442,8 @@ class __$$_MiraiTextFieldCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTextField implements _MiraiTextField {
-  const _$_MiraiTextField(
+class _$MiraiTextFieldImpl implements _MiraiTextField {
+  const _$MiraiTextFieldImpl(
       {this.decoration,
       this.initialValue = '',
       this.keyboardType,
@@ -471,8 +471,8 @@ class _$_MiraiTextField implements _MiraiTextField {
       final List<MiraiInputFormatter> inputFormatters = const []})
       : _inputFormatters = inputFormatters;
 
-  factory _$_MiraiTextField.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTextFieldFromJson(json);
+  factory _$MiraiTextFieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTextFieldImplFromJson(json);
 
   @override
   final MiraiInputDecoration? decoration;
@@ -547,10 +547,10 @@ class _$_MiraiTextField implements _MiraiTextField {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTextField &&
+            other is _$MiraiTextFieldImpl &&
             (identical(other.decoration, decoration) ||
                 other.decoration == decoration) &&
             (identical(other.initialValue, initialValue) ||
@@ -634,12 +634,13 @@ class _$_MiraiTextField implements _MiraiTextField {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTextFieldCopyWith<_$_MiraiTextField> get copyWith =>
-      __$$_MiraiTextFieldCopyWithImpl<_$_MiraiTextField>(this, _$identity);
+  _$$MiraiTextFieldImplCopyWith<_$MiraiTextFieldImpl> get copyWith =>
+      __$$MiraiTextFieldImplCopyWithImpl<_$MiraiTextFieldImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTextFieldToJson(
+    return _$$MiraiTextFieldImplToJson(
       this,
     );
   }
@@ -671,10 +672,10 @@ abstract class _MiraiTextField implements MiraiTextField {
       final double? cursorHeight,
       final String? cursorColor,
       final String? hintText,
-      final List<MiraiInputFormatter> inputFormatters}) = _$_MiraiTextField;
+      final List<MiraiInputFormatter> inputFormatters}) = _$MiraiTextFieldImpl;
 
   factory _MiraiTextField.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTextField.fromJson;
+      _$MiraiTextFieldImpl.fromJson;
 
   @override
   MiraiInputDecoration? get decoration;
@@ -728,6 +729,6 @@ abstract class _MiraiTextField implements MiraiTextField {
   List<MiraiInputFormatter> get inputFormatters;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTextFieldCopyWith<_$_MiraiTextField> get copyWith =>
+  _$$MiraiTextFieldImplCopyWith<_$MiraiTextFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

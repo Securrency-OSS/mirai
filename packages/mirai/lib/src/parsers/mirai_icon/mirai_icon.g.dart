@@ -6,7 +6,8 @@ part of 'mirai_icon.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiIcon _$$_MiraiIconFromJson(Map<String, dynamic> json) => _$_MiraiIcon(
+_$MiraiIconImpl _$$MiraiIconImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiIconImpl(
       icon: json['icon'] as String,
       iconType: $enumDecode(_$IconTypeEnumMap, json['iconType']),
       size: (json['size'] as num?)?.toDouble(),
@@ -16,7 +17,7 @@ _$_MiraiIcon _$$_MiraiIconFromJson(Map<String, dynamic> json) => _$_MiraiIcon(
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
     );
 
-Map<String, dynamic> _$$_MiraiIconToJson(_$_MiraiIcon instance) =>
+Map<String, dynamic> _$$MiraiIconImplToJson(_$MiraiIconImpl instance) =>
     <String, dynamic>{
       'icon': instance.icon,
       'iconType': _$IconTypeEnumMap[instance.iconType]!,

@@ -12,7 +12,7 @@ part of 'mirai_list_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiListView _$MiraiListViewFromJson(Map<String, dynamic> json) {
   return _MiraiListView.fromJson(json);
@@ -190,11 +190,11 @@ class _$MiraiListViewCopyWithImpl<$Res, $Val extends MiraiListView>
 }
 
 /// @nodoc
-abstract class _$$_MiraiListViewCopyWith<$Res>
+abstract class _$$MiraiListViewImplCopyWith<$Res>
     implements $MiraiListViewCopyWith<$Res> {
-  factory _$$_MiraiListViewCopyWith(
-          _$_MiraiListView value, $Res Function(_$_MiraiListView) then) =
-      __$$_MiraiListViewCopyWithImpl<$Res>;
+  factory _$$MiraiListViewImplCopyWith(
+          _$MiraiListViewImpl value, $Res Function(_$MiraiListViewImpl) then) =
+      __$$MiraiListViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -221,11 +221,11 @@ abstract class _$$_MiraiListViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiListViewCopyWithImpl<$Res>
-    extends _$MiraiListViewCopyWithImpl<$Res, _$_MiraiListView>
-    implements _$$_MiraiListViewCopyWith<$Res> {
-  __$$_MiraiListViewCopyWithImpl(
-      _$_MiraiListView _value, $Res Function(_$_MiraiListView) _then)
+class __$$MiraiListViewImplCopyWithImpl<$Res>
+    extends _$MiraiListViewCopyWithImpl<$Res, _$MiraiListViewImpl>
+    implements _$$MiraiListViewImplCopyWith<$Res> {
+  __$$MiraiListViewImplCopyWithImpl(
+      _$MiraiListViewImpl _value, $Res Function(_$MiraiListViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -249,7 +249,7 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
     Object? restorationId = freezed,
     Object? clipBehavior = null,
   }) {
-    return _then(_$_MiraiListView(
+    return _then(_$MiraiListViewImpl(
       scrollDirection: null == scrollDirection
           ? _value.scrollDirection
           : scrollDirection // ignore: cast_nullable_to_non_nullable
@@ -324,8 +324,8 @@ class __$$_MiraiListViewCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiListView implements _MiraiListView {
-  const _$_MiraiListView(
+class _$MiraiListViewImpl implements _MiraiListView {
+  const _$MiraiListViewImpl(
       {this.scrollDirection = Axis.vertical,
       this.reverse = false,
       this.primary,
@@ -346,8 +346,8 @@ class _$_MiraiListView implements _MiraiListView {
       : _children = children,
         _separator = separator;
 
-  factory _$_MiraiListView.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiListViewFromJson(json);
+  factory _$MiraiListViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiListViewImplFromJson(json);
 
   @override
   @JsonKey()
@@ -414,10 +414,10 @@ class _$_MiraiListView implements _MiraiListView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiListView &&
+            other is _$MiraiListViewImpl &&
             (identical(other.scrollDirection, scrollDirection) ||
                 other.scrollDirection == scrollDirection) &&
             (identical(other.reverse, reverse) || other.reverse == reverse) &&
@@ -475,12 +475,12 @@ class _$_MiraiListView implements _MiraiListView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiListViewCopyWith<_$_MiraiListView> get copyWith =>
-      __$$_MiraiListViewCopyWithImpl<_$_MiraiListView>(this, _$identity);
+  _$$MiraiListViewImplCopyWith<_$MiraiListViewImpl> get copyWith =>
+      __$$MiraiListViewImplCopyWithImpl<_$MiraiListViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiListViewToJson(
+    return _$$MiraiListViewImplToJson(
       this,
     );
   }
@@ -504,10 +504,10 @@ abstract class _MiraiListView implements MiraiListView {
       final DragStartBehavior dragStartBehavior,
       final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
       final String? restorationId,
-      final Clip clipBehavior}) = _$_MiraiListView;
+      final Clip clipBehavior}) = _$MiraiListViewImpl;
 
   factory _MiraiListView.fromJson(Map<String, dynamic> json) =
-      _$_MiraiListView.fromJson;
+      _$MiraiListViewImpl.fromJson;
 
   @override
   Axis get scrollDirection;
@@ -545,6 +545,6 @@ abstract class _MiraiListView implements MiraiListView {
   Clip get clipBehavior;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiListViewCopyWith<_$_MiraiListView> get copyWith =>
+  _$$MiraiListViewImplCopyWith<_$MiraiListViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

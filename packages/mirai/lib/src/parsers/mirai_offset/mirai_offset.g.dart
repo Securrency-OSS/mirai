@@ -6,13 +6,13 @@ part of 'mirai_offset.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiOffset _$$_MiraiOffsetFromJson(Map<String, dynamic> json) =>
-    _$_MiraiOffset(
+_$MiraiOffsetImpl _$$MiraiOffsetImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiOffsetImpl(
       dx: (json['dx'] as num).toDouble(),
       dy: (json['dy'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_MiraiOffsetToJson(_$_MiraiOffset instance) =>
+Map<String, dynamic> _$$MiraiOffsetImplToJson(_$MiraiOffsetImpl instance) =>
     <String, dynamic>{
       'dx': instance.dx,
       'dy': instance.dy,

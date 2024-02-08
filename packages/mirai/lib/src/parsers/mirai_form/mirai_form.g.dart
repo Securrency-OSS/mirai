@@ -6,13 +6,14 @@ part of 'mirai_form.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiForm _$$_MiraiFormFromJson(Map<String, dynamic> json) => _$_MiraiForm(
+_$MiraiFormImpl _$$MiraiFormImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiFormImpl(
       autovalidateMode: $enumDecodeNullable(
           _$AutovalidateModeEnumMap, json['autovalidateMode']),
       child: json['child'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$$_MiraiFormToJson(_$_MiraiForm instance) =>
+Map<String, dynamic> _$$MiraiFormImplToJson(_$MiraiFormImpl instance) =>
     <String, dynamic>{
       'autovalidateMode': _$AutovalidateModeEnumMap[instance.autovalidateMode],
       'child': instance.child,

@@ -12,7 +12,7 @@ part of 'mirai_text_button.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MiraiTextButton _$MiraiTextButtonFromJson(Map<String, dynamic> json) {
   return _MiraiTextButton.fromJson(json);
@@ -105,11 +105,11 @@ class _$MiraiTextButtonCopyWithImpl<$Res, $Val extends MiraiTextButton>
 }
 
 /// @nodoc
-abstract class _$$_MiraiTextButtonCopyWith<$Res>
+abstract class _$$MiraiTextButtonImplCopyWith<$Res>
     implements $MiraiTextButtonCopyWith<$Res> {
-  factory _$$_MiraiTextButtonCopyWith(
-          _$_MiraiTextButton value, $Res Function(_$_MiraiTextButton) then) =
-      __$$_MiraiTextButtonCopyWithImpl<$Res>;
+  factory _$$MiraiTextButtonImplCopyWith(_$MiraiTextButtonImpl value,
+          $Res Function(_$MiraiTextButtonImpl) then) =
+      __$$MiraiTextButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$_MiraiTextButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MiraiTextButtonCopyWithImpl<$Res>
-    extends _$MiraiTextButtonCopyWithImpl<$Res, _$_MiraiTextButton>
-    implements _$$_MiraiTextButtonCopyWith<$Res> {
-  __$$_MiraiTextButtonCopyWithImpl(
-      _$_MiraiTextButton _value, $Res Function(_$_MiraiTextButton) _then)
+class __$$MiraiTextButtonImplCopyWithImpl<$Res>
+    extends _$MiraiTextButtonCopyWithImpl<$Res, _$MiraiTextButtonImpl>
+    implements _$$MiraiTextButtonImplCopyWith<$Res> {
+  __$$MiraiTextButtonImplCopyWithImpl(
+      _$MiraiTextButtonImpl _value, $Res Function(_$MiraiTextButtonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +140,7 @@ class __$$_MiraiTextButtonCopyWithImpl<$Res>
     Object? clipBehavior = null,
     Object? child = null,
   }) {
-    return _then(_$_MiraiTextButton(
+    return _then(_$MiraiTextButtonImpl(
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_MiraiTextButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MiraiTextButton implements _MiraiTextButton {
-  const _$_MiraiTextButton(
+class _$MiraiTextButtonImpl implements _MiraiTextButton {
+  const _$MiraiTextButtonImpl(
       {final Map<String, dynamic>? onPressed,
       this.style,
       this.autofocus = false,
@@ -174,8 +174,8 @@ class _$_MiraiTextButton implements _MiraiTextButton {
       : _onPressed = onPressed,
         _child = child;
 
-  factory _$_MiraiTextButton.fromJson(Map<String, dynamic> json) =>
-      _$$_MiraiTextButtonFromJson(json);
+  factory _$MiraiTextButtonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MiraiTextButtonImplFromJson(json);
 
   final Map<String, dynamic>? _onPressed;
   @override
@@ -209,10 +209,10 @@ class _$_MiraiTextButton implements _MiraiTextButton {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MiraiTextButton &&
+            other is _$MiraiTextButtonImpl &&
             const DeepCollectionEquality()
                 .equals(other._onPressed, _onPressed) &&
             (identical(other.style, style) || other.style == style) &&
@@ -235,12 +235,13 @@ class _$_MiraiTextButton implements _MiraiTextButton {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MiraiTextButtonCopyWith<_$_MiraiTextButton> get copyWith =>
-      __$$_MiraiTextButtonCopyWithImpl<_$_MiraiTextButton>(this, _$identity);
+  _$$MiraiTextButtonImplCopyWith<_$MiraiTextButtonImpl> get copyWith =>
+      __$$MiraiTextButtonImplCopyWithImpl<_$MiraiTextButtonImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MiraiTextButtonToJson(
+    return _$$MiraiTextButtonImplToJson(
       this,
     );
   }
@@ -252,10 +253,10 @@ abstract class _MiraiTextButton implements MiraiTextButton {
       final MiraiButtonStyle? style,
       final dynamic autofocus,
       final Clip clipBehavior,
-      required final Map<String, dynamic> child}) = _$_MiraiTextButton;
+      required final Map<String, dynamic> child}) = _$MiraiTextButtonImpl;
 
   factory _MiraiTextButton.fromJson(Map<String, dynamic> json) =
-      _$_MiraiTextButton.fromJson;
+      _$MiraiTextButtonImpl.fromJson;
 
   @override
   Map<String, dynamic>? get onPressed;
@@ -269,6 +270,6 @@ abstract class _MiraiTextButton implements MiraiTextButton {
   Map<String, dynamic> get child;
   @override
   @JsonKey(ignore: true)
-  _$$_MiraiTextButtonCopyWith<_$_MiraiTextButton> get copyWith =>
+  _$$MiraiTextButtonImplCopyWith<_$MiraiTextButtonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

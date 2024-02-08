@@ -6,7 +6,8 @@ part of 'mirai_row.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiRow _$$_MiraiRowFromJson(Map<String, dynamic> json) => _$_MiraiRow(
+_$MiraiRowImpl _$$MiraiRowImplFromJson(Map<String, dynamic> json) =>
+    _$MiraiRowImpl(
       mainAxisAlignment: $enumDecodeNullable(
               _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
           MainAxisAlignment.start,
@@ -27,7 +28,7 @@ _$_MiraiRow _$$_MiraiRowFromJson(Map<String, dynamic> json) => _$_MiraiRow(
           const [],
     );
 
-Map<String, dynamic> _$$_MiraiRowToJson(_$_MiraiRow instance) =>
+Map<String, dynamic> _$$MiraiRowImplToJson(_$MiraiRowImpl instance) =>
     <String, dynamic>{
       'mainAxisAlignment':
           _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,

@@ -6,8 +6,9 @@ part of 'mirai_app_bar_theme.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiAppBarTheme _$$_MiraiAppBarThemeFromJson(Map<String, dynamic> json) =>
-    _$_MiraiAppBarTheme(
+_$MiraiAppBarThemeImpl _$$MiraiAppBarThemeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MiraiAppBarThemeImpl(
       backgroundColor: json['backgroundColor'] as String?,
       foregroundColor: json['foregroundColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
@@ -40,7 +41,8 @@ _$_MiraiAppBarTheme _$$_MiraiAppBarThemeFromJson(Map<String, dynamic> json) =>
               json['systemOverlayStyle'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MiraiAppBarThemeToJson(_$_MiraiAppBarTheme instance) =>
+Map<String, dynamic> _$$MiraiAppBarThemeImplToJson(
+        _$MiraiAppBarThemeImpl instance) =>
     <String, dynamic>{
       'backgroundColor': instance.backgroundColor,
       'foregroundColor': instance.foregroundColor,

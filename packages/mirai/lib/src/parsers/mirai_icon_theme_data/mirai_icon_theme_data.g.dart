@@ -6,9 +6,9 @@ part of 'mirai_icon_theme_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MiraiIconThemeData _$$_MiraiIconThemeDataFromJson(
+_$MiraiIconThemeDataImpl _$$MiraiIconThemeDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MiraiIconThemeData(
+    _$MiraiIconThemeDataImpl(
       size: (json['size'] as num?)?.toDouble(),
       fill: (json['fill'] as num?)?.toDouble(),
       weight: (json['weight'] as num?)?.toDouble(),
@@ -21,8 +21,8 @@ _$_MiraiIconThemeData _$$_MiraiIconThemeDataFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MiraiIconThemeDataToJson(
-        _$_MiraiIconThemeData instance) =>
+Map<String, dynamic> _$$MiraiIconThemeDataImplToJson(
+        _$MiraiIconThemeDataImpl instance) =>
     <String, dynamic>{
       'size': instance.size,
       'fill': instance.fill,
