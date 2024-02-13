@@ -1,6 +1,6 @@
 name: mirai
 description: Mirai is a Server-Driven UI (SDUI) library for Flutter. Mirai allows you to build beautiful cross-platform applications with JSON in real time.
-version: 0.5.1
+version: 0.6.0
 homepage: https://github.com/Securrency-OSS/mirai.git
 
 environment:
