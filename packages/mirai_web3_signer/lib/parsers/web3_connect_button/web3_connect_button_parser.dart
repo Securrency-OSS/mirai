@@ -3,6 +3,7 @@ import 'package:mirai_web3_signer/action_parsers/mirai_web3_connect/web3_connect
 import 'package:mirai_web3_signer/parsers/web3_connect_button/web3_connect_button.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 import 'package:mirai_web3_signer/services/web_modal_service.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class MiraiWeb3ConnectButtonParser extends MiraiParser<MiraiWeb3ConnectButton> {
   const MiraiWeb3ConnectButtonParser();
@@ -39,18 +40,31 @@ class _Web3ConnectButtonState extends State<_Web3ConnectButton> {
 
   @override
   Widget build(BuildContext context) {
-    return _walletAddress != null
-        ? Text(_walletAddress!)
-        : ElevatedButton(
-            onPressed: () async {
-              final walletAddress = await const MiraiWeb3ConnectParser()
-                  .onCall(context, const MiraiWeb3Connect());
+    return Column(
+      children: [
+        W3MNetworkSelectButton(service: Web3ModalService.service),
+        _walletAddress != null
+            ? Text(_walletAddress!)
+            : ElevatedButton(
+                onPressed: () async {
+                  final walletAddress = await const MiraiWeb3ConnectParser()
+                      .onCall(context, const MiraiWeb3Connect());
 
-              setState(() {
-                _walletAddress = walletAddress;
-              });
+                  setState(() {
+                    _walletAddress = walletAddress;
+                  });
+                },
+                child: const Text('Connect Wallet'),
+              ),
+        if (_walletAddress != null)
+          ElevatedButton(
+            onPressed: () async {
+              await Web3ModalService.transferToken();
             },
-            child: const Text('Connect Wallet'));
+            child: const Text('Transfer'),
+          ),
+      ],
+    );
   }
 
   @override

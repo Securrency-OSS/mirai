@@ -2,6 +2,7 @@ name: mirai_web3_signer
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
@@ -14,7 +15,14 @@ dependencies:
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
   mirai_framework: ^0.0.1
-  web3modal_flutter: ^3.1.0
+  # web3modal_flutter: ^3.1.0
+  web3modal_flutter:
+    git:
+      url: https://github.com/WalletConnect/Web3ModalFlutter.git
+      ref: master
+  url_launcher:
+  http: ^1.2.0
+  web3dart: ^2.7.2
   # flutter_web3: ^2.1.9
   # web3dart: ^2.7.1
   # walletconnect_dart: ^0.0.11

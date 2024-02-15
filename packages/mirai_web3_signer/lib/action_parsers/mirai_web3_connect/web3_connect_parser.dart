@@ -17,6 +17,12 @@ class MiraiWeb3ConnectParser extends MiraiActionParser<MiraiWeb3Connect> {
   @override
   FutureOr<dynamic> onCall(BuildContext context, MiraiWeb3Connect model) async {
     await Web3ModalService.connectWallet(context);
+    await Web3ModalService.getBalance();
+
+    // Future.delayed(Duration(seconds: 3), () async {
+    //   await Web3ModalService.transferToken();
+    // });
+
     return Web3ModalService.service.session?.address;
   }
 }

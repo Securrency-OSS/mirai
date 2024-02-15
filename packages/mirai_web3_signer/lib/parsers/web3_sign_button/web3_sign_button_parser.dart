@@ -37,7 +37,7 @@ class _Web3SignButtonState extends State<_Web3SignButton> {
   void initState() {
     super.initState();
 
-    Web3ModalService.initialize();
+    // Web3ModalService.initialize();
   }
 
   @override
@@ -49,24 +49,24 @@ class _Web3SignButtonState extends State<_Web3SignButton> {
         size: BaseButtonSize.small,
       ),
     );
-    return _messageSignature != null
-        ? Text(_messageSignature!)
-        : ElevatedButton(
-            onPressed: () async {
-              final messageSignature = await const MiraiWeb3SignMessageParser()
-                  .onCall(context,
-                      const MiraiWeb3SignMessage(message: 'Hello World!'));
+    // return _messageSignature != null
+    //     ? Text(_messageSignature!)
+    //     : ElevatedButton(
+    //         onPressed: () async {
+    //           final messageSignature = await const MiraiWeb3SignMessageParser()
+    //               .onCall(context,
+    //                   const MiraiWeb3SignMessage(message: 'Hello World!'));
 
-              setState(() {
-                _messageSignature = messageSignature;
-              });
-            },
-            child: const Text('Sign Message'));
+    //           setState(() {
+    //             _messageSignature = messageSignature;
+    //           });
+    //         },
+    //         child: const Text('Sign Message'));
   }
 
   @override
   void dispose() {
-    Web3ModalService.disconnect();
+    // Web3ModalService.disconnect();
     super.dispose();
   }
 }
