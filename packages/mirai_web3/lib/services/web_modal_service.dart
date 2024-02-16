@@ -85,11 +85,11 @@ class Web3ModalService {
     }
 
     if (context.mounted) {
-      _service.openModal(
+      await _service.openModal(
         context,
         SelectNetworkPage(
-          onTapNetwork: (info) {
-            _service.selectChain(info);
+          onTapNetwork: (info) async {
+            await _service.selectChain(info);
             widgetStack.instance.addDefault();
           },
         ),
