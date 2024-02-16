@@ -18,6 +18,6 @@ class MiraiWeb3SignMessageParser
   @override
   FutureOr<dynamic> onCall(
       BuildContext context, MiraiWeb3SignMessage model) async {
-    return await Web3ModalService.signMessage(model.message);
+    return await Web3ModalService.requestSignMessage(model.message);
   }
 }
