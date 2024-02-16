@@ -5,7 +5,9 @@ import 'package:intl/intl.dart';
 import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:mirai_web3/models/contract_details.dart';
 import 'package:mirai_web3/models/token.dart';
+import 'package:web3modal_flutter/pages/select_network_page.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
+import 'package:web3modal_flutter/widgets/widget_stack/widget_stack_singleton.dart';
 
 class Web3ModalService {
   const Web3ModalService._();
@@ -74,6 +76,24 @@ class Web3ModalService {
 
     if (context.mounted) {
       await _service.openModal(context);
+    }
+  }
+
+  static Future<void> connectWalletWithNetwork(BuildContext context) async {
+    if (isConnected) {
+      await disconnect();
+    }
+
+    if (context.mounted) {
+      _service.openModal(
+        context,
+        SelectNetworkPage(
+          onTapNetwork: (info) {
+            _service.selectChain(info);
+            widgetStack.instance.addDefault();
+          },
+        ),
+      );
     }
   }
 
