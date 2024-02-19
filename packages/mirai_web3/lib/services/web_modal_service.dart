@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:mirai_web3/models/contract_details.dart';
 import 'package:mirai_web3/models/token.dart';
@@ -159,16 +159,15 @@ class Web3ModalService {
             ),
           ]);
 
-          final formatter = NumberFormat("#,##0.00", "en_US");
           final name = results[0].toString();
-          final total = results[1] / BigInt.from(1000000000000000000);
-          final balance = results[2] / BigInt.from(1000000000000000000);
+          final total = results[1];
+          final balance = results[2];
 
           tokens.add(Token(
             name: name,
             address: contract.address,
-            supply: formatter.format(total),
-            balance: formatter.format(balance),
+            supply: total,
+            balance: balance,
           ));
         }
       }
@@ -199,6 +198,9 @@ class Web3ModalService {
         ),
       );
 
+      // launch wallet
+      _service.launchConnectedWallet();
+
       final transactionHash = await _service.requestWriteContract(
         topic: _service.session!.topic!,
         chainId: _service.selectedChain!.namespace,
@@ -208,7 +210,7 @@ class Web3ModalService {
         transaction: Transaction(
           from: EthereumAddress.fromHex(_service.session!.address!),
           to: EthereumAddress.fromHex(toAddress),
-          value: EtherAmount.fromInt(EtherUnit.wei, amount),
+          value: EtherAmount.fromInt(EtherUnit.mwei, amount),
         ),
       );
 

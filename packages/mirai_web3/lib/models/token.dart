@@ -8,6 +8,6 @@ class Token {
 
   final String name;
   final String address;
-  final String supply;
-  final String balance;
+  final BigInt supply;
+  final BigInt balance;
 }
