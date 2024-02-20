@@ -16,7 +16,7 @@
             "bottom": 12
         },
         "child": {
-            "type": "scrollView",
+            "type": "singleChildScrollView",
             "child": {
                 "type": "form",
                 "child": {
