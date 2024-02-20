@@ -19,6 +19,7 @@ export 'package:mirai/src/parsers/mirai_card/mirai_card.dart';
 export 'package:mirai/src/parsers/mirai_card_theme_data/mirai_card_theme_data.dart';
 export 'package:mirai/src/parsers/mirai_center/mirai_center.dart';
 export 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget.dart';
+export 'package:mirai/src/parsers/mirai_circle_avatar/mirai_circle_avatar.dart';
 export 'package:mirai/src/parsers/mirai_column/mirai_column.dart';
 export 'package:mirai/src/parsers/mirai_container/mirai_container.dart';
 export 'package:mirai/src/parsers/mirai_container_image/mirai_container_image.dart';

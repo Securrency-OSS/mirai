@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+export 'mirai_circle_avatar_parser.dart';
+
 part 'mirai_circle_avatar.freezed.dart';
 part 'mirai_circle_avatar.g.dart';
 
