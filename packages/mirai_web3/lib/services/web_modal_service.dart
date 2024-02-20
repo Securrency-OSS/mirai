@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:mirai_web3/models/chain_details.dart';
 
 import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:mirai_web3/models/contract_details.dart';
@@ -15,6 +16,7 @@ class Web3ModalService {
   static late W3MService _service;
   static late ChainMetadata _chainMetadata;
   static late List<ContractDetails> _contracts;
+  static final List<Token> _contractTokens = [];
   static String? _signature;
 
   static W3MService get service => _service;
@@ -120,8 +122,36 @@ class Web3ModalService {
     }
   }
 
+  static ChainDetails? getChainDetails() {
+    try {
+      return ChainDetails(
+        chainName: _service.selectedChain!.chainName,
+        chainId: _service.selectedChain!.chainId,
+        namespace: _service.selectedChain!.namespace,
+        tokenName: _service.selectedChain!.tokenName,
+        rpcUrl: _service.selectedChain!.rpcUrl,
+        balance: _service.chainBalance ?? 0.0,
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+      return null;
+    }
+  }
+
+  static bool validateCryptoAddress(String address) {
+    try {
+      EthereumAddress.fromHex(address);
+      return true;
+    } catch (e) {
+      debugPrint(e.toString());
+      return false;
+    }
+  }
+
   static Future<List<Token>> loadTokens() async {
-    List<Token> tokens = [];
+    if (_contractTokens.isNotEmpty) {
+      return _contractTokens;
+    }
 
     try {
       for (ContractDetails contract in _contracts) {
@@ -157,17 +187,26 @@ class Web3ModalService {
                 EthereumAddress.fromHex(connectedWalletAddress),
               ],
             ),
+            // results[3]
+            _service.requestReadContract(
+              deployedContract: deployedContract,
+              functionName: 'decimals',
+              rpcUrl: contract.rpcUrl,
+              parameters: [],
+            ),
           ]);
 
           final name = results[0].toString();
           final total = results[1];
           final balance = results[2];
+          final decimals = results[3];
 
-          tokens.add(Token(
+          _contractTokens.add(Token(
             name: name,
             address: contract.address,
             supply: total,
             balance: balance,
+            decimals: decimals,
           ));
         }
       }
@@ -175,17 +214,19 @@ class Web3ModalService {
       debugPrint(e.toString());
     }
 
-    return tokens;
+    return _contractTokens;
   }
 
   static Future<String?> transferToken({
     required String tokenAddress,
     required String toAddress,
-    required int amount,
+    required double amount,
   }) async {
     try {
       final contract =
           _contracts.firstWhere((contract) => contract.address == tokenAddress);
+      final contractToken = _contractTokens
+          .firstWhere((contract) => contract.address == tokenAddress);
 
       // Create DeployedContract object using contract's ABI and address
       final deployedContract = DeployedContract(
@@ -210,7 +251,7 @@ class Web3ModalService {
         transaction: Transaction(
           from: EthereumAddress.fromHex(_service.session!.address!),
           to: EthereumAddress.fromHex(toAddress),
-          value: EtherAmount.fromInt(EtherUnit.mwei, amount),
+          value: contractToken.transferValue(amount),
         ),
       );
 

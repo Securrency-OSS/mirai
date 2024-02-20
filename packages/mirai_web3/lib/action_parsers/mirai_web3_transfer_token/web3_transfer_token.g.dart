@@ -11,7 +11,7 @@ _$MiraiWeb3TransferTokenImpl _$$MiraiWeb3TransferTokenImplFromJson(
     _$MiraiWeb3TransferTokenImpl(
       tokenAddress: json['tokenAddress'] as String,
       toAddress: json['toAddress'] as String,
-      amount: json['amount'] as int,
+      amount: (json['amount'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$MiraiWeb3TransferTokenImplToJson(

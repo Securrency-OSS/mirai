@@ -23,7 +23,7 @@ MiraiWeb3TransferToken _$MiraiWeb3TransferTokenFromJson(
 mixin _$MiraiWeb3TransferToken {
   String get tokenAddress => throw _privateConstructorUsedError;
   String get toAddress => throw _privateConstructorUsedError;
-  int get amount => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +37,7 @@ abstract class $MiraiWeb3TransferTokenCopyWith<$Res> {
           $Res Function(MiraiWeb3TransferToken) then) =
       _$MiraiWeb3TransferTokenCopyWithImpl<$Res, MiraiWeb3TransferToken>;
   @useResult
-  $Res call({String tokenAddress, String toAddress, int amount});
+  $Res call({String tokenAddress, String toAddress, double amount});
 }
 
 /// @nodoc
@@ -70,7 +70,7 @@ class _$MiraiWeb3TransferTokenCopyWithImpl<$Res,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
     ) as $Val);
   }
 }
@@ -84,7 +84,7 @@ abstract class _$$MiraiWeb3TransferTokenImplCopyWith<$Res>
       __$$MiraiWeb3TransferTokenImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String tokenAddress, String toAddress, int amount});
+  $Res call({String tokenAddress, String toAddress, double amount});
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class __$$MiraiWeb3TransferTokenImplCopyWithImpl<$Res>
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
     ));
   }
 }
@@ -137,7 +137,7 @@ class _$MiraiWeb3TransferTokenImpl implements _MiraiWeb3TransferToken {
   @override
   final String toAddress;
   @override
-  final int amount;
+  final double amount;
 
   @override
   String toString() {
@@ -179,7 +179,7 @@ abstract class _MiraiWeb3TransferToken implements MiraiWeb3TransferToken {
   const factory _MiraiWeb3TransferToken(
       {required final String tokenAddress,
       required final String toAddress,
-      required final int amount}) = _$MiraiWeb3TransferTokenImpl;
+      required final double amount}) = _$MiraiWeb3TransferTokenImpl;
 
   factory _MiraiWeb3TransferToken.fromJson(Map<String, dynamic> json) =
       _$MiraiWeb3TransferTokenImpl.fromJson;
@@ -189,7 +189,7 @@ abstract class _MiraiWeb3TransferToken implements MiraiWeb3TransferToken {
   @override
   String get toAddress;
   @override
-  int get amount;
+  double get amount;
   @override
   @JsonKey(ignore: true)
   _$$MiraiWeb3TransferTokenImplCopyWith<_$MiraiWeb3TransferTokenImpl>

@@ -10,7 +10,7 @@ class MiraiWeb3TransferToken with _$MiraiWeb3TransferToken {
   const factory MiraiWeb3TransferToken({
     required String tokenAddress,
     required String toAddress,
-    required int amount,
+    required double amount,
   }) = _MiraiWeb3TransferToken;
 
   factory MiraiWeb3TransferToken.fromJson(Map<String, dynamic> json) =>
