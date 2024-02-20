@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai/src/parsers/mirai_circle_avatar/mirai_circle_avatar.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 
 class MiraiCircleAvatarParser extends MiraiParser<MiraiCircleAvatar> {
@@ -17,8 +16,12 @@ class MiraiCircleAvatarParser extends MiraiParser<MiraiCircleAvatar> {
   Widget parse(BuildContext context, MiraiCircleAvatar model) {
     return CircleAvatar(
       backgroundColor: model.backgroundColor.toColor(context),
-      backgroundImage: NetworkImage(model.backgroundImage ?? ''),
-      foregroundImage: NetworkImage(model.foregroundImage ?? ''),
+      backgroundImage: model.backgroundImage != null
+          ? NetworkImage(model.backgroundImage!)
+          : null,
+      foregroundImage: model.foregroundImage != null
+          ? NetworkImage(model.foregroundImage!)
+          : null,
       foregroundColor: model.foregroundColor.toColor(context),
       radius: model.radius,
       minRadius: model.minRadius,
