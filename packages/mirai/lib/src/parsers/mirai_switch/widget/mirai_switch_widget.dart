@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/parsers/mirai_switch/mirai_switch.dart';
 
