@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-export 'package:mirai/src/parsers/mirai_sized_box/mirai_sized_box_parser.dart';
+export 'package:mirai/src/parsers/mirai_center/mirai_center_parser.dart';
 
 part 'mirai_center.freezed.dart';
 part 'mirai_center.g.dart';

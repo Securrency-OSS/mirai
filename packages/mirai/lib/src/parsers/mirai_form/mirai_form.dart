@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-export 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
+export 'package:mirai/src/parsers/mirai_form/mirai_form_parser.dart';
 
 part 'mirai_form.freezed.dart';
 part 'mirai_form.g.dart';

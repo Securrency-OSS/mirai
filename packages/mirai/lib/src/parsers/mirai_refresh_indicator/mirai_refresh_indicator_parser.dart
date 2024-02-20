@@ -2,9 +2,11 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:mirai/mirai.dart';
+import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_refresh_indicator/mirai_refresh_indicator.dart';
+import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
+import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiRefreshIndicatorParser extends MiraiParser<MiraiRefreshIndicator> {
   const MiraiRefreshIndicatorParser();
@@ -63,7 +65,7 @@ class _RefreshIndicatorWidgetState extends State<_RefreshIndicatorWidget> {
           }
         }
       },
-      color: widget.model.color.toColor(context),
+      color: widget.model.color?.toColor(context),
       backgroundColor: widget.model.backgroundColor.toColor(context),
       semanticsLabel: widget.model.semanticsLabel,
       semanticsValue: widget.model.semanticsValue,
