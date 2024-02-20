@@ -41,4 +41,5 @@ enum WidgetType {
   pageView,
   refreshIndicator,
   networkWidget,
+  circleAvatar,
 }

@@ -12,7 +12,7 @@ part of 'example_screen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ExampleScreen _$ExampleScreenFromJson(Map<String, dynamic> json) {
   return _ExampleScreen.fromJson(json);
@@ -62,22 +62,22 @@ class _$ExampleScreenCopyWithImpl<$Res, $Val extends ExampleScreen>
 }
 
 /// @nodoc
-abstract class _$$_ExampleScreenCopyWith<$Res>
+abstract class _$$ExampleScreenImplCopyWith<$Res>
     implements $ExampleScreenCopyWith<$Res> {
-  factory _$$_ExampleScreenCopyWith(
-          _$_ExampleScreen value, $Res Function(_$_ExampleScreen) then) =
-      __$$_ExampleScreenCopyWithImpl<$Res>;
+  factory _$$ExampleScreenImplCopyWith(
+          _$ExampleScreenImpl value, $Res Function(_$ExampleScreenImpl) then) =
+      __$$ExampleScreenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String assetPath});
 }
 
 /// @nodoc
-class __$$_ExampleScreenCopyWithImpl<$Res>
-    extends _$ExampleScreenCopyWithImpl<$Res, _$_ExampleScreen>
-    implements _$$_ExampleScreenCopyWith<$Res> {
-  __$$_ExampleScreenCopyWithImpl(
-      _$_ExampleScreen _value, $Res Function(_$_ExampleScreen) _then)
+class __$$ExampleScreenImplCopyWithImpl<$Res>
+    extends _$ExampleScreenCopyWithImpl<$Res, _$ExampleScreenImpl>
+    implements _$$ExampleScreenImplCopyWith<$Res> {
+  __$$ExampleScreenImplCopyWithImpl(
+      _$ExampleScreenImpl _value, $Res Function(_$ExampleScreenImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_ExampleScreenCopyWithImpl<$Res>
   $Res call({
     Object? assetPath = null,
   }) {
-    return _then(_$_ExampleScreen(
+    return _then(_$ExampleScreenImpl(
       assetPath: null == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -96,11 +96,11 @@ class __$$_ExampleScreenCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExampleScreen implements _ExampleScreen {
-  const _$_ExampleScreen({required this.assetPath});
+class _$ExampleScreenImpl implements _ExampleScreen {
+  const _$ExampleScreenImpl({required this.assetPath});
 
-  factory _$_ExampleScreen.fromJson(Map<String, dynamic> json) =>
-      _$$_ExampleScreenFromJson(json);
+  factory _$ExampleScreenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExampleScreenImplFromJson(json);
 
   @override
   final String assetPath;
@@ -111,10 +111,10 @@ class _$_ExampleScreen implements _ExampleScreen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExampleScreen &&
+            other is _$ExampleScreenImpl &&
             (identical(other.assetPath, assetPath) ||
                 other.assetPath == assetPath));
   }
@@ -126,12 +126,12 @@ class _$_ExampleScreen implements _ExampleScreen {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExampleScreenCopyWith<_$_ExampleScreen> get copyWith =>
-      __$$_ExampleScreenCopyWithImpl<_$_ExampleScreen>(this, _$identity);
+  _$$ExampleScreenImplCopyWith<_$ExampleScreenImpl> get copyWith =>
+      __$$ExampleScreenImplCopyWithImpl<_$ExampleScreenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScreenToJson(
+    return _$$ExampleScreenImplToJson(
       this,
     );
   }
@@ -139,15 +139,15 @@ class _$_ExampleScreen implements _ExampleScreen {
 
 abstract class _ExampleScreen implements ExampleScreen {
   const factory _ExampleScreen({required final String assetPath}) =
-      _$_ExampleScreen;
+      _$ExampleScreenImpl;
 
   factory _ExampleScreen.fromJson(Map<String, dynamic> json) =
-      _$_ExampleScreen.fromJson;
+      _$ExampleScreenImpl.fromJson;
 
   @override
   String get assetPath;
   @override
   @JsonKey(ignore: true)
-  _$$_ExampleScreenCopyWith<_$_ExampleScreen> get copyWith =>
+  _$$ExampleScreenImplCopyWith<_$ExampleScreenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
