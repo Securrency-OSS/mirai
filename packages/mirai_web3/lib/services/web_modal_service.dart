@@ -17,7 +17,8 @@ class Web3ModalService {
   static late W3MService _service;
   static late ChainMetadata _chainMetadata;
   static late List<ContractDetails> _contracts;
-  static final List<Token> _contractTokens = [];
+  static List<Token> _contractTokens = [];
+  static List<TransactionDetails> _transactions = [];
   static String? _signature;
 
   static W3MService get service => _service;
@@ -149,70 +150,70 @@ class Web3ModalService {
     }
   }
 
-  static Future<List<Token>> loadTokens() async {
-    if (_contractTokens.isNotEmpty) {
-      return _contractTokens;
-    }
+  static Future<List<Token>> loadTokens({bool refresh = false}) async {
+    if (_contractTokens.isEmpty || refresh) {
+      _contractTokens = [];
 
-    try {
-      for (ContractDetails contract in _contracts) {
-        // Create DeployedContract object using contract's ABI and address
-        final deployedContract = DeployedContract(
-          ContractAbi.fromJson(
-            jsonEncode(contract.abi),
-            contract.name,
-          ),
-          EthereumAddress.fromHex(contract.address),
-        );
+      try {
+        for (ContractDetails contract in _contracts) {
+          // Create DeployedContract object using contract's ABI and address
+          final deployedContract = DeployedContract(
+            ContractAbi.fromJson(
+              jsonEncode(contract.abi),
+              contract.name,
+            ),
+            EthereumAddress.fromHex(contract.address),
+          );
 
-        if (contract.chainId == chainId) {
-          final results = await Future.wait([
-            // results[0]
-            _service.requestReadContract(
-              deployedContract: deployedContract,
-              functionName: 'name',
-              rpcUrl: contract.rpcUrl,
-            ),
-            // results[1]
-            _service.requestReadContract(
-              deployedContract: deployedContract,
-              functionName: 'totalSupply',
-              rpcUrl: contract.rpcUrl,
-            ),
-            // results[2]
-            _service.requestReadContract(
-              deployedContract: deployedContract,
-              functionName: 'balanceOf',
-              rpcUrl: contract.rpcUrl,
-              parameters: [
-                EthereumAddress.fromHex(connectedWalletAddress),
-              ],
-            ),
-            // results[3]
-            _service.requestReadContract(
-              deployedContract: deployedContract,
-              functionName: 'decimals',
-              rpcUrl: contract.rpcUrl,
-              parameters: [],
-            ),
-          ]);
+          if (contract.chainId == chainId) {
+            final results = await Future.wait([
+              // results[0]
+              _service.requestReadContract(
+                deployedContract: deployedContract,
+                functionName: 'name',
+                rpcUrl: contract.rpcUrl,
+              ),
+              // results[1]
+              _service.requestReadContract(
+                deployedContract: deployedContract,
+                functionName: 'totalSupply',
+                rpcUrl: contract.rpcUrl,
+              ),
+              // results[2]
+              _service.requestReadContract(
+                deployedContract: deployedContract,
+                functionName: 'balanceOf',
+                rpcUrl: contract.rpcUrl,
+                parameters: [
+                  EthereumAddress.fromHex(connectedWalletAddress),
+                ],
+              ),
+              // results[3]
+              _service.requestReadContract(
+                deployedContract: deployedContract,
+                functionName: 'decimals',
+                rpcUrl: contract.rpcUrl,
+                parameters: [],
+              ),
+            ]);
 
-          final name = results[0].toString();
-          final total = results[1];
-          final balance = results[2];
-          final decimals = results[3];
+            final name = results[0].toString();
+            final total = results[1];
+            final balance = results[2];
+            final decimals = results[3];
 
-          _contractTokens.add(Token(
-            name: name,
-            address: contract.address,
-            supply: total,
-            balance: balance,
-            decimals: decimals,
-          ));
+            _contractTokens.add(Token(
+              name: name,
+              address: contract.address,
+              supply: total,
+              balance: balance,
+              decimals: decimals,
+            ));
+          }
         }
+      } catch (e) {
+        debugPrint(e.toString());
       }
-    } catch (e) {
-      debugPrint(e.toString());
     }
 
     return _contractTokens;
@@ -342,17 +343,20 @@ class Web3ModalService {
 
   static Future<List<TransactionDetails>> loadAllTransactions({
     int offset = 0,
+    bool refresh = false,
   }) async {
-    List<TransactionDetails> transactions = [];
+    if (_transactions.isEmpty || refresh) {
+      _transactions = [];
 
-    if (_contractTokens.isNotEmpty) {
-      for (Token token in _contractTokens) {
-        await loadTransactions(tokenAddress: token.address)
-            .then((trans) => transactions.addAll(trans));
+      if (_contractTokens.isNotEmpty) {
+        for (Token token in _contractTokens) {
+          await loadTransactions(tokenAddress: token.address)
+              .then((trans) => _transactions.addAll(trans));
+        }
       }
     }
 
-    return transactions;
+    return _transactions;
   }
 
   static Future<void> disconnect() async {
