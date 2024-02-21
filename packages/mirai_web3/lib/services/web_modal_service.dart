@@ -328,7 +328,7 @@ class Web3ModalService {
                 tokenName: contractToken.name,
                 timestamp: "",
                 explorer: Uri.https(
-                    "${_service.selectedChain?.blockExplorer?.url}/tx/${l.blockHash}"),
+                    "${_service.selectedChain?.blockExplorer?.url.truncatedSlash}/tx/${l.blockHash}"),
               ),
             );
           }
@@ -362,5 +362,17 @@ class Web3ModalService {
   static Future<void> disconnect() async {
     _service.closeModal();
     await _service.disconnect();
+  }
+}
+
+extension StringExt on String? {
+  String get truncatedSlash {
+    if (this == null || this!.isEmpty) {
+      return W3MChainPresets.chains['1']?.blockExplorer?.url ?? '';
+    } else if (this!.endsWith('/')) {
+      return this!.substring(0, (this!.length) - 1);
+    } else {
+      return this!;
+    }
   }
 }
