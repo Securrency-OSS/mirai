@@ -7,3 +7,4 @@ export 'package:mirai_web3/action_parsers/mirai_web3_load_tokens/web3_load_token
 export 'package:mirai_web3/action_parsers/mirai_web3_validate_address/mirai_web3_validate_address_parser.dart';
 export 'package:mirai_web3/action_parsers/mirai_web3_transfer_token/web3_transfer_token_parser.dart';
 export 'package:mirai_web3/action_parsers/web3_sign_message/web3_sign_message_parser.dart';
+export 'package:mirai_web3/action_parsers/mirai_web3_load_transactions/mirai_web3_load_transactions_parser.dart';

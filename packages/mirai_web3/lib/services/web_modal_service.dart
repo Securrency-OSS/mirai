@@ -2,10 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:mirai_web3/models/chain_details.dart';
-
+import 'package:http/http.dart';
 import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:mirai_web3/models/contract_details.dart';
 import 'package:mirai_web3/models/token.dart';
+import 'package:mirai_web3/models/transaction_details.dart';
 import 'package:web3modal_flutter/pages/select_network_page.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 import 'package:web3modal_flutter/widgets/widget_stack/widget_stack_singleton.dart';
@@ -261,6 +262,78 @@ class Web3ModalService {
     }
 
     return null;
+  }
+
+  static Future<List<TransactionDetails>> loadTransactions({
+    required String tokenAddress,
+    int offset = 0,
+  }) async {
+    List<TransactionDetails> transactions = [];
+    try {
+      final contract =
+          _contracts.firstWhere((contract) => contract.address == tokenAddress);
+      final contractToken = _contractTokens
+          .firstWhere((contract) => contract.address == tokenAddress);
+
+      // Create DeployedContract object using contract's ABI and address
+      final deployedContract = DeployedContract(
+        ContractAbi.fromJson(
+          jsonEncode(contract.abi),
+          contract.name,
+        ),
+        EthereumAddress.fromHex(
+          contract.address,
+        ),
+      );
+
+      final client = Web3Client(contract.rpcUrl, Client());
+
+      final currentBlockNumber = await client.getBlockNumber();
+      const int difference = 50000;
+      int blockNumber = currentBlockNumber - (difference * offset);
+
+      final transferEvent = deployedContract.event('Transfer');
+      final contractHex = bytesToHex(transferEvent.signature,
+          padToEvenLength: true, include0x: true);
+
+      await client
+          .getLogs(
+        FilterOptions(
+            // events of a user wallet
+            fromBlock: BlockNum.exact(blockNumber - difference),
+            toBlock: BlockNum.exact(blockNumber),
+            address: EthereumAddress.fromHex(contract.address),
+            topics: [
+              [
+                contractHex,
+              ]
+            ]),
+      )
+          .then((logs) {
+        for (FilterEvent l in logs) {
+          final result = transferEvent.decodeResults(l.topics!, l.data!);
+
+          if (result
+              .contains(EthereumAddress.fromHex(connectedWalletAddress))) {
+            transactions.add(
+              TransactionDetails(
+                senderAddress: (result[0] as EthereumAddress).hex,
+                receiverAddress: (result[1] as EthereumAddress).hex,
+                amount: result[2] as BigInt,
+                received: (result[1] as EthereumAddress).hex ==
+                    connectedWalletAddress,
+                tranHash: l.transactionHash ?? '',
+                tranToken: contractToken,
+              ),
+            );
+          }
+        }
+      });
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+
+    return transactions;
   }
 
   static Future<void> disconnect() async {
