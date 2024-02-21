@@ -336,6 +336,21 @@ class Web3ModalService {
     return transactions;
   }
 
+  static Future<List<TransactionDetails>> loadAllTransactions({
+    int offset = 0,
+  }) async {
+    List<TransactionDetails> transactions = [];
+
+    if (_contractTokens.isNotEmpty) {
+      for (Token token in _contractTokens) {
+        await loadTransactions(tokenAddress: token.address)
+            .then((trans) => transactions.addAll(trans));
+      }
+    }
+
+    return transactions;
+  }
+
   static Future<void> disconnect() async {
     _service.closeModal();
     await _service.disconnect();
