@@ -1,5 +1,3 @@
-import 'package:mirai_web3/models/token.dart';
-
 class TransactionDetails {
   TransactionDetails({
     required this.senderAddress,
@@ -7,7 +5,10 @@ class TransactionDetails {
     required this.amount,
     required this.received,
     required this.tranHash,
-    required this.tranToken,
+    required this.tokenAddress,
+    required this.tokenName,
+    required this.timestamp,
+    required this.explorer,
   });
 
   final String senderAddress;
@@ -15,5 +16,8 @@ class TransactionDetails {
   final BigInt amount;
   final bool received;
   final String tranHash;
-  final Token tranToken;
+  final String tokenAddress;
+  final String tokenName;
+  final String timestamp;
+  final Uri explorer;
 }

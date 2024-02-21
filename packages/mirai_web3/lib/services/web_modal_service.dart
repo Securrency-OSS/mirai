@@ -323,7 +323,11 @@ class Web3ModalService {
                 received: (result[1] as EthereumAddress).hex ==
                     connectedWalletAddress,
                 tranHash: l.transactionHash ?? '',
-                tranToken: contractToken,
+                tokenAddress: contractToken.address,
+                tokenName: contractToken.name,
+                timestamp: "",
+                explorer: Uri.https(
+                    "${_service.selectedChain?.blockExplorer?.url}/tx/${l.blockHash}"),
               ),
             );
           }
