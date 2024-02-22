@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/mirai.dart';
-import 'package:mirai_framework/mirai_framework.dart';
 import 'package:mirai_web3/parsers/web3_service_session/web3_service_session.dart';
 import 'package:mirai_web3/services/web_modal_service.dart';
-import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class MiraiWeb3ServiceSessionParser
     extends MiraiParser<MiraiWeb3ServiceSession> {
