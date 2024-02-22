@@ -7,6 +7,7 @@ import 'package:mirai_web3/models/chain_meta_data.dart';
 import 'package:mirai_web3/models/contract_details.dart';
 import 'package:mirai_web3/models/token.dart';
 import 'package:mirai_web3/models/transaction_details.dart';
+import 'package:mirai_web3/utils/extensions.dart';
 import 'package:web3modal_flutter/pages/select_network_page.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 import 'package:web3modal_flutter/widgets/widget_stack/widget_stack_singleton.dart';
@@ -253,7 +254,7 @@ class Web3ModalService {
         transaction: Transaction(
           from: EthereumAddress.fromHex(_service.session!.address!),
           to: EthereumAddress.fromHex(toAddress),
-          value: contractToken.transferValue(amount),
+          value: amount.constructEtherAmount(contractToken.decimals),
         ),
       );
 
@@ -320,7 +321,8 @@ class Web3ModalService {
               TransactionDetails(
                 senderAddress: (result[0] as EthereumAddress).hex,
                 receiverAddress: (result[1] as EthereumAddress).hex,
-                amount: result[2] as BigInt,
+                amount: contractToken.balance
+                    .toAmountInDouble(contractToken.decimals),
                 received: (result[1] as EthereumAddress).hex ==
                     connectedWalletAddress,
                 tranHash: l.transactionHash ?? '',
@@ -363,20 +365,5 @@ class Web3ModalService {
   static Future<void> disconnect() async {
     _service.closeModal();
     await _service.disconnect();
-  }
-}
-
-extension StringExt on String? {
-  String get truncated {
-    if (this == null || this!.isEmpty) {
-      return W3MChainPresets.chains['1']?.blockExplorer?.url ?? '';
-    } else if (this!.contains('http') || this!.endsWith('/')) {
-      String truncated = this!.replaceAll('https://', '');
-      truncated = truncated.replaceAll('http://', '');
-      truncated = truncated.replaceAll('/', '');
-      return truncated;
-    } else {
-      return this!;
-    }
   }
 }

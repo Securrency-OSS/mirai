@@ -13,7 +13,7 @@ class TransactionDetails {
 
   final String senderAddress;
   final String receiverAddress;
-  final BigInt amount;
+  final double amount;
   final bool received;
   final String tranHash;
   final String tokenAddress;
