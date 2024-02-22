@@ -9,6 +9,7 @@ import 'package:mirai_web3/models/token.dart';
 import 'package:mirai_web3/models/transaction_details.dart';
 import 'package:mirai_web3/utils/extensions.dart';
 import 'package:web3modal_flutter/pages/select_network_page.dart';
+import 'package:web3modal_flutter/services/w3m_service/i_w3m_service.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 import 'package:web3modal_flutter/widgets/widget_stack/widget_stack_singleton.dart';
 
@@ -34,6 +35,7 @@ class Web3ModalService {
     ChainMetadata? metadata,
     List<W3MChainInfo> customChains = const [],
     List<ContractDetails> contractsList = const [],
+    void Function(W3MServiceStatus status)? listener,
   }) async {
     _chainMetadata = metadata ??
         const ChainMetadata(
@@ -66,6 +68,9 @@ class Web3ModalService {
         ),
       );
       await _service.init();
+      _service.addListener(() {
+        listener?.call(_service.status);
+      });
 
       isInitialize = true;
     } catch (e) {
