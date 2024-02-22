@@ -331,7 +331,7 @@ class Web3ModalService {
                 timestamp: "",
                 explorer: Uri.https(
                     "${_service.selectedChain?.blockExplorer?.url.truncated}",
-                    "/tx/${l.blockHash}"),
+                    "/tx/${l.transactionHash}"),
               ),
             );
           }
