@@ -321,7 +321,7 @@ class Web3ModalService {
               TransactionDetails(
                 senderAddress: (result[0] as EthereumAddress).hex,
                 receiverAddress: (result[1] as EthereumAddress).hex,
-                amount: contractToken.balance
+                amount: (result[2] as BigInt)
                     .toAmountInDouble(contractToken.decimals),
                 received: (result[1] as EthereumAddress).hex ==
                     connectedWalletAddress,
