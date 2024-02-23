@@ -21,6 +21,7 @@ class Web3ModalService {
   static List<Token> _contractTokens = [];
   static List<TransactionDetails> _transactions = [];
   static String? _signature;
+  static bool _loadingTransactions = false;
 
   static W3MService get service => _service;
   static bool get isConnected => _service.isConnected;
@@ -371,7 +372,8 @@ class Web3ModalService {
     int offset = 0,
     bool refresh = false,
   }) async {
-    if (_transactions.isEmpty || refresh) {
+    if ((_transactions.isEmpty || refresh) && !_loadingTransactions) {
+      _loadingTransactions = true;
       _transactions = [];
 
       if (_contractTokens.isNotEmpty) {
@@ -382,6 +384,7 @@ class Web3ModalService {
       }
     }
 
+    _loadingTransactions = false;
     return _transactions;
   }
 
