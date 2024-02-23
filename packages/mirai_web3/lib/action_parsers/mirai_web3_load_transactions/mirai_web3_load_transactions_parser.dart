@@ -17,6 +17,7 @@ class MiraiWeb3LoadTransactionsParser
   @override
   FutureOr<dynamic> onCall(
       BuildContext context, Map<String, dynamic> model) async {
-    return await Web3ModalService.loadAllTransactions();
+    return await Web3ModalService.loadAllTransactions(
+        refresh: model['refresh'] ?? false);
   }
 }

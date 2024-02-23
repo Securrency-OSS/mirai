@@ -327,7 +327,7 @@ class Web3ModalService {
               ]
             ]),
       )
-          .then((logs) {
+          .then((logs) async {
         for (FilterEvent l in logs.reversed.toList()) {
           final result = transferEvent.decodeResults(l.topics!, l.data!);
           final senderAddress = (result[0] as EthereumAddress);
@@ -336,6 +336,10 @@ class Web3ModalService {
 
           if (senderAddress.toString() == walletAddress.toString() ||
               receiverAddress.toString() == walletAddress.toString()) {
+            final blockInformation = await client.getBlockInformation(
+                blockNumber: BlockNum.exact(l.blockNum!).toBlockParam(),
+                isContainFullObj: true);
+
             transactions.add(
               TransactionDetails(
                 senderAddress: senderAddress.hex,
@@ -347,7 +351,7 @@ class Web3ModalService {
                 tranHash: l.transactionHash ?? '',
                 tokenAddress: contractToken.address,
                 tokenName: contractToken.name,
-                timestamp: "",
+                timestamp: blockInformation.timestamp,
                 explorer: Uri.https(
                     "${_service.selectedChain?.blockExplorer?.url.truncated}",
                     "/tx/${l.transactionHash}"),

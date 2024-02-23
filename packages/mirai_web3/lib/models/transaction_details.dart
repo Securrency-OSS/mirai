@@ -18,6 +18,6 @@ class TransactionDetails {
   final String tranHash;
   final String tokenAddress;
   final String tokenName;
-  final String timestamp;
+  final DateTime timestamp;
   final Uri explorer;
 }
