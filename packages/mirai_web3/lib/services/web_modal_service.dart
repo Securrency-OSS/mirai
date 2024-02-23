@@ -328,19 +328,22 @@ class Web3ModalService {
             ]),
       )
           .then((logs) {
-        for (FilterEvent l in logs) {
+        for (FilterEvent l in logs.reversed.toList()) {
           final result = transferEvent.decodeResults(l.topics!, l.data!);
+          final senderAddress = (result[0] as EthereumAddress);
+          final receiverAddress = (result[1] as EthereumAddress);
+          final walletAddress = EthereumAddress.fromHex(connectedWalletAddress);
 
-          if (result
-              .contains(EthereumAddress.fromHex(connectedWalletAddress))) {
+          if (senderAddress.toString() == walletAddress.toString() ||
+              receiverAddress.toString() == walletAddress.toString()) {
             transactions.add(
               TransactionDetails(
-                senderAddress: (result[0] as EthereumAddress).hex,
-                receiverAddress: (result[1] as EthereumAddress).hex,
+                senderAddress: senderAddress.hex,
+                receiverAddress: receiverAddress.hex,
                 amount: (result[2] as BigInt)
                     .toAmountInDouble(contractToken.decimals),
-                received: (result[1] as EthereumAddress).hex ==
-                    connectedWalletAddress,
+                received:
+                    receiverAddress.toString() == walletAddress.toString(),
                 tranHash: l.transactionHash ?? '',
                 tokenAddress: contractToken.address,
                 tokenName: contractToken.name,
