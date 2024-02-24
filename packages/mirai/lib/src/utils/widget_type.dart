@@ -42,4 +42,5 @@ enum WidgetType {
   refreshIndicator,
   networkWidget,
   circleAvatar,
+  gridView,
 }
