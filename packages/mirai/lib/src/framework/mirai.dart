@@ -64,6 +64,7 @@ class Mirai {
     const MiraiRefreshIndicatorParser(),
     const MiraiNetworkWidgetParser(),
     const MiraiCircleAvatarParser(),
+    const MiraiChipParser()
   ];
 
   static final _actionParsers = <MiraiActionParser>[
