@@ -35,6 +35,7 @@ export 'package:mirai/src/parsers/mirai_form/mirai_form.dart';
 export 'package:mirai/src/parsers/mirai_form_field/mirai_form_field.dart';
 export 'package:mirai/src/parsers/mirai_fractionally_sized_box/mirai_fractionally_sized_box.dart';
 export 'package:mirai/src/parsers/mirai_gradient/mirai_gradient.dart';
+export 'package:mirai/src/parsers/mirai_grid_view/mirai_grid_view.dart';
 export 'package:mirai/src/parsers/mirai_icon/mirai_icon.dart';
 export 'package:mirai/src/parsers/mirai_icon_button/mirai_icon_button.dart';
 export 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
