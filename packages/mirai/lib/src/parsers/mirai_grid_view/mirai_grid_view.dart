@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/mirai.dart';
 
+export 'mirai_grid_view_parser.dart';
+
 part 'mirai_grid_view.freezed.dart';
 part 'mirai_grid_view.g.dart';
 
