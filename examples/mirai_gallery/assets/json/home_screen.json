@@ -1111,6 +1111,40 @@
                             "assetPath": "assets/json/web_view_example.json"
                         }
                     }
+                },
+                {
+                    "type": "listTile",
+                    "leading": {
+                        "type": "icon",
+                        "iconType": "material",
+                        "icon": "check_box_outline_blank"
+                    },
+                    "title": {
+                        "type": "text",
+                        "data": "Chip",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 21
+                        }
+                    },
+                    "subtitle": {
+                        "type": "text",
+                        "data": "Chips are compact elements that represent an attribute, text, entity, or action",
+                        "align": "center",
+                        "style": {
+                            "fontSize": 12
+                        }
+                    },
+                    "isThreeLine": true,
+                    "style": "list",
+                    "onTap": {
+                        "actionType": "navigate",
+                        "navigationStyle": "push",
+                        "widgetJson": {
+                            "type": "exampleScreen",
+                            "assetPath": "assets/json/chip_example.json"
+                        }
+                    }
                 }
             ]
         }
