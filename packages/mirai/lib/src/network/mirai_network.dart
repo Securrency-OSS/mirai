@@ -1,6 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/utils/log.dart';
 
@@ -41,7 +39,6 @@ class MiraiNetwork {
     MiraiRequest request,
   ) async {
     final data = await _updateData(context, request.data);
-    Log.d("data: $data");
     return _dio.post(
       request.url,
       data: data,
