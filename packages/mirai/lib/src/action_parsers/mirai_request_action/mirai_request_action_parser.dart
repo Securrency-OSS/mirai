@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:mirai/src/network/mirai_network.dart';
 import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/utils/action_type.dart';
+import 'package:mirai/src/utils/log.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
 class MiraiRequestActionParser extends MiraiActionParser<MiraiRequest> {
@@ -16,7 +17,10 @@ class MiraiRequestActionParser extends MiraiActionParser<MiraiRequest> {
   getModel(Map<String, dynamic> json) => MiraiRequest.fromJson(json);
 
   @override
-  FutureOr<dynamic> onCall(BuildContext context, MiraiRequest model) {
-    return MiraiNetwork.request(model);
+  FutureOr<dynamic> onCall(BuildContext context, MiraiRequest model) async {
+    Log.d(model);
+    final response = await MiraiNetwork.request(context, model);
+    Log.d(response);
+    return response;
   }
 }

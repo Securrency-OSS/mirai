@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/utils/log.dart';
 
 class MiraiNetwork {
   const MiraiNetwork._();
@@ -8,12 +11,12 @@ class MiraiNetwork {
 
   static void initialize(Dio dio) => _dio = dio;
 
-  static Future<Response?> request(MiraiRequest request) {
+  static Future<Response?> request(BuildContext context, MiraiRequest request) {
     switch (request.method) {
       case Method.get:
         return getRequest(request);
       case Method.post:
-        return postRequest(request);
+        return postRequest(context, request);
       case Method.put:
         return putRequest(request);
       case Method.delete:
@@ -33,10 +36,15 @@ class MiraiNetwork {
     );
   }
 
-  static Future<Response?> postRequest(MiraiRequest request) {
+  static Future<Response?> postRequest(
+    BuildContext context,
+    MiraiRequest request,
+  ) async {
+    final data = await _updateData(context, request.data);
+    Log.d("data: $data");
     return _dio.post(
       request.url,
-      data: request.data,
+      data: data,
       queryParameters: request.queryParameters,
       options: Options(
         contentType: request.contentType,
@@ -67,5 +75,26 @@ class MiraiNetwork {
         headers: request.headers,
       ),
     );
+  }
+
+  static Future<dynamic> _updateData(BuildContext context, dynamic data) async {
+    Map<dynamic, dynamic> dataMap = {};
+    if (data is Map) {
+      dataMap.addAll(data);
+      for (dynamic mapEntry in dataMap.entries) {
+        final key = mapEntry.key;
+        final value = mapEntry.value;
+
+        if (value is Map && value.containsKey('actionType')) {
+          final dynamic callbackValue = await Future<dynamic>.value(
+            Mirai.onCallFromJson(value as Map<String, dynamic>, context),
+          );
+
+          dataMap[key] = callbackValue;
+        }
+      }
+    }
+
+    return dataMap;
   }
 }

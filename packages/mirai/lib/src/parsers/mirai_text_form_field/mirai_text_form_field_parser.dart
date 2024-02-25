@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mirai/src/framework/framework.dart';
 import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
-import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
+import 'package:mirai/src/parsers/mirai_form/mirai_form_scope.dart';
 import 'package:mirai/src/parsers/mirai_form_field_validator/mirai_form_validator.dart';
 import 'package:mirai/src/parsers/mirai_input_decoration/mirai_input_decoration.dart';
 import 'package:mirai/src/parsers/mirai_input_formatters/mirai_input_formatter.dart';
@@ -26,51 +24,45 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
 
   @override
   Widget parse(BuildContext context, MiraiTextFormField model) {
-    return _TextFormFieldWidget(
-      model: model,
-    );
+    return _TextFormFieldWidget(model);
   }
 }
 
 class _TextFormFieldWidget extends StatefulWidget {
-  const _TextFormFieldWidget({
-    required this.model,
-  });
+  const _TextFormFieldWidget(this.model);
 
   final MiraiTextFormField model;
+
   @override
-  State<_TextFormFieldWidget> createState() => __TextFormFieldWidgetState();
+  State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
 }
 
-class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
-  TextEditingController controller = TextEditingController();
-  FocusNode? focusNode = FocusNode();
-  bool obscureText = false;
+class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
+  late final TextEditingController _controller;
+  final _focusNode = FocusNode();
+  bool _obscureText = false;
 
   @override
   void initState() {
-    if (widget.model.id != null) {
-      context
-          .read<MiraiFormCubit>()
-          .registerValue(widget.model.id!, widget.model.initialValue ?? "");
-    }
-
-    controller = TextEditingController(text: widget.model.initialValue);
-    obscureText = widget.model.obscureText ?? false;
     super.initState();
+
+    _controller = TextEditingController(text: widget.model.initialValue);
+    _obscureText = widget.model.obscureText ?? false;
+    //
+    // if (widget.model.id != null) {
+    //   formScope.formData[widget.model.id!] = widget.model.initialValue;
+    // }
   }
 
   @override
   Widget build(BuildContext context) {
+    MiraiFormScope formScope = MiraiFormScope.of(context);
     return TextFormField(
-      controller: controller,
-      focusNode: focusNode,
+      controller: _controller,
+      focusNode: _focusNode,
       onChanged: (value) {
         if (widget.model.id != null) {
-          context.read<MiraiFormCubit>().updateValue(
-                widget.model.id!,
-                value,
-              );
+          formScope.formData[widget.model.id!] = value;
         }
       },
       keyboardType: widget.model.keyboardType?.value,
@@ -87,7 +79,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       maxLines: widget.model.maxLines,
       minLines: widget.model.minLines,
       maxLength: widget.model.maxLength,
-      obscureText: obscureText,
+      obscureText: _obscureText,
       autocorrect: widget.model.autocorrect,
       smartDashesType: widget.model.smartDashesType,
       smartQuotesType: widget.model.smartQuotesType,
@@ -103,72 +95,40 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       cursorHeight: widget.model.cursorHeight,
       cursorColor: widget.model.cursorColor?.toColor(context),
       style: widget.model.style?.parse(context),
-      decoration: _inputDecoration(widget.model),
+      decoration: widget.model.decoration.parse(context),
       inputFormatters: widget.model.inputFormatters
           .map((MiraiInputFormatter formatter) =>
               formatter.type.format(formatter.rule ?? ""))
           .toList(),
       validator: (value) {
-        final validation = _validate(
+        return _validate(
           value,
           widget.model,
         );
-
-        if (widget.model.id != null) {
-          context
-              .read<MiraiFormCubit>()
-              .updateValidation(widget.model.id!, validation == null);
-        }
-
-        return validation;
       },
     );
-  }
-
-  InputDecoration? _inputDecoration(MiraiTextFormField model) {
-    if (model.obscureText != null) {
-      return model.decoration?.parse(context).copyWith(
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  obscureText = !obscureText;
-                });
-              },
-              child: Mirai.fromJson(
-                      widget.model.decoration?.suffixIcon, context) ??
-                  const SizedBox(),
-            ),
-          );
-    }
-
-    return model.decoration?.parse(context);
   }
 
   String? _validate(String? value, MiraiTextFormField model) {
     if (value != null && widget.model.validatorRules.isNotEmpty) {
       for (MiraiFormFieldValidator validator in widget.model.validatorRules) {
         try {
-          InputValidationType? validationType = InputValidationType.values
-              .firstWhere((e) => e.name == validator.rule);
+          final validationType = InputValidationType.values.firstWhere(
+            (e) => e.name == validator.rule,
+            orElse: () => InputValidationType.general,
+          );
 
-          String? compareVal;
-          if (widget.model.compareId != null) {
-            try {
-              compareVal = context
-                  .read<MiraiFormCubit>()
-                  .getValue(widget.model.compareId!);
-            } catch (e) {
-              Log.e(e);
+          if (validationType == InputValidationType.general) {
+            if (!InputValidationType.general.validate(value, validator.rule)) {
+              return validator.message;
+            }
+          } else {
+            if (!validationType.validate(value, validator.rule)) {
+              return validator.message;
             }
           }
-          if (!validationType.validate(value, validator.rule,
-              compareValue: compareVal)) {
-            return validator.message;
-          }
-        } catch (_) {
-          if (!InputValidationType.general.validate(value, validator.rule)) {
-            return validator.message;
-          }
+        } catch (e) {
+          Log.e(e);
         }
       }
     }
@@ -178,12 +138,7 @@ class __TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
   @override
   void dispose() {
-    try {
-      controller.dispose();
-    } catch (e) {
-      Log.e(e);
-    }
-
+    _controller.dispose();
     super.dispose();
   }
 }

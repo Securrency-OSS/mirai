@@ -4,4 +4,5 @@ enum ActionType {
   request,
   showModalBottomSheet,
   showDialog,
+  getFormValue,
 }

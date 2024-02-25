@@ -53,7 +53,6 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiFormParser(),
-    const MiraiFormFieldParser(),
     const MiraiCheckBoxWidgetParser(),
     const MiraiExpandedParser(),
     const MiraiFlexibleParser(),
@@ -73,6 +72,7 @@ class Mirai {
     const MiraiRequestActionParser(),
     const MiraiModalBottomSheetActionParser(),
     const MiraiDialogActionParser(),
+    const MiraiGetFormValueParser(),
   ];
 
   static Future<void> initialize({
@@ -127,13 +127,14 @@ class Mirai {
     return null;
   }
 
-  static Widget fromNetwork(
-    MiraiRequest request, {
+  static Widget fromNetwork({
+    required BuildContext context,
+    required MiraiRequest request,
     LoadingWidgetBuilder? loadingWidget,
     ErrorWidgetBuilder? errorWidget,
   }) {
     return FutureBuilder<Response?>(
-      future: MiraiNetwork.request(request),
+      future: MiraiNetwork.request(context, request),
       builder: (context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
