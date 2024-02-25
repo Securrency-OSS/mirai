@@ -4,14 +4,14 @@ import 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 import 'package:mirai/src/parsers/mirai_border_side/mirai_border_side.dart';
 import 'package:mirai/src/parsers/mirai_rounded_rectangle_border/mirai_rounded_rectangle_border.dart';
 import 'package:mirai/src/parsers/mirai_icon_theme_data/mirai_icon_theme_data.dart';
-
+import 'package:flutter/material.dart';
 export 'mirai_chip_parser.dart';
-
 part 'mirai_chip.freezed.dart';
 part 'mirai_chip.g.dart';
 
 @freezed
 class MiraiChip with _$MiraiChip {
+  const MiraiChip._();
   const factory MiraiChip({
     required Map<String, dynamic> label,
     Map<String, dynamic>? avatar,
@@ -30,8 +30,16 @@ class MiraiChip with _$MiraiChip {
     String? shadowColor,
     String? surfaceTintColor,
     MiraiIconThemeData? iconTheme,
+    String? materialTapTargetSize,
   }) = _MiraiChip;
 
   factory MiraiChip.fromJson(Map<String, dynamic> json) =>
       _$MiraiChipFromJson(json);
+
+  MaterialTapTargetSize? get materialTapTargetSizeValue {
+    return MaterialTapTargetSize.values.firstWhere(
+      (element) => element.name == materialTapTargetSize,
+      orElse: () => MaterialTapTargetSize.padded,
+    );
+  }
 }
