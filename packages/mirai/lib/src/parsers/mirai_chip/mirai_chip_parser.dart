@@ -38,7 +38,7 @@ class MiraiChipParser extends MiraiParser<MiraiChip> {
       focusNode: focusNode,
       onDeleted: () {},
       clipBehavior: Clip.none,
-      materialTapTargetSize: model.materialTapTargetSizeValue,
+      materialTapTargetSize: model.materialTapTargetSize,
     );
   }
 }

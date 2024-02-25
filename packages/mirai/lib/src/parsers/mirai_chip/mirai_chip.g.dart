@@ -40,7 +40,8 @@ _$MiraiChipImpl _$$MiraiChipImplFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiIconThemeData.fromJson(
               json['iconTheme'] as Map<String, dynamic>),
-      materialTapTargetSize: json['materialTapTargetSize'] as String?,
+      materialTapTargetSize: $enumDecodeNullable(
+          _$MaterialTapTargetSizeEnumMap, json['materialTapTargetSize']),
     );
 
 Map<String, dynamic> _$$MiraiChipImplToJson(_$MiraiChipImpl instance) =>
@@ -62,5 +63,11 @@ Map<String, dynamic> _$$MiraiChipImplToJson(_$MiraiChipImpl instance) =>
       'shadowColor': instance.shadowColor,
       'surfaceTintColor': instance.surfaceTintColor,
       'iconTheme': instance.iconTheme,
-      'materialTapTargetSize': instance.materialTapTargetSize,
+      'materialTapTargetSize':
+          _$MaterialTapTargetSizeEnumMap[instance.materialTapTargetSize],
     };
+
+const _$MaterialTapTargetSizeEnumMap = {
+  MaterialTapTargetSize.padded: 'padded',
+  MaterialTapTargetSize.shrinkWrap: 'shrinkWrap',
+};

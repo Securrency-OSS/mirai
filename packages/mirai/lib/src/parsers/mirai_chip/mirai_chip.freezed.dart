@@ -37,7 +37,8 @@ mixin _$MiraiChip {
   String? get shadowColor => throw _privateConstructorUsedError;
   String? get surfaceTintColor => throw _privateConstructorUsedError;
   MiraiIconThemeData? get iconTheme => throw _privateConstructorUsedError;
-  String? get materialTapTargetSize => throw _privateConstructorUsedError;
+  MaterialTapTargetSize? get materialTapTargetSize =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,7 +69,7 @@ abstract class $MiraiChipCopyWith<$Res> {
       String? shadowColor,
       String? surfaceTintColor,
       MiraiIconThemeData? iconTheme,
-      String? materialTapTargetSize});
+      MaterialTapTargetSize? materialTapTargetSize});
 
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
   $MiraiEdgeInsetsCopyWith<$Res>? get labelPadding;
@@ -182,7 +183,7 @@ class _$MiraiChipCopyWithImpl<$Res, $Val extends MiraiChip>
       materialTapTargetSize: freezed == materialTapTargetSize
           ? _value.materialTapTargetSize
           : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as MaterialTapTargetSize?,
     ) as $Val);
   }
 
@@ -285,7 +286,7 @@ abstract class _$$MiraiChipImplCopyWith<$Res>
       String? shadowColor,
       String? surfaceTintColor,
       MiraiIconThemeData? iconTheme,
-      String? materialTapTargetSize});
+      MaterialTapTargetSize? materialTapTargetSize});
 
   @override
   $MiraiTextStyleCopyWith<$Res>? get labelStyle;
@@ -403,7 +404,7 @@ class __$$MiraiChipImplCopyWithImpl<$Res>
       materialTapTargetSize: freezed == materialTapTargetSize
           ? _value.materialTapTargetSize
           : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as MaterialTapTargetSize?,
     ));
   }
 }
@@ -496,7 +497,7 @@ class _$MiraiChipImpl extends _MiraiChip {
   @override
   final MiraiIconThemeData? iconTheme;
   @override
-  final String? materialTapTargetSize;
+  final MaterialTapTargetSize? materialTapTargetSize;
 
   @override
   String toString() {
@@ -598,7 +599,7 @@ abstract class _MiraiChip extends MiraiChip {
       final String? shadowColor,
       final String? surfaceTintColor,
       final MiraiIconThemeData? iconTheme,
-      final String? materialTapTargetSize}) = _$MiraiChipImpl;
+      final MaterialTapTargetSize? materialTapTargetSize}) = _$MiraiChipImpl;
   const _MiraiChip._() : super._();
 
   factory _MiraiChip.fromJson(Map<String, dynamic> json) =
@@ -639,7 +640,7 @@ abstract class _MiraiChip extends MiraiChip {
   @override
   MiraiIconThemeData? get iconTheme;
   @override
-  String? get materialTapTargetSize;
+  MaterialTapTargetSize? get materialTapTargetSize;
   @override
   @JsonKey(ignore: true)
   _$$MiraiChipImplCopyWith<_$MiraiChipImpl> get copyWith =>

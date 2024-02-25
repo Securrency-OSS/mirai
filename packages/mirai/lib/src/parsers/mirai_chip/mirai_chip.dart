@@ -30,16 +30,9 @@ class MiraiChip with _$MiraiChip {
     String? shadowColor,
     String? surfaceTintColor,
     MiraiIconThemeData? iconTheme,
-    String? materialTapTargetSize,
+    MaterialTapTargetSize? materialTapTargetSize,
   }) = _MiraiChip;
 
   factory MiraiChip.fromJson(Map<String, dynamic> json) =>
       _$MiraiChipFromJson(json);
-
-  MaterialTapTargetSize? get materialTapTargetSizeValue {
-    return MaterialTapTargetSize.values.firstWhere(
-      (element) => element.name == materialTapTargetSize,
-      orElse: () => MaterialTapTargetSize.padded,
-    );
-  }
 }
