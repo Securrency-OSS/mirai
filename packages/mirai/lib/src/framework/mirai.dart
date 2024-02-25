@@ -63,6 +63,7 @@ class Mirai {
     const MiraiRefreshIndicatorParser(),
     const MiraiNetworkWidgetParser(),
     const MiraiCircleAvatarParser(),
+    const MiraiChipParser(),
     const MiraiGridViewParser(),
   ];
 
