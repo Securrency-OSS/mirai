@@ -1,70 +1,70 @@
 {
-    "type": "scaffold",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Appbar"
-        },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "menu"
-            },
-            "onPressed": {}
-        },
-        "backgroundColor": "primary",
-        "actions": [
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "heart_solid"
-                },
-                "onPressed": {}
-            },
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "search"
-                },
-                "onPressed": {}
-            },
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "more_horiz"
-                },
-                "onPressed": {}
-            }
-        ]
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Appbar"
     },
-    "body": {
-        "type": "row",
+    "leading": {
+      "type": "iconButton",
+      "child": {
+        "type": "icon",
+        "iconType": "material",
+        "icon": "menu"
+      },
+      "onPressed": {}
+    },
+    "backgroundColor": "primary",
+    "actions": [
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "cupertino",
+          "icon": "heart_solid"
+        },
+        "onPressed": {}
+      },
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "search"
+        },
+        "onPressed": {}
+      },
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "more_horiz"
+        },
+        "onPressed": {}
+      }
+    ]
+  },
+  "body": {
+    "type": "row",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+      {
+        "type": "column",
         "mainAxisAlignment": "center",
         "crossAxisAlignment": "center",
         "children": [
-            {
-                "type": "column",
-                "mainAxisAlignment": "center",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "text",
-                        "data": "Home",
-                        "style": {
-                            "fontSize": 17
-                        }
-                    }
-                ]
+          {
+            "type": "text",
+            "data": "Home",
+            "style": {
+              "fontSize": 17
             }
+          }
         ]
-    }
+      }
+    ]
+  }
 }

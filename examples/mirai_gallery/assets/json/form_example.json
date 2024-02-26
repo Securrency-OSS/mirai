@@ -1,333 +1,333 @@
 {
-    "type": "scaffold",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Form"
-        }
-    },
-    "body": {
-        "type": "padding",
-        "padding": {
-            "left": 12,
-            "right": 12,
-            "top": 12,
-            "bottom": 12
-        },
-        "child": {
-            "type": "singleChildScrollView",
-            "child": {
-                "type": "form",
-                "child": {
-                    "type": "column",
-                    "children": [
-                        {
-                            "type": "textFormField",
-                            "id": "name",
-                            "maxLines": 1,
-                            "keyboardType": "text",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "decoration": {
-                                "hintText": "What do people call you?",
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "cupertino",
-                                    "icon": "person_solid",
-                                    "size": 24
-                                },
-                                "labelText": "Name*"
-                            },
-                            "inputFormatters": [
-                                {
-                                    "type": "allow",
-                                    "rule": "[a-zA-Z]"
-                                }
-                            ],
-                            "validatorRules": [
-                                {
-                                    "rule": "isName",
-                                    "message": "Enter a valid name"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 24
-                        },
-                        {
-                            "type": "textFormField",
-                            "id": "phone",
-                            "maxLines": 1,
-                            "keyboardType": "text",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "decoration": {
-                                "hintText": "Where can we reach you?",
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "cupertino",
-                                    "icon": "phone_solid",
-                                    "size": 24
-                                },
-                                "labelText": "Phone number*"
-                            },
-                            "inputFormatters": [
-                                {
-                                    "type": "deny",
-                                    "rule": "[a-zA-Z]"
-                                }
-                            ],
-                            "validatorRules": [
-                                {
-                                    "rule": "isNotEmpty",
-                                    "message": "Enter a valid phone number"
-                                },
-                                {
-                                    "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
-                                    "message": "Enter a valid phone number"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 24
-                        },
-                        {
-                            "type": "textFormField",
-                            "id": "email",
-                            "maxLines": 1,
-                            "keyboardType": "text",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "decoration": {
-                                "hintText": "Your email address",
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "material",
-                                    "icon": "email",
-                                    "size": 24
-                                },
-                                "labelText": "Email"
-                            },
-                            "validatorRules": [
-                                {
-                                    "rule": "isEmail",
-                                    "message": "Enter a valid email address"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 24
-                        },
-                        {
-                            "type": "textFormField",
-                            "id": "card",
-                            "maxLines": 1,
-                            "keyboardType": "number",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "decoration": {
-                                "hintText": "XXXX XXXX XXXX XXXX",
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "material",
-                                    "icon": "credit_card",
-                                    "size": 24
-                                },
-                                "labelText": "Credit Card"
-                            },
-                            "validatorRules": [
-                                {
-                                    "rule": "isNotEmpty",
-                                    "message": "Enter a valid card numbder"
-                                },
-                                {
-                                    "rule": "^[1-9]{15,16}$",
-                                    "message": "Enter a valid credit card number"
-                                }
-                            ],
-                            "inputFormatters": [
-                                {
-                                    "type": "deny",
-                                    "rule": "[a-zA-Z]"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 24
-                        },
-                        {
-                            "type": "textFormField",
-                            "id": "password",
-                            "compareId": "confirmPassword",
-                            "maxLines": 1,
-                            "keyboardType": "text",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "obscureText": true,
-                            "decoration": {
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "material",
-                                    "icon": "password",
-                                    "size": 24
-                                },
-                                "suffixIcon": {
-                                    "type": "icon",
-                                    "iconType": "cupertino",
-                                    "icon": "eye",
-                                    "size": 24
-                                },
-                                "labelText": "Password*"
-                            },
-                            "validatorRules": [
-                                {
-                                    "rule": "isPassword",
-                                    "message": "Enter a valid password"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 24
-                        },
-                        {
-                            "type": "textFormField",
-                            "id": "confirmPassword",
-                            "compareId": "password",
-                            "maxLines": 1,
-                            "keyboardType": "text",
-                            "textInputAction": "done",
-                            "textAlign": "start",
-                            "textCapitalization": "none",
-                            "textDirection": "ltr",
-                            "textAlignVertical": "top",
-                            "obscureText": true,
-                            "decoration": {
-                                "filled": true,
-                                "icon": {
-                                    "type": "icon",
-                                    "iconType": "material",
-                                    "icon": "password",
-                                    "size": 24
-                                },
-                                "suffixIcon": {
-                                    "type": "icon",
-                                    "iconType": "cupertino",
-                                    "icon": "eye",
-                                    "size": 24
-                                },
-                                "labelText": "Re-type password*"
-                            },
-                            "validatorRules": [
-                                {
-                                    "rule": "isPassword",
-                                    "message": "Enter a valid password"
-                                },
-                                {
-                                    "rule": "compare",
-                                    "message": "Password values does not match"
-                                }
-                            ],
-                            "autovalidateMode": "onUserInteraction",
-                            "readOnly": false,
-                            "enabled": true
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 32
-                        },
-                        {
-                            "type": "row",
-                            "mainAxisAlignment": "start",
-                            "crossAxisAlignment": "start",
-                            "children": [
-                                {
-                                    "type": "checkBox",
-                                    "id": "terms",
-                                    "value": false,
-                                    "tristate": false,
-                                    "splashRadius": 0,
-                                    "autofocus": false
-                                },
-                                {
-                                    "type": "sizedBox",
-                                    "width": 16
-                                },
-                                {
-                                    "type": "text",
-                                    "data": "I have read and accept the Terms & \nConditions and Privacy Policy"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "sizedBox",
-                            "height": 32
-                        },
-                        {
-                            "type": "formField",
-                            "child": {
-                                "type": "elevatedButton",
-                                "child": {
-                                    "type": "text",
-                                    "data": "Submit",
-                                    "style": {
-                                        "color": "#ffffff"
-                                    }
-                                },
-                                "style": {
-                                    "padding": {
-                                        "top": 8,
-                                        "left": 24,
-                                        "right": 24,
-                                        "bottom": 8
-                                    }
-                                },
-                                "onPressed": {}
-                            }
-                        }
-                    ]
-                }
-            }
-        }
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Form"
     }
+  },
+  "body": {
+    "type": "padding",
+    "padding": {
+      "left": 12,
+      "right": 12,
+      "top": 12,
+      "bottom": 12
+    },
+    "child": {
+      "type": "singleChildScrollView",
+      "child": {
+        "type": "form",
+        "child": {
+          "type": "column",
+          "children": [
+            {
+              "type": "textFormField",
+              "id": "name",
+              "maxLines": 1,
+              "keyboardType": "text",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "decoration": {
+                "hintText": "What do people call you?",
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "cupertino",
+                  "icon": "person_solid",
+                  "size": 24
+                },
+                "labelText": "Name*"
+              },
+              "inputFormatters": [
+                {
+                  "type": "allow",
+                  "rule": "[a-zA-Z]"
+                }
+              ],
+              "validatorRules": [
+                {
+                  "rule": "isName",
+                  "message": "Enter a valid name"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "textFormField",
+              "id": "phone",
+              "maxLines": 1,
+              "keyboardType": "text",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "decoration": {
+                "hintText": "Where can we reach you?",
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "cupertino",
+                  "icon": "phone_solid",
+                  "size": 24
+                },
+                "labelText": "Phone number*"
+              },
+              "inputFormatters": [
+                {
+                  "type": "deny",
+                  "rule": "[a-zA-Z]"
+                }
+              ],
+              "validatorRules": [
+                {
+                  "rule": "isNotEmpty",
+                  "message": "Enter a valid phone number"
+                },
+                {
+                  "rule": "(^(?:[+0]9)?[0-9]{10,12}$)",
+                  "message": "Enter a valid phone number"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "textFormField",
+              "id": "email",
+              "maxLines": 1,
+              "keyboardType": "text",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "decoration": {
+                "hintText": "Your email address",
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "material",
+                  "icon": "email",
+                  "size": 24
+                },
+                "labelText": "Email"
+              },
+              "validatorRules": [
+                {
+                  "rule": "isEmail",
+                  "message": "Enter a valid email address"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "textFormField",
+              "id": "card",
+              "maxLines": 1,
+              "keyboardType": "number",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "decoration": {
+                "hintText": "XXXX XXXX XXXX XXXX",
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "material",
+                  "icon": "credit_card",
+                  "size": 24
+                },
+                "labelText": "Credit Card"
+              },
+              "validatorRules": [
+                {
+                  "rule": "isNotEmpty",
+                  "message": "Enter a valid card numbder"
+                },
+                {
+                  "rule": "^[1-9]{15,16}$",
+                  "message": "Enter a valid credit card number"
+                }
+              ],
+              "inputFormatters": [
+                {
+                  "type": "deny",
+                  "rule": "[a-zA-Z]"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "textFormField",
+              "id": "password",
+              "compareId": "confirmPassword",
+              "maxLines": 1,
+              "keyboardType": "text",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "obscureText": true,
+              "decoration": {
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "material",
+                  "icon": "password",
+                  "size": 24
+                },
+                "suffixIcon": {
+                  "type": "icon",
+                  "iconType": "cupertino",
+                  "icon": "eye",
+                  "size": 24
+                },
+                "labelText": "Password*"
+              },
+              "validatorRules": [
+                {
+                  "rule": "isPassword",
+                  "message": "Enter a valid password"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "textFormField",
+              "id": "confirmPassword",
+              "compareId": "password",
+              "maxLines": 1,
+              "keyboardType": "text",
+              "textInputAction": "done",
+              "textAlign": "start",
+              "textCapitalization": "none",
+              "textDirection": "ltr",
+              "textAlignVertical": "top",
+              "obscureText": true,
+              "decoration": {
+                "filled": true,
+                "icon": {
+                  "type": "icon",
+                  "iconType": "material",
+                  "icon": "password",
+                  "size": 24
+                },
+                "suffixIcon": {
+                  "type": "icon",
+                  "iconType": "cupertino",
+                  "icon": "eye",
+                  "size": 24
+                },
+                "labelText": "Re-type password*"
+              },
+              "validatorRules": [
+                {
+                  "rule": "isPassword",
+                  "message": "Enter a valid password"
+                },
+                {
+                  "rule": "compare",
+                  "message": "Password values does not match"
+                }
+              ],
+              "autovalidateMode": "onUserInteraction",
+              "readOnly": false,
+              "enabled": true
+            },
+            {
+              "type": "sizedBox",
+              "height": 32
+            },
+            {
+              "type": "row",
+              "mainAxisAlignment": "start",
+              "crossAxisAlignment": "start",
+              "children": [
+                {
+                  "type": "checkBox",
+                  "id": "terms",
+                  "value": false,
+                  "tristate": false,
+                  "splashRadius": 0,
+                  "autofocus": false
+                },
+                {
+                  "type": "sizedBox",
+                  "width": 16
+                },
+                {
+                  "type": "text",
+                  "data": "I have read and accept the Terms & \nConditions and Privacy Policy"
+                }
+              ]
+            },
+            {
+              "type": "sizedBox",
+              "height": 32
+            },
+            {
+              "type": "formField",
+              "child": {
+                "type": "elevatedButton",
+                "child": {
+                  "type": "text",
+                  "data": "Submit",
+                  "style": {
+                    "color": "#ffffff"
+                  }
+                },
+                "style": {
+                  "padding": {
+                    "top": 8,
+                    "left": 24,
+                    "right": 24,
+                    "bottom": 8
+                  }
+                },
+                "onPressed": {}
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
 }
