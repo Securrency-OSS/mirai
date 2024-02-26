@@ -33,7 +33,7 @@
             },
             "onPressed": {
               "actionType": "showModalBottomSheet",
-              "assetPath":"assets/json/list_view_example.json"
+              "assetPath": "assets/json/list_view_example.json"
             }
           }
         ]

@@ -1,117 +1,117 @@
 {
-    "type": "scaffold",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Scaffold"
-        },
-        "leading": {
-            "type": "iconButton",
-            "child": {
-                "type": "icon",
-                "iconType": "material",
-                "icon": "menu"
-            },
-            "onPressed": {}
-        },
-        "actions": [
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "heart_solid"
-                },
-                "onPressed": {}
-            },
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "search"
-                },
-                "onPressed": {}
-            },
-            {
-                "type": "iconButton",
-                "child": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "more_horiz"
-                },
-                "onPressed": {}
-            }
-        ]
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Scaffold"
     },
-    "body": {
-        "type": "row",
+    "leading": {
+      "type": "iconButton",
+      "child": {
+        "type": "icon",
+        "iconType": "material",
+        "icon": "menu"
+      },
+      "onPressed": {}
+    },
+    "actions": [
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "cupertino",
+          "icon": "heart_solid"
+        },
+        "onPressed": {}
+      },
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "search"
+        },
+        "onPressed": {}
+      },
+      {
+        "type": "iconButton",
+        "child": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "more_horiz"
+        },
+        "onPressed": {}
+      }
+    ]
+  },
+  "body": {
+    "type": "row",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+      {
+        "type": "column",
         "mainAxisAlignment": "center",
         "crossAxisAlignment": "center",
         "children": [
-            {
-                "type": "column",
-                "mainAxisAlignment": "center",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "text",
-                        "data": "Home",
-                        "style": {
-                            "fontSize": 17
-                        }
-                    }
-                ]
+          {
+            "type": "text",
+            "data": "Home",
+            "style": {
+              "fontSize": 17
             }
+          }
         ]
+      }
+    ]
+  },
+  "floatingActionButton": {
+    "type": "floatingActionButton",
+    "backgroundColor": "#FC3F1B",
+    "foregroundColor": "#ffffff",
+    "buttonType": "medium",
+    "child": {
+      "type": "icon",
+      "iconType": "material",
+      "icon": "add",
+      "size": 32
     },
-    "floatingActionButton": {
-        "type": "floatingActionButton",
-        "backgroundColor": "#FC3F1B",
-        "foregroundColor": "#ffffff",
-        "buttonType": "medium",
-        "child": {
-            "type": "icon",
-            "iconType": "material",
-            "icon": "add",
-            "size": 32
-        },
-        "onPressed": {}
-    },
-    "bottomNavigationBar": {
-        "type": "bottomNavigationBar",
-        "items": [
-            {
-                "type": "navigationBarItem",
-                "label": "Comments",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "comment",
-                    "size": 24
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Calendar",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "calendar_month",
-                    "size": 24
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Account",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "profile_circled",
-                    "size": 24
-                }
-            }
-        ]
-    }
+    "onPressed": {}
+  },
+  "bottomNavigationBar": {
+    "type": "bottomNavigationBar",
+    "items": [
+      {
+        "type": "navigationBarItem",
+        "label": "Comments",
+        "icon": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "comment",
+          "size": 24
+        }
+      },
+      {
+        "type": "navigationBarItem",
+        "label": "Calendar",
+        "icon": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "calendar_month",
+          "size": 24
+        }
+      },
+      {
+        "type": "navigationBarItem",
+        "label": "Account",
+        "icon": {
+          "type": "icon",
+          "iconType": "cupertino",
+          "icon": "profile_circled",
+          "size": 24
+        }
+      }
+    ]
+  }
 }
