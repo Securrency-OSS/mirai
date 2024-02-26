@@ -16,6 +16,6 @@ class MiraiNetworkWidgetParser extends MiraiParser<MiraiNetworkWidget> {
 
   @override
   Widget parse(BuildContext context, MiraiNetworkWidget model) {
-    return Mirai.fromNetwork(model.request);
+    return Mirai.fromNetwork(context: context, request: model.request);
   }
 }

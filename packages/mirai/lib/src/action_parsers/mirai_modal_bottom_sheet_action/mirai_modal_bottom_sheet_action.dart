@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
 import 'package:mirai/src/parsers/mirai_border/mirai_border.dart';
 import 'package:mirai/src/parsers/mirai_box_constraints/mirai_box_constraints.dart';
 
@@ -10,7 +10,7 @@ part 'mirai_modal_bottom_sheet_action.g.dart';
 class MiraiModalBottomSheetAction with _$MiraiModalBottomSheetAction {
   const factory MiraiModalBottomSheetAction({
     Map<String, dynamic>? widget,
-    MiraiRequest? request,
+    MiraiNetworkRequest? request,
     String? assetPath,
     String? backgroundColor,
     String? barrierLabel,

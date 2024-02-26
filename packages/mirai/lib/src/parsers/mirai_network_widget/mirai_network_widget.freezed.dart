@@ -20,7 +20,7 @@ MiraiNetworkWidget _$MiraiNetworkWidgetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiNetworkWidget {
-  MiraiRequest get request => throw _privateConstructorUsedError;
+  MiraiNetworkRequest get request => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,9 +34,9 @@ abstract class $MiraiNetworkWidgetCopyWith<$Res> {
           MiraiNetworkWidget value, $Res Function(MiraiNetworkWidget) then) =
       _$MiraiNetworkWidgetCopyWithImpl<$Res, MiraiNetworkWidget>;
   @useResult
-  $Res call({MiraiRequest request});
+  $Res call({MiraiNetworkRequest request});
 
-  $MiraiRequestCopyWith<$Res> get request;
+  $MiraiNetworkRequestCopyWith<$Res> get request;
 }
 
 /// @nodoc
@@ -58,14 +58,14 @@ class _$MiraiNetworkWidgetCopyWithImpl<$Res, $Val extends MiraiNetworkWidget>
       request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest,
+              as MiraiNetworkRequest,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiRequestCopyWith<$Res> get request {
-    return $MiraiRequestCopyWith<$Res>(_value.request, (value) {
+  $MiraiNetworkRequestCopyWith<$Res> get request {
+    return $MiraiNetworkRequestCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value) as $Val);
     });
   }
@@ -79,10 +79,10 @@ abstract class _$$MiraiNetworkWidgetImplCopyWith<$Res>
       __$$MiraiNetworkWidgetImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({MiraiRequest request});
+  $Res call({MiraiNetworkRequest request});
 
   @override
-  $MiraiRequestCopyWith<$Res> get request;
+  $MiraiNetworkRequestCopyWith<$Res> get request;
 }
 
 /// @nodoc
@@ -102,7 +102,7 @@ class __$$MiraiNetworkWidgetImplCopyWithImpl<$Res>
       request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest,
+              as MiraiNetworkRequest,
     ));
   }
 }
@@ -116,7 +116,7 @@ class _$MiraiNetworkWidgetImpl implements _MiraiNetworkWidget {
       _$$MiraiNetworkWidgetImplFromJson(json);
 
   @override
-  final MiraiRequest request;
+  final MiraiNetworkRequest request;
 
   @override
   String toString() {
@@ -151,14 +151,14 @@ class _$MiraiNetworkWidgetImpl implements _MiraiNetworkWidget {
 }
 
 abstract class _MiraiNetworkWidget implements MiraiNetworkWidget {
-  const factory _MiraiNetworkWidget({required final MiraiRequest request}) =
-      _$MiraiNetworkWidgetImpl;
+  const factory _MiraiNetworkWidget(
+      {required final MiraiNetworkRequest request}) = _$MiraiNetworkWidgetImpl;
 
   factory _MiraiNetworkWidget.fromJson(Map<String, dynamic> json) =
       _$MiraiNetworkWidgetImpl.fromJson;
 
   @override
-  MiraiRequest get request;
+  MiraiNetworkRequest get request;
   @override
   @JsonKey(ignore: true)
   _$$MiraiNetworkWidgetImplCopyWith<_$MiraiNetworkWidgetImpl> get copyWith =>
