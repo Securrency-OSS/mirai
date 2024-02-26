@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
 
 part 'mirai_navigate_action.freezed.dart';
 part 'mirai_navigate_action.g.dart';
@@ -20,7 +20,7 @@ class MiraiNavigateAction with _$MiraiNavigateAction {
   const MiraiNavigateAction._();
 
   factory MiraiNavigateAction({
-    MiraiRequest? request,
+    MiraiNetworkRequest? request,
     Map<String, dynamic>? widgetJson,
     String? assetPath,
     String? routeName,

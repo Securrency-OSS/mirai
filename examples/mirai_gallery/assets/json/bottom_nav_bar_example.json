@@ -1,66 +1,66 @@
 {
-    "type": "scaffold",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Selected label"
-        }
-    },
-    "body": {
-        "type": "row",
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Selected label"
+    }
+  },
+  "body": {
+    "type": "row",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+      {
+        "type": "column",
         "mainAxisAlignment": "center",
         "crossAxisAlignment": "center",
         "children": [
-            {
-                "type": "column",
-                "mainAxisAlignment": "center",
-                "crossAxisAlignment": "center",
-                "children": [
-                    {
-                        "type": "text",
-                        "data": "Home",
-                        "style": {
-                            "fontSize": 17
-                        }
-                    }
-                ]
+          {
+            "type": "text",
+            "data": "Home",
+            "style": {
+              "fontSize": 17
             }
+          }
         ]
-    },
-    "bottomNavigationBar": {
-        "type": "bottomNavigationBar",
-        "items": [
-            {
-                "type": "navigationBarItem",
-                "label": "Comments",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "comment",
-                    "size": 24
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Calendar",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "material",
-                    "icon": "calendar_month",
-                    "size": 24
-                }
-            },
-            {
-                "type": "navigationBarItem",
-                "label": "Account",
-                "icon": {
-                    "type": "icon",
-                    "iconType": "cupertino",
-                    "icon": "profile_circled",
-                    "size": 24
-                }
-            }
-        ]
-    }
+      }
+    ]
+  },
+  "bottomNavigationBar": {
+    "type": "bottomNavigationBar",
+    "items": [
+      {
+        "type": "navigationBarItem",
+        "label": "Comments",
+        "icon": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "comment",
+          "size": 24
+        }
+      },
+      {
+        "type": "navigationBarItem",
+        "label": "Calendar",
+        "icon": {
+          "type": "icon",
+          "iconType": "material",
+          "icon": "calendar_month",
+          "size": 24
+        }
+      },
+      {
+        "type": "navigationBarItem",
+        "label": "Account",
+        "icon": {
+          "type": "icon",
+          "iconType": "cupertino",
+          "icon": "profile_circled",
+          "size": 24
+        }
+      }
+    ]
+  }
 }

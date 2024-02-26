@@ -12,7 +12,8 @@ _$MiraiModalBottomSheetActionImpl _$$MiraiModalBottomSheetActionImplFromJson(
       widget: json['widget'] as Map<String, dynamic>?,
       request: json['request'] == null
           ? null
-          : MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
+          : MiraiNetworkRequest.fromJson(
+              json['request'] as Map<String, dynamic>),
       assetPath: json['assetPath'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
       barrierLabel: json['barrierLabel'] as String?,

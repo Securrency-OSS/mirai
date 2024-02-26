@@ -1,7 +1,7 @@
 enum ActionType {
   navigate,
   none,
-  request,
+  networkRequest,
   showModalBottomSheet,
   showDialog,
   getFormValue,
