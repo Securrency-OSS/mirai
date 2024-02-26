@@ -59,11 +59,11 @@
                 "foregroundColor": "#ffffff"
               },
               "onPressed": {
-                "actionType": "request",
+                "actionType": "networkRequest",
                 "url": "https://dummyjson.com/auth/login",
                 "method": "post",
                 "contentType": "application/json",
-                "data": {
+                "body": {
                   "username": {
                     "actionType": "getFormValue",
                     "id": "username"
@@ -72,7 +72,35 @@
                     "actionType": "getFormValue",
                     "id": "password"
                   }
-                }
+                },
+                "results": [
+                  {
+                    "statusCode": 200,
+                    "action": {
+                      "actionType": "showDialog",
+                      "widget": {
+                        "type": "alertDialog",
+                        "title": {
+                          "type": "text",
+                          "data": "Successful"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "statusCode": 400,
+                    "action": {
+                      "actionType": "showDialog",
+                      "widget": {
+                        "type": "alertDialog",
+                        "title": {
+                          "type": "text",
+                          "data": "Error"
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           ]
