@@ -32,7 +32,7 @@ class MiraiNetworkRequestParser extends MiraiActionParser<MiraiNetworkRequest> {
 
     if (response?.statusCode != null) {
       final result = model.results.firstWhere(
-        (element) => response?.statusCode == element.statusCode,
+        (element) => element.statusCode == response?.statusCode,
       );
 
       if (context.mounted) {
