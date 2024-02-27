@@ -15,7 +15,7 @@ class MiraiGetFormValueParser extends MiraiActionParser<MiraiGetFormValue> {
       MiraiGetFormValue.fromJson(json);
 
   @override
-  String onCall(BuildContext context, MiraiGetFormValue model) {
-    return MiraiFormScope.of(context).formData[model.id].toString();
+  String? onCall(BuildContext context, MiraiGetFormValue model) {
+    return MiraiFormScope.of(context)?.formData[model.id].toString();
   }
 }

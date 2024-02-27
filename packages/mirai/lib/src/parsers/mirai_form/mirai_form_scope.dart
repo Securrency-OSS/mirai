@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:mirai/src/utils/log.dart';
 
 class MiraiFormScope extends InheritedWidget {
   const MiraiFormScope({
@@ -9,15 +10,16 @@ class MiraiFormScope extends InheritedWidget {
 
   final Map<String, dynamic> formData;
 
-  static MiraiFormScope of(BuildContext context) {
+  static MiraiFormScope? of(BuildContext context) {
     final MiraiFormScope? result =
         context.dependOnInheritedWidgetOfExactType<MiraiFormScope>();
 
     if (result != null) {
       return result;
     } else {
-      throw FlutterError(
-          'MiraiFormScope.of() called with a context that does not contain a MiraiFormScope.');
+      Log.e(
+          "MiraiFormScope.of() called with a context that does not contain a MiraiFormScope.");
+      return null;
     }
   }
 

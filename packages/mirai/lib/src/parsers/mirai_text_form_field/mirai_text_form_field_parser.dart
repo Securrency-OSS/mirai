@@ -32,7 +32,7 @@ class _TextFormFieldWidget extends StatefulWidget {
   const _TextFormFieldWidget(this.model, this.formScope);
 
   final MiraiTextFormField model;
-  final MiraiFormScope formScope;
+  final MiraiFormScope? formScope;
 
   @override
   State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
@@ -51,7 +51,7 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
     _obscureText = widget.model.obscureText ?? false;
 
     if (widget.model.id != null) {
-      widget.formScope.formData[widget.model.id!] = widget.model.initialValue;
+      widget.formScope?.formData[widget.model.id!] = widget.model.initialValue;
     }
   }
 
@@ -62,7 +62,7 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
       focusNode: _focusNode,
       onChanged: (value) {
         if (widget.model.id != null) {
-          widget.formScope.formData[widget.model.id!] = value;
+          widget.formScope?.formData[widget.model.id!] = value;
         }
       },
       keyboardType: widget.model.keyboardType?.value,
