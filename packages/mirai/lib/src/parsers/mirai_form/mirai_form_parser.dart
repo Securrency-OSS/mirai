@@ -42,10 +42,11 @@ class _FormWidgetState extends State<_FormWidget> {
   Widget build(BuildContext context) {
     return MiraiFormScope(
       formData: _formData,
+      formKey: _formKey,
       child: Builder(
         builder: (context) {
           return Form(
-            key: _formKey,
+            key: MiraiFormScope.of(context)?.formKey,
             child:
                 Mirai.fromJson(widget.model.child, context) ?? const SizedBox(),
           );

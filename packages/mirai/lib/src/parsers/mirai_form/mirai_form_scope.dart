@@ -6,9 +6,11 @@ class MiraiFormScope extends InheritedWidget {
     super.key,
     required super.child,
     required this.formData,
+    required this.formKey,
   });
 
   final Map<String, dynamic> formData;
+  final GlobalKey<FormState> formKey;
 
   static MiraiFormScope? of(BuildContext context) {
     final MiraiFormScope? result =

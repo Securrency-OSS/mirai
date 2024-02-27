@@ -32,7 +32,12 @@
               "decoration": {
                 "hintText": "Username"
               },
-              "autovalidateMode": "onUserInteraction"
+              "validatorRules": [
+                {
+                  "rule": "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$",
+                  "message": "Add a valid username"
+                }
+              ]
             },
             {
               "type": "textFormField",
@@ -61,48 +66,51 @@
                 "foregroundColor": "#ffffff"
               },
               "onPressed": {
-                "actionType": "networkRequest",
-                "url": "https://dummyjson.com/auth/login",
-                "method": "post",
-                "contentType": "application/json",
-                "body": {
-                  "username": {
-                    "actionType": "getFormValue",
-                    "id": "username"
+                "actionType": "validateForm",
+                "isValid": {
+                  "actionType": "networkRequest",
+                  "url": "https://dummyjson.com/auth/login",
+                  "method": "post",
+                  "contentType": "application/json",
+                  "body": {
+                    "username": {
+                      "actionType": "getFormValue",
+                      "id": "username"
+                    },
+                    "password": {
+                      "actionType": "getFormValue",
+                      "id": "password"
+                    }
                   },
-                  "password": {
-                    "actionType": "getFormValue",
-                    "id": "password"
-                  }
-                },
-                "results": [
-                  {
-                    "statusCode": 200,
-                    "action": {
-                      "actionType": "showDialog",
-                      "widget": {
-                        "type": "alertDialog",
-                        "title": {
-                          "type": "text",
-                          "data": "Successful"
+                  "results": [
+                    {
+                      "statusCode": 200,
+                      "action": {
+                        "actionType": "showDialog",
+                        "widget": {
+                          "type": "alertDialog",
+                          "title": {
+                            "type": "text",
+                            "data": "Successful"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "statusCode": 400,
+                      "action": {
+                        "actionType": "showDialog",
+                        "widget": {
+                          "type": "alertDialog",
+                          "title": {
+                            "type": "text",
+                            "data": "Error"
+                          }
                         }
                       }
                     }
-                  },
-                  {
-                    "statusCode": 400,
-                    "action": {
-                      "actionType": "showDialog",
-                      "widget": {
-                        "type": "alertDialog",
-                        "title": {
-                          "type": "text",
-                          "data": "Error"
-                        }
-                      }
-                    }
-                  }
-                ]
+                  ]
+                }
               }
             }
           ]

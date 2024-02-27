@@ -5,4 +5,5 @@ enum ActionType {
   showModalBottomSheet,
   showDialog,
   getFormValue,
+  validateForm,
 }

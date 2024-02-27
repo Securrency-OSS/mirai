@@ -74,6 +74,7 @@ class Mirai {
     const MiraiModalBottomSheetActionParser(),
     const MiraiDialogActionParser(),
     const MiraiGetFormValueParser(),
+    const MiraiFormValidateParser(),
   ];
 
   static Future<void> initialize({
