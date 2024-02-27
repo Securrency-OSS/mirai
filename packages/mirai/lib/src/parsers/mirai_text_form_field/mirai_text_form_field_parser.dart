@@ -24,14 +24,15 @@ class MiraiTextFormFieldParser extends MiraiParser<MiraiTextFormField> {
 
   @override
   Widget parse(BuildContext context, MiraiTextFormField model) {
-    return _TextFormFieldWidget(model);
+    return _TextFormFieldWidget(model, MiraiFormScope.of(context));
   }
 }
 
 class _TextFormFieldWidget extends StatefulWidget {
-  const _TextFormFieldWidget(this.model);
+  const _TextFormFieldWidget(this.model, this.formScope);
 
   final MiraiTextFormField model;
+  final MiraiFormScope formScope;
 
   @override
   State<_TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
@@ -48,21 +49,20 @@ class _TextFormFieldWidgetState extends State<_TextFormFieldWidget> {
 
     _controller = TextEditingController(text: widget.model.initialValue);
     _obscureText = widget.model.obscureText ?? false;
-    //
-    // if (widget.model.id != null) {
-    //   formScope.formData[widget.model.id!] = widget.model.initialValue;
-    // }
+
+    if (widget.model.id != null) {
+      widget.formScope.formData[widget.model.id!] = widget.model.initialValue;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    MiraiFormScope formScope = MiraiFormScope.of(context);
     return TextFormField(
       controller: _controller,
       focusNode: _focusNode,
       onChanged: (value) {
         if (widget.model.id != null) {
-          formScope.formData[widget.model.id!] = value;
+          widget.formScope.formData[widget.model.id!] = value;
         }
       },
       keyboardType: widget.model.keyboardType?.value,
