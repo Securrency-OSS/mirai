@@ -140,15 +140,19 @@ class Web3ModalService {
     }
   }
 
-  static ChainDetails? getChainDetails() {
+  static Future<ChainDetails?> getChainDetails() async {
     try {
+      final client = Web3Client(_service.selectedChain!.rpcUrl, Client());
+      final amount = await client
+          .getBalance(EthereumAddress.fromHex(connectedWalletAddress));
+
       return ChainDetails(
         chainName: _service.selectedChain!.chainName,
         chainId: _service.selectedChain!.chainId,
         namespace: _service.selectedChain!.namespace,
         tokenName: _service.selectedChain!.tokenName,
         rpcUrl: _service.selectedChain!.rpcUrl,
-        balance: _service.chainBalance ?? 0.0,
+        balance: amount.getValueInUnit(EtherUnit.ether),
       );
     } catch (e) {
       debugPrint(e.toString());
@@ -386,11 +390,12 @@ class Web3ModalService {
     return _transactions;
   }
 
-  static Future<void> disconnect() async {
+  static Future<void> disconnect({bool reInit = false}) async {
     _service.closeModal();
     await _service.disconnect();
     _unsubscribeEvents();
-    initialize(metadata: _chainMetadata, contractsList: _contracts);
+
+    if (reInit) initialize(metadata: _chainMetadata, contractsList: _contracts);
   }
 
   static void _unsubscribeEvents() {
