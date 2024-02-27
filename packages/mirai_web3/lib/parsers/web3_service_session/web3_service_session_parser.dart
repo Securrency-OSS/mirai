@@ -54,7 +54,7 @@ class _Web3ServiceSessionWidgetState extends State<_Web3ServiceSessionWidget> {
 
   @override
   void dispose() {
-    Web3ModalService.unsubscribeEvents();
+    Web3ModalService.disconnect();
 
     super.dispose();
   }

@@ -35,7 +35,6 @@ class Web3ModalService {
     ChainMetadata? metadata,
     List<W3MChainInfo> customChains = const [],
     List<ContractDetails> contractsList = const [],
-    void Function()? listener,
   }) async {
     _chainMetadata = metadata ??
         const ChainMetadata(
@@ -68,7 +67,6 @@ class Web3ModalService {
         ),
       );
       await _service.init();
-      if (listener != null) _service.addListener(listener);
 
       isInitialize = true;
     } catch (e) {
@@ -391,9 +389,11 @@ class Web3ModalService {
   static Future<void> disconnect() async {
     _service.closeModal();
     await _service.disconnect();
+    _unsubscribeEvents();
+    initialize(metadata: _chainMetadata, contractsList: _contracts);
   }
 
-  static void unsubscribeEvents() {
+  static void _unsubscribeEvents() {
     _service.onSessionConnectEvent.unsubscribeAll();
     _service.onSessionExpireEvent.unsubscribeAll();
     _service.onSessionDeleteEvent.unsubscribeAll();
