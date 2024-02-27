@@ -25,6 +25,7 @@
             {
               "type": "textFormField",
               "id": "username",
+              "initialValue": "kminchelle",
               "keyboardType": "text",
               "textInputAction": "next",
               "maxLines": 1,
@@ -37,6 +38,7 @@
               "type": "textFormField",
               "id": "password",
               "keyboardType": "visiblePassword",
+              "initialValue": "0lelplR",
               "textInputAction": "done",
               "maxLines": 1,
               "decoration": {
