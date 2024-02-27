@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget.dart';
-import 'package:mirai/src/parsers/mirai_form/cubit/mirai_form_cubit.dart';
+import 'package:mirai/src/parsers/mirai_form/mirai_form_scope.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
@@ -19,16 +18,15 @@ class MiraiCheckBoxWidgetParser extends MiraiParser<MiraiCheckBoxWidget> {
 
   @override
   Widget parse(BuildContext context, MiraiCheckBoxWidget model) {
-    return _MiraiCheckBoxWidget(
-      model: model,
-    );
+    return _MiraiCheckBoxWidget(model, MiraiFormScope.of(context));
   }
 }
 
 class _MiraiCheckBoxWidget extends StatefulWidget {
-  const _MiraiCheckBoxWidget({required this.model});
+  const _MiraiCheckBoxWidget(this.model, this.formScope);
 
   final MiraiCheckBoxWidget model;
+  final MiraiFormScope? formScope;
 
   @override
   State<_MiraiCheckBoxWidget> createState() => __MiraiCheckBoxWidgetState();
@@ -39,10 +37,8 @@ class __MiraiCheckBoxWidgetState extends State<_MiraiCheckBoxWidget> {
 
   @override
   void initState() {
-    if (widget.model.id != null) {
-      context
-          .read<MiraiFormCubit>()
-          .registerValue(widget.model.id!, widget.model.value);
+    if (widget.model.id != null && widget.formScope != null) {
+      widget.formScope!.formData[widget.model.id!] = widget.model.value;
     }
 
     super.initState();
@@ -57,12 +53,7 @@ class __MiraiCheckBoxWidgetState extends State<_MiraiCheckBoxWidget> {
             isMarkChecked = !isMarkChecked;
           });
           if (widget.model.id != null) {
-            context
-                .read<MiraiFormCubit>()
-                .updateValue(widget.model.id!, isMarkChecked);
-            context
-                .read<MiraiFormCubit>()
-                .updateValidation(widget.model.id!, isMarkChecked);
+            widget.formScope?.formData[widget.model.id!] = value;
           }
         },
         activeColor: widget.model.activeColor.toColor(context),

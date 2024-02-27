@@ -47,24 +47,13 @@
     ]
   },
   "body": {
-    "type": "row",
-    "mainAxisAlignment": "center",
-    "crossAxisAlignment": "center",
-    "children": [
-      {
-        "type": "column",
-        "mainAxisAlignment": "center",
-        "crossAxisAlignment": "center",
-        "children": [
-          {
-            "type": "text",
-            "data": "Home",
-            "style": {
-              "fontSize": 17
-            }
-          }
-        ]
+    "type": "center",
+    "child": {
+      "type": "text",
+      "data": "Home",
+      "style": {
+        "fontSize": 17
       }
-    ]
+    }
   }
 }

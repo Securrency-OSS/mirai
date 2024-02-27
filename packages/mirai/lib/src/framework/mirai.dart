@@ -53,7 +53,6 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiFormParser(),
-    const MiraiFormFieldParser(),
     const MiraiCheckBoxWidgetParser(),
     const MiraiExpandedParser(),
     const MiraiFlexibleParser(),
@@ -74,6 +73,8 @@ class Mirai {
     const MiraiNetworkRequestParser(),
     const MiraiModalBottomSheetActionParser(),
     const MiraiDialogActionParser(),
+    const MiraiGetFormValueParser(),
+    const MiraiFormValidateParser(),
   ];
 
   static Future<void> initialize({

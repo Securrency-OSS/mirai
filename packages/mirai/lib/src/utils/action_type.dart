@@ -4,4 +4,6 @@ enum ActionType {
   networkRequest,
   showModalBottomSheet,
   showDialog,
+  getFormValue,
+  validateForm,
 }
