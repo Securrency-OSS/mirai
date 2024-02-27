@@ -18,7 +18,6 @@ class MiraiWeb3LoadTokensParser
   FutureOr<dynamic> onCall(
       BuildContext context, Map<String, dynamic> model) async {
     final tokens = await Web3ModalService.loadTokens();
-    Web3ModalService.loadAllTransactions();
     return tokens;
   }
 }
