@@ -31,30 +31,6 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
     }
   }
 
-  // Widget _networkImage(MiraiImage model, BuildContext context) => Image.network(
-  //       model.src,
-  //       alignment: model.alignment.value,
-  //       color: model.color?.toColor(context),
-  //       width: model.width,
-  //       height: model.height,
-  //       fit: model.fit,
-  //       errorBuilder: (context, error, stackTrace) {
-  //         return const SizedBox();
-  //       },
-  //     );
-
-    // Widget _networkImage(MiraiImage model, BuildContext context) => Image.network(
-  //       model.src,
-  //       alignment: model.alignment.value,
-  //       color: model.color?.toColor(context),
-  //       width: model.width,
-  //       height: model.height,
-  //       fit: model.fit,
-  //       errorBuilder: (context, error, stackTrace) {
-  //         return const SizedBox();
-  //       },
-  //     );
-
   Widget _networkImage(MiraiImage model, BuildContext context) => CachedNetworkImage(
         imageUrl: model.src,
         alignment: model.alignment.value,
