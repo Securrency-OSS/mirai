@@ -15,15 +15,8 @@ dependencies:
   http: ^1.2.0
   json_annotation: ^4.8.1
   mirai_framework: ^0.0.1
-  mirai:
-    git:
-      url: https://github.com/Securrency-OSS/mirai.git
-      path: packages/mirai
-      ref: asim/dv/form-builder
-  web3modal_flutter:
-    git:
-      url: https://github.com/WalletConnect/Web3ModalFlutter.git
-      ref: master
+  mirai: ^0.6.0
+  web3modal_flutter: ^3.1.1
 
 dev_dependencies:
   flutter_test:

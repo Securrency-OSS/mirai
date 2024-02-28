@@ -61,7 +61,7 @@ class Web3ModalService {
 
       isInitialize = true;
     } catch (e) {
-      debugPrint("Catch wallet initialize error $e");
+      Logger().e("Catch wallet initialize error $e");
     }
     return isInitialize;
   }
@@ -112,7 +112,7 @@ class Web3ModalService {
       _signature = signature;
       return signature;
     } catch (e) {
-      debugPrint(e.toString());
+      Logger().e(e.toString());
       return null;
     }
   }
@@ -132,7 +132,7 @@ class Web3ModalService {
         balance: amount.getValueInUnit(EtherUnit.ether),
       );
     } catch (e) {
-      debugPrint(e.toString());
+      Logger().e(e.toString());
       return null;
     }
   }
@@ -142,7 +142,7 @@ class Web3ModalService {
       EthereumAddress.fromHex(address);
       return true;
     } catch (e) {
-      debugPrint(e.toString());
+      Logger().e(e.toString());
       return false;
     }
   }
@@ -208,7 +208,7 @@ class Web3ModalService {
           }
         }
       } catch (e) {
-        debugPrint(e.toString());
+        Logger().e(e.toString());
       }
     }
 
@@ -257,7 +257,7 @@ class Web3ModalService {
 
       return transactionHash;
     } catch (e) {
-      debugPrint(e.toString());
+      Logger().e(e.toString());
     }
 
     return null;
@@ -357,7 +357,7 @@ class Web3ModalService {
         }
       });
     } catch (e) {
-      debugPrint(e.toString());
+      Logger().e(e.toString());
     }
 
     return transactions;
