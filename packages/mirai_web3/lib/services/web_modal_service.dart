@@ -301,7 +301,7 @@ class Web3ModalService {
       const int difference = 50000;
       // Based on the `offset` it is decided that from where the search should start
       int toBlockNumber = currentBlockNumber - (difference * offset);
-      toBlockNumber = (toBlockNumber < 0) ? 0 : difference;
+      toBlockNumber = (toBlockNumber < 0) ? difference : toBlockNumber;
       // starting from the 50,000 blocks beg=hind the `toBlock`
       int fromBlockNumber = toBlockNumber - difference;
       fromBlockNumber = (fromBlockNumber < 0) ? 0 : fromBlockNumber;
