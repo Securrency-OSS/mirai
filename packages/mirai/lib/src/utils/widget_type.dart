@@ -44,4 +44,5 @@ enum WidgetType {
   circleAvatar,
   chip,
   gridView,
+  filledButton
 }

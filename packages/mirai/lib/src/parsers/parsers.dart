@@ -71,3 +71,4 @@ export 'package:mirai/src/parsers/mirai_text_form_field/mirai_text_form_field.da
 export 'package:mirai/src/parsers/mirai_text_style/mirai_text_style.dart';
 export 'package:mirai/src/parsers/mirai_theme/mirai_theme.dart';
 export 'package:mirai/src/parsers/mirai_chip/mirai_chip.dart';
+export 'package:mirai/src/parsers/mirai_filled_button/mirai_filled_button.dart';
