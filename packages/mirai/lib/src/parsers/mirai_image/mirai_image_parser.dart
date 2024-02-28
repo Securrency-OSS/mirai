@@ -31,7 +31,8 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
     }
   }
 
-  Widget _networkImage(MiraiImage model, BuildContext context) => CachedNetworkImage(
+  Widget _networkImage(MiraiImage model, BuildContext context) =>
+      CachedNetworkImage(
         imageUrl: model.src,
         alignment: model.alignment.value,
         color: model.color?.toColor(context),
