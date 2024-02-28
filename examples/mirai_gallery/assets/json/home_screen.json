@@ -894,6 +894,37 @@
           "leading": {
             "type": "icon",
             "iconType": "material",
+            "icon": "grid_view"
+          },
+          "title": {
+            "type": "text",
+            "data": "Mirai GridView",
+            "style": {
+              "fontSize": 21
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "data": "A scrollable, 2D array of widgets that are created on demand.",
+            "style": {
+              "fontSize": 12
+            }
+          },
+          "isThreeLine": true,
+          "onTap": {
+            "actionType": "navigate",
+            "navigationStyle": "push",
+            "widgetJson": {
+              "type": "exampleScreen",
+              "assetPath": "assets/json/grid_view_example.json"
+            }
+          }
+        },
+        {
+          "type": "listTile",
+          "leading": {
+            "type": "icon",
+            "iconType": "material",
             "icon": "table_chart"
           },
           "title": {
