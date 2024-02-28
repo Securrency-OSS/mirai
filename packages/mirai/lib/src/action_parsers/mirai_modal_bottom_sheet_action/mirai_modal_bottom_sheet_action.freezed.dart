@@ -22,7 +22,7 @@ MiraiModalBottomSheetAction _$MiraiModalBottomSheetActionFromJson(
 /// @nodoc
 mixin _$MiraiModalBottomSheetAction {
   Map<String, dynamic>? get widget => throw _privateConstructorUsedError;
-  MiraiRequest? get request => throw _privateConstructorUsedError;
+  MiraiNetworkRequest? get request => throw _privateConstructorUsedError;
   String? get assetPath => throw _privateConstructorUsedError;
   String? get backgroundColor => throw _privateConstructorUsedError;
   String? get barrierLabel => throw _privateConstructorUsedError;
@@ -53,7 +53,7 @@ abstract class $MiraiModalBottomSheetActionCopyWith<$Res> {
   @useResult
   $Res call(
       {Map<String, dynamic>? widget,
-      MiraiRequest? request,
+      MiraiNetworkRequest? request,
       String? assetPath,
       String? backgroundColor,
       String? barrierLabel,
@@ -68,7 +68,7 @@ abstract class $MiraiModalBottomSheetActionCopyWith<$Res> {
       bool? showDragHandle,
       bool useSafeArea});
 
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
   $MiraiBorderCopyWith<$Res>? get shape;
   $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
 }
@@ -111,7 +111,7 @@ class _$MiraiModalBottomSheetActionCopyWithImpl<$Res,
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -169,12 +169,12 @@ class _$MiraiModalBottomSheetActionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiRequestCopyWith<$Res>? get request {
+  $MiraiNetworkRequestCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
 
-    return $MiraiRequestCopyWith<$Res>(_value.request!, (value) {
+    return $MiraiNetworkRequestCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value) as $Val);
     });
   }
@@ -215,7 +215,7 @@ abstract class _$$MiraiModalBottomSheetActionImplCopyWith<$Res>
   @useResult
   $Res call(
       {Map<String, dynamic>? widget,
-      MiraiRequest? request,
+      MiraiNetworkRequest? request,
       String? assetPath,
       String? backgroundColor,
       String? barrierLabel,
@@ -231,7 +231,7 @@ abstract class _$$MiraiModalBottomSheetActionImplCopyWith<$Res>
       bool useSafeArea});
 
   @override
-  $MiraiRequestCopyWith<$Res>? get request;
+  $MiraiNetworkRequestCopyWith<$Res>? get request;
   @override
   $MiraiBorderCopyWith<$Res>? get shape;
   @override
@@ -275,7 +275,7 @@ class __$$MiraiModalBottomSheetActionImplCopyWithImpl<$Res>
       request: freezed == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
-              as MiraiRequest?,
+              as MiraiNetworkRequest?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -369,7 +369,7 @@ class _$MiraiModalBottomSheetActionImpl
   }
 
   @override
-  final MiraiRequest? request;
+  final MiraiNetworkRequest? request;
   @override
   final String? assetPath;
   @override
@@ -480,7 +480,7 @@ abstract class _MiraiModalBottomSheetAction
     implements MiraiModalBottomSheetAction {
   const factory _MiraiModalBottomSheetAction(
       {final Map<String, dynamic>? widget,
-      final MiraiRequest? request,
+      final MiraiNetworkRequest? request,
       final String? assetPath,
       final String? backgroundColor,
       final String? barrierLabel,
@@ -501,7 +501,7 @@ abstract class _MiraiModalBottomSheetAction
   @override
   Map<String, dynamic>? get widget;
   @override
-  MiraiRequest? get request;
+  MiraiNetworkRequest? get request;
   @override
   String? get assetPath;
   @override

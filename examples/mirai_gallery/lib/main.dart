@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mirai/mirai.dart';
@@ -7,7 +9,17 @@ import 'package:mirai_gallery/app/home/home_screen.dart';
 import 'package:mirai_gallery/app_theme/app_theme_cubit.dart';
 import 'package:mirai_webview/mirai_webview.dart';
 
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
+
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   await Mirai.initialize(
     parsers: const [
       ExampleScreenParser(),

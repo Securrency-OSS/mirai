@@ -5,10 +5,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
-import 'package:mirai/src/network/mirai_network.dart';
-import 'package:mirai/src/network/mirai_request.dart';
 import 'package:mirai/src/parsers/parsers.dart';
+import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/log.dart';
 import 'package:mirai_framework/mirai_framework.dart';
 
@@ -53,7 +53,6 @@ class Mirai {
     const MiraiAlertDialogParser(),
     const MiraiTabParser(),
     const MiraiFormParser(),
-    const MiraiFormFieldParser(),
     const MiraiCheckBoxWidgetParser(),
     const MiraiExpandedParser(),
     const MiraiFlexibleParser(),
@@ -72,9 +71,11 @@ class Mirai {
   static final _actionParsers = <MiraiActionParser>[
     const MiraiNoneActionParser(),
     const MiraiNavigateActionParser(),
-    const MiraiRequestActionParser(),
+    const MiraiNetworkRequestParser(),
     const MiraiModalBottomSheetActionParser(),
     const MiraiDialogActionParser(),
+    const MiraiGetFormValueParser(),
+    const MiraiFormValidateParser(),
   ];
 
   static Future<void> initialize({
@@ -86,7 +87,7 @@ class Mirai {
     _actionParsers.addAll(actionParsers);
     MiraiRegistry.instance.registerAll(_parsers);
     MiraiRegistry.instance.registerAllActions(_actionParsers);
-    MiraiNetwork.initialize(dio ?? Dio());
+    MiraiNetworkService.initialize(dio ?? Dio());
   }
 
   static Widget? fromJson(Map<String, dynamic>? json, BuildContext context) {
@@ -129,13 +130,14 @@ class Mirai {
     return null;
   }
 
-  static Widget fromNetwork(
-    MiraiRequest request, {
+  static Widget fromNetwork({
+    required BuildContext context,
+    required MiraiNetworkRequest request,
     LoadingWidgetBuilder? loadingWidget,
     ErrorWidgetBuilder? errorWidget,
   }) {
     return FutureBuilder<Response?>(
-      future: MiraiNetwork.request(request),
+      future: MiraiNetworkService.request(context, request),
       builder: (context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
