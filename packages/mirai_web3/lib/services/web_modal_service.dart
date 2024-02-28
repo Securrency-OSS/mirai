@@ -19,9 +19,7 @@ class Web3ModalService {
   static late ChainMetadata _chainMetadata;
   static late List<ContractDetails> _contracts;
   static List<Token> _contractTokens = [];
-  static List<TransactionDetails> _transactions = [];
   static String? _signature;
-  static bool _loadingTransactions = false;
 
   static W3MService get service => _service;
   static bool get isConnected => _service.isConnected;
@@ -32,18 +30,11 @@ class Web3ModalService {
       _service.selectedChain?.chainId ?? W3MChainPresets.chains['1']!.chainId;
 
   static Future<bool> initialize({
-    ChainMetadata? metadata,
+    required ChainMetadata metadata,
     List<W3MChainInfo> customChains = const [],
     List<ContractDetails> contractsList = const [],
   }) async {
-    _chainMetadata = metadata ??
-        const ChainMetadata(
-          projectId: "68ccdce69aec001e3cd0b33aec530b81",
-          name: 'Mirai Gallery',
-          description: "Web3 mobile app in Mirai",
-          url: "https://www.walletconnect.com/",
-          icons: ['https://walletconnect.com/walletconnect-logo.png'],
-        );
+    _chainMetadata = metadata;
 
     for (W3MChainInfo chain in customChains) {
       W3MChainPresets.chains.putIfAbsent(chain.chainId, () => chain);
@@ -73,20 +64,6 @@ class Web3ModalService {
       debugPrint("Catch wallet initialize error $e");
     }
     return isInitialize;
-  }
-
-  static void subscribeConnectDisconnect(void Function(bool connect) method) {
-    _service.onSessionConnectEvent.subscribe((args) {
-      method.call(true);
-    });
-
-    _service.onSessionExpireEvent.subscribe((args) {
-      method.call(false);
-    });
-
-    _service.onSessionDeleteEvent.subscribe((args) {
-      method.call(false);
-    });
   }
 
   static Future<void> connectWallet(BuildContext context) async {
@@ -170,6 +147,9 @@ class Web3ModalService {
     }
   }
 
+  /// This method will use different methods of the contract like `name`,
+  /// `totalSupply`, `balanceOf` and `decimals`
+  /// Load all the details for the provided contract ABIs
   static Future<List<Token>> loadTokens({bool refresh = false}) async {
     if (_contractTokens.isEmpty || refresh) {
       _contractTokens = [];
@@ -187,19 +167,16 @@ class Web3ModalService {
 
           if (contract.chainId == chainId) {
             final results = await Future.wait([
-              // results[0]
               _service.requestReadContract(
                 deployedContract: deployedContract,
                 functionName: 'name',
                 rpcUrl: contract.rpcUrl,
               ),
-              // results[1]
               _service.requestReadContract(
                 deployedContract: deployedContract,
                 functionName: 'totalSupply',
                 rpcUrl: contract.rpcUrl,
               ),
-              // results[2]
               _service.requestReadContract(
                 deployedContract: deployedContract,
                 functionName: 'balanceOf',
@@ -208,7 +185,6 @@ class Web3ModalService {
                   EthereumAddress.fromHex(connectedWalletAddress),
                 ],
               ),
-              // results[3]
               _service.requestReadContract(
                 deployedContract: deployedContract,
                 functionName: 'decimals',
@@ -239,6 +215,8 @@ class Web3ModalService {
     return _contractTokens;
   }
 
+  /// This method will initiate the token transfer based on the token contract address provided
+  /// This also depends on the chain chosen initially and wallet connected
   static Future<String?> transferToken({
     required String tokenAddress,
     required String toAddress,
@@ -285,6 +263,15 @@ class Web3ModalService {
     return null;
   }
 
+  /// This method will load the transactions of the contract using it's ABI from the list of contracts we initially provided in [initialize]
+  ///
+  /// - This will use the `eth_getLogs` and will use filters to check only those 50,000 events which are of type `Transfer` and are in the range
+  /// - `offset` is the number of times `eth_getLogs` will end the search behind the current `block`
+  /// - Let's say if current block number is 549560 and the offset is 2
+  /// - In this case `toBlock` will be 549560 - (50000 * 2) = 449,560
+  /// - In this case `fromBlock` will be 449,560 - 50000 = 399,560
+  /// - In case of a negative `fromBlock` : 0 will be taken as start point
+  /// - In case of a negative `toBlock` : difference will be taken as end point
   static Future<List<TransactionDetails>> loadTransactions({
     required String tokenAddress,
     int offset = 0,
@@ -308,10 +295,16 @@ class Web3ModalService {
       );
 
       final client = Web3Client(contract.rpcUrl, Client());
-
       final currentBlockNumber = await client.getBlockNumber();
+
+      // we can only go through the 50,000 blocks for logs
       const int difference = 50000;
-      int blockNumber = currentBlockNumber - (difference * offset);
+      // Based on the `offset` it is decided that from where the search should start
+      int toBlockNumber = currentBlockNumber - (difference * offset);
+      toBlockNumber = (toBlockNumber < 0) ? 0 : difference;
+      // starting from the 50,000 blocks beg=hind the `toBlock`
+      int fromBlockNumber = toBlockNumber - difference;
+      fromBlockNumber = (fromBlockNumber < 0) ? 0 : fromBlockNumber;
 
       final transferEvent = deployedContract.event('Transfer');
       final contractHex = bytesToHex(transferEvent.signature,
@@ -321,8 +314,8 @@ class Web3ModalService {
           .getLogs(
         FilterOptions(
             // events of a user wallet
-            fromBlock: BlockNum.exact(blockNumber - difference),
-            toBlock: BlockNum.exact(blockNumber),
+            fromBlock: BlockNum.exact(fromBlockNumber),
+            toBlock: BlockNum.exact(toBlockNumber),
             address: EthereumAddress.fromHex(contract.address),
             topics: [
               [
@@ -370,26 +363,7 @@ class Web3ModalService {
     return transactions;
   }
 
-  static Future<List<TransactionDetails>> loadAllTransactions({
-    int offset = 0,
-    bool refresh = false,
-  }) async {
-    if ((_transactions.isEmpty || refresh) && !_loadingTransactions) {
-      _loadingTransactions = true;
-      _transactions = [];
-
-      if (_contractTokens.isNotEmpty) {
-        for (Token token in _contractTokens) {
-          await loadTransactions(tokenAddress: token.address)
-              .then((trans) => _transactions.addAll(trans));
-        }
-      }
-    }
-
-    _loadingTransactions = false;
-    return _transactions;
-  }
-
+  /// Disconnecting the service
   static Future<void> disconnect({bool reInit = false}) async {
     _service.closeModal();
     await _service.disconnect();
@@ -398,6 +372,22 @@ class Web3ModalService {
     if (reInit) initialize(metadata: _chainMetadata, contractsList: _contracts);
   }
 
+  /// Subscribing the events
+  static void subscribeConnectDisconnect(void Function(bool connect) method) {
+    _service.onSessionConnectEvent.subscribe((args) {
+      method.call(true);
+    });
+
+    _service.onSessionExpireEvent.subscribe((args) {
+      method.call(false);
+    });
+
+    _service.onSessionDeleteEvent.subscribe((args) {
+      method.call(false);
+    });
+  }
+
+  /// Unsubscribing the events
   static void _unsubscribeEvents() {
     _service.onSessionConnectEvent.unsubscribeAll();
     _service.onSessionExpireEvent.unsubscribeAll();
