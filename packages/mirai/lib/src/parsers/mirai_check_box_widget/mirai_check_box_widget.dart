@@ -1,6 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mirai/src/parsers/mirai_material_color/mirai_material_color.dart';
 
+export 'package:mirai/src/parsers/mirai_check_box_widget/mirai_check_box_widget_parser.dart';
+
 part 'mirai_check_box_widget.freezed.dart';
 part 'mirai_check_box_widget.g.dart';
 

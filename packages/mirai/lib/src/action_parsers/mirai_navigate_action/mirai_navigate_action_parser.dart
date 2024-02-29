@@ -22,7 +22,7 @@ class MiraiNavigateActionParser extends MiraiActionParser<MiraiNavigateAction> {
     if (model.widgetJson != null) {
       widget = Mirai.fromJson(model.widgetJson, context);
     } else if (model.request != null) {
-      widget = Mirai.fromNetwork(model.request!);
+      widget = Mirai.fromNetwork(context: context, request: model.request!);
     } else if (model.assetPath != null) {
       widget = Mirai.fromAssets(model.assetPath!);
     }

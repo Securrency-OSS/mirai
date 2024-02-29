@@ -1,55 +1,54 @@
 {
-    "type": "scaffold",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "Container"
-        }
-    },
-    "body": {
-        "type": "listView",
-        "physics": "never",
-        "shrinkWrap": true,
-        "children": [
-            {
-                "type": "sizedBox",
-                "height": 52
-            },
-            {
-                "type": "container",
-                "color": "#672BFF",
-                "clipBehavior": "hardEdge",
-                "height": 250,
-                "width": 200,
-                "decoration": {
-
-                }
-            },
-            {
-                "type": "sizedBox",
-                "height": 52
-            },
-            {
-                "type": "container",
-                "color": "#FC5632",
-                "clipBehavior": "hardEdge",
-                "height": 250,
-                "width": 200,
-                "child": {
-                    "type": "align",
-                    "alignment": "bottomCenter",
-                    "child": {
-                        "type": "text",
-                        "data": "Flutter",
-                        "align": "center",
-                        "style": {
-                            "fontSize": 23,
-                            "fontWeight": "w600"
-                        }
-                    }
-                }
-            }
-        ]
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Container"
     }
+  },
+  "body": {
+    "type": "listView",
+    "physics": "never",
+    "shrinkWrap": true,
+    "children": [
+      {
+        "type": "sizedBox",
+        "height": 52
+      },
+      {
+        "type": "container",
+        "color": "#672BFF",
+        "clipBehavior": "hardEdge",
+        "height": 250,
+        "width": 200,
+        "decoration": {
+        }
+      },
+      {
+        "type": "sizedBox",
+        "height": 52
+      },
+      {
+        "type": "container",
+        "color": "#FC5632",
+        "clipBehavior": "hardEdge",
+        "height": 250,
+        "width": 200,
+        "child": {
+          "type": "align",
+          "alignment": "bottomCenter",
+          "child": {
+            "type": "text",
+            "data": "Flutter",
+            "align": "center",
+            "style": {
+              "fontSize": 23,
+              "fontWeight": "w600"
+            }
+          }
+        }
+      }
+    ]
+  }
 }

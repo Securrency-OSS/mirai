@@ -28,7 +28,7 @@ enum WidgetType {
   bottomNavigationBar,
   listView,
   defaultTabController,
-  scrollView,
+  singleChildScrollView,
   tab,
   form,
   formField,
@@ -41,4 +41,7 @@ enum WidgetType {
   pageView,
   refreshIndicator,
   networkWidget,
+  circleAvatar,
+  chip,
+  gridView,
 }

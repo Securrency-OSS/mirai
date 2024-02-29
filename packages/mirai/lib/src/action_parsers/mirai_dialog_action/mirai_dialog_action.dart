@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mirai/src/network/mirai_request.dart';
+import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request.dart';
 
 export 'mirai_dialog_action_parser.dart';
 
@@ -11,7 +11,7 @@ part 'mirai_dialog_action.g.dart';
 class MiraiDialogAction with _$MiraiDialogAction {
   const factory MiraiDialogAction({
     Map<String, dynamic>? widget,
-    MiraiRequest? request,
+    MiraiNetworkRequest? request,
     String? assetPath,
     @Default(true) bool barrierDismissible,
     String? barrierColor,

@@ -103,7 +103,7 @@ Here is an example of a basic form screen build with Mirai.
   },
   "backgroundColor": "#ffffff",
   "body": {
-    "type": "scrollView",
+    "type": "singleChildScrollView",
     "child": {
       "type": "container",
       "padding": {

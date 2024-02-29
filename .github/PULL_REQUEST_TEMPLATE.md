@@ -13,6 +13,7 @@
 ## Related Issues
 
 <!--- List the related issues to this PR -->
+Closes #
 
 ## Type of Change
 

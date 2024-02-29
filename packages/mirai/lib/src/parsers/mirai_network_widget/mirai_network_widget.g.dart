@@ -9,7 +9,8 @@ part of 'mirai_network_widget.dart';
 _$MiraiNetworkWidgetImpl _$$MiraiNetworkWidgetImplFromJson(
         Map<String, dynamic> json) =>
     _$MiraiNetworkWidgetImpl(
-      request: MiraiRequest.fromJson(json['request'] as Map<String, dynamic>),
+      request:
+          MiraiNetworkRequest.fromJson(json['request'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$MiraiNetworkWidgetImplToJson(
