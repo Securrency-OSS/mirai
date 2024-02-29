@@ -24,8 +24,7 @@ extension MiraiBottomNavigationBarItemParser on MiraiBottomNavigationBarItem {
   BottomNavigationBarItem parse(BuildContext context) {
     return BottomNavigationBarItem(
       icon: Mirai.fromJson(icon, context) ?? const SizedBox(),
-      activeIcon:
-          activeIcon == null ? null : Mirai.fromJson(activeIcon, context),
+      activeIcon: Mirai.fromJson(activeIcon, context),
       label: label,
       backgroundColor: backgroundColor?.toColor(context),
       tooltip: tooltip,

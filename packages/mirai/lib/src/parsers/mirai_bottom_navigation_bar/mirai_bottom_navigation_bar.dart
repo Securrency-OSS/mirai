@@ -11,11 +11,9 @@ part 'mirai_bottom_navigation_bar.g.dart';
 @freezed
 class MiraiBottomNavigationBar with _$MiraiBottomNavigationBar {
   const factory MiraiBottomNavigationBar({
-    //Todo: onTap,
     required List<MiraiBottomNavigationBarItem> items,
-    @Default(0) int currentIndex,
     double? elevation,
-    BottomNavigationBarType? navBarType,
+    BottomNavigationBarType? bottomNavigationBarType,
     String? fixedColor,
     String? backgroundColor,
     @Default(24) double iconSize,
