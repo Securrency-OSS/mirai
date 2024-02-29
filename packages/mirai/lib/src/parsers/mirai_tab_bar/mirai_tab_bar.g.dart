@@ -15,15 +15,14 @@ _$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
       isScrollable: json['isScrollable'] as bool? ?? false,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       indicatorColor: json['indicatorColor'] as String?,
       automaticIndicatorColorAdjustment:
           json['automaticIndicatorColorAdjustment'] as bool? ?? true,
       indicatorWeight: (json['indicatorWeight'] as num?)?.toDouble() ?? 2.0,
       indicatorPadding: json['indicatorPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['indicatorPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['indicatorPadding']),
       indicatorSize: $enumDecodeNullable(
           _$TabBarIndicatorSizeEnumMap, json['indicatorSize']),
       labelColor: json['labelColor'] as String?,
@@ -32,8 +31,7 @@ _$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
           : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
       labelPadding: json['labelPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['labelPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['labelPadding']),
       unselectedLabelColor: json['unselectedLabelColor'] as String?,
       unselectedLabelStyle: json['unselectedLabelStyle'] == null
           ? null

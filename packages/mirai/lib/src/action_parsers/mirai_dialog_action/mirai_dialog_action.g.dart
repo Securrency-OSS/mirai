@@ -40,5 +40,4 @@ Map<String, dynamic> _$$MiraiDialogActionImplToJson(
 const _$TraversalEdgeBehaviorEnumMap = {
   TraversalEdgeBehavior.closedLoop: 'closedLoop',
   TraversalEdgeBehavior.leaveFlutterView: 'leaveFlutterView',
-  TraversalEdgeBehavior.parentScope: 'parentScope',
 };

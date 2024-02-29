@@ -18,7 +18,7 @@ _$MiraiListViewImpl _$$MiraiListViewImplFromJson(Map<String, dynamic> json) =>
       shrinkWrap: json['shrinkWrap'] as bool? ?? false,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       addAutomaticKeepAlives: json['addAutomaticKeepAlives'] as bool? ?? true,
       addRepaintBoundaries: json['addRepaintBoundaries'] as bool? ?? true,
       addSemanticIndexes: json['addSemanticIndexes'] as bool? ?? true,

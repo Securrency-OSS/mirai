@@ -26,8 +26,7 @@ _$MiraiFloatingActionButtonThemeDataImpl
               (json['extendedIconLabelSpacing'] as num?)?.toDouble(),
           extendedPadding: json['extendedPadding'] == null
               ? null
-              : MiraiEdgeInsets.fromJson(
-                  json['extendedPadding'] as Map<String, dynamic>),
+              : MiraiEdgeInsets.fromJson(json['extendedPadding']),
           extendedTextStyle: json['extendedTextStyle'] == null
               ? null
               : MiraiTextStyle.fromJson(

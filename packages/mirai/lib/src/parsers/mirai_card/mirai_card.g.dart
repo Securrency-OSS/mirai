@@ -15,7 +15,7 @@ _$MiraiCardImpl _$$MiraiCardImplFromJson(Map<String, dynamic> json) =>
       borderOnForeground: json['borderOnForeground'] as bool? ?? true,
       margin: json['margin'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['margin'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['margin']),
       clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']),
       child: json['child'] as Map<String, dynamic>?,
       semanticContainer: json['semanticContainer'] as bool? ?? true,

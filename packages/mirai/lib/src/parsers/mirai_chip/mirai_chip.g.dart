@@ -15,8 +15,7 @@ _$MiraiChipImpl _$$MiraiChipImplFromJson(Map<String, dynamic> json) =>
           : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
       labelPadding: json['labelPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['labelPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['labelPadding']),
       deleteIcon: json['deleteIcon'] as Map<String, dynamic>?,
       deleteIconColor: json['deleteIconColor'] as String?,
       deleteButtonTooltipMessage: json['deleteButtonTooltipMessage'] as String?,
@@ -32,7 +31,7 @@ _$MiraiChipImpl _$$MiraiChipImplFromJson(Map<String, dynamic> json) =>
       backgroundColor: json['backgroundColor'] as String?,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       elevation: (json['elevation'] as num?)?.toDouble(),
       shadowColor: json['shadowColor'] as String?,
       surfaceTintColor: json['surfaceTintColor'] as String?,

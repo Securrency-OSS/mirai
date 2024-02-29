@@ -46,8 +46,7 @@ _$MiraiInputDecorationImpl _$$MiraiInputDecorationImplFromJson(
       isDense: json['isDense'] as bool? ?? false,
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       prefixIcon: json['prefixIcon'] as Map<String, dynamic>?,
       prefixIconConstraints: json['prefixIconConstraints'] == null
           ? null

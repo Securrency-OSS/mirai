@@ -52,8 +52,7 @@ _$MiraiTextFormFieldImpl _$$MiraiTextFormFieldImplFromJson(
           $enumDecodeNullable(_$BrightnessEnumMap, json['keyboardAppearance']),
       scrollPadding: json['scrollPadding'] == null
           ? const MiraiEdgeInsets(bottom: 20, top: 20, left: 20, right: 20)
-          : MiraiEdgeInsets.fromJson(
-              json['scrollPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['scrollPadding']),
       restorationId: json['restorationId'] as String?,
       enableIMEPersonalizedLearning:
           json['enableIMEPersonalizedLearning'] as bool? ?? true,
