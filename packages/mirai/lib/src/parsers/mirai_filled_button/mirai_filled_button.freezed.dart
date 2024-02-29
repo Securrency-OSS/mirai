@@ -26,8 +26,7 @@ mixin _$MiraiFilledButton {
   Map<String, dynamic>? get onFocusChange => throw _privateConstructorUsedError;
   MiraiButtonStyle? get style => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
-  Clip get clipBehavior =>
-      throw _privateConstructorUsedError; //MaterialStatesController? statesController,
+  Clip get clipBehavior => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -274,9 +273,7 @@ class _$MiraiFilledButtonImpl implements _MiraiFilledButton {
   @override
   @JsonKey()
   final Clip clipBehavior;
-//MaterialStatesController? statesController,
   final Map<String, dynamic>? _child;
-//MaterialStatesController? statesController,
   @override
   Map<String, dynamic>? get child {
     final value = _child;
@@ -367,7 +364,7 @@ abstract class _MiraiFilledButton implements MiraiFilledButton {
   bool get autofocus;
   @override
   Clip get clipBehavior;
-  @override //MaterialStatesController? statesController,
+  @override
   Map<String, dynamic>? get child;
   @override
   @JsonKey(ignore: true)
