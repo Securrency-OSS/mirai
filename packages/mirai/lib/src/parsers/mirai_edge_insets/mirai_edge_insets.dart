@@ -25,7 +25,11 @@ class MiraiEdgeInsets with _$MiraiEdgeInsets {
         "right": json,
         "bottom": json
       };
-    } else if (json is List<num> && json.length == 4) {
+    } else if (json is List<dynamic> && json.length == 4) {
+      bool allElementsNum = json.every((element) => element is num);
+      if (!allElementsNum) {
+        throw ArgumentError('Invalid input format for MiraiEdgeInsets');
+      }
       resultantJson = {
         "left": json[0],
         "top": json[1],
