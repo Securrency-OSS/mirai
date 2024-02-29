@@ -46,4 +46,5 @@ enum WidgetType {
   gridView,
   defaultBottomNavigationController,
   bottomNavigationView,
+  wrap,
 }
