@@ -21,12 +21,11 @@ MiraiBottomNavigationBar _$MiraiBottomNavigationBarFromJson(
 
 /// @nodoc
 mixin _$MiraiBottomNavigationBar {
-//Todo: onTap,
   List<MiraiBottomNavigationBarItem> get items =>
       throw _privateConstructorUsedError;
-  int get currentIndex => throw _privateConstructorUsedError;
   double? get elevation => throw _privateConstructorUsedError;
-  BottomNavigationBarType? get navBarType => throw _privateConstructorUsedError;
+  BottomNavigationBarType? get bottomNavigationBarType =>
+      throw _privateConstructorUsedError;
   String? get fixedColor => throw _privateConstructorUsedError;
   String? get backgroundColor => throw _privateConstructorUsedError;
   double get iconSize => throw _privateConstructorUsedError;
@@ -57,9 +56,8 @@ abstract class $MiraiBottomNavigationBarCopyWith<$Res> {
   @useResult
   $Res call(
       {List<MiraiBottomNavigationBarItem> items,
-      int currentIndex,
       double? elevation,
-      BottomNavigationBarType? navBarType,
+      BottomNavigationBarType? bottomNavigationBarType,
       String? fixedColor,
       String? backgroundColor,
       double iconSize,
@@ -93,9 +91,8 @@ class _$MiraiBottomNavigationBarCopyWithImpl<$Res,
   @override
   $Res call({
     Object? items = null,
-    Object? currentIndex = null,
     Object? elevation = freezed,
-    Object? navBarType = freezed,
+    Object? bottomNavigationBarType = freezed,
     Object? fixedColor = freezed,
     Object? backgroundColor = freezed,
     Object? iconSize = null,
@@ -115,17 +112,13 @@ class _$MiraiBottomNavigationBarCopyWithImpl<$Res,
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<MiraiBottomNavigationBarItem>,
-      currentIndex: null == currentIndex
-          ? _value.currentIndex
-          : currentIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       elevation: freezed == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double?,
-      navBarType: freezed == navBarType
-          ? _value.navBarType
-          : navBarType // ignore: cast_nullable_to_non_nullable
+      bottomNavigationBarType: freezed == bottomNavigationBarType
+          ? _value.bottomNavigationBarType
+          : bottomNavigationBarType // ignore: cast_nullable_to_non_nullable
               as BottomNavigationBarType?,
       fixedColor: freezed == fixedColor
           ? _value.fixedColor
@@ -218,9 +211,8 @@ abstract class _$$MiraiBottomNavigationBarImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<MiraiBottomNavigationBarItem> items,
-      int currentIndex,
       double? elevation,
-      BottomNavigationBarType? navBarType,
+      BottomNavigationBarType? bottomNavigationBarType,
       String? fixedColor,
       String? backgroundColor,
       double iconSize,
@@ -255,9 +247,8 @@ class __$$MiraiBottomNavigationBarImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? items = null,
-    Object? currentIndex = null,
     Object? elevation = freezed,
-    Object? navBarType = freezed,
+    Object? bottomNavigationBarType = freezed,
     Object? fixedColor = freezed,
     Object? backgroundColor = freezed,
     Object? iconSize = null,
@@ -277,17 +268,13 @@ class __$$MiraiBottomNavigationBarImplCopyWithImpl<$Res>
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<MiraiBottomNavigationBarItem>,
-      currentIndex: null == currentIndex
-          ? _value.currentIndex
-          : currentIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       elevation: freezed == elevation
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double?,
-      navBarType: freezed == navBarType
-          ? _value.navBarType
-          : navBarType // ignore: cast_nullable_to_non_nullable
+      bottomNavigationBarType: freezed == bottomNavigationBarType
+          ? _value.bottomNavigationBarType
+          : bottomNavigationBarType // ignore: cast_nullable_to_non_nullable
               as BottomNavigationBarType?,
       fixedColor: freezed == fixedColor
           ? _value.fixedColor
@@ -350,9 +337,8 @@ class __$$MiraiBottomNavigationBarImplCopyWithImpl<$Res>
 class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
   const _$MiraiBottomNavigationBarImpl(
       {required final List<MiraiBottomNavigationBarItem> items,
-      this.currentIndex = 0,
       this.elevation,
-      this.navBarType,
+      this.bottomNavigationBarType,
       this.fixedColor,
       this.backgroundColor,
       this.iconSize = 24,
@@ -371,9 +357,7 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
   factory _$MiraiBottomNavigationBarImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiBottomNavigationBarImplFromJson(json);
 
-//Todo: onTap,
   final List<MiraiBottomNavigationBarItem> _items;
-//Todo: onTap,
   @override
   List<MiraiBottomNavigationBarItem> get items {
     if (_items is EqualUnmodifiableListView) return _items;
@@ -382,12 +366,9 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
   }
 
   @override
-  @JsonKey()
-  final int currentIndex;
-  @override
   final double? elevation;
   @override
-  final BottomNavigationBarType? navBarType;
+  final BottomNavigationBarType? bottomNavigationBarType;
   @override
   final String? fixedColor;
   @override
@@ -420,7 +401,7 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
 
   @override
   String toString() {
-    return 'MiraiBottomNavigationBar(items: $items, currentIndex: $currentIndex, elevation: $elevation, navBarType: $navBarType, fixedColor: $fixedColor, backgroundColor: $backgroundColor, iconSize: $iconSize, selectedItemColor: $selectedItemColor, unselectedItemColor: $unselectedItemColor, selectedFontSize: $selectedFontSize, unselectedFontSize: $unselectedFontSize, selectedLabelStyle: $selectedLabelStyle, unselectedLabelStyle: $unselectedLabelStyle, showSelectedLabels: $showSelectedLabels, showUnselectedLabels: $showUnselectedLabels, enableFeedback: $enableFeedback, landscapeLayout: $landscapeLayout)';
+    return 'MiraiBottomNavigationBar(items: $items, elevation: $elevation, bottomNavigationBarType: $bottomNavigationBarType, fixedColor: $fixedColor, backgroundColor: $backgroundColor, iconSize: $iconSize, selectedItemColor: $selectedItemColor, unselectedItemColor: $unselectedItemColor, selectedFontSize: $selectedFontSize, unselectedFontSize: $unselectedFontSize, selectedLabelStyle: $selectedLabelStyle, unselectedLabelStyle: $unselectedLabelStyle, showSelectedLabels: $showSelectedLabels, showUnselectedLabels: $showUnselectedLabels, enableFeedback: $enableFeedback, landscapeLayout: $landscapeLayout)';
   }
 
   @override
@@ -429,12 +410,11 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
         (other.runtimeType == runtimeType &&
             other is _$MiraiBottomNavigationBarImpl &&
             const DeepCollectionEquality().equals(other._items, _items) &&
-            (identical(other.currentIndex, currentIndex) ||
-                other.currentIndex == currentIndex) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
-            (identical(other.navBarType, navBarType) ||
-                other.navBarType == navBarType) &&
+            (identical(
+                    other.bottomNavigationBarType, bottomNavigationBarType) ||
+                other.bottomNavigationBarType == bottomNavigationBarType) &&
             (identical(other.fixedColor, fixedColor) ||
                 other.fixedColor == fixedColor) &&
             (identical(other.backgroundColor, backgroundColor) ||
@@ -468,9 +448,8 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_items),
-      currentIndex,
       elevation,
-      navBarType,
+      bottomNavigationBarType,
       fixedColor,
       backgroundColor,
       iconSize,
@@ -503,9 +482,8 @@ class _$MiraiBottomNavigationBarImpl implements _MiraiBottomNavigationBar {
 abstract class _MiraiBottomNavigationBar implements MiraiBottomNavigationBar {
   const factory _MiraiBottomNavigationBar(
           {required final List<MiraiBottomNavigationBarItem> items,
-          final int currentIndex,
           final double? elevation,
-          final BottomNavigationBarType? navBarType,
+          final BottomNavigationBarType? bottomNavigationBarType,
           final String? fixedColor,
           final String? backgroundColor,
           final double iconSize,
@@ -524,14 +502,12 @@ abstract class _MiraiBottomNavigationBar implements MiraiBottomNavigationBar {
   factory _MiraiBottomNavigationBar.fromJson(Map<String, dynamic> json) =
       _$MiraiBottomNavigationBarImpl.fromJson;
 
-  @override //Todo: onTap,
-  List<MiraiBottomNavigationBarItem> get items;
   @override
-  int get currentIndex;
+  List<MiraiBottomNavigationBarItem> get items;
   @override
   double? get elevation;
   @override
-  BottomNavigationBarType? get navBarType;
+  BottomNavigationBarType? get bottomNavigationBarType;
   @override
   String? get fixedColor;
   @override
