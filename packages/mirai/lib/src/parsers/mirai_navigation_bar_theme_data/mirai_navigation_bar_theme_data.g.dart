@@ -21,8 +21,7 @@ _$MiraiNavigationBarThemeDataImpl _$$MiraiNavigationBarThemeDataImplFromJson(
               json['indicatorShape'] as Map<String, dynamic>),
       labelTextStyle: json['labelTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['labelTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['labelTextStyle']),
       iconTheme: json['iconTheme'] == null
           ? null
           : MiraiIconThemeData.fromJson(

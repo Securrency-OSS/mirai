@@ -29,12 +29,10 @@ _$MiraiAppBarThemeImpl _$$MiraiAppBarThemeImplFromJson(
       toolbarHeight: (json['toolbarHeight'] as num?)?.toDouble(),
       toolbarTextStyle: json['toolbarTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['toolbarTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['toolbarTextStyle']),
       titleTextStyle: json['titleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['titleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['titleTextStyle']),
       systemOverlayStyle: json['systemOverlayStyle'] == null
           ? null
           : MiraiSystemUIOverlayStyle.fromJson(

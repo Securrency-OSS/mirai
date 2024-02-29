@@ -13,9 +13,8 @@ _$MiraiTextImpl _$$MiraiTextImplFromJson(Map<String, dynamic> json) =>
               ?.map((e) => MiraiTextSpan.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
-      style: json['style'] == null
-          ? null
-          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      style:
+          json['style'] == null ? null : MiraiTextStyle.fromJson(json['style']),
       textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']),
       textDirection:
           $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
@@ -74,9 +73,8 @@ const _$TextWidthBasisEnumMap = {
 _$MiraiTextSpanImpl _$$MiraiTextSpanImplFromJson(Map<String, dynamic> json) =>
     _$MiraiTextSpanImpl(
       data: json['data'] as String?,
-      style: json['style'] == null
-          ? null
-          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      style:
+          json['style'] == null ? null : MiraiTextStyle.fromJson(json['style']),
       onTap: json['onTap'] as Map<String, dynamic>?,
     );
 

@@ -22,8 +22,7 @@ _$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
               json['titlePadding'] as Map<String, dynamic>),
       titleTextStyle: json['titleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['titleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['titleTextStyle']),
       content: json['content'] as Map<String, dynamic>?,
       contentPadding: json['contentPadding'] == null
           ? null
@@ -31,8 +30,7 @@ _$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
               json['contentPadding'] as Map<String, dynamic>),
       contentTextStyle: json['contentTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['contentTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['contentTextStyle']),
       actions: (json['actions'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
           .toList(),
