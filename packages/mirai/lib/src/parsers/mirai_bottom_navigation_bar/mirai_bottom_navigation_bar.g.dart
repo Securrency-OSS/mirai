@@ -27,12 +27,10 @@ _$MiraiBottomNavigationBarImpl _$$MiraiBottomNavigationBarImplFromJson(
           (json['unselectedFontSize'] as num?)?.toDouble() ?? 12.0,
       selectedLabelStyle: json['selectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['selectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['selectedLabelStyle']),
       unselectedLabelStyle: json['unselectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['unselectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['unselectedLabelStyle']),
       showSelectedLabels: json['showSelectedLabels'] as bool?,
       showUnselectedLabels: json['showUnselectedLabels'] as bool?,
       enableFeedback: json['enableFeedback'] as bool?,

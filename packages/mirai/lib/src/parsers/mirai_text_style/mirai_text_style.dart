@@ -12,6 +12,7 @@ class MiraiTextStyle with _$MiraiTextStyle {
     @Default(true) bool inherit,
     String? color,
     String? backgroundColor,
+    String? styleFromTheme,
     double? fontSize,
     MiraiFontWeight? fontWeight,
     FontStyle? fontStyle,
@@ -23,12 +24,56 @@ class MiraiTextStyle with _$MiraiTextStyle {
     double? height,
   }) = _MiraiTextStyle;
 
-  factory MiraiTextStyle.fromJson(Map<String, dynamic> json) =>
-      _$MiraiTextStyleFromJson(json);
+  factory MiraiTextStyle.fromJson(dynamic json) => _fromJson(json);
+
+  static MiraiTextStyle _fromJson(dynamic json) {
+    if (json is String) {
+      return _$MiraiTextStyleFromJson({"styleFromTheme": json});
+    } else if (json is Map<String, dynamic>) {
+      return _$MiraiTextStyleFromJson(json);
+    }
+
+    return _$MiraiTextStyleFromJson({});
+  }
 }
 
 extension MiraiTextStyleParser on MiraiTextStyle {
   TextStyle? parse(BuildContext context) {
+    if (styleFromTheme != null) {
+      switch (styleFromTheme) {
+        case 'displayLarge':
+          return Theme.of(context).textTheme.displayLarge;
+        case 'displayMedium':
+          return Theme.of(context).textTheme.displayMedium;
+        case 'displaySmall':
+          return Theme.of(context).textTheme.displaySmall;
+        case 'headlineLarge':
+          return Theme.of(context).textTheme.headlineLarge;
+        case 'headlineMedium':
+          return Theme.of(context).textTheme.headlineMedium;
+        case 'headlineSmall':
+          return Theme.of(context).textTheme.headlineSmall;
+        case 'titleLarge':
+          return Theme.of(context).textTheme.titleLarge;
+        case 'titleMedium':
+          return Theme.of(context).textTheme.titleMedium;
+        case 'titleSmall':
+          return Theme.of(context).textTheme.titleSmall;
+        case 'bodyLarge':
+          return Theme.of(context).textTheme.bodyLarge;
+        case 'bodyMedium':
+          return Theme.of(context).textTheme.bodyMedium;
+        case 'bodySmall':
+          return Theme.of(context).textTheme.bodySmall;
+        case 'labelLarge':
+          return Theme.of(context).textTheme.labelLarge;
+        case 'labelMedium':
+          return Theme.of(context).textTheme.labelMedium;
+        case 'labelSmall':
+          return Theme.of(context).textTheme.labelSmall;
+      }
+    }
+
     return TextStyle(
       inherit: inherit,
       color: color?.toColor(context),
