@@ -8,8 +8,7 @@ part of 'mirai_padding.dart';
 
 _$MiraiPaddingImpl _$$MiraiPaddingImplFromJson(Map<String, dynamic> json) =>
     _$MiraiPaddingImpl(
-      padding:
-          MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      padding: MiraiEdgeInsets.fromJson(json['padding']),
       child: json['child'] as Map<String, dynamic>?,
     );
 

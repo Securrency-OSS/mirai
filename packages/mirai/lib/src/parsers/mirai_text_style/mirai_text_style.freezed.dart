@@ -23,6 +23,7 @@ mixin _$MiraiTextStyle {
   bool get inherit => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   String? get backgroundColor => throw _privateConstructorUsedError;
+  String? get styleFromTheme => throw _privateConstructorUsedError;
   double? get fontSize => throw _privateConstructorUsedError;
   MiraiFontWeight? get fontWeight => throw _privateConstructorUsedError;
   FontStyle? get fontStyle => throw _privateConstructorUsedError;
@@ -49,6 +50,7 @@ abstract class $MiraiTextStyleCopyWith<$Res> {
       {bool inherit,
       String? color,
       String? backgroundColor,
+      String? styleFromTheme,
       double? fontSize,
       MiraiFontWeight? fontWeight,
       FontStyle? fontStyle,
@@ -76,6 +78,7 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
     Object? inherit = null,
     Object? color = freezed,
     Object? backgroundColor = freezed,
+    Object? styleFromTheme = freezed,
     Object? fontSize = freezed,
     Object? fontWeight = freezed,
     Object? fontStyle = freezed,
@@ -98,6 +101,10 @@ class _$MiraiTextStyleCopyWithImpl<$Res, $Val extends MiraiTextStyle>
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      styleFromTheme: freezed == styleFromTheme
+          ? _value.styleFromTheme
+          : styleFromTheme // ignore: cast_nullable_to_non_nullable
               as String?,
       fontSize: freezed == fontSize
           ? _value.fontSize
@@ -151,6 +158,7 @@ abstract class _$$MiraiTextStyleImplCopyWith<$Res>
       {bool inherit,
       String? color,
       String? backgroundColor,
+      String? styleFromTheme,
       double? fontSize,
       MiraiFontWeight? fontWeight,
       FontStyle? fontStyle,
@@ -176,6 +184,7 @@ class __$$MiraiTextStyleImplCopyWithImpl<$Res>
     Object? inherit = null,
     Object? color = freezed,
     Object? backgroundColor = freezed,
+    Object? styleFromTheme = freezed,
     Object? fontSize = freezed,
     Object? fontWeight = freezed,
     Object? fontStyle = freezed,
@@ -198,6 +207,10 @@ class __$$MiraiTextStyleImplCopyWithImpl<$Res>
       backgroundColor: freezed == backgroundColor
           ? _value.backgroundColor
           : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      styleFromTheme: freezed == styleFromTheme
+          ? _value.styleFromTheme
+          : styleFromTheme // ignore: cast_nullable_to_non_nullable
               as String?,
       fontSize: freezed == fontSize
           ? _value.fontSize
@@ -246,6 +259,7 @@ class _$MiraiTextStyleImpl implements _MiraiTextStyle {
       {this.inherit = true,
       this.color,
       this.backgroundColor,
+      this.styleFromTheme,
       this.fontSize,
       this.fontWeight,
       this.fontStyle,
@@ -267,6 +281,8 @@ class _$MiraiTextStyleImpl implements _MiraiTextStyle {
   final String? color;
   @override
   final String? backgroundColor;
+  @override
+  final String? styleFromTheme;
   @override
   final double? fontSize;
   @override
@@ -297,7 +313,7 @@ class _$MiraiTextStyleImpl implements _MiraiTextStyle {
 
   @override
   String toString() {
-    return 'MiraiTextStyle(inherit: $inherit, color: $color, backgroundColor: $backgroundColor, fontSize: $fontSize, fontWeight: $fontWeight, fontStyle: $fontStyle, fontFamily: $fontFamily, fontFamilyFallback: $fontFamilyFallback, letterSpacing: $letterSpacing, wordSpacing: $wordSpacing, textBaseline: $textBaseline, height: $height)';
+    return 'MiraiTextStyle(inherit: $inherit, color: $color, backgroundColor: $backgroundColor, styleFromTheme: $styleFromTheme, fontSize: $fontSize, fontWeight: $fontWeight, fontStyle: $fontStyle, fontFamily: $fontFamily, fontFamilyFallback: $fontFamilyFallback, letterSpacing: $letterSpacing, wordSpacing: $wordSpacing, textBaseline: $textBaseline, height: $height)';
   }
 
   @override
@@ -309,6 +325,8 @@ class _$MiraiTextStyleImpl implements _MiraiTextStyle {
             (identical(other.color, color) || other.color == color) &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
+            (identical(other.styleFromTheme, styleFromTheme) ||
+                other.styleFromTheme == styleFromTheme) &&
             (identical(other.fontSize, fontSize) ||
                 other.fontSize == fontSize) &&
             (identical(other.fontWeight, fontWeight) ||
@@ -335,6 +353,7 @@ class _$MiraiTextStyleImpl implements _MiraiTextStyle {
       inherit,
       color,
       backgroundColor,
+      styleFromTheme,
       fontSize,
       fontWeight,
       fontStyle,
@@ -365,6 +384,7 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
       {final bool inherit,
       final String? color,
       final String? backgroundColor,
+      final String? styleFromTheme,
       final double? fontSize,
       final MiraiFontWeight? fontWeight,
       final FontStyle? fontStyle,
@@ -384,6 +404,8 @@ abstract class _MiraiTextStyle implements MiraiTextStyle {
   String? get color;
   @override
   String? get backgroundColor;
+  @override
+  String? get styleFromTheme;
   @override
   double? get fontSize;
   @override

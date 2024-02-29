@@ -15,7 +15,7 @@ _$MiraiSingleChildScrollViewImpl _$$MiraiSingleChildScrollViewImplFromJson(
       reverse: json['reverse'] as bool? ?? false,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       primary: json['primary'] as bool?,
       physics:
           $enumDecodeNullable(_$MiraiScrollPhysicsEnumMap, json['physics']),

@@ -18,7 +18,7 @@ _$MiraiGridViewImpl _$$MiraiGridViewImplFromJson(Map<String, dynamic> json) =>
       shrinkWrap: json['shrinkWrap'] as bool? ?? false,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       crossAxisCount: json['crossAxisCount'] as int?,
       mainAxisSpacing: (json['mainAxisSpacing'] as num?)?.toDouble() ?? 0.0,
       crossAxisSpacing: (json['crossAxisSpacing'] as num?)?.toDouble() ?? 0.0,

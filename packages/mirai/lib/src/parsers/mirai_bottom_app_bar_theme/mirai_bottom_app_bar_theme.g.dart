@@ -16,7 +16,7 @@ _$MiraiBottomAppBarThemeImpl _$$MiraiBottomAppBarThemeImplFromJson(
       shadowColor: json['shadowColor'] as String?,
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
     );
 
 Map<String, dynamic> _$$MiraiBottomAppBarThemeImplToJson(

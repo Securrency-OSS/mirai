@@ -22,8 +22,7 @@ _$MiraiListTileImpl _$$MiraiListTileImplFromJson(Map<String, dynamic> json) =>
       textColor: json['textColor'] as String?,
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       enabled: json['enabled'] as bool? ?? true,
       selected: json['selected'] as bool? ?? false,
       focusColor: json['focusColor'] as String?,

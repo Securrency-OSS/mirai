@@ -15,7 +15,7 @@ _$MiraiSafeAreaImpl _$$MiraiSafeAreaImplFromJson(Map<String, dynamic> json) =>
       bottom: json['bottom'] as bool? ?? true,
       minimum: json['minimum'] == null
           ? const MiraiEdgeInsets()
-          : MiraiEdgeInsets.fromJson(json['minimum'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['minimum']),
       maintainBottomViewPadding:
           json['maintainBottomViewPadding'] as bool? ?? false,
     );

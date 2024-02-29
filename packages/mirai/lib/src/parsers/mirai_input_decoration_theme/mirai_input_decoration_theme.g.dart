@@ -11,22 +11,20 @@ _$MiraiInputDecorationThemeImpl _$$MiraiInputDecorationThemeImplFromJson(
     _$MiraiInputDecorationThemeImpl(
       labelStyle: json['labelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['labelStyle']),
       floatingLabelStyle: json['floatingLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['floatingLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['floatingLabelStyle']),
       helperStyle: json['helperStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['helperStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['helperStyle']),
       helperMaxLines: json['helperMaxLines'] as int?,
       hintStyle: json['hintStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['hintStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['hintStyle']),
       errorStyle: json['errorStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['errorStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['errorStyle']),
       errorMaxLines: json['errorMaxLines'] as int?,
       floatingLabelBehavior: $enumDecodeNullable(
           _$FloatingLabelBehaviorEnumMap, json['floatingLabelBehavior']),
@@ -35,24 +33,20 @@ _$MiraiInputDecorationThemeImpl _$$MiraiInputDecorationThemeImplFromJson(
       isDense: json['isDense'] as bool? ?? false,
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       isCollapsed: json['isCollapsed'] as bool? ?? false,
       iconColor: json['iconColor'] as String?,
       prefixStyle: json['prefixStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['prefixStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['prefixStyle']),
       prefixIconColor: json['prefixIconColor'] as String?,
       suffixStyle: json['suffixStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['suffixStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['suffixStyle']),
       suffixIconColor: json['suffixIconColor'] as String?,
       counterStyle: json['counterStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['counterStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['counterStyle']),
       filled: json['filled'] as bool? ?? false,
       fillColor: json['fillColor'] as String?,
       activeIndicatorBorder: json['activeIndicatorBorder'] == null

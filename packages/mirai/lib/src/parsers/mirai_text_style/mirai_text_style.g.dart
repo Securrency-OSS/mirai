@@ -11,6 +11,7 @@ _$MiraiTextStyleImpl _$$MiraiTextStyleImplFromJson(Map<String, dynamic> json) =>
       inherit: json['inherit'] as bool? ?? true,
       color: json['color'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
+      styleFromTheme: json['styleFromTheme'] as String?,
       fontSize: (json['fontSize'] as num?)?.toDouble(),
       fontWeight:
           $enumDecodeNullable(_$MiraiFontWeightEnumMap, json['fontWeight']),
@@ -32,6 +33,7 @@ Map<String, dynamic> _$$MiraiTextStyleImplToJson(
       'inherit': instance.inherit,
       'color': instance.color,
       'backgroundColor': instance.backgroundColor,
+      'styleFromTheme': instance.styleFromTheme,
       'fontSize': instance.fontSize,
       'fontWeight': _$MiraiFontWeightEnumMap[instance.fontWeight],
       'fontStyle': _$FontStyleEnumMap[instance.fontStyle],
