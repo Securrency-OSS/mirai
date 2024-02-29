@@ -13,10 +13,9 @@ _$MiraiBottomNavigationBarImpl _$$MiraiBottomNavigationBarImplFromJson(
           .map((e) =>
               MiraiBottomNavigationBarItem.fromJson(e as Map<String, dynamic>))
           .toList(),
-      currentIndex: json['currentIndex'] as int? ?? 0,
       elevation: (json['elevation'] as num?)?.toDouble(),
-      navBarType: $enumDecodeNullable(
-          _$BottomNavigationBarTypeEnumMap, json['navBarType']),
+      bottomNavigationBarType: $enumDecodeNullable(
+          _$BottomNavigationBarTypeEnumMap, json['bottomNavigationBarType']),
       fixedColor: json['fixedColor'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
       iconSize: (json['iconSize'] as num?)?.toDouble() ?? 24,
@@ -42,9 +41,9 @@ Map<String, dynamic> _$$MiraiBottomNavigationBarImplToJson(
         _$MiraiBottomNavigationBarImpl instance) =>
     <String, dynamic>{
       'items': instance.items,
-      'currentIndex': instance.currentIndex,
       'elevation': instance.elevation,
-      'navBarType': _$BottomNavigationBarTypeEnumMap[instance.navBarType],
+      'bottomNavigationBarType':
+          _$BottomNavigationBarTypeEnumMap[instance.bottomNavigationBarType],
       'fixedColor': instance.fixedColor,
       'backgroundColor': instance.backgroundColor,
       'iconSize': instance.iconSize,
