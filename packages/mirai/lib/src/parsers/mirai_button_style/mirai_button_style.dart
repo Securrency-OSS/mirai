@@ -116,4 +116,23 @@ extension MiraiButtonStyleParser on MiraiButtonStyle {
       iconSize: iconSize,
     );
   }
+
+  ButtonStyle parseFilledButton(BuildContext context) {
+    return FilledButton.styleFrom(
+      foregroundColor: foregroundColor?.toColor(context),
+      backgroundColor: backgroundColor.toColor(context),
+      disabledForegroundColor: disabledForegroundColor.toColor(context),
+      disabledBackgroundColor: disabledBackgroundColor.toColor(context),
+      shadowColor: shadowColor.toColor(context),
+      surfaceTintColor: surfaceTintColor.toColor(context),
+      elevation: elevation,
+      textStyle: textStyle?.parse(context),
+      enableFeedback: enableFeedback,
+      minimumSize: minimumSize?.parse,
+      fixedSize: fixedSize?.parse,
+      maximumSize: maximumSize?.parse,
+      shape: shape.parse(context),
+      padding: padding.parse,
+    );
+  }
 }
