@@ -28,15 +28,14 @@ _$MiraiTabBarImpl _$$MiraiTabBarImplFromJson(Map<String, dynamic> json) =>
       labelColor: json['labelColor'] as String?,
       labelStyle: json['labelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['labelStyle']),
       labelPadding: json['labelPadding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['labelPadding']),
       unselectedLabelColor: json['unselectedLabelColor'] as String?,
       unselectedLabelStyle: json['unselectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['unselectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['unselectedLabelStyle']),
       dragStartBehavior: $enumDecodeNullable(
               _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
           DragStartBehavior.start,

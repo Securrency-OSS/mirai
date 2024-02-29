@@ -12,7 +12,7 @@ _$MiraiChipImpl _$$MiraiChipImplFromJson(Map<String, dynamic> json) =>
       avatar: json['avatar'] as Map<String, dynamic>?,
       labelStyle: json['labelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['labelStyle']),
       labelPadding: json['labelPadding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['labelPadding']),

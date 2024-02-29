@@ -20,7 +20,7 @@ _$MiraiButtonStyleImpl _$$MiraiButtonStyleImplFromJson(
       elevation: (json['elevation'] as num?)?.toDouble(),
       textStyle: json['textStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['textStyle']),
       padding: json['padding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['padding']),

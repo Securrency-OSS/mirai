@@ -22,12 +22,10 @@ _$MiraiDialogThemeImpl _$$MiraiDialogThemeImplFromJson(
               json['alignment'] as Map<String, dynamic>),
       titleTextStyle: json['titleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['titleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['titleTextStyle']),
       contentTextStyle: json['contentTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['contentTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['contentTextStyle']),
       actionsPadding: json['actionsPadding'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['actionsPadding']),

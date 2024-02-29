@@ -29,8 +29,7 @@ _$MiraiFloatingActionButtonThemeDataImpl
               : MiraiEdgeInsets.fromJson(json['extendedPadding']),
           extendedTextStyle: json['extendedTextStyle'] == null
               ? null
-              : MiraiTextStyle.fromJson(
-                  json['extendedTextStyle'] as Map<String, dynamic>),
+              : MiraiTextStyle.fromJson(json['extendedTextStyle']),
         );
 
 Map<String, dynamic> _$$MiraiFloatingActionButtonThemeDataImplToJson(
