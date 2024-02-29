@@ -13,7 +13,7 @@ _$MiraiIconButtonImpl _$$MiraiIconButtonImplFromJson(
       iconSize: (json['iconSize'] as num?)?.toDouble(),
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       alignment:
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']) ??
               MiraiAlignment.center,

@@ -28,8 +28,7 @@ _$MiraiListTileThemeDataImpl _$$MiraiListTileThemeDataImplFromJson(
           : MiraiTextStyle.fromJson(json['leadingAndTrailingTextStyle']),
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       tileColor: json['tileColor'] as String?,
       selectedTileColor: json['selectedTileColor'] as String?,
       horizontalTitleGap: (json['horizontalTitleGap'] as num?)?.toDouble(),

@@ -28,8 +28,7 @@ _$MiraiDialogThemeImpl _$$MiraiDialogThemeImplFromJson(
           : MiraiTextStyle.fromJson(json['contentTextStyle']),
       actionsPadding: json['actionsPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['actionsPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['actionsPadding']),
       iconColor: json['iconColor'] as String?,
     );
 

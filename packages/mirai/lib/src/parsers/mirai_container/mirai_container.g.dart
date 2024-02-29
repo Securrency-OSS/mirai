@@ -12,7 +12,7 @@ _$MiraiContainerImpl _$$MiraiContainerImplFromJson(Map<String, dynamic> json) =>
           $enumDecodeNullable(_$MiraiAlignmentEnumMap, json['alignment']),
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       decoration: json['decoration'] == null
           ? null
           : MiraiBoxDecoration.fromJson(
@@ -22,7 +22,7 @@ _$MiraiContainerImpl _$$MiraiContainerImplFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
       margin: json['margin'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['margin'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['margin']),
       child: json['child'] as Map<String, dynamic>?,
       clipBehavior:
           $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,

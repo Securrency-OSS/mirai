@@ -12,22 +12,19 @@ _$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
       icon: json['icon'] as Map<String, dynamic>?,
       iconPadding: json['iconPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['iconPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['iconPadding']),
       iconColor: json['iconColor'] as String?,
       title: json['title'] as Map<String, dynamic>?,
       titlePadding: json['titlePadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['titlePadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['titlePadding']),
       titleTextStyle: json['titleTextStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['titleTextStyle']),
       content: json['content'] as Map<String, dynamic>?,
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       contentTextStyle: json['contentTextStyle'] == null
           ? null
           : MiraiTextStyle.fromJson(json['contentTextStyle']),
@@ -36,8 +33,7 @@ _$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
           .toList(),
       actionsPadding: json['actionsPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['actionsPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['actionsPadding']),
       actionsAlignment: $enumDecodeNullable(
           _$MainAxisAlignmentEnumMap, json['actionsAlignment']),
       actionsOverflowAlignment: $enumDecodeNullable(
@@ -48,15 +44,13 @@ _$MiraiAlertDialogImpl _$$MiraiAlertDialogImplFromJson(
           (json['actionsOverflowButtonSpacing'] as num?)?.toDouble(),
       buttonPadding: json['buttonPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['buttonPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['buttonPadding']),
       backgroundColor: json['backgroundColor'] as String?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       semanticLabel: json['semanticLabel'] as String?,
       insetPadding: json['insetPadding'] == null
           ? const MiraiEdgeInsets(left: 40, right: 40, top: 24, bottom: 24)
-          : MiraiEdgeInsets.fromJson(
-              json['insetPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['insetPadding']),
       clipBehavior:
           $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
       scrollable: json['scrollable'] as bool? ?? false,

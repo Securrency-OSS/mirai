@@ -23,7 +23,7 @@ _$MiraiButtonStyleImpl _$$MiraiButtonStyleImplFromJson(
           : MiraiTextStyle.fromJson(json['textStyle']),
       padding: json['padding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['padding']),
       minimumSize: json['minimumSize'] == null
           ? null
           : MiraiSize.fromJson(json['minimumSize'] as Map<String, dynamic>),

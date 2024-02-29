@@ -33,8 +33,7 @@ _$MiraiInputDecorationThemeImpl _$$MiraiInputDecorationThemeImplFromJson(
       isDense: json['isDense'] as bool? ?? false,
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       isCollapsed: json['isCollapsed'] as bool? ?? false,
       iconColor: json['iconColor'] as String?,
       prefixStyle: json['prefixStyle'] == null
