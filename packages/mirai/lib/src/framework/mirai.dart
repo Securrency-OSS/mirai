@@ -65,7 +65,7 @@ class Mirai {
     const MiraiCircleAvatarParser(),
     const MiraiChipParser(),
     const MiraiGridViewParser(),
-    const MiraiFilledButtonParser()
+    const MiraiFilledButtonParser(),
     const MiraiBottomNavigationViewParser(),
     const MiraiDefaultBottomNavigationControllerParser(),
     const MiraiWrapParser(),

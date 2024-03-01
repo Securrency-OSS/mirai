@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import "package:mirai/src/parsers/mirai_button_style/mirai_button_style.dart";
-import 'package:flutter/material.dart';
+
 export 'mirai_filled_button_parser.dart';
+
 part 'mirai_filled_button.freezed.dart';
 part 'mirai_filled_button.g.dart';
 
