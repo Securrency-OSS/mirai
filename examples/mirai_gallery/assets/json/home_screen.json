@@ -1151,6 +1151,40 @@
           "leading": {
             "type": "icon",
             "iconType": "material",
+            "icon": "wrap_text"
+          },
+          "title": {
+            "type": "text",
+            "data": "Wrap",
+            "align": "center",
+            "style": {
+              "fontSize": 21
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "data": "A widget to creates a wrap layout",
+            "align": "center",
+            "style": {
+              "fontSize": 12
+            }
+          },
+          "isThreeLine": true,
+          "style": "list",
+          "onTap": {
+            "actionType": "navigate",
+            "navigationStyle": "push",
+            "widgetJson": {
+              "type": "exampleScreen",
+              "assetPath": "assets/json/wrap_example.json"
+            }
+          }
+        },
+        {
+          "type": "listTile",
+          "leading": {
+            "type": "icon",
+            "iconType": "material",
             "icon": "smart_button"
           },
           "title": {

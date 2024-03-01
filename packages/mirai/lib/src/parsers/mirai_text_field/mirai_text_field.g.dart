@@ -20,9 +20,8 @@ _$MiraiTextFieldImpl _$$MiraiTextFieldImplFromJson(Map<String, dynamic> json) =>
       textCapitalization: $enumDecodeNullable(
               _$TextCapitalizationEnumMap, json['textCapitalization']) ??
           TextCapitalization.none,
-      style: json['style'] == null
-          ? null
-          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      style:
+          json['style'] == null ? null : MiraiTextStyle.fromJson(json['style']),
       textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']) ??
           TextAlign.start,
       textAlignVertical: $enumDecodeNullable(

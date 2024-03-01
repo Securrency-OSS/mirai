@@ -16,7 +16,7 @@ _$MiraiCardThemeDataImpl _$$MiraiCardThemeDataImplFromJson(
       elevation: (json['elevation'] as num?)?.toDouble(),
       margin: json['margin'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(json['margin'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['margin']),
       shape: json['shape'] == null
           ? null
           : MiraiBorder.fromJson(json['shape'] as Map<String, dynamic>),

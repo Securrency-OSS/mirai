@@ -44,5 +44,8 @@ enum WidgetType {
   circleAvatar,
   chip,
   gridView,
-  filledButton
+  filledButton,
+  defaultBottomNavigationController,
+  bottomNavigationView,
+  wrap,
 }
