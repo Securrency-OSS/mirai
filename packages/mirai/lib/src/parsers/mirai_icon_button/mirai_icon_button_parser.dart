@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mirai/src/framework/framework.dart';
+import 'package:mirai/src/parsers/mirai_box_constraints/mirai_box_constraints.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
@@ -18,12 +19,9 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
   @override
   Widget parse(BuildContext context, MiraiIconButton model) {
     return IconButton(
-      onPressed: model.onPressed == null
-          ? null
-          : () => Mirai.onCallFromJson(model.onPressed, context),
       iconSize: model.iconSize,
-      padding: model.padding?.parse,
-      alignment: model.alignment.value,
+      padding: model.padding.parse,
+      alignment: model.alignment?.value,
       splashRadius: model.splashRadius,
       color: model.color.toColor(context),
       focusColor: model.focusColor.toColor(context),
@@ -31,11 +29,17 @@ class MiraiIconButtonParser extends MiraiParser<MiraiIconButton> {
       highlightColor: model.highlightColor.toColor(context),
       splashColor: model.splashColor.toColor(context),
       disabledColor: model.disabledColor.toColor(context),
-      style: model.style?.parseIcon(context),
+      onPressed: model.onPressed == null
+          ? null
+          : () => Mirai.onCallFromJson(model.onPressed, context),
       autofocus: model.autofocus,
+      tooltip: model.tooltip,
+      enableFeedback: model.enableFeedback,
+      constraints: model.constraints?.parse,
+      style: model.style?.parseIcon(context),
       isSelected: model.isSelected,
       selectedIcon: Mirai.fromJson(model.selectedIcon, context),
-      icon: Mirai.fromJson(model.child, context) ?? const SizedBox(),
+      icon: Mirai.fromJson(model.icon, context) ?? const SizedBox(),
     );
   }
 }
