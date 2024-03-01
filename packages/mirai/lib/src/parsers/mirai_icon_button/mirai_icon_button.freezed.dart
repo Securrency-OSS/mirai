@@ -20,10 +20,9 @@ MiraiIconButton _$MiraiIconButtonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MiraiIconButton {
-  Map<String, dynamic>? get onPressed => throw _privateConstructorUsedError;
   double? get iconSize => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
-  MiraiAlignment get alignment => throw _privateConstructorUsedError;
+  MiraiAlignment? get alignment => throw _privateConstructorUsedError;
   double? get splashRadius => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
@@ -31,11 +30,15 @@ mixin _$MiraiIconButton {
   String? get highlightColor => throw _privateConstructorUsedError;
   String? get splashColor => throw _privateConstructorUsedError;
   String? get disabledColor => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get onPressed => throw _privateConstructorUsedError;
+  bool get autofocus => throw _privateConstructorUsedError;
+  String? get tooltip => throw _privateConstructorUsedError;
+  bool? get enableFeedback => throw _privateConstructorUsedError;
+  MiraiBoxConstraints? get constraints => throw _privateConstructorUsedError;
   MiraiButtonStyle? get style => throw _privateConstructorUsedError;
-  dynamic get autofocus => throw _privateConstructorUsedError;
   bool? get isSelected => throw _privateConstructorUsedError;
   Map<String, dynamic>? get selectedIcon => throw _privateConstructorUsedError;
-  Map<String, dynamic> get child => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get icon => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,10 +53,9 @@ abstract class $MiraiIconButtonCopyWith<$Res> {
       _$MiraiIconButtonCopyWithImpl<$Res, MiraiIconButton>;
   @useResult
   $Res call(
-      {Map<String, dynamic>? onPressed,
-      double? iconSize,
+      {double? iconSize,
       MiraiEdgeInsets? padding,
-      MiraiAlignment alignment,
+      MiraiAlignment? alignment,
       double? splashRadius,
       String? color,
       String? focusColor,
@@ -61,13 +63,18 @@ abstract class $MiraiIconButtonCopyWith<$Res> {
       String? highlightColor,
       String? splashColor,
       String? disabledColor,
+      Map<String, dynamic>? onPressed,
+      bool autofocus,
+      String? tooltip,
+      bool? enableFeedback,
+      MiraiBoxConstraints? constraints,
       MiraiButtonStyle? style,
-      dynamic autofocus,
       bool? isSelected,
       Map<String, dynamic>? selectedIcon,
-      Map<String, dynamic> child});
+      Map<String, dynamic>? icon});
 
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
   $MiraiButtonStyleCopyWith<$Res>? get style;
 }
 
@@ -84,10 +91,9 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? onPressed = freezed,
     Object? iconSize = freezed,
     Object? padding = freezed,
-    Object? alignment = null,
+    Object? alignment = freezed,
     Object? splashRadius = freezed,
     Object? color = freezed,
     Object? focusColor = freezed,
@@ -95,17 +101,17 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
     Object? highlightColor = freezed,
     Object? splashColor = freezed,
     Object? disabledColor = freezed,
+    Object? onPressed = freezed,
+    Object? autofocus = null,
+    Object? tooltip = freezed,
+    Object? enableFeedback = freezed,
+    Object? constraints = freezed,
     Object? style = freezed,
-    Object? autofocus = freezed,
     Object? isSelected = freezed,
     Object? selectedIcon = freezed,
-    Object? child = null,
+    Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
-      onPressed: freezed == onPressed
-          ? _value.onPressed
-          : onPressed // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       iconSize: freezed == iconSize
           ? _value.iconSize
           : iconSize // ignore: cast_nullable_to_non_nullable
@@ -114,10 +120,10 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
-      alignment: null == alignment
+      alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
-              as MiraiAlignment,
+              as MiraiAlignment?,
       splashRadius: freezed == splashRadius
           ? _value.splashRadius
           : splashRadius // ignore: cast_nullable_to_non_nullable
@@ -146,14 +152,30 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
           ? _value.disabledColor
           : disabledColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      onPressed: freezed == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiButtonStyle?,
-      autofocus: freezed == autofocus
-          ? _value.autofocus
-          : autofocus // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       isSelected: freezed == isSelected
           ? _value.isSelected
           : isSelected // ignore: cast_nullable_to_non_nullable
@@ -162,10 +184,10 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
           ? _value.selectedIcon
           : selectedIcon // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      child: null == child
-          ? _value.child
-          : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ) as $Val);
   }
 
@@ -178,6 +200,18 @@ class _$MiraiIconButtonCopyWithImpl<$Res, $Val extends MiraiIconButton>
 
     return $MiraiEdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
       return _then(_value.copyWith(padding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $MiraiBoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value) as $Val);
     });
   }
 
@@ -203,10 +237,9 @@ abstract class _$$MiraiIconButtonImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Map<String, dynamic>? onPressed,
-      double? iconSize,
+      {double? iconSize,
       MiraiEdgeInsets? padding,
-      MiraiAlignment alignment,
+      MiraiAlignment? alignment,
       double? splashRadius,
       String? color,
       String? focusColor,
@@ -214,14 +247,20 @@ abstract class _$$MiraiIconButtonImplCopyWith<$Res>
       String? highlightColor,
       String? splashColor,
       String? disabledColor,
+      Map<String, dynamic>? onPressed,
+      bool autofocus,
+      String? tooltip,
+      bool? enableFeedback,
+      MiraiBoxConstraints? constraints,
       MiraiButtonStyle? style,
-      dynamic autofocus,
       bool? isSelected,
       Map<String, dynamic>? selectedIcon,
-      Map<String, dynamic> child});
+      Map<String, dynamic>? icon});
 
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
+  @override
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
   @override
   $MiraiButtonStyleCopyWith<$Res>? get style;
 }
@@ -237,10 +276,9 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? onPressed = freezed,
     Object? iconSize = freezed,
     Object? padding = freezed,
-    Object? alignment = null,
+    Object? alignment = freezed,
     Object? splashRadius = freezed,
     Object? color = freezed,
     Object? focusColor = freezed,
@@ -248,17 +286,17 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
     Object? highlightColor = freezed,
     Object? splashColor = freezed,
     Object? disabledColor = freezed,
+    Object? onPressed = freezed,
+    Object? autofocus = null,
+    Object? tooltip = freezed,
+    Object? enableFeedback = freezed,
+    Object? constraints = freezed,
     Object? style = freezed,
-    Object? autofocus = freezed,
     Object? isSelected = freezed,
     Object? selectedIcon = freezed,
-    Object? child = null,
+    Object? icon = freezed,
   }) {
     return _then(_$MiraiIconButtonImpl(
-      onPressed: freezed == onPressed
-          ? _value._onPressed
-          : onPressed // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
       iconSize: freezed == iconSize
           ? _value.iconSize
           : iconSize // ignore: cast_nullable_to_non_nullable
@@ -267,10 +305,10 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as MiraiEdgeInsets?,
-      alignment: null == alignment
+      alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
-              as MiraiAlignment,
+              as MiraiAlignment?,
       splashRadius: freezed == splashRadius
           ? _value.splashRadius
           : splashRadius // ignore: cast_nullable_to_non_nullable
@@ -299,11 +337,30 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
           ? _value.disabledColor
           : disabledColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      onPressed: freezed == onPressed
+          ? _value._onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as MiraiButtonStyle?,
-      autofocus: freezed == autofocus ? _value.autofocus! : autofocus,
       isSelected: freezed == isSelected
           ? _value.isSelected
           : isSelected // ignore: cast_nullable_to_non_nullable
@@ -312,10 +369,10 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
           ? _value._selectedIcon
           : selectedIcon // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      child: null == child
-          ? _value._child
-          : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      icon: freezed == icon
+          ? _value._icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -324,10 +381,9 @@ class __$$MiraiIconButtonImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MiraiIconButtonImpl implements _MiraiIconButton {
   const _$MiraiIconButtonImpl(
-      {final Map<String, dynamic>? onPressed,
-      this.iconSize,
+      {this.iconSize,
       this.padding,
-      this.alignment = MiraiAlignment.center,
+      this.alignment,
       this.splashRadius,
       this.color,
       this.focusColor,
@@ -335,35 +391,28 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
       this.highlightColor,
       this.splashColor,
       this.disabledColor,
-      this.style,
+      final Map<String, dynamic>? onPressed,
       this.autofocus = false,
+      this.tooltip,
+      this.enableFeedback,
+      this.constraints,
+      this.style,
       this.isSelected,
       final Map<String, dynamic>? selectedIcon,
-      required final Map<String, dynamic> child})
+      final Map<String, dynamic>? icon})
       : _onPressed = onPressed,
         _selectedIcon = selectedIcon,
-        _child = child;
+        _icon = icon;
 
   factory _$MiraiIconButtonImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiIconButtonImplFromJson(json);
-
-  final Map<String, dynamic>? _onPressed;
-  @override
-  Map<String, dynamic>? get onPressed {
-    final value = _onPressed;
-    if (value == null) return null;
-    if (_onPressed is EqualUnmodifiableMapView) return _onPressed;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
 
   @override
   final double? iconSize;
   @override
   final MiraiEdgeInsets? padding;
   @override
-  @JsonKey()
-  final MiraiAlignment alignment;
+  final MiraiAlignment? alignment;
   @override
   final double? splashRadius;
   @override
@@ -378,11 +427,27 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
   final String? splashColor;
   @override
   final String? disabledColor;
+  final Map<String, dynamic>? _onPressed;
   @override
-  final MiraiButtonStyle? style;
+  Map<String, dynamic>? get onPressed {
+    final value = _onPressed;
+    if (value == null) return null;
+    if (_onPressed is EqualUnmodifiableMapView) return _onPressed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   @JsonKey()
-  final dynamic autofocus;
+  final bool autofocus;
+  @override
+  final String? tooltip;
+  @override
+  final bool? enableFeedback;
+  @override
+  final MiraiBoxConstraints? constraints;
+  @override
+  final MiraiButtonStyle? style;
   @override
   final bool? isSelected;
   final Map<String, dynamic>? _selectedIcon;
@@ -395,17 +460,19 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
     return EqualUnmodifiableMapView(value);
   }
 
-  final Map<String, dynamic> _child;
+  final Map<String, dynamic>? _icon;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
+  Map<String, dynamic>? get icon {
+    final value = _icon;
+    if (value == null) return null;
+    if (_icon is EqualUnmodifiableMapView) return _icon;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
   String toString() {
-    return 'MiraiIconButton(onPressed: $onPressed, iconSize: $iconSize, padding: $padding, alignment: $alignment, splashRadius: $splashRadius, color: $color, focusColor: $focusColor, hoverColor: $hoverColor, highlightColor: $highlightColor, splashColor: $splashColor, disabledColor: $disabledColor, style: $style, autofocus: $autofocus, isSelected: $isSelected, selectedIcon: $selectedIcon, child: $child)';
+    return 'MiraiIconButton(iconSize: $iconSize, padding: $padding, alignment: $alignment, splashRadius: $splashRadius, color: $color, focusColor: $focusColor, hoverColor: $hoverColor, highlightColor: $highlightColor, splashColor: $splashColor, disabledColor: $disabledColor, onPressed: $onPressed, autofocus: $autofocus, tooltip: $tooltip, enableFeedback: $enableFeedback, constraints: $constraints, style: $style, isSelected: $isSelected, selectedIcon: $selectedIcon, icon: $icon)';
   }
 
   @override
@@ -413,8 +480,6 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MiraiIconButtonImpl &&
-            const DeepCollectionEquality()
-                .equals(other._onPressed, _onPressed) &&
             (identical(other.iconSize, iconSize) ||
                 other.iconSize == iconSize) &&
             (identical(other.padding, padding) || other.padding == padding) &&
@@ -433,35 +498,47 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
                 other.splashColor == splashColor) &&
             (identical(other.disabledColor, disabledColor) ||
                 other.disabledColor == disabledColor) &&
+            const DeepCollectionEquality()
+                .equals(other._onPressed, _onPressed) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.enableFeedback, enableFeedback) ||
+                other.enableFeedback == enableFeedback) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints) &&
             (identical(other.style, style) || other.style == style) &&
-            const DeepCollectionEquality().equals(other.autofocus, autofocus) &&
             (identical(other.isSelected, isSelected) ||
                 other.isSelected == isSelected) &&
             const DeepCollectionEquality()
                 .equals(other._selectedIcon, _selectedIcon) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            const DeepCollectionEquality().equals(other._icon, _icon));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_onPressed),
-      iconSize,
-      padding,
-      alignment,
-      splashRadius,
-      color,
-      focusColor,
-      hoverColor,
-      highlightColor,
-      splashColor,
-      disabledColor,
-      style,
-      const DeepCollectionEquality().hash(autofocus),
-      isSelected,
-      const DeepCollectionEquality().hash(_selectedIcon),
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        iconSize,
+        padding,
+        alignment,
+        splashRadius,
+        color,
+        focusColor,
+        hoverColor,
+        highlightColor,
+        splashColor,
+        disabledColor,
+        const DeepCollectionEquality().hash(_onPressed),
+        autofocus,
+        tooltip,
+        enableFeedback,
+        constraints,
+        style,
+        isSelected,
+        const DeepCollectionEquality().hash(_selectedIcon),
+        const DeepCollectionEquality().hash(_icon)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -480,10 +557,9 @@ class _$MiraiIconButtonImpl implements _MiraiIconButton {
 
 abstract class _MiraiIconButton implements MiraiIconButton {
   const factory _MiraiIconButton(
-      {final Map<String, dynamic>? onPressed,
-      final double? iconSize,
+      {final double? iconSize,
       final MiraiEdgeInsets? padding,
-      final MiraiAlignment alignment,
+      final MiraiAlignment? alignment,
       final double? splashRadius,
       final String? color,
       final String? focusColor,
@@ -491,23 +567,25 @@ abstract class _MiraiIconButton implements MiraiIconButton {
       final String? highlightColor,
       final String? splashColor,
       final String? disabledColor,
+      final Map<String, dynamic>? onPressed,
+      final bool autofocus,
+      final String? tooltip,
+      final bool? enableFeedback,
+      final MiraiBoxConstraints? constraints,
       final MiraiButtonStyle? style,
-      final dynamic autofocus,
       final bool? isSelected,
       final Map<String, dynamic>? selectedIcon,
-      required final Map<String, dynamic> child}) = _$MiraiIconButtonImpl;
+      final Map<String, dynamic>? icon}) = _$MiraiIconButtonImpl;
 
   factory _MiraiIconButton.fromJson(Map<String, dynamic> json) =
       _$MiraiIconButtonImpl.fromJson;
 
   @override
-  Map<String, dynamic>? get onPressed;
-  @override
   double? get iconSize;
   @override
   MiraiEdgeInsets? get padding;
   @override
-  MiraiAlignment get alignment;
+  MiraiAlignment? get alignment;
   @override
   double? get splashRadius;
   @override
@@ -523,15 +601,23 @@ abstract class _MiraiIconButton implements MiraiIconButton {
   @override
   String? get disabledColor;
   @override
-  MiraiButtonStyle? get style;
+  Map<String, dynamic>? get onPressed;
   @override
-  dynamic get autofocus;
+  bool get autofocus;
+  @override
+  String? get tooltip;
+  @override
+  bool? get enableFeedback;
+  @override
+  MiraiBoxConstraints? get constraints;
+  @override
+  MiraiButtonStyle? get style;
   @override
   bool? get isSelected;
   @override
   Map<String, dynamic>? get selectedIcon;
   @override
-  Map<String, dynamic> get child;
+  Map<String, dynamic>? get icon;
   @override
   @JsonKey(ignore: true)
   _$$MiraiIconButtonImplCopyWith<_$MiraiIconButtonImpl> get copyWith =>
