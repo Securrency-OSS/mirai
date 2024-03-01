@@ -7,7 +7,6 @@ import 'package:flutter/services.dart';
 import 'package:mirai/src/action_parsers/action_parsers.dart';
 import 'package:mirai/src/action_parsers/mirai_network_request/mirai_network_request_parser.dart';
 import 'package:mirai/src/framework/mirai_registry.dart';
-import 'package:mirai/src/parsers/mirai_wrap/mirai_wrap.dart';
 import 'package:mirai/src/parsers/parsers.dart';
 import 'package:mirai/src/services/mirai_network_service.dart';
 import 'package:mirai/src/utils/log.dart';
@@ -66,6 +65,7 @@ class Mirai {
     const MiraiCircleAvatarParser(),
     const MiraiChipParser(),
     const MiraiGridViewParser(),
+    const MiraiFilledButtonParser(),
     const MiraiBottomNavigationViewParser(),
     const MiraiDefaultBottomNavigationControllerParser(),
     const MiraiWrapParser(),

@@ -31,6 +31,7 @@ export 'package:mirai/src/parsers/mirai_dialog_theme/mirai_dialog_theme.dart';
 export 'package:mirai/src/parsers/mirai_edge_insets/mirai_edge_insets.dart';
 export 'package:mirai/src/parsers/mirai_elevated_button/mirai_elevated_button.dart';
 export 'package:mirai/src/parsers/mirai_expanded/mirai_expanded.dart';
+export 'package:mirai/src/parsers/mirai_filled_button/mirai_filled_button.dart';
 export 'package:mirai/src/parsers/mirai_flexible/mirai_flexible.dart';
 export 'package:mirai/src/parsers/mirai_floating_action_button/mirai_floating_action_button.dart';
 export 'package:mirai/src/parsers/mirai_floating_action_button_theme_data/mirai_floating_action_button_theme_data.dart';

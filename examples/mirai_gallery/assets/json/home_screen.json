@@ -1179,6 +1179,40 @@
               "assetPath": "assets/json/wrap_example.json"
             }
           }
+        },
+        {
+          "type": "listTile",
+          "leading": {
+            "type": "icon",
+            "iconType": "material",
+            "icon": "smart_button"
+          },
+          "title": {
+            "type": "text",
+            "data": "Filled Button",
+            "align": "center",
+            "style": {
+              "fontSize": 21
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "data": "A Material Design filled button",
+            "align": "center",
+            "style": {
+              "fontSize": 12
+            }
+          },
+          "isThreeLine": true,
+          "style": "list",
+          "onTap": {
+            "actionType": "navigate",
+            "navigationStyle": "push",
+            "widgetJson": {
+              "type": "exampleScreen",
+              "assetPath": "assets/json/filled_button_example.json"
+            }
+          }
         }
       ]
     }
