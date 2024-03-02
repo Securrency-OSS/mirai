@@ -14,8 +14,7 @@ _$MiraiRoundedRectangleBorderImpl _$$MiraiRoundedRectangleBorderImplFromJson(
           : MiraiBorderSide.fromJson(json['side'] as Map<String, dynamic>),
       borderRadius: json['borderRadius'] == null
           ? null
-          : MiraiBorderRadius.fromJson(
-              json['borderRadius'] as Map<String, dynamic>),
+          : MiraiBorderRadius.fromJson(json['borderRadius']),
     );
 
 Map<String, dynamic> _$$MiraiRoundedRectangleBorderImplToJson(
