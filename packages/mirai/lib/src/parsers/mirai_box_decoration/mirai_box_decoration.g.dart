@@ -24,8 +24,7 @@ _$MiraiBoxDecorationImpl _$$MiraiBoxDecorationImplFromJson(
           : MiraiBorder.fromJson(json['border'] as Map<String, dynamic>),
       borderRadius: json['borderRadius'] == null
           ? null
-          : MiraiBorderRadius.fromJson(
-              json['borderRadius'] as Map<String, dynamic>),
+          : MiraiBorderRadius.fromJson(json['borderRadius']),
       image: json['image'] == null
           ? null
           : MiraiDecorationImage.fromJson(
