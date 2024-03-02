@@ -17,9 +17,17 @@ _$MiraiContainerImpl _$$MiraiContainerImplFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiBoxDecoration.fromJson(
               json['decoration'] as Map<String, dynamic>),
+      foregroundDecoration: json['foregroundDecoration'] == null
+          ? null
+          : MiraiBoxDecoration.fromJson(
+              json['foregroundDecoration'] as Map<String, dynamic>),
       color: json['color'] as String?,
       width: (json['width'] as num?)?.toDouble(),
       height: (json['height'] as num?)?.toDouble(),
+      constraints: json['constraints'] == null
+          ? null
+          : MiraiBoxConstraints.fromJson(
+              json['constraints'] as Map<String, dynamic>),
       margin: json['margin'] == null
           ? null
           : MiraiEdgeInsets.fromJson(json['margin']),
@@ -34,9 +42,11 @@ Map<String, dynamic> _$$MiraiContainerImplToJson(
       'alignment': _$MiraiAlignmentEnumMap[instance.alignment],
       'padding': instance.padding,
       'decoration': instance.decoration,
+      'foregroundDecoration': instance.foregroundDecoration,
       'color': instance.color,
       'width': instance.width,
       'height': instance.height,
+      'constraints': instance.constraints,
       'margin': instance.margin,
       'child': instance.child,
       'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,

@@ -23,9 +23,12 @@ mixin _$MiraiContainer {
   MiraiAlignment? get alignment => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get padding => throw _privateConstructorUsedError;
   MiraiBoxDecoration? get decoration => throw _privateConstructorUsedError;
+  MiraiBoxDecoration? get foregroundDecoration =>
+      throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
   double? get width => throw _privateConstructorUsedError;
   double? get height => throw _privateConstructorUsedError;
+  MiraiBoxConstraints? get constraints => throw _privateConstructorUsedError;
   MiraiEdgeInsets? get margin => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
   Clip get clipBehavior => throw _privateConstructorUsedError;
@@ -46,15 +49,19 @@ abstract class $MiraiContainerCopyWith<$Res> {
       {MiraiAlignment? alignment,
       MiraiEdgeInsets? padding,
       MiraiBoxDecoration? decoration,
+      MiraiBoxDecoration? foregroundDecoration,
       String? color,
       double? width,
       double? height,
+      MiraiBoxConstraints? constraints,
       MiraiEdgeInsets? margin,
       Map<String, dynamic>? child,
       Clip clipBehavior});
 
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
   $MiraiBoxDecorationCopyWith<$Res>? get decoration;
+  $MiraiBoxDecorationCopyWith<$Res>? get foregroundDecoration;
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
   $MiraiEdgeInsetsCopyWith<$Res>? get margin;
 }
 
@@ -74,9 +81,11 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
     Object? alignment = freezed,
     Object? padding = freezed,
     Object? decoration = freezed,
+    Object? foregroundDecoration = freezed,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? constraints = freezed,
     Object? margin = freezed,
     Object? child = freezed,
     Object? clipBehavior = null,
@@ -94,6 +103,10 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
               as MiraiBoxDecoration?,
+      foregroundDecoration: freezed == foregroundDecoration
+          ? _value.foregroundDecoration
+          : foregroundDecoration // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxDecoration?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -106,6 +119,10 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
       margin: freezed == margin
           ? _value.margin
           : margin // ignore: cast_nullable_to_non_nullable
@@ -147,6 +164,31 @@ class _$MiraiContainerCopyWithImpl<$Res, $Val extends MiraiContainer>
 
   @override
   @pragma('vm:prefer-inline')
+  $MiraiBoxDecorationCopyWith<$Res>? get foregroundDecoration {
+    if (_value.foregroundDecoration == null) {
+      return null;
+    }
+
+    return $MiraiBoxDecorationCopyWith<$Res>(_value.foregroundDecoration!,
+        (value) {
+      return _then(_value.copyWith(foregroundDecoration: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $MiraiBoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $MiraiEdgeInsetsCopyWith<$Res>? get margin {
     if (_value.margin == null) {
       return null;
@@ -170,9 +212,11 @@ abstract class _$$MiraiContainerImplCopyWith<$Res>
       {MiraiAlignment? alignment,
       MiraiEdgeInsets? padding,
       MiraiBoxDecoration? decoration,
+      MiraiBoxDecoration? foregroundDecoration,
       String? color,
       double? width,
       double? height,
+      MiraiBoxConstraints? constraints,
       MiraiEdgeInsets? margin,
       Map<String, dynamic>? child,
       Clip clipBehavior});
@@ -181,6 +225,10 @@ abstract class _$$MiraiContainerImplCopyWith<$Res>
   $MiraiEdgeInsetsCopyWith<$Res>? get padding;
   @override
   $MiraiBoxDecorationCopyWith<$Res>? get decoration;
+  @override
+  $MiraiBoxDecorationCopyWith<$Res>? get foregroundDecoration;
+  @override
+  $MiraiBoxConstraintsCopyWith<$Res>? get constraints;
   @override
   $MiraiEdgeInsetsCopyWith<$Res>? get margin;
 }
@@ -199,9 +247,11 @@ class __$$MiraiContainerImplCopyWithImpl<$Res>
     Object? alignment = freezed,
     Object? padding = freezed,
     Object? decoration = freezed,
+    Object? foregroundDecoration = freezed,
     Object? color = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? constraints = freezed,
     Object? margin = freezed,
     Object? child = freezed,
     Object? clipBehavior = null,
@@ -219,6 +269,10 @@ class __$$MiraiContainerImplCopyWithImpl<$Res>
           ? _value.decoration
           : decoration // ignore: cast_nullable_to_non_nullable
               as MiraiBoxDecoration?,
+      foregroundDecoration: freezed == foregroundDecoration
+          ? _value.foregroundDecoration
+          : foregroundDecoration // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxDecoration?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -231,6 +285,10 @@ class __$$MiraiContainerImplCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as MiraiBoxConstraints?,
       margin: freezed == margin
           ? _value.margin
           : margin // ignore: cast_nullable_to_non_nullable
@@ -254,9 +312,11 @@ class _$MiraiContainerImpl implements _MiraiContainer {
       {this.alignment,
       this.padding,
       this.decoration,
+      this.foregroundDecoration,
       this.color,
       this.width,
       this.height,
+      this.constraints,
       this.margin,
       final Map<String, dynamic>? child,
       this.clipBehavior = Clip.none})
@@ -272,11 +332,15 @@ class _$MiraiContainerImpl implements _MiraiContainer {
   @override
   final MiraiBoxDecoration? decoration;
   @override
+  final MiraiBoxDecoration? foregroundDecoration;
+  @override
   final String? color;
   @override
   final double? width;
   @override
   final double? height;
+  @override
+  final MiraiBoxConstraints? constraints;
   @override
   final MiraiEdgeInsets? margin;
   final Map<String, dynamic>? _child;
@@ -295,7 +359,7 @@ class _$MiraiContainerImpl implements _MiraiContainer {
 
   @override
   String toString() {
-    return 'MiraiContainer(alignment: $alignment, padding: $padding, decoration: $decoration, color: $color, width: $width, height: $height, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
+    return 'MiraiContainer(alignment: $alignment, padding: $padding, decoration: $decoration, foregroundDecoration: $foregroundDecoration, color: $color, width: $width, height: $height, constraints: $constraints, margin: $margin, child: $child, clipBehavior: $clipBehavior)';
   }
 
   @override
@@ -308,9 +372,13 @@ class _$MiraiContainerImpl implements _MiraiContainer {
             (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.decoration, decoration) ||
                 other.decoration == decoration) &&
+            (identical(other.foregroundDecoration, foregroundDecoration) ||
+                other.foregroundDecoration == foregroundDecoration) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints) &&
             (identical(other.margin, margin) || other.margin == margin) &&
             const DeepCollectionEquality().equals(other._child, _child) &&
             (identical(other.clipBehavior, clipBehavior) ||
@@ -324,9 +392,11 @@ class _$MiraiContainerImpl implements _MiraiContainer {
       alignment,
       padding,
       decoration,
+      foregroundDecoration,
       color,
       width,
       height,
+      constraints,
       margin,
       const DeepCollectionEquality().hash(_child),
       clipBehavior);
@@ -351,9 +421,11 @@ abstract class _MiraiContainer implements MiraiContainer {
       {final MiraiAlignment? alignment,
       final MiraiEdgeInsets? padding,
       final MiraiBoxDecoration? decoration,
+      final MiraiBoxDecoration? foregroundDecoration,
       final String? color,
       final double? width,
       final double? height,
+      final MiraiBoxConstraints? constraints,
       final MiraiEdgeInsets? margin,
       final Map<String, dynamic>? child,
       final Clip clipBehavior}) = _$MiraiContainerImpl;
@@ -368,11 +440,15 @@ abstract class _MiraiContainer implements MiraiContainer {
   @override
   MiraiBoxDecoration? get decoration;
   @override
+  MiraiBoxDecoration? get foregroundDecoration;
+  @override
   String? get color;
   @override
   double? get width;
   @override
   double? get height;
+  @override
+  MiraiBoxConstraints? get constraints;
   @override
   MiraiEdgeInsets? get margin;
   @override
