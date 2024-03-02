@@ -36,7 +36,6 @@ enum WidgetType {
   expanded,
   flexible,
   safeArea,
-  switchButton,
   align,
   pageView,
   refreshIndicator,
