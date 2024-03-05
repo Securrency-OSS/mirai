@@ -22,6 +22,7 @@ MiraiNavigateAction _$MiraiNavigateActionFromJson(Map<String, dynamic> json) {
 mixin _$MiraiNavigateAction {
   MiraiNetworkRequest? get request => throw _privateConstructorUsedError;
   Map<String, dynamic>? get widgetJson => throw _privateConstructorUsedError;
+  String? get firebaseDbPath => throw _privateConstructorUsedError;
   String? get assetPath => throw _privateConstructorUsedError;
   String? get routeName => throw _privateConstructorUsedError;
   NavigationStyle? get navigationStyle => throw _privateConstructorUsedError;
@@ -43,6 +44,7 @@ abstract class $MiraiNavigateActionCopyWith<$Res> {
   $Res call(
       {MiraiNetworkRequest? request,
       Map<String, dynamic>? widgetJson,
+      String? firebaseDbPath,
       String? assetPath,
       String? routeName,
       NavigationStyle? navigationStyle,
@@ -67,6 +69,7 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
   $Res call({
     Object? request = freezed,
     Object? widgetJson = freezed,
+    Object? firebaseDbPath = freezed,
     Object? assetPath = freezed,
     Object? routeName = freezed,
     Object? navigationStyle = freezed,
@@ -82,6 +85,10 @@ class _$MiraiNavigateActionCopyWithImpl<$Res, $Val extends MiraiNavigateAction>
           ? _value.widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      firebaseDbPath: freezed == firebaseDbPath
+          ? _value.firebaseDbPath
+          : firebaseDbPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -129,6 +136,7 @@ abstract class _$$MiraiNavigateActionImplCopyWith<$Res>
   $Res call(
       {MiraiNetworkRequest? request,
       Map<String, dynamic>? widgetJson,
+      String? firebaseDbPath,
       String? assetPath,
       String? routeName,
       NavigationStyle? navigationStyle,
@@ -152,6 +160,7 @@ class __$$MiraiNavigateActionImplCopyWithImpl<$Res>
   $Res call({
     Object? request = freezed,
     Object? widgetJson = freezed,
+    Object? firebaseDbPath = freezed,
     Object? assetPath = freezed,
     Object? routeName = freezed,
     Object? navigationStyle = freezed,
@@ -167,6 +176,10 @@ class __$$MiraiNavigateActionImplCopyWithImpl<$Res>
           ? _value._widgetJson
           : widgetJson // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      firebaseDbPath: freezed == firebaseDbPath
+          ? _value.firebaseDbPath
+          : firebaseDbPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       assetPath: freezed == assetPath
           ? _value.assetPath
           : assetPath // ignore: cast_nullable_to_non_nullable
@@ -197,6 +210,7 @@ class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
   _$MiraiNavigateActionImpl(
       {this.request,
       final Map<String, dynamic>? widgetJson,
+      this.firebaseDbPath,
       this.assetPath,
       this.routeName,
       this.navigationStyle,
@@ -222,6 +236,8 @@ class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final String? firebaseDbPath;
   @override
   final String? assetPath;
   @override
@@ -250,7 +266,7 @@ class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
 
   @override
   String toString() {
-    return 'MiraiNavigateAction(request: $request, widgetJson: $widgetJson, assetPath: $assetPath, routeName: $routeName, navigationStyle: $navigationStyle, result: $result, arguments: $arguments)';
+    return 'MiraiNavigateAction(request: $request, widgetJson: $widgetJson, firebaseDbPath: $firebaseDbPath, assetPath: $assetPath, routeName: $routeName, navigationStyle: $navigationStyle, result: $result, arguments: $arguments)';
   }
 
   @override
@@ -261,6 +277,8 @@ class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
             (identical(other.request, request) || other.request == request) &&
             const DeepCollectionEquality()
                 .equals(other._widgetJson, _widgetJson) &&
+            (identical(other.firebaseDbPath, firebaseDbPath) ||
+                other.firebaseDbPath == firebaseDbPath) &&
             (identical(other.assetPath, assetPath) ||
                 other.assetPath == assetPath) &&
             (identical(other.routeName, routeName) ||
@@ -278,6 +296,7 @@ class _$MiraiNavigateActionImpl extends _MiraiNavigateAction {
       runtimeType,
       request,
       const DeepCollectionEquality().hash(_widgetJson),
+      firebaseDbPath,
       assetPath,
       routeName,
       navigationStyle,
@@ -303,6 +322,7 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
   factory _MiraiNavigateAction(
       {final MiraiNetworkRequest? request,
       final Map<String, dynamic>? widgetJson,
+      final String? firebaseDbPath,
       final String? assetPath,
       final String? routeName,
       final NavigationStyle? navigationStyle,
@@ -317,6 +337,8 @@ abstract class _MiraiNavigateAction extends MiraiNavigateAction {
   MiraiNetworkRequest? get request;
   @override
   Map<String, dynamic>? get widgetJson;
+  @override
+  String? get firebaseDbPath;
   @override
   String? get assetPath;
   @override
