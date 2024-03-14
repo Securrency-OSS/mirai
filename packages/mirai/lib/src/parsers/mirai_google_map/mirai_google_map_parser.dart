@@ -13,8 +13,6 @@ import 'mirai_google_map.dart';
 class MiraiGoogleMapParser extends MiraiParser<MiraiGoogleMap> {
   const MiraiGoogleMapParser();
 
-  // final Completer<GoogleMapController> _completer = Completer();
-
   @override
   String get type => WidgetType.googleMap.name;
 
@@ -23,7 +21,25 @@ class MiraiGoogleMapParser extends MiraiParser<MiraiGoogleMap> {
 
   @override
   Widget parse(BuildContext context, MiraiGoogleMap model) {
- 
+    return _GoogleMapWidget(model: model);
+  }
+}
+
+class _GoogleMapWidget extends StatefulWidget {
+  const _GoogleMapWidget({super.key, required this.model});
+
+  final MiraiGoogleMap model;
+
+  @override
+  State<_GoogleMapWidget> createState() => __GoogleMapWidgetState();
+}
+
+class __GoogleMapWidgetState extends State<_GoogleMapWidget> {
+  GoogleMapController? _googleMapController;
+
+  @override
+  Widget build(BuildContext context) {
+    final model = widget.model;
     return GoogleMap(
       initialCameraPosition: model.initialCameraPosition.parse,
       style: model.style,
@@ -83,7 +99,7 @@ class MiraiGoogleMapParser extends MiraiParser<MiraiGoogleMap> {
       onLongPress: model.onLongPress == null ? null : (_) => model.onLongPress,
       onTap: model.onTap == null ? null : (_) => model.onTap,
       onMapCreated: (controller) {
-        // return _completer.complete(controller);
+        _googleMapController = controller;
       },
       cloudMapId: model.cloudMapId,
     );

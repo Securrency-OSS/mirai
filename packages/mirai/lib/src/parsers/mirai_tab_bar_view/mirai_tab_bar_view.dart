@@ -19,6 +19,5 @@ class MiraiTabBarView with _$MiraiTabBarView {
     @Default(Clip.hardEdge) Clip clipBehavior,
   }) = _MiraiTabBarView;
 
-  factory MiraiTabBarView.fromJson(Map<String, dynamic> json) =>
-      _$MiraiTabBarViewFromJson(json);
+  factory MiraiTabBarView.fromJson(Map<String, dynamic> json) => _$MiraiTabBarViewFromJson(json);
 }
