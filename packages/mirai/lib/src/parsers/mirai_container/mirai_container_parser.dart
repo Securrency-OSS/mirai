@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:mirai/mirai.dart';
 import 'package:mirai/src/parsers/mirai_box_constraints/mirai_box_constraints.dart';
@@ -10,8 +11,7 @@ class MiraiContainerParser extends MiraiParser<MiraiContainer> {
   String get type => WidgetType.container.name;
 
   @override
-  MiraiContainer getModel(Map<String, dynamic> json) =>
-      MiraiContainer.fromJson(json);
+  MiraiContainer getModel(Map<String, dynamic> json) => MiraiContainer.fromJson(json);
 
   @override
   Widget parse(BuildContext context, MiraiContainer model) {

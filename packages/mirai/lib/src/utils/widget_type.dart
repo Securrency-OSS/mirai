@@ -47,4 +47,5 @@ enum WidgetType {
   defaultBottomNavigationController,
   bottomNavigationView,
   wrap,
+  googleMap
 }

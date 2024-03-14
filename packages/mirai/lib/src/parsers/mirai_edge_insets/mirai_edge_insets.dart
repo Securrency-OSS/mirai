@@ -19,23 +19,13 @@ class MiraiEdgeInsets with _$MiraiEdgeInsets {
     Map<String, dynamic> resultantJson;
 
     if (json is num) {
-      resultantJson = {
-        "left": json,
-        "top": json,
-        "right": json,
-        "bottom": json
-      };
+      resultantJson = {"left": json, "top": json, "right": json, "bottom": json};
     } else if (json is List<dynamic> && json.length == 4) {
       bool allElementsNum = json.every((element) => element is num);
       if (!allElementsNum) {
         throw ArgumentError('Invalid input format for MiraiEdgeInsets');
       }
-      resultantJson = {
-        "left": json[0],
-        "top": json[1],
-        "right": json[2],
-        "bottom": json[3]
-      };
+      resultantJson = {"left": json[0], "top": json[1], "right": json[2], "bottom": json[3]};
     } else if (json is Map<String, dynamic>) {
       resultantJson = json;
     } else {
@@ -44,6 +34,8 @@ class MiraiEdgeInsets with _$MiraiEdgeInsets {
 
     return _$MiraiEdgeInsetsFromJson(resultantJson);
   }
+
+  static const MiraiEdgeInsets zero = MiraiEdgeInsets(bottom: 0, left: 0, right: 0, top: 0);
 }
 
 extension MiraiEdgeInsetsParser on MiraiEdgeInsets? {

@@ -69,6 +69,7 @@ class Mirai {
     const MiraiBottomNavigationViewParser(),
     const MiraiDefaultBottomNavigationControllerParser(),
     const MiraiWrapParser(),
+    const MiraiGoogleMapParser(),
   ];
 
   static final _actionParsers = <MiraiActionParser>[
@@ -118,8 +119,7 @@ class Mirai {
     try {
       if (json != null && json['actionType'] != null) {
         String actionType = json['actionType'];
-        MiraiActionParser? miraiActionParser =
-            MiraiRegistry.instance.getActionParser(actionType);
+        MiraiActionParser? miraiActionParser = MiraiRegistry.instance.getActionParser(actionType);
         if (miraiActionParser != null) {
           final model = miraiActionParser.getModel(json);
           return miraiActionParser.onCall(context, model);
