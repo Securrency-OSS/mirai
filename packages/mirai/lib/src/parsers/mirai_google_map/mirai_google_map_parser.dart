@@ -13,6 +13,8 @@ import 'mirai_google_map.dart';
 class MiraiGoogleMapParser extends MiraiParser<MiraiGoogleMap> {
   const MiraiGoogleMapParser();
 
+  static final mapWidgetKey = GlobalKey();
+
   @override
   String get type => WidgetType.googleMap.name;
 
@@ -21,7 +23,10 @@ class MiraiGoogleMapParser extends MiraiParser<MiraiGoogleMap> {
 
   @override
   Widget parse(BuildContext context, MiraiGoogleMap model) {
-    return _GoogleMapWidget(model: model);
+    return _GoogleMapWidget(
+      key: mapWidgetKey,
+      model: model,
+    );
   }
 }
 
@@ -36,6 +41,20 @@ class _GoogleMapWidget extends StatefulWidget {
 
 class __GoogleMapWidgetState extends State<_GoogleMapWidget> {
   GoogleMapController? _googleMapController;
+  late MiraiGoogleMap model = widget.model;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+@override
+  void didUpdateWidget(covariant _GoogleMapWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if(widget.model != model){
+      setState(() => model = widget.model);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
