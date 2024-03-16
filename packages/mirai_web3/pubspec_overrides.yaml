@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: mirai,mirai_framework
+dependency_overrides:
+  mirai:
+    path: ../mirai
+  mirai_framework:
+    path: ../mirai_framework

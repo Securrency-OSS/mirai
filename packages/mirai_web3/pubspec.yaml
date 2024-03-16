@@ -1,0 +1,28 @@
+name: mirai_web3
+description: A web3 package for Mirai. A wrapper of `web3modal_flutter` package for Mirai.
+version: 0.0.1
+homepage: https://github.com/Securrency-OSS/mirai/tree/main/packages/mirai_web3
+publish_to: none
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  freezed_annotation: ^2.2.0
+  http: ^1.2.0
+  json_annotation: ^4.8.1
+  mirai_framework: ^0.0.1
+  mirai: ^0.6.0
+  web3modal_flutter: ^3.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.5
+  flutter_lints: ^3.0.1
+  freezed: ^2.3.5
+  json_serializable: ^6.7.0
+
