@@ -5,6 +5,7 @@ import 'package:mirai/src/parsers/mirai_image/mirai_image.dart';
 import 'package:mirai/src/utils/color_utils.dart';
 import 'package:mirai/src/utils/widget_type.dart';
 import 'package:mirai_framework/mirai_framework.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class MiraiImageParser extends MiraiParser<MiraiImage> {
   const MiraiImageParser();
@@ -30,14 +31,15 @@ class MiraiImageParser extends MiraiParser<MiraiImage> {
     }
   }
 
-  Widget _networkImage(MiraiImage model, BuildContext context) => Image.network(
-        model.src,
+  Widget _networkImage(MiraiImage model, BuildContext context) =>
+      CachedNetworkImage(
+        imageUrl: model.src,
         alignment: model.alignment.value,
         color: model.color?.toColor(context),
         width: model.width,
         height: model.height,
         fit: model.fit,
-        errorBuilder: (context, error, stackTrace) {
+        errorWidget: (context, error, stackTrace) {
           return const SizedBox();
         },
       );
