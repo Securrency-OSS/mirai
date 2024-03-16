@@ -36,7 +36,6 @@ enum WidgetType {
   expanded,
   flexible,
   safeArea,
-  switchButton,
   align,
   pageView,
   refreshIndicator,
@@ -44,4 +43,8 @@ enum WidgetType {
   circleAvatar,
   chip,
   gridView,
+  filledButton,
+  defaultBottomNavigationController,
+  bottomNavigationView,
+  wrap,
 }

@@ -12,8 +12,7 @@ _$MiraiTabImpl _$$MiraiTabImplFromJson(Map<String, dynamic> json) =>
       icon: json['icon'] as Map<String, dynamic>?,
       iconMargin: json['iconMargin'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['iconMargin'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['iconMargin']),
       height: (json['height'] as num?)?.toDouble(),
       child: json['child'] as Map<String, dynamic>?,
     );

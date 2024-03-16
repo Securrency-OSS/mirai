@@ -19,20 +19,16 @@ _$MiraiListTileThemeDataImpl _$$MiraiListTileThemeDataImplFromJson(
       textColor: json['textColor'] as String?,
       titleTextStyle: json['titleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['titleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['titleTextStyle']),
       subtitleTextStyle: json['subtitleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['subtitleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['subtitleTextStyle']),
       leadingAndTrailingTextStyle: json['leadingAndTrailingTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['leadingAndTrailingTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['leadingAndTrailingTextStyle']),
       contentPadding: json['contentPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['contentPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['contentPadding']),
       tileColor: json['tileColor'] as String?,
       selectedTileColor: json['selectedTileColor'] as String?,
       horizontalTitleGap: (json['horizontalTitleGap'] as num?)?.toDouble(),

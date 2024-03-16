@@ -246,12 +246,7 @@
               "labelText": "Gradient TextField",
               "border": {
                 "type": "outlineInputBorder",
-                "borderRadius": {
-                  "topLeft": 8,
-                  "topRight": 8,
-                  "bottomLeft": 8,
-                  "bottomRight": 8
-                },
+                "borderRadius": 80,
                 "gradient": {
                   "colors": [
                     "#FF0000",

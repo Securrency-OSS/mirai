@@ -23,9 +23,8 @@ _$MiraiTextFormFieldImpl _$$MiraiTextFormFieldImplFromJson(
       textCapitalization: $enumDecodeNullable(
               _$TextCapitalizationEnumMap, json['textCapitalization']) ??
           TextCapitalization.none,
-      style: json['style'] == null
-          ? null
-          : MiraiTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      style:
+          json['style'] == null ? null : MiraiTextStyle.fromJson(json['style']),
       textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']) ??
           TextAlign.start,
       textAlignVertical: $enumDecodeNullable(
@@ -52,8 +51,7 @@ _$MiraiTextFormFieldImpl _$$MiraiTextFormFieldImplFromJson(
           $enumDecodeNullable(_$BrightnessEnumMap, json['keyboardAppearance']),
       scrollPadding: json['scrollPadding'] == null
           ? const MiraiEdgeInsets(bottom: 20, top: 20, left: 20, right: 20)
-          : MiraiEdgeInsets.fromJson(
-              json['scrollPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['scrollPadding']),
       restorationId: json['restorationId'] as String?,
       enableIMEPersonalizedLearning:
           json['enableIMEPersonalizedLearning'] as bool? ?? true,

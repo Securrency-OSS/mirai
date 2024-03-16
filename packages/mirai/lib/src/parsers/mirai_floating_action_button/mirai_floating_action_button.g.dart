@@ -12,7 +12,7 @@ _$MiraiFloatingActionButtonImpl _$$MiraiFloatingActionButtonImplFromJson(
       onPressed: json['onPressed'] as Map<String, dynamic>?,
       textStyle: json['textStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['textStyle']),
       buttonType: $enumDecodeNullable(
               _$FloatingActionButtonTypeEnumMap, json['buttonType']) ??
           FloatingActionButtonType.small,
@@ -25,8 +25,7 @@ _$MiraiFloatingActionButtonImpl _$$MiraiFloatingActionButtonImplFromJson(
       splashColor: json['splashColor'] as String?,
       extendedTextStyle: json['extendedTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['extendedTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['extendedTextStyle']),
       elevation: (json['elevation'] as num?)?.toDouble(),
       focusElevation: (json['focusElevation'] as num?)?.toDouble(),
       hoverElevation: (json['hoverElevation'] as num?)?.toDouble(),

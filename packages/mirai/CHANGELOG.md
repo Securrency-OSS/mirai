@@ -1,3 +1,14 @@
+## 0.7.0
+
+* Added support for new widgets: CircleAvatar, GridView, Chip, Wrap & FilledButton
+* Rename scrollView to SingleChildScrollView
+* Added defaultBottomNavigationController & bottomNavigationView
+* A new and better way to define Mirai Network Request & Network Result
+* Revamp Mirai Form to add form validation, getting form values and submitting Form
+* Use app text theme in text styles 
+* A new way to declare EdgeInsets & BorderRadius
+* A lot of enhancement, refactoring and bug fixes
+
 ## 0.6.0
 
 * chore: update readme by @divyanshub024 in https://github.com/Securrency-OSS/mirai/pull/210

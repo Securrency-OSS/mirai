@@ -12,12 +12,10 @@ _$MiraiAppBarImpl _$$MiraiAppBarImplFromJson(Map<String, dynamic> json) =>
       title: json['title'] as Map<String, dynamic>?,
       titleTextStyle: json['titleTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['titleTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['titleTextStyle']),
       toolbarTextStyle: json['toolbarTextStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['toolbarTextStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['toolbarTextStyle']),
       shadowColor: json['shadowColor'] as String?,
       backgroundColor: json['backgroundColor'] as String?,
       foregroundColor: json['foregroundColor'] as String?,

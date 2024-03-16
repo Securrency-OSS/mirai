@@ -11,18 +11,21 @@ _$MiraiSwitchImpl _$$MiraiSwitchImplFromJson(Map<String, dynamic> json) =>
       switchType:
           $enumDecodeNullable(_$MiraiSwitchTypeEnumMap, json['switchType']) ??
               MiraiSwitchType.material,
-      initialValue: json['initialValue'] ?? false,
+      value: json['value'] ?? false,
       onChanged: json['onChanged'] as Map<String, dynamic>?,
       autofocus: json['autofocus'] as bool? ?? false,
-      disabled: json['disabled'] as bool? ?? false,
       activeColor: json['activeColor'] as String?,
       activeTrackColor: json['activeTrackColor'] as String?,
       focusColor: json['focusColor'] as String?,
       hoverColor: json['hoverColor'] as String?,
       inactiveThumbColor: json['inactiveThumbColor'] as String?,
       inactiveTrackColor: json['inactiveTrackColor'] as String?,
+      onLabelColor: json['onLabelColor'] as String?,
+      offLabelColor: json['offLabelColor'] as String?,
       splashRadius: (json['splashRadius'] as num?)?.toDouble(),
-      dragStartBehavior: json['dragStartBehavior'] as String?,
+      dragStartBehavior: $enumDecodeNullable(
+              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
+          DragStartBehavior.start,
       overlayColor: json['overlayColor'] == null
           ? null
           : MiraiMaterialColor.fromJson(
@@ -35,53 +38,63 @@ _$MiraiSwitchImpl _$$MiraiSwitchImplFromJson(Map<String, dynamic> json) =>
           ? null
           : MiraiMaterialColor.fromJson(
               json['trackColor'] as Map<String, dynamic>),
-      materialTapTargetSize: json['materialTapTargetSize'] as String?,
+      materialTapTargetSize: $enumDecodeNullable(
+          _$MaterialTapTargetSizeEnumMap, json['materialTapTargetSize']),
       trackOutlineColor: json['trackOutlineColor'] == null
           ? null
           : MiraiMaterialColor.fromJson(
               json['trackOutlineColor'] as Map<String, dynamic>),
       trackOutlineWidth: (json['trackOutlineWidth'] as num?)?.toDouble(),
-      thumbIcon: json['thumbIcon'] == null
-          ? null
-          : MiraiIcon.fromJson(json['thumbIcon'] as Map<String, dynamic>),
-      inactiveThumbImage: json['inactiveThumbImage'] == null
-          ? null
-          : MiraiImage.fromJson(
-              json['inactiveThumbImage'] as Map<String, dynamic>),
-      activeThumbImage: json['activeThumbImage'] == null
-          ? null
-          : MiraiImage.fromJson(
-              json['activeThumbImage'] as Map<String, dynamic>),
+      thumbIcon: json['thumbIcon'] as Map<String, dynamic>?,
+      inactiveThumbImage: json['inactiveThumbImage'] as String?,
+      activeThumbImage: json['activeThumbImage'] as String?,
+      applyTheme: json['applyTheme'] as bool?,
+      applyCupertinoTheme: json['applyCupertinoTheme'] as bool?,
     );
 
 Map<String, dynamic> _$$MiraiSwitchImplToJson(_$MiraiSwitchImpl instance) =>
     <String, dynamic>{
       'switchType': _$MiraiSwitchTypeEnumMap[instance.switchType]!,
-      'initialValue': instance.initialValue,
+      'value': instance.value,
       'onChanged': instance.onChanged,
       'autofocus': instance.autofocus,
-      'disabled': instance.disabled,
       'activeColor': instance.activeColor,
       'activeTrackColor': instance.activeTrackColor,
       'focusColor': instance.focusColor,
       'hoverColor': instance.hoverColor,
       'inactiveThumbColor': instance.inactiveThumbColor,
       'inactiveTrackColor': instance.inactiveTrackColor,
+      'onLabelColor': instance.onLabelColor,
+      'offLabelColor': instance.offLabelColor,
       'splashRadius': instance.splashRadius,
-      'dragStartBehavior': instance.dragStartBehavior,
+      'dragStartBehavior':
+          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
       'overlayColor': instance.overlayColor,
       'thumbColor': instance.thumbColor,
       'trackColor': instance.trackColor,
-      'materialTapTargetSize': instance.materialTapTargetSize,
+      'materialTapTargetSize':
+          _$MaterialTapTargetSizeEnumMap[instance.materialTapTargetSize],
       'trackOutlineColor': instance.trackOutlineColor,
       'trackOutlineWidth': instance.trackOutlineWidth,
       'thumbIcon': instance.thumbIcon,
       'inactiveThumbImage': instance.inactiveThumbImage,
       'activeThumbImage': instance.activeThumbImage,
+      'applyTheme': instance.applyTheme,
+      'applyCupertinoTheme': instance.applyCupertinoTheme,
     };
 
 const _$MiraiSwitchTypeEnumMap = {
   MiraiSwitchType.adaptive: 'adaptive',
   MiraiSwitchType.cupertino: 'cupertino',
   MiraiSwitchType.material: 'material',
+};
+
+const _$DragStartBehaviorEnumMap = {
+  DragStartBehavior.down: 'down',
+  DragStartBehavior.start: 'start',
+};
+
+const _$MaterialTapTargetSizeEnumMap = {
+  MaterialTapTargetSize.padded: 'padded',
+  MaterialTapTargetSize.shrinkWrap: 'shrinkWrap',
 };

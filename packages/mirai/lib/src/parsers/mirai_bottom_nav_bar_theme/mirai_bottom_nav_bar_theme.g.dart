@@ -23,12 +23,10 @@ _$MiraiBottomNavBarThemeDataImpl _$$MiraiBottomNavBarThemeDataImplFromJson(
       unselectedItemColor: json['unselectedItemColor'] as String?,
       selectedLabelStyle: json['selectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['selectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['selectedLabelStyle']),
       unselectedLabelStyle: json['unselectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['unselectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['unselectedLabelStyle']),
       showSelectedLabels: json['showSelectedLabels'] as bool?,
       showUnselectedLabels: json['showUnselectedLabels'] as bool?,
       type: $enumDecodeNullable(_$BottomNavigationBarTypeEnumMap, json['type']),

@@ -20,16 +20,14 @@ _$MiraiTabBarThemeDataImpl _$$MiraiTabBarThemeDataImplFromJson(
       labelColor: json['labelColor'] as String?,
       labelPadding: json['labelPadding'] == null
           ? null
-          : MiraiEdgeInsets.fromJson(
-              json['labelPadding'] as Map<String, dynamic>),
+          : MiraiEdgeInsets.fromJson(json['labelPadding']),
       labelStyle: json['labelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(json['labelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['labelStyle']),
       unselectedLabelColor: json['unselectedLabelColor'] as String?,
       unselectedLabelStyle: json['unselectedLabelStyle'] == null
           ? null
-          : MiraiTextStyle.fromJson(
-              json['unselectedLabelStyle'] as Map<String, dynamic>),
+          : MiraiTextStyle.fromJson(json['unselectedLabelStyle']),
       overlayColor: json['overlayColor'] as String?,
     );
 

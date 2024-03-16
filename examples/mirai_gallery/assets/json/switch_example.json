@@ -23,32 +23,27 @@
             "crossAxisAlignment": "center",
             "children": [
               {
-                "type": "switchButton",
+                "type": "switch",
                 "switchType": "cupertino",
-                "initialValue": true,
-                "onChanged": {}
+                "value": true
               },
               {
                 "type": "sizedBox",
                 "width": 20
               },
               {
-                "type": "switchButton",
+                "type": "switch",
                 "switchType": "adaptive",
-                "initialValue": false,
-                "onChanged": {},
-                "inActiveColor": "#FF0000",
-                "activeColor": "#0000FF"
+                "value": true
               },
               {
                 "type": "sizedBox",
                 "width": 20
               },
               {
-                "type": "switchButton",
+                "type": "switch",
                 "switchType": "material",
-                "initialValue": false,
-                "onChanged": {}
+                "value": false
               }
             ]
           },

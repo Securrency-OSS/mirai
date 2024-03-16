@@ -21,13 +21,12 @@ MiraiBoxDecoration _$MiraiBoxDecorationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiBoxDecoration {
   String? get color => throw _privateConstructorUsedError;
-  BorderStyle get borderStyle => throw _privateConstructorUsedError;
-  BlendMode? get blendMode => throw _privateConstructorUsedError;
+  BlendMode? get backgroundBlendMode => throw _privateConstructorUsedError;
   List<MiraiBoxShadow?>? get boxShadow => throw _privateConstructorUsedError;
   BoxShape get shape => throw _privateConstructorUsedError;
   MiraiBorder? get border => throw _privateConstructorUsedError;
   MiraiBorderRadius? get borderRadius => throw _privateConstructorUsedError;
-  MiraiContainerImage? get image => throw _privateConstructorUsedError;
+  MiraiDecorationImage? get image => throw _privateConstructorUsedError;
   MiraiGradient? get gradient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,18 +43,17 @@ abstract class $MiraiBoxDecorationCopyWith<$Res> {
   @useResult
   $Res call(
       {String? color,
-      BorderStyle borderStyle,
-      BlendMode? blendMode,
+      BlendMode? backgroundBlendMode,
       List<MiraiBoxShadow?>? boxShadow,
       BoxShape shape,
       MiraiBorder? border,
       MiraiBorderRadius? borderRadius,
-      MiraiContainerImage? image,
+      MiraiDecorationImage? image,
       MiraiGradient? gradient});
 
   $MiraiBorderCopyWith<$Res>? get border;
   $MiraiBorderRadiusCopyWith<$Res>? get borderRadius;
-  $MiraiContainerImageCopyWith<$Res>? get image;
+  $MiraiDecorationImageCopyWith<$Res>? get image;
   $MiraiGradientCopyWith<$Res>? get gradient;
 }
 
@@ -73,8 +71,7 @@ class _$MiraiBoxDecorationCopyWithImpl<$Res, $Val extends MiraiBoxDecoration>
   @override
   $Res call({
     Object? color = freezed,
-    Object? borderStyle = null,
-    Object? blendMode = freezed,
+    Object? backgroundBlendMode = freezed,
     Object? boxShadow = freezed,
     Object? shape = null,
     Object? border = freezed,
@@ -87,13 +84,9 @@ class _$MiraiBoxDecorationCopyWithImpl<$Res, $Val extends MiraiBoxDecoration>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as String?,
-      borderStyle: null == borderStyle
-          ? _value.borderStyle
-          : borderStyle // ignore: cast_nullable_to_non_nullable
-              as BorderStyle,
-      blendMode: freezed == blendMode
-          ? _value.blendMode
-          : blendMode // ignore: cast_nullable_to_non_nullable
+      backgroundBlendMode: freezed == backgroundBlendMode
+          ? _value.backgroundBlendMode
+          : backgroundBlendMode // ignore: cast_nullable_to_non_nullable
               as BlendMode?,
       boxShadow: freezed == boxShadow
           ? _value.boxShadow
@@ -114,7 +107,7 @@ class _$MiraiBoxDecorationCopyWithImpl<$Res, $Val extends MiraiBoxDecoration>
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as MiraiContainerImage?,
+              as MiraiDecorationImage?,
       gradient: freezed == gradient
           ? _value.gradient
           : gradient // ignore: cast_nullable_to_non_nullable
@@ -148,12 +141,12 @@ class _$MiraiBoxDecorationCopyWithImpl<$Res, $Val extends MiraiBoxDecoration>
 
   @override
   @pragma('vm:prefer-inline')
-  $MiraiContainerImageCopyWith<$Res>? get image {
+  $MiraiDecorationImageCopyWith<$Res>? get image {
     if (_value.image == null) {
       return null;
     }
 
-    return $MiraiContainerImageCopyWith<$Res>(_value.image!, (value) {
+    return $MiraiDecorationImageCopyWith<$Res>(_value.image!, (value) {
       return _then(_value.copyWith(image: value) as $Val);
     });
   }
@@ -181,13 +174,12 @@ abstract class _$$MiraiBoxDecorationImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? color,
-      BorderStyle borderStyle,
-      BlendMode? blendMode,
+      BlendMode? backgroundBlendMode,
       List<MiraiBoxShadow?>? boxShadow,
       BoxShape shape,
       MiraiBorder? border,
       MiraiBorderRadius? borderRadius,
-      MiraiContainerImage? image,
+      MiraiDecorationImage? image,
       MiraiGradient? gradient});
 
   @override
@@ -195,7 +187,7 @@ abstract class _$$MiraiBoxDecorationImplCopyWith<$Res>
   @override
   $MiraiBorderRadiusCopyWith<$Res>? get borderRadius;
   @override
-  $MiraiContainerImageCopyWith<$Res>? get image;
+  $MiraiDecorationImageCopyWith<$Res>? get image;
   @override
   $MiraiGradientCopyWith<$Res>? get gradient;
 }
@@ -212,8 +204,7 @@ class __$$MiraiBoxDecorationImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? color = freezed,
-    Object? borderStyle = null,
-    Object? blendMode = freezed,
+    Object? backgroundBlendMode = freezed,
     Object? boxShadow = freezed,
     Object? shape = null,
     Object? border = freezed,
@@ -226,13 +217,9 @@ class __$$MiraiBoxDecorationImplCopyWithImpl<$Res>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as String?,
-      borderStyle: null == borderStyle
-          ? _value.borderStyle
-          : borderStyle // ignore: cast_nullable_to_non_nullable
-              as BorderStyle,
-      blendMode: freezed == blendMode
-          ? _value.blendMode
-          : blendMode // ignore: cast_nullable_to_non_nullable
+      backgroundBlendMode: freezed == backgroundBlendMode
+          ? _value.backgroundBlendMode
+          : backgroundBlendMode // ignore: cast_nullable_to_non_nullable
               as BlendMode?,
       boxShadow: freezed == boxShadow
           ? _value._boxShadow
@@ -253,7 +240,7 @@ class __$$MiraiBoxDecorationImplCopyWithImpl<$Res>
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as MiraiContainerImage?,
+              as MiraiDecorationImage?,
       gradient: freezed == gradient
           ? _value.gradient
           : gradient // ignore: cast_nullable_to_non_nullable
@@ -267,8 +254,7 @@ class __$$MiraiBoxDecorationImplCopyWithImpl<$Res>
 class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
   const _$MiraiBoxDecorationImpl(
       {this.color,
-      this.borderStyle = BorderStyle.none,
-      this.blendMode,
+      this.backgroundBlendMode,
       final List<MiraiBoxShadow?>? boxShadow,
       this.shape = BoxShape.rectangle,
       this.border,
@@ -283,10 +269,7 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
   @override
   final String? color;
   @override
-  @JsonKey()
-  final BorderStyle borderStyle;
-  @override
-  final BlendMode? blendMode;
+  final BlendMode? backgroundBlendMode;
   final List<MiraiBoxShadow?>? _boxShadow;
   @override
   List<MiraiBoxShadow?>? get boxShadow {
@@ -305,13 +288,13 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
   @override
   final MiraiBorderRadius? borderRadius;
   @override
-  final MiraiContainerImage? image;
+  final MiraiDecorationImage? image;
   @override
   final MiraiGradient? gradient;
 
   @override
   String toString() {
-    return 'MiraiBoxDecoration(color: $color, borderStyle: $borderStyle, blendMode: $blendMode, boxShadow: $boxShadow, shape: $shape, border: $border, borderRadius: $borderRadius, image: $image, gradient: $gradient)';
+    return 'MiraiBoxDecoration(color: $color, backgroundBlendMode: $backgroundBlendMode, boxShadow: $boxShadow, shape: $shape, border: $border, borderRadius: $borderRadius, image: $image, gradient: $gradient)';
   }
 
   @override
@@ -320,10 +303,8 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
         (other.runtimeType == runtimeType &&
             other is _$MiraiBoxDecorationImpl &&
             (identical(other.color, color) || other.color == color) &&
-            (identical(other.borderStyle, borderStyle) ||
-                other.borderStyle == borderStyle) &&
-            (identical(other.blendMode, blendMode) ||
-                other.blendMode == blendMode) &&
+            (identical(other.backgroundBlendMode, backgroundBlendMode) ||
+                other.backgroundBlendMode == backgroundBlendMode) &&
             const DeepCollectionEquality()
                 .equals(other._boxShadow, _boxShadow) &&
             (identical(other.shape, shape) || other.shape == shape) &&
@@ -340,8 +321,7 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
   int get hashCode => Object.hash(
       runtimeType,
       color,
-      borderStyle,
-      blendMode,
+      backgroundBlendMode,
       const DeepCollectionEquality().hash(_boxShadow),
       shape,
       border,
@@ -367,13 +347,12 @@ class _$MiraiBoxDecorationImpl implements _MiraiBoxDecoration {
 abstract class _MiraiBoxDecoration implements MiraiBoxDecoration {
   const factory _MiraiBoxDecoration(
       {final String? color,
-      final BorderStyle borderStyle,
-      final BlendMode? blendMode,
+      final BlendMode? backgroundBlendMode,
       final List<MiraiBoxShadow?>? boxShadow,
       final BoxShape shape,
       final MiraiBorder? border,
       final MiraiBorderRadius? borderRadius,
-      final MiraiContainerImage? image,
+      final MiraiDecorationImage? image,
       final MiraiGradient? gradient}) = _$MiraiBoxDecorationImpl;
 
   factory _MiraiBoxDecoration.fromJson(Map<String, dynamic> json) =
@@ -382,9 +361,7 @@ abstract class _MiraiBoxDecoration implements MiraiBoxDecoration {
   @override
   String? get color;
   @override
-  BorderStyle get borderStyle;
-  @override
-  BlendMode? get blendMode;
+  BlendMode? get backgroundBlendMode;
   @override
   List<MiraiBoxShadow?>? get boxShadow;
   @override
@@ -394,7 +371,7 @@ abstract class _MiraiBoxDecoration implements MiraiBoxDecoration {
   @override
   MiraiBorderRadius? get borderRadius;
   @override
-  MiraiContainerImage? get image;
+  MiraiDecorationImage? get image;
   @override
   MiraiGradient? get gradient;
   @override

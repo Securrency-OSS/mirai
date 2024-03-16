@@ -10,10 +10,8 @@ _$MiraiBoxDecorationImpl _$$MiraiBoxDecorationImplFromJson(
         Map<String, dynamic> json) =>
     _$MiraiBoxDecorationImpl(
       color: json['color'] as String?,
-      borderStyle:
-          $enumDecodeNullable(_$BorderStyleEnumMap, json['borderStyle']) ??
-              BorderStyle.none,
-      blendMode: $enumDecodeNullable(_$BlendModeEnumMap, json['blendMode']),
+      backgroundBlendMode:
+          $enumDecodeNullable(_$BlendModeEnumMap, json['backgroundBlendMode']),
       boxShadow: (json['boxShadow'] as List<dynamic>?)
           ?.map((e) => e == null
               ? null
@@ -26,11 +24,11 @@ _$MiraiBoxDecorationImpl _$$MiraiBoxDecorationImplFromJson(
           : MiraiBorder.fromJson(json['border'] as Map<String, dynamic>),
       borderRadius: json['borderRadius'] == null
           ? null
-          : MiraiBorderRadius.fromJson(
-              json['borderRadius'] as Map<String, dynamic>),
+          : MiraiBorderRadius.fromJson(json['borderRadius']),
       image: json['image'] == null
           ? null
-          : MiraiContainerImage.fromJson(json['image'] as Map<String, dynamic>),
+          : MiraiDecorationImage.fromJson(
+              json['image'] as Map<String, dynamic>),
       gradient: json['gradient'] == null
           ? null
           : MiraiGradient.fromJson(json['gradient'] as Map<String, dynamic>),
@@ -40,8 +38,7 @@ Map<String, dynamic> _$$MiraiBoxDecorationImplToJson(
         _$MiraiBoxDecorationImpl instance) =>
     <String, dynamic>{
       'color': instance.color,
-      'borderStyle': _$BorderStyleEnumMap[instance.borderStyle]!,
-      'blendMode': _$BlendModeEnumMap[instance.blendMode],
+      'backgroundBlendMode': _$BlendModeEnumMap[instance.backgroundBlendMode],
       'boxShadow': instance.boxShadow,
       'shape': _$BoxShapeEnumMap[instance.shape]!,
       'border': instance.border,
@@ -49,11 +46,6 @@ Map<String, dynamic> _$$MiraiBoxDecorationImplToJson(
       'image': instance.image,
       'gradient': instance.gradient,
     };
-
-const _$BorderStyleEnumMap = {
-  BorderStyle.none: 'none',
-  BorderStyle.solid: 'solid',
-};
 
 const _$BlendModeEnumMap = {
   BlendMode.clear: 'clear',

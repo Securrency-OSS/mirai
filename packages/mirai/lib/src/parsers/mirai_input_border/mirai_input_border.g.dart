@@ -13,8 +13,7 @@ _$MiraiInputBorderImpl _$$MiraiInputBorderImplFromJson(
           MiraiInputBorderType.underlineInputBorder,
       borderRadius: json['borderRadius'] == null
           ? null
-          : MiraiBorderRadius.fromJson(
-              json['borderRadius'] as Map<String, dynamic>),
+          : MiraiBorderRadius.fromJson(json['borderRadius']),
       gapPadding: (json['gapPadding'] as num?)?.toDouble() ?? 4.0,
       width: (json['width'] as num?)?.toDouble() ?? 0.0,
       color: json['color'] as String?,

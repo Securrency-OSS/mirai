@@ -21,28 +21,32 @@ MiraiSwitch _$MiraiSwitchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MiraiSwitch {
   MiraiSwitchType get switchType => throw _privateConstructorUsedError;
-  dynamic get initialValue => throw _privateConstructorUsedError;
+  dynamic get value => throw _privateConstructorUsedError;
   Map<String, dynamic>? get onChanged => throw _privateConstructorUsedError;
   bool get autofocus => throw _privateConstructorUsedError;
-  bool get disabled => throw _privateConstructorUsedError;
   String? get activeColor => throw _privateConstructorUsedError;
   String? get activeTrackColor => throw _privateConstructorUsedError;
   String? get focusColor => throw _privateConstructorUsedError;
   String? get hoverColor => throw _privateConstructorUsedError;
   String? get inactiveThumbColor => throw _privateConstructorUsedError;
   String? get inactiveTrackColor => throw _privateConstructorUsedError;
+  String? get onLabelColor => throw _privateConstructorUsedError;
+  String? get offLabelColor => throw _privateConstructorUsedError;
   double? get splashRadius => throw _privateConstructorUsedError;
-  String? get dragStartBehavior => throw _privateConstructorUsedError;
+  DragStartBehavior get dragStartBehavior => throw _privateConstructorUsedError;
   MiraiMaterialColor? get overlayColor => throw _privateConstructorUsedError;
   MiraiMaterialColor? get thumbColor => throw _privateConstructorUsedError;
   MiraiMaterialColor? get trackColor => throw _privateConstructorUsedError;
-  String? get materialTapTargetSize => throw _privateConstructorUsedError;
+  MaterialTapTargetSize? get materialTapTargetSize =>
+      throw _privateConstructorUsedError;
   MiraiMaterialColor? get trackOutlineColor =>
       throw _privateConstructorUsedError;
   double? get trackOutlineWidth => throw _privateConstructorUsedError;
-  MiraiIcon? get thumbIcon => throw _privateConstructorUsedError;
-  MiraiImage? get inactiveThumbImage => throw _privateConstructorUsedError;
-  MiraiImage? get activeThumbImage => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get thumbIcon => throw _privateConstructorUsedError;
+  String? get inactiveThumbImage => throw _privateConstructorUsedError;
+  String? get activeThumbImage => throw _privateConstructorUsedError;
+  bool? get applyTheme => throw _privateConstructorUsedError;
+  bool? get applyCupertinoTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,35 +62,35 @@ abstract class $MiraiSwitchCopyWith<$Res> {
   @useResult
   $Res call(
       {MiraiSwitchType switchType,
-      dynamic initialValue,
+      dynamic value,
       Map<String, dynamic>? onChanged,
       bool autofocus,
-      bool disabled,
       String? activeColor,
       String? activeTrackColor,
       String? focusColor,
       String? hoverColor,
       String? inactiveThumbColor,
       String? inactiveTrackColor,
+      String? onLabelColor,
+      String? offLabelColor,
       double? splashRadius,
-      String? dragStartBehavior,
+      DragStartBehavior dragStartBehavior,
       MiraiMaterialColor? overlayColor,
       MiraiMaterialColor? thumbColor,
       MiraiMaterialColor? trackColor,
-      String? materialTapTargetSize,
+      MaterialTapTargetSize? materialTapTargetSize,
       MiraiMaterialColor? trackOutlineColor,
       double? trackOutlineWidth,
-      MiraiIcon? thumbIcon,
-      MiraiImage? inactiveThumbImage,
-      MiraiImage? activeThumbImage});
+      Map<String, dynamic>? thumbIcon,
+      String? inactiveThumbImage,
+      String? activeThumbImage,
+      bool? applyTheme,
+      bool? applyCupertinoTheme});
 
   $MiraiMaterialColorCopyWith<$Res>? get overlayColor;
   $MiraiMaterialColorCopyWith<$Res>? get thumbColor;
   $MiraiMaterialColorCopyWith<$Res>? get trackColor;
   $MiraiMaterialColorCopyWith<$Res>? get trackOutlineColor;
-  $MiraiIconCopyWith<$Res>? get thumbIcon;
-  $MiraiImageCopyWith<$Res>? get inactiveThumbImage;
-  $MiraiImageCopyWith<$Res>? get activeThumbImage;
 }
 
 /// @nodoc
@@ -103,18 +107,19 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
   @override
   $Res call({
     Object? switchType = null,
-    Object? initialValue = freezed,
+    Object? value = freezed,
     Object? onChanged = freezed,
     Object? autofocus = null,
-    Object? disabled = null,
     Object? activeColor = freezed,
     Object? activeTrackColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
     Object? inactiveThumbColor = freezed,
     Object? inactiveTrackColor = freezed,
+    Object? onLabelColor = freezed,
+    Object? offLabelColor = freezed,
     Object? splashRadius = freezed,
-    Object? dragStartBehavior = freezed,
+    Object? dragStartBehavior = null,
     Object? overlayColor = freezed,
     Object? thumbColor = freezed,
     Object? trackColor = freezed,
@@ -124,15 +129,17 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
     Object? thumbIcon = freezed,
     Object? inactiveThumbImage = freezed,
     Object? activeThumbImage = freezed,
+    Object? applyTheme = freezed,
+    Object? applyCupertinoTheme = freezed,
   }) {
     return _then(_value.copyWith(
       switchType: null == switchType
           ? _value.switchType
           : switchType // ignore: cast_nullable_to_non_nullable
               as MiraiSwitchType,
-      initialValue: freezed == initialValue
-          ? _value.initialValue
-          : initialValue // ignore: cast_nullable_to_non_nullable
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
               as dynamic,
       onChanged: freezed == onChanged
           ? _value.onChanged
@@ -141,10 +148,6 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      disabled: null == disabled
-          ? _value.disabled
-          : disabled // ignore: cast_nullable_to_non_nullable
               as bool,
       activeColor: freezed == activeColor
           ? _value.activeColor
@@ -170,14 +173,22 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
           ? _value.inactiveTrackColor
           : inactiveTrackColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      onLabelColor: freezed == onLabelColor
+          ? _value.onLabelColor
+          : onLabelColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offLabelColor: freezed == offLabelColor
+          ? _value.offLabelColor
+          : offLabelColor // ignore: cast_nullable_to_non_nullable
+              as String?,
       splashRadius: freezed == splashRadius
           ? _value.splashRadius
           : splashRadius // ignore: cast_nullable_to_non_nullable
               as double?,
-      dragStartBehavior: freezed == dragStartBehavior
+      dragStartBehavior: null == dragStartBehavior
           ? _value.dragStartBehavior
           : dragStartBehavior // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DragStartBehavior,
       overlayColor: freezed == overlayColor
           ? _value.overlayColor
           : overlayColor // ignore: cast_nullable_to_non_nullable
@@ -193,7 +204,7 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
       materialTapTargetSize: freezed == materialTapTargetSize
           ? _value.materialTapTargetSize
           : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as MaterialTapTargetSize?,
       trackOutlineColor: freezed == trackOutlineColor
           ? _value.trackOutlineColor
           : trackOutlineColor // ignore: cast_nullable_to_non_nullable
@@ -205,15 +216,23 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
       thumbIcon: freezed == thumbIcon
           ? _value.thumbIcon
           : thumbIcon // ignore: cast_nullable_to_non_nullable
-              as MiraiIcon?,
+              as Map<String, dynamic>?,
       inactiveThumbImage: freezed == inactiveThumbImage
           ? _value.inactiveThumbImage
           : inactiveThumbImage // ignore: cast_nullable_to_non_nullable
-              as MiraiImage?,
+              as String?,
       activeThumbImage: freezed == activeThumbImage
           ? _value.activeThumbImage
           : activeThumbImage // ignore: cast_nullable_to_non_nullable
-              as MiraiImage?,
+              as String?,
+      applyTheme: freezed == applyTheme
+          ? _value.applyTheme
+          : applyTheme // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applyCupertinoTheme: freezed == applyCupertinoTheme
+          ? _value.applyCupertinoTheme
+          : applyCupertinoTheme // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -265,42 +284,6 @@ class _$MiraiSwitchCopyWithImpl<$Res, $Val extends MiraiSwitch>
       return _then(_value.copyWith(trackOutlineColor: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiIconCopyWith<$Res>? get thumbIcon {
-    if (_value.thumbIcon == null) {
-      return null;
-    }
-
-    return $MiraiIconCopyWith<$Res>(_value.thumbIcon!, (value) {
-      return _then(_value.copyWith(thumbIcon: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiImageCopyWith<$Res>? get inactiveThumbImage {
-    if (_value.inactiveThumbImage == null) {
-      return null;
-    }
-
-    return $MiraiImageCopyWith<$Res>(_value.inactiveThumbImage!, (value) {
-      return _then(_value.copyWith(inactiveThumbImage: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $MiraiImageCopyWith<$Res>? get activeThumbImage {
-    if (_value.activeThumbImage == null) {
-      return null;
-    }
-
-    return $MiraiImageCopyWith<$Res>(_value.activeThumbImage!, (value) {
-      return _then(_value.copyWith(activeThumbImage: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -313,27 +296,30 @@ abstract class _$$MiraiSwitchImplCopyWith<$Res>
   @useResult
   $Res call(
       {MiraiSwitchType switchType,
-      dynamic initialValue,
+      dynamic value,
       Map<String, dynamic>? onChanged,
       bool autofocus,
-      bool disabled,
       String? activeColor,
       String? activeTrackColor,
       String? focusColor,
       String? hoverColor,
       String? inactiveThumbColor,
       String? inactiveTrackColor,
+      String? onLabelColor,
+      String? offLabelColor,
       double? splashRadius,
-      String? dragStartBehavior,
+      DragStartBehavior dragStartBehavior,
       MiraiMaterialColor? overlayColor,
       MiraiMaterialColor? thumbColor,
       MiraiMaterialColor? trackColor,
-      String? materialTapTargetSize,
+      MaterialTapTargetSize? materialTapTargetSize,
       MiraiMaterialColor? trackOutlineColor,
       double? trackOutlineWidth,
-      MiraiIcon? thumbIcon,
-      MiraiImage? inactiveThumbImage,
-      MiraiImage? activeThumbImage});
+      Map<String, dynamic>? thumbIcon,
+      String? inactiveThumbImage,
+      String? activeThumbImage,
+      bool? applyTheme,
+      bool? applyCupertinoTheme});
 
   @override
   $MiraiMaterialColorCopyWith<$Res>? get overlayColor;
@@ -343,12 +329,6 @@ abstract class _$$MiraiSwitchImplCopyWith<$Res>
   $MiraiMaterialColorCopyWith<$Res>? get trackColor;
   @override
   $MiraiMaterialColorCopyWith<$Res>? get trackOutlineColor;
-  @override
-  $MiraiIconCopyWith<$Res>? get thumbIcon;
-  @override
-  $MiraiImageCopyWith<$Res>? get inactiveThumbImage;
-  @override
-  $MiraiImageCopyWith<$Res>? get activeThumbImage;
 }
 
 /// @nodoc
@@ -363,18 +343,19 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? switchType = null,
-    Object? initialValue = freezed,
+    Object? value = freezed,
     Object? onChanged = freezed,
     Object? autofocus = null,
-    Object? disabled = null,
     Object? activeColor = freezed,
     Object? activeTrackColor = freezed,
     Object? focusColor = freezed,
     Object? hoverColor = freezed,
     Object? inactiveThumbColor = freezed,
     Object? inactiveTrackColor = freezed,
+    Object? onLabelColor = freezed,
+    Object? offLabelColor = freezed,
     Object? splashRadius = freezed,
-    Object? dragStartBehavior = freezed,
+    Object? dragStartBehavior = null,
     Object? overlayColor = freezed,
     Object? thumbColor = freezed,
     Object? trackColor = freezed,
@@ -384,14 +365,15 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
     Object? thumbIcon = freezed,
     Object? inactiveThumbImage = freezed,
     Object? activeThumbImage = freezed,
+    Object? applyTheme = freezed,
+    Object? applyCupertinoTheme = freezed,
   }) {
     return _then(_$MiraiSwitchImpl(
       switchType: null == switchType
           ? _value.switchType
           : switchType // ignore: cast_nullable_to_non_nullable
               as MiraiSwitchType,
-      initialValue:
-          freezed == initialValue ? _value.initialValue! : initialValue,
+      value: freezed == value ? _value.value! : value,
       onChanged: freezed == onChanged
           ? _value._onChanged
           : onChanged // ignore: cast_nullable_to_non_nullable
@@ -399,10 +381,6 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
       autofocus: null == autofocus
           ? _value.autofocus
           : autofocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      disabled: null == disabled
-          ? _value.disabled
-          : disabled // ignore: cast_nullable_to_non_nullable
               as bool,
       activeColor: freezed == activeColor
           ? _value.activeColor
@@ -428,14 +406,22 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
           ? _value.inactiveTrackColor
           : inactiveTrackColor // ignore: cast_nullable_to_non_nullable
               as String?,
+      onLabelColor: freezed == onLabelColor
+          ? _value.onLabelColor
+          : onLabelColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offLabelColor: freezed == offLabelColor
+          ? _value.offLabelColor
+          : offLabelColor // ignore: cast_nullable_to_non_nullable
+              as String?,
       splashRadius: freezed == splashRadius
           ? _value.splashRadius
           : splashRadius // ignore: cast_nullable_to_non_nullable
               as double?,
-      dragStartBehavior: freezed == dragStartBehavior
+      dragStartBehavior: null == dragStartBehavior
           ? _value.dragStartBehavior
           : dragStartBehavior // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DragStartBehavior,
       overlayColor: freezed == overlayColor
           ? _value.overlayColor
           : overlayColor // ignore: cast_nullable_to_non_nullable
@@ -451,7 +437,7 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
       materialTapTargetSize: freezed == materialTapTargetSize
           ? _value.materialTapTargetSize
           : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as MaterialTapTargetSize?,
       trackOutlineColor: freezed == trackOutlineColor
           ? _value.trackOutlineColor
           : trackOutlineColor // ignore: cast_nullable_to_non_nullable
@@ -461,49 +447,60 @@ class __$$MiraiSwitchImplCopyWithImpl<$Res>
           : trackOutlineWidth // ignore: cast_nullable_to_non_nullable
               as double?,
       thumbIcon: freezed == thumbIcon
-          ? _value.thumbIcon
+          ? _value._thumbIcon
           : thumbIcon // ignore: cast_nullable_to_non_nullable
-              as MiraiIcon?,
+              as Map<String, dynamic>?,
       inactiveThumbImage: freezed == inactiveThumbImage
           ? _value.inactiveThumbImage
           : inactiveThumbImage // ignore: cast_nullable_to_non_nullable
-              as MiraiImage?,
+              as String?,
       activeThumbImage: freezed == activeThumbImage
           ? _value.activeThumbImage
           : activeThumbImage // ignore: cast_nullable_to_non_nullable
-              as MiraiImage?,
+              as String?,
+      applyTheme: freezed == applyTheme
+          ? _value.applyTheme
+          : applyTheme // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applyCupertinoTheme: freezed == applyCupertinoTheme
+          ? _value.applyCupertinoTheme
+          : applyCupertinoTheme // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$MiraiSwitchImpl extends _MiraiSwitch {
+class _$MiraiSwitchImpl implements _MiraiSwitch {
   const _$MiraiSwitchImpl(
       {this.switchType = MiraiSwitchType.material,
-      this.initialValue = false,
+      this.value = false,
       final Map<String, dynamic>? onChanged,
       this.autofocus = false,
-      this.disabled = false,
       this.activeColor,
       this.activeTrackColor,
       this.focusColor,
       this.hoverColor,
       this.inactiveThumbColor,
       this.inactiveTrackColor,
+      this.onLabelColor,
+      this.offLabelColor,
       this.splashRadius,
-      this.dragStartBehavior,
+      this.dragStartBehavior = DragStartBehavior.start,
       this.overlayColor,
       this.thumbColor,
       this.trackColor,
       this.materialTapTargetSize,
       this.trackOutlineColor,
       this.trackOutlineWidth,
-      this.thumbIcon,
+      final Map<String, dynamic>? thumbIcon,
       this.inactiveThumbImage,
-      this.activeThumbImage})
+      this.activeThumbImage,
+      this.applyTheme,
+      this.applyCupertinoTheme})
       : _onChanged = onChanged,
-        super._();
+        _thumbIcon = thumbIcon;
 
   factory _$MiraiSwitchImpl.fromJson(Map<String, dynamic> json) =>
       _$$MiraiSwitchImplFromJson(json);
@@ -513,7 +510,7 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   final MiraiSwitchType switchType;
   @override
   @JsonKey()
-  final dynamic initialValue;
+  final dynamic value;
   final Map<String, dynamic>? _onChanged;
   @override
   Map<String, dynamic>? get onChanged {
@@ -528,9 +525,6 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   @JsonKey()
   final bool autofocus;
   @override
-  @JsonKey()
-  final bool disabled;
-  @override
   final String? activeColor;
   @override
   final String? activeTrackColor;
@@ -543,9 +537,14 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   @override
   final String? inactiveTrackColor;
   @override
+  final String? onLabelColor;
+  @override
+  final String? offLabelColor;
+  @override
   final double? splashRadius;
   @override
-  final String? dragStartBehavior;
+  @JsonKey()
+  final DragStartBehavior dragStartBehavior;
   @override
   final MiraiMaterialColor? overlayColor;
   @override
@@ -553,21 +552,33 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   @override
   final MiraiMaterialColor? trackColor;
   @override
-  final String? materialTapTargetSize;
+  final MaterialTapTargetSize? materialTapTargetSize;
   @override
   final MiraiMaterialColor? trackOutlineColor;
   @override
   final double? trackOutlineWidth;
+  final Map<String, dynamic>? _thumbIcon;
   @override
-  final MiraiIcon? thumbIcon;
+  Map<String, dynamic>? get thumbIcon {
+    final value = _thumbIcon;
+    if (value == null) return null;
+    if (_thumbIcon is EqualUnmodifiableMapView) return _thumbIcon;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
-  final MiraiImage? inactiveThumbImage;
+  final String? inactiveThumbImage;
   @override
-  final MiraiImage? activeThumbImage;
+  final String? activeThumbImage;
+  @override
+  final bool? applyTheme;
+  @override
+  final bool? applyCupertinoTheme;
 
   @override
   String toString() {
-    return 'MiraiSwitch(switchType: $switchType, initialValue: $initialValue, onChanged: $onChanged, autofocus: $autofocus, disabled: $disabled, activeColor: $activeColor, activeTrackColor: $activeTrackColor, focusColor: $focusColor, hoverColor: $hoverColor, inactiveThumbColor: $inactiveThumbColor, inactiveTrackColor: $inactiveTrackColor, splashRadius: $splashRadius, dragStartBehavior: $dragStartBehavior, overlayColor: $overlayColor, thumbColor: $thumbColor, trackColor: $trackColor, materialTapTargetSize: $materialTapTargetSize, trackOutlineColor: $trackOutlineColor, trackOutlineWidth: $trackOutlineWidth, thumbIcon: $thumbIcon, inactiveThumbImage: $inactiveThumbImage, activeThumbImage: $activeThumbImage)';
+    return 'MiraiSwitch(switchType: $switchType, value: $value, onChanged: $onChanged, autofocus: $autofocus, activeColor: $activeColor, activeTrackColor: $activeTrackColor, focusColor: $focusColor, hoverColor: $hoverColor, inactiveThumbColor: $inactiveThumbColor, inactiveTrackColor: $inactiveTrackColor, onLabelColor: $onLabelColor, offLabelColor: $offLabelColor, splashRadius: $splashRadius, dragStartBehavior: $dragStartBehavior, overlayColor: $overlayColor, thumbColor: $thumbColor, trackColor: $trackColor, materialTapTargetSize: $materialTapTargetSize, trackOutlineColor: $trackOutlineColor, trackOutlineWidth: $trackOutlineWidth, thumbIcon: $thumbIcon, inactiveThumbImage: $inactiveThumbImage, activeThumbImage: $activeThumbImage, applyTheme: $applyTheme, applyCupertinoTheme: $applyCupertinoTheme)';
   }
 
   @override
@@ -577,14 +588,11 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
             other is _$MiraiSwitchImpl &&
             (identical(other.switchType, switchType) ||
                 other.switchType == switchType) &&
-            const DeepCollectionEquality()
-                .equals(other.initialValue, initialValue) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality()
                 .equals(other._onChanged, _onChanged) &&
             (identical(other.autofocus, autofocus) ||
                 other.autofocus == autofocus) &&
-            (identical(other.disabled, disabled) ||
-                other.disabled == disabled) &&
             (identical(other.activeColor, activeColor) ||
                 other.activeColor == activeColor) &&
             (identical(other.activeTrackColor, activeTrackColor) ||
@@ -597,6 +605,10 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
                 other.inactiveThumbColor == inactiveThumbColor) &&
             (identical(other.inactiveTrackColor, inactiveTrackColor) ||
                 other.inactiveTrackColor == inactiveTrackColor) &&
+            (identical(other.onLabelColor, onLabelColor) ||
+                other.onLabelColor == onLabelColor) &&
+            (identical(other.offLabelColor, offLabelColor) ||
+                other.offLabelColor == offLabelColor) &&
             (identical(other.splashRadius, splashRadius) ||
                 other.splashRadius == splashRadius) &&
             (identical(other.dragStartBehavior, dragStartBehavior) ||
@@ -613,12 +625,16 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
                 other.trackOutlineColor == trackOutlineColor) &&
             (identical(other.trackOutlineWidth, trackOutlineWidth) ||
                 other.trackOutlineWidth == trackOutlineWidth) &&
-            (identical(other.thumbIcon, thumbIcon) ||
-                other.thumbIcon == thumbIcon) &&
+            const DeepCollectionEquality()
+                .equals(other._thumbIcon, _thumbIcon) &&
             (identical(other.inactiveThumbImage, inactiveThumbImage) ||
                 other.inactiveThumbImage == inactiveThumbImage) &&
             (identical(other.activeThumbImage, activeThumbImage) ||
-                other.activeThumbImage == activeThumbImage));
+                other.activeThumbImage == activeThumbImage) &&
+            (identical(other.applyTheme, applyTheme) ||
+                other.applyTheme == applyTheme) &&
+            (identical(other.applyCupertinoTheme, applyCupertinoTheme) ||
+                other.applyCupertinoTheme == applyCupertinoTheme));
   }
 
   @JsonKey(ignore: true)
@@ -626,16 +642,17 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   int get hashCode => Object.hashAll([
         runtimeType,
         switchType,
-        const DeepCollectionEquality().hash(initialValue),
+        const DeepCollectionEquality().hash(value),
         const DeepCollectionEquality().hash(_onChanged),
         autofocus,
-        disabled,
         activeColor,
         activeTrackColor,
         focusColor,
         hoverColor,
         inactiveThumbColor,
         inactiveTrackColor,
+        onLabelColor,
+        offLabelColor,
         splashRadius,
         dragStartBehavior,
         overlayColor,
@@ -644,9 +661,11 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
         materialTapTargetSize,
         trackOutlineColor,
         trackOutlineWidth,
-        thumbIcon,
+        const DeepCollectionEquality().hash(_thumbIcon),
         inactiveThumbImage,
-        activeThumbImage
+        activeThumbImage,
+        applyTheme,
+        applyCupertinoTheme
       ]);
 
   @JsonKey(ignore: true)
@@ -663,31 +682,33 @@ class _$MiraiSwitchImpl extends _MiraiSwitch {
   }
 }
 
-abstract class _MiraiSwitch extends MiraiSwitch {
+abstract class _MiraiSwitch implements MiraiSwitch {
   const factory _MiraiSwitch(
       {final MiraiSwitchType switchType,
-      final dynamic initialValue,
+      final dynamic value,
       final Map<String, dynamic>? onChanged,
       final bool autofocus,
-      final bool disabled,
       final String? activeColor,
       final String? activeTrackColor,
       final String? focusColor,
       final String? hoverColor,
       final String? inactiveThumbColor,
       final String? inactiveTrackColor,
+      final String? onLabelColor,
+      final String? offLabelColor,
       final double? splashRadius,
-      final String? dragStartBehavior,
+      final DragStartBehavior dragStartBehavior,
       final MiraiMaterialColor? overlayColor,
       final MiraiMaterialColor? thumbColor,
       final MiraiMaterialColor? trackColor,
-      final String? materialTapTargetSize,
+      final MaterialTapTargetSize? materialTapTargetSize,
       final MiraiMaterialColor? trackOutlineColor,
       final double? trackOutlineWidth,
-      final MiraiIcon? thumbIcon,
-      final MiraiImage? inactiveThumbImage,
-      final MiraiImage? activeThumbImage}) = _$MiraiSwitchImpl;
-  const _MiraiSwitch._() : super._();
+      final Map<String, dynamic>? thumbIcon,
+      final String? inactiveThumbImage,
+      final String? activeThumbImage,
+      final bool? applyTheme,
+      final bool? applyCupertinoTheme}) = _$MiraiSwitchImpl;
 
   factory _MiraiSwitch.fromJson(Map<String, dynamic> json) =
       _$MiraiSwitchImpl.fromJson;
@@ -695,13 +716,11 @@ abstract class _MiraiSwitch extends MiraiSwitch {
   @override
   MiraiSwitchType get switchType;
   @override
-  dynamic get initialValue;
+  dynamic get value;
   @override
   Map<String, dynamic>? get onChanged;
   @override
   bool get autofocus;
-  @override
-  bool get disabled;
   @override
   String? get activeColor;
   @override
@@ -715,9 +734,13 @@ abstract class _MiraiSwitch extends MiraiSwitch {
   @override
   String? get inactiveTrackColor;
   @override
+  String? get onLabelColor;
+  @override
+  String? get offLabelColor;
+  @override
   double? get splashRadius;
   @override
-  String? get dragStartBehavior;
+  DragStartBehavior get dragStartBehavior;
   @override
   MiraiMaterialColor? get overlayColor;
   @override
@@ -725,17 +748,21 @@ abstract class _MiraiSwitch extends MiraiSwitch {
   @override
   MiraiMaterialColor? get trackColor;
   @override
-  String? get materialTapTargetSize;
+  MaterialTapTargetSize? get materialTapTargetSize;
   @override
   MiraiMaterialColor? get trackOutlineColor;
   @override
   double? get trackOutlineWidth;
   @override
-  MiraiIcon? get thumbIcon;
+  Map<String, dynamic>? get thumbIcon;
   @override
-  MiraiImage? get inactiveThumbImage;
+  String? get inactiveThumbImage;
   @override
-  MiraiImage? get activeThumbImage;
+  String? get activeThumbImage;
+  @override
+  bool? get applyTheme;
+  @override
+  bool? get applyCupertinoTheme;
   @override
   @JsonKey(ignore: true)
   _$$MiraiSwitchImplCopyWith<_$MiraiSwitchImpl> get copyWith =>
