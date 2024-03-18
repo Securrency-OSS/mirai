@@ -401,6 +401,7 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 ## Maintainers
 
 - [Divyanshu Bhargava][divyanshu_github]
+- [Rahul Bisht][rahul_linkedIn]
 - [Aasim Khan][aasim_github]
 
 ---
@@ -412,3 +413,4 @@ Check out the [Mirai Gallery](https://github.com/Securrency-OSS/mirai/tree/main/
 [form_screen]: https://github.com/Securrency-OSS/mirai/blob/main/assets/form_screen_image.png
 [divyanshu_github]: https://github.com/divyanshub024
 [aasim_github]: https://github.com/i-asimkhan
+[rahul_linkedIn]: https://www.linkedin.com/in/rahul--bisht/
