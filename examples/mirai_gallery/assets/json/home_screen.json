@@ -1,26 +1,4 @@
-{
-  "type": "scaffold",
-  "appBar": {
-    "type": "appBar",
-    "title": {
-      "type": "text",
-      "data": "Mirai Gallery"
-    },
-    "elevation": 0
-  },
-  "body": {
-    "type": "padding",
-    "padding": {
-      "bottom": 24
-    },
-    "child": {
-      "type": "listView",
-      "shrinkWrap": true,
-      "separator": {
-        "type": "container",
-        "height": 10
-      },
-      "children": [
+ [
         {
           "type": "listTile",
           "leading": {
@@ -1246,6 +1224,4 @@
           }
         }
       ]
-    }
-  }
-}
+    
