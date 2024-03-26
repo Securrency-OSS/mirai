@@ -35,6 +35,37 @@
           "leading": {
             "type": "icon",
             "iconType": "material",
+            "icon": "done_all"
+          },
+          "title": {
+            "type": "text",
+            "data": "Mirai AutoComplete",
+            "style": {
+              "fontSize": 21
+            }
+          },
+          "subtitle": {
+            "type": "text",
+            "data": "Create a auto complete widget with list of strings",
+            "style": {
+              "fontSize": 12
+            }
+          },
+          "isThreeLine": true,
+          "onTap": {
+            "actionType": "navigate",
+            "navigationStyle": "push",
+            "widgetJson": {
+              "type": "exampleScreen",
+              "assetPath": "assets/json/auto_complete_example.json"
+            }
+          }
+        },
+        {
+          "type": "listTile",
+          "leading": {
+            "type": "icon",
+            "iconType": "material",
             "icon": "navigation"
           },
           "title": {
